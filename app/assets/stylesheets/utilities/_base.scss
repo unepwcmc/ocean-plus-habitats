@@ -8,11 +8,16 @@
 }
 
 body {
+  color: $body-font-color;
   font-family: $body-font;
+  font-size: $body-font-size;
   margin: 0;
 }
 
 h1 {
+  font-size: rem-calc(48);
+  font-weight: $normal;
+  line-height: 1.2;
 }
 
 h2 {
@@ -95,6 +100,14 @@ blockquote {
 .container {
   @extend .site-width;
   @extend %container;
+
+  &--small {
+    @extend %container;    
+
+    @include breakpoint($small) { width: 60%; }
+    @include breakpoint($medium) { width: 40%; }
+    @include breakpoint($large) { width: rem-calc(560); }
+  }
 }
 
 //--------------------------------------------------

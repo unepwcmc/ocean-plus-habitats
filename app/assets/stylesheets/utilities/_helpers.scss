@@ -52,7 +52,19 @@ strong, .bold { font-weight: $bold; }
 .right { text-align: right; }
 .left { text-align: left; }
 
+.margin-center { 
+  margin-left: center;
+  margin-right: center;
+}
+
 .relative { position: relative; }
+
+.absolute-center {
+  position: absolute;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
 
 //--------------------------------------------------
 // margin & padding

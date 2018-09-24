@@ -2,5 +2,17 @@
 // header
 //--------------------------------------------------
 .header {
-  
+  background-color: $grey;
+  color: $white;
+
+  position: relative;
+
+  @include breakpoint($medium) {
+    padding: rem-calc(130 0 200 0);
+  }
+
+  &__icon {
+    position: absolute;
+    bottom: rem-calc(40);
+  }
 }

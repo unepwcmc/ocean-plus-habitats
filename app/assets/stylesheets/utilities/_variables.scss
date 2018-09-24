@@ -26,14 +26,16 @@ $accent: green;
 //--------------------------------------------------
 // fonts
 //--------------------------------------------------
-$font-roboto: 'Roboto', sans-serif;
+$font-roboto: 'Noto Sans', sans-serif;
 
 $body-font: $font-roboto;
 $body-font-color: $black;
+$body-font-size: rem-calc(18);
 
-$body-line-height: 1.4;
+$body-line-height: 1.2;
 
 $light: 300;
+$normal: 400;
 $bold: 500;
 
 $button-font-size-small: rem-calc(18);
@@ -42,7 +44,7 @@ $button-font-size-medium: rem-calc(18);
 //--------------------------------------------------
 // dimensions
 //--------------------------------------------------
-$site-width: rem-calc(960);
+$site-width: rem-calc(1260);
 
 //--------------------------------------------------
 // breakpoints

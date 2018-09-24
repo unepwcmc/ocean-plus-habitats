@@ -2,5 +2,8 @@
 // logos
 //--------------------------------------------------
 .logo {
-
+  &--site { 
+    display: block;
+    width: rem-calc(176); height: rem-calc(60); 
+  }
 }
