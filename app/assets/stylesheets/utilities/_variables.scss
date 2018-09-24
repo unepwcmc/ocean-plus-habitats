@@ -11,17 +11,24 @@
 // colours
 //--------------------------------------------------
 $white: #ffffff;
-
 $grey-light: #f4f4f4;
 $grey: #7f7f7f;
 $grey-dark: #343434;
-
 $black: #000000;
 
-$primary: red;
-$secondary: blue;
+$navy: #293039;
+$navy-dark: #1F232A;
+$navy-xdark: #12161B;
+$purple: #BA41FF;
 
-$accent: green;
+$theme-blue: #222222;
+$theme-green: #222222;
+$theme-orange: #FF8A75;
+$theme-pink: #222222;
+$theme-yellow: #222222;
+
+$primary: $theme-orange;
+$secondary: $navy;
 
 //--------------------------------------------------
 // fonts

@@ -2,4 +2,12 @@
 // footer
 //--------------------------------------------------
 .footer {
+  height: rem-calc(128);
+
+  &__partner-logo {
+    opacity: .5;
+    padding-left: rem-calc(50);
+
+    width: rem-calc(200); max-height: rem-calc(42);
+  }
 }

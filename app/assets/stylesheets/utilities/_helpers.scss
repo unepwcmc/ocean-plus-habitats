@@ -77,6 +77,9 @@ strong, .bold { font-weight: $bold; }
 //--------------------------------------------------
 // backgrounds
 //--------------------------------------------------
+.bg--navy { background-color: $navy; }
+.bg--navy-xdark { background-color: $navy-xdark; }
+
 .bg-overlay {
   position: relative;
   z-index: 0;
