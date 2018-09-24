@@ -1,0 +1,82 @@
+//--------------------------------------------------
+// helpers
+//--------------------------------------------------
+// - fouc
+// - font
+// - lists
+// - display
+// - dimensions
+// - positioning
+// - margin & padding
+//
+//--------------------------------------------------
+// fouc (flash of unstyled content)
+//--------------------------------------------------
+[v-cloak] { display: none; }
+
+//--------------------------------------------------
+// font
+//--------------------------------------------------
+.light { font-weight: $light;}
+.normal { font-weight: normal; }
+strong, .bold { font-weight: $bold; }
+.italic { font-style: italic; }
+
+//--------------------------------------------------
+// dimensions
+//--------------------------------------------------
+.w-100 { width: 100%; }
+.h-100 { height: 100%; }
+
+//--------------------------------------------------
+// lists
+//--------------------------------------------------
+.ul-unstyled {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ul-inline li { display: inline-block; }
+
+//--------------------------------------------------
+// display
+//--------------------------------------------------
+.display-block { display: block; }
+.display-inline { display: inline-block; }
+
+//--------------------------------------------------
+// positioning
+//--------------------------------------------------
+.center { text-align: center; }
+.right { text-align: right; }
+.left { text-align: left; }
+
+.relative { position: relative; }
+
+//--------------------------------------------------
+// margin & padding
+//--------------------------------------------------
+.no-margin { margin: 0; }
+.margin-center { margin: 0 auto; }
+.margin-space-left { margin-left: rem-calc(14); }
+.margin-space-right { margin-right: rem-calc(14); }
+
+//--------------------------------------------------
+// backgrounds
+//--------------------------------------------------
+.bg-overlay {
+  position: relative;
+  z-index: 0;
+
+  &:before {
+    background-color: rgba(black, 0.3);
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+}

@@ -1,0 +1,44 @@
+//--------------------------------------------------
+// nav
+//--------------------------------------------------
+.nav {
+
+//--------------------------------------------------
+// burger nav
+//--------------------------------------------------
+  &--burger {
+    .nav {
+      &__burger {
+        
+      }
+
+      &__pane {
+        background-color: $grey;
+        padding: rem-calc(18 0);
+        width: 100%;
+
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2000;
+
+        transform: translateX(-100%);
+
+        transition: transform .4s ease-in-out;
+
+        @include breakpoint($small) { width: rem-calc(280); }
+
+        &.active { transform: translateX(0); }
+      }
+      
+        &__close {
+          
+        }
+
+        &__a {
+          
+        }
+    }
+  }
+}

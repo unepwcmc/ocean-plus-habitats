@@ -1,0 +1,46 @@
+//--------------------------------------------------
+// buttons
+//--------------------------------------------------
+.button {
+  font-size: $button-font-size-small;
+  padding: rem-calc(11 24);
+  
+  @include breakpoint($small) {
+    font-size: $button-font-size-medium;
+    padding: rem-calc(14 35);
+  }
+
+//--------------------------------------------------
+// styles
+//--------------------------------------------------
+  &--cta {
+
+  } 
+
+  &--disabled {
+    background-color: $grey-light;
+    cursor: not-allowed;
+
+    &:hover { background-color: $grey-light; }
+  }
+
+  //--------------------------------------------------
+  // margin
+  //--------------------------------------------------
+  &-margin-bottom {
+    margin-bottom: rem-calc(14);
+
+    @include breakpoint($small) { margin-bottom: rem-calc(30); }
+  }
+
+  &-margin-top {
+    margin-bottom: rem-calc(14);
+
+    @include breakpoint($small) { margin-bottom: rem-calc(30); }
+  }
+
+  &-margin {
+    @extend .button-margin-top;
+    @extend .button-margin-bottom;
+  }
+}
