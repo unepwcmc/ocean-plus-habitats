@@ -3,6 +3,33 @@ class SiteController < ApplicationController
 
   def warmwater
     @title = 'Warm-water corals'
+    @chart_greatest_coverage = [
+      {
+        label: 'Australia',
+        value: '24',
+        percent: '24',
+      },
+      {
+        label: 'United Kingdom',
+        value: '63',
+        percent: '63',
+      },
+      {
+        label: 'Spain',
+        value: '75',
+        percent: '75',
+      },
+      {
+        label: 'Italy',
+        value: '50',
+        percent: '50',
+      },
+      {
+        label: 'Russia',
+        value: '10',
+        percent: '10',
+      }
+    ]
   end
 
   def saltmarshes

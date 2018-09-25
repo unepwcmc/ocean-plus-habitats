@@ -1,0 +1,43 @@
+//--------------------------------------------------
+// chart
+//--------------------------------------------------
+.chart {
+
+//--------------------------------------------------
+// column chart
+//--------------------------------------------------
+  &--column {
+    .chart {
+      text-align: center;
+
+      &__bar {
+        box-shadow: 0 1px 2px 1px rgba($black, 0.2);
+        width: rem-calc(134); height: rem-calc(390);
+
+        position: relative;
+      }
+
+        &__bar-label {
+          color: $grey-dark;
+          font-size: rem-calc(30);
+          font-weight: $bold;
+
+          position: relative;
+          top: rem-calc(22);
+        }
+
+        &__colour {
+          background-color: $theme-orange;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }
+
+      &__label {
+        margin-top: rem-calc(10);
+        width: rem-calc(134);
+      }
+    }
+  }
+}
