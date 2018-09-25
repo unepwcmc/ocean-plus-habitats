@@ -8,36 +8,84 @@
 //--------------------------------------------------
   &--column {
     .chart {
-      text-align: center;
+      &__item {
 
-      &__bar {
-        box-shadow: 0 1px 2px 1px rgba($black, 0.2);
-        width: rem-calc(134); height: rem-calc(390);
-
-        position: relative;
       }
-
-        &__bar-label {
-          color: $grey-dark;
-          font-size: rem-calc(30);
-          font-weight: $bold;
+      
+        &__bar {
+          background-color: $white;
+          box-shadow: 0 1px 2px 1px rgba($black, 0.2);
+          width: rem-calc(134); height: rem-calc(390);
 
           position: relative;
-          top: rem-calc(22);
         }
 
-        &__colour {
-          background-color: $theme-orange;
-          position: absolute;
-          right: 0;
-          bottom: 0;
-          left: 0;
-        }
+          &__bar-label {
+            color: $grey-dark;
+            font-size: rem-calc(30);
+            font-weight: $bold;
 
-      &__label {
-        margin-top: rem-calc(10);
-        width: rem-calc(134);
-      }
+            position: relative;
+            top: rem-calc(22);
+          }
+
+          &__colour {
+            background-color: $theme-orange;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+          }
+
+        &__label {
+          margin-top: rem-calc(10);
+          width: rem-calc(134);
+        }
     }
+  }
+
+//--------------------------------------------------
+// row chart
+//--------------------------------------------------
+  &--row {
+    .chart {
+      &__item {
+        margin-bottom: rem-calc(14);
+      }
+
+        &__bar {
+          background-color: $white;
+          box-shadow: 0 1px 2px 1px rgba($black, 0.2);
+          width: rem-calc(700); height: rem-calc(84);
+
+          position: relative;
+        }
+
+          &__bar-label {
+            color: $grey-dark;
+            font-size: rem-calc(30);
+            font-weight: $bold;
+
+            position: absolute;
+            top: 50%;
+            right: rem-calc(40);
+            z-index: 1;
+
+            transform: translateY(-50%);
+          }
+
+          &__colour {
+            background-color: $theme-orange;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+          }
+
+        &__label {
+          margin-top: rem-calc(10);
+          width: rem-calc(134);
+        }
+      }
   }
 }

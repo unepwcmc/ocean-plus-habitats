@@ -6,8 +6,8 @@ class SiteController < ApplicationController
     @chart_greatest_coverage = [
       {
         label: 'Australia',
-        value: '24',
-        percent: '24',
+        value: '94',
+        percent: '94',
       },
       {
         label: 'United Kingdom',
@@ -27,6 +27,29 @@ class SiteController < ApplicationController
       {
         label: 'Russia',
         value: '10',
+        percent: '10',
+      }
+    ]
+
+    @chart_protected_areas = [
+      {
+        label: 'Australia',
+        percent: '94',
+      },
+      {
+        label: 'United Kingdom',
+        percent: '63',
+      },
+      {
+        label: 'Spain',
+        percent: '75',
+      },
+      {
+        label: 'Italy',
+        percent: '50',
+      },
+      {
+        label: 'Russia',
         percent: '10',
       }
     ]
