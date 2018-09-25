@@ -1,7 +1,7 @@
 <nav class="nav gutters bg--navy flex flex-v-center flex-h-between">
-  <%= link_to 'Warm-water corals', warmwater_path, title: 'View Warm-water corals', class: 'nav__a active theme-orange'  %>
-  <%= link_to 'Saltmarshes', saltmarshes_path, title: 'View Saltmarshes', class: 'nav__a theme-green'  %>
-  <%= link_to 'Mangroves', mangroves_path, title: 'View Mangroves', class: 'nav__a theme-yello'  %>
-  <%= link_to 'Seagrasses', seagrasses_path, title: 'View Seagrasses', class: 'nav__a theme-blue'  %>
-  <%= link_to 'Cold-water corals', warmwater_path, title: 'View Cold-water corals', class: 'nav__a theme-pink'  %>
+  <%= link_to 'Warm-water corals', warmwater_path, title: 'View Warm-water corals', class: "nav__a theme--orange#{active_nav_item?(warmwater_path)}" %>
+  <%= link_to 'Saltmarshes', saltmarshes_path, title: 'View Saltmarshes', class: "nav__a theme--green#{active_nav_item?(saltmarshes_path)}" %>
+  <%= link_to 'Mangroves', mangroves_path, title: 'View Mangroves', class: "nav__a theme--yellow#{active_nav_item?(mangroves_path)}" %>
+  <%= link_to 'Seagrasses', seagrasses_path, title: 'View Seagrasses', class: "nav__a theme--blue#{active_nav_item?(seagrasses_path)}" %>
+  <%= link_to 'Cold-water corals', coldwater_path, title: 'View Cold-water corals', class: "nav__a theme--pink#{active_nav_item?(coldwater_path)}" %>
 </nav>
