@@ -2,43 +2,44 @@
 // nav
 //--------------------------------------------------
 .nav {
+  height: rem-calc(74);
 
-//--------------------------------------------------
-// burger nav
-//--------------------------------------------------
-  &--burger {
-    .nav {
-      &__burger {
-        
-      }
+  &__a {
+    color: $white;
+    font-size: rem-calc(24);
+    font-weight: $bold;
+    padding: rem-calc(8 20);
+    text-decoration: none;
 
-      &__pane {
-        background-color: $grey;
-        padding: rem-calc(18 0);
-        width: 100%;
-
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 2000;
-
-        transform: translateX(-100%);
-
-        transition: transform .4s ease-in-out;
-
-        @include breakpoint($small) { width: rem-calc(280); }
-
-        &.active { transform: translateX(0); }
-      }
-      
-        &__close {
-          
-        }
-
-        &__a {
-          
-        }
+    &.theme--blue { 
+      color: $theme-blue;
+      border-color: $theme-blue; 
     }
+
+    &.theme--green { 
+      color: $theme-green;
+      border-color: $theme-green; 
+    }
+
+    &.theme--orange { 
+      color: $theme-orange;
+      border-color: $theme-orange; 
+    }
+
+    &.theme--pink { 
+      color: $theme-pink;
+      border-color: $theme-pink; 
+    }
+
+    &.theme--yellow { 
+      color: $theme-yellow;
+      border-color: $theme-yellow; 
+    }
+
+    &.active {
+      border-style: solid;
+      border-width: 1px;
+      border-radius: $radius-button;
+    }  
   }
 }

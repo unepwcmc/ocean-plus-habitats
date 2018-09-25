@@ -43,7 +43,7 @@ $body-line-height: 1.2;
 
 $light: 300;
 $normal: 400;
-$bold: 500;
+$bold: 700;
 
 $button-font-size-small: rem-calc(18);
 $button-font-size-medium: rem-calc(18);
@@ -87,7 +87,7 @@ $section-padding-bottom-large: rem-calc(60);
 // style
 //--------------------------------------------------
 $radius-global: rem-calc(3);
-$radius-button: 0;
+$radius-button: rem-calc(26);
 
 //--------------------------------------------------
 // topbar

@@ -1,9 +1,9 @@
 <header class="header">
   <div class="container--small">
     <img src="" alt="Ocean+ Habitats logo" class="logo--site margin-center">
-    <h1><%= @data['title'] %></h1>
+    <h1><%= @global['title'] %></h1>
     <div class="tagline">
-      <% @data['tagline'].each do |line| %>
+      <% @global['tagline'].each do |line| %>
         <p><%= line['p'] %></p>
       <% end %>
     </div>
