@@ -11,7 +11,7 @@
       &__item {
 
       }
-      
+
         &__bar {
           background-color: $white;
           box-shadow: 0 1px 2px 1px rgba($black, 0.2);
@@ -27,6 +27,7 @@
 
             position: relative;
             top: rem-calc(22);
+            z-index: 1;
           }
 
           &__colour {

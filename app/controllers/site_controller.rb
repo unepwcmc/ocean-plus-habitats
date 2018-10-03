@@ -74,6 +74,7 @@ class SiteController < ApplicationController
   private
     def load_global
       @global = YAML.load(File.open("#{Rails.root}/lib/data/content/global.yml", 'r'))
+      @commitments = YAML.load(File.open("#{Rails.root}/lib/data/content/commitments.yml", 'r'))
     end
   
 end

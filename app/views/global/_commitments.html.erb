@@ -1,0 +1,21 @@
+<section class="section-padding bg--navy white">
+  <div class="container">
+    <h3 class="white">Commitments and pledges</h3>
+
+    <tabs>
+      <% @commitments['commitments'].each do |commitment| %>
+        <tab>
+          <%= commitment['title'] %>
+
+          <ul>
+            <% commitment['list'].each do |item| %>
+              <li>
+                <p><%= item['text'].html_safe %></p>
+              </li>
+            <% end %>
+          </ul>
+        </tab>
+      <% end %>
+    </tabs>
+  </div>
+</section>
