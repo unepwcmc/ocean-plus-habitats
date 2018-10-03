@@ -4,7 +4,7 @@
 
     <tabs>
       <% @commitments['commitments'].each do |commitment| %>
-        <tab>
+        <tab id="<%= commitment['title'].downcase.delete(' ') %>" title="<%= commitment['title'] %>">
           <%= commitment['title'] %>
 
           <ul>
