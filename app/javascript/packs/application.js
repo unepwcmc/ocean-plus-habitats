@@ -9,6 +9,7 @@ Vue.use(TurbolinksAdapter)
 // components
 import Tab from '../components/tabs/Tab.vue'
 import Tabs from '../components/tabs/Tabs.vue'
+import Mapbox from '../components/map/Mapbox.vue'
 
 // create event hub and export so that it can be imported into .vue files
 export const eventHub = new Vue()
@@ -18,7 +19,8 @@ document.addEventListener('turbolinks:load', () => {
     el: '#v-app',
     components: {
       Tab,
-      Tabs
+      Tabs,
+      Mapbox
     }
   })
 })
