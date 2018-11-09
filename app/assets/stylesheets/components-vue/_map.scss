@@ -15,16 +15,6 @@
 .map {
 
 //--------------------------------------------------
-// infographic map
-//--------------------------------------------------
-  &--infographic {
-    height: rem-calc(180);
-
-    @include breakpoint($small) { height: rem-calc(300); }
-    @include breakpoint($medium) { height: rem-calc(480); }
-  }
-
-//--------------------------------------------------
 // statistics map
 //--------------------------------------------------
   &--statistics {
@@ -97,19 +87,6 @@
 
             display: block;
             position: relative;
-
-            &::after {
-              background-color: $green;
-              border: solid 2px $white;
-              border-radius: 100%;
-              content: '';
-              width: rem-calc(16); height: rem-calc(16);
-
-              display: block;
-              position: absolute;
-              top: rem-calc(3);
-              left: rem-calc(3);
-            }
           }
 
           &__panel-layer-percentage {
@@ -128,19 +105,6 @@
 
             display: block;
             position: relative;
-
-            &::after {
-              background-color: $green;
-              border: solid 1px $white;
-              border-radius: 100%;
-              content: '';
-              width: rem-calc(14); height: rem-calc(14);
-
-              display: block;
-              position: absolute;
-              top: rem-calc(2);
-              left: rem-calc(2);
-            }
           }
 
           &__panel-sublayer-percentage {
