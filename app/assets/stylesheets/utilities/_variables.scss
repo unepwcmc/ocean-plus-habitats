@@ -6,6 +6,7 @@
 // - dimensions
 // - breakpoins
 // - padding
+// - project specific
 //
 //--------------------------------------------------
 // colours
@@ -98,3 +99,9 @@ $radius-button: rem-calc(26);
 $topbarHeightSmall: rem-calc(47);
 $topbarHeightMedium: rem-calc(60);
 $topbarHeightLarge: rem-calc(93);
+
+//--------------------------------------------------
+// project specific
+//--------------------------------------------------
+$names: ['blue', 'green', 'orange', 'pink', 'yellow'];
+$colours: [$theme-blue, $theme-green, $theme-orange, $theme-pink, $theme-yellow];
