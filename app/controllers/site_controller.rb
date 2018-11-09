@@ -3,6 +3,10 @@ class SiteController < ApplicationController
 
   def warmwater
     @title = 'Warm-water corals'
+    @global_coverage_title = global_coverage_title
+    @protected_title = protected_title
+    @global_coverage = 0 #TODO
+    @protected_percentage = 0 #TODO
     @chart_greatest_coverage = [
       {
         label: 'Australia',
@@ -57,24 +61,48 @@ class SiteController < ApplicationController
 
   def saltmarshes
     @title = 'Saltmarshes'
+    @global_coverage_title = global_coverage_title
+    @protected_title = protected_title
+    @global_coverage = 0 #TODO
+    @protected_percentage = 0 #TODO
   end
 
   def mangroves
     @title = 'Mangroves'
+    @global_coverage_title = global_coverage_title
+    @protected_title = protected_title
+    @global_coverage = 0 #TODO
+    @protected_percentage = 0 #TODO
   end
 
   def seagrasses
     @title = 'Seagrasses'
+    @global_coverage_title = global_coverage_title
+    @protected_title = protected_title
+    @global_coverage = 0 #TODO
+    @protected_percentage = 0 #TODO
   end
 
   def coldwater
     @title = 'Cold-water corals'
+    @global_coverage_title = global_coverage_title
+    @protected_title = protected_title
+    @global_coverage = 0 #TODO
+    @protected_percentage = 0 #TODO
   end
 
   private
-    def load_global
-      @global = YAML.load(File.open("#{Rails.root}/lib/data/content/global.yml", 'r'))
-      @commitments = YAML.load(File.open("#{Rails.root}/lib/data/content/commitments.yml", 'r'))
-    end
-  
+
+  def load_global
+    @global = YAML.load(File.open("#{Rails.root}/lib/data/content/global.yml", 'r'))
+    @commitments = YAML.load(File.open("#{Rails.root}/lib/data/content/commitments.yml", 'r'))
+  end
+
+  def global_coverage_title
+    "Total global coverage of #{@title.downcase}"
+  end
+
+  def protected_title
+    "Percentage of #{@title.downcase} that occur within a marine protected area"
+  end
 end

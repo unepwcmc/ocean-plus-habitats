@@ -3,23 +3,13 @@
     <div id="map" class="map__map"></div>
 
     <div class="map__panel gutters">
-      <h2 class="heading--map">Title</h2>
+      <div class="">
+        <p class="heading--map">{{ globalCoverageTitle }}</p>
+        <span class="map__panel-layer-percentage">{{ globalCoverage }}Km<sup>2</sup></span>
 
-      <div class="flex flex-v-center">
-        <p class="map__panel-layer-stat no-margin flex flex-v-center flex-h-end">
-          <span class="map__panel-layer-button"></span>
-          <span class="map__panel-layer-percentage">00</span>
-        </p>
-        <p class="map__panel-layer-title no-margin">00</p>
-
-        <p class="map__panel-layer-stat no-margin flex flex-v-center flex-h-end">
-          <span class="map__panel-sublayer-button"></span>
-          <span class="map__panel-sublayer-percentage">00</span>
-        </p>
-        <p class="map__panel-layer-title no-margin">00</p>
+        <p class="heading--map">{{ protectedTitle }}</p>
+        <span class="map__panel-layer-percentage">{{ protectedPercentage }}%</span>
       </div>
-
-      <span class="map__source">Source</span>
     </div>
   </div>
 </template>
@@ -29,6 +19,10 @@
     name: 'mapbox',
 
     props: {
+      globalCoverageTitle: String,
+      protectedTitle: String,
+      globalCoverage: Number,
+      protectedPercentage: Number
     },
 
     data () {
