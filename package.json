@@ -7,7 +7,8 @@
     "vue": "^2.5.17",
     "vue-loader": "14.2.2",
     "vue-template-compiler": "^2.5.17",
-    "vue-turbolinks": "^2.0.3"
+    "vue-turbolinks": "^2.0.3",
+    "dotenv-webpack": "^1.5.5"
   },
   "devDependencies": {
     "webpack-dev-server": "2.11.2"
