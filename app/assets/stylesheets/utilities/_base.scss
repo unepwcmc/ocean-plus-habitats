@@ -15,9 +15,11 @@ body {
 }
 
 h1 {
-  font-size: rem-calc(48);
+  font-size: rem-calc(25);
   font-weight: $normal;
   line-height: 1.2;
+
+  @include breakpoint($small) { font-size: rem-calc(48); }
 }
 
 h2 {
@@ -89,7 +91,7 @@ sup {
 // site structure
 //--------------------------------------------------
 .site-width { 
-  @include breakpoint($medium){ width: $site-width; }
+  @include breakpoint($large){ width: $site-width; }
 }
 
 .gutter--left {

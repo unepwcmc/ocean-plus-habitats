@@ -2,12 +2,41 @@
 // footer
 //--------------------------------------------------
 .footer {
-  height: rem-calc(128);
-
-  &__partner-logo {
-    opacity: .5;
-    padding-left: rem-calc(50);
-
-    width: rem-calc(200); max-height: rem-calc(42);
+  @include breakpoint_down($small) {
+    padding-top: rem-calc(30);
+    padding-bottom: rem-calc(20);
   }
+
+  @include breakpoint($small) {
+    align-items: center;
+    justify-content: space-between;
+    height: rem-calc(90);
+
+    display: flex;
+  }
+
+  @include breakpoint($medium) { height: rem-calc(128); }
+
+  &__partner-logos {
+    @include breakpoint($small) {
+      align-items: center;
+      display: flex;
+    }
+  }
+
+    &__partner-logo {
+      opacity: .5;
+      margin: rem-calc(8 10);
+      width: rem-calc(104); max-height: rem-calc(31);
+
+      @include breakpoint($small) { 
+        margin: rem-calc(0 0 0 24);
+        width: rem-calc(112); max-height: rem-calc(28); 
+      }
+
+      @include breakpoint($medium) { 
+        margin-left: rem-calc(50);
+        width: rem-calc(180); max-height: rem-calc(54); 
+      }
+    }
 }

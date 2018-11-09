@@ -4,6 +4,7 @@
 .header {
   background-color: $grey;
   color: $white;
+  padding: rem-calc(40 0 50 0);
 
   position: relative;
 
@@ -11,8 +12,17 @@
     padding: rem-calc(130 0 200 0);
   }
 
+  &__intro {
+    line-height: 1.6;
+  }
+
   &__icon {
-    position: absolute;
-    bottom: rem-calc(40);
+    display: none;
+
+    @include breakpoint($small) {
+      display: block;
+      position: absolute;
+      bottom: rem-calc(40);
+    }
   }
 }
