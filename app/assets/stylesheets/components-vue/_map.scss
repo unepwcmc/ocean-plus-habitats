@@ -116,7 +116,7 @@
             @include layer-percentage;
             font-size: rem-calc(20);
 
-            @include breakpoint($small) { font-size: rem-calc(40); }
+            @include breakpoint($small) { font-size: rem-calc(70); }
           }
 
           &__panel-sublayer-button {
