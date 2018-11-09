@@ -48,6 +48,8 @@
           center: [0.000000, -0.000000],
           zoom: 1.3
         })
+
+        map.scrollZoom.disable()
       }
     }
   }
