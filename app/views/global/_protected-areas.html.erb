@@ -1,19 +1,19 @@
 <section class="section-padding">
-  <div class="container flex flex-h-between">
-    <div class="flex-1-third">
-      <h3>Top 5 countries and territories with habitat area covered by a protected area</h3>
-    </div>
-
-    <div class="chart--row flex-2-thirds flex-column flex-h-between">
-      <% @chart_protected_areas.each do |item| %>
-        <div class="chart__item flex flex-v-center flex-h-end">
-          <p class="chart__label bold"><%= item[:label] %></p>
-          <div class="chart__bar">
-            <span class="chart__bar-label"><%= item[:value] %>km<sup>2</sup></span>
-            <span class="chart__colour" style="width:<%= item[:percent] %>%;"></span>
+  <div class="container">
+    <div class="chart--row">
+      <h3 class="chart__title">Top 5 countries and territories with habitat area covered by a protected area</h3>
+      
+      <div class="chart__chart">
+        <% @chart_protected_areas.each do |item| %>
+          <div class="chart__item">
+            <p class="chart__label bold"><%= item[:label] %></p>
+            <div class="chart__bar">
+              <span class="chart__bar-label"><%= item[:value] %>km<sup>2</sup></span>
+              <span class="chart__colour" style="width:<%= item[:percent] %>%;"></span>
+            </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 </section>

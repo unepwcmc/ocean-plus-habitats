@@ -21,14 +21,17 @@ h1 {
 }
 
 h2 {
+
 }
 
 h3 {
   color: $grey-dark;
-  font-size: rem-calc(40);
+  font-size: rem-calc(20);
   font-weight: $normal;
   margin-top: 0;
   padding-right: rem-calc(49);
+
+  @include breakpoint($small) { font-size: rem-calc(40); }
 }
 
 h4 {
