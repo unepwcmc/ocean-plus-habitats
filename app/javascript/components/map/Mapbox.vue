@@ -4,11 +4,11 @@
 
     <div class="map__panel gutters">
       <div class="">
-        <p class="heading--map">{{ globalCoverageTitle }}</p>
-        <span class="map__panel-layer-percentage">{{ globalCoverage }}Km<sup>2</sup></span>
+        <p class="heading--map">{{ titleGlobal }}</p>
+        <span class="map__panel-layer-percentage">{{ percentageGlobal }}Km<sup>2</sup></span>
 
-        <p class="heading--map">{{ protectedTitle }}</p>
-        <span class="map__panel-layer-percentage">{{ protectedPercentage }}%</span>
+        <p class="heading--map">{{ titleProtected }}</p>
+        <span class="map__panel-layer-percentage">{{ percentageProtected }}%</span>
       </div>
     </div>
   </div>
@@ -19,10 +19,10 @@
     name: 'mapbox',
 
     props: {
-      TitleGlobal: String,
-      TitleProtected: String,
-      globalCoverage: Number,
-      protectedPercentage: Number
+      titleGlobal: String,
+      titleProtected: String,
+      percentageGlobal: Number,
+      percentageProtected: Number
     },
 
     data () {

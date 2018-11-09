@@ -1,17 +1,32 @@
 //--------------------------------------------------
 // nav
 //--------------------------------------------------
+.nav-wrapper {
+  @include breakpoint_down($small) {
+    overflow-x: scroll;
+
+    display: flex;
+  }
+}
+
 .nav {
   height: rem-calc(74);
+
+  @include breakpoint_down($small) { width: 200%; }
 
   &__a {
     color: $white;
     border: solid 1px $navy;
     border-radius: $radius-button;
-    font-size: rem-calc(24);
+    font-size: rem-calc(20);
     font-weight: $bold;
-    padding: rem-calc(8 20);
+    padding: rem-calc(4 16);
     text-decoration: none;
+
+    @include breakpoint($small) { 
+      font-size: rem-calc(24);
+      padding: rem-calc(8 20);
+    }
 
     &.active {
       @for $i from 1 through length($names){
