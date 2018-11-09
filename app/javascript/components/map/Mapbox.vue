@@ -19,8 +19,8 @@
     name: 'mapbox',
 
     props: {
-      globalCoverageTitle: String,
-      protectedTitle: String,
+      TitleGlobal: String,
+      TitleProtected: String,
       globalCoverage: Number,
       protectedPercentage: Number
     },
