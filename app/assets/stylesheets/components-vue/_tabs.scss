@@ -1,4 +1,17 @@
 //--------------------------------------------------
+// tab mixins
+//--------------------------------------------------
+@mixin tab-colours($index) {
+  $name: nth($names, $index);
+  $colour: nth($colours, $index);
+
+  .theme--#{$name} & {
+    color: $colour;
+    border-color: $colour;
+  }
+}
+
+//--------------------------------------------------
 // tabs
 //--------------------------------------------------
 .tabs {
@@ -8,15 +21,39 @@
 // tab
 //--------------------------------------------------
 .tab {
-  &--active {
-    background-color: $primary;
+  &-active {
+    @for $i from 1 through length($names) {
+      @include tab-colours($i);
+    }
   }
   
   &__triggers {
-
+    
   }
 
     &__trigger {
-      
+      border: solid 1px transparent;
+      border-radius: $radius-button;
+      cursor: pointer;
+      font-size: rem-calc(18);
+      font-weight: $bold;
+      padding: rem-calc(5 14);
     }
+
+  &__tabs {
+
+  }
+
+    &__content {
+      @include breakpoint($small) {
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        display: flex;
+      }
+    }
+
+      &__content-item {
+        @include breakpoint($medium) { width: 48%; }
+      }
 }

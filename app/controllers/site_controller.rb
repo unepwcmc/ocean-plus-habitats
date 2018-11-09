@@ -3,6 +3,14 @@ class SiteController < ApplicationController
 
   def warmwater
     @title = 'Warm-water corals'
+    @theme = 'orange'
+
+    @commitments = [
+      @aichi_targets,
+      @sdgs,
+      @sdgs = YAML.load(File.open("#{Rails.root}/lib/data/content/meas-warmwater.yml", 'r'))
+    ]
+
     @chart_greatest_coverage = [
       {
         label: 'Australia',
@@ -57,24 +65,53 @@ class SiteController < ApplicationController
 
   def saltmarshes
     @title = 'Saltmarshes'
+    @theme = 'green'
+
+    @commitments = [
+      @aichi_targets,
+      @sdgs,
+      @sdgs = YAML.load(File.open("#{Rails.root}/lib/data/content/meas-saltmarshes.yml", 'r'))
+    ]
   end
 
   def mangroves
     @title = 'Mangroves'
+    @theme = 'yellow'
+
+    @commitments = [
+      @aichi_targets,
+      @sdgs,
+      @sdgs = YAML.load(File.open("#{Rails.root}/lib/data/content/meas-mangroves.yml", 'r'))
+    ]
   end
 
   def seagrasses
     @title = 'Seagrasses'
+    @theme = 'blue'
+
+    @commitments = [
+      @aichi_targets,
+      @sdgs,
+      @sdgs = YAML.load(File.open("#{Rails.root}/lib/data/content/meas-seagrasses.yml", 'r'))
+    ]
   end
 
   def coldwater
     @title = 'Cold-water corals'
+    @theme = 'pink'
+
+    @commitments = [
+      @aichi_targets,
+      @sdgs,
+      @sdgs = YAML.load(File.open("#{Rails.root}/lib/data/content/meas-coldwater.yml", 'r'))
+    ]
   end
 
   private
     def load_global
       @global = YAML.load(File.open("#{Rails.root}/lib/data/content/global.yml", 'r'))
-      @commitments = YAML.load(File.open("#{Rails.root}/lib/data/content/commitments.yml", 'r'))
+      @aichi_targets = YAML.load(File.open("#{Rails.root}/lib/data/content/aichi-targets.yml", 'r'))
+      @sdgs = YAML.load(File.open("#{Rails.root}/lib/data/content/sdgs.yml", 'r'))
     end
   
 end

@@ -3,17 +3,13 @@
     <h3 class="white">Commitments and pledges</h3>
 
     <tabs>
-      <% @commitments['commitments'].each do |commitment| %>
-        <tab id="<%= commitment['title'].downcase.delete(' ') %>" title="<%= commitment['title'] %>">
-          <%= commitment['title'] %>
-
-          <ul>
-            <% commitment['list'].each do |item| %>
-              <li>
-                <p><%= item['text'].html_safe %></p>
-              </li>
-            <% end %>
-          </ul>
+      <% @commitments.each do |commitment| %>
+        <tab id="<%= commitment['title'].downcase.delete(' ') %>" title="<%= commitment['title'] %>" class="tab__content">
+          <% commitment['list'].each do |item| %>
+            <div class="tab__content-item">
+              <p><%= item['text'].html_safe %></p>
+            </div>
+          <% end %>
         </tab>
       <% end %>
     </tabs>
