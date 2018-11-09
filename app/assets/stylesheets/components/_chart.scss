@@ -1,4 +1,19 @@
 //--------------------------------------------------
+// chart mixins
+//--------------------------------------------------
+@mixin bar_label {
+  font-size: rem-calc(20);
+
+  @include breakpoint($small) { font-size: rem-calc(30); }
+}
+
+@mixin chart_label {
+  font-size: rem-calc(14);
+
+  @include breakpoint($small) { font-size: rem-calc(18); }
+}
+
+//--------------------------------------------------
 // chart
 //--------------------------------------------------
 .chart {
@@ -7,44 +22,70 @@
 // column chart
 //--------------------------------------------------
   &--column {
-    .chart {
-      &__item {
+    @include breakpoint($medium) { 
+      justify-content: space-between;
 
+      display: flex;
+    }
+
+    .chart {
+      &__title {
+        @include breakpoint($medium) { width: 32%; }
       }
 
-        &__bar {
-          background-color: $white;
-          box-shadow: 0 1px 2px 1px rgba($black, 0.2);
-          width: rem-calc(134); height: rem-calc(390);
+      &__scrollable {
+        @include breakpoint-down($small) { 
+          overflow-x: auto;
 
-          position: relative;
+          display: flex;
         }
 
-          &__bar-label {
-            color: $grey-dark;
-            font-size: rem-calc(30);
-            font-weight: $bold;
+        @include breakpoint($medium) { width: 68%; }
+      }
+
+        &__chart {
+          @include breakpoint-down($small) { min-width: 200%; }
+          @include breakpoint($medium) { justify-content: space-between; }
+        }
+
+          &__bar {
+            background-color: $white;
+            box-shadow: 0 1px 2px 1px rgba($black, 0.2);
+            width: rem-calc(91); height: rem-calc(252);
 
             position: relative;
-            top: rem-calc(22);
-            z-index: 1;
+
+            @include breakpoint($small) { width: rem-calc(134); height: rem-calc(390); }
           }
 
-          &__colour {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            left: 0;
+            &__bar-label {
+              @include bar-label;
+              color: $grey-dark;
+              font-weight: $bold;
 
-            @for $i from 1 through length($names){
-              @include theme_background($i);
+              position: relative;
+              top: rem-calc(22);
+              z-index: 1;
             }
-          }
 
-        &__label {
-          margin-top: rem-calc(10);
-          width: rem-calc(134);
-        }
+            &__colour {
+              position: absolute;
+              right: 0;
+              bottom: 0;
+              left: 0;
+
+              @for $i from 1 through length($names){
+                @include theme_background($i);
+              }
+            }
+
+          &__label {
+            @include chart_label;
+            margin-top: rem-calc(10);
+            width: rem-calc(91);
+
+            @include breakpoint($small) { width: rem-calc(134); }
+          }
     }
   }
 
@@ -52,30 +93,59 @@
 // row chart
 //--------------------------------------------------
   &--row {
+    width: 100%;
+
+    @include breakpoint($medium) { 
+      justify-content: space-between;
+
+      display: flex;
+    }
+
     .chart {
+      &__title {
+        @include breakpoint($medium) { width: 32%; }
+      }
+
+      &__chart {
+        @include breakpoint($medium) { width: 68%; }
+      }
+
       &__item {
         margin-bottom: rem-calc(14);
+
+        position: relative;
+
+        @include breakpoint($medium) {
+          justify-content: flex-end;
+
+          display: flex;
+        }
       }
 
         &__bar {
           background-color: $white;
           box-shadow: 0 1px 2px 1px rgba($black, 0.2);
-          width: rem-calc(700); height: rem-calc(84);
+          width: 100%; height: rem-calc(42);
 
           position: relative;
+          
+          @include breakpoint($small) { height: rem-calc(84); }
+          @include breakpoint($medium) { width: rem-calc(700); }
         }
 
           &__bar-label {
+            @include bar-label;
             color: $grey-dark;
-            font-size: rem-calc(30);
             font-weight: $bold;
 
             position: absolute;
             top: 50%;
-            right: rem-calc(40);
+            right: rem-calc(12);
             z-index: 1;
 
             transform: translateY(-50%);
+
+            @include breakpoint($small) { right: rem-calc(40); }
           }
 
           &__colour {
@@ -90,8 +160,19 @@
           }
 
         &__label {
-          margin-top: rem-calc(10);
-          width: rem-calc(134);
+          @include chart-label;
+          margin: 0;
+
+          position: absolute;
+          top: 50%;
+          left: rem-calc(12);
+          z-index: 1;
+
+          transform: translateY(-50%);
+
+          @include breakpoint($small) { 
+            width: rem-calc(134); 
+          }
         }
       }
   }
