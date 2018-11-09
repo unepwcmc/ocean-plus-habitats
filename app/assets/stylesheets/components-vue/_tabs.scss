@@ -1,17 +1,4 @@
 //--------------------------------------------------
-// tab mixins
-//--------------------------------------------------
-@mixin tab-colours($index) {
-  $name: nth($names, $index);
-  $colour: nth($colours, $index);
-
-  .theme--#{$name} & {
-    color: $colour;
-    border-color: $colour;
-  }
-}
-
-//--------------------------------------------------
 // tabs
 //--------------------------------------------------
 .tabs {
@@ -22,8 +9,8 @@
 //--------------------------------------------------
 .tab {
   &-active {
-    @for $i from 1 through length($names) {
-      @include tab-colours($i);
+    @for $i from 1 through length($names){
+      @include theme_text($i);
     }
   }
   

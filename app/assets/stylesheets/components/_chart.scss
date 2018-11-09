@@ -31,11 +31,14 @@
           }
 
           &__colour {
-            background-color: $theme-orange;
             position: absolute;
             right: 0;
             bottom: 0;
             left: 0;
+
+            @for $i from 1 through length($names){
+              @include theme_background($i);
+            }
           }
 
         &__label {
@@ -76,11 +79,14 @@
           }
 
           &__colour {
-            background-color: $theme-orange;
             position: absolute;
             top: 0;
             bottom: 0;
             left: 0;
+
+            @for $i from 1 through length($names){
+              @include theme_background($i);
+            }
           }
 
         &__label {
