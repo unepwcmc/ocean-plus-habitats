@@ -1,16 +1,17 @@
 <template>
   <div class="map--statistics">
-    <div id="map" class="map__map"></div>
-
     <div class="map__panel gutters">
-      <div class="">
-        <p class="heading--map">{{ titleGlobal }}</p>
-        <span class="map__panel-layer-percentage">{{ percentageGlobal }}Km<sup>2</sup></span>
+      <p class="map__panel-title">{{ titleGlobal }}</p>
+      <span class="map__panel-stat">{{ percentageGlobal }}Km<sup>2</sup></span>
 
-        <p class="heading--map">{{ titleProtected }}</p>
-        <span class="map__panel-layer-percentage">{{ percentageProtected }}%</span>
-      </div>
+      <p class="map__panel-title">{{ titleProtected }}</p>
+      <span class="map__panel-stat">{{ percentageProtected }}%</span>
+
+      <p class="map__panel-layer">{{ habitat }}</p>
+      <p class="map__panel-layer">Protected Areas</p>
     </div>
+
+    <div id="map" class="map__map"></div>
   </div>
 </template>
 
@@ -19,6 +20,7 @@
     name: 'mapbox',
 
     props: {
+      habitat: String,
       titleGlobal: String,
       titleProtected: String,
       percentageGlobal: Number,

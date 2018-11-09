@@ -1,15 +1,4 @@
 //--------------------------------------------------
-// map mixins
-//--------------------------------------------------
-@mixin layer-percentage {
-  font-weight: $bold;
-  margin-right: rem-calc(12);
-
-  display: inline-block;
-  position: relative;
-}
-
-//--------------------------------------------------
 // map
 //--------------------------------------------------
 .map {
@@ -24,101 +13,71 @@
       &__map {
         width: 100%; height: rem-calc(210);
 
+        z-index: -1;
+
         @include breakpoint($small) { height: rem-calc(400); }
         @include breakpoint($medium) { height: rem-calc(668); }
       }
 
       &__panel {
-        background-color: $grey-xdark;
+        background-color: $primary;
+        box-shadow: 0 8px 18px -4px rgba($black, .8);
         color: $white;
-        padding-top: rem-calc(18);
-        padding-bottom: rem-calc(16);
+        padding-top: rem-calc(50);
+        padding-bottom: rem-calc(40);
+
+        @include breakpoint($small) { height: rem-calc(400); }
 
         @include breakpoint($medium) {
-          width: rem-calc(440);
+          box-shadow: -8px 0 18px -4px rgba($black, .8);
+          padding-left: rem-calc(44);
+          width: rem-calc(410); height: 100%;
 
           position: absolute;
-          top: calc(668px * .5);
+          top: 0;
           right: 0;
-
-          transform: translateY(-50%);
         }
       }
 
+        &__panel-title {
+          font-size: rem-calc(18);
+          margin-bottom: 0;
+
+          @include breakpoint($medium) { font-size: rem-calc(25); }
+        }
+
+        &__panel-stat {
+          font-size: rem-calc(50);
+          font-weight: $bold;
+          line-height: 1.2;
+          margin-bottom: rem-calc(30);
+
+          display: block;
+
+          @include breakpoint($small) {
+            
+          }
+
+          @include breakpoint($medium) { font-size: rem-calc(100); }
+        }
+
         &__panel-layer {
-          background-color: $grey;
-          font-size: rem-calc(14);
+          font-size: rem-calc(18);
           margin-bottom: rem-calc(8);
-          padding: rem-calc(16 14);
 
-          @include breakpoint($small) { font-size: rem-calc(18); }
-        }
+          @include breakpoint($medium) { font-size: rem-calc(20); }
 
-        &__panel-sublayer {
-          margin-top: rem-calc(12);
-        }
-
-          &__panel-layer-title {
-            width: 70%;
-          }
-
-          &__panel-layer-stat {
-            align-self: flex-start;
-            text-align: right;
-            width: 40%;
-
-            @include breakpoint($small) {
-              align-self: center;
-              width: rem-calc(144);
-            }
-
-            @include breakpoint($medium) {
-              align-self: flex-start;
-              width: rem-calc(156);
-            }
-          }
-
-          &__panel-layer-button {
-            background-color: $grey;
-            border: solid 2px $white;
+          &::before {
+            background-color: $pink;
             border-radius: 100%;
-            margin-right: rem-calc(14);
-            width: rem-calc(30); height: rem-calc(30);
+            content: '';
+            margin-right: rem-calc(16 );
+            width: rem-calc(19); height: rem-calc(19);
 
-            display: block;
-            position: relative;
+            display: inline-block;
+
+            transform: translateY(4px);
           }
-
-          &__panel-layer-percentage {
-            @include layer-percentage;
-            font-size: rem-calc(20);
-
-            @include breakpoint($small) { font-size: rem-calc(70); }
-          }
-
-          &__panel-sublayer-button {
-            background-color: $grey;
-            border: solid 1px $white;
-            border-radius: 100%;
-            margin-right: rem-calc(10);
-            width: rem-calc(22); height: rem-calc(22);
-
-            display: block;
-            position: relative;
-          }
-
-          &__panel-sublayer-percentage {
-            @include layer-percentage;
-            font-size: rem-calc(15);
-
-            @include breakpoint($small) { font-size: rem-calc(30); }
-          }
-
-        &__source {
-          font-size: rem-calc(14);
-          font-style: italic;
-
-          @include breakpoint($small) { font-size: rem-calc(18); }
         }
     }
   }
