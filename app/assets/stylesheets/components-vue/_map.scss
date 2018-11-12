@@ -1,4 +1,9 @@
 //--------------------------------------------------
+// map variables
+//--------------------------------------------------
+$map-panel-width: 410;
+
+//--------------------------------------------------
 // map
 //--------------------------------------------------
 .map {
@@ -8,6 +13,7 @@
 //--------------------------------------------------
   &--statistics {
     position: relative;
+    z-index: -1;
 
     .map {
       &__map {
@@ -16,7 +22,9 @@
         z-index: -1;
 
         @include breakpoint($small) { height: rem-calc(400); }
-        @include breakpoint($medium) { height: rem-calc(668); }
+        @include breakpoint($medium) { 
+          width: calc(100% - #{$map-panel-width}px); height: rem-calc(668); 
+        }
       }
 
       &__panel {
@@ -31,7 +39,7 @@
         @include breakpoint($medium) {
           box-shadow: -8px 0 18px -4px rgba($black, .8);
           padding-left: rem-calc(44);
-          width: rem-calc(410); height: 100%;
+          width: rem-calc($map-panel-width); height: 100%;
 
           position: absolute;
           top: 0;
@@ -77,6 +85,14 @@
             display: inline-block;
 
             transform: translateY(4px);
+          }
+        }
+        
+        &__panel-layer-habitat::before {
+          @for $i from 1 through length($names) {
+            .theme--#{nth($names, $i)} & {
+              background-color: nth($colours, $i);
+            }
           }
         }
     }

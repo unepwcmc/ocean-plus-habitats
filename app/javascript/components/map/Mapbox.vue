@@ -7,7 +7,7 @@
       <p class="map__panel-title">{{ titleProtected }}</p>
       <span class="map__panel-stat">{{ percentageProtected }}%</span>
 
-      <p class="map__panel-layer">{{ habitat }}</p>
+      <p class="map__panel-layer map__panel-layer-habitat">{{ habitat }}</p>
       <p class="map__panel-layer">Protected Areas</p>
     </div>
 
