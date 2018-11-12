@@ -1,15 +1,9 @@
 class SiteController < ApplicationController
+  before_action :load_habitat
   before_action :load_global
   before_action :load_charts_data
 
   def warmwater
-    @title = 'Warm-water corals'
-    @theme = 'orange'
-    @global_coverage_title = global_coverage_title
-    @protected_title = protected_title
-    @global_coverage = 0 #TODO
-    @protected_percentage = 0 #TODO
-
     @commitments = [
       @aichi_targets,
       @sdgs,
@@ -18,13 +12,6 @@ class SiteController < ApplicationController
   end
 
   def saltmarshes
-    @title = 'Saltmarshes'
-    @theme = 'green'
-    @global_coverage_title = global_coverage_title
-    @protected_title = protected_title
-    @global_coverage = 0 #TODO
-    @protected_percentage = 0 #TODO
-
     @commitments = [
       @aichi_targets,
       @sdgs,
@@ -33,13 +20,6 @@ class SiteController < ApplicationController
   end
 
   def mangroves
-    @title = 'Mangroves'
-    @theme = 'yellow'
-    @global_coverage_title = global_coverage_title
-    @protected_title = protected_title
-    @global_coverage = 0 #TODO
-    @protected_percentage = 0 #TODO
-
     @commitments = [
       @aichi_targets,
       @sdgs,
@@ -48,13 +28,6 @@ class SiteController < ApplicationController
   end
 
   def seagrasses
-    @title = 'Seagrasses'
-    @theme = 'blue'
-    @global_coverage_title = global_coverage_title
-    @protected_title = protected_title
-    @global_coverage = 0 #TODO
-    @protected_percentage = 0 #TODO
-
     @commitments = [
       @aichi_targets,
       @sdgs,
@@ -63,13 +36,6 @@ class SiteController < ApplicationController
   end
 
   def coldwater
-    @title = 'Cold-water corals'
-    @theme = 'pink'
-    @global_coverage_title = global_coverage_title
-    @protected_title = protected_title
-    @global_coverage = 0 #TODO
-    @protected_percentage = 0 #TODO
-
     @commitments = [
       @aichi_targets,
       @sdgs,
@@ -78,6 +44,11 @@ class SiteController < ApplicationController
   end
 
   private
+
+  def load_habitat
+    @habitat = Habitat.where(name: action_name).first
+    @habitat ||= Habitat.where(name: 'coralreef').first
+  end
 
   def load_global
     @global = YAML.load(File.open("#{Rails.root}/lib/data/content/global.yml", 'r'))
@@ -136,13 +107,5 @@ class SiteController < ApplicationController
         percent: '10',
       }
     ]
-  end
-
-  def global_coverage_title
-    "Total global coverage of #{@title.downcase}"
-  end
-
-  def protected_title
-    "Percentage of #{@title.downcase} that occur within a marine protected area"
   end
 end
