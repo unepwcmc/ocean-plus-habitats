@@ -57,6 +57,12 @@ class SiteController < ApplicationController
   end
 
   def load_charts_data
+    habitat_data = []
+    Habitat.all.each do |habitat|
+      c = Carto.new(habitat.name)
+      habitat_data << c.total_area_by_country
+    end
+
     @chart_greatest_coverage = [
       {
         label: 'Australia',
