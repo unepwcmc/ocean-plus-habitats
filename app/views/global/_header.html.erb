@@ -1,12 +1,12 @@
-<header class="header">
-  <div class="container--small">
-    <img src="" alt="Ocean+ Habitats logo" class="logo--site margin-center">
+<header class="header bg-overlay">
+  <div class="header__content container--small">
+    <%= image_tag 'logos/logo-ocean-plus-habitats.svg', alt: 'Ocean+ Habitats logo', class: 'logo--site margin-center' %>
     <h1><%= @global['title'] %></h1>
     <div>
       <% @global['tagline'].each do |line| %>
         <p><%= line['p'] %></p>
       <% end %>
     </div>
-    <i class="header__icon icon--scroll absolute-center">scroll icon</i>
+    <i class="header__icon icon--scroll absolute-center"></i>
   </div>
 </header>
