@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ul class="tabs__triggers ul-inline ul-unstyled">
+    <ul class="tab__triggers ul-inline ul-unstyled">
       <li v-for="child, index in children" @click="triggerTab(child.id)" class="tab__trigger" :class="{ 'tab-active': child.isActive }">
         {{ child.title }}
       </li>
