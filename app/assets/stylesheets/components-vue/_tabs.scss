@@ -15,7 +15,7 @@
   }
   
   &__triggers {
-    margin-bottom: rem-calc(16);
+    margin-bottom: rem-calc(20);
 
     @include breakpoint($medium) { margin-bottom: rem-calc(24); }
   }
@@ -45,6 +45,19 @@
     }
 
       &__content-item {
-        @include breakpoint($medium) { width: 48%; }
+        font-size: rem-calc(16);
+        margin-bottom: rem-calc(14);
+
+        @include breakpoint($medium) { 
+          font-size: rem-calc(18);
+          width: 48%; 
+        }
       }
+
+        &__content-icon {
+          margin-right: rem-calc(14);
+          width: rem-calc(44); height: rem-calc(44);
+
+          @include breakpoint($medium) { margin-right: rem-calc(20); }
+        }
 }
