@@ -3,7 +3,7 @@ module PostgisUtils
 
   def self.intersection(geom, field='the_geom', make_valid=false)
     field = make_valid ? "ST_MakeValid(#{field})" : field
-   "ST_Intersects(#{geom_from_text(geom)}, #{field})"
+    "ST_Intersects(#{geom_from_text(geom)}, #{field})"
   end
 
   def self.coords_to_geojson(type, coords)
