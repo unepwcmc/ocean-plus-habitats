@@ -98,7 +98,24 @@
               'fill-opacity': .8
             },
             'layout': {
-              
+
+            }
+          }),
+
+          this.map.addLayer({
+            'id': 'test-points',
+            'type': 'circle',
+            'source': {
+              'type': 'vector',
+              'tiles': tiles.mapProperties.mapProperties.metadata.tilejson.vector.tiles
+            },
+            'source-layer': 'layer0',
+            'paint': {
+              'circle-radius': 3,
+              'circle-color': '#B42222',
+            },
+            'filter': ['==', '$type', 'Point'],
+            'layout': {
             }
           })
         })
@@ -109,6 +126,7 @@
           sqlArray = []
 
         tables.push(process.env.WDPA_POLY_TABLE)
+        tables.push(process.env.WDPA_POINT_TABLE)
 
         tables.forEach(table => {
           sqlArray.push(`SELECT cartodb_id, the_geom, the_geom_webmercator FROM ${table}`)
