@@ -17,6 +17,13 @@ class Carto
     @response.parsed_response['rows']
   end
 
+  def total_area_by_country
+    carto_api_key = Rails.application.secrets.dig(:carto_api_key)
+    @options = { query: { q: total_area_by_country_query, api_key: carto_api_key } }
+    @response = self.class.get("/sql", @options)
+    @response.parsed_response['rows']
+  end
+
   def intersect
     @response = self.class.get("/sql", @options)
     @response.parsed_response['rows']
@@ -30,8 +37,8 @@ class Carto
     query
   end
 
-  def total_area_by_country
-    query = "SELECT SUM(gis_area_k) FROM #{from}"
+  def total_area_by_country_query
+    query = "SELECT SUM(gis_area_k) FROM #{from} GROUP BY iso3"
     query << " WHERE #{@constraints}" if @constraints.present?
     query
   end
