@@ -29,6 +29,7 @@
 
     data () {
       return {
+        map: {},
         mapbox: {
           accessToken: process.env.MAPBOX_TOKEN,
           // baseUrl: 'https://api.mapbox.com/geocoding/v5/mapbox.places'
@@ -52,6 +53,50 @@
         })
 
         map.scrollZoom.disable()
+
+        this.map = map
+
+        const tiles = this.addTiles()
+      },
+
+      addTiles () {
+        let tiles = new cartodb.Tiles({
+          user_name: process.env.CARTO_USERNAME,
+          tiler_protocol: 'https',
+          tiler_port: '443',
+          sublayers: [{
+            //change table_name with name of the dataset
+            //best to use .env
+            sql: this.generateSQL(),
+            // cartocss: this.generateCartocss()
+          }],
+          extra_params: { map_key: process.env.CARTO_API_KEY }
+        })
+
+        console.log(tiles)
+
+        tiles.getTiles(object => {
+          this.map.addLayer({
+            'id': 'test',
+            'type': 'fill',
+            'source': {
+              'type': 'vector',
+              'tiles': tiles.mapProperties.mapProperties.metadata.tilejson.vector.tiles
+            },
+            'source-layer': 'layer0',
+            'paint': {
+              'fill-color': '#00ff00',
+              'fill-opacity': 0.8
+            },
+            'layout': {
+              'visibility': 'none'
+            }
+          })
+        })
+      },
+
+      generateSQL () {
+        let sql = 'SELECT cartodb_id, the_geom, the_geom_webmercator, name, desig_eng, gov_type, iucn_cat, wdpaid FROM ' + process.env.WDPA_POLY_TABLE
       }
     }
   }
