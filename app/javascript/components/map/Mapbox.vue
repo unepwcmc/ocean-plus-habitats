@@ -68,7 +68,7 @@
             //change table_name with name of the dataset
             //best to use .env
             sql: this.generateSQL(),
-            // cartocss: this.generateCartocss()
+            cartocss: '#layer {point-fill: #fff, polygon-fill: #fff}'
           }],
           extra_params: { map_key: process.env.CARTO_API_KEY }
         })
@@ -85,11 +85,11 @@
             },
             'source-layer': 'layer0',
             'paint': {
-              'fill-color': '#00ff00',
-              'fill-opacity': 0.8
+              'fill-color': '#ffffff',
+              'fill-opacity': 1
             },
             'layout': {
-              'visibility': 'none'
+              
             }
           })
         })
@@ -97,6 +97,8 @@
 
       generateSQL () {
         let sql = 'SELECT cartodb_id, the_geom, the_geom_webmercator, name, desig_eng, gov_type, iucn_cat, wdpaid FROM ' + process.env.WDPA_POLY_TABLE
+
+        return sql
       }
     }
   }
