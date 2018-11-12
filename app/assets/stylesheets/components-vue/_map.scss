@@ -13,13 +13,11 @@ $map-panel-width: 410;
 //--------------------------------------------------
   &--statistics {
     position: relative;
-    z-index: -1;
+    z-index: 1;
 
     .map {
       &__map {
         width: 100%; height: rem-calc(210);
-
-        z-index: -1;
 
         @include breakpoint($small) { height: rem-calc(400); }
         @include breakpoint($medium) { 
@@ -33,6 +31,7 @@ $map-panel-width: 410;
         color: $white;
         padding-top: rem-calc(50);
         padding-bottom: rem-calc(40);
+        z-index: 1;
 
         @include breakpoint($small) { height: rem-calc(400); }
 
