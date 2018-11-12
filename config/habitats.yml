@@ -1,0 +1,32 @@
+habitats:
+  warmwater:
+    name: 'coralreef'
+    title: 'Warm-water corals'
+    theme: 'orange'
+    poly_table: 'wcmc008_coralreef_poly'
+    point_table:
+  saltmarshes:
+    name: 'saltmarshes'
+    title: 'Saltmarshes'
+    theme: 'green'
+    poly_table: 'wcmc027_saltmarshes_poly'
+    point_table: 'wcmc027_saltmarshes_point'
+  mangroves:
+    name: 'mangroves'
+    title: 'Mangroves'
+    theme: 'yellow'
+    poly_table: 'wcmc011_atlasmangrove_poly'
+    point_table:
+  seagrasses:
+    name: 'seagrasses'
+    title: 'Seagrasses'
+    theme: 'blue'
+    poly_table: 'wcmc_013_014_seagrasses_poly'
+    point_table: 'wcmc_013_014_seagrasses_point'
+  coldcorals:
+    name: 'coldcorals'
+    title: 'Cold-water Corals'
+    theme: 'pink'
+    poly_table: 'wcmc001_coldcorals_poly'
+    point_table: 'wcmc001_coldcorals_point'
+

@@ -61,11 +61,7 @@ $map-panel-width: 410;
 
           display: block;
 
-          @include breakpoint($small) {
-            
-          }
-
-          @include breakpoint($medium) { font-size: rem-calc(100); }
+          @include breakpoint($medium) { font-size: rem-calc(60); }
         }
 
         &__panel-layer {
