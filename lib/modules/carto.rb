@@ -30,6 +30,12 @@ class Carto
     query
   end
 
+  def total_area_by_country
+    query = "SELECT SUM(gis_area_k) FROM #{from}"
+    query << " WHERE #{@constraints}" if @constraints.present?
+    query
+  end
+
   def from
     @habitat.poly_table
   end
