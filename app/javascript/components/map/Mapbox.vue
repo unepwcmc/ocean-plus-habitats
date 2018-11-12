@@ -73,12 +73,16 @@
           user_name: process.env.CARTO_USERNAME,
           tiler_protocol: 'https',
           tiler_port: '443',
-          sublayers: [{
-            //change table_name with name of the dataset
-            //best to use .env
-            sql: this.generateSQL(),
-            cartocss: '#layer {point-fill: #ff00ff, polygon-fill: #ff00ff}'
-          }],
+          sublayers: [
+            {
+              sql: this.generateSQL(),
+              cartocss: '#layer {point-fill: #ff00ff, polygon-fill: #ff00ff}'
+            },
+            {
+              sql: this.generateHabitatSQL(),
+              cartocss: '#layer {point-fill: #ff00ff, polygon-fill: #ff00ff}'
+            }
+          ],
           extra_params: { map_key: process.env.CARTO_API_KEY }
         })
 
@@ -86,7 +90,7 @@
 
         tiles.getTiles(object => {
           this.map.addLayer({
-            'id': 'test',
+            'id': 'wdpa',
             'type': 'fill',
             'source': {
               'type': 'vector',
@@ -103,7 +107,24 @@
           }),
 
           this.map.addLayer({
-            'id': 'test-points',
+            'id': 'habitat',
+            'type': 'fill',
+            'source': {
+              'type': 'vector',
+              'tiles': tiles.mapProperties.mapProperties.metadata.tilejson.vector.tiles
+            },
+            'source-layer': 'layer1',
+            'paint': {
+              'fill-color': this.theme.orange, //TODO Change colour based on habitat
+              'fill-opacity': .8
+            },
+            'layout': {
+
+            }
+          }),
+
+          this.map.addLayer({
+            'id': 'wdpa-points',
             'type': 'circle',
             'source': {
               'type': 'vector',
@@ -112,7 +133,24 @@
             'source-layer': 'layer0',
             'paint': {
               'circle-radius': 3,
-              'circle-color': '#B42222',
+              'circle-color': this.theme.pa,
+            },
+            'filter': ['==', '$type', 'Point'],
+            'layout': {
+            }
+          }),
+
+          this.map.addLayer({
+            'id': 'habitat-points',
+            'type': 'circle',
+            'source': {
+              'type': 'vector',
+              'tiles': tiles.mapProperties.mapProperties.metadata.tilejson.vector.tiles
+            },
+            'source-layer': 'layer1',
+            'paint': {
+              'circle-radius': 3,
+              'circle-color': this.theme.orange, //TODO Change colour based on habitat
             },
             'filter': ['==', '$type', 'Point'],
             'layout': {
@@ -122,11 +160,24 @@
       },
 
       generateSQL () {
-        const tables = this.tables,
+        const tables = [],
           sqlArray = []
 
         tables.push(process.env.WDPA_POLY_TABLE)
         tables.push(process.env.WDPA_POINT_TABLE)
+
+        tables.forEach(table => {
+          sqlArray.push(`SELECT cartodb_id, the_geom, the_geom_webmercator FROM ${table}`)
+        })
+
+        const sql = sqlArray.join(' UNION ALL ')
+
+        return sql
+      },
+
+      generateHabitatSQL () {
+        const tables = this.tables,
+          sqlArray = []
 
         tables.forEach(table => {
           sqlArray.push(`SELECT cartodb_id, the_geom, the_geom_webmercator FROM ${table}`)
