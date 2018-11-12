@@ -24,7 +24,8 @@
       titleGlobal: String,
       titleProtected: String,
       percentageGlobal: Number,
-      percentageProtected: Number
+      percentageProtected: Number,
+      tables: Array
     },
 
     data () {
@@ -34,6 +35,14 @@
           accessToken: process.env.MAPBOX_TOKEN,
           // baseUrl: 'https://api.mapbox.com/geocoding/v5/mapbox.places'
         },
+        theme: {
+          pa: '#BA41FF',
+          blue: '#7AB6FF',
+          green: '#3FD18B',
+          orange: '#FF8A75',
+          pink: '#F35F8D',
+          yellow: '#FCDA68'
+        }
       }
     },
 
@@ -68,7 +77,7 @@
             //change table_name with name of the dataset
             //best to use .env
             sql: this.generateSQL(),
-            cartocss: '#layer {point-fill: #fff, polygon-fill: #fff}'
+            cartocss: '#layer {point-fill: #ff00ff, polygon-fill: #ff00ff}'
           }],
           extra_params: { map_key: process.env.CARTO_API_KEY }
         })
@@ -85,8 +94,8 @@
             },
             'source-layer': 'layer0',
             'paint': {
-              'fill-color': '#ffffff',
-              'fill-opacity': 1
+              'fill-color': this.theme.pa,
+              'fill-opacity': .8
             },
             'layout': {
               
@@ -96,7 +105,16 @@
       },
 
       generateSQL () {
-        let sql = 'SELECT cartodb_id, the_geom, the_geom_webmercator, name, desig_eng, gov_type, iucn_cat, wdpaid FROM ' + process.env.WDPA_POLY_TABLE
+        const tables = this.tables,
+          sqlArray = []
+
+        tables.push(process.env.WDPA_POLY_TABLE)
+
+        tables.forEach(table => {
+          sqlArray.push(`SELECT cartodb_id, the_geom, the_geom_webmercator FROM ${table}`)
+        })
+
+        const sql = sqlArray.join(' UNION ALL ')
 
         return sql
       }
