@@ -38,8 +38,7 @@ class Carto
   end
 
   def total_area_by_country_query
-    query = "SELECT SUM(gis_area_k) FROM #{from} GROUP BY iso3"
-    query << " WHERE #{@constraints}" if @constraints.present?
+    query = "SELECT SUM(gis_area_k),iso3 FROM #{from} GROUP BY iso3 ORDER by SUM(gis_area_k) desc"
     query
   end
 
