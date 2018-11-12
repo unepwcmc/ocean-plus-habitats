@@ -45,7 +45,7 @@ class SiteController < ApplicationController
 
   private
 
-  def load_habitat;
+  def load_habitat
     @habitat = Habitat.where(name: action_name).first
     @habitat ||= Habitat.where(name: 'coralreef').first
   end
