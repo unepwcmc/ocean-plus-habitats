@@ -63,6 +63,13 @@ class SiteController < ApplicationController
       habitat_data << c.total_area_by_country
     end
 
+    country_total_area = {}
+    habitat_data.flatten.each do |country_data|
+      country_total_area[country_data["iso3"]] = country_total_area[country_data["iso3"]].nil? ?  country_data["sum"] : country_total_area[country_data["iso3"]] + country_data["sum"]
+    end
+
+    country_total_area.sort_by {|_key, value| value}
+
     @chart_greatest_coverage = [
       {
         label: 'Australia',
