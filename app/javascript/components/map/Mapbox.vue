@@ -21,6 +21,7 @@
 
     props: {
       habitat: String,
+      theme: String,
       titleGlobal: String,
       titleProtected: String,
       percentageGlobal: Number,
@@ -35,8 +36,8 @@
           accessToken: process.env.MAPBOX_TOKEN,
           // baseUrl: 'https://api.mapbox.com/geocoding/v5/mapbox.places'
         },
-        theme: {
-          pa: '#BA41FF',
+        themes: {
+          wdpa: '#BA41FF',
           blue: '#7AB6FF',
           green: '#3FD18B',
           orange: '#FF8A75',
@@ -76,11 +77,11 @@
           sublayers: [
             {
               sql: this.generateSQL(),
-              cartocss: '#layer {point-fill: #ff00ff, polygon-fill: #ff00ff}'
+              cartocss: '#layer {polygon-fill: #ff00ff}'
             },
             {
               sql: this.generateHabitatSQL(),
-              cartocss: '#layer {point-fill: #ff00ff, polygon-fill: #ff00ff}'
+              cartocss: '#layer {polygon-fill: #ff00ff}'
             }
           ],
           extra_params: { map_key: process.env.CARTO_API_KEY }
@@ -98,7 +99,7 @@
             },
             'source-layer': 'layer0',
             'paint': {
-              'fill-color': this.theme.pa,
+              'fill-color': this.themes.wdpa,
               'fill-opacity': .8
             },
             'layout': {
@@ -115,7 +116,7 @@
             },
             'source-layer': 'layer1',
             'paint': {
-              'fill-color': this.theme.orange, //TODO Change colour based on habitat
+              'fill-color': this.themes[this.theme],
               'fill-opacity': .8
             },
             'layout': {
@@ -133,7 +134,7 @@
             'source-layer': 'layer0',
             'paint': {
               'circle-radius': 3,
-              'circle-color': this.theme.pa,
+              'circle-color': this.themes.wdpa,
             },
             'filter': ['==', '$type', 'Point'],
             'layout': {
@@ -150,7 +151,7 @@
             'source-layer': 'layer1',
             'paint': {
               'circle-radius': 3,
-              'circle-color': this.theme.orange, //TODO Change colour based on habitat
+              'circle-color': this.themes[this.theme],
             },
             'filter': ['==', '$type', 'Point'],
             'layout': {
