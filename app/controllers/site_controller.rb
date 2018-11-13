@@ -56,43 +56,32 @@ class SiteController < ApplicationController
     @sdgs = YAML.load(File.open("#{Rails.root}/lib/data/content/sdgs.yml", 'r'))
   end
 
-  def calculate_percentage(global_area, country_total_area)
-    percentage_total_area = country_total_area.each_with_object({}) { |(key, value), hash| hash[key] = 100*(value/global_area) }
+  def calculate_percentage(total_area, country_total_area)
+    percentage_total_area = country_total_area.each_with_object({}) { |(key, value), hash| hash[key] = 100*(value/total_area) }
     percentage_total_area
-  end
-
-  def calculate_global_area(global_area)
-    total = 0.0
-    global_area.each do |global_area_habitat|
-      total = total + global_area_habitat.first["sum"].to_f
-    end
-    total
   end
 
   def sum_country_areas(habitat_data, country_total_area)
     habitat_data.flatten.each do |country_data|
-      next if country_data["iso3"].include? "/" # remove areas which are multiple iso
+      next if country_data["iso3"].include? "/" # remove areas which have multiple iso
       country_total_area[country_data["iso3"]] = country_total_area[country_data["iso3"]].nil? ?  country_data["sum"] : country_total_area[country_data["iso3"]] + country_data["sum"]
     end
     country_total_area
   end
 
   def load_charts_data
-    habitat_data = []
-    global_area = []
-    Habitat.all.each do |habitat|
-      c = Carto.new(habitat.name)
-      habitat_data << c.total_area_by_country
-      global_area << c.total_area
-    end
 
     country_total_area = {}
 
-    country_total_area = sum_country_areas(habitat_data, country_total_area)
-    global_area = calculate_global_area(global_area)
-    country_total_area_percentage = calculate_percentage(global_area, country_total_area)
+    c = Carto.new(@habitat.name)
+    habitat_data = c.total_area_by_country
+    total_area = c.total_area
 
-    country_total_area_percentage.sort_by {|_key, value| value}
+    habitat_data = sum_country_areas(habitat_data, country_total_area)
+
+    country_total_area_percentage = habitat_data#calculate_percentage(total_area, country_total_area)
+
+    top_five_countries = country_total_area_percentage.sort_by {|_key, value| value}.last(5)
 
     @chart_greatest_coverage = [
       {
