@@ -92,9 +92,7 @@ class SiteController < ApplicationController
     global_area = calculate_global_area(global_area)
     country_total_area_percentage = calculate_percentage(global_area, country_total_area)
 
-    byebug
     country_total_area_percentage.sort_by {|_key, value| value}
-    byebug
 
     @chart_greatest_coverage = [
       {
