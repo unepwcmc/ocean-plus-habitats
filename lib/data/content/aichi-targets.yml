@@ -4,8 +4,8 @@ list:
     target: 5,
     text: '<strong>Target 5.</strong> The rate of loss of all natural habitats, including forests, is at least halved and where feasible brought close to zero, and degradation and fragmentation is significantly reduced.'
   -
-    target: 10,
-    text: '<strong>Target 10.</strong> 11 percent of coastal and marine areas, especially areas of particular importance for biodiversity and ecosystem services, are conserved through effectively and equitably managed.'
+    target: 11,
+    text: '<strong>Target 11.</strong> 10 percent of coastal and marine areas, especially areas of particular importance for biodiversity and ecosystem services, are conserved through effectively and equitably managed.'
   -
     target: 14,
     text: '<strong>Target 14.</strong> Ecosystems that provide essential services are restored and safeguarded'

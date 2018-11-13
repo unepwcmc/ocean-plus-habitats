@@ -35,7 +35,7 @@ class SiteController < ApplicationController
     ]
   end
 
-  def coldwater
+  def coldcorals
     @commitments = [
       @aichi_targets,
       @sdgs,
