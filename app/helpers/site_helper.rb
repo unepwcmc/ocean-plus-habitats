@@ -4,12 +4,7 @@ module SiteHelper
     request.fullpath == path ? ' active' : ''
   end
 
-  def getTables habitat
-    tables = []
-
-    tables.push(habitat.poly_table) unless habitat.poly_table == nil
-    tables.push(habitat.point_table) unless habitat.point_table == nil
-
-    tables
+  def getTables
+    [@habitat.poly_table, @habitat.point_table].compact
   end
 end
