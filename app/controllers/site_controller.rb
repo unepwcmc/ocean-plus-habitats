@@ -56,13 +56,15 @@ class SiteController < ApplicationController
     @sdgs = YAML.load(File.open("#{Rails.root}/lib/data/content/sdgs.yml", 'r'))
   end
 
-  def calculate_percentage(total_area, country_total_area)
+  def calculate_percentage(arbitrary_value, country_total_area)
+    byebug
     percentage_total_area = country_total_area.each_with_object({}) { |(key, value), hash| hash[key] = 100*(value/total_area) }
     percentage_total_area
   end
 
-  def sum_country_areas(habitat_data, country_total_area)
-    habitat_data.flatten.each do |country_data|
+  def sum_country_areas(total_area_by_country)
+    country_total_area = {}
+    total_area_by_country.flatten.each do |country_data|
       next if country_data["iso3"].include? "/" # remove areas which have multiple iso
       country_total_area[country_data["iso3"]] = country_total_area[country_data["iso3"]].nil? ?  country_data["sum"] : country_total_area[country_data["iso3"]] + country_data["sum"]
     end
@@ -70,46 +72,20 @@ class SiteController < ApplicationController
   end
 
   def load_charts_data
-
-    country_total_area = {}
-
     c = Carto.new(@habitat.name)
-    habitat_data = c.total_area_by_country
-    total_area = c.total_area
+    total_area_by_country = c.total_area_by_country
+    total_area_by_country = sum_country_areas(total_area_by_country)
 
-    habitat_data = sum_country_areas(habitat_data, country_total_area)
+    top_five_countries = total_area_by_country.sort_by {|_key, value| value}.last(5)
+    arbitrary_value = top_five_countries.last.last.to_f * 1.05
 
-    country_total_area_percentage = habitat_data#calculate_percentage(total_area, country_total_area)
-
-    top_five_countries = country_total_area_percentage.sort_by {|_key, value| value}.last(5)
-
-    @chart_greatest_coverage = [
+    @chart_greatest_coverage = top_five_countries.reverse.map do |country|
       {
-        label: 'Australia',
-        value: '94',
-        percent: '94',
-      },
-      {
-        label: 'United Kingdom',
-        value: '63',
-        percent: '63',
-      },
-      {
-        label: 'Spain',
-        value: '75',
-        percent: '75',
-      },
-      {
-        label: 'Italy',
-        value: '50',
-        percent: '50',
-      },
-      {
-        label: 'Russia',
-        value: '10',
-        percent: '10',
+        label: country.first,
+        value: country.last.round(0),
+        percent: 100*country.last/arbitrary_value
       }
-    ]
+    end
 
     @chart_protected_areas = [
       {
