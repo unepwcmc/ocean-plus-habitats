@@ -57,8 +57,8 @@ class SiteController < ApplicationController
   end
 
   def calculate_percentage(global_area, country_total_area)
-    percentage_total_area = {}
-    country_total_area
+    percentage_total_area = country_total_area.each_with_object({}) { |(key, value), hash| hash[key] = 100*(value/global_area) }
+    percentage_total_area
   end
 
   def calculate_global_area(global_area)
