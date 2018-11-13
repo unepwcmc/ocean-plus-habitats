@@ -87,76 +87,11 @@
           extra_params: { map_key: process.env.CARTO_API_KEY }
         })
 
-        console.log(tiles)
-
         tiles.getTiles(object => {
-          this.map.addLayer({
-            'id': 'wdpa',
-            'type': 'fill',
-            'source': {
-              'type': 'vector',
-              'tiles': tiles.mapProperties.mapProperties.metadata.tilejson.vector.tiles
-            },
-            'source-layer': 'layer0',
-            'paint': {
-              'fill-color': this.themes.wdpa,
-              'fill-opacity': .8
-            },
-            'layout': {
-
-            }
-          }),
-
-          this.map.addLayer({
-            'id': 'habitat',
-            'type': 'fill',
-            'source': {
-              'type': 'vector',
-              'tiles': tiles.mapProperties.mapProperties.metadata.tilejson.vector.tiles
-            },
-            'source-layer': 'layer1',
-            'paint': {
-              'fill-color': this.themes[this.theme],
-              'fill-opacity': .8
-            },
-            'layout': {
-
-            }
-          }),
-
-          this.map.addLayer({
-            'id': 'wdpa-points',
-            'type': 'circle',
-            'source': {
-              'type': 'vector',
-              'tiles': tiles.mapProperties.mapProperties.metadata.tilejson.vector.tiles
-            },
-            'source-layer': 'layer0',
-            'paint': {
-              'circle-radius': 3,
-              'circle-color': this.themes.wdpa,
-            },
-            'filter': ['==', '$type', 'Point'],
-            'layout': {
-            }
-          }),
-
-          this.map.addLayer({
-            'id': 'habitat-points',
-            'type': 'circle',
-            'source': {
-              'type': 'vector',
-              'tiles': tiles.mapProperties.mapProperties.metadata.tilejson.vector.tiles
-            },
-            'source-layer': 'layer1',
-            'paint': {
-              'circle-radius': 3,
-              'circle-color': this.themes[this.theme],
-            },
-            'filter': ['==', '$type', 'Point'],
-            'layout': {
-            }
-          })
+          this.addLayer(tiles, 'layer0', 'wdpa', this.themes.wdpa, false)
+          this.addLayer(tiles, 'layer0', 'wdpa-points', this.themes.wdpa, true)
+          this.addLayer(tiles, 'layer1', 'habitat', this.themes[this.theme], false)
+          this.addLayer(tiles, 'layer1', 'habitat-points', this.themes[this.theme], true)
         })
       },
 
@@ -187,6 +122,28 @@
         const sql = sqlArray.join(' UNION ALL ')
 
         return sql
+      },
+
+      addLayer (tiles, source, id, colour, point) {
+        let options = {
+          'id': id,
+          'source': {
+            'type': 'vector',
+            'tiles': tiles.mapProperties.mapProperties.metadata.tilejson.vector.tiles
+          },
+          'source-layer': source
+        }
+
+        if(point){
+          options['type'] = 'circle'
+          options['paint'] = { 'circle-radius': 2, 'circle-color': colour }
+          options['filter'] = ['==', '$type', 'Point']
+        } else {
+          options['type'] = 'fill'
+          options['paint'] = { 'fill-color': colour, 'fill-opacity': .8 }
+        }
+
+        this.map.addLayer(options)
       }
     }
   }
