@@ -63,6 +63,7 @@
         })
 
         map.scrollZoom.disable()
+        map.addControl(new mapboxgl.NavigationControl({ showCompass: false }))
 
         this.map = map
 
@@ -107,7 +108,7 @@
 
         if(point){
           options['type'] = 'circle'
-          options['paint'] = { 'circle-radius': 2, 'circle-color': colour }
+          options['paint'] = { 'circle-radius': 2, 'circle-color': colour, 'circle-opacity': .8 }
           options['filter'] = ['==', '$type', 'Point']
         } else {
           options['type'] = 'fill'
