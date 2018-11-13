@@ -32,10 +32,10 @@
     data () {
       return {
         map: {},
-        mapbox: {
-          accessToken: process.env.MAPBOX_TOKEN,
-          // baseUrl: 'https://api.mapbox.com/geocoding/v5/mapbox.places'
-        },
+        mapboxToken: process.env.MAPBOX_TOKEN,
+        cartoUsername: process.env.CARTO_USERNAME,
+        cartoApiKey: process.env.CARTO_API_KEY,
+        wdpaTables: [process.env.WDPA_POLY_TABLE, process.env.WDPA_POINT_TABLE],
         themes: {
           wdpa: '#BA41FF',
           blue: '#7AB6FF',
@@ -53,7 +53,7 @@
 
     methods: {
       createMap () {
-        mapboxgl.accessToken = this.mapbox.accessToken
+        mapboxgl.accessToken = this.mapboxToken
 
         let map = new mapboxgl.Map({
           container: 'map',
@@ -66,25 +66,25 @@
 
         this.map = map
 
-        const tiles = this.addTiles()
+        this.addTiles()
       },
 
       addTiles () {
         let tiles = new cartodb.Tiles({
-          user_name: process.env.CARTO_USERNAME,
+          user_name: this.cartoUsername,
           tiler_protocol: 'https',
           tiler_port: '443',
           sublayers: [
             {
-              sql: this.generateSQL(),
+              sql: this.generateSQL(this.wdpaTables),
               cartocss: '#layer {polygon-fill: #ff00ff}'
             },
             {
-              sql: this.generateHabitatSQL(),
+              sql: this.generateSQL(this.tables),
               cartocss: '#layer {polygon-fill: #ff00ff}'
             }
           ],
-          extra_params: { map_key: process.env.CARTO_API_KEY }
+          extra_params: { map_key: this.cartoApiKey }
         })
 
         tiles.getTiles(object => {
@@ -93,35 +93,6 @@
           this.addLayer(tiles, 'layer1', 'habitat', this.themes[this.theme], false)
           this.addLayer(tiles, 'layer1', 'habitat-points', this.themes[this.theme], true)
         })
-      },
-
-      generateSQL () {
-        const tables = [],
-          sqlArray = []
-
-        tables.push(process.env.WDPA_POLY_TABLE)
-        tables.push(process.env.WDPA_POINT_TABLE)
-
-        tables.forEach(table => {
-          sqlArray.push(`SELECT cartodb_id, the_geom, the_geom_webmercator FROM ${table}`)
-        })
-
-        const sql = sqlArray.join(' UNION ALL ')
-
-        return sql
-      },
-
-      generateHabitatSQL () {
-        const tables = this.tables,
-          sqlArray = []
-
-        tables.forEach(table => {
-          sqlArray.push(`SELECT cartodb_id, the_geom, the_geom_webmercator FROM ${table}`)
-        })
-
-        const sql = sqlArray.join(' UNION ALL ')
-
-        return sql
       },
 
       addLayer (tiles, source, id, colour, point) {
@@ -144,6 +115,18 @@
         }
 
         this.map.addLayer(options)
+      },
+
+      generateSQL (tables) {
+        let sqlArray = []
+
+        tables.forEach(table => {
+          sqlArray.push(`SELECT cartodb_id, the_geom, the_geom_webmercator FROM ${table}`)
+        })
+
+        const sql = sqlArray.join(' UNION ALL ')
+
+        return sql
       }
     }
   }
