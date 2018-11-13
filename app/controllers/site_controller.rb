@@ -80,8 +80,9 @@ class SiteController < ApplicationController
     arbitrary_value = top_five_countries.last.last.to_f * 1.05
 
     @chart_greatest_coverage = top_five_countries.reverse.map do |country|
+      label = country.first == "ABNJ" ? "ABNJ" : Country.find_by(iso3: country.first).name
       {
-        label: Country.find_by(iso3: country.first).name,
+        label: label,
         value: country.last.round(0),
         percent: 100*country.last/arbitrary_value
       }
