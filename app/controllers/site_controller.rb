@@ -72,12 +72,32 @@ class SiteController < ApplicationController
     country_total_area
   end
 
+  def sort_country_count(total_value_by_country)
+    country_total_points = {}
+    total_value_by_country.each do |total_value|
+      next if total_value["iso3"].include? "ABNJ"
+      country_total_points[total_value["iso3"]] = total_value["count"]
+    end
+    country_total_points
+  end
+
+
   def load_charts_data
     c = Carto.new(@habitat.name)
-    total_area_by_country = c.total_area_by_country
-    total_area_by_country = sum_country_areas(total_area_by_country)
+    total_value_by_country = 0
+    top_five_countries = []
+    arbitrary_value = 0
 
-    top_five_countries = total_area_by_country.sort_by {|_key, value| value}.last(5)
+    if @habitat.name == "coldcorals"
+      byebug
+      total_value_by_country = c.total_points_by_country
+      total_value_by_country = sort_country_count(total_value_by_country)
+    else
+      total_value_by_country = c.total_area_by_country
+      total_value_by_country = sum_country_areas(total_value_by_country)
+    end
+
+    top_five_countries = total_value_by_country.sort_by {|_key, value| value}.last(5)
     arbitrary_value = top_five_countries.last.last.to_f * 1.05
 
     @chart_greatest_coverage = top_five_countries.reverse.map do |country|
