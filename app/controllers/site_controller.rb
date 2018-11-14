@@ -61,7 +61,8 @@ class SiteController < ApplicationController
     total_area_by_country.flatten.each do |country_data|
       next if country_data["iso3"].include? "/" #remove areas which have multiple iso
       next if country_data["iso3"].include? "ABNJ" #remove ABNJ
-      country_total_area[country_data["iso3"]] = country_total_area[country_data["iso3"]].nil? ?  country_data["sum"] : country_total_area[country_data["iso3"]] + country_data["sum"]
+      country_total_area[country_data["iso3"]] ||= 0
+      country_total_area[country_data["iso3"]] += country_data["sum"]
     end
     country_total_area
   end
