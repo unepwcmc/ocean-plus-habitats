@@ -45,13 +45,11 @@ class Carto
   end
 
   def total_area_by_country_query
-    query = "SELECT SUM(gis_area_k),iso3 FROM #{from} GROUP BY iso3 ORDER by SUM(gis_area_k) desc"
-    query
+    "SELECT SUM(gis_area_k),iso3 FROM #{from} GROUP BY iso3 ORDER by SUM(gis_area_k) desc"
   end
 
   def total_points_by_country_query
-    query = "SELECT COUNT(*),iso3 FROM #{from} GROUP BY iso3 ORDER by COUNT(*) desc"
-    query
+    "SELECT COUNT(*),iso3 FROM #{from} GROUP BY iso3 ORDER by COUNT(*) desc"
   end
 
   def from
