@@ -56,12 +56,6 @@ class SiteController < ApplicationController
     @sdgs = YAML.load(File.open("#{Rails.root}/lib/data/content/sdgs.yml", 'r'))
   end
 
-  def calculate_percentage(arbitrary_value, country_total_area)
-    byebug
-    percentage_total_area = country_total_area.each_with_object({}) { |(key, value), hash| hash[key] = 100*(value/total_area) }
-    percentage_total_area
-  end
-
   def sum_country_areas(total_area_by_country)
     country_total_area = {}
     total_area_by_country.flatten.each do |country_data|
