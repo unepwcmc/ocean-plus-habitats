@@ -66,6 +66,7 @@ class SiteController < ApplicationController
     country_total_area = {}
     total_area_by_country.flatten.each do |country_data|
       next if country_data["iso3"].include? "/" #remove areas which have multiple iso
+      next if country_data["iso3"].include? "ABNJ" #remove ABNJ
       country_total_area[country_data["iso3"]] = country_total_area[country_data["iso3"]].nil? ?  country_data["sum"] : country_total_area[country_data["iso3"]] + country_data["sum"]
     end
     country_total_area
@@ -80,7 +81,7 @@ class SiteController < ApplicationController
     arbitrary_value = top_five_countries.last.last.to_f * 1.05
 
     @chart_greatest_coverage = top_five_countries.reverse.map do |country|
-      label = country.first == "ABNJ" ? "ABNJ" : Country.find_by(iso3: country.first).name
+      label = Country.find_by(iso3: country.first).name
       {
         label: label,
         value: country.last.round(0),
