@@ -119,7 +119,7 @@ sup {
   &--small {
     @extend %container;    
 
-    @include breakpoint($small) { width: 60%; }
+    @include breakpoint($small) { width: 80%; }
     @include breakpoint($medium) { width: 50%; }
     @include breakpoint($large) { width: rem-calc(560); }
   }

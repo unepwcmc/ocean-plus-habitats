@@ -22,6 +22,12 @@
     @include breakpoint($small) { padding: rem-calc(0 0 30 0); }
   }
 
+    &__logo {
+      margin-bottom: rem-calc(40);
+
+      @include breakpoint($small) { margin-bottom: rem-calc(60); }
+    }
+
     &__intro {
       line-height: 1.6;
     }
