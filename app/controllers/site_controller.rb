@@ -57,33 +57,18 @@ class SiteController < ApplicationController
   end
 
   def load_charts_data
-    @chart_greatest_coverage = [
+
+    top_five_countries = @habitat.total_value_by_country.sort_by {|_key, value| value}.last(5)
+    arbitrary_value = top_five_countries.last.last.to_f * 1.05
+
+    @chart_greatest_coverage = top_five_countries.reverse.map do |country|
+      label = Country.find_by(iso3: country.first).name
       {
-        label: 'Australia',
-        value: '94',
-        percent: '94',
-      },
-      {
-        label: 'United Kingdom',
-        value: '63',
-        percent: '63',
-      },
-      {
-        label: 'Spain',
-        value: '75',
-        percent: '75',
-      },
-      {
-        label: 'Italy',
-        value: '50',
-        percent: '50',
-      },
-      {
-        label: 'Russia',
-        value: '10',
-        percent: '10',
+        label: label,
+        value: country.last.round(0),
+        percent: 100*country.last/arbitrary_value
       }
-    ]
+    end
 
     @chart_protected_areas = [
       {
