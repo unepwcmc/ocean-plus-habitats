@@ -63,8 +63,10 @@ class SiteController < ApplicationController
 
     @chart_greatest_coverage = top_five_countries.reverse.map do |country|
       label = Country.find_by(iso3: country.first).name
+      type = @habitat.name == "coldcorals" ? "points" : "area"
       {
         label: label,
+        type: type,
         value: country.last.round(0),
         percent: 100*country.last/arbitrary_value
       }
