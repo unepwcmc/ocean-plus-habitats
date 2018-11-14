@@ -56,42 +56,9 @@ class SiteController < ApplicationController
     @sdgs = YAML.load(File.open("#{Rails.root}/lib/data/content/sdgs.yml", 'r'))
   end
 
-  def sum_country_areas(total_area_by_country)
-    country_total_area = {}
-    total_area_by_country.flatten.each do |country_data|
-      next if country_data["iso3"].include? "/" #remove areas which have multiple iso
-      next if country_data["iso3"].include? "ABNJ" #remove ABNJ
-      country_total_area[country_data["iso3"]] ||= 0
-      country_total_area[country_data["iso3"]] += country_data["sum"]
-    end
-    country_total_area
-  end
-
-  def sort_country_count(total_value_by_country)
-    country_total_points = {}
-    total_value_by_country.each do |total_value|
-      next if total_value["iso3"].include? "ABNJ"
-      country_total_points[total_value["iso3"]] = total_value["count"]
-    end
-    country_total_points
-  end
-
-
   def load_charts_data
-    c = Carto.new(@habitat.name)
-    total_value_by_country = 0
-    top_five_countries = []
-    arbitrary_value = 0
 
-    if @habitat.name == "coldcorals"
-      total_value_by_country = c.total_points_by_country
-      total_value_by_country = sort_country_count(total_value_by_country)
-    else
-      total_value_by_country = c.total_area_by_country
-      total_value_by_country = sum_country_areas(total_value_by_country)
-    end
-
-    top_five_countries = total_value_by_country.sort_by {|_key, value| value}.last(5)
+    top_five_countries = @habitat.total_value_by_country.sort_by {|_key, value| value}.last(5)
     arbitrary_value = top_five_countries.last.last.to_f * 1.05
 
     @chart_greatest_coverage = top_five_countries.reverse.map do |country|
