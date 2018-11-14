@@ -89,7 +89,6 @@ class SiteController < ApplicationController
     arbitrary_value = 0
 
     if @habitat.name == "coldcorals"
-      byebug
       total_value_by_country = c.total_points_by_country
       total_value_by_country = sort_country_count(total_value_by_country)
     else
