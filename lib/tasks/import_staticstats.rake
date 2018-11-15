@@ -34,15 +34,21 @@ namespace :import do
     CSV.parse(csv, headers: true, encoding: "utf-8") do |row|
       csv_staticstats_row = row.to_hash
       staticstats_row_hash = {}
+      iso3 = ""
+      value = 0
 
       staticstats_hash.keys.each do |key|
         if key == :iso3
-          puts "iso3: #{csv_staticstats_row[staticstats_hash[key]]&.strip}"
+          iso3 = csv_staticstats_row[staticstats_hash[key]]&.strip
+          puts "iso3: #{iso3}"
         elsif key == :value
-          puts "value: #{csv_staticstats_row[staticstats_hash[key]]&.strip}"
+          value = csv_staticstats_row[staticstats_hash[key]]&.strip
+          puts "value: #{value}"
         end
       end
       
+      puts "insert value: #{value} into iso3: #{iso3}"
+
     end
       
     csv.close
