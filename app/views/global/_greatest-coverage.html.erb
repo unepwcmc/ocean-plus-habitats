@@ -1,4 +1,4 @@
-<section class="bg--grey-light section-padding">
+<section class="bg--grey-light section-padding sm-trigger-column">
   <div class="container">
     <div class="chart--column">
       <h3 class="chart__title">
@@ -13,12 +13,12 @@
         <div class="chart__chart center flex flex-h-between">
           <% @chart_greatest_coverage.each do |item| %>
             <div class="chart__item">
-              <div class="chart__bar">
-                <p class="chart__bar-label no-margin">
+              <div class="chart__bar sm-target-column">
+                <p class="chart__bar-label sm-target-column no-margin">
                   <%= number_with_delimiter(item[:value]) %>
                   <% unless @habitat_type == 'points' %>km<sup>2</sup><% end %>
                 </p>
-                <span class="chart__colour" style="height:<%= item[:percent] %>%;"></span>
+                <span class="chart__colour sm-target-child-column" style="height:<%= item[:percent] %>%;"></span>
               </div>
               <p class="chart__label bold"><%= item[:label] %></p>
             </div>

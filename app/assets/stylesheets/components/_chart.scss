@@ -7,6 +7,8 @@
   @include breakpoint($small) { font-size: rem-calc(18); }
 }
 
+
+
 //--------------------------------------------------
 // chart
 //--------------------------------------------------
@@ -50,20 +52,24 @@
             position: relative;
 
             @include breakpoint($small) { width: rem-calc(134); height: rem-calc(390); }
-            
           }
 
             &__bar-label {
               color: $grey-dark;
               font-size: rem-calc(12);
               font-weight: $bold;
+              opacity: 0;
 
               position: relative;
               top: rem-calc(22);
               z-index: 1;
+
+              transition: opacity 1s ease-in-out;
               
               @include breakpoint($small) { font-size: rem-calc(17); }
               @include breakpoint($medium) { font-size: rem-calc(18); }
+
+              &.animate { opacity: 1; }
             }
 
             &__colour {
@@ -72,9 +78,15 @@
               bottom: 0;
               left: 0;
 
+              transform: scaleY(0);
+              transform-origin: bottom;
+              transition: transform 1s ease-out;
+
               @for $i from 1 through length($names){
                 @include theme_background($i);
               }
+
+              &.animate { transform: scaleY(1); }
             }
 
           &__label {
