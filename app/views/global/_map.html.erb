@@ -3,9 +3,9 @@
   habitat-type="<%= @habitat_type %>"
   theme="<%= @habitat.theme %>"
   :tables="<%= getTables %>"
-  title-global="<%= @habitat.global_coverage_title %>"
+  title-global="<%= @habitat.global_coverage_title(@habitat_type) %>"
   title-protected="<%= @habitat.protected_title %>"
-  :percentage-global=<%= @habitat.global_coverage %>
-  :percentage-protected=<%= @habitat.protected_percentage %>
+  :percentage-global="<%= @habitat.global_coverage %>"
+  :percentage-protected="<%= @habitat.protected_percentage %>"
 >
 </mapbox>
