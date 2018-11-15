@@ -1,7 +1,7 @@
 //--------------------------------------------------
 // map variables
 //--------------------------------------------------
-$map-panel-width: 410;
+$map-panel-width: 430;
 
 //--------------------------------------------------
 // map
@@ -29,14 +29,13 @@ $map-panel-width: 410;
         background-color: $primary;
         box-shadow: 0 8px 18px -4px rgba($black, .8);
         color: $white;
-        padding-top: rem-calc(50);
+        padding-top: rem-calc(30);
         padding-bottom: rem-calc(40);
         z-index: 1;
 
-        @include breakpoint($small) { height: rem-calc(400); }
-
         @include breakpoint($medium) {
           box-shadow: -8px 0 18px -4px rgba($black, .8);
+          padding-top: rem-calc(50);
           padding-left: rem-calc(44);
           width: rem-calc($map-panel-width); height: 100%;
 
@@ -54,14 +53,15 @@ $map-panel-width: 410;
         }
 
         &__panel-stat {
-          font-size: rem-calc(50);
+          font-size: rem-calc(40);
           font-weight: $bold;
           line-height: 1.2;
+          margin-top: rem-calc(10);
           margin-bottom: rem-calc(30);
 
           display: block;
 
-          @include breakpoint($medium) { font-size: rem-calc(60); }
+          @include breakpoint($medium) { font-size: rem-calc(50); }
         }
 
         &__panel-layer {

@@ -1,12 +1,6 @@
 //--------------------------------------------------
 // chart mixins
 //--------------------------------------------------
-@mixin bar_label {
-  font-size: rem-calc(20);
-
-  @include breakpoint($small) { font-size: rem-calc(30); }
-}
-
 @mixin chart_label {
   font-size: rem-calc(14);
 
@@ -56,16 +50,20 @@
             position: relative;
 
             @include breakpoint($small) { width: rem-calc(134); height: rem-calc(390); }
+            
           }
 
             &__bar-label {
-              @include bar-label;
               color: $grey-dark;
+              font-size: rem-calc(12);
               font-weight: $bold;
 
               position: relative;
               top: rem-calc(22);
               z-index: 1;
+              
+              @include breakpoint($small) { font-size: rem-calc(17); }
+              @include breakpoint($medium) { font-size: rem-calc(18); }
             }
 
             &__colour {
@@ -134,8 +132,8 @@
         }
 
           &__bar-label {
-            @include bar-label;
             color: $grey-dark;
+            font-size: rem-calc(20);
             font-weight: $bold;
 
             position: absolute;
@@ -145,7 +143,11 @@
 
             transform: translateY(-50%);
 
-            @include breakpoint($small) { right: rem-calc(40); }
+            @include breakpoint($small) { 
+              font-size: rem-calc(30);
+
+              right: rem-calc(40); 
+            }
           }
 
           &__colour {

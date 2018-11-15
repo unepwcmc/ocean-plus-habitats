@@ -10,7 +10,7 @@
 }
 
 .nav {
-  width: 200%; height: rem-calc(74);
+  width: 290%; height: rem-calc(74);
 
   @include breakpoint($small) { width: 200%; }
   @include breakpoint($medium) { width: auto; }

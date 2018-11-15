@@ -2,7 +2,7 @@
   <div class="map--statistics">
     <div class="map__panel gutters">
       <p class="map__panel-title">{{ titleGlobal }}</p>
-      <span class="map__panel-stat">{{ percentageGlobal }}Km<sup>2</sup></span>
+      <span class="map__panel-stat">{{ percentageGlobal.toLocaleString() }} km<sup>2</sup></span>
 
       <p class="map__panel-title">{{ titleProtected }}</p>
       <span class="map__panel-stat">{{ percentageProtected }}%</span>
