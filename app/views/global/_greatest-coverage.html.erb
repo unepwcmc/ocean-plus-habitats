@@ -1,7 +1,13 @@
 <section class="bg--grey-light section-padding">
   <div class="container">
     <div class="chart--column">
-      <h3 class="chart__title">Top five countries and territories with the greatest coverage of <%= @habitat.title.downcase %></h3>
+      <h3 class="chart__title">
+        <% if @habitat_type == 'points' %>
+          Top five countries and territories with the greatest number of records of <%= @habitat.title.downcase %>
+        <% else %>
+          Top five countries and territories with the greatest coverage of <%= @habitat.title.downcase %>
+        <% end %>
+      </h3>
 
       <div class="chart__scrollable">
         <div class="chart__chart center flex flex-h-between">
@@ -10,7 +16,7 @@
               <div class="chart__bar">
                 <p class="chart__bar-label no-margin">
                   <%= number_with_delimiter(item[:value]) %>
-                  <% unless item[:type] == 'points' then %>km<sup>2</sup><% end %>
+                  <% unless @habitat_type == 'points' then %>km<sup>2</sup><% end %>
                 </p>
                 <span class="chart__colour" style="height:<%= item[:percent] %>%;"></span>
               </div>
