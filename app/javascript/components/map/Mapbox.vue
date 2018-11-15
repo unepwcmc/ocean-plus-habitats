@@ -1,9 +1,9 @@
 <template>
-  <div class="map--statistics">
+  <div class="map--statistics sm-counter-trigger">
     <div class="map__panel gutters">
       <p class="map__panel-title">{{ titleGlobal }}</p>
       <span class="map__panel-stat">{{ percentageGlobal.toLocaleString() }} km<sup>2</sup></span>
-
+      <counter sm-trigger="sm-counter-trigger" sm-target="sm-counter-target" :number="percentageGlobal"></counter>
       <p class="map__panel-title">{{ titleProtected }}</p>
       <span class="map__panel-stat">{{ percentageProtected }}%</span>
 
@@ -17,9 +17,12 @@
 
 <script>
   import ScrollMagic from 'scrollmagic'
+  import Counter from '../counter/Counter'
 
   export default {
     name: 'mapbox',
+
+    components: { Counter },
 
     props: {
       habitat: String,
