@@ -8,12 +8,12 @@
   background-position: center;
   color: $white;
   padding: rem-calc(40 0 50 0);
+  min-height: 100vh;
 
   position: relative;
 
   @include breakpoint($small) {
     align-items: center;
-    height: 100vh;
     
     display: flex;
   }
