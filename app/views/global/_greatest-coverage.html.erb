@@ -1,13 +1,17 @@
 <section class="bg--grey-light section-padding">
   <div class="container">
     <div class="chart--column">
-      <h3 class="chart__title">
-        <% if @habitat_type == 'points' %>
-          Top five countries and territories with the greatest number of records of <%= @habitat.title.downcase %>
-        <% else %>
-          Top five countries and territories with the greatest coverage of <%= @habitat.title.downcase %>
-        <% end %>
-      </h3>
+      <div class="chart__content">
+        <h3>
+          <% if @habitat_type == 'points' %>
+            Top five countries and territories with the greatest number of records of <%= @habitat.title.downcase %>
+          <% else %>
+            Top five countries and territories with the greatest coverage of <%= @habitat.title.downcase %>
+          <% end %>
+        </h3>
+
+        <p><%= @data['top_coverage_description'] %></p>
+      </div>
 
       <div class="chart__scrollable">
         <div class="chart__chart center flex flex-h-between">

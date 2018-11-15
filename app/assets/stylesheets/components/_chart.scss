@@ -23,7 +23,7 @@
     }
 
     .chart {
-      &__title {
+      &__content {
         @include breakpoint($medium) { width: 32%; }
       }
 
@@ -100,7 +100,7 @@
     }
 
     .chart {
-      &__title {
+      &__content {
         @include breakpoint($medium) { width: 32%; }
       }
 
