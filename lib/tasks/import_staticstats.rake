@@ -40,17 +40,15 @@ namespace :import do
       staticstats_hash.keys.each do |key|
         if key == :iso3
           iso3 = csv_staticstats_row[staticstats_hash[key]]&.strip
-          puts "iso3: #{iso3}"
         elsif key == :value
           value = csv_staticstats_row[staticstats_hash[key]]&.strip
-          puts "value: #{value}"
         end
       end
       
       if csv_file.include? "Protected"
-        puts "insert Protected value into habitat #{habitat}: #{value} into iso3: #{iso3}"
+        insert_static_stat("protected", habitat, iso3, value)
       elsif csv_file.include? "Total"
-        puts "insert Total value into habitat #{habitat}: #{value} into iso3: #{iso3}"
+        insert_static_stat("total", habitat, iso3, value)
       end
     end
       
@@ -58,4 +56,31 @@ namespace :import do
     
   end
   
+  def insert_static_stat(kind, habitat, iso3, value)
+    return if iso3.include? "/"
+    return if iso3.include? "ABNJ"
+    puts "insert #{kind} value into habitat #{habitat}: #{value} into iso3: #{iso3}"
+    country = Country.find_by(iso3: iso3) rescue nil
+    habitat = Habitat.find_by(name: habitat) rescue nil
+
+    if country.nil? || habitat.nil?
+      byebug
+      "Cannot import #{kind} value into habitat #{habitat}: #{value} into iso3: #{iso3}"
+      return
+    end
+
+    static_stat = StaticStat.find_or_create_by(country_id: country.id, habitat_id: habitat.id)
+
+    if kind == "protected"
+      static_stat.protected_value = value
+    elsif kind == "total"
+      static_stat.total_value = value
+    end
+
+    unless static_stat.save!
+      Rails.logger.info "Cannot import #{kind} value into habitat #{habitat}: #{value} into iso3: #{iso3}"
+    end
+
+  end
+
 end
