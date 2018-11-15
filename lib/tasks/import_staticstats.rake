@@ -47,8 +47,11 @@ namespace :import do
         end
       end
       
-      puts "insert value: #{value} into iso3: #{iso3}"
-
+      if csv_file.include? "Protected"
+        puts "insert Protected value into habitat #{habitat}: #{value} into iso3: #{iso3}"
+      elsif csv_file.include? "Total"
+        puts "insert Total value into habitat #{habitat}: #{value} into iso3: #{iso3}"
+      end
     end
       
     csv.close
