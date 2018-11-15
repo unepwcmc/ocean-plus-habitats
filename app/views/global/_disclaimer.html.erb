@@ -1,7 +1,9 @@
 <section class="section-padding bg--navy white">
   <div class="container">
     <h4 class="white">Disclaimer</h4>
-
-    <p class="text--smallprint"><%= @global['disclaimer'] %></p>
+    
+    <% @global['disclaimer'].each do |p| %>
+      <p class="text--smallprint"><%= p.html_safe %></p>
+    <% end %>
   </div>
 </section>
