@@ -48,7 +48,7 @@ class SiteController < ApplicationController
   def load_habitat
     @habitat = Habitat.where(name: action_name).first
     @habitat ||= Habitat.where(name: 'coralreef').first
-    @habitat_hash = @habitat.habitat_to_hash
+    @habitat_type = @habitat.type
   end
 
   def load_global

@@ -33,12 +33,6 @@ class Habitat < ApplicationRecord
     name == "coldcorals" ? "points" : "area"
   end
 
-  def habitat_to_hash
-    habitat_hash = self.attributes
-    habitat_hash[:type] = self.type
-    habitat_hash
-  end
-
   private
 
   def sum_country_areas(total_area_by_country)
