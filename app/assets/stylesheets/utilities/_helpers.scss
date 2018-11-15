@@ -24,6 +24,11 @@ strong, .bold { font-weight: $bold; }
 
 .white { color: $white; }
 
+.text--smallprint {
+  font-size: rem-calc(10);
+  @include breakpoint($medium) { font-size: rem-calc(12); }
+}
+
 //--------------------------------------------------
 // dimensions
 //--------------------------------------------------
