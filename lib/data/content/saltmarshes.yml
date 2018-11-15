@@ -1,0 +1,10 @@
+other_targets:
+  title: 'Other policies'
+  list:
+    -
+      text: 'Ramsar Convention on Wetlands of International Importance'
+    -
+      text: 'Natura 2000'
+    -
+      text: 'Habitats Directive'
+citations: "text"

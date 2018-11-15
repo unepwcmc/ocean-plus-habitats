@@ -1,0 +1,12 @@
+other_targets:
+  title: 'Other policies'
+  list:
+    -
+      text: 'CBD COP 12, Decision XII/23: Priority Actions to Achieve Aichi Biodiversity Target 10 for Coral Reefs and Closely Associated Ecosystems (2014).'
+    -
+      text: 'UNEA Resolution 2/12 on Sustainable Coral Reefs Management.'
+    -
+      text: 'UN Framework for Convention on Climate Change (UNFCCC): Coral reefs feature prominently for adaptation actions to minimize climate change impacts, and in Nationally Determined Contributions (NDCs) of State Parties.'
+    -
+      text: 'Convention on International Trade of Endangered Species of Wild Fauna and Flora (CITES).'
+citations: "text"
