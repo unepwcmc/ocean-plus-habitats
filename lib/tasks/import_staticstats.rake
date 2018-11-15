@@ -16,6 +16,9 @@ namespace :import do
       import_csv_file(habitat.name, csv_file)     
     end
 
+    puts "recalculate protected percentages"
+    recalculate_protected_percentages
+
   end
   
   def import_csv_file(habitat, csv_file)
@@ -46,9 +49,9 @@ namespace :import do
       end
       
       if csv_file.include? "Protected"
-        insert_static_stat("protected", habitat, iso3, value)
+        insert_static_stat(csv_file, "protected", habitat, iso3, value)
       elsif csv_file.include? "Total"
-        insert_static_stat("total", habitat, iso3, value)
+        insert_static_stat(csv_file, "total", habitat, iso3, value)
       end
     end
       
@@ -56,7 +59,7 @@ namespace :import do
     
   end
   
-  def insert_static_stat(kind, habitat, iso3, value)
+  def insert_static_stat(csv_file, kind, habitat, iso3, value)
     return if iso3.include? "/"
     return if iso3.include? "ABNJ"
     puts "insert #{kind} value into habitat #{habitat}: #{value} into iso3: #{iso3}"
@@ -81,6 +84,13 @@ namespace :import do
       Rails.logger.info "Cannot import #{kind} value into habitat #{habitat}: #{value} into iso3: #{iso3}"
     end
 
+  end
+
+  def recalculate_protected_percentages
+    StaticStat.all.each do |stat|
+      stat.protected_percentage = 100 * (stat.protected_value / stat.total_value)
+      stat.save!
+    end
   end
 
 end
