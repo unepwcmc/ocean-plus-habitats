@@ -13,7 +13,7 @@
 
   @include breakpoint($small) {
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     
     display: flex;
   }
