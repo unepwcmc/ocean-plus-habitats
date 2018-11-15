@@ -1,4 +1,5 @@
 class Habitat < ApplicationRecord
+
   def global_coverage_title
     "Total global coverage of #{title.downcase}"
   end
@@ -26,6 +27,16 @@ class Habitat < ApplicationRecord
       total_value_by_country = sum_country_areas(total_value_by_country)
     end
     total_value_by_country
+  end
+
+  def type
+    name == "coldcorals" ? "points" : "area"
+  end
+
+  def habitat_to_hash
+    habitat_hash = self.attributes
+    habitat_hash[:type] = self.type
+    habitat_hash
   end
 
   private
