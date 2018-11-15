@@ -16,6 +16,8 @@
 </template>
 
 <script>
+  import ScrollMagic from 'scrollmagic'
+
   export default {
     name: 'mapbox',
 
@@ -49,6 +51,8 @@
 
     mounted () {
       this.createMap()
+
+      const scrollMagicMap = new ScrollMagic.Controller()
     },
 
     methods: {

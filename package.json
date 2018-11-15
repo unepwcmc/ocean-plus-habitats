@@ -3,12 +3,13 @@
   "private": true,
   "dependencies": {
     "@rails/webpacker": "3.5",
+    "dotenv-webpack": "^1.5.5",
     "es6-promise": "^4.2.5",
+    "scrollmagic": "^2.0.6",
     "vue": "^2.5.17",
     "vue-loader": "14.2.2",
     "vue-template-compiler": "^2.5.17",
-    "vue-turbolinks": "^2.0.3",
-    "dotenv-webpack": "^1.5.5"
+    "vue-turbolinks": "^2.0.3"
   },
   "devDependencies": {
     "webpack-dev-server": "2.11.2"
