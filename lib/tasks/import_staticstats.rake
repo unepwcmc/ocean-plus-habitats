@@ -28,7 +28,7 @@ namespace :import do
     
     staticstats_hash = {
       iso3: csv_headers[0],
-      value: csv_headers[1]
+      value: csv_headers[1].chomp
     }
     
     CSV.parse(csv, headers: true, encoding: "utf-8") do |row|
