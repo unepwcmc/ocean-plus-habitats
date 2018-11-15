@@ -2,7 +2,10 @@
   <div class="map--statistics">
     <div class="map__panel gutters">
       <p class="map__panel-title">{{ titleGlobal }}</p>
-      <span class="map__panel-stat">{{ percentageGlobal.toLocaleString() }} km<sup>2</sup></span>
+      <span class="map__panel-stat no-margin">
+        {{ percentageGlobal.toLocaleString() }}
+        <template v-if="habitatType != 'points'"> km<sup>2</sup></template>
+      </span>
 
       <p class="map__panel-title">{{ titleProtected }}</p>
       <span class="map__panel-stat">{{ percentageProtected }}%</span>
@@ -21,6 +24,7 @@
 
     props: {
       habitat: String,
+      habitatType: String,
       theme: String,
       titleGlobal: String,
       titleProtected: String,

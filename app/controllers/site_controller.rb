@@ -48,6 +48,7 @@ class SiteController < ApplicationController
   def load_habitat
     @habitat = Habitat.where(name: action_name).first
     @habitat ||= Habitat.where(name: 'coralreef').first
+    @habitat_type = @habitat.type
   end
 
   def load_global
@@ -63,10 +64,8 @@ class SiteController < ApplicationController
 
     @chart_greatest_coverage = top_five_countries.reverse.map do |country|
       label = Country.find_by(iso3: country.first).name
-      type = @habitat.name == "coldcorals" ? "points" : "area"
       {
         label: label,
-        type: type,
         value: country.last.round(0),
         percent: 100*country.last/arbitrary_value
       }
