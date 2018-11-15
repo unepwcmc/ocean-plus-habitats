@@ -16,7 +16,7 @@
               <div class="chart__bar">
                 <p class="chart__bar-label no-margin">
                   <%= number_with_delimiter(item[:value]) %>
-                  <% unless @habitat_type == 'points' then %>km<sup>2</sup><% end %>
+                  <% unless @habitat_type == 'points' %>km<sup>2</sup><% end %>
                 </p>
                 <span class="chart__colour" style="height:<%= item[:percent] %>%;"></span>
               </div>
