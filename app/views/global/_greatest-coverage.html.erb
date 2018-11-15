@@ -8,7 +8,10 @@
           <% @chart_greatest_coverage.each do |item| %>
             <div class="chart__item">
               <div class="chart__bar">
-                <span class="chart__bar-label"><%= number_with_delimiter(item[:value]) %> km<sup>2</sup></span>
+                <p class="chart__bar-label no-margin">
+                  <%= number_with_delimiter(item[:value]) %>
+                  <% unless item[:type] == 'points' then %>km<sup>2</sup><% end %>
+                </p>
                 <span class="chart__colour" style="height:<%= item[:percent] %>%;"></span>
               </div>
               <p class="chart__label bold"><%= item[:label] %></p>
