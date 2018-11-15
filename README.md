@@ -11,6 +11,9 @@
   - `bundle exec rake db:drop db:create db:migrate`
   - `bundle exec rake db:seed`
 
+* Import the static CSV data
+  - `rake import:staticstats`
+
 ## Data
 
 Data is fetched from CartoDB using the `Carto` module defined in `lib/modules`.
