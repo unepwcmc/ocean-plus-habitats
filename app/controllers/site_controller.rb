@@ -72,27 +72,14 @@ class SiteController < ApplicationController
       }
     end
 
-    @chart_protected_areas = [
+    top_five_protected_areas = StaticStat.where(habitat: @habitat).order("protected_percentage DESC").pluck(:country_id, :protected_percentage).to_a.first(5)
+
+    @chart_protected_areas = top_five_protected_areas.map do |country|
+      label = Country.find(country.first).name
       {
-        label: 'Australia',
-        percent: '94',
-      },
-      {
-        label: 'United Kingdom',
-        percent: '63',
-      },
-      {
-        label: 'Spain',
-        percent: '75',
-      },
-      {
-        label: 'Italy',
-        percent: '50',
-      },
-      {
-        label: 'Russia',
-        percent: '10',
+        label: label,
+        percent: country.last.round(1),
       }
-    ]
+    end
   end
 end
