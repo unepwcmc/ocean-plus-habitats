@@ -82,7 +82,6 @@ class SiteController < ApplicationController
     end
 
     top_five_country_ids = top_five_countries.map do |country|
-      iso3 = country.first
       country_id = Country.find_by(iso3: country.first).id
       country_id
     end
