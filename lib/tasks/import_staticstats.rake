@@ -19,6 +19,9 @@ namespace :import do
     Rails.logger.info "recalculate protected percentages"
     recalculate_protected_percentages
 
+    Rails.logger.info "recalculate total habitat percentage with protected area"
+    recalculate_total_habitat_percentage_within_protected_area
+
   end
   
   def import_csv_file(habitat, csv_file)
@@ -86,6 +89,16 @@ namespace :import do
     StaticStat.all.each do |stat|
       stat.protected_percentage = 100 * (stat.protected_value / stat.total_value)
       stat.save!
+    end
+  end
+
+  def recalculate_total_habitat_percentage_within_protected_area
+    Habitat.all.each do |habitat|
+      habitat_total_area = StaticStat.where(habitat: habitat).pluck(:total_value).sum
+      habitat_total_protected_area = StaticStat.where(habitat: habitat).pluck(:protected_value).sum
+
+      habitat.protected_percentage = 100 * (habitat_total_protected_area / habitat_total_area)
+      habitat.save!
     end
   end
 
