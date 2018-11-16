@@ -34,7 +34,6 @@ namespace :import do
     
     CSV.parse(csv, headers: true, encoding: "utf-8") do |row|
       csv_staticstats_row = row.to_hash
-      staticstats_row_hash = {}
       iso3 = ""
       value = 0
 
@@ -47,9 +46,9 @@ namespace :import do
       end
       
       if csv_file.include? "Protected"
-        insert_static_stat(csv_file, "protected", habitat, iso3, value)
+        insert_static_stat("protected", habitat, iso3, value)
       elsif csv_file.include? "Total"
-        insert_static_stat(csv_file, "total", habitat, iso3, value)
+        insert_static_stat("total", habitat, iso3, value)
       end
     end
       
@@ -57,12 +56,11 @@ namespace :import do
     
   end
   
-  def insert_static_stat(csv_file, kind, habitat, iso3, value)
-    return if iso3.include? "/"
-    return if iso3.include? "ABNJ"
+  def insert_static_stat(kind, habitat, iso3, value)
+    return if ['ABNJ', '/'].include?(iso3)
     Rails.logger.info "insert #{kind} value into habitat #{habitat}: #{value} into iso3: #{iso3}"
-    country = Country.find_by(iso3: iso3) rescue nil
-    habitat = Habitat.find_by(name: habitat) rescue nil
+    country = Country.find_by(iso3: iso3)
+    habitat = Habitat.find_by(name: habitat)
 
     if country.nil? || habitat.nil?
       Rails.logger.info "Cannot import #{kind} value into habitat #{habitat}: #{value} into iso3: #{iso3}"
@@ -71,9 +69,10 @@ namespace :import do
 
     static_stat = StaticStat.find_or_create_by(country_id: country.id, habitat_id: habitat.id)
 
-    if kind == "protected"
+    case kind
+    when "protected"
       static_stat.protected_value = value
-    elsif kind == "total"
+    when "total"
       static_stat.total_value = value
     end
 
