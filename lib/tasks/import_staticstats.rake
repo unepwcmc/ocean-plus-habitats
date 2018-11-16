@@ -8,11 +8,11 @@ namespace :import do
     
     habitats.each do |habitat|
       csv_file = "#{habitat.name.capitalize}_Protected.csv"
-      puts "import CSV: #{csv_file}"
+      Rails.logger.info "import CSV: #{csv_file}"
       import_csv_file(habitat.name, csv_file)
       
       csv_file = "#{habitat.name.capitalize}_Total.csv"
-      puts "import CSV: #{csv_file}"
+      Rails.logger.info "import CSV: #{csv_file}"
       import_csv_file(habitat.name, csv_file)     
     end
 
@@ -22,8 +22,6 @@ namespace :import do
   end
   
   def import_csv_file(habitat, csv_file)
-    puts "CSV file: #{csv_file}"
-    
     filename = "#{Rails.root}/lib/data/#{csv_file}"
     
     csv = File.open(filename, encoding: "utf-8")
@@ -62,13 +60,12 @@ namespace :import do
   def insert_static_stat(csv_file, kind, habitat, iso3, value)
     return if iso3.include? "/"
     return if iso3.include? "ABNJ"
-    puts "insert #{kind} value into habitat #{habitat}: #{value} into iso3: #{iso3}"
+    Rails.logger.info "insert #{kind} value into habitat #{habitat}: #{value} into iso3: #{iso3}"
     country = Country.find_by(iso3: iso3) rescue nil
     habitat = Habitat.find_by(name: habitat) rescue nil
 
     if country.nil? || habitat.nil?
-      byebug
-      "Cannot import #{kind} value into habitat #{habitat}: #{value} into iso3: #{iso3}"
+      Rails.logger.info "Cannot import #{kind} value into habitat #{habitat}: #{value} into iso3: #{iso3}"
       return
     end
 
