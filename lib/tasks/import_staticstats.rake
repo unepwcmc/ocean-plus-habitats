@@ -16,7 +16,7 @@ namespace :import do
       import_csv_file(habitat.name, csv_file)     
     end
 
-    puts "recalculate protected percentages"
+    Rails.logger.info "recalculate protected percentages"
     recalculate_protected_percentages
 
   end
@@ -57,7 +57,7 @@ namespace :import do
   end
   
   def insert_static_stat(kind, habitat, iso3, value)
-    return if ['ABNJ', '/'].include?(iso3)
+    return if (iso3.include? '/') || (iso3.include? 'ABNJ')
     Rails.logger.info "insert #{kind} value into habitat #{habitat}: #{value} into iso3: #{iso3}"
     country = Country.find_by(iso3: iso3)
     habitat = Habitat.find_by(name: habitat)
