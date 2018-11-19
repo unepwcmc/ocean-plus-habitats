@@ -7,8 +7,8 @@
         <tab id="<%= commitment['title'].downcase.delete(' ') %>" title="<%= commitment['title'] %>" class="tab__content">
           <% commitment['list'].each do |item| %>
             <div class="tab__content-item flex">
-              <% if item['target'] %>
-                <%= image_tag "icons/aichi-#{item['target']}.svg", alt: "Aichi Target #{item['target']} icon", class: "tab__content-icon" %>
+              <% if item['icon'] %>
+                <%= image_tag item['icon'], alt: "#{item['title']} icon", class: "tab__content-icon" %>
               <% end %>
               <p><%= item['text'].html_safe %></p>
             </div>
