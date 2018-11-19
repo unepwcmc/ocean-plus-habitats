@@ -23,7 +23,6 @@
 </template>
 
 <script>
-  import ScrollMagic from 'scrollmagic'
   import Counter from '../counter/Counter'
 
   export default {
@@ -62,8 +61,6 @@
 
     mounted () {
       this.createMap()
-
-      const scrollMagicMap = new ScrollMagic.Controller()
     },
 
     methods: {

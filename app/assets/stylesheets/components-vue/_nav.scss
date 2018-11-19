@@ -2,6 +2,8 @@
 // nav
 //--------------------------------------------------
 .nav-wrapper {
+  height: rem-calc(74);
+
   @include breakpoint_down($medium) {
     overflow-x: scroll;
 
@@ -14,6 +16,15 @@
 
   @include breakpoint($small) { width: 200%; }
   @include breakpoint($medium) { width: auto; }
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 2;
+  }
 
   &__a {
     color: $white;
