@@ -2,7 +2,7 @@
   <div class="map--statistics sm-counter-trigger">
     <div class="map__panel gutters">
       <p class="map__panel-title">{{ titleGlobal }}</p>
-      
+
       <p class="map__panel-stat no-margin">
         <counter sm-trigger="sm-counter-trigger" sm-target="sm-counter-target" :number="percentageGlobal"></counter>
         <template v-if="habitatType != 'points'"> km<sup>2</sup></template>
@@ -134,7 +134,13 @@
         let sqlArray = []
 
         tables.forEach(table => {
-          sqlArray.push(`SELECT cartodb_id, the_geom, the_geom_webmercator FROM ${table}`)
+          let sqlQuery = `SELECT cartodb_id, the_geom, the_geom_webmercator FROM ${table}`
+
+          if(table == process.env.WDPA_POLY_TABLE || table == process.env.WDPA_POINT_TABLE) {
+            sqlQuery += ' WHERE marine::INT > 0';
+          }
+
+          sqlArray.push(sqlQuery)
         })
 
         const sql = sqlArray.join(' UNION ALL ')
