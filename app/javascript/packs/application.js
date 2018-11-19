@@ -31,4 +31,8 @@ document.addEventListener('turbolinks:load', () => {
   new ScrollMagic.Scene({ triggerElement: '.sm-trigger-column', reverse: false })
     .setClassToggle('.sm-target-column .sm-target-child-column, .sm-target-column', 'animate')
     .addTo(scrollMagicController)
+
+  new ScrollMagic.Scene({ triggerElement: '.sm-trigger-row', reverse: false })
+    .setClassToggle('.sm-target-row .sm-target-child-row, .sm-target-row', 'animate')
+    .addTo(scrollMagicController)
 })

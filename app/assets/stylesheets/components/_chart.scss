@@ -7,8 +7,6 @@
   @include breakpoint($small) { font-size: rem-calc(18); }
 }
 
-
-
 //--------------------------------------------------
 // chart
 //--------------------------------------------------
@@ -147,6 +145,7 @@
             color: $grey-dark;
             font-size: rem-calc(20);
             font-weight: $bold;
+            opacity: 0;
 
             position: absolute;
             top: 50%;
@@ -155,11 +154,15 @@
 
             transform: translateY(-50%);
 
+            transition: opacity 1s ease-in-out;
+
             @include breakpoint($small) { 
               font-size: rem-calc(30);
 
               right: rem-calc(40); 
             }
+
+            &.animate { opacity: 1; }
           }
 
           &__colour {
@@ -167,10 +170,16 @@
             top: 0;
             bottom: 0;
             left: 0;
+              
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 1s ease-out;
 
             @for $i from 1 through length($names){
               @include theme_background($i);
             }
+
+            &.animate { transform: scaleX(1); }
           }
 
         &__label {
