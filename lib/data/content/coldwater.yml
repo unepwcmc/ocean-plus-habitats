@@ -1,5 +1,13 @@
-top_coverage_description: 'description'
-top_protected_description: 'description'
+top_coverage_description: 
+    -
+      text: 'Cold-water corals can be found over a wide range of latitudes, from tropical to polar regions, and from the shallow to the deep seas. Their distribution is largely defined by water temperatures, which must generally be between 4° and 12°C.'
+     -
+      text: 'Cold-water corals are different from their warm-water counterparts because they do not contain symbiotic algae for photosynthesis and grow more slowly. Despite limited observed information on both distribution and diversity, cold-water corals are arguably <a href="http://science.sciencemag.org/content/312/5773/543" title="one of the most three-dimensionally complex habitats" target="_blank">one of the most three-dimensionally complex habitats</a> in the deep sea.'
+top_protected_description: 
+     -
+      text: 'Cold-water corals are fragile and extremely slow-growing (with some reefs being tens of thousands of years old), making them <a href="http://science.sciencemag.org/content/312/5773/543" title="one of the most three-dimensionally complex habitats" target="_blank">particularly vulnerable to disturbance and environmental change</a>, for instance deep-water trawling and ocean acidification.'  
+      -
+      text: 'More information on cold-water corals available at the Biodiversity A-Z.'
 other_targets:
   title: 'Other Policies'
   list:
@@ -11,4 +19,4 @@ other_targets:
       text: 'UNGA Resolution A/RES/61/105: Vulnerable Marine Ecosystems, including seamounts, hydrothermal vents and cold-water corals.'
     -
       text: 'CBD COP Decision IX/20 and Decision X/29: Marine and coastal biodiversity, including Ecologically or Biologically Significant Marine Areas (EBSAs).'
-citations: "text"
+citations: 'Freiwald A, Rogers A, Hall-Spencer J, Guinotte JM, Davies AJ, Yesson C, Martin CS, Weatherdon LV (2017). Global distribution of cold-water corals (version 5.0). Fifth update to the dataset in Freiwald et al. (2004) by UNEP-WCMC, in collaboration with Andre Freiwald and John Guinotte. Cambridge (UK): UN Environment World Conservation Monitoring Centre. URL: <a href="http://data.unep-wcmc.org/datasets/3g" title="" target="_blank">http://data.unep-wcmc.org/datasets/3</a>'
