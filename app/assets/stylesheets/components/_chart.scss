@@ -128,7 +128,7 @@
           position: relative;
           
           @include breakpoint($small) { height: rem-calc(84); }
-          @include breakpoint($medium) { width: rem-calc(700); }
+          @include breakpoint($medium) { width: rem-calc(690); }
         }
 
           &__bar-label {
@@ -167,7 +167,7 @@
 
           position: absolute;
           top: 50%;
-          left: rem-calc(12);
+          left: 0;
           z-index: 1;
 
           transform: translateY(-50%);
