@@ -1,6 +1,8 @@
 <footer class="footer-wrapper gutters bg--navy-xdark">
   <div class="footer container">
-    <%= image_tag 'logos/logo-ocean-plus-habitats.svg', alt: 'Ocean+ Habitats logo', class: 'footer__partner-logo logo--site' %>
+    <%= link_to 'https://oceanplus.org/', title: 'Visit Ocean+', target: '_blank' do %>
+      <%= image_tag 'logos/logo-ocean-plus.svg', alt: 'Ocean+ logo', class: 'footer__partner-logo logo--site' %>
+    <% end %>
 
     <div class="footer__partner-logos">
       <%= image_tag 'logos/logo-proteus.svg', alt: 'Proteus logo', class: 'footer__partner-logo logo--proteus' %>
