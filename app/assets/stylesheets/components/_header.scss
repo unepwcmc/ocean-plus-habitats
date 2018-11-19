@@ -14,12 +14,13 @@
 
   @include breakpoint($small) {
     align-items: center;
+    padding-bottom: rem-calc(108);
     
     display: flex;
   }
 
   &__content {
-    @include breakpoint($small) { padding: rem-calc(0 0 30 0); }
+    
   }
 
     &__logo {
