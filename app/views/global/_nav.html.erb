@@ -1,6 +1,6 @@
 <sticky-bar class="nav-wrapper sm-trigger-sticky">
-  <div class="nav-scrollable">
-    <nav class="nav gutters bg--navy flex flex-v-center flex-h-between sm-target-sticky">
+  <div class="nav-scrollable sm-target-sticky">
+    <nav class="nav gutters bg--navy flex flex-v-center flex-h-between">
       <%= link_to 'Warm-water corals', "#{warmwater_path}#nav", title: 'View Warm-water corals', class: "nav__a #{active_nav_item?(warmwater_path)} #{active_nav_item?('/')}" %>
       <%= link_to 'Saltmarshes', "#{saltmarshes_path}", title: 'View Saltmarshes', class: "nav__a #{active_nav_item?(saltmarshes_path)}" %>
       <%= link_to 'Mangroves', "#{mangroves_path}", title: 'View Mangroves', class: "nav__a #{active_nav_item?(mangroves_path)}" %>

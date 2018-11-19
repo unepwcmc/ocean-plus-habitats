@@ -11,13 +11,6 @@
 
     display: flex;
   }
-}
-
-.nav {
-  width: 290%; height: rem-calc(74);
-
-  @include breakpoint($small) { width: 200%; }
-  @include breakpoint($medium) { width: auto; }
 
   &.sticky {
     position: fixed;
@@ -27,6 +20,12 @@
 
     z-index: 2;
   }
+}
+
+.nav {
+  width: fit-content; height: rem-calc(74);
+
+  @include breakpoint($medium) { width: auto; }
 
   &__a {
     color: $white;
