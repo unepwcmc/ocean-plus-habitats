@@ -13,7 +13,7 @@ $map-panel-width: 430;
 //--------------------------------------------------
   &--statistics {
     position: relative;
-    z-index: -1;
+    z-index: 1;
 
     .map {
       &__map {
