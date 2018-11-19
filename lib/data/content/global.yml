@@ -10,6 +10,8 @@ tagline:
     p: "For access to the underlying spatial datasets, please visit the Ocean Data Viewer. For more information on the Ocean+ initiative, please visit our main website."
 disclaimer: 
   -
-    "text"
+    "These datasets are compiled from a number of datasets submitted by data providers who have kindly permitted their use. Details regarding these data providers can be found in the accompanying metadata tables associated with each dataset.
   -
-    'text <a href="http://google.com" title="Visit Google" target="_blank">link</a>'
+    "These datasets represent documented spatial knowledge on the locations of these habitats. As this knowledge is improving over time, these datasets should not be interpreted as complete knowledge of presence and absence of these habitats; we will work to increase transparency regarding dataset completeness in the coming year, and welcome improvements. For further information, please contact <a href="mailto:marine@unep-wcmc.org" title="Email marine@unep-wcmc.org" target="_blank">marine@unep-wcmc.org</a>. 
+  -
+    "The designations employed and the presentation of material on this map do not imply the expression of any opinion whatsoever on the part of the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries."
