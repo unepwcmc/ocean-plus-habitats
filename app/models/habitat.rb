@@ -1,7 +1,7 @@
 class Habitat < ApplicationRecord
 
-  def global_coverage_title
-    "Total global coverage of #{title.downcase}"
+  def global_coverage_title(habitat_type)
+    habitat_type == 'points' ? "Total number of #{title.downcase} records globally" : "Total global coverage of #{title.downcase}"
   end
 
   def protected_title

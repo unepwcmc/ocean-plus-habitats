@@ -4,42 +4,52 @@ class SiteController < ApplicationController
   before_action :load_charts_data
 
   def warmwater
+    @data = YAML.load(File.open("#{Rails.root}/lib/data/content/warmwater.yml", 'r'))
+
     @commitments = [
       @aichi_targets,
       @sdgs,
-      @sdgs = YAML.load(File.open("#{Rails.root}/lib/data/content/meas-warmwater.yml", 'r'))
+      @data['other_targets']
     ]
   end
 
   def saltmarshes
+    @data = YAML.load(File.open("#{Rails.root}/lib/data/content/saltmarshes.yml", 'r'))
+
     @commitments = [
       @aichi_targets,
       @sdgs,
-      @sdgs = YAML.load(File.open("#{Rails.root}/lib/data/content/meas-saltmarshes.yml", 'r'))
+      @data['other_targets']
     ]
   end
 
   def mangroves
+    @data = YAML.load(File.open("#{Rails.root}/lib/data/content/mangroves.yml", 'r'))
+
     @commitments = [
       @aichi_targets,
       @sdgs,
-      @sdgs = YAML.load(File.open("#{Rails.root}/lib/data/content/meas-mangroves.yml", 'r'))
+      @data['other_targets']
     ]
   end
 
   def seagrasses
+    @data = YAML.load(File.open("#{Rails.root}/lib/data/content/seagrasses.yml", 'r'))
+
     @commitments = [
       @aichi_targets,
       @sdgs,
-      @sdgs = YAML.load(File.open("#{Rails.root}/lib/data/content/meas-seagrasses.yml", 'r'))
+      @data['other_targets']
     ]
   end
 
   def coldcorals
+    @data = YAML.load(File.open("#{Rails.root}/lib/data/content/coldwater.yml", 'r'))
+
     @commitments = [
       @aichi_targets,
       @sdgs,
-      @sdgs = YAML.load(File.open("#{Rails.root}/lib/data/content/meas-coldwater.yml", 'r'))
+      @data['other_targets']
     ]
   end
 
@@ -71,27 +81,19 @@ class SiteController < ApplicationController
       }
     end
 
-    @chart_protected_areas = [
+    top_five_country_ids = top_five_countries.map do |country|
+      country_id = Country.find_by(iso3: country.first).id
+      country_id
+    end
+
+    top_five_protected_areas = StaticStat.where(habitat: @habitat, country_id: top_five_country_ids).order("protected_percentage DESC").pluck(:country_id, :protected_percentage).to_a.first(5)
+
+    @chart_protected_areas = top_five_protected_areas.map do |country|
+      label = Country.find(country.first).name
       {
-        label: 'Australia',
-        percent: '94',
-      },
-      {
-        label: 'United Kingdom',
-        percent: '63',
-      },
-      {
-        label: 'Spain',
-        percent: '75',
-      },
-      {
-        label: 'Italy',
-        percent: '50',
-      },
-      {
-        label: 'Russia',
-        percent: '10',
+        label: label,
+        percent: country.last.round(1),
       }
-    ]
+    end
   end
 end

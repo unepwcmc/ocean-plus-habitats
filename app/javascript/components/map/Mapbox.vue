@@ -104,14 +104,14 @@
         })
 
         tiles.getTiles(object => {
-          this.addLayer(tiles, 'layer0', 'wdpa', this.themes.wdpa, false)
-          this.addLayer(tiles, 'layer0', 'wdpa-points', this.themes.wdpa, true)
-          this.addLayer(tiles, 'layer1', 'habitat', this.themes[this.theme], false)
-          this.addLayer(tiles, 'layer1', 'habitat-points', this.themes[this.theme], true)
+          this.addLayer(tiles, 'layer0', 'wdpa', this.themes.wdpa, false, .2)
+          this.addLayer(tiles, 'layer0', 'wdpa-points', this.themes.wdpa, true, .2)
+          this.addLayer(tiles, 'layer1', 'habitat', this.themes[this.theme], false, .8)
+          this.addLayer(tiles, 'layer1', 'habitat-points', this.themes[this.theme], true, .8)
         })
       },
 
-      addLayer (tiles, source, id, colour, point) {
+      addLayer (tiles, source, id, colour, point, opacity) {
         let options = {
           'id': id,
           'source': {
@@ -123,11 +123,11 @@
 
         if(point){
           options['type'] = 'circle'
-          options['paint'] = { 'circle-radius': 2, 'circle-color': colour, 'circle-opacity': .8 }
+          options['paint'] = { 'circle-radius': 2, 'circle-color': colour, 'circle-opacity': opacity }
           options['filter'] = ['==', '$type', 'Point']
         } else {
           options['type'] = 'fill'
-          options['paint'] = { 'fill-color': colour, 'fill-opacity': .8 }
+          options['paint'] = { 'fill-color': colour, 'fill-opacity': opacity }
         }
 
         this.map.addLayer(options)
