@@ -3,7 +3,9 @@
 //--------------------------------------------------
 .nav-wrapper {
   height: rem-calc(74);
+}
 
+.nav-scrollable {
   @include breakpoint_down($medium) {
     overflow-x: scroll;
 
