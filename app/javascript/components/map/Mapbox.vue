@@ -134,12 +134,13 @@
         let sqlArray = []
 
         tables.forEach(table => {
+          let sqlQuery = `SELECT cartodb_id, the_geom, the_geom_webmercator FROM ${table}`
+
           if(table == process.env.WDPA_POLY_TABLE || table == process.env.WDPA_POINT_TABLE) {
-            sqlArray.push(`SELECT cartodb_id, the_geom, the_geom_webmercator FROM ${table} WHERE marine::INT > 0`)
+            sqlQuery += ' WHERE marine::INT > 0';
           }
-          else {
-            sqlArray.push(`SELECT cartodb_id, the_geom, the_geom_webmercator FROM ${table}`)
-          }
+
+          sqlArray.push(sqlQuery)
         })
 
         const sql = sqlArray.join(' UNION ALL ')
