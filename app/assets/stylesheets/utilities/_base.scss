@@ -50,6 +50,8 @@ p {
 }
 
 a {
+  color: inherit;
+  
   &:hover { text-decoration: none; }
 
   &.a--plain {

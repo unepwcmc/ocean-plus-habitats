@@ -13,15 +13,8 @@
 //--------------------------------------------------
 // styles
 //--------------------------------------------------
-  &--cta {
-
-  } 
-
-  &--disabled {
-    background-color: $grey-light;
-    cursor: not-allowed;
-
-    &:hover { background-color: $grey-light; }
+  &--link-white {
+    color: $white;
   }
 
   //--------------------------------------------------
