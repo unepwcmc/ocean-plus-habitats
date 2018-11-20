@@ -4,7 +4,9 @@
       <div class="chart__content">
         <h3>Top five countries and territories with habitat area covered by a protected area</h3>
 
-        <p><%= @data['top_protected_description'] %></p>
+        <% @data['top_protected_description'].each do |p| %>
+          <p><%= p.html_safe %></p>
+        <% end %>
       </div>
       
       <div class="chart__chart">

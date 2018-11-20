@@ -10,7 +10,9 @@
           <% end %>
         </h3>
 
-        <p><%= @data['top_coverage_description'] %></p>
+        <% @data['top_coverage_description'].each do |p| %>
+          <p><%= p.html_safe %></p>
+        <% end %>
       </div>
 
       <div class="chart__scrollable">

@@ -1,6 +1,12 @@
 title: 'Saltmarshes'
-top_coverage_description: 'description'
-top_protected_description: 'description'
+top_coverage_description: 
+  -
+    'Saltmarshes are ecosystems located in the intertidal zone of sheltered marine and estuarine coastlines. They serve as nesting, nursery and feeding grounds for numerous species of birds, fish, molluscs and crustaceans.'
+top_protected_description: 
+  -
+    'Saltmarshes are significant for human well-being and economies as they provide a range of ecosystem services, such as coastal defence, nutrient cycling, water filtration, immobilisation of pollutants and carbon sequestration.' 
+  -
+    'More information on cold-water corals available on <a href="http://www.biodiversitya-z.org/content/saltmarsh" title="Biodiversity A-Z" target="_blank">Biodiversity A-Z</a>'
 other_targets:
   title: 'Other policies'
   list:
@@ -10,4 +16,4 @@ other_targets:
       text: 'Natura 2000'
     -
       text: 'Habitats Directive'
-citations: "text"
+citations: "Mcowen C, Weatherdon LV, Bochove J, Sullivan E, Blyth S, Zockler C, Stanwell-Smith D, Kingston N, Martin CS, Spalding M, Fletcher S (2017). A global map of saltmarshes. Biodiversity Data Journal 5: e11764. Paper DOI: https://doi.org/10.3897/BDJ.5.e11764; Data URL: http://data.unep-wcmc.org/datasets/43 (v.6)"

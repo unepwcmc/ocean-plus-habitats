@@ -1,6 +1,10 @@
 title: 'Seagrasses'
-top_coverage_description: 'description'
-top_protected_description: 'description'
+top_coverage_description: 
+  -
+    'Seagrasses are a unique group of flowering plants that grow in shallow coastal waters of most continents. They cover large areas and provide a complex structure allowing them to support thousands of other species.'
+top_protected_description: 
+  -
+    'Through the services they provide, seagrasses have an economic value greater than many terrestrial and marine habitats.'
 other_targets:
   title: 'Other policies'
   list:
@@ -12,4 +16,4 @@ other_targets:
       text: 'Habitats Directive.'
     -
       text: 'CBD COP 7, Decision VII/5: Marine and coastal biodiversity, including measures to manage coastal and marine ecosystems, including mangroves, seagrass beds and coral reefs.'
-citations: "text"
+citations: "UNEP-WCMC, Short FT (2018). Global distribution of seagrasses (version 6.0). Sixth update to the data layer used in Green and Short (2003). Cambridge (UK): UN Environment World Conservation Monitoring Centre. URL: http://data.unep-wcmc.org/datasets/7"
