@@ -37,6 +37,11 @@ h3 {
 }
 
 h4 {
+  font-size: rem-calc(12);
+  margin: rem-calc(0 0 10 0);
+
+  @include breakpoint($small) { font-size: rem-calc(14); }
+  @include breakpoint($medium) { font-size: rem-calc(16); }
 }
 
 p {
@@ -163,4 +168,21 @@ sup {
 .section-padding {
   @extend .section-padding--top;
   @extend .section-padding--bottom;
+}
+
+.section-padding-small--top {
+  padding-top: $section-padding-small-top-small;
+  @include breakpoint($medium) { padding-top: $section-padding-small-top-medium; }
+  @include breakpoint($large) { padding-top: $section-padding-small-top-large; }
+}
+
+.section-padding-small--bottom {
+  padding-bottom: $section-padding-small-bottom-small;
+  @include breakpoint($medium) { padding-bottom: $section-padding-small-bottom-medium; }
+  @include breakpoint($large) { padding-bottom: $section-padding-small-bottom-large; }
+}
+
+.section-padding-small {
+  @extend .section-padding-small--top;
+  @extend .section-padding-small--bottom;
 }

@@ -1,6 +1,12 @@
 title: 'Mangroves'
-top_coverage_description: 'description'
-top_protected_description: 'description'
+top_coverage_description: 
+  -
+    'Mangroves are trees or large shrubs which grow within the intertidal zone in tropical and subtropical regions and have special adaptations to survive in this environment.'
+top_protected_description: 
+  -
+    'Over the last century, there has been extensive loss and degradation of mangrove habitats due to coastal development, pollution, aquaculture, and logging. Mangrove habitat continues to decline at an estimated rate of 1-2% annually.' 
+  -
+    'More information on cold-water corals available on <a href="http://www.biodiversitya-z.org/content/mangrove--2" title="Biodiversity A-Z" target="_blank">Biodiversity A-Z</a>'
 other_targets:
   title: 'Other policies'
   list:
@@ -8,4 +14,4 @@ other_targets:
       text: 'Ramsar Convention on Wetlands of International Importance.'
     -
       text: 'CBD COP 7, Decision VII/5: Marine and coastal biodiversity, including measures to manage coastal and marine ecosystems, including mangroves, seagrass beds and coral reefs.'
-citations: "text"
+citations: 'Spalding M, Kainuma M, Collins L (2010). World Atlas of Mangroves (version 3). A collaborative project of ITTO, ISME, FAO, UNEP-WCMC, UNESCO-MAB, UNU-INWEH and TNC. London (UK): Earthscan, London. 319 pp. URL: <a href="http://data.unep-wcmc.org/datasets/5" title="Dataset" target="_blank">http://data.unep-wcmc.org/datasets/5</a>'

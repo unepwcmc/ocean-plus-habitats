@@ -1,6 +1,10 @@
 title: 'Warm-water corals'
-top_coverage_description: 'description'
-top_protected_description: 'description'
+top_coverage_description: 
+  -
+    'Warm-water coral reefs are the most biodiverse of marine habitats per unit area, with diversity comparable to rainforests but an area only 5% of the size.'
+top_protected_description: 
+  -
+    'Reefs are also one of the most endangered habitats on the planet. The proportion of corals threatened with extinction has increased dramatically in recent decades.'
 other_targets:
   title: 'Other policies'
   list:
@@ -12,4 +16,4 @@ other_targets:
       text: 'UN Framework for Convention on Climate Change (UNFCCC): Coral reefs feature prominently for adaptation actions to minimize climate change impacts, and in Nationally Determined Contributions (NDCs) of State Parties.'
     -
       text: 'Convention on International Trade of Endangered Species of Wild Fauna and Flora (CITES).'
-citations: "text"
+citations: "UNEP-WCMC, WorldFish Centre, WRI, TNC (2010). Global distribution of warm-water coral reefs, compiled from multiple sources including the Millennium Coral Reef Mapping Project. Version 4.0. Includes contributions from IMaRS-USF and IRD (2005), IMaRS-USF (2005) and Spalding et al. (2001). Cambridge (UK): UN Environment World Conservation Monitoring Centre. URL: http://data.unep-wcmc.org/datasets/1 "
