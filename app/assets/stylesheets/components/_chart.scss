@@ -24,7 +24,10 @@
 
     .chart {
       &__content {
-        @include breakpoint($medium) { width: 32%; }
+        @include breakpoint($medium) { 
+          padding-right: rem-calc(49);
+          width: 32%; 
+        }
       }
 
       &__scrollable {
@@ -111,7 +114,10 @@
 
     .chart {
       &__content {
-        @include breakpoint($medium) { width: 32%; }
+        @include breakpoint($medium) { 
+          padding-right: rem-calc(49);
+          width: 32%; 
+        }
       }
 
       &__chart {
