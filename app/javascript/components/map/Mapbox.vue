@@ -92,11 +92,12 @@
             {
               sql: this.generateSQL(this.wdpaTables),
               cartocss: '#layer {}'
-            },
-            {
-              sql: this.generateSQL(this.tables),
-              cartocss: '#layer {}'
             }
+            // Restore if using Carto to show tiles
+            //{
+            //  sql: this.generateSQL(this.tables),
+            //  cartocss: '#layer {}'
+            // }
           ],
           extra_params: { map_key: this.cartoApiKey }
         })
@@ -104,6 +105,7 @@
         tiles.getTiles(object => {
           this.addLayer(tiles, 'layer0', 'wdpa', this.themes.wdpa, false, .2, 'fill')
           this.addLayer(tiles, 'layer0', 'wdpa-points', this.themes.wdpa, true, .2)
+          // Restore if using Carto to show tiles
           //this.addLayer(tiles, 'layer1', 'habitat', this.themes[this.theme], false, .8, 'fill')
           //this.addLayer(tiles, 'layer1', 'habitat-points', this.themes[this.theme], true, .8)
           //this.addLayer(tiles, 'layer1', 'habitat-lines', this.themes[this.theme], false, .8, 'line')
@@ -113,13 +115,13 @@
 
       addWmsLayer (id, url, colour) {
         let options = {
-          "id": "dynamic-demo",
+          "id": "habitat",
           "type": "raster",
           "minzoom": 0,
           "maxzoom": 22,
           "source": {
             "type": "raster",
-            "tiles": ['https://gis.unep-wcmc.org/arcgis/rest/services/marine/WCMC_011_WorldAtlasMangroves_WMS/MapServer/export?dpi=96&transparent=true&format=png32&layers=show%3A0&bbox={bbox-epsg-3857}&bboxSR=EPSG:3857&imageSR=EPSG:3857&size=256,256&f=image'],
+            "tiles": [url],
             "tileSize": 64
           },
           "paint": {
