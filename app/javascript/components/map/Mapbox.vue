@@ -38,7 +38,8 @@
       titleProtected: String,
       percentageGlobal: Number,
       percentageProtected: Number,
-      tables: Array
+      tables: Array,
+      wmsUrl: String
     },
 
     data () {
@@ -70,7 +71,7 @@
         let map = new mapboxgl.Map({
           container: 'map',
           style: 'mapbox://styles/unepwcmc/cjoa5g1k910bb2rpezelvlu9k',
-          center: [0.000000, -0.000000],
+          center: [0, 0],
           zoom: 1.3
         })
 
@@ -91,11 +92,12 @@
             {
               sql: this.generateSQL(this.wdpaTables),
               cartocss: '#layer {}'
-            },
-            {
-              sql: this.generateSQL(this.tables),
-              cartocss: '#layer {}'
             }
+            // Restore if using Carto to show tiles
+            //{
+            //  sql: this.generateSQL(this.tables),
+            //  cartocss: '#layer {}'
+            // }
           ],
           extra_params: { map_key: this.cartoApiKey }
         })
@@ -103,10 +105,31 @@
         tiles.getTiles(object => {
           this.addLayer(tiles, 'layer0', 'wdpa', this.themes.wdpa, false, .2, 'fill')
           this.addLayer(tiles, 'layer0', 'wdpa-points', this.themes.wdpa, true, .2)
-          this.addLayer(tiles, 'layer1', 'habitat', this.themes[this.theme], false, .8, 'fill')
-          this.addLayer(tiles, 'layer1', 'habitat-points', this.themes[this.theme], true, .8)
-          this.addLayer(tiles, 'layer1', 'habitat-lines', this.themes[this.theme], false, .8, 'line')
+          // Restore if using Carto to show tiles
+          //this.addLayer(tiles, 'layer1', 'habitat', this.themes[this.theme], false, .8, 'fill')
+          //this.addLayer(tiles, 'layer1', 'habitat-points', this.themes[this.theme], true, .8)
+          //this.addLayer(tiles, 'layer1', 'habitat-lines', this.themes[this.theme], false, .8, 'line')
+          this.addWmsLayer('habitat', this.wmsUrl, this.themes[this.theme])
         })
+      },
+
+      addWmsLayer (id, url, colour) {
+        let options = {
+          "id": "habitat",
+          "type": "raster",
+          "minzoom": 0,
+          "maxzoom": 22,
+          "source": {
+            "type": "raster",
+            "tiles": [url],
+            "tileSize": 64
+          },
+          "paint": {
+            "raster-hue-rotate": 0
+          }
+        }
+
+        this.map.addLayer(options)
       },
 
       addLayer (tiles, source, id, colour, point, opacity, type) {
@@ -116,7 +139,11 @@
             'type': 'vector',
             'tiles': tiles.mapProperties.mapProperties.metadata.tilejson.vector.tiles
           },
-          'source-layer': source
+          'layout': {
+            'visibility': 'visible'
+          },
+          'source-layer': source,
+          'minzoom': 0
         }
 
         if(point){
@@ -128,7 +155,10 @@
           options['paint'] = { 'fill-color': colour, 'fill-opacity': opacity }
         } else {
           options['type'] = type
-          options['paint'] = { 'line-width': 5.5, 'line-color': colour }
+          options['paint'] = {
+            "line-width": 2,
+            "line-color": colour
+          }
         }
 
         this.map.addLayer(options)
