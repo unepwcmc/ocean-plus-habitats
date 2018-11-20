@@ -68,7 +68,8 @@ class SiteController < ApplicationController
   end
 
   def load_charts_data
-    top_five_countries = StaticStat.where(habitat_id: @habitat.id).order('total_value DESC').first(5)
+    top_five_countries = StaticStat.where(habitat_id: @habitat.id)
+                                   .order('total_value DESC').first(5)
     arbitrary_value = top_five_countries.first.total_value.to_f * 1.05
     @chart_greatest_coverage = top_five_countries.map do |stat|
       {
@@ -79,7 +80,8 @@ class SiteController < ApplicationController
     end
 
     top_five_country_ids = top_five_countries.map(&:country_id)
-    top_five_protected_areas = StaticStat.where(habitat: @habitat, country_id: top_five_country_ids).order("protected_percentage DESC").first(5)
+    top_five_protected_areas = StaticStat.where(habitat: @habitat, country_id: top_five_country_ids)
+                                         .order("protected_percentage DESC").first(5)
 
     @chart_protected_areas = top_five_protected_areas.map do |stat|
       {
