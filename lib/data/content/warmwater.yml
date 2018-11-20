@@ -5,9 +5,11 @@ top_coverage_description:
 top_protected_description: 
   -
     'Reefs are also one of the most endangered habitats on the planet. The proportion of corals threatened with extinction has increased dramatically in recent decades.'
+  -
+    'More information on coral reefs is available on <a href="http://www.biodiversitya-z.org/content/warm-water-coral-reef" title="Biodiversity A-Z" target="_blank">Biodiversity A-Z</a>'.
 other_targets:
   title: 'Other policies'
   list:
     -
       text: '<ul><li>CBD COP 12, Decision XII/23: Priority Actions to Achieve Aichi Biodiversity Target 10 for Coral Reefs and Closely Associated Ecosystems (2014)</li><li>UNEA Resolution 2/12 on Sustainable Coral Reefs Management</li><li>UN Framework for Convention on Climate Change (UNFCCC): Coral reefs feature prominently for adaptation actions to minimize climate change impacts, and in Nationally Determined Contributions (NDCs) of State Parties.</li><li>Convention on International Trade of Endangered Species of Wild Fauna and Flora (CITES).</li>'
-citations: "UNEP-WCMC, WorldFish Centre, WRI, TNC (2010). Global distribution of warm-water coral reefs, compiled from multiple sources including the Millennium Coral Reef Mapping Project. Version 4.0. Includes contributions from IMaRS-USF and IRD (2005), IMaRS-USF (2005) and Spalding et al. (2001). Cambridge (UK): UN Environment World Conservation Monitoring Centre. URL: http://data.unep-wcmc.org/datasets/1 "
+citations: "UNEP-WCMC, WorldFish Centre, WRI, TNC (2010). Global distribution of warm-water coral reefs, compiled from multiple sources including the Millennium Coral Reef Mapping Project. Version 4.0. Includes contributions from IMaRS-USF and IRD (2005), IMaRS-USF (2005) and Spalding et al. (2001). Cambridge (UK): UN Environment World Conservation Monitoring Centre. URL: <a href="http://data.unep-wcmc.org/datasets/1 " title="http://data.unep-wcmc.org/datasets/1" target="_blank">http://data.unep-wcmc.org/datasets/1 </a>".
