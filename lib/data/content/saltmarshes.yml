@@ -12,4 +12,4 @@ other_targets:
   list:
     -
       text: '<ul><li>Ramsar Convention on Wetlands of International Importance</li><li>Natura 2000</li><li>Habitats Directive</li></ul>'
-citations: "Mcowen C, Weatherdon LV, Bochove J, Sullivan E, Blyth S, Zockler C, Stanwell-Smith D, Kingston N, Martin CS, Spalding M, Fletcher S (2017). A global map of saltmarshes. Biodiversity Data Journal 5: e11764. Paper DOI: https://doi.org/10.3897/BDJ.5.e11764; Data URL: <a href="http://data.unep-wcmc.org/datasets/43 (v.6)" title="http://data.unep-wcmc.org/datasets/43 (v.6)" target="_blank">http://data.unep-wcmc.org/datasets/43 (v.6)</a>."
+citations: 'Mcowen C, Weatherdon LV, Bochove J, Sullivan E, Blyth S, Zockler C, Stanwell-Smith D, Kingston N, Martin CS, Spalding M, Fletcher S (2017). A global map of saltmarshes. Biodiversity Data Journal 5: e11764. Paper DOI: https://doi.org/10.3897/BDJ.5.e11764; Data URL: <a href="http://data.unep-wcmc.org/datasets/43 (v.6)" title="http://data.unep-wcmc.org/datasets/43 (v.6)" target="_blank">http://data.unep-wcmc.org/datasets/43 (v.6)</a>.'
