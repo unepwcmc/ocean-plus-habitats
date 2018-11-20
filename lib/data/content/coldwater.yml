@@ -11,11 +11,5 @@ other_targets:
   title: 'Other Policies'
   list:
     -
-      text: 'Specially Protected Areas of Mediterranean Importance (SPAMI).'
-    -
-      text: 'Convention on International Trade of Endangered Species of Wild Fauna and Flora (CITES).'
-    -
-      text: 'UNGA Resolution A/RES/61/105: Vulnerable Marine Ecosystems, including seamounts, hydrothermal vents and cold-water corals.'
-    -
-      text: 'CBD COP Decision IX/20 and Decision X/29: Marine and coastal biodiversity, including Ecologically or Biologically Significant Marine Areas (EBSAs).'
+      text: '<ul></li><li>Specially Protected Areas of Mediterranean Importance (SPAMI)</li><li>Convention on International Trade of Endangered Species of Wild Fauna and Flora (CITES)</li><li>UNGA Resolution A/RES/61/105: Vulnerable Marine Ecosystems, including seamounts, hydrothermal vents and cold-water corals</li><li>CBD COP Decision IX/20 and Decision X/29: Marine and coastal biodiversity, including Ecologically or Biologically Significant Marine Areas (EBSAs)</li></ul>'
 citations: 'Freiwald A, Rogers A, Hall-Spencer J, Guinotte JM, Davies AJ, Yesson C, Martin CS, Weatherdon LV (2017). Global distribution of cold-water corals (version 5.0). Fifth update to the dataset in Freiwald et al. (2004) by UNEP-WCMC, in collaboration with Andre Freiwald and John Guinotte. Cambridge (UK): UN Environment World Conservation Monitoring Centre. URL: <a href="http://data.unep-wcmc.org/datasets/3g" title="" target="_blank">http://data.unep-wcmc.org/datasets/3</a>'
