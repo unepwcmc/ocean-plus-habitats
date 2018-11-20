@@ -3,8 +3,8 @@
     <%= image_tag 'logos/logo-ocean-plus-habitats.svg', alt: 'Ocean+ Habitats logo', class: 'header__logo logo--site margin-center' %>
     <h1><%= @global['title'] %></h1>
     <div>
-      <% @global['tagline'].each do |line| %>
-        <p><%= line['p'] %></p>
+      <% @global['tagline'].each do |p| %>
+        <p><%= p.html_safe %></p>
       <% end %>
     </div>
     <i class="header__icon icon--scroll absolute-center"></i>
