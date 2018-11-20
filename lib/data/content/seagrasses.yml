@@ -5,9 +5,11 @@ top_coverage_description:
 top_protected_description: 
   -
     'Through the services they provide, seagrasses have an economic value greater than many terrestrial and marine habitats.'
+  -
+    'More information on seagrasses is available on <a href="http://www.biodiversitya-z.org/content/" title="Biodiversity A-Z" target="_blank">Biodiversity A-Z</a>.'
 other_targets:
   title: 'Other policies'
   list:
     -
       text: '<ul><li>Ramsar Convention on Wetlands of International Importance</li><li>Natura 2000</li><li>Habitats Directive</li><li>CBD COP 7, Decision VII/5: Marine and coastal biodiversity, including measures to manage coastal and marine ecosystems, including mangroves, seagrass beds and coral reefs</li></ul>'
-citations: "UNEP-WCMC, Short FT (2018). Global distribution of seagrasses (version 6.0). Sixth update to the data layer used in Green and Short (2003). Cambridge (UK): UN Environment World Conservation Monitoring Centre. URL: http://data.unep-wcmc.org/datasets/7"
+citations: 'UNEP-WCMC, Short FT (2018). Global distribution of seagrasses (version 6.0). Sixth update to the data layer used in Green and Short (2003). Cambridge (UK): UN Environment World Conservation Monitoring Centre. URL: <a href="http://data.unep-wcmc.org/datasets/7" title="http://data.unep-wcmc.org/datasets/7" target="_blank">http://data.unep-wcmc.org/datasets/7</a>.'
