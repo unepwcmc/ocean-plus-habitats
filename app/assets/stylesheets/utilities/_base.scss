@@ -32,7 +32,7 @@ h3 {
   font-weight: $normal;
   margin-top: 0;
 
-  @include breakpoint($small) { font-size: rem-calc(40); }
+  @include breakpoint($small) { font-size: rem-calc(34); }
 }
 
 h4 {
@@ -46,6 +46,8 @@ h4 {
 p {
   line-height: $body-line-height;
   margin-top: 0;
+
+  @include breakpoint_down($small) { font-size: rem-calc(14); }
 }
 
 a {
