@@ -90,25 +90,26 @@
           sublayers: [
             {
               sql: this.generateSQL(this.wdpaTables),
-              cartocss: '#layer {polygon-fill: #ff00ff}'
+              cartocss: '#layer {}'
             },
             {
               sql: this.generateSQL(this.tables),
-              cartocss: '#layer {polygon-fill: #ff00ff}'
+              cartocss: '#layer {}'
             }
           ],
           extra_params: { map_key: this.cartoApiKey }
         })
 
         tiles.getTiles(object => {
-          this.addLayer(tiles, 'layer0', 'wdpa', this.themes.wdpa, false, .2)
+          this.addLayer(tiles, 'layer0', 'wdpa', this.themes.wdpa, false, .2, 'fill')
           this.addLayer(tiles, 'layer0', 'wdpa-points', this.themes.wdpa, true, .2)
-          this.addLayer(tiles, 'layer1', 'habitat', this.themes[this.theme], false, .8)
+          this.addLayer(tiles, 'layer1', 'habitat', this.themes[this.theme], false, .8, 'fill')
           this.addLayer(tiles, 'layer1', 'habitat-points', this.themes[this.theme], true, .8)
+          this.addLayer(tiles, 'layer1', 'habitat-lines', this.themes[this.theme], false, .8, 'line')
         })
       },
 
-      addLayer (tiles, source, id, colour, point, opacity) {
+      addLayer (tiles, source, id, colour, point, opacity, type) {
         let options = {
           'id': id,
           'source': {
@@ -122,9 +123,12 @@
           options['type'] = 'circle'
           options['paint'] = { 'circle-radius': 2, 'circle-color': colour, 'circle-opacity': opacity }
           options['filter'] = ['==', '$type', 'Point']
-        } else {
-          options['type'] = 'fill'
+        } else if(type === 'fill') {
+          options['type'] = type
           options['paint'] = { 'fill-color': colour, 'fill-opacity': opacity }
+        } else {
+          options['type'] = type
+          options['paint'] = { 'line-width': 5.5, 'line-color': colour }
         }
 
         this.map.addLayer(options)
