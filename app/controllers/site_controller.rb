@@ -68,31 +68,27 @@ class SiteController < ApplicationController
   end
 
   def load_charts_data
-
-    top_five_countries = @habitat.total_value_by_country.sort_by {|_key, value| value}.last(5)
-    arbitrary_value = top_five_countries.last.last.to_f * 1.05
-
-    @chart_greatest_coverage = top_five_countries.reverse.map do |country|
-      label = Country.find_by(iso3: country.first).name
+    top_five_countries = StaticStat.where(habitat_id: @habitat.id)
+                                   .order('total_value DESC')
+                                   .first(5)
+    arbitrary_value = top_five_countries.first.total_value.to_f * 1.05
+    @chart_greatest_coverage = top_five_countries.map do |stat|
       {
-        label: label,
-        value: country.last.round(0),
-        percent: 100*country.last/arbitrary_value
+        label: stat.country.name,
+        value: stat.total_value.to_f.round(0),
+        percent: 100*stat.total_value.to_f/arbitrary_value
       }
     end
 
-    top_five_country_ids = top_five_countries.map do |country|
-      country_id = Country.find_by(iso3: country.first).id
-      country_id
-    end
+    top_five_country_ids = top_five_countries.map(&:country_id)
+    top_five_protected_areas = StaticStat.where(habitat: @habitat, country_id: top_five_country_ids)
+                                         .order("protected_percentage DESC")
+                                         .first(5)
 
-    top_five_protected_areas = StaticStat.where(habitat: @habitat, country_id: top_five_country_ids).order("protected_percentage DESC").pluck(:country_id, :protected_percentage).to_a.first(5)
-
-    @chart_protected_areas = top_five_protected_areas.map do |country|
-      label = Country.find(country.first).name
+    @chart_protected_areas = top_five_protected_areas.map do |stat|
       {
-        label: label,
-        percent: country.last.round(1),
+        label: stat.country.name,
+        percent: stat.protected_percentage.to_f.round(1),
       }
     end
   end

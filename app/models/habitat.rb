@@ -16,8 +16,6 @@ class Habitat < ApplicationRecord
   def total_value_by_country
     c = Carto.new(name)
     total_value_by_country = 0
-    top_five_countries = []
-    arbitrary_value = 0
 
     if name == "coldcorals"
       total_value_by_country = c.total_points_by_country
