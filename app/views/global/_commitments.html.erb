@@ -10,7 +10,7 @@
               <% if item['icon'] %>
                 <%= image_tag item['icon'], alt: "#{item['title']} icon", class: "tab__content-icon" %>
               <% end %>
-              <p><%= item['text'].html_safe %></p>
+              <p class="tab__content-text"><%= item['text'].html_safe %></p>
             </div>
           <% end %>
         </tab>
