@@ -59,10 +59,11 @@
 
         &__content-icon {
           margin-right: rem-calc(14);
-          width: rem-calc(44); height: rem-calc(44);
+          width: rem-calc(60); height: rem-calc(60);
 
           transform: translateY(5px);
-
+          
+          @include breakpoint($small) { width: rem-calc(80); height: rem-calc(80); }
           @include breakpoint($medium) { margin-right: rem-calc(20); }
         }
 }
