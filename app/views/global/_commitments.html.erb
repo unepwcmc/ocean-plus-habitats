@@ -9,8 +9,11 @@
             <div class="tab__content-item flex">
               <% if item['icon'] %>
                 <%= image_tag item['icon'], alt: "#{item['title']} icon", class: "tab__content-icon" %>
+
+                <p class="tab__content-text"><%= item['text'].html_safe %></p>
+              <% else %>
+                <p><%= item['text'].html_safe %></p>
               <% end %>
-              <p class="tab__content-text"><%= item['text'].html_safe %></p>
             </div>
           <% end %>
         </tab>
