@@ -23,13 +23,14 @@
 }
 
 .nav {
+  background-color: $nav; 
   width: fit-content; height: rem-calc(74);
 
   @include breakpoint($medium) { width: auto; }
 
   &__a {
     color: $white;
-    border: solid 1px $navy;
+    border: solid 1px $nav;
     border-radius: $radius-button;
     font-size: rem-calc(20);
     font-weight: $bold;
