@@ -1,10 +1,39 @@
 //--------------------------------------------------
 // chart mixins
 //--------------------------------------------------
-@mixin chart_label {
+@mixin chart-content {
+  @include breakpoint($medium) { 
+    padding-right: rem-calc(49);
+    width: 32%; 
+  }
+}
+
+@mixin chart-label {
   font-size: rem-calc(14);
 
-  @include breakpoint($small) { font-size: rem-calc(18); }
+  @include breakpoint($small) { 
+    font-size: rem-calc(18);
+    width: rem-calc(134);
+  }
+}
+
+@mixin bar-label {
+  color: $grey-dark;
+  font-weight: $bold;
+  opacity: 0;
+
+  &.animate { opacity: 1; }
+}
+
+@mixin colour {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  @for $i from 1 through length($names){
+    @include theme_background($i);
+  }
 }
 
 //--------------------------------------------------
@@ -24,10 +53,7 @@
 
     .chart {
       &__content {
-        @include breakpoint($medium) { 
-          padding-right: rem-calc(49);
-          width: 32%; 
-        }
+        @include chart-content;
       }
 
       &__scrollable {
@@ -56,10 +82,8 @@
           }
 
             &__bar-label {
-              color: $grey-dark;
+              @include bar-label;
               font-size: rem-calc(12);
-              font-weight: $bold;
-              opacity: 0;
 
               position: relative;
               top: rem-calc(22);
@@ -69,33 +93,22 @@
               
               @include breakpoint($small) { font-size: rem-calc(17); }
               @include breakpoint($medium) { font-size: rem-calc(18); }
-
-              &.animate { opacity: 1; }
             }
 
             &__colour {
-              position: absolute;
-              right: 0;
-              bottom: 0;
-              left: 0;
+              @include colour;
 
               transform: scaleY(0);
               transform-origin: bottom;
               transition: transform 1s ease-out;
 
-              @for $i from 1 through length($names){
-                @include theme_background($i);
-              }
-
               &.animate { transform: scaleY(1); }
             }
 
           &__label {
-            @include chart_label;
+            @include chart-label;
             margin-top: rem-calc(10);
             width: rem-calc(91);
-
-            @include breakpoint($small) { width: rem-calc(134); }
           }
     }
   }
@@ -114,10 +127,7 @@
 
     .chart {
       &__content {
-        @include breakpoint($medium) { 
-          padding-right: rem-calc(49);
-          width: 32%; 
-        }
+        @include chart-content;
       }
 
       &__chart {
@@ -148,10 +158,8 @@
         }
 
           &__bar-label {
-            color: $grey-dark;
+            @include bar-label;
             font-size: rem-calc(20);
-            font-weight: $bold;
-            opacity: 0;
 
             position: absolute;
             top: 50%;
@@ -167,23 +175,14 @@
 
               right: rem-calc(40); 
             }
-
-            &.animate { opacity: 1; }
           }
 
           &__colour {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
+            @include colour;
               
             transform: scaleX(0);
             transform-origin: left;
             transition: transform 1s ease-out;
-
-            @for $i from 1 through length($names){
-              @include theme_background($i);
-            }
 
             &.animate { transform: scaleX(1); }
           }
@@ -198,10 +197,6 @@
           z-index: 1;
 
           transform: translateY(-50%);
-
-          @include breakpoint($small) { 
-            width: rem-calc(134); 
-          }
         }
       }
   }
