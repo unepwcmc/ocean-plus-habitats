@@ -15,39 +15,37 @@
     display: flex;
   }
 
-  @include breakpoint($medium) { height: rem-calc(128); }
+  @include breakpoint($medium) { height: rem-calc(77); }
 
   &__partner-logos {
-    @include breakpoint($small) {
-      align-items: center;
-      display: flex;
-    }
+    
   }
 
     &__partner-logo {
+      @extend .flex;
       opacity: .5;
       margin: rem-calc(8 10);
-      width: rem-calc(104); max-height: rem-calc(31);
+      width: rem-calc(80); max-height: rem-calc(22);
 
       @include breakpoint($small) { 
-        margin: rem-calc(0 0 0 24);
-        width: rem-calc(112); max-height: rem-calc(28); 
+        margin: rem-calc(0 0 0 18);
+        width: rem-calc(100); max-height: rem-calc(28); 
       }
 
       @include breakpoint($medium) { 
-        margin-left: rem-calc(50);
-        width: rem-calc(180); max-height: rem-calc(54); 
+        margin-left: rem-calc(22);
+        width: rem-calc(110); max-height: rem-calc(36); 
       }
 
       &.logo--site {
-        margin: 0 auto;
+        margin: 0 auto rem-calc(20) auto;
 
         @include breakpoint($small) { 
           margin: 0; 
-          width: rem-calc(85);
+          width: rem-calc(100); max-height: rem-calc(28); 
         }
 
-        @include breakpoint($medium) { width: rem-calc(180); }
+        @include breakpoint($medium) { width: rem-calc(110); max-height: rem-calc(36); }
       }
     }
 }

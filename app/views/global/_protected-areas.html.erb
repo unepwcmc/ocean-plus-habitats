@@ -1,4 +1,4 @@
-<section class="section-padding">
+<section class="section-padding sm-trigger-row">
   <div class="container">
     <div class="chart--row">
       <div class="chart__content">
@@ -11,9 +11,9 @@
         <% @chart_protected_areas.each do |item| %>
           <div class="chart__item">
             <p class="chart__label bold"><%= item[:label] %></p>
-            <div class="chart__bar">
-              <span class="chart__bar-label"><%= item[:percent] %>%</span>
-              <span class="chart__colour" style="width:<%= item[:percent] %>%;"></span>
+            <div class="chart__bar sm-target-row">
+              <span class="chart__bar-label sm-target-child-row"><%= item[:percent] %>%</span>
+              <span class="chart__colour sm-target-child-row" style="width:<%= item[:percent] %>%;"></span>
             </div>
           </div>
         <% end %>

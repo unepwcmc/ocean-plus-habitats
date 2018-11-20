@@ -1,14 +1,25 @@
 <footer class="footer-wrapper gutters bg--navy-xdark">
-  <div class="footer container">
+  <div class="footer">
     <%= link_to 'https://oceanplus.org/', title: 'Visit Ocean+', target: '_blank' do %>
       <%= image_tag 'logos/logo-ocean-plus.svg', alt: 'Ocean+ logo', class: 'footer__partner-logo logo--site' %>
     <% end %>
 
-    <div class="footer__partner-logos">
-      <%= image_tag 'logos/logo-proteus.svg', alt: 'Proteus logo', class: 'footer__partner-logo logo--proteus' %>
-      <%= image_tag 'logos/logo-panorama.svg', alt: 'Panorama logo', class: 'footer__partner-logo logo--panorama' %>
-      <%= image_tag 'logos/logo-geobon.svg', alt: 'GEO BON logo', class: 'footer__partner-logo logo--geobon' %>
-      <%= image_tag 'https://s3.amazonaws.com/wcmc.logo/UN-Environment-WCMC+logo+2017+white.svg', alt: 'UN Environment World Conservation Monitoring logo', class: 'footer__partner-logo logo--wcmc' %>
+    <div class="footer__partner-logos flex flex-wrap flex-center">
+      <%= link_to 'https://panorama.solutions/en/portal/marine-and-coastal', title: 'Visit Panorama', target: '_blank' do %>
+        <%= image_tag 'logos/logo-panorama.svg', alt: 'Panorama logo', class: 'footer__partner-logo logo--panorama' %>
+      <% end %>
+      
+      <%= link_to 'http://geobon.org', title: 'Visit GEO BON', target: '_blank' do %>
+        <%= image_tag 'logos/logo-geobon.svg', alt: 'GEO BON logo', class: 'footer__partner-logo logo--geobon' %>
+      <% end %>
+      
+      <%= link_to 'http://proteuspartners.org', title: 'Visit Proteus Partners', target: '_blank' do %>
+        <%= image_tag 'logos/logo-proteus.svg', alt: 'Proteus logo', class: 'footer__partner-logo logo--proteus' %>
+      <% end %>
+      
+      <%= link_to 'http://unep-wcmc.org', title: 'Visit the UN Environment World Conservation Monitoring Centre', target: '_blank' do %>
+        <%= image_tag 'https://s3.amazonaws.com/wcmc.logo/UN-Environment-WCMC+logo+2017+white.svg', alt: 'UN Environment World Conservation Monitoring logo', class: 'footer__partner-logo logo--wcmc' %>
+      <% end %>
     </div>
   </div>
 </footer>

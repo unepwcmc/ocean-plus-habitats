@@ -2,17 +2,29 @@
 // nav
 //--------------------------------------------------
 .nav-wrapper {
+  height: rem-calc(74);
+}
+
+.nav-scrollable {
   @include breakpoint_down($medium) {
     overflow-x: scroll;
 
     display: flex;
   }
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 2;
+  }
 }
 
 .nav {
-  width: 290%; height: rem-calc(74);
+  width: fit-content; height: rem-calc(74);
 
-  @include breakpoint($small) { width: 200%; }
   @include breakpoint($medium) { width: auto; }
 
   &__a {

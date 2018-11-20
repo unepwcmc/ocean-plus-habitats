@@ -61,6 +61,8 @@
           margin-right: rem-calc(14);
           width: rem-calc(44); height: rem-calc(44);
 
+          transform: translateY(5px);
+
           @include breakpoint($medium) { margin-right: rem-calc(20); }
         }
 }

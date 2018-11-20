@@ -1,23 +1,23 @@
 title: 'Aichi Targets'
 list: 
   -
-    target: 5,
+    icon: 'icons/aichi-5.svg'
     text: '<strong>Target 5.</strong> The rate of loss of all natural habitats, including forests, is at least halved and where feasible brought close to zero, and degradation and fragmentation is significantly reduced.'
   -
-    target: 10,
+    icon: 'icons/aichi-10.svg'
     text: '<strong>Target 10.</strong> The multiple anthropogenic pressures on coral reefs, and other vulnerable ecosystems impacted by climate change or ocean acidification are minimized, so as to maintain their integrity and functioning.'
   -
-    target: 11,
+    icon: 'icons/aichi-11.svg'
     text: '<strong>Target 11.</strong> At least 10 per cent of coastal and marine areas, especially areas of particular importance for biodiversity and ecosystem services, are conserved through effectively and equitably managed.'
   -
-    target: 14,
+    icon: 'icons/aichi-14.svg'
     text: '<strong>Target 14.</strong> Ecosystems that provide essential services are restored and safeguarded.'
   -
-    target: 15,
+    icon: 'icons/aichi-15.svg'
     text: '<strong>Target 15.</strong> Ecosystem resilience and the contribution of biodiversity to carbon stocks has been enhanced, through conservation and restoration, including restoration of at least 15 per cent of degraded ecosystems.'
   -
-    target: 17,
+    icon: 'icons/aichi-17.svg'
     text: '<strong>Target 17.</strong> Parties have developed, adopted as a policy instrument, and commenced implementing effective, participatory and updated national biodiversity strategy and action plans.'
   -
-    target: 19,
+    icon: 'icons/aichi-19.svg'
     text: '<strong>Target 19.</strong> Knowledge, the science base and technologies relating to biodiversity, its values, functioning, status and trends, and the consequences of its loss, are improved, widely shared and transferred, and applied.'
