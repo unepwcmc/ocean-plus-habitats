@@ -48,4 +48,17 @@
         @include breakpoint($medium) { width: rem-calc(110); max-height: rem-calc(36); }
       }
     }
+
+  &__copyright {
+    color: $white;
+    font-size: rem-calc(13);
+    font-style: italic;
+    margin-top: rem-calc(10);
+    opacity: .5;
+
+    @include breakpoint($small) {
+      font-size: rem-calc(16);
+      margin: rem-calc(0 0 0 16);
+    }
+  }
 }

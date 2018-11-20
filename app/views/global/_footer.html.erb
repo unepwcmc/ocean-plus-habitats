@@ -4,18 +4,22 @@
       <%= image_tag 'logos/logo-ocean-plus.svg', alt: 'Ocean+ logo', class: 'footer__partner-logo logo--site' %>
     <% end %>
 
-    <div class="footer__partner-logos flex flex-wrap flex-center">
-      <%= link_to 'http://geobon.org', title: 'Visit GEO BON', target: '_blank' do %>
-        <%= image_tag 'logos/logo-geobon.svg', alt: 'GEO BON logo', class: 'footer__partner-logo logo--geobon' %>
-      <% end %>
-      
-      <%= link_to 'http://proteuspartners.org', title: 'Visit Proteus Partners', target: '_blank' do %>
-        <%= image_tag 'logos/logo-proteus.svg', alt: 'Proteus logo', class: 'footer__partner-logo logo--proteus' %>
-      <% end %>
-      
-      <%= link_to 'http://unep-wcmc.org', title: 'Visit the UN Environment World Conservation Monitoring Centre', target: '_blank' do %>
-        <%= image_tag 'https://s3.amazonaws.com/wcmc.logo/UN-Environment-WCMC+logo+2017+white.svg', alt: 'UN Environment World Conservation Monitoring logo', class: 'footer__partner-logo logo--wcmc' %>
-      <% end %>
+    <div class="flex flex-wrap flex-center">
+      <div class="footer__partner-logos flex flex-wrap flex-center">
+        <%= link_to 'http://geobon.org', title: 'Visit GEO BON', target: '_blank' do %>
+          <%= image_tag 'logos/logo-geobon.svg', alt: 'GEO BON logo', class: 'footer__partner-logo logo--geobon' %>
+        <% end %>
+        
+        <%= link_to 'http://proteuspartners.org', title: 'Visit Proteus Partners', target: '_blank' do %>
+          <%= image_tag 'logos/logo-proteus.svg', alt: 'Proteus logo', class: 'footer__partner-logo logo--proteus' %>
+        <% end %>
+        
+        <%= link_to 'http://unep-wcmc.org', title: 'Visit the UN Environment World Conservation Monitoring Centre', target: '_blank' do %>
+          <%= image_tag 'https://s3.amazonaws.com/wcmc.logo/UN-Environment-WCMC+logo+2017+white.svg', alt: 'UN Environment World Conservation Monitoring logo', class: 'footer__partner-logo logo--wcmc' %>
+        <% end %>
+      </div>
+
+      <span class="footer__copyright">&copy; copyright <%= Date.current.strftime('%Y') %></span>
     </div>
   </div>
 </footer>
