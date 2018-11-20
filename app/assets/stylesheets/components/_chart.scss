@@ -27,7 +27,6 @@
 
 @mixin colour {
   position: absolute;
-  top: 0;
   bottom: 0;
   left: 0;
 
@@ -97,6 +96,7 @@
 
             &__colour {
               @include colour;
+              right: 0;
 
               transform: scaleY(0);
               transform-origin: bottom;
@@ -179,6 +179,7 @@
 
           &__colour {
             @include colour;
+            top: 0;
               
             transform: scaleX(0);
             transform-origin: left;
