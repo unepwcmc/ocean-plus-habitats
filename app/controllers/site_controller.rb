@@ -3,6 +3,16 @@ class SiteController < ApplicationController
   before_action :load_global
   before_action :load_charts_data
 
+  def index
+    @data = YAML.load(File.open("#{Rails.root}/lib/data/content/warmwater.yml", 'r'))
+
+    @commitments = [
+      @aichi_targets,
+      @sdgs,
+      @data['other_targets']
+    ]
+  end
+
   def warmwater
     @data = YAML.load(File.open("#{Rails.root}/lib/data/content/warmwater.yml", 'r'))
 
