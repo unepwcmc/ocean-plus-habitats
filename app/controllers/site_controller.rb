@@ -6,11 +6,18 @@ class SiteController < ApplicationController
   def index
     @data = YAML.load(File.open("#{Rails.root}/lib/data/content/warmwater.yml", 'r'))
 
-    @commitments = [
-      @aichi_targets,
-      @sdgs,
-      @data['other_targets']
-    ]
+    @habitatData = {
+      content: @data,
+      commitments: [
+        @aichi_targets, 
+        @sdgs,
+        @data['other_targets'] 
+      ]
+    }.to_json
+  end
+
+  def habitat
+    
   end
 
   def warmwater

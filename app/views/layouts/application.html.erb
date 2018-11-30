@@ -8,12 +8,13 @@
     <div id="v-app" v-cloak class="theme--<%= @habitat.theme %>">
       <%= render '/global/header' %>
       <%= render '/global/nav' %>
-      <%= render '/global/map' %>
-      <%= render '/global/greatest-coverage' %>
-      <%= render '/global/protected-areas' %>
-      <%= render '/global/commitments' %>
-      <%= render '/global/citations' %>
-      <%= render '/global/disclaimer' %>
+      <habitat :habitat="<%= @habitatData %>"></habitat>
+      <%#= render '/global/map' %>
+      <%#= render '/global/greatest-coverage' %>
+      <%#= render '/global/protected-areas' %>
+      <%#= render '/global/commitments' %>
+      <%#= render '/global/citations' %>
+      <%#= render '/global/disclaimer' %>
       <%= render '/global/footer' %>
     </div>
   </body>

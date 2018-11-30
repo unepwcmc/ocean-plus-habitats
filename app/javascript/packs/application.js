@@ -8,6 +8,7 @@ Vue.config.productionTip = false
 Vue.use(TurbolinksAdapter)
 
 // components
+import Habitat from '../Habitat.vue'
 import Tab from '../components/tabs/Tab.vue'
 import Tabs from '../components/tabs/Tabs.vue'
 import Mapbox from '../components/map/Mapbox.vue'
@@ -20,6 +21,7 @@ document.addEventListener('turbolinks:load', () => {
   const app = new Vue({
     el: '#v-app',
     components: {
+      Habitat,
       Tab,
       Tabs,
       Mapbox,
@@ -28,13 +30,13 @@ document.addEventListener('turbolinks:load', () => {
   })
 
   // add scenes for animated html components
-  let scrollMagicController = new ScrollMagic.Controller()
+  // let scrollMagicController = new ScrollMagic.Controller()
 
-  new ScrollMagic.Scene({ triggerElement: '.sm-trigger-column', reverse: false })
-    .setClassToggle('.sm-target-column .sm-target-child-column, .sm-target-column', 'animate')
-    .addTo(scrollMagicController)
+  // new ScrollMagic.Scene({ triggerElement: '.sm-trigger-column', reverse: false })
+  //   .setClassToggle('.sm-target-column .sm-target-child-column, .sm-target-column', 'animate')
+  //   .addTo(scrollMagicController)
 
-  new ScrollMagic.Scene({ triggerElement: '.sm-trigger-row', reverse: false })
-    .setClassToggle('.sm-target-row .sm-target-child-row, .sm-target-row', 'animate')
-    .addTo(scrollMagicController)
+  // new ScrollMagic.Scene({ triggerElement: '.sm-trigger-row', reverse: false })
+  //   .setClassToggle('.sm-target-row .sm-target-child-row, .sm-target-row', 'animate')
+  //   .addTo(scrollMagicController)
 })
