@@ -21,6 +21,7 @@ class SiteController < ApplicationController
       },
       columnChart: @chart_greatest_coverage,
       rowChart: @chart_protected_areas,
+      disclaimer: @global['disclaimer'],
       commitments: [
         @aichi_targets, 
         @sdgs,

@@ -23,22 +23,41 @@
       :description="content.top_protected_description"
       :data="habitat.rowChart">
     </chart-row>
+    
+    <section class="section-padding bg--navy white">
+      <div class="container">
+        <h3 class="white">Commitments and pledges</h3>
+        <tabs>
+          <tab v-for="commitment in habitat.commitments" :id="id(commitment.title)" :title="commitment.title" class="tab__content">
+            <div v-for="item in commitment.list" class="tab__content-item flex">
+              <template v-if="item.icon">
+                <img :src="item.icon" :alt="item.title" class="tab__content-icon">
 
-    <tabs>
-      <tab v-for="commitment in habitat.commitments" :id="id(commitment.title)" :title="commitment.title" class="tab__content">
-        <div v-for="item in commitment.list" class="tab__content-item flex">
-          <template v-if="item.icon">
-            <img :src="item.icon" :alt="item.title" class="tab__content-icon">
+                <p class="tab__content-text" v-html="item.text"></p>
+              </template>
 
-            <p class="tab__content-text" v-html="item.text"></p>
-          </template>
+              <template v-else>
+                <p v-html="item.text"></p>
+              </template>
+            </div>
+          </tab>
+        </tabs>
+      </div>
+    </section>
 
-          <template v-else>
-            <p v-html="item.text"></p>
-          </template>
+    <section class="section-padding-small">
+      <div class="container">
+        <div>
+          <h4>Citations</h4>
+          <p class="text--smallprint" v-html="citation"></p>
         </div>
-      </tab>
-    </tabs>
+        
+        <div>
+          <h4>Disclaimer</h4>
+          <p v-for="p in habitat.disclaimer" class="tab__content-text text--smallprint" v-html="p"></p>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -66,6 +85,7 @@
       return {
         content: this.habitat.content,
         map: this.habitat.map,
+        citation: this.habitat.content.citations
       }
     },
 
