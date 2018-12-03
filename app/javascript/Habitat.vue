@@ -1,5 +1,17 @@
 <template>
   <div>
+    <mapbox
+      :habitat="map.habitat"
+      :habitat-type="map.habitatType"
+      :theme="map.theme"
+      :tables="map.tables"
+      :title-global="map.titleGlobal"
+      :title-protected="map.titleProtected"
+      :percentage-global="map.percentageGlobal"
+      :percentage-protected="map.percentageProtected"
+      :wms-url="map.wmsUrl">
+    </mapbox>
+
     <tabs>
       <tab v-for="commitment in habitat.commitments" :id="id(commitment.title)" :title="commitment.title" class="tab__content">
         <div v-for="item in commitment.list" class="tab__content-item flex">
@@ -34,6 +46,12 @@
       habitat: {
         type: Object,
         required: true
+      }
+    },
+
+    data () {
+      return {
+        map: this.habitat.map
       }
     },
 

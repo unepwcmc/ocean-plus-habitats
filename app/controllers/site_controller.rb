@@ -8,6 +8,17 @@ class SiteController < ApplicationController
 
     @habitatData = {
       content: @data,
+      map: {
+        habitat: @habitat.title,
+        habitatType: @habitat_type,
+        theme: @habitat.theme,
+        tables: [@habitat.poly_table, @habitat.point_table].compact,
+        titleGlobal: @habitat.global_coverage_title(@habitat_type),
+        titleProtected: @habitat.protected_title,
+        percentageGlobal: @habitat.global_coverage,
+        percentageProtected: @habitat.protected_percentage,
+        wmsUrl: @habitat.wms_url
+      },
       commitments: [
         @aichi_targets, 
         @sdgs,
