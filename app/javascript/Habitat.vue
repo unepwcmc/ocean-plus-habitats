@@ -19,6 +19,11 @@
       :data="habitat.columnChart">
     </chart-column>
 
+    <chart-row
+      :description="content.top_protected_description"
+      :data="habitat.rowChart">
+    </chart-row>
+
     <tabs>
       <tab v-for="commitment in habitat.commitments" :id="id(commitment.title)" :title="commitment.title" class="tab__content">
         <div v-for="item in commitment.list" class="tab__content-item flex">
@@ -39,6 +44,7 @@
 
 <script>
   import ChartColumn from './components/chart/ChartColumn.vue'
+  import ChartRow from './components/chart/ChartRow.vue'
   import Tab from './components/tabs/Tab.vue'
   import Tabs from './components/tabs/Tabs.vue'
   import Mapbox from './components/map/Mapbox.vue'
@@ -47,7 +53,7 @@
   export default {
     name: 'habitat',
 
-    components: { ChartColumn, Tab, Tabs, Mapbox },
+    components: { ChartColumn, ChartRow, Tab, Tabs, Mapbox },
 
     props: {
       habitat: {

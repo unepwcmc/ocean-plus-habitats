@@ -3,15 +3,11 @@
     <div class="container">
       <div class="chart--column">
         <div class="chart__content">
-          <h3 v-if="habitatType == 'points'">
-            Top five countries and territories with the greatest number of records of {{ habitatTitle.toLowerCase() }}
-          </h3>
+          <h3 v-if="habitatType == 'points'">Top five countries and territories with the greatest number of records of {{ habitatTitle.toLowerCase() }}</h3>
 
-          <h3 v-else>
-              Top five countries and territories with the greatest coverage of {{ habitatTitle.toLowerCase() }}
-          </h3>
+          <h3 v-else>Top five countries and territories with the greatest coverage of {{ habitatTitle.toLowerCase() }}</h3>
 
-          <p v-for="p in description">{{ p }}</p>
+          <p v-for="p in description" v-html="p"></p>
         </div>
 
         <div class="chart__scrollable">

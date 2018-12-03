@@ -20,6 +20,7 @@ class SiteController < ApplicationController
         wmsUrl: @habitat.wms_url
       },
       columnChart: @chart_greatest_coverage,
+      rowChart: @chart_protected_areas,
       commitments: [
         @aichi_targets, 
         @sdgs,
