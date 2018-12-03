@@ -9,7 +9,7 @@ class SiteController < ApplicationController
     @habitatData = {
       content: @data,
       map: {
-        habitat: @habitat.title,
+        habitatTitle: @habitat.title,
         habitatType: @habitat_type,
         theme: @habitat.theme,
         tables: [@habitat.poly_table, @habitat.point_table].compact,
@@ -19,6 +19,7 @@ class SiteController < ApplicationController
         percentageProtected: @habitat.protected_percentage,
         wmsUrl: @habitat.wms_url
       },
+      columnChart: @chart_greatest_coverage,
       commitments: [
         @aichi_targets, 
         @sdgs,

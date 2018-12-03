@@ -1,16 +1,23 @@
 <template>
   <div>
     <mapbox
-      :habitat="map.habitat"
-      :habitat-type="map.habitatType"
+      :habitatTitle="map.habitatTitle"
+      :habitatType="map.habitatType"
       :theme="map.theme"
       :tables="map.tables"
-      :title-global="map.titleGlobal"
-      :title-protected="map.titleProtected"
-      :percentage-global="map.percentageGlobal"
-      :percentage-protected="map.percentageProtected"
-      :wms-url="map.wmsUrl">
+      :titleGlobal="map.titleGlobal"
+      :titleProtected="map.titleProtected"
+      :percentageGlobal="map.percentageGlobal"
+      :percentageProtected="map.percentageProtected"
+      :wmsUrl="map.wmsUrl">
     </mapbox>
+
+    <chart-column
+      :habitatTitle="map.habitatTitle"
+      :habitatType="map.habitatType"
+      :description="content.top_coverage_description"
+      :data="habitat.columnChart">
+    </chart-column>
 
     <tabs>
       <tab v-for="commitment in habitat.commitments" :id="id(commitment.title)" :title="commitment.title" class="tab__content">
@@ -27,11 +34,11 @@
         </div>
       </tab>
     </tabs>
-    {{ habitat }}
   </div>
 </template>
 
 <script>
+  import ChartColumn from './components/chart/ChartColumn.vue'
   import Tab from './components/tabs/Tab.vue'
   import Tabs from './components/tabs/Tabs.vue'
   import Mapbox from './components/map/Mapbox.vue'
@@ -40,7 +47,7 @@
   export default {
     name: 'habitat',
 
-    components: { Tab, Tabs, Mapbox },
+    components: { ChartColumn, Tab, Tabs, Mapbox },
 
     props: {
       habitat: {
@@ -51,7 +58,8 @@
 
     data () {
       return {
-        map: this.habitat.map
+        content: this.habitat.content,
+        map: this.habitat.map,
       }
     },
 
