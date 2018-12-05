@@ -12,7 +12,7 @@
   - `bundle exec rake db:seed`
 
 * Import the static CSV data
-  - `rake import:staticstats`
+  - `bundle exec rake import:staticstats`
 
 ## Data
 
