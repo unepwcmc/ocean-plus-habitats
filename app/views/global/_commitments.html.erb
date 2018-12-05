@@ -1,0 +1,23 @@
+<section class="section-padding bg--navy white">
+  <div class="container">
+    <h3 class="white">Commitments and pledges</h3>
+
+    <tabs>
+      <% @commitments.each do |commitment| %>
+        <tab id="<%= commitment['title'].downcase.delete(' ') %>" title="<%= commitment['title'] %>" class="tab__content">
+          <% commitment['list'].each do |item| %>
+            <div class="tab__content-item flex">
+              <% if item['icon'] %>
+                <%= image_tag item['icon'], alt: "#{item['title']} icon", class: "tab__content-icon" %>
+
+                <p class="tab__content-text"><%= item['text'].html_safe %></p>
+              <% else %>
+                <p><%= item['text'].html_safe %></p>
+              <% end %>
+            </div>
+          <% end %>
+        </tab>
+      <% end %>
+    </tabs>
+  </div>
+</section>

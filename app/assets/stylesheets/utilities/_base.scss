@@ -15,30 +15,44 @@ body {
 }
 
 h1 {
-  font-size: rem-calc(48);
+  font-size: rem-calc(30);
   font-weight: $normal;
   line-height: 1.2;
+
+  @include breakpoint($small) { font-size: rem-calc(48); }
 }
 
 h2 {
+
 }
 
 h3 {
   color: $grey-dark;
-  font-size: rem-calc(40);
+  font-size: rem-calc(20);
   font-weight: $normal;
   margin-top: 0;
-  padding-right: rem-calc(49);
+
+  @include breakpoint($small) { font-size: rem-calc(34); }
 }
 
 h4 {
+  font-size: rem-calc(12);
+  margin: rem-calc(0 0 10 0);
+
+  @include breakpoint($small) { font-size: rem-calc(14); }
+  @include breakpoint($medium) { font-size: rem-calc(16); }
 }
 
 p {
   line-height: $body-line-height;
+  margin-top: 0;
+
+  @include breakpoint_down($small) { font-size: rem-calc(14); }
 }
 
 a {
+  color: inherit;
+  
   &:hover { text-decoration: none; }
 
   &.a--plain {
@@ -50,9 +64,11 @@ a {
 }
 
 ul {
+
 }
 
 li {  
+  margin-bottom: rem-calc(14);
 }
 
 blockquote {
@@ -86,7 +102,7 @@ sup {
 // site structure
 //--------------------------------------------------
 .site-width { 
-  @include breakpoint($medium){ width: $site-width; }
+  @include breakpoint($large){ width: $site-width; }
 }
 
 .gutter--left {
@@ -113,8 +129,8 @@ sup {
   &--small {
     @extend %container;    
 
-    @include breakpoint($small) { width: 60%; }
-    @include breakpoint($medium) { width: 40%; }
+    @include breakpoint($small) { width: 80%; }
+    @include breakpoint($medium) { width: 50%; }
     @include breakpoint($large) { width: rem-calc(560); }
   }
 }
@@ -157,4 +173,21 @@ sup {
 .section-padding {
   @extend .section-padding--top;
   @extend .section-padding--bottom;
+}
+
+.section-padding-small--top {
+  padding-top: $section-padding-small-top-small;
+  @include breakpoint($medium) { padding-top: $section-padding-small-top-medium; }
+  @include breakpoint($large) { padding-top: $section-padding-small-top-large; }
+}
+
+.section-padding-small--bottom {
+  padding-bottom: $section-padding-small-bottom-small;
+  @include breakpoint($medium) { padding-bottom: $section-padding-small-bottom-medium; }
+  @include breakpoint($large) { padding-bottom: $section-padding-small-bottom-large; }
+}
+
+.section-padding-small {
+  @extend .section-padding-small--top;
+  @extend .section-padding-small--bottom;
 }

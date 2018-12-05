@@ -1,0 +1,21 @@
+//--------------------------------------------------
+// shared mixins
+//--------------------------------------------------
+@mixin theme_background ($index) {
+  $colour: nth($colours, $index);
+  $name: nth($names, $index);
+
+  .theme--#{$name} & {
+    background-color: $colour;
+  }
+}
+
+@mixin theme_text ($index) {
+  $colour: nth($colours, $index);
+  $name: nth($names, $index);
+
+  .theme--#{$name} & {
+    border-color: $colour;
+    color: $colour;
+  }
+}

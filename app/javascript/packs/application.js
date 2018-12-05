@@ -1,10 +1,40 @@
-/* eslint no-console:0 */
-// This file is automatically compiled by Webpack, along with any other files
-// present in this directory. You're encouraged to place your actual application logic in
-// a relevant structure within app/javascript and only use these pack files to reference
-// that code so it'll be compiled.
-//
-// To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
-// layout file, like app/views/layouts/application.html.erb
+// libraries
+import Vue from 'vue/dist/vue.esm'
+import TurbolinksAdapter from 'vue-turbolinks'
+import ScrollMagic from 'scrollmagic'
 
-console.log('Hello World from Webpacker')
+Vue.config.productionTip = false
+
+Vue.use(TurbolinksAdapter)
+
+// components
+import Tab from '../components/tabs/Tab.vue'
+import Tabs from '../components/tabs/Tabs.vue'
+import Mapbox from '../components/map/Mapbox.vue'
+import StickyBar from '../components/sticky/StickyBar.vue'
+
+// create event hub and export so that it can be imported into .vue files
+export const eventHub = new Vue()
+
+document.addEventListener('turbolinks:load', () => {
+  const app = new Vue({
+    el: '#v-app',
+    components: {
+      Tab,
+      Tabs,
+      Mapbox,
+      StickyBar
+    }
+  })
+
+  // add scenes for animated html components
+  let scrollMagicController = new ScrollMagic.Controller()
+
+  new ScrollMagic.Scene({ triggerElement: '.sm-trigger-column', reverse: false })
+    .setClassToggle('.sm-target-column .sm-target-child-column, .sm-target-column', 'animate')
+    .addTo(scrollMagicController)
+
+  new ScrollMagic.Scene({ triggerElement: '.sm-trigger-row', reverse: false })
+    .setClassToggle('.sm-target-row .sm-target-child-row, .sm-target-row', 'animate')
+    .addTo(scrollMagicController)
+})

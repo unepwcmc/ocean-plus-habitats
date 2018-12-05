@@ -1,0 +1,95 @@
+//--------------------------------------------------
+// map variables
+//--------------------------------------------------
+$map-panel-width: 430;
+
+//--------------------------------------------------
+// map
+//--------------------------------------------------
+.map {
+
+//--------------------------------------------------
+// statistics map
+//--------------------------------------------------
+  &--statistics {
+    position: relative;
+    z-index: 1;
+
+    .map {
+      &__map {
+        width: 100%; height: rem-calc(210);
+
+        @include breakpoint($small) { height: rem-calc(400); }
+        @include breakpoint($medium) { 
+          width: calc(100% - #{$map-panel-width}px); height: rem-calc(668); 
+        }
+      }
+
+      &__panel {
+        background-color: $primary;
+        box-shadow: 0 8px 18px -4px rgba($black, .8);
+        color: $white;
+        padding-top: rem-calc(30);
+        padding-bottom: rem-calc(40);
+        z-index: 1;
+
+        @include breakpoint($medium) {
+          box-shadow: -8px 0 18px -4px rgba($black, .8);
+          padding-top: rem-calc(50);
+          padding-left: rem-calc(44);
+          width: rem-calc($map-panel-width); height: 100%;
+
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+      }
+
+        &__panel-title {
+          font-size: rem-calc(18);
+          margin-bottom: 0;
+
+          @include breakpoint($medium) { font-size: rem-calc(25); }
+        }
+
+        &__panel-stat {
+          font-size: rem-calc(40);
+          font-weight: $bold;
+          line-height: 1.2;
+          margin-top: rem-calc(10);
+          margin-bottom: rem-calc(30);
+
+          display: block;
+
+          @include breakpoint($medium) { font-size: rem-calc(50); }
+        }
+
+        &__panel-layer {
+          font-size: rem-calc(18);
+          margin-bottom: rem-calc(8);
+
+          @include breakpoint($medium) { font-size: rem-calc(20); }
+
+          &::before {
+            background-color: $pink;
+            border-radius: 100%;
+            content: '';
+            margin-right: rem-calc(16 );
+            width: rem-calc(19); height: rem-calc(19);
+
+            display: inline-block;
+
+            transform: translateY(4px);
+          }
+        }
+        
+        &__panel-layer-habitat::before {
+          @for $i from 1 through length($names) {
+            .theme--#{nth($names, $i)} & {
+              background-color: nth($colours, $i);
+            }
+          }
+        }
+    }
+  }
+}

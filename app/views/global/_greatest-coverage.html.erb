@@ -1,19 +1,36 @@
-<section class="bg--grey-light section-padding">
-  <div class="container flex flex-h-between">
-    <div class="flex-1-third">
-      <h3>Top five countries and territories with the greatest coverage of <%= @title.downcase %></h3>
-    </div>
+<section class="bg--grey-light section-padding sm-trigger-column">
+  <div class="container">
+    <div class="chart--column">
+      <div class="chart__content">
+        <h3>
+          <% if @habitat_type == 'points' %>
+            Top five countries and territories with the greatest number of records of <%= @habitat.title.downcase %>
+          <% else %>
+            Top five countries and territories with the greatest recorded coverage of <%= @habitat.title.downcase %>
+          <% end %>
+        </h3>
 
-    <div class="chart--column center flex-2-thirds flex flex-h-between">
-      <% @chart_greatest_coverage.each do |item| %>
-        <div class="chart__item">
-          <div class="chart__bar">
-            <span class="chart__bar-label"><%= item[:value] %>km<sup>2</sup></span>
-            <span class="chart__colour" style="height:<%= item[:percent] %>%;"></span>
-          </div>
-          <p class="chart__label bold"><%= item[:label] %></p>
+        <% @data['top_coverage_description'].each do |p| %>
+          <p><%= p.html_safe %></p>
+        <% end %>
+      </div>
+
+      <div class="chart__scrollable">
+        <div class="chart__chart center flex flex-h-between">
+          <% @chart_greatest_coverage.each do |item| %>
+            <div class="chart__item">
+              <div class="chart__bar sm-target-column">
+                <p class="chart__bar-label sm-target-column no-margin">
+                  <%= number_with_delimiter(item[:value]) %>
+                  <% unless @habitat_type == 'points' %>km<sup>2</sup><% end %>
+                </p>
+                <span class="chart__colour sm-target-child-column" style="height:<%= item[:percent] %>%;"></span>
+              </div>
+              <p class="chart__label bold"><%= item[:label] %></p>
+            </div>
+          <% end %>
         </div>
-      <% end %>
+      </div>
     </div>
   </div>
 </section>

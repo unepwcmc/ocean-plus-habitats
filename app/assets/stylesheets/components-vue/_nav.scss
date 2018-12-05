@@ -1,42 +1,51 @@
 //--------------------------------------------------
 // nav
 //--------------------------------------------------
-.nav {
+.nav-wrapper {
   height: rem-calc(74);
+}
+
+.nav-scrollable {
+  @include breakpoint_down($medium) {
+    overflow-x: scroll;
+
+    display: flex;
+  }
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 2;
+  }
+}
+
+.nav {
+  background-color: $nav; 
+  width: fit-content; height: rem-calc(74);
+
+  @include breakpoint($medium) { width: auto; }
 
   &__a {
     color: $white;
-    border: solid 1px $navy;
+    border: solid 1px $nav;
     border-radius: $radius-button;
-    font-size: rem-calc(24);
+    font-size: rem-calc(20);
     font-weight: $bold;
-    padding: rem-calc(8 20);
+    padding: rem-calc(4 16);
     text-decoration: none;
+    white-space: nowrap;
+
+    @include breakpoint($small) { 
+      font-size: rem-calc(24);
+      padding: rem-calc(8 20);
+    }
 
     &.active {
-      &.theme--blue { 
-        color: $theme-blue;
-        border-color: $theme-blue; 
-      }
-
-      &.theme--green { 
-        color: $theme-green;
-        border-color: $theme-green; 
-      }
-
-      &.theme--orange { 
-        color: $theme-orange;
-        border-color: $theme-orange; 
-      }
-
-      &.theme--pink { 
-        color: $theme-pink;
-        border-color: $theme-pink; 
-      }
-
-      &.theme--yellow { 
-        color: $theme-yellow;
-        border-color: $theme-yellow; 
+      @for $i from 1 through length($names){
+        @include theme_text($i);
       }
     }
   }

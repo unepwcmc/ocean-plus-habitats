@@ -1,79 +1,95 @@
 class SiteController < ApplicationController
+  before_action :load_habitat
   before_action :load_global
+  before_action :load_charts_data
 
   def warmwater
-    @title = 'Warm-water corals'
-    @chart_greatest_coverage = [
-      {
-        label: 'Australia',
-        value: '94',
-        percent: '94',
-      },
-      {
-        label: 'United Kingdom',
-        value: '63',
-        percent: '63',
-      },
-      {
-        label: 'Spain',
-        value: '75',
-        percent: '75',
-      },
-      {
-        label: 'Italy',
-        value: '50',
-        percent: '50',
-      },
-      {
-        label: 'Russia',
-        value: '10',
-        percent: '10',
-      }
-    ]
+    @data = YAML.load(File.open("#{Rails.root}/lib/data/content/warmwater.yml", 'r'))
 
-    @chart_protected_areas = [
-      {
-        label: 'Australia',
-        percent: '94',
-      },
-      {
-        label: 'United Kingdom',
-        percent: '63',
-      },
-      {
-        label: 'Spain',
-        percent: '75',
-      },
-      {
-        label: 'Italy',
-        percent: '50',
-      },
-      {
-        label: 'Russia',
-        percent: '10',
-      }
+    @commitments = [
+      @aichi_targets,
+      @sdgs,
+      @data['other_targets']
     ]
   end
 
   def saltmarshes
-    @title = 'Saltmarshes'
+    @data = YAML.load(File.open("#{Rails.root}/lib/data/content/saltmarshes.yml", 'r'))
+
+    @commitments = [
+      @aichi_targets,
+      @sdgs,
+      @data['other_targets']
+    ]
   end
 
   def mangroves
-    @title = 'Mangroves'
+    @data = YAML.load(File.open("#{Rails.root}/lib/data/content/mangroves.yml", 'r'))
+
+    @commitments = [
+      @aichi_targets,
+      @sdgs,
+      @data['other_targets']
+    ]
   end
 
   def seagrasses
-    @title = 'Seagrasses'
+    @data = YAML.load(File.open("#{Rails.root}/lib/data/content/seagrasses.yml", 'r'))
+
+    @commitments = [
+      @aichi_targets,
+      @sdgs,
+      @data['other_targets']
+    ]
   end
 
-  def coldwater
-    @title = 'Cold-water corals'
+  def coldcorals
+    @data = YAML.load(File.open("#{Rails.root}/lib/data/content/coldwater.yml", 'r'))
+
+    @commitments = [
+      @aichi_targets,
+      @sdgs,
+      @data['other_targets']
+    ]
   end
 
   private
-    def load_global
-      @global = YAML.load(File.open("#{Rails.root}/lib/data/content/global.yml", 'r'))
+
+  def load_habitat
+    @habitat = Habitat.where(name: action_name).first
+    @habitat ||= Habitat.where(name: 'coralreef').first
+    @habitat_type = @habitat.type
+  end
+
+  def load_global
+    @global = YAML.load(File.open("#{Rails.root}/lib/data/content/global.yml", 'r'))
+    @aichi_targets = YAML.load(File.open("#{Rails.root}/lib/data/content/aichi-targets.yml", 'r'))
+    @sdgs = YAML.load(File.open("#{Rails.root}/lib/data/content/sdgs.yml", 'r'))
+  end
+
+  def load_charts_data
+    top_five_countries = StaticStat.where(habitat_id: @habitat.id)
+                                   .order('total_value DESC')
+                                   .first(5)
+    arbitrary_value = top_five_countries.first.total_value.to_f * 1.05
+    @chart_greatest_coverage = top_five_countries.map do |stat|
+      {
+        label: stat.country.name,
+        value: stat.total_value.to_f.round(0),
+        percent: 100*stat.total_value.to_f/arbitrary_value
+      }
     end
-  
+
+    top_five_country_ids = top_five_countries.map(&:country_id)
+    top_five_protected_areas = StaticStat.where(habitat: @habitat, country_id: top_five_country_ids)
+                                         .order("protected_percentage DESC")
+                                         .first(5)
+
+    @chart_protected_areas = top_five_protected_areas.map do |stat|
+      {
+        label: stat.country.name,
+        percent: stat.protected_percentage.to_f.round(1),
+      }
+    end
+  end
 end
