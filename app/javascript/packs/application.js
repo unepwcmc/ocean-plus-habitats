@@ -1,7 +1,6 @@
 // libraries
 import Vue from 'vue/dist/vue.esm'
 import TurbolinksAdapter from 'vue-turbolinks'
-import ScrollMagic from 'scrollmagic'
 
 Vue.config.productionTip = false
 
@@ -28,13 +27,4 @@ document.addEventListener('turbolinks:load', () => {
       StickyBar
     }
   })
-
-  // add scenes for animated html components
-  let scrollMagicController = new ScrollMagic.Controller()
-
-  // new ScrollMagic.Scene({ triggerElement: '.sm-trigger-column', reverse: false })
-  //   .setClassToggle('.sm-target-column .sm-target-child-column, .sm-target-column', 'animate')
-  //   .addTo(scrollMagicController)
-
-
 })

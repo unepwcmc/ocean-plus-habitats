@@ -30,6 +30,8 @@
 </template>
 
 <script>
+  import ScrollMagic from 'scrollmagic'
+  
   export default {
     name: 'chart-column',
 
@@ -40,9 +42,23 @@
       data: Array
     },
 
+    updated () {
+      if(this.data.length > 0) { this.scrollMagicHandlers() }
+    },
+
     computed: {
       lowerCaseTitle () {
         return this.habitatTitle ? this.habitatTitle.toLowerCase() : ''
+      }
+    },
+
+    methods: {
+      scrollMagicHandlers () {
+        let scrollMagicController = new ScrollMagic.Controller()
+
+        new ScrollMagic.Scene({ triggerElement: '.sm-trigger-column', reverse: false })
+          .setClassToggle('.sm-target-column .sm-target-child-column, .sm-target-column', 'animate')
+          .addTo(scrollMagicController)
       }
     }
   }
