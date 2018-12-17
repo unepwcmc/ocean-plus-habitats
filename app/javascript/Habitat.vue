@@ -1,5 +1,11 @@
 <template>
   <div>
+    <sticky-bar class="nav-wrapper sm-trigger-sticky">
+      <div class="nav-scrollable sm-target-sticky">
+        <nav :nav="nav" class="gutters flex flex-v-center flex-h-between"></nav>
+      </div>
+    </sticky-bar>
+
     <mapbox
       :habitatTitle="map.habitatTitle"
       :habitatType="map.habitatType"
@@ -62,6 +68,8 @@
 </template>
 
 <script>
+  import axios from 'axios'
+
   import ChartColumn from './components/chart/ChartColumn.vue'
   import ChartRow from './components/chart/ChartRow.vue'
   import Tab from './components/tabs/Tab.vue'
@@ -72,11 +80,15 @@
   export default {
     name: 'habitat',
 
-    components: { ChartColumn, ChartRow, Tab, Tabs, Mapbox },
+    components: { ChartColumn, ChartRow, Tab, Tabs, Mapbox, StickyBar },
 
     props: {
-      habitat: {
-        type: Object,
+      nav: {
+        type: Array,
+        required: true
+      },
+      source: {
+        type: String,
         required: true
       }
     },
@@ -89,9 +101,28 @@
       }
     },
 
+    created () {
+      this.createNavList()
+    },
+
     methods: {
       id (title) {
         return title.toLowerCase().replace(/\s+/g, '')
+      },
+
+      getHabitatData () {
+        const csrf = document.querySelectorAll('meta[name="csrf-token"]')[0].getAttribute('content')
+
+        axios.defaults.headers.common['X-CSRF-Token'] = csrf
+        axios.defaults.headers.common['Accept'] = 'application/json'
+
+        axios.get(this.source)
+          .then((response) => {
+            console.log(response)
+          })
+          .catch(function (error) {
+            console.log(error)
+          })
       }
     }
   }

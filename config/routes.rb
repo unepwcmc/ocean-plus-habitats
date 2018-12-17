@@ -3,9 +3,9 @@ Rails.application.routes.draw do
 
   root to: 'site#index'
 
-  get '/warmwater', to: 'site#warmwater'
-  get '/saltmarshes', to: 'site#saltmarshes'
-  get '/mangroves', to: 'site#mangroves'
-  get '/seagrasses', to: 'site#seagrasses'
-  get '/coldcorals', to: 'site#coldcorals'
+  # get '/warmwater', to: 'site#warmwater'
+  # get '/saltmarshes', to: 'site#saltmarshes'
+  # get '/mangroves', to: 'site#mangroves'
+  # get '/seagrasses', to: 'site#seagrasses'
+  # get '/coldcorals', to: 'site#coldcorals'
 end

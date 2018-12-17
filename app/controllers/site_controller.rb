@@ -1,12 +1,38 @@
 class SiteController < ApplicationController
-  respond_to :json, :html
+  respond_to? :json, :html
   before_action :load_habitat
   before_action :load_global
   before_action :load_charts_data
 
   def index
+    @nav = [
+      {
+        name: 'warmwater',
+        title: 'Warm-water corals'
+      },
+      {
+        name: 'saltmarshes',
+        title: 'Saltmarshes'
+      },
+      {
+        name: 'mangroves',
+        title: 'Mangroves'
+      },
+      {
+        name: 'seagrasses',
+        title: 'Seagrasses'
+      },
+      {
+        name: 'coldwater',
+        title: 'Cold-water corals'
+      }
+    ]
+
     @habitatData = {
       name: @habitat.name,
+      nav: {
+
+      },
       content: YAML.load(File.open("#{Rails.root}/lib/data/content/#{@habitat.name}.yml", 'r')),
       map: {
         habitatTitle: @habitat.title,
@@ -88,7 +114,8 @@ class SiteController < ApplicationController
   def load_habitat
     ## ST - post habitat name to index 
     @habitat = Habitat.where(name: params['habitat'] || 'warmwater').first
-    @habitat ||= Habitat.where(name: 'coralreef').first
+    # @habitat ||= Habitat.where(name: 'coralreef').first
+    byebug
     @habitat_type = @habitat.type
   end
 
