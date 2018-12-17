@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul class="tab__triggers ul-inline ul-unstyled">
-      <li v-for="child, index in children" @click="triggerTab(null, child.id)" class="tab__trigger" :class="{ 'tab-active': child.isActive }">
+      <li v-for="child in children" @click="triggerTab(child.id)" class="tab__trigger" :class="{ 'tab-active': child.isActive }">
         {{ child.title }}
       </li>
     </ul>

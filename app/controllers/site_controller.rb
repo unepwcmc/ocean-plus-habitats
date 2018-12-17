@@ -34,6 +34,7 @@ class SiteController < ApplicationController
 
     @habitatData = {
       name: @habitat.name,
+      theme: @habitat.theme,
       nav: {
 
       },

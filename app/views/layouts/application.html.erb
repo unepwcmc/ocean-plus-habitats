@@ -5,11 +5,11 @@
   </head>
 
   <body>
-    <div id="v-app" v-cloak class="theme--<%= @habitat.theme %>">
+    <div id="v-app" v-cloak>
       <%= render '/global/header' %>
       
       <habitat source="/" :nav="<%= @nav %>"></habitat>
-      
+
       <%= render '/global/footer' %>
     </div>
   </body>
