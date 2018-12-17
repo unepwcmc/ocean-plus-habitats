@@ -30,12 +30,14 @@ class SiteController < ApplicationController
       }
     ].to_json
 
+    content = YAML.load(File.open("#{Rails.root}/lib/data/content/#{@habitat.name}.yml", 'r'))
+
     @habitatData = {
       name: @habitat.name,
       nav: {
 
       },
-      # content: YAML.load(File.open("#{Rails.root}/lib/data/content/#{@habitat.name}.yml", 'r')),
+      content: content,
       map: {
         habitatTitle: @habitat.title,
         habitatType: @habitat_type,
@@ -53,7 +55,7 @@ class SiteController < ApplicationController
       commitments: [
         @aichi_targets, 
         @sdgs,
-        # @data['other_targets'] 
+        content['other_targets'] 
       ]
     }.to_json
 

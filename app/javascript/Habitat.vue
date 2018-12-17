@@ -16,19 +16,19 @@
       :percentageGlobal="map.percentageGlobal"
       :percentageProtected="map.percentageProtected"
       :wmsUrl="map.wmsUrl">
-    </mapbox>
+    </mapbox> -->
 
-    <chart-column
+   <!--  <chart-column
       :habitatTitle="map.habitatTitle"
       :habitatType="map.habitatType"
       :description="content.top_coverage_description"
       :data="habitat.columnChart">
-    </chart-column>
+    </chart-column> -->
 
     <chart-row
       :description="content.top_protected_description"
       :data="habitat.rowChart">
-    </chart-row> -->
+    </chart-row>
     
     <section class="section-padding bg--navy white">
       <div class="container">
@@ -104,9 +104,6 @@
 
     created () {
       this.getHabitatData()
-      this.content = this.habitat.content
-      this.map = this.habitat.map
-      // this.citation = this.habitat.content.citations
     },
 
     methods: {
@@ -122,8 +119,10 @@
 
         axios.get(this.source)
           .then((response) => {
-            console.log(response)
             this.habitat = response.data
+            this.content = this.habitat.content
+            this.map = this.habitat.map
+            this.citation = this.habitat.content.citations
           })
           .catch(function (error) {
             console.log(error)

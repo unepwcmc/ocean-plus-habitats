@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul class="tab__triggers ul-inline ul-unstyled">
-      <li v-for="child, index in children" @click="triggerTab(child.id)" class="tab__trigger" :class="{ 'tab-active': child.isActive }">
+      <li v-for="child, index in children" @click="triggerTab(null, child.id)" class="tab__trigger" :class="{ 'tab-active': child.isActive }">
         {{ child.title }}
       </li>
     </ul>
@@ -24,10 +24,13 @@
 
     created () {
       this.children = this.$children
+      
     },
 
-    mounted () {
-      this.triggerTab(this.children[0].id)
+    watch: {
+      children () {
+        if(this.children.length > 0) { this.triggerTab(this.children[0].id) }
+      }
     },
 
     methods: {
