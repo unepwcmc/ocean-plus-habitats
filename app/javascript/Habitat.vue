@@ -6,7 +6,7 @@
       </div>
     </sticky-bar>
 
-    <mapbox
+    <!-- <mapbox
       :habitatTitle="map.habitatTitle"
       :habitatType="map.habitatType"
       :theme="map.theme"
@@ -28,7 +28,7 @@
     <chart-row
       :description="content.top_protected_description"
       :data="habitat.rowChart">
-    </chart-row>
+    </chart-row> -->
     
     <section class="section-padding bg--navy white">
       <div class="container">
@@ -95,14 +95,18 @@
 
     data () {
       return {
-        content: this.habitat.content,
-        map: this.habitat.map,
-        citation: this.habitat.content.citations
+        habitat: {},
+        content: [],
+        map: {},
+        citation: ''
       }
     },
 
     created () {
-      this.createNavList()
+      this.getHabitatData()
+      this.content = this.habitat.content
+      this.map = this.habitat.map
+      // this.citation = this.habitat.content.citations
     },
 
     methods: {
@@ -119,6 +123,7 @@
         axios.get(this.source)
           .then((response) => {
             console.log(response)
+            this.habitat = response.data
           })
           .catch(function (error) {
             console.log(error)

@@ -5,6 +5,8 @@ class SiteController < ApplicationController
   before_action :load_charts_data
 
   def index
+    @title = @habitat.title
+
     @nav = [
       {
         name: 'warmwater',
@@ -26,14 +28,14 @@ class SiteController < ApplicationController
         name: 'coldwater',
         title: 'Cold-water corals'
       }
-    ]
+    ].to_json
 
     @habitatData = {
       name: @habitat.name,
       nav: {
 
       },
-      content: YAML.load(File.open("#{Rails.root}/lib/data/content/#{@habitat.name}.yml", 'r')),
+      # content: YAML.load(File.open("#{Rails.root}/lib/data/content/#{@habitat.name}.yml", 'r')),
       map: {
         habitatTitle: @habitat.title,
         habitatType: @habitat_type,
@@ -51,12 +53,15 @@ class SiteController < ApplicationController
       commitments: [
         @aichi_targets, 
         @sdgs,
-        @data['other_targets'] 
+        # @data['other_targets'] 
       ]
     }.to_json
 
     ## ST - This will return json to front end
-    respond_with @habitatData
+    respond_to do |format|
+      format.html
+      format.json { render json: @habitatData }
+    end
   end
 
   # def warmwater
@@ -114,8 +119,7 @@ class SiteController < ApplicationController
   def load_habitat
     ## ST - post habitat name to index 
     @habitat = Habitat.where(name: params['habitat'] || 'warmwater').first
-    # @habitat ||= Habitat.where(name: 'coralreef').first
-    byebug
+    @habitat ||= Habitat.where(name: 'coralreef').first
     @habitat_type = @habitat.type
   end
 
