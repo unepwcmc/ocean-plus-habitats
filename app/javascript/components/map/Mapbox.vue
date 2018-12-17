@@ -64,6 +64,12 @@
       this.createMap()
     },
 
+    // watch: {
+    //   map () {
+    //     return this.map
+    //   }
+    // },
+
     methods: {
       createMap () {
         mapboxgl.accessToken = this.mapboxToken

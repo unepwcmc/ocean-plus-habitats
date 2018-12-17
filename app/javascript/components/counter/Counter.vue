@@ -38,6 +38,13 @@
       }
     },
 
+    watch: {
+      number () {
+        this.currentNumber = 0
+        this.calcuateStep()
+      }
+    },
+
     computed: {
       styledNumber () {
         const roundingNumber = 1
@@ -47,7 +54,7 @@
     },
 
     created () {
-      this.step = Math.abs(this.number - this.currentNumber) / this.divisor
+      this.calcuateStep()
     },
 
     mounted () {
@@ -55,6 +62,10 @@
     },
 
     methods: {
+      calcuateStep () {
+        this.step = Math.abs(this.number - this.currentNumber) / this.divisor
+      },
+
       count () {
         const increase = this.currentNumber < this.number ? true : false
 
@@ -79,7 +90,7 @@
       scrollMagicHandlers () {
         let scrollMagicCounter = new ScrollMagic.Controller()
 
-        new ScrollMagic.Scene({ triggerElement: `.${this.smTrigger}`, reverse: false })
+        new ScrollMagic.Scene({ triggerElement: `.${this.smTrigger}`, reverse: true })
           .on('start', () => {
             if(this.$el.classList.contains(this.smTarget)) { this.count() }
           })
