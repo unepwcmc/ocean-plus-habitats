@@ -6,7 +6,7 @@
       </div>
     </sticky-bar>
 
-    <!-- <mapbox
+    <mapbox
       :habitatTitle="map.habitatTitle"
       :habitatType="map.habitatType"
       :theme="map.theme"
@@ -16,7 +16,7 @@
       :percentageGlobal="map.percentageGlobal"
       :percentageProtected="map.percentageProtected"
       :wmsUrl="map.wmsUrl">
-    </mapbox> -->
+    </mapbox>
 
     <chart-column
       :habitatTitle="map.habitatTitle"

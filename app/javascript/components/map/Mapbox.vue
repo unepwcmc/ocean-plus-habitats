@@ -4,14 +4,14 @@
       <p class="map__panel-title">{{ titleGlobal }}</p>
 
       <p class="map__panel-stat no-margin">
-        <counter sm-trigger="sm-counter-trigger" sm-target="sm-counter-target" :number="percentageGlobal"></counter>
+        <counter v-if="percentageGlobal" sm-trigger="sm-counter-trigger" sm-target="sm-counter-target" :number="percentageGlobal"></counter>
         <template v-if="habitatType != 'points'"> km<sup>2</sup></template>
       </p>
 
       <p class="map__panel-title">{{ titleProtected }}</p>
 
       <span class="map__panel-stat">
-        <counter sm-trigger="sm-counter-trigger" sm-target="sm-counter-target" :number="percentageProtected"></counter>%
+        <counter v-if="percentageProtected" sm-trigger="sm-counter-trigger" sm-target="sm-counter-target" :number="percentageProtected"></counter>%
       </span>
 
       <p class="map__panel-layer map__panel-layer-habitat">{{ habitat }}</p>
