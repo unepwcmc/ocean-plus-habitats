@@ -60,67 +60,15 @@ class SiteController < ApplicationController
       ]
     }.to_json
 
-    ## ST - This will return json to front end
     respond_to do |format|
       format.html
       format.json { render json: @habitatData }
     end
   end
 
-  # def warmwater
-  #   @data = YAML.load(File.open("#{Rails.root}/lib/data/content/warmwater.yml", 'r'))
-
-  #   @commitments = [
-  #     @aichi_targets,
-  #     @sdgs,
-  #     @data['other_targets']
-  #   ]
-  # end
-
-  # def saltmarshes
-  #   @data = YAML.load(File.open("#{Rails.root}/lib/data/content/saltmarshes.yml", 'r'))
-
-  #   @commitments = [
-  #     @aichi_targets,
-  #     @sdgs,
-  #     @data['other_targets']
-  #   ]
-  # end
-
-  # def mangroves
-  #   @data = YAML.load(File.open("#{Rails.root}/lib/data/content/mangroves.yml", 'r'))
-
-  #   @commitments = [
-  #     @aichi_targets,
-  #     @sdgs,
-  #     @data['other_targets']
-  #   ]
-  # end
-
-  # def seagrasses
-  #   @data = YAML.load(File.open("#{Rails.root}/lib/data/content/seagrasses.yml", 'r'))
-
-  #   @commitments = [
-  #     @aichi_targets,
-  #     @sdgs,
-  #     @data['other_targets']
-  #   ]
-  # end
-
-  # def coldcorals
-  #   @data = YAML.load(File.open("#{Rails.root}/lib/data/content/coldwater.yml", 'r'))
-
-  #   @commitments = [
-  #     @aichi_targets,
-  #     @sdgs,
-  #     @data['other_targets']
-  #   ]
-  # end
-
   private
 
   def load_habitat
-    ## ST - post habitat name to index 
     @habitat = Habitat.where(name: params['habitat'] || 'warmwater').first
     @habitat ||= Habitat.where(name: 'coralreef').first
     @habitat_type = @habitat.type
