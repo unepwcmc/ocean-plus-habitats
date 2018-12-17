@@ -7,13 +7,9 @@
   <body>
     <div id="v-app" v-cloak class="theme--<%= @habitat.theme %>">
       <%= render '/global/header' %>
-      <%#= render '/global/nav' %>
-
+      
       <habitat source="/" :nav="<%= @nav %>"></habitat>
       
-      
-      <%#= render '/global/citations' %>
-      <%#= render '/global/disclaimer' %>
       <%= render '/global/footer' %>
     </div>
   </body>

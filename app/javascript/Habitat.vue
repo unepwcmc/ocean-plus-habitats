@@ -18,12 +18,12 @@
       :wmsUrl="map.wmsUrl">
     </mapbox> -->
 
-   <!--  <chart-column
+    <chart-column
       :habitatTitle="map.habitatTitle"
       :habitatType="map.habitatType"
       :description="content.top_coverage_description"
       :data="habitat.columnChart">
-    </chart-column> -->
+    </chart-column>
 
     <chart-row
       :description="content.top_protected_description"

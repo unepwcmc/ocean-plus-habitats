@@ -30,7 +30,7 @@ document.addEventListener('turbolinks:load', () => {
   })
 
   // add scenes for animated html components
-  // let scrollMagicController = new ScrollMagic.Controller()
+  let scrollMagicController = new ScrollMagic.Controller()
 
   // new ScrollMagic.Scene({ triggerElement: '.sm-trigger-column', reverse: false })
   //   .setClassToggle('.sm-target-column .sm-target-child-column, .sm-target-column', 'animate')
