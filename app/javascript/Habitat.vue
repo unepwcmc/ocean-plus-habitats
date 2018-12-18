@@ -52,15 +52,15 @@
     </section>
 
     <section class="section-padding-small">
-      <div class="container">
-        <div>
+      <div class="container smallprint">
+        <div class="smallprint__citations">
           <h4>Citations</h4>
           <p class="text--smallprint" v-html="citation"></p>
         </div>
         
-        <div>
-          <h4>Disclaimer</h4>
-          <p v-for="p in habitat.disclaimer" class="tab__content-text text--smallprint" v-html="p"></p>
+        <div class="smallprint__disclaimer">
+          <h4>Limitations</h4>
+          <p v-for="p in habitat.disclaimer" class="text--smallprint" v-html="p"></p>
         </div>
       </div>
     </section>
