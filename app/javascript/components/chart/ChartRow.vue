@@ -34,14 +34,17 @@
     },
 
     updated () {
-      if(this.data.length > 0) { this.scrollMagicHandlers() }
+      if(this.data.length > 0) { 
+        if(this.scene) { this.scene.removeClassToggle(true) }
+        this.scrollMagicHandlers()
+      }
     },
 
     methods: {
       scrollMagicHandlers () {
         let scrollMagicController = new ScrollMagic.Controller()
 
-        new ScrollMagic.Scene({ triggerElement: '.sm-trigger-row', reverse: false })
+        this.scene = new ScrollMagic.Scene({ triggerElement: '.sm-trigger-row', reverse: false })
           .setClassToggle('.sm-target-row .sm-target-child-row, .sm-target-row', 'animate')
           .addTo(scrollMagicController)
       }

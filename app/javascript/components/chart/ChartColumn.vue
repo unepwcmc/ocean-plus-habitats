@@ -43,7 +43,10 @@
     },
 
     updated () {
-      if(this.data.length > 0) { this.scrollMagicHandlers() }
+      if(this.data.length > 0) { 
+        if(this.scene) { this.scene.removeClassToggle(true) }
+        this.scrollMagicHandlers() 
+      }
     },
 
     computed: {
@@ -56,7 +59,7 @@
       scrollMagicHandlers () {
         let scrollMagicController = new ScrollMagic.Controller()
 
-        new ScrollMagic.Scene({ triggerElement: '.sm-trigger-column', reverse: false })
+        this.scene = new ScrollMagic.Scene({ triggerElement: '.sm-trigger-column', reverse: false })
           .setClassToggle('.sm-target-column .sm-target-child-column, .sm-target-column', 'animate')
           .addTo(scrollMagicController)
       }

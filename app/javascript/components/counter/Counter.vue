@@ -40,8 +40,13 @@
 
     watch: {
       number () {
-        this.currentNumber = 0
-        this.calcuateStep()
+        if(this.scene) { 
+          this.scene.removeClassToggle(true) 
+          this.currentNumber = 0
+          this.calcuateStep()
+        }
+        
+        this.scrollMagicHandlers()
       }
     },
 
@@ -90,7 +95,7 @@
       scrollMagicHandlers () {
         let scrollMagicCounter = new ScrollMagic.Controller()
 
-        new ScrollMagic.Scene({ triggerElement: `.${this.smTrigger}`, reverse: true })
+        this.scene = new ScrollMagic.Scene({ triggerElement: `.${this.smTrigger}`, reverse: true })
           .on('start', () => {
             if(this.$el.classList.contains(this.smTarget)) { this.count() }
           })
