@@ -25,7 +25,7 @@ class SiteController < ApplicationController
         title: 'Seagrasses'
       },
       {
-        name: 'coldwater',
+        name: 'coldcorals',
         title: 'Cold-water corals'
       }
     ].to_json
