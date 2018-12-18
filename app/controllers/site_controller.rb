@@ -31,6 +31,8 @@ class SiteController < ApplicationController
     ].to_json
 
     content = YAML.load(File.open("#{Rails.root}/lib/data/content/#{@habitat.name}.yml", 'r'))
+    aichi_targets = generateImageUrls @aichi_targets
+    sdgs = generateImageUrls @sdgs
 
     @habitatData = {
       name: @habitat.name,
@@ -54,8 +56,8 @@ class SiteController < ApplicationController
       rowChart: @chart_protected_areas,
       disclaimer: @global['disclaimer'],
       commitments: [
-        @aichi_targets, 
-        @sdgs,
+        aichi_targets, 
+        sdgs,
         content['other_targets'] 
       ]
     }.to_json
@@ -78,6 +80,14 @@ class SiteController < ApplicationController
     @global = YAML.load(File.open("#{Rails.root}/lib/data/content/global.yml", 'r'))
     @aichi_targets = YAML.load(File.open("#{Rails.root}/lib/data/content/aichi-targets.yml", 'r'))
     @sdgs = YAML.load(File.open("#{Rails.root}/lib/data/content/sdgs.yml", 'r'))
+  end
+
+  def generateImageUrls targets
+    targets['list'].each do |target|
+      target.merge!({'icon': ActionController::Base.helpers.image_url(target['icon'])})
+    end
+
+    targets
   end
 
   def load_charts_data
