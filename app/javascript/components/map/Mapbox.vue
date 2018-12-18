@@ -56,7 +56,7 @@
           orange: '#FF8A75',
           pink: '#F35F8D',
           yellow: '#FCDA68'
-        }
+        },
       }
     },
 
@@ -64,11 +64,18 @@
       this.createMap()
     },
 
-    // watch: {
-    //   map () {
-    //     return this.map
-    //   }
-    // },
+    watch: {
+      tables () {
+        if(this.map.isStyleLoaded()) { //changing habitat
+          this.removeHabitatLayer()
+          this.addHabitatLayer()
+        } else {
+          this.map.on('load', () => { //on page load
+            this.addHabitatLayer()
+          })
+        }
+      }
+    },
 
     methods: {
       createMap () {
@@ -115,11 +122,11 @@
           //this.addLayer(tiles, 'layer1', 'habitat', this.themes[this.theme], false, .8, 'fill')
           //this.addLayer(tiles, 'layer1', 'habitat-points', this.themes[this.theme], true, .8)
           //this.addLayer(tiles, 'layer1', 'habitat-lines', this.themes[this.theme], false, .8, 'line')
-          this.addWmsLayer('habitat', this.wmsUrl, this.themes[this.theme])
+          //this.addWmsLayer('habitat', this.wmsUrl, this.themes[this.theme])
         })
       },
 
-      addWmsLayer (id, url, colour) {
+      addHabitatLayer () {
         let options = {
           "id": "habitat",
           "type": "raster",
@@ -127,15 +134,23 @@
           "maxzoom": 22,
           "source": {
             "type": "raster",
-            "tiles": [url],
+            "tiles": [this.wmsUrl],
             "tileSize": 64
           },
           "paint": {
             "raster-hue-rotate": 0
           }
         }
-
+        
         this.map.addLayer(options)
+      },
+
+      removeHabitatLayer () {
+        let habitatLayer = this.map.getLayer('habitat')
+
+        if(typeof habitatLayer !== 'undefined') {
+          this.map.removeLayer('habitat').removeSource('habitat')
+        }
       },
 
       addLayer (tiles, source, id, colour, point, opacity, type) {
