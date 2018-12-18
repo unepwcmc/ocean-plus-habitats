@@ -10,22 +10,27 @@ class SiteController < ApplicationController
     @nav = [
       {
         name: 'warmwater',
+        theme: 'theme--orange',
         title: 'Warm-water corals'
       },
       {
         name: 'saltmarshes',
+        theme: 'theme--green',
         title: 'Saltmarshes'
       },
       {
         name: 'mangroves',
+        theme: 'theme--yellow',
         title: 'Mangroves'
       },
       {
         name: 'seagrasses',
+        theme: 'theme--blue',
         title: 'Seagrasses'
       },
       {
         name: 'coldcorals',
+        theme: 'theme--pink',
         title: 'Cold-water corals'
       }
     ].to_json

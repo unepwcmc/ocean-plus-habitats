@@ -1,5 +1,5 @@
 <template>
-  <p class="nav__a no-margin" :class="{ 'active': isActive }" @click="triggerNavItem">
+  <p class="nav__a no-margin" :class="[{ 'active': isActive }, theme]" @click="triggerNavItem">
     {{ title }}  
   </p>  
 </template>
@@ -16,6 +16,10 @@
         required: true
       },
       name: {
+        type: String,
+        required: true
+      },
+      theme: {
         type: String,
         required: true
       }

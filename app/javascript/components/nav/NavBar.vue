@@ -2,7 +2,8 @@
   <nav class="nav">
     <nav-link v-for="navLink in nav" 
       :title="navLink.title" 
-      :name="navLink.name">
+      :name="navLink.name"
+      :theme="navLink.theme">
     </nav-link>
   </nav>  
 </template>
