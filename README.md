@@ -12,9 +12,11 @@
   - `bundle exec rake db:seed`
 
 * Import the static CSV data
-  - `rake import:staticstats`
+  - `bundle exec rake import:staticstats`
 
 ## Data
+
+We are still trying to see if it is feasible to generate map tiles and data dynamically using Carto and in the meantime we are using static data.
 
 Data is fetched from CartoDB using the `Carto` module defined in `lib/modules`.
 Some details about the layers in Carto are in `config/habitats.yml`.
