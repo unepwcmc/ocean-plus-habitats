@@ -14,7 +14,7 @@
         <counter v-if="percentageProtected" sm-trigger="sm-counter-trigger" sm-target="sm-counter-target" :number="percentageProtected"></counter>%
       </span>
 
-      <p class="map__panel-layer map__panel-layer-habitat">{{ habitat }}</p>
+      <p class="map__panel-layer map__panel-layer-habitat">{{ habitatTitle }}</p>
       <p class="map__panel-layer">Protected Areas</p>
     </div>
 
@@ -31,7 +31,7 @@
     components: { Counter },
 
     props: {
-      habitat: String,
+      habitatTitle: String,
       habitatType: String,
       theme: String,
       titleGlobal: String,
