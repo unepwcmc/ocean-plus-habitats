@@ -66,14 +66,16 @@
 
     watch: {
       tables () {
-        if(this.map.isStyleLoaded()) { //changing habitat
-          this.removeHabitatLayer()
-          this.addHabitatLayer()
-        } else {
-          this.map.on('load', () => { //on page load
+        const waiting = () => {
+          if (!this.map.isStyleLoaded()) {
+            setTimeout(waiting, 100);
+          } else {
+            this.removeHabitatLayer()
             this.addHabitatLayer()
-          })
+          }
         }
+
+        waiting()
       }
     },
 
