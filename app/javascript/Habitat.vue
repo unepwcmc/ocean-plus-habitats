@@ -2,7 +2,7 @@
   <div :class="[`theme--${habitat.theme}`]">
     <sticky-bar class="nav-wrapper sm-trigger-sticky">
       <div class="nav-scrollable sm-target-sticky">
-        <nav-bar :nav="nav" class="gutters flex flex-v-center flex-h-between"></nav-bar>
+        <nav-bar :nav="nav" :default="defaultHabitat" class="gutters flex flex-v-center flex-h-between"></nav-bar>
       </div>
     </sticky-bar>
 
@@ -105,10 +105,10 @@
     },
 
     created () {
-      const hash = window.location.hash.substr(1),
-        habitat = hash ? hash : undefined
-
-      this.getHabitatData(habitat)
+      const hash = window.location.hash.substr(1)
+      console.log('hash', hash)
+      this.defaultHabitat = hash ? hash : 'coralreef'
+      this.getHabitatData(this.defaultHabitat)
 
       eventHub.$on('changeHabitat', this.getHabitatData)
     },
@@ -118,7 +118,7 @@
         return title.toLowerCase().replace(/\s+/g, '')
       },
 
-      getHabitatData (habitat = 'coralreef') {
+      getHabitatData (habitat) {
         const csrf = document.querySelectorAll('meta[name="csrf-token"]')[0].getAttribute('content')
 
         axios.defaults.headers.common['X-CSRF-Token'] = csrf

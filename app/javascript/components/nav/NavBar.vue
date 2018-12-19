@@ -21,6 +21,10 @@
       nav: {
         type: Array,
         required: true
+      },
+      default: {
+        type: String,
+        required: true
       }
     },
 
@@ -32,18 +36,20 @@
 
     created () {
       this.children = this.$children
-
+      
       eventHub.$on('changeHabitat', this.updateNav)
     },
 
     watch: {
       children () {
-        if(this.children.length > 0) { this.updateNav(this.children[0].name) }
+        if(this.children.length > 0) { this.updateNav(this.default) }
       }
     },
 
     methods: {
       updateNav (selectedName) {
+        window.location.replace(`#${selectedName}`)
+
         this.children.forEach(child => {
           child.isActive = child.name === selectedName
         })

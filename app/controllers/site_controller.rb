@@ -9,7 +9,7 @@ class SiteController < ApplicationController
 
     @nav = [
       {
-        name: 'warmwater',
+        name: 'coralreef',
         theme: 'theme--orange',
         title: 'Warm-water corals'
       },
