@@ -35,25 +35,26 @@ class HabitatsSerializer
   end
 
   private
-    def content
-      YAML.load(File.open("#{Rails.root}/lib/data/content/#{@habitat.name}.yml", 'r'))
+  
+  def content
+    YAML.load(File.open("#{Rails.root}/lib/data/content/#{@habitat.name}.yml", 'r'))
+  end
+
+  def aichi_targets
+    @aichi_targets = YAML.load(File.open("#{Rails.root}/lib/data/content/aichi-targets.yml", 'r'))
+    generateImageUrls @aichi_targets
+  end
+
+  def sdgs
+    @sdgs = YAML.load(File.open("#{Rails.root}/lib/data/content/sdgs.yml", 'r'))
+    generateImageUrls @sdgs
+  end
+
+  def generateImageUrls targets
+    targets['list'].each do |target|
+      target.merge!({'icon': ActionController::Base.helpers.image_url(target['icon'])})
     end
 
-    def aichi_targets
-      @aichi_targets = YAML.load(File.open("#{Rails.root}/lib/data/content/aichi-targets.yml", 'r'))
-      generateImageUrls @aichi_targets
-    end
-
-    def sdgs
-      @sdgs = YAML.load(File.open("#{Rails.root}/lib/data/content/sdgs.yml", 'r'))
-      generateImageUrls @sdgs
-    end
-
-    def generateImageUrls targets
-      targets['list'].each do |target|
-        target.merge!({'icon': ActionController::Base.helpers.image_url(target['icon'])})
-      end
-
-      targets
-    end
+    targets
+  end
 end
