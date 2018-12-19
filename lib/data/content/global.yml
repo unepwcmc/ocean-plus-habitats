@@ -1,13 +1,34 @@
 title: "The first authoritative online resource on marine habitats"
 tagline:
   -
-    '<strong>Ocean+ Habitats</strong> is an evolving tool that provides insight into the known extent, protection and other statistics of ecologically and economically important ocean habitats, such as corals, mangroves, seagrasses and saltmarshes.'
+    'Ocean+ Habitats is an evolving tool that provides insight into the known extent, protection and other statistics of ecologically and economically important ocean habitats, such as corals, mangroves, seagrasses and saltmarshes.'
   -
-    'Through <strong>Ocean+ Habitats</strong>, we aim to record the current state of our evolving knowledge on the location and protection of these habitats, with monthly updates drawn from the World Database on Protected Areas.'
+    'Through Ocean+ Habitats, we aim to record the current state of our evolving knowledge on the location and protection of these habitats, with monthly updates drawn from the World Database on Protected Areas.'
   -
     'This website will be expanded in the coming year to pilot national and <a href="https://www.unenvironment.org/explore-topics/oceans-seas/what-we-do/working-regional-seas" title="Regional Seas pages" target="_blank">Regional Seas pages</a>; we welcome contributions and collaborations.'
   -
     'For access to the underlying spatial datasets, please visit the <a href="http://data.unep-wcmc.org" title="Ocean Data Viewer" target="_blank">Ocean Data Viewer</a>. For more information on the Ocean+ initiative, please visit the main <a href="http://oceanplus.org" title="Ocean+" target="_blank">Ocean+ website</a>.'
+nav:
+  -
+    name: 'coralreef'
+    theme: 'theme--orange'
+    title: 'Warm-water corals'
+  -
+    name: 'saltmarshes'
+    theme: 'theme--green'
+    title: 'Saltmarshes'
+  -
+    name: 'mangroves'
+    theme: 'theme--yellow'
+    title: 'Mangroves'
+  -
+    name: 'seagrasses'
+    theme: 'theme--blue'
+    title: 'Seagrasses'
+  -
+    name: 'coldcorals'
+    theme: 'theme--pink'
+    title: 'Cold-water corals'
 disclaimer:
   -
     'These datasets are compiled from a number of datasets submitted by data providers who have kindly permitted their use. Details regarding these data providers can be found in the accompanying metadata tables associated with each dataset.'

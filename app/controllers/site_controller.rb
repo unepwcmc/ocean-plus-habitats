@@ -1,70 +1,29 @@
 class SiteController < ApplicationController
+  respond_to? :json, :html
   before_action :load_habitat
-  before_action :load_global
   before_action :load_charts_data
 
-  def warmwater
-    @data = YAML.load(File.open("#{Rails.root}/lib/data/content/warmwater.yml", 'r'))
+  def index
+    @global = YAML.load(File.open("#{Rails.root}/lib/data/content/global.yml", 'r'))
 
-    @commitments = [
-      @aichi_targets,
-      @sdgs,
-      @data['other_targets']
-    ]
-  end
+    @title = @habitat.title
 
-  def saltmarshes
-    @data = YAML.load(File.open("#{Rails.root}/lib/data/content/saltmarshes.yml", 'r'))
+    @nav = @global['nav'].to_json
 
-    @commitments = [
-      @aichi_targets,
-      @sdgs,
-      @data['other_targets']
-    ]
-  end
+    @habitatData = HabitatsSerializer.new(@habitat, @chart_greatest_coverage, @chart_protected_areas, @global).serialize
 
-  def mangroves
-    @data = YAML.load(File.open("#{Rails.root}/lib/data/content/mangroves.yml", 'r'))
-
-    @commitments = [
-      @aichi_targets,
-      @sdgs,
-      @data['other_targets']
-    ]
-  end
-
-  def seagrasses
-    @data = YAML.load(File.open("#{Rails.root}/lib/data/content/seagrasses.yml", 'r'))
-
-    @commitments = [
-      @aichi_targets,
-      @sdgs,
-      @data['other_targets']
-    ]
-  end
-
-  def coldcorals
-    @data = YAML.load(File.open("#{Rails.root}/lib/data/content/coldwater.yml", 'r'))
-
-    @commitments = [
-      @aichi_targets,
-      @sdgs,
-      @data['other_targets']
-    ]
+    respond_to do |format|
+      format.html
+      format.json { render json: @habitatData }
+    end
   end
 
   private
 
   def load_habitat
-    @habitat = Habitat.where(name: action_name).first
+    @habitat = Habitat.where(name: params['habitat'] || 'warmwater').first
     @habitat ||= Habitat.where(name: 'coralreef').first
     @habitat_type = @habitat.type
-  end
-
-  def load_global
-    @global = YAML.load(File.open("#{Rails.root}/lib/data/content/global.yml", 'r'))
-    @aichi_targets = YAML.load(File.open("#{Rails.root}/lib/data/content/aichi-targets.yml", 'r'))
-    @sdgs = YAML.load(File.open("#{Rails.root}/lib/data/content/sdgs.yml", 'r'))
   end
 
   def load_charts_data

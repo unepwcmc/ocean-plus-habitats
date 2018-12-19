@@ -14,7 +14,7 @@
   $colour: nth($colours, $index);
   $name: nth($names, $index);
 
-  .theme--#{$name} & {
+  &.theme--#{$name} {
     border-color: $colour;
     color: $colour;
   }

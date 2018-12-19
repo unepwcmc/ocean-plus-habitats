@@ -7,8 +7,8 @@ module ApplicationHelper
     'Ocean+ Habitats is an evolving tool that provides insight into the known extent, protection and other statistics of ecologically and economically important ocean habitats, such as corals, mangroves, seagrasses and saltmarshes.'
   end
 
-  def title_meta_tag(page_title)  
-    page_title == nil ? site_title: "#{page_title} | Ocean+ Habitats" 
+  def title_meta_tag  
+    "Ocean+ Habitats" 
   end
 
  def url_encode text
