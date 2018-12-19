@@ -105,7 +105,10 @@
     },
 
     created () {
-      this.getHabitatData()
+      const hash = window.location.hash.substr(1),
+        habitat = hash ? hash : undefined
+
+      this.getHabitatData(habitat)
 
       eventHub.$on('changeHabitat', this.getHabitatData)
     },
