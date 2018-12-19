@@ -50,9 +50,21 @@
       updateNav (selectedName) {
         window.location.replace(`#${selectedName}`)
 
+        let match = 0
+
         this.children.forEach(child => {
-          child.isActive = child.name === selectedName
+          if(child.name === selectedName) {
+            child.isActive = true
+            match+= 1           
+          } else {
+            child.isActive = false
+          }
         })
+        
+        if(match == 0) { 
+          this.children[0].isActive = true 
+          window.location.replace(`#${this.children[0].name}`)
+        }
       }
     }
   }

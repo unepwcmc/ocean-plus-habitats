@@ -106,7 +106,7 @@
 
     created () {
       const hash = window.location.hash.substr(1)
-      console.log('hash', hash)
+      
       this.defaultHabitat = hash ? hash : 'coralreef'
       this.getHabitatData(this.defaultHabitat)
 
