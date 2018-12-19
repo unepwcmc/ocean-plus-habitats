@@ -8,6 +8,27 @@ tagline:
     'This website will be expanded in the coming year to pilot national and <a href="https://www.unenvironment.org/explore-topics/oceans-seas/what-we-do/working-regional-seas" title="Regional Seas pages" target="_blank">Regional Seas pages</a>; we welcome contributions and collaborations.'
   -
     'For access to the underlying spatial datasets, please visit the <a href="http://data.unep-wcmc.org" title="Ocean Data Viewer" target="_blank">Ocean Data Viewer</a>. For more information on the Ocean+ initiative, please visit the main <a href="http://oceanplus.org" title="Ocean+" target="_blank">Ocean+ website</a>.'
+nav:
+  -
+    name: 'coralreef'
+    theme: 'theme--orange'
+    title: 'Warm-water corals'
+  -
+    name: 'saltmarshes'
+    theme: 'theme--green'
+    title: 'Saltmarshes'
+  -
+    name: 'mangroves'
+    theme: 'theme--yellow'
+    title: 'Mangroves'
+  -
+    name: 'seagrasses'
+    theme: 'theme--blue'
+    title: 'Seagrasses'
+  -
+    name: 'coldcorals'
+    theme: 'theme--pink'
+    title: 'Cold-water corals'
 disclaimer:
   -
     'These datasets are compiled from a number of datasets submitted by data providers who have kindly permitted their use. Details regarding these data providers can be found in the accompanying metadata tables associated with each dataset.'

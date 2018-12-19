@@ -7,33 +7,7 @@ class SiteController < ApplicationController
   def index
     @title = @habitat.title
 
-    @nav = [
-      {
-        name: 'coralreef',
-        theme: 'theme--orange',
-        title: 'Warm-water corals'
-      },
-      {
-        name: 'saltmarshes',
-        theme: 'theme--green',
-        title: 'Saltmarshes'
-      },
-      {
-        name: 'mangroves',
-        theme: 'theme--yellow',
-        title: 'Mangroves'
-      },
-      {
-        name: 'seagrasses',
-        theme: 'theme--blue',
-        title: 'Seagrasses'
-      },
-      {
-        name: 'coldcorals',
-        theme: 'theme--pink',
-        title: 'Cold-water corals'
-      }
-    ].to_json
+    @nav = @global['nav'].to_json
 
     content = YAML.load(File.open("#{Rails.root}/lib/data/content/#{@habitat.name}.yml", 'r'))
     aichi_targets = generateImageUrls @aichi_targets
