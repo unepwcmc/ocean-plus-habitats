@@ -4,17 +4,17 @@
       <p class="map__panel-title">{{ titleGlobal }}</p>
 
       <p class="map__panel-stat no-margin">
-        <counter sm-trigger="sm-counter-trigger" sm-target="sm-counter-target" :number="percentageGlobal"></counter>
+        <counter v-if="percentageGlobal" sm-trigger="sm-counter-trigger" sm-target="sm-counter-target" :number="percentageGlobal"></counter>
         <template v-if="habitatType != 'points'"> km<sup>2</sup></template>
       </p>
 
       <p class="map__panel-title">{{ titleProtected }}</p>
 
       <span class="map__panel-stat">
-        <counter sm-trigger="sm-counter-trigger" sm-target="sm-counter-target" :number="percentageProtected"></counter>%
+        <counter v-if="percentageProtected" sm-trigger="sm-counter-trigger" sm-target="sm-counter-target" :number="percentageProtected"></counter>%
       </span>
 
-      <p class="map__panel-layer map__panel-layer-habitat">{{ habitat }}</p>
+      <p class="map__panel-layer map__panel-layer-habitat">{{ habitatTitle }}</p>
       <p class="map__panel-layer">Protected Areas</p>
     </div>
 
@@ -31,7 +31,7 @@
     components: { Counter },
 
     props: {
-      habitat: String,
+      habitatTitle: String,
       habitatType: String,
       theme: String,
       titleGlobal: String,
@@ -56,12 +56,27 @@
           orange: '#FF8A75',
           pink: '#F35F8D',
           yellow: '#FCDA68'
-        }
+        },
       }
     },
 
     mounted () {
       this.createMap()
+    },
+
+    watch: {
+      tables () {
+        const waiting = () => {
+          if (!this.map.isStyleLoaded()) {
+            setTimeout(waiting, 100);
+          } else {
+            this.removeHabitatLayer()
+            this.addHabitatLayer()
+          }
+        }
+
+        waiting()
+      }
     },
 
     methods: {
@@ -109,11 +124,11 @@
           //this.addLayer(tiles, 'layer1', 'habitat', this.themes[this.theme], false, .8, 'fill')
           //this.addLayer(tiles, 'layer1', 'habitat-points', this.themes[this.theme], true, .8)
           //this.addLayer(tiles, 'layer1', 'habitat-lines', this.themes[this.theme], false, .8, 'line')
-          this.addWmsLayer('habitat', this.wmsUrl, this.themes[this.theme])
+          //this.addWmsLayer('habitat', this.wmsUrl, this.themes[this.theme])
         })
       },
 
-      addWmsLayer (id, url, colour) {
+      addHabitatLayer () {
         let options = {
           "id": "habitat",
           "type": "raster",
@@ -121,15 +136,23 @@
           "maxzoom": 22,
           "source": {
             "type": "raster",
-            "tiles": [url],
+            "tiles": [this.wmsUrl],
             "tileSize": 64
           },
           "paint": {
             "raster-hue-rotate": 0
           }
         }
-
+        
         this.map.addLayer(options)
+      },
+
+      removeHabitatLayer () {
+        let habitatLayer = this.map.getLayer('habitat')
+
+        if(typeof habitatLayer !== 'undefined') {
+          this.map.removeLayer('habitat').removeSource('habitat')
+        }
       },
 
       addLayer (tiles, source, id, colour, point, opacity, type) {

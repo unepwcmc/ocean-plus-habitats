@@ -30,6 +30,7 @@
 
   &__a {
     color: $white;
+    cursor: pointer;
     border: solid 1px $nav;
     border-radius: $radius-button;
     font-size: rem-calc(20);
