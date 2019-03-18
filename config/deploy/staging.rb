@@ -1,11 +1,11 @@
 set :stage, :staging
-set :branch, "develop"
+set :branch, "supported-staging"
 
 
-server "web-staging.linode.unep-wcmc.org", user: 'wcmc', roles: %w{app web db}
+server "web-supported-staging.linode.unep-wcmc.org", user: 'wcmc', roles: %w{app web db}
 
 set :application, "ocean-plus-habitats"
-set :server_name, "ocean-plus-habitats.web-staging.linode.unep-wcmc.org"
+set :server_name, "ocean-plus-habitats.web-supported-staging.linode.unep-wcmc.org"
 set :sudo_user, "wcmc"
 set :app_port, "80"
 
