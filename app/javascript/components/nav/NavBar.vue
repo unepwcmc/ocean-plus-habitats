@@ -1,6 +1,7 @@
 <template>
   <nav class="nav">
-    <nav-link v-for="navLink in nav" 
+    <nav-link v-for="(navLink, index) in nav" 
+      :key="getKey(index)"
       :title="navLink.title" 
       :name="navLink.name"
       :theme="navLink.theme">
@@ -66,6 +67,10 @@
           window.location.replace(`#${this.children[0].name}`)
         }
       }
+    },
+
+    getId (index) {
+      return `nav-link-${this.id}-${index}`
     }
   }
 </script>
