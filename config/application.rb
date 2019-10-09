@@ -16,5 +16,6 @@ module OceanPlusHabitat
     # -- all .rb files in that directory are automatically loaded.
     config.eager_load_paths << Rails.root.join('lib/modules')
 
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
   end
 end
