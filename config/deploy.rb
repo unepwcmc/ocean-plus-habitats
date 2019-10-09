@@ -6,7 +6,7 @@ set :application, 'ocean-plus-habitats'
 set :repo_url, 'https://github.com/unepwcmc/ocean-plus-habitats.git'
 
 set :nvm_type, :user # or :system, depends on your nvm setup
-set :nvm_node, 'v9.0.0'
+set :nvm_node, 'v10.15.1'
 set :nvm_map_bins, %w{node npm yarn}
 
 set :deploy_user, 'wcmc'
