@@ -4,25 +4,27 @@
 //--------------------------------------------------
   &--home {
     background-color: $grey;
-    background-image: image_url('hero.png');
+    background-image: image_url('hero/hero-home.png');
     background-size: cover;
     background-position: center;
     color: $white;
     padding: rem-calc(40 0 50 0);
 
-    &__content {
-      
-    }
-
-      &__intro {
+    .header {
+      &__content {
         
       }
+
+        &__intro {
+          font-size: rem-calc(25);
+        }
+    }
   }
 
 //--------------------------------------------------
 // basic
 //--------------------------------------------------
-  &--home {
+  &--basic {
     color: $body-font-color;
     padding: rem-calc(40 0 50 0);
 

@@ -46,7 +46,7 @@
 
     &.active {
       @for $i from 1 through length($names){
-        @include theme_text($i);
+        
       }
     }
   }

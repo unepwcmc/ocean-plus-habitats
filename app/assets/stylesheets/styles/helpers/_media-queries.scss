@@ -1,22 +1,4 @@
 //--------------------------------------------------
-// media queries 
-//--------------------------------------------------
-//--------------------------------------------------
-// mixins
-//--------------------------------------------------
-@mixin breakpoint($breakpoint) {
-  @media screen and (min-width: $breakpoint + 1) {
-    @content;
-  } 
-}
-
-@mixin breakpoint-down($breakpoint) {
-  @media screen and (max-width: $breakpoint) {
-    @content;
-  } 
-}
-
-//--------------------------------------------------
 // helper classes
 //--------------------------------------------------
 .breakpoint-small-up {

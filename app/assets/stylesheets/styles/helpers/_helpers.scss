@@ -1,14 +1,14 @@
 //--------------------------------------------------
-// helpers
+// backgrounds
 //--------------------------------------------------
-// - fouc
-// - font
-// - lists
-// - display
-// - dimensions
-// - positioning
-// - margin & padding
-//
+.bg--grey-light { background-color: $grey-light; }
+.bg--navy { background-color: $navy; }
+.bg--navy-xdark { background-color: $navy-xdark; }
+
+.bg-image-overlay--white {
+  @include overlay(rgba($white, 0.21));
+}
+
 //--------------------------------------------------
 // fouc (flash of unstyled content)
 //--------------------------------------------------
@@ -38,11 +38,7 @@ strong, .bold { font-weight: $bold; }
 //--------------------------------------------------
 // lists
 //--------------------------------------------------
-.ul-unstyled {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
+.ul-unstyled { @include ul-unstyled; }
 
 .ul-inline li { display: inline-block; }
 
@@ -80,26 +76,3 @@ strong, .bold { font-weight: $bold; }
 .margin-center { margin: 0 auto; }
 .margin-space-left { margin-left: rem-calc(14); }
 .margin-space-right { margin-right: rem-calc(14); }
-
-//--------------------------------------------------
-// backgrounds
-//--------------------------------------------------
-.bg--grey-light { background-color: $grey-light; }
-.bg--navy { background-color: $navy; }
-.bg--navy-xdark { background-color: $navy-xdark; }
-
-.bg-overlay {
-  position: relative;
-  z-index: 0;
-
-  &:before {
-    background-color: rgba(black, 0.5);
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-  }
-}
