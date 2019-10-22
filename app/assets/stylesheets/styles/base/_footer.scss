@@ -44,17 +44,20 @@ $footer-hero-height-laptop: rem-calc(590);
   }
 
   &__partner-logos {
-    
+    @include flex; 
+    @include flex-wrap;
+    @include flex-v-center;
+    width: 60%;
   }
 
     &__partner-logo {
       @include flex;
-      margin-left: rem-calc(32);
+      margin-right: rem-calc(32);
       opacity: .65;
       max-width: rem-calc(170); height: rem-calc(46); 
 
       &.logo--site {
-        margin-left: 0;
+        margin-right: 0;
         opacity: 1;
         max-width: rem-calc(170); height: rem-calc(46);
       }
