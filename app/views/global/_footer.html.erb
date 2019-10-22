@@ -1,7 +1,7 @@
-<footer class="footer-wrapper gutters bg--navy-xdark">
-  <div class="footer">
-    <%= link_to 'https://oceanplus.org/', title: 'Visit Ocean+', target: '_blank' do %>
-      <%= image_tag 'logos/logo-ocean-plus.svg', alt: 'Ocean+ logo', class: 'footer__partner-logo logo--site' %>
+<footer class="footer-wrapper">
+  <div class="footer container">
+    <%= link_to root_url, title: 'Ocean+ Habitats home page' do %>
+      <%= image_tag 'logos/logo-ocean-plus-habitats.svg', alt: 'Ocean+ Habitats logo', class: 'footer__partner-logo logo--site' %>
     <% end %>
 
     <div class="flex flex-wrap flex-center">
@@ -15,11 +15,24 @@
         <% end %>
         
         <%= link_to 'http://unep-wcmc.org', title: 'Visit the UN Environment World Conservation Monitoring Centre', target: '_blank' do %>
-          <%= image_tag 'https://s3.amazonaws.com/wcmc.logo/UN-Environment-WCMC+logo+2017+white.svg', alt: 'UN Environment World Conservation Monitoring logo', class: 'footer__partner-logo logo--wcmc' %>
+          <%= image_tag 'https://s3.amazonaws.com/wcmc.logo/UN-Environment-WCMC+logo+2017+grey.svg', alt: 'UN Environment World Conservation Monitoring logo', class: 'footer__partner-logo logo--wcmc' %>
         <% end %>
       </div>
-
-      <span class="footer__copyright">&copy; copyright <%= Date.current.strftime('%Y') %></span>
+    </div>
+  </div>
+  
+  <span class="footer__divider"></span>
+  
+  <div class="footer container">
+    <div class="footer__citation">
+      <h4><%= t('shared.footer_citation_title') %></h4>
+      <p><%= t('shared.footer_citation').html_safe %></p>
+      <span class="footer__copyright">&copy; <%= t('shared.footer_copyright') %> <%= Date.current.strftime('%Y') %></span>
+    </div>
+    <div class="footer__downloads">
+      <h4><%= t('shared.footer_downloads_title') %></h4>
+      <p>Download component </p>
     </div>
   </div>
 </footer>
+
