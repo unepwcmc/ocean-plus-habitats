@@ -1,6 +1,24 @@
 //--------------------------------------------------
-// footer
+// variables
 //--------------------------------------------------
+$footer-hero-height-laptop: rem-calc(590);
+
+//--------------------------------------------------
+// classes
+//--------------------------------------------------
+.footer-wrapper {
+  @include gradient($white, top, $footer-hero-height-laptop);
+
+  &::before {
+    background: image_url('hero/purple-tube-sponge-min.png') top center no-repeat;
+    background-size: auto $footer-hero-height-laptop;
+    content: '';
+    width: 100%; height: $footer-hero-height-laptop;
+
+    display: block;
+  }
+}
+
 .footer {
   @include flex;
   @include flex-h-end;
@@ -13,6 +31,10 @@
     height: rem-calc(120);
   }
 
+  &__hero {
+
+  }
+
   &__divider {
     background-color: $grey-light;
     margin-bottom: rem-calc(30);
@@ -22,17 +44,20 @@
   }
 
   &__partner-logos {
-    
+    @include flex; 
+    @include flex-wrap;
+    @include flex-v-center;
+    width: 60%;
   }
 
     &__partner-logo {
       @include flex;
-      margin-left: rem-calc(32);
+      margin-right: rem-calc(32);
       opacity: .65;
       max-width: rem-calc(170); height: rem-calc(46); 
 
       &.logo--site {
-        margin-left: 0;
+        margin-right: 0;
         opacity: 1;
         max-width: rem-calc(170); height: rem-calc(46);
       }
