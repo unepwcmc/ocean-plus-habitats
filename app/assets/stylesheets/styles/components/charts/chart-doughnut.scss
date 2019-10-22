@@ -1,0 +1,96 @@
+//--------------------------------------------------
+// doughnut chart
+//--------------------------------------------------
+  &--doughnut {
+    flex-wrap: wrap;
+
+    @include breakpoint($small) { flex-wrap: nowrap; }
+
+    .chart {
+      &__wrapper-ie11 { // do not remove - this is required to set the sizing for ie11
+        width: 100%;
+
+        @include breakpoint($small) {
+          padding-bottom: 67%;
+          width: 67%;
+
+          position: relative;
+        }
+      }
+
+        &__chart{
+          width: 100%;
+
+          @include breakpoint($small) {
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+
+        &__segment {
+          cursor: pointer;
+
+          transition: transform ease .1s;
+
+          -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+
+          &:hover { 
+            transform: scale(1.015, 1.015);
+          }
+
+          &.active {
+            transform: scale(1.15, 1.15);
+
+            .chart__segment-text { font-weight: bold; }
+          }
+        }
+
+          &__segment-path { 
+            stroke-width: 4;
+          }
+
+          &__segment-text { 
+            transform-box: view-box;
+          }
+
+      &__side {
+        width: 100%;
+
+        @include breakpoint($small) { width: 40%; }
+        @include breakpoint($medium) { width: 33%; }
+      }
+
+        &__panel {
+          border-radius: 2px;
+          color: $white;
+          margin-bottom: rem-calc(18);
+          padding: rem-calc(26 22);
+
+          height: 75%;
+
+          transition: background-color ease .1s;
+
+          @include breakpoint($medium) { 
+            font-size: rem-calc(18);
+            padding: rem-calc(52 36); 
+
+            height: 80%;
+          }
+        }
+
+          &__panel-text {
+            font-size: rem-calc(14);
+
+            @include breakpoint($medium) { font-size: rem-calc(18); }
+          }
+
+          &__smallprint {
+            font-size: rem-calc(12);
+            font-style: italic;
+            font-weight: $medium;
+
+            @include breakpoint($small) { font-size: rem-calc(14); }
+          }
+    }
+  }
