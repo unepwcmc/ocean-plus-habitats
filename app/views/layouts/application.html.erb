@@ -7,8 +7,10 @@
   <body>
     <div id="v-app" v-cloak>
       <%= render '/global/header-home' %>
+
+      <chart-doughnut :datasets="<%= @doughnut_chart.to_json %>" smallprint="<%= @smallprint %>"></chart-doughnut>
       
-      <habitat source="/" :nav="<%= @nav %>"></habitat>
+      <!-- <habitat source="/" :nav="<%= @nav %>"></habitat> -->
 
       <%= render '/global/footer' %>
     </div>
