@@ -8,15 +8,21 @@
     background-size: cover;
     background-position: center;
     color: $white;
-    padding: rem-calc(40 0 50 0);
+    padding: rem-calc(85 0 95 0);
 
     .header {
+      &__h1 {
+        @include h1-home;
+        width: 94%;
+      }
+
       &__content {
         
       }
 
         &__intro {
-          font-size: rem-calc(25);
+          @include text-hero-home;
+          width: 72%;
         }
     }
   }

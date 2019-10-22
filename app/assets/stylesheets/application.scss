@@ -17,13 +17,14 @@
 @import './resources/fonts/open-sans.scss';
 
 @import './resources/mixins/rem-calc.scss';
+
+@import './resources/variables/base.scss';
+
 @import './resources/mixins/media-queries.scss';
 @import './resources/mixins/flexbox.scss';
 @import './resources/mixins/layout.scss';
 @import './resources/mixins/helpers.scss';
 @import './resources/mixins/text.scss';
-
-@import './resources/variables/base.scss';
 
 // styles
 @import './styles/helpers/*';

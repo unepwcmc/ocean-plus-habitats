@@ -15,12 +15,12 @@ $white: #ffffff;
 $grey-light: #f4f4f4;
 $grey: #7f7f7f;
 $grey-dark: #444444;
-$grey-xdark: #202020;
+$grey-xdark: #383838;
 $black: #000000;
 
 $navy: #293039;
 $navy-dark: #1F232A;
-$navy-xdark: #12161B;
+$navy-xdark: #072029;
 $purple: #BA41FF;
 
 $nav: #1E2329;
@@ -43,13 +43,20 @@ $secondary: $navy;
 $font-open-sans: 'open sans', sans-serif;
 
 $body-font: $font-open-sans;
-$body-font-color: $black;
+$body-font-color: $grey-xdark;
 $body-font-size: rem-calc(18);
-
 $body-line-height: 1.4;
+
+$header-font: $font-open-sans;
+$header-font-color: $navy-xdark;
+$header-font-size-mobile: rem-calc(50);
+$header-font-size-tablet: rem-calc(50);
+$header-font-size-laptop: rem-calc(50);
+$header-line-height: 1.2;
 
 $light: 300;
 $normal: 400;
+$semi-bold: 600;
 $bold: 700;
 
 $button-font-size-small: rem-calc(18);
