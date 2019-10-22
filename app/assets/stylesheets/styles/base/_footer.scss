@@ -1,6 +1,24 @@
 //--------------------------------------------------
-// footer
+// variables
 //--------------------------------------------------
+$footer-hero-height-laptop: rem-calc(590);
+
+//--------------------------------------------------
+// classes
+//--------------------------------------------------
+.footer-wrapper {
+  @include gradient($white, top, $footer-hero-height-laptop);
+
+  &::before {
+    background: image_url('hero/purple-tube-sponge-min.png') top center no-repeat;
+    background-size: auto $footer-hero-height-laptop;
+    content: '';
+    width: 100%; height: $footer-hero-height-laptop;
+
+    display: block;
+  }
+}
+
 .footer {
   @include flex;
   @include flex-h-end;
@@ -11,6 +29,10 @@
     @include flex-h-between;
     padding-bottom: 0;
     height: rem-calc(120);
+  }
+
+  &__hero {
+
   }
 
   &__divider {
