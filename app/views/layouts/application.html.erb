@@ -8,7 +8,9 @@
     <div id="v-app" v-cloak>
       <%= render '/global/header-home' %>
 
-      <chart-doughnut :datasets="<%= @doughnut_chart.to_json %>" smallprint="<%= @smallprint %>"></chart-doughnut>
+      <section class="container">
+        <chart-doughnut :datasets="<%= @doughnut_chart.to_json %>" smallprint="<%= @smallprint %>"></chart-doughnut>
+      </section>
       
       <!-- <habitat source="/" :nav="<%= @nav %>"></habitat> -->
 
