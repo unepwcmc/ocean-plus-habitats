@@ -14,10 +14,10 @@ class SiteController < ApplicationController
 
     @habitat_change = I18n.t('home.habitat_change.habitats')
 
-    respond_to do |format|
-      format.html
-      format.json { render json: @habitatData }
-    end
+    # respond_to do |format|
+    #   format.html
+    #   format.json { render json: @habitatData }
+    # end
   end
 
   private

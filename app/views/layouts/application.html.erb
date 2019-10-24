@@ -6,33 +6,7 @@
 
   <body>
     <div id="v-app" v-cloak>
-      <%= render '/global/header-home' %>
-      
-      <!-- <habitat source="/" :nav="<%= @nav %>"></habitat> -->
-
-      <section class="bg--grey-light">
-        <div class="container">
-          <h2><%= t('home.habitat_change.title'); %></h2>
-
-          <div class="cards--habitat-change">
-            <% @habitat_change.each do |habitat| %>
-              <div class="card__card">
-                <p>
-                  <i class="card__icon"><%= habitat[:icon] %></i>
-                  <span>percentage</span>
-                </p>
-                <p>
-                  <h4 class="card__title"><%= habitat[:title] %></h4>
-                  tooltip
-                </p>
-                <p class="card__content">
-                  <%= habitat[:text] %>
-                </p>
-              </div>
-            <% end %>
-          </div>
-        </div>
-      </section>
+      <%= yield %>
 
       <%= render '/global/footer' %>
     </div>
