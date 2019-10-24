@@ -25,8 +25,6 @@ export default {
         }
       }
 
-      console.log(options)
-
       this.map.addLayer(options, this.firstTopLayerId)
     }
   }

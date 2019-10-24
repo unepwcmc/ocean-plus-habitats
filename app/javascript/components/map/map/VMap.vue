@@ -97,9 +97,7 @@ export default {
       this.firstForegroundLayerId = getFirstForegroundLayerId(this.map)
     },
 
-    addLayers(layers) {
-      console.log(layers)
-      
+    addLayers(layers) {      
       layers.forEach(l => { this.addLayer(l) })
     },
 
