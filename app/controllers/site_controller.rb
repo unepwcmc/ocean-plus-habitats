@@ -25,10 +25,10 @@ class SiteController < ApplicationController
       })
     end
 
-    respond_to do |format|
-      format.html
-      format.json { render json: @habitatData }
-    end
+    # respond_to do |format|
+    #   format.html
+    #   format.json { render json: @habitatData }
+    # end
   end
 
   private

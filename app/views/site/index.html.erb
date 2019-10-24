@@ -1,0 +1,7 @@
+<%= render '/global/header-home' %>
+
+<%= link_to 'Costa Rica', country_path(54) %>
+
+<section class="container">
+  <chart-doughnut :datasets="<%= @doughnut_chart.to_json %>" smallprint="<%= @smallprint %>"></chart-doughnut>
+</section>

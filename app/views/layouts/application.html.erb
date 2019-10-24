@@ -6,14 +6,8 @@
 
   <body>
     <div id="v-app" v-cloak>
-      <%= render '/global/header-home' %>
-
-      <section class="container">
-        <chart-doughnut :datasets="<%= @doughnut_chart.to_json %>" smallprint="<%= @smallprint %>"></chart-doughnut>
-      </section>
+      <%= yield %>
       
-      <!-- <habitat source="/" :nav="<%= @nav %>"></habitat> -->
-
       <%= render '/global/footer' %>
     </div>
   </body>
