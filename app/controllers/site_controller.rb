@@ -12,6 +12,8 @@ class SiteController < ApplicationController
 
     @habitatData = HabitatsSerializer.new(@habitat, @chart_greatest_coverage, @chart_protected_areas, @global).serialize
 
+    @habitat_change = I18n.t('home.habitat_change.habitats')
+
     respond_to do |format|
       format.html
       format.json { render json: @habitatData }

@@ -1,0 +1,30 @@
+en:
+  home:
+    habitat_change:
+      title: Change in habitat cover
+      habitats: 
+        -
+          title: Warm-water Coral
+          icon: 
+          text: ! '%{change_km} km<sup>2</sup> change in warm-water coral cover (%{change_percentage}%) (REF) (Baseline year; original total km2)'
+          tooltip_text: 'Warm water coral tooltip text'
+        -
+          title: Saltmarsh
+          icon: 
+          text: ! '%{change_km} km<sup>2</sup> change in saltmarsh cover (%{change_percentage}%) (REF) (Baseline year; original total km2)'
+          tooltip_text: 'Saltmarsh tooltip text'
+        -
+          title: Mangrove
+          icon: 
+          text: ! '%{change_km} km<sup>2</sup> change in mangrove cover (%{change_percentage}%) (REF) (Baseline year; original total km2)'
+          tooltip_text: 'Mangrove tooltip text'
+        -
+          title: Seagrass
+          icon: 
+          text: ! '%{change_km} km<sup>2</sup> change in seagrass cover (%{change_percentage}%) (REF) (Baseline year; original total km2)'
+          tooltip_text: 'Seagrass tooltip text'
+        -
+          title: Cold-water Coral
+          icon: 
+          text: ! '%{change_km} km<sup>2</sup> change in cold-water coral cover (%{change_percentage}%) (REF) (Baseline year; original total km2)'
+          tooltip_text: 'Cold-water coral tooltip text'
