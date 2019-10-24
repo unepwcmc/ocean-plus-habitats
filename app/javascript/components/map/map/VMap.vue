@@ -85,8 +85,7 @@ export default {
       map.addControl(layersControl, 'bottom-left')
       map.addControl(navControl, 'bottom-left')
       this.setFirstForegroundLayerId()
-      // correctTabFlow(this.$el)
-      this.$eventHub.$emit('map-load')
+       this.$eventHub.$emit('map-load')
 
       if(this.search) { this.addSearchControl() }
     })

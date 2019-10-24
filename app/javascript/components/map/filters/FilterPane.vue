@@ -1,6 +1,5 @@
 <template>
   <div class="map-filters flex flex-column">
-    <h2>{{ title }}</h2>
     <ul class="map-filters__list">
       <li 
         v-for="dataset in datasets" 
