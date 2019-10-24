@@ -12,10 +12,10 @@ class SiteController < ApplicationController
 
     @habitatData = HabitatsSerializer.new(@habitat, @chart_greatest_coverage, @chart_protected_areas, @global).serialize
 
-    respond_to do |format|
-      format.html
-      format.json { render json: @habitatData }
-    end
+    # respond_to do |format|
+    #   format.html
+    #   format.json { render json: @habitatData }
+    # end
   end
 
   private

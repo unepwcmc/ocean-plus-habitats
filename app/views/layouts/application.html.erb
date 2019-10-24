@@ -6,10 +6,8 @@
 
   <body>
     <div id="v-app" v-cloak>
-      <%= render '/global/header-home' %>
+      <%= yield %>
       
-      <habitat source="/" :nav="<%= @nav %>"></habitat>
-
       <%= render '/global/footer' %>
     </div>
   </body>

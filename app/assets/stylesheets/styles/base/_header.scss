@@ -28,18 +28,23 @@
   }
 
 //--------------------------------------------------
-// basic
+// country
 //--------------------------------------------------
-  &--basic {
+  &--country {
     color: $body-font-color;
-    padding: rem-calc(40 0 50 0);
+    height: rem-calc(250);
 
-    &__content {
-      
-    }
-
-      &__intro {
-        
+    .header {
+      &__content {
+        @include flex;
+        @include flex-center;
+        height: 100%;
       }
+
+        &__icon {
+          margin-right: rem-calc(20);
+        }
+
+    }
   }
 }
