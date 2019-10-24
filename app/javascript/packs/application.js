@@ -11,13 +11,12 @@ import ChartDoughnut from '../components/chart/ChartDoughnut'
 import Habitat from '../Habitat.vue'
 import Tab from '../components/tabs/Tab.vue'
 import Tabs from '../components/tabs/Tabs.vue'
-import Mapbox from '../components/map/Mapbox.vue'
 import StickyBar from '../components/sticky/StickyBar.vue'
-
-// create event hub and export so that it can be imported into .vue files
-export const eventHub = new Vue()
+import VMapInteractive from '../components/map/VMapInteractive'
 
 document.addEventListener('turbolinks:load', () => {
+  Vue.prototype.$eventHub = new Vue()
+
   const app = new Vue({
     el: '#v-app',
     components: {
@@ -25,8 +24,8 @@ document.addEventListener('turbolinks:load', () => {
       Habitat,
       Tab,
       Tabs,
-      Mapbox,
-      StickyBar
+      StickyBar,
+      VMapInteractive
     }
   })
 })

@@ -25,6 +25,7 @@
 @import './resources/mixins/layout.scss';
 @import './resources/mixins/helpers.scss';
 @import './resources/mixins/text.scss';
+@import './resources/mixins/form-helpers.scss';
 
 // styles
 @import './styles/helpers/*';
@@ -34,3 +35,4 @@
 @import './styles/base/header.scss';
 
 @import './styles/components/*';
+@import './styles/components/map/*';

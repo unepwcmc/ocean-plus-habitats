@@ -10,7 +10,6 @@
 </template>
 
 <script>
-  import { eventHub } from '../../packs/application.js'
   import NavLink from './NavLink.vue'
 
   export default {
@@ -38,7 +37,7 @@
     created () {
       this.children = this.$children
       
-      eventHub.$on('changeHabitat', this.updateNav)
+      this.$eventHub.$on('changeHabitat', this.updateNav)
     },
 
     watch: {

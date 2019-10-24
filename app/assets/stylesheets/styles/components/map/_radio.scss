@@ -1,0 +1,120 @@
+$border: $border-thin $grey-light;
+
+$radio-inner-color: $white;
+
+$radio-inner-laptop: rem-calc(15);
+$radio-inner-desktop: rem-calc(19);
+
+$radio-outer-laptop: rem-calc(23);
+$radio-outer-desktop: rem-calc(29);
+
+$radio-separation-laptop: calc((#{$radio-outer-laptop} - #{$radio-inner-laptop})/2);
+$radio-separation-desktop: calc((#{$radio-outer-desktop} - #{$radio-inner-desktop})/2);
+
+$radio-inner-color: $black;
+
+//--------------------------------------------------
+// mixins
+//--------------------------------------------------
+@mixin radio-button-basic($bg-color: $grey) {
+  border: $border;
+  border-radius: 100%;
+
+  display: block;
+}
+
+@mixin radio-button-outer {
+  @include radio-button-basic();
+  width: $radio-outer-laptop;
+  height: $radio-outer-laptop;
+  position: relative;
+}
+
+@mixin radio-button-inner {
+  background-color: $radio-inner-color;
+  @include radio-button-basic();
+  width: $radio-inner-laptop;
+  height: $radio-inner-laptop;
+  top: $radio-separation-laptop;
+  left: $radio-separation-laptop;
+  
+  position: absolute;
+
+  transform: scale(0);
+  transition: transform .2s ease-in-out;
+}
+
+//--------------------------------------------------
+// classes
+//--------------------------------------------------
+.radio {
+  cursor: pointer;
+  margin-bottom: 14px;
+
+  &__input { 
+    @include hidden-input();
+  }
+
+  &__label {
+    margin-right: rem-calc(30);
+
+    position: relative;
+
+    &::before {
+      @include radio-button-outer;
+      content: '';
+      margin-right: rem-calc(10);
+    }
+
+    &::after {
+      @include radio-button-inner;
+      content: '';
+    }
+  }
+
+  input[type=radio]:checked + .radio__label:after {
+    transform: scale(1);
+  }
+}
+
+@include custom_input_checked('.radio__input', '.radio__label');
+@include custom_input_focus_default('.radio__input', '.radio__label');
+
+
+//--------------------------------------------------
+// variables
+//--------------------------------------------------
+$radio-inner-laptop: 18px;
+$radio-inner-desktop: 24px;
+
+$radio-outer-laptop: 32px;
+$radio-outer-desktop: 40px;
+
+$radio-separation-laptop: calc((#{$radio-outer-laptop} - #{$radio-inner-laptop} - 2px)/2);
+$radio-separation-desktop: calc((#{$radio-outer-desktop} - #{$radio-inner-desktop} - 2px)/2);
+
+//--------------------------------------------------
+// classes
+//--------------------------------------------------
+.default-radio-button {
+  @include hidden-input();
+}
+
+.custom-radio {
+  @include radio-button-outer();
+  @include flex-no-shrink();
+  background-color: $background-colour;
+  margin-right: rem-calc(10);
+
+  &__inner {
+    @include radio-button-inner();
+  }
+}
+
+@include custom_input_checked('.default-radio-button', '.custom-radio') {
+  .custom-radio__inner { 
+    transform: scale(1);
+  }
+}
+
+@include custom_input_focus_default('.default-radio-button', '.custom-radio');

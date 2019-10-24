@@ -17,8 +17,6 @@
 </template>
 
 <script>
-  import { eventHub } from '../../packs/application.js'
-
   export default {
     name: 'tabs',
 

@@ -6,7 +6,7 @@
       </div>
     </sticky-bar>
 
-    <mapbox
+    <!-- <mapbox
       :habitatTitle="map.habitatTitle"
       :habitatType="map.habitatType"
       :theme="map.theme"
@@ -16,7 +16,7 @@
       :percentageGlobal="map.percentageGlobal"
       :percentageProtected="map.percentageProtected"
       :wmsUrl="map.wmsUrl">
-    </mapbox>
+    </mapbox> -->
 
     <chart-column
       :habitatTitle="map.habitatTitle"
@@ -75,20 +75,19 @@
 
 <script>
   import axios from 'axios'
-  import { eventHub } from './packs/application.js'
 
   import ChartColumn from './components/chart/ChartColumn.vue'
   import ChartRow from './components/chart/ChartRow.vue'
   import Tab from './components/tabs/Tab.vue'
   import Tabs from './components/tabs/Tabs.vue'
-  import Mapbox from './components/map/Mapbox.vue'
+  // import Mapbox from './components/map/Mapbox.vue'
   import NavBar from './components/nav/NavBar.vue'
   import StickyBar from './components/sticky/StickyBar.vue'
 
   export default {
     name: 'habitat',
 
-    components: { ChartColumn, ChartRow, Tab, Tabs, Mapbox, NavBar, StickyBar },
+    components: { ChartColumn, ChartRow, Tab, Tabs, NavBar, StickyBar },
 
     props: {
       nav: {
@@ -116,7 +115,7 @@
       this.defaultHabitat = hash ? hash : 'coralreef'
       this.getHabitatData(this.defaultHabitat)
 
-      eventHub.$on('changeHabitat', this.getHabitatData)
+      this.$eventHub.$on('changeHabitat', this.getHabitatData)
     },
 
     methods: {
