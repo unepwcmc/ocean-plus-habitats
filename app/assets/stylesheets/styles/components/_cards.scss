@@ -20,7 +20,13 @@
         }
 
         &__icon {
+          width: rem-calc(75); height: rem-calc(75);
+          display: block;
+        }
 
+        &__stat {
+          @include text-large;
+          margin-left: rem-calc(12);
         }
     }
   }

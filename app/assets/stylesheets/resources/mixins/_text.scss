@@ -28,6 +28,11 @@
   // @include responsive-styles(font-size, rem-calc(18), rem-calc(20));
 }
 
+@mixin text-5 {
+  @include responsive-styles(font-size, rem-calc(40), rem-calc(40), rem-calc(40));
+  font-weight: $bold;
+}
+
 //--------------------------------------------------
 // mixins used in classes
 //--------------------------------------------------
@@ -83,4 +88,8 @@
 
 @mixin text-tooltip {
   @include text-3;
+}
+
+@mixin text-large {
+  @include text-5;
 }
