@@ -2,24 +2,29 @@
 
 <%= link_to 'Costa Rica', country_path(54) %>
 
-<section class="bg--grey-light">
+<section class="section-padding bg--grey-light">
   <div class="container">
-    <h2><%= t('home.habitat_change.title'); %></h2>
+    <div class="flex">
+      <h2><%= t('home.habitat_change.title'); %></h2>
+      <modal-trigger class="icon--modal margin-space-left"></modal-trigger>
+    </div>
 
     <div class="cards--habitat-change">
       <% @habitat_change.each do |habitat| %>
         <div class="card__card">
-          <p class="flex">
+          <div class="flex">
             <%= image_tag habitat[:icon], class: 'card__icon', alt: "#{habitat[:title]} icon" %>
             <span class="card__stat">-8%</span>
-          </p>
-          <p>
+          </div>
+
+          <div class="card__title-wrapper flex flex-v-center">
             <h4 class="card__title"><%= habitat[:title] %></h4>
-            tooltip
-          </p>
-          <p class="card__content">
+            <modal-trigger class="icon--modal margin-space-left"></modal-trigger>
+          </div>
+
+          <div class="card__content">
             <%= habitat[:text].html_safe %>
-          </p>
+          </div>
         </div>
       <% end %>
     </div>

@@ -8,23 +8,31 @@ Vue.use(TurbolinksAdapter)
 
 // components
 import Habitat from '../Habitat.vue'
+import Mapbox from '../components/map/Mapbox.vue'
+import Modal from '../components/modal/Modal.vue'
+import ModalTrigger from '../components/modal/ModalTrigger.vue'
+import StickyBar from '../components/sticky/StickyBar.vue'
 import Tab from '../components/tabs/Tab.vue'
 import Tabs from '../components/tabs/Tabs.vue'
-import Mapbox from '../components/map/Mapbox.vue'
-import StickyBar from '../components/sticky/StickyBar.vue'
 
 // create event hub and export so that it can be imported into .vue files
 export const eventHub = new Vue()
 
 document.addEventListener('turbolinks:load', () => {
-  const app = new Vue({
-    el: '#v-app',
-    components: {
-      Habitat,
-      Tab,
-      Tabs,
-      Mapbox,
-      StickyBar
-    }
-  })
+  if(document.getElementById('v-app')) {
+    Vue.prototype.$eventHub = new Vue()
+
+    const app = new Vue({
+      el: '#v-app',
+      components: {
+        Habitat,
+        Mapbox,
+        Modal,
+        ModalTrigger,
+        StickyBar,
+        Tab,
+        Tabs
+      }
+    })
+  }
 })
