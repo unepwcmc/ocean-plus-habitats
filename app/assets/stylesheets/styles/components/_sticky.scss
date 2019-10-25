@@ -1,0 +1,14 @@
+//--------------------------------------------------
+// classes
+//--------------------------------------------------
+.sticky-bar {
+  &--home {
+    background-color: $navy-light;
+    color: $white;
+    height: rem-calc(100);
+
+    .sticky-bar {
+
+    }
+  }
+}

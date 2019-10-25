@@ -82,13 +82,12 @@
   import Tab from './components/tabs/Tab.vue'
   import Tabs from './components/tabs/Tabs.vue'
   import Mapbox from './components/map/Mapbox.vue'
-  import NavBar from './components/nav/NavBar.vue'
   import StickyBar from './components/sticky/StickyBar.vue'
 
   export default {
     name: 'habitat',
 
-    components: { ChartColumn, ChartRow, Tab, Tabs, Mapbox, NavBar, StickyBar },
+    components: { ChartColumn, ChartRow, Tab, Tabs, Mapbox, StickyBar },
 
     props: {
       nav: {
