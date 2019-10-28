@@ -2,7 +2,7 @@
   <div class="container">
     <div class="flex">
       <h2><%= t('home.habitat_change.title'); %></h2>
-      <modal-trigger id="citation" class="icon--modal margin-space-left"></modal-trigger>
+      <modal-trigger id="citation" class="icon--citation margin-space-left"></modal-trigger>
     </div>
 
     <div class="cards--habitat-change">
@@ -15,7 +15,7 @@
 
           <div class="card__title-wrapper flex flex-v-center">
             <h4 class="card__title"><%= habitat[:title] %></h4>
-            <modal-trigger id="citation" :modal-content="{ content: '<%= habitat[:citation_text] %>' }" class="icon--modal margin-space-left"></modal-trigger>
+            <modal-trigger id="citation" :modal-content="{ content: '<%= habitat[:citation_text] %>' }" class="icon--citation margin-space-left"></modal-trigger>
           </div>
 
           <div class="card__content">

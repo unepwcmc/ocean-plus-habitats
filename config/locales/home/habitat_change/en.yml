@@ -5,17 +5,17 @@ en:
       habitats: 
         -
           title: Warm-water Coral
-          icon: icons/seagrass.svg
+          icon: icons/warm-coral.svg
           text: ! '<strong>%{change_km}</strong> km<sup>2</sup> change in warm-water coral cover <strong>(%{change_percentage}%)</strong> (REF) <strong>(Baseline year; original total km<sup>2</sup>)</strong>'
           citation_text: 'Warm water coral tooltip text'
         -
           title: Saltmarsh
-          icon: icons/seagrass.svg
+          icon: icons/saltmarsh.svg
           text: ! '<strong>%{change_km}</strong> km<sup>2</sup> change in saltmarsh cover <strong>(%{change_percentage}%)</strong> (REF) <strong>(Baseline year; original total km<sup>2</sup>)</strong>'
           citation_text: 'Saltmarsh tooltip text'
         -
           title: Mangrove
-          icon: icons/seagrass.svg
+          icon: icons/mangrove.svg
           text: ! '<strong>%{change_km}</strong> km<sup>2</sup> change in mangrove cover <strong>(%{change_percentage}%)</strong> (REF) <strong>(Baseline year; original total km<sup>2</sup>)</strong>'
           citation_text: 'Mangrove tooltip text'
         -
@@ -25,6 +25,6 @@ en:
           citation_text: 'Seagrass tooltip text'
         -
           title: Cold-water Coral
-          icon: icons/seagrass.svg
+          icon: icons/cold-coral.svg
           text: ! '<strong>%{change_km}</strong> km<sup>2</sup> change in cold-water coral cover <strong>(%{change_percentage}%)</strong> (REF) <strong>(Baseline year; original total km<sup>2</sup>)</strong>'
           citation_text: 'Cold-water coral tooltip text'

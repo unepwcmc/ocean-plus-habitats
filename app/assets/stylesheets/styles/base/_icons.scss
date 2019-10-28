@@ -8,6 +8,7 @@
 }
 
 @mixin icon-button-reset() {
+  background-color: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
@@ -17,10 +18,10 @@
 // classes
 //--------------------------------------------------
 .icon {
-  &--modal {
+  &--citation {
     @include icon-basic;
     @include icon-button-reset;
-    background-image: image_url('icons/seagrass.svg');
+    background-image: image_url('icons/citation.svg');
     width: rem-calc(36); height: rem-calc(36);
   }
 
