@@ -4,8 +4,10 @@
 
       <div class="modal__content">
         <button class="modal__close" @click="closeModal"></button>
-        
-        <div class="container--small">
+        MODAL
+
+        {{ data }}
+        <!-- <div class="container--small">
           <h3>{{ data.title }}</h3>
         </div>
 
@@ -40,7 +42,7 @@
               <p v-html="member.text"></p>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -78,21 +80,9 @@ export default {
       return this.$store.state.modal.content
     },
 
-    content () {
-      return this.data.modal && this.data.modal.content ? this.data.modal.content : false
-    },
-
-    staff () {
-      return this.data.modal && this.data.modal.staff ? this.data.modal.staff : false
-    },
-
-    themes () {
-      return this.data.modal && this.data.modal.themes ? this.data.modal.themes : false
-    },
-
-    themeTitle () {
-      return this.data.modal && this.data.modal.themeTitle ? this.data.modal.themeTitle : false
-    }
+    // content () {
+    //   return this.data.modal && this.data.modal.content ? this.data.modal.content : false
+    // }
   },
 
   methods: {
@@ -104,9 +94,9 @@ export default {
       this.toggleModal()
     },
 
-    hasTitle (content) {
-      return content.title
-    }
+    // hasTitle (content) {
+    //   return content.title
+    // }
   }
 }
 </script>

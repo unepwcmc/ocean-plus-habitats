@@ -6,6 +6,8 @@ Vue.config.productionTip = false
 
 Vue.use(TurbolinksAdapter)
 
+import store from '../store/store.js'
+
 // components
 import Habitat from '../Habitat.vue'
 import Mapbox from '../components/map/Mapbox.vue'
@@ -24,6 +26,7 @@ document.addEventListener('turbolinks:load', () => {
 
     const app = new Vue({
       el: '#v-app',
+      store,
       components: {
         Habitat,
         Mapbox,

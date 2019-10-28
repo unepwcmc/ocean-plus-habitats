@@ -7,24 +7,24 @@ en:
           title: Warm-water Coral
           icon: icons/seagrass.svg
           text: ! '<strong>%{change_km}</strong> km<sup>2</sup> change in warm-water coral cover <strong>(%{change_percentage}%)</strong> (REF) <strong>(Baseline year; original total km<sup>2</sup>)</strong>'
-          tooltip_text: 'Warm water coral tooltip text'
+          citation_text: 'Warm water coral tooltip text'
         -
           title: Saltmarsh
           icon: icons/seagrass.svg
           text: ! '<strong>%{change_km}</strong> km<sup>2</sup> change in saltmarsh cover <strong>(%{change_percentage}%)</strong> (REF) <strong>(Baseline year; original total km<sup>2</sup>)</strong>'
-          tooltip_text: 'Saltmarsh tooltip text'
+          citation_text: 'Saltmarsh tooltip text'
         -
           title: Mangrove
           icon: icons/seagrass.svg
           text: ! '<strong>%{change_km}</strong> km<sup>2</sup> change in mangrove cover <strong>(%{change_percentage}%)</strong> (REF) <strong>(Baseline year; original total km<sup>2</sup>)</strong>'
-          tooltip_text: 'Mangrove tooltip text'
+          citation_text: 'Mangrove tooltip text'
         -
           title: Seagrass
           icon: icons/seagrass.svg
           text: ! '<strong>%{change_km}</strong> km<sup>2</sup> change in seagrass cover <strong>(%{change_percentage}%)</strong> (REF) <strong>(Baseline year; original total km<sup>2</sup>)</strong>'
-          tooltip_text: 'Seagrass tooltip text'
+          citation_text: 'Seagrass tooltip text'
         -
           title: Cold-water Coral
           icon: icons/seagrass.svg
           text: ! '<strong>%{change_km}</strong> km<sup>2</sup> change in cold-water coral cover <strong>(%{change_percentage}%)</strong> (REF) <strong>(Baseline year; original total km<sup>2</sup>)</strong>'
-          tooltip_text: 'Cold-water coral tooltip text'
+          citation_text: 'Cold-water coral tooltip text'

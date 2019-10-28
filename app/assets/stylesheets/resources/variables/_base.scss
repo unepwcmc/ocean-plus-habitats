@@ -1,14 +1,4 @@
 //--------------------------------------------------
-// variables
-//--------------------------------------------------
-// - colours
-// - fonts
-// - dimensions
-// - breakpoins
-// - padding
-// - project specific
-//
-//--------------------------------------------------
 // colours
 //--------------------------------------------------
 $white: #ffffff;
@@ -24,8 +14,6 @@ $navy-xdark: #072029;
 $purple: #BA41FF;
 
 $nav: #1E2329;
-
-
 
 $blue-grey: #3A4552;
 $pink: #BA41FF;
@@ -117,6 +105,11 @@ $radius-button: rem-calc(26);
 $topbarHeightSmall: rem-calc(47);
 $topbarHeightMedium: rem-calc(60);
 $topbarHeightLarge: rem-calc(93);
+
+//--------------------------------------------------
+// z-indicies
+//--------------------------------------------------
+$z-300: 300;
 
 //--------------------------------------------------
 // project specific
