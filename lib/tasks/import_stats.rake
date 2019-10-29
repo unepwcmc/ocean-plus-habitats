@@ -10,28 +10,32 @@ namespace :import do
       puts habitat.name
       csv_file = "#{habitat.name}.csv"
 
-      # db structure:
-
-      # id -> integer
-      # country_id -> integer (countries foreign key)
-      # habitat_id -> integer (habitats foreign key)
-      # total_area -> decimal
-      # total_points -> integer (nil for habitats different from ColdCoral)
-      # total_protected -> decimal (could potentially be used for both points and areas, so ColdCoral and other habitats)
-      # protected_percentage -> decimal
-
-      # csv structure:
-
-      # iso3,current_total_area,total_protected,percent_protected,total_area_1996,total_area_2007,total_area_2008_baseline
-
+      import_csv_file(habitat.name, csv_file)
     end
+  end
 
-    def import_csv_file(habitat, csv_file)
+  def import_csv_file(habitat, csv_file)
 
-      csv = File.open(filename, encoding: "utf-8")
-      csv_headers = File.readlines(csv).first.split(",")
+    # db structure:
 
-    end
+    # id -> integer
+    # country_id -> integer (countries foreign key)
+    # habitat_id -> integer (habitats foreign key)
+    # total_area -> decimal
+    # total_points -> integer (nil for habitats different from ColdCoral)
+    # total_protected -> decimal (could potentially be used for both points and areas, so ColdCoral and other habitats)
+    # protected_percentage -> decimal
+
+    # csv structure:
+
+    # iso3,current_total_area,total_protected,percent_protected,total_area_1996,total_area_2007,total_area_2008_baseline
+
+    filename = "#{Rails.root}/lib/data/#{csv_file}"
+    csv = File.open(filename, encoding: "utf-8")
+    csv_headers = File.readlines(csv).first.split(",")
+
+    puts habitat
+    puts csv_headers
 
   end
 end
