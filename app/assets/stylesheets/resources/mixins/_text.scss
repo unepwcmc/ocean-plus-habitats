@@ -36,6 +36,10 @@
   font-weight: $bold;
 }
 
+@mixin text-6 {
+  @include responsive-styles(font-size, rem-calc(14), rem-calc(14), rem-calc(14));
+}
+
 //--------------------------------------------------
 // mixins used in classes
 //--------------------------------------------------
@@ -92,4 +96,9 @@
 
 @mixin text-large {
   @include text-5;
+}
+
+@mixin text-smallprint () {
+  @include text-6;
+  font-style: italic;
 }

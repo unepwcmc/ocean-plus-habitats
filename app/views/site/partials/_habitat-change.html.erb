@@ -1,28 +1,7 @@
-<section class="section-padding bg--grey-light">
-  <div class="container">
-    <div class="flex">
-      <h2><%= t('home.habitat_change.title'); %></h2>
-      <modal-trigger id="citation" class="icon--citation margin-space-left"></modal-trigger>
-    </div>
+<section class="container section-padding">
+  <h2><%= t('home.habitat_change.title'); %></h2>
 
-    <div class="cards--habitat-change">
-      <% @habitat_change.each do |habitat| %>
-        <div class="card__card">
-          <div class="flex">
-            <%= image_tag habitat[:icon], class: 'card__icon', alt: "#{habitat[:title]} icon" %>
-            <span class="card__stat">-8%</span>
-          </div>
-
-          <div class="card__title-wrapper flex flex-v-center">
-            <h4 class="card__title"><%= habitat[:title] %></h4>
-            <modal-trigger id="citation" :modal-content="{ content: '<%= habitat[:citation_text] %>' }" class="icon--citation margin-space-left"></modal-trigger>
-          </div>
-
-          <div class="card__content">
-            <%= habitat[:text].html_safe %>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  </div>
+  <% t('home.habitat_change.text_1').each do |p| %>
+    <p><%= p %></p>
+  <% end %>
 </section>

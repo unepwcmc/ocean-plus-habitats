@@ -15,7 +15,7 @@ class SiteController < ApplicationController
     #----------------------------------------------------------------------------#
     # FERDI variables will need adding to this object ---------------------------#
     # https://guides.rubyonrails.org/i18n.html#passing-variables-to-translations #
-    @habitat_change = I18n.t('home.habitat_change.habitats')
+    @habitat_cover = I18n.t('home.habitat_cover.habitats')
     #----------------------------------------------------------------------------#
 
     # respond_to do |format|
