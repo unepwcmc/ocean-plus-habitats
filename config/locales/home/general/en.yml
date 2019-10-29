@@ -3,3 +3,24 @@ en:
     general:
       title: Explore the world's marine & coastal habitats
       description: Ocean+ Habitats is an evolving platform providing the world's decision-makers and communities of practice with the best possible global information, knowledge and tools required to manage and conserve ocean ecosystems.
+      habitats: 
+        -
+          id: warm-water-coral
+          title: Warm-water Coral
+          icon: icons/warm-coral.svg
+        -
+          id: saltmarsh
+          title: Saltmarsh
+          icon: icons/saltmarsh.svg
+        -
+          id: mangrove
+          title: Mangrove
+          icon: icons/mangrove.svg
+        -
+          id: seagrass
+          title: Seagrass
+          icon: icons/seagrass.svg
+        -
+          id: cold-water-coral
+          title: Cold-water Coral
+          icon: icons/cold-coral.svg

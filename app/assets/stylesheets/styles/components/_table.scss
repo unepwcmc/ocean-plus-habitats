@@ -1,0 +1,50 @@
+
+//--------------------------------------------------
+// mixins
+//--------------------------------------------------
+@mixin table-cell-basic() {
+  border-top: solid 2px $grey-light;
+  border-left: solid 2px $grey-light;
+  width: 15%; height: rem-calc(66);
+}
+
+//--------------------------------------------------
+// table head
+//--------------------------------------------------
+.table {
+  border-collapse: collapse;
+}
+
+//--------------------------------------------------
+// table head
+//--------------------------------------------------
+.table-head {
+    &__row { 
+      &:first-child { 
+        .table-head__cell { border-top: none; }
+      }
+    }
+
+    &__cell { @include table-cell-basic; }
+
+      &__icon {
+        width: rem-calc(40); height: rem-calc(40);
+      }
+
+      &__title {
+        margin-left: rem-calc(10);
+      }
+}
+
+//--------------------------------------------------
+// table body
+//--------------------------------------------------
+.table-body {
+  &__row {  }
+    
+    &__cell { 
+      @include table-cell-basic; 
+
+      &:first-child { border-left: none; }
+    }
+}

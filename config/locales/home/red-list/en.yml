@@ -4,3 +4,25 @@ en:
       title: IUCN Red List status of species occurring in habitats
       citation_text: RED LIST CITATION TEXT
       smallprint: The designations employed and the presentation of material on this map do not imply the expression of any opinion whatsoever on the part of the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries.
+      categories:
+        -
+          title: Critically endangered
+          icon: icons/critically-endangered.svg
+        -
+          title: Endangered
+          icon: icons/endangered.svg
+        -
+          title: Vulnerable
+          icon: icons/vulnerable.svg
+        -
+          title: Near threatened
+          icon: icons/near-threatened.svg
+        -
+          title: Least concern
+          icon: icons/least-concern.svg
+        -
+          title: Data deficient
+          icon: icons/data-deficient.svg
+        -
+          title: Not assessed
+          icon: icons/not-assessed.svg
