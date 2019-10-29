@@ -34,7 +34,8 @@
       }
 
         &__status-title {
-          margin-left: rem-calc(14);
+          @include text-present-habitats-status;
+          margin-left: rem-calc(12);
 
           display: block;
         }

@@ -102,3 +102,9 @@
   @include text-6;
   font-style: italic;
 }
+
+@mixin text-present-habitats-status {
+  @include text-6;
+  font-weight: $semi-bold;
+  line-height: 1.1;
+}
