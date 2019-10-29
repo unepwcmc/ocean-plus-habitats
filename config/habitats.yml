@@ -1,6 +1,6 @@
 habitats:
   warmwater:
-    name: 'coralreef'
+    name: 'coralreefs'
     title: 'Warm-water corals'
     theme: 'orange'
     poly_table: 'wcmc008_coralreef2010_py_v4'
