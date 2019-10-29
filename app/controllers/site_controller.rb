@@ -12,7 +12,7 @@ class SiteController < ApplicationController
 
     @habitatData = HabitatsSerializer.new(@habitat, @chart_greatest_coverage, @chart_protected_areas, @global).serialize
 
-    doughnut_chart = I18n.t('home.doughnut_chart_data')
+    doughnut_chart = I18n.t('home.sdg.doughnut_chart_data')
     @doughnut_chart = []
 
     doughnut_chart.each do |item|
