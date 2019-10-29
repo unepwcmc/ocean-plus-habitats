@@ -10,6 +10,8 @@ namespace :import do
       puts habitat.name
       csv_file = "#{habitat.name}.csv"
 
+      # db structure:
+
       # id -> integer
       # country_id -> integer (countries foreign key)
       # habitat_id -> integer (habitats foreign key)
@@ -19,9 +21,16 @@ namespace :import do
       # protected_percentage -> decimal
       # change -> JSONB
 
+      # csv structure:
+
+      # iso3,current_total_area,total_protected,percent_protected,total_area_1996,total_area_2007,total_area_2008_baseline
+
     end
 
     def import_csv_file(habitat, csv_file)
+
+      csv = File.open(filename, encoding: "utf-8")
+      csv_headers = File.readlines(csv).first.split(",")
 
     end
 
