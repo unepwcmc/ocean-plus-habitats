@@ -23,7 +23,7 @@ class SiteController < ApplicationController
     #   format.json { render json: @habitatData }
     # end
 
-    @habitats = I18n.t('home.general.habitats')
+    @habitats = I18n.t('global.habitats')
 
     red_list_categories = I18n.t('home.red_list.categories')
     red_list_data = [[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5]]

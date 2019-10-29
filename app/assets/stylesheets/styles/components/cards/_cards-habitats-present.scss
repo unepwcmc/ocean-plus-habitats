@@ -1,0 +1,54 @@
+&--habitats-present {
+  @include flex;
+  @include flex-h-between;
+
+  .card {
+    padding: rem-calc(0 20);
+    width: calc(20% - 18px); height: rem-calc(272);
+
+    &--present {
+      border: solid 1px $green;
+
+      .card__staus-ribbon { @include icon-ribbon-present; }
+      .card__staus-icon { @include icon-present; }
+    }
+
+    &--absent {
+      background-color: $grey-light;
+
+      .card__staus-ribbon { @include icon-ribbon-absent; }
+      .card__staus-icon { @include icon-absent; }
+    }
+
+    &--unknown {
+      border: solid 1px $grey-dark;
+
+      .card__staus-ribbon { @include icon-ribbon-unknown; }
+      .card__staus-icon { @include icon-unknown; }
+    }
+
+      &__status {
+        @include flex;
+        @include flex-v-center;
+        margin-bottom: rem-calc(22);
+      }
+
+        &__status-title {
+          margin-left: rem-calc(14);
+
+          display: block;
+        }
+
+      &__content {
+        @include flex;
+        @include flex-column;
+        @include flex-v-center;
+      }
+
+        &__habitat {
+          @include flex;
+          @include flex-v-center;
+          margin-top: rem-calc(22);
+        }
+  }
+}
