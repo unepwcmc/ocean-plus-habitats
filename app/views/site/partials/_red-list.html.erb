@@ -7,17 +7,24 @@
         <th></th>
         <% t('home.general.habitats').each do |th| %>
           <th class="table-head__cell">
-            <%= image_tag th[:icon], class: 'table-head__icon', alt: "#{th[:title]} icon" %>
-            <span class="table-head__title"><%= th[:title] %></span>
+            <div class="flex flex-v-center">
+              <%= image_tag th[:icon], class: 'table-head__icon', alt: "#{th[:title]} icon" %>
+              <span class="table-head__title"><%= th[:title] %></span>
+            </div>
           </th>
         <% end %>
       </tr>
     </thead>
     
-    <tbody>
+    <tbody class="box-shadow">
       <% @red_list.each do |category| %>
         <tr class="table-body__row">
-          <td class="table-body__cell"><%= category[0][:title] %></td>
+          <td class="table-body__cell">
+            <div class="flex flex-v-center">
+              <%= image_tag category[0][:icon], class: 'table-body__icon', alt: "#{category[0][:title]} icon" %>
+              <span class="table-body__title"><%= category[0][:title] %></span>
+            </div>
+          </td>
 
           <% category[1].each do |integer| %>
             <td class="table-body__cell"><%= integer %></td>

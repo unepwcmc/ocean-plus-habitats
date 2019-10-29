@@ -73,3 +73,10 @@ strong, .bold { font-weight: $bold; }
 .margin-center { margin: 0 auto; }
 .margin-space-left { margin-left: rem-calc(14); }
 .margin-space-right { margin-right: rem-calc(14); }
+
+//--------------------------------------------------
+// shadow
+//--------------------------------------------------
+.box-shadow {
+  box-shadow: $grey-light 0px 0px 5px 5px;
+}
