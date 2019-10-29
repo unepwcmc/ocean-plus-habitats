@@ -19,7 +19,6 @@ namespace :import do
       # total_points -> integer (nil for habitats different from ColdCoral)
       # total_protected -> decimal (could potentially be used for both points and areas, so ColdCoral and other habitats)
       # protected_percentage -> decimal
-      # change -> JSONB
 
       # csv structure:
 
