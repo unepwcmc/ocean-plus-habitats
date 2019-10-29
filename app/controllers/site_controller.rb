@@ -25,7 +25,7 @@ class SiteController < ApplicationController
 
     @habitats = I18n.t('home.general.habitats')
 
-    red_list_categories = I18n.t('home.red-list.categories')
+    red_list_categories = I18n.t('home.red_list.categories')
     red_list_data = [[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5]]
 
     @red_list = red_list_categories.zip(red_list_data)

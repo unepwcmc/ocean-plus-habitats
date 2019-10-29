@@ -1,5 +1,8 @@
 <section class="container section-padding--bottom">
-  <h2><%= t('home.red-list.title'); %></h2>
+  <div class="flex">
+    <h2><%= t('home.red_list.title'); %></h2>
+    <modal-trigger id="citation" :modal-content="{ content: '<%= t('home.red_list.citation'); %>' }" class="icon--citation margin-space-left"></modal-trigger>
+  </div>
 
   <table class="table">
     <thead class="table-head">
@@ -34,5 +37,5 @@
     </tbody>
   </table>
 
-  <p class="text--smallprint"><%= t('home.red-list.smallprint') %></p>
+  <p class="text--smallprint"><%= t('home.red_list.smallprint') %></p>
 </section>
