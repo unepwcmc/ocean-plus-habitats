@@ -1,0 +1,2 @@
+class ChangeStat < ApplicationRecord
+end
