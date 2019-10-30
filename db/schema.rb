@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191030094237) do
+ActiveRecord::Schema.define(version: 20191030101229) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,8 +63,23 @@ ActiveRecord::Schema.define(version: 20191030094237) do
     t.text "wms_url"
   end
 
+  create_table "regional_stats", force: :cascade do |t|
+    t.bigint "habitat_id"
+    t.bigint "country_id"
+    t.decimal "total_area", default: "0.0", null: false
+    t.decimal "total_points", default: "0.0", null: false
+    t.decimal "total_protected", default: "0.0", null: false
+    t.decimal "protected_percentage", default: "0.0", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["country_id"], name: "index_regional_stats_on_country_id"
+    t.index ["habitat_id"], name: "index_regional_stats_on_habitat_id"
+  end
+
   add_foreign_key "change_stats", "countries"
   add_foreign_key "change_stats", "habitats"
   add_foreign_key "country_stats", "countries"
   add_foreign_key "country_stats", "habitats"
+  add_foreign_key "regional_stats", "countries"
+  add_foreign_key "regional_stats", "habitats"
 end

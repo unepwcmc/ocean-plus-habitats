@@ -26,6 +26,8 @@ namespace :import do
     # total_protected -> decimal (could potentially be used for both points and areas, so ColdCoral and other habitats)
     # protected_percentage -> decimal
 
+    # #<RegionalStat id: nil, habitat_id: nil, country_id: nil, total_area: 0.0, total_points: 0.0, total_protected: 0.0, protected_percentage: 0.0, created_at: nil, updated_at: nil> 
+
     # csv structure:
 
     # iso3,current_total_area,total_protected,percent_protected,total_area_1996,total_area_2007,total_area_2008_baseline
