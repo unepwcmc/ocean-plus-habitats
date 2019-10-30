@@ -1,5 +1,6 @@
 class Habitat < ApplicationRecord
 
+  has_many :regional_stats
   has_many :country_stats
   has_many :change_stats
 
