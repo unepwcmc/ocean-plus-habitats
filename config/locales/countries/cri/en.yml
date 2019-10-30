@@ -3,3 +3,14 @@ en:
     cri:
       title: Costa Rica
       image_flag: flags/costa-rica.svg
+      habitats_present_citations:
+        - 
+          citation: Warm-water Coral citation for Costa Rica
+        - 
+          citation: Saltmarsh Coral citation for Costa Rica
+        - 
+          citation: Mangrove Coral citation for Costa Rica
+        - 
+          citation: Seagrass Coral citation for Costa Rica
+        - 
+          citation: Cold-water Coral Coral citation for Costa Rica
