@@ -30,7 +30,7 @@ namespace :import do
 
     # csv structure:
 
-    # iso3,current_total_area,total_protected,percent_protected,total_area_1996,total_area_2007,total_area_2008_baseline
+    # "iso3","total_value_1996","total_value_2007","total_value_2008","total_value_2009","total_value_2010_baseline","total_value_2015","total_value_2016","protected_value","protected_percentage"
 
     filename = "#{Rails.root}/lib/data/#{csv_file}"
     csv = File.open(filename, encoding: "utf-8")
@@ -40,7 +40,19 @@ namespace :import do
     puts csv_headers
     puts csv_headers.length
 
-    byebug
-
+    if csv_headers.grep(/baseline/).any?
+      parse_special
+    else
+      parse_normal
+    end
   end
+
+  def parse_special
+    puts "parse special"
+  end
+
+  def parse_normal
+    puts "parse normal"
+  end
+
 end
