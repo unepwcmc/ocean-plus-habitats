@@ -28,7 +28,7 @@
 }
 
 @mixin text-4 {
-  // @include responsive-styles(font-size, rem-calc(18), rem-calc(20));
+  @include responsive-styles(font-size, rem-calc(16), rem-calc(16), rem-calc(16));
 }
 
 @mixin text-5 {
@@ -107,4 +107,9 @@
   @include text-6;
   font-weight: $semi-bold;
   line-height: 1.1;
+}
+
+@mixin text-habitats-present-title {
+  @include text-4;
+  font-weight: $semi-bold;
 }

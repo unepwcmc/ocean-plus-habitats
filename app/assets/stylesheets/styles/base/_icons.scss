@@ -1,11 +1,4 @@
 //--------------------------------------------------
-// lists
-//--------------------------------------------------
-// must match names in app/config/locales/global/en/yml
-$habitats: (warm-water-coral saltmarsh mangrove seagrass cold-water-coral); 
-$habitat_statuses: (absent unknown);
-
-//--------------------------------------------------
 // shared mixins
 //--------------------------------------------------
 @mixin icon-basic() {
@@ -95,12 +88,12 @@ $habitat_statuses: (absent unknown);
   &--citation {
     @include icon-basic;
     @include icon-button-reset;
+    @include flex-no-shrink;
     background-image: image_url('icons/citation.svg');
     width: rem-calc(36); height: rem-calc(36);
   }
   
   @each $habitat in $habitats {
-    &--#{$habitat}-present,
     &--#{$habitat} {
       @include icon-habitat;
       background-image: image_url("icons/#{$habitat}.svg");

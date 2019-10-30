@@ -44,6 +44,7 @@
         @include flex;
         @include flex-column;
         @include flex-v-center;
+        padding: rem-calc(0 11);
       }
 
         &__habitat {
@@ -51,5 +52,10 @@
           @include flex-v-center;
           margin-top: rem-calc(22);
         }
+
+          &__habitat-title { 
+            @include text-habitats-present-title;
+            margin-right: rem-calc(12);
+          }
   }
 }

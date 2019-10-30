@@ -116,5 +116,7 @@ $z-300: 300;
 //--------------------------------------------------
 // project specific
 //--------------------------------------------------
+$habitats: (warm-water-coral saltmarsh mangrove seagrass cold-water-coral); // must match names in app/config/locales/global/en/yml
+$habitat_statuses: (present absent unknown);
 $names: ['blue', 'green', 'orange', 'pink', 'yellow'];
 $colours: [$theme-blue, $theme-green, $theme-orange, $theme-pink, $theme-yellow];

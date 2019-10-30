@@ -16,10 +16,10 @@
         </div>
 
         <div class="card__content">
-          <i class="card__habitat-icon icon--<%= "#{habitat[0][:id]}-#{habitat[1][:status]}" %>"></i>
+          <i class="card__habitat-icon <%= get_habitat_icon_class(habitat[0][:id], habitat[1][:status]) %>"></i>
 
           <p class="card__habitat">
-            <%= habitat[0][:title] %>
+            <span class="card__habitat-title"><%= habitat[0][:title] %></span>
             <modal-trigger id="citation" :modal-content="{ content: '<%= habitat[2][:citation] %>' }" class="icon--citation"></modal-trigger>
           </p>
         </div>

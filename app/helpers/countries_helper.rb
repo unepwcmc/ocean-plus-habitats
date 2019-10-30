@@ -5,4 +5,10 @@ module CountriesHelper
 
     country && flag
   end
+
+  def get_habitat_icon_class (habitat, status)
+    status = status == 'present' ? '' : "-#{status}"
+
+    "icon--#{habitat}#{status}"
+  end
 end
