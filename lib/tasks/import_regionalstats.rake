@@ -1,9 +1,9 @@
 require 'csv'
 
 namespace :import do
+
   desc "import CSV data into database"
   task :regionalstats, [:csv_file] => [:environment] do
-
     habitats = Habitat.all
 
     habitats.each do |habitat|
@@ -19,10 +19,6 @@ namespace :import do
     csv = File.open(filename, encoding: "utf-8")
     csv_headers = File.readlines(csv).first.split(",")
 
-    puts habitat
-    puts csv_headers
-    puts csv_headers.length
-
     CSV.parse(csv, headers: true, encoding: "utf-8") do |row|
       csv_regionalstats_row = row.to_hash
 
@@ -35,7 +31,8 @@ namespace :import do
   end
 
   def parse_change csv_headers, csv_row
-    puts "parse change"
+    #puts "parse change"
+    total_value_years = {}
  
     regionalstats_change_hash = {
       iso3: csv_headers[0],
@@ -50,25 +47,40 @@ namespace :import do
       protected_percentage: csv_headers[9].chomp
     }.freeze
 
-    regionalstats_change_hash.keys.each do |key|
+    total_value_array = [
+      :total_value_1996,
+      :total_value_2007,
+      :total_value_2008,
+      :total_value_2009,
+      :total_value_2010_baseline,
+      :total_value_2015,
+      :total_value_2016
+    ].freeze
+
+    iso3 = nil
+    protected_value, protected_percentage = 0
+
+    regionalstats_change_hash.keys.each do |key|  
       if key == :iso3
         iso3 = csv_row[strip_key(regionalstats_change_hash[key])]&.strip
-        puts "iso3: #{iso3}"
-      elsif key == :total_value # TODO: need to extract year and populate appropriately
-        total_value = csv_row[strip_key(regionalstats_change_hash[key])]&.strip
-        puts "total_value: #{total_value}"
+        #puts "iso3: #{iso3}"
+      elsif total_value_array.include? key
+        (total_value_years[key] ||= []) << csv_row[strip_key(regionalstats_change_hash[key])]&.strip
+        #puts "total_value: #{total_value_years}"
       elsif key == :protected_value
         protected_value = csv_row[strip_key(regionalstats_change_hash[key])]&.strip
-        puts "protected_value: #{protected_value}"
+        #puts "protected_value: #{protected_value}"
       elsif key == :protected_percentage
         protected_percentage = csv_row[strip_key(regionalstats_change_hash[key])]&.strip
-        puts "protected_percentage: #{protected_percentage}"
+        #puts "protected_percentage: #{protected_percentage}"
       end
     end
+    
+    insert_change_regional_stat(iso3, total_value_years, protected_value, protected_percentage)
   end
 
   def parse_standard csv_headers, csv_row
-    puts "parse standard"
+    #puts "parse standard"
 
     regionalstats_standard_hash = {
       iso3: csv_headers[0],
@@ -77,25 +89,36 @@ namespace :import do
       protected_percentage: csv_headers[3].chomp
     }.freeze
 
+    iso3 = nil
+    total_value, total_value_protected, protected_percentage = 0
+
     regionalstats_standard_hash.keys.each do |key|
       if key == :iso3
         iso3 = csv_row[strip_key(regionalstats_standard_hash[key])]&.strip
-        puts "iso3: #{iso3}"
+        #puts "iso3: #{iso3}"
       elsif key == :total_value
         total_value = csv_row[strip_key(regionalstats_standard_hash[key])]&.strip
-        puts "total_value: #{total_value}"
+        #puts "total_value: #{total_value}"
       elsif key == :total_value_protected
         total_value_protected = csv_row[strip_key(regionalstats_standard_hash[key])]&.strip
-        puts "total_value_protected: #{total_value_protected}"
+        #puts "total_value_protected: #{total_value_protected}"
       elsif key == :protected_percentage
         protected_percentage = csv_row[strip_key(regionalstats_standard_hash[key])]&.strip
-        puts "protected_percentage: #{protected_percentage}"
+        #puts "protected_percentage: #{protected_percentage}"
       end
     end
+
+    insert_standard_regional_stat(iso3, total_value, total_value_protected, protected_percentage)
   end
 
-  def insert_regional_stat
+  def insert_standard_regional_stat(iso3, total_value, total_value_protected, protected_percentage)
+    puts "insert change regional stat: iso3: #{iso3}, total_value: #{total_value}, 
+    total_value_protected: #{total_value_protected}, protected_percentage: #{protected_percentage}"
+  end
 
+  def insert_change_regional_stat(iso3, total_value_years, protected_value, protected_percentage)
+    puts "insert change regional stat: iso3: #{iso3}, total_value_years: #{total_value_years}, 
+    protected_value: #{protected_value}, protected_percentage: #{protected_percentage}"
   end
 
   def strip_key key
