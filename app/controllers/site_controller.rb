@@ -22,7 +22,7 @@ class SiteController < ApplicationController
 
   def load_habitat
     @habitat = Habitat.where(name: params['habitat'] || 'warmwater').first
-    @habitat ||= Habitat.where(name: 'coralreef').first
+    @habitat ||= Habitat.where(name: 'coralreefs').first
     @habitat_type = @habitat.type
   end
 
