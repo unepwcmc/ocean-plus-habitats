@@ -64,13 +64,22 @@ namespace :import do
       total_value_2015: csv_headers[6],
       total_value_2016: csv_headers[7],
       protected_value: csv_headers[8],
-      protected_percentage: csv_headers[9]
+      protected_percentage: csv_headers[9].chomp
     }.freeze
 
     regionalstats_change_hash.keys.each do |key|
       if key == :iso3
         iso3 = csv_row[strip_key(regionalstats_change_hash[key])]&.strip
-        puts iso3
+        puts "iso3: #{iso3}"
+      elsif key == :total_value # TODO: need to extract year and populate appropriately
+        total_value = csv_row[strip_key(regionalstats_change_hash[key])]&.strip
+        puts "total_value: #{total_value}"
+      elsif key == :protected_value
+        protected_value = csv_row[strip_key(regionalstats_change_hash[key])]&.strip
+        puts "protected_value: #{protected_value}"
+      elsif key == :protected_percentage
+        protected_percentage = csv_row[strip_key(regionalstats_change_hash[key])]&.strip
+        puts "protected_percentage: #{protected_percentage}"
       end
     end
   end
@@ -82,13 +91,22 @@ namespace :import do
       iso3: csv_headers[0],
       total_value: csv_headers[1],
       total_value_protected: csv_headers[2],
-      protected_percentage: csv_headers[3]
+      protected_percentage: csv_headers[3].chomp
     }.freeze
 
     regionalstats_standard_hash.keys.each do |key|
       if key == :iso3
         iso3 = csv_row[strip_key(regionalstats_standard_hash[key])]&.strip
-        puts iso3
+        puts "iso3: #{iso3}"
+      elsif key == :total_value
+        total_value = csv_row[strip_key(regionalstats_standard_hash[key])]&.strip
+        puts "total_value: #{total_value}"
+      elsif key == :total_value_protected
+        total_value_protected = csv_row[strip_key(regionalstats_standard_hash[key])]&.strip
+        puts "total_value_protected: #{total_value_protected}"
+      elsif key == :protected_percentage
+        protected_percentage = csv_row[strip_key(regionalstats_standard_hash[key])]&.strip
+        puts "protected_percentage: #{protected_percentage}"
       end
     end
   end
