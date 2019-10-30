@@ -129,9 +129,9 @@ namespace :import do
     else
       total_area = total_value
     end
-    byebug if (total_value_protected.nil? || total_points.nil? || total_area.nil?)
-    RegionalStat.create(habitat: habitat, country: country, total_area: total_area, total_points: total_points,
-                        total_protected: total_value_protected, protected_percentage: protected_percentage)
+    RegionalStat.create(habitat: habitat, country: country, total_area: total_area || 0, 
+                        total_points: total_points || 0, total_protected: total_value_protected || 0, 
+                        protected_percentage: protected_percentage || 0)
   end
 
   def insert_change_regional_stat(habitat, iso3, total_value_years, protected_value, protected_percentage)
@@ -146,7 +146,18 @@ namespace :import do
       country = Country.find_by(iso3: iso3)
     end
     puts "Country is: #{country&.name}, habitat is: #{habitat.name}"
-    #ChangeStat.create()
+    ChangeStat.create(habitat: habitat, country: country, 
+                      total_value_1996: total_value_years[:total_value_1996] || 0,
+                      total_value_2007: total_value_years[:total_value_2007] || 0,
+                      total_value_2008: total_value_years[:total_value_2008] || 0,
+                      total_value_2009: total_value_years[:total_value_2009] || 0,
+                      total_value_2010: total_value_years[:total_value_2010] || 0,
+                      total_value_2015: total_value_years[:total_value_2015] || 0,
+                      total_value_2016: total_value_years[:total_value_2016] || 0
+                      # ,
+                      # protected_value: protected_value || 0,
+                      # protected_percentage: protected_percentage || 0
+                      )
   end
 
   def strip_key key
