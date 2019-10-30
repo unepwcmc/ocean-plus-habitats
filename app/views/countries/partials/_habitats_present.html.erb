@@ -9,14 +9,14 @@
       <div class="card card--<%= habitat[1][:status] %>">
         
         <div class="card__status">
-          <span class="card__staus-ribbon">
-            <i class="card__staus-icon"></i>
+          <span class="card__status-ribbon">
+            <i class="card__status-icon"></i>
           </span>
           <span class="card__status-title"><%= habitat[1][:status_title] %></span>
         </div>
 
         <div class="card__content">
-          <%= image_tag habitat[0][:icon], alt: "#{habitat[0][:title]} icon", class: '' %>
+          <i class="card__habitat-icon icon--<%= "#{habitat[0][:id]}-#{habitat[1][:status]}" %>"></i>
 
           <p class="card__habitat">
             <%= habitat[0][:title] %>

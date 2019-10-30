@@ -9,22 +9,22 @@
     &--present {
       border: solid 1px $green;
 
-      .card__staus-ribbon { @include icon-ribbon-present; }
-      .card__staus-icon { @include icon-present; }
+      .card__status-ribbon { @include icon-ribbon-present; }
+      .card__status-icon { @include icon-present; }
     }
 
     &--absent {
       background-color: $grey-light;
 
-      .card__staus-ribbon { @include icon-ribbon-absent; }
-      .card__staus-icon { @include icon-absent; }
+      .card__status-ribbon { @include icon-ribbon-absent; }
+      .card__status-icon { @include icon-absent; }
     }
 
     &--unknown {
       border: solid 1px $grey-dark;
 
-      .card__staus-ribbon { @include icon-ribbon-unknown; }
-      .card__staus-icon { @include icon-unknown; }
+      .card__status-ribbon { @include icon-ribbon-unknown; }
+      .card__status-icon { @include icon-unknown; }
     }
 
       &__status {
