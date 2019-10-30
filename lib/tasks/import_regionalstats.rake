@@ -116,14 +116,14 @@ namespace :import do
     habitat = Habitat.find_by(name: habitat)
     puts "insert change regional stat: iso3: #{iso3}, total_value: #{total_value}, 
     total_value_protected: #{total_value_protected}, protected_percentage: #{protected_percentage}"
-    if iso3.include? "/"
+    if (iso3.include? "/") || (iso3.include? "ABNJ")
       puts "Disputed territory #{iso3}"
       country = Country.find_by(name: "Disputed")
     else
       country = Country.find_by(iso3: iso3)
     end
-    puts "Country is: #{country&.name}"
-    byebug if country.nil?
+    puts "Country is: #{country&.name}, habitat is: #{habitat.name}"
+    #RegionalStat.create()
   end
 
   def insert_change_regional_stat(habitat, iso3, total_value_years, protected_value, protected_percentage)
@@ -131,14 +131,14 @@ namespace :import do
     habitat = Habitat.find_by(name: habitat)
     puts "insert change regional stat: iso3: #{iso3}, total_value_years: #{total_value_years}, 
     protected_value: #{protected_value}, protected_percentage: #{protected_percentage}"
-    if iso3.include? "/"
+    if (iso3.include? "/") || (iso3.include? "ABNJ")
       puts "Disputed territory #{iso3}"
       country = Country.find_by(name: "Disputed")
     else
       country = Country.find_by(iso3: iso3)
     end
-    puts "Country is: #{country&.name}"
-    byebug if country.nil?
+    puts "Country is: #{country&.name}, habitat is: #{habitat.name}"
+    #ChangeStat.create()
   end
 
   def strip_key key
