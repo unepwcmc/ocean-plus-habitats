@@ -23,14 +23,14 @@ namespace :import do
       csv_regionalstats_row = row.to_hash
 
       if csv_headers.grep(/baseline/).any?
-        parse_change csv_headers, csv_regionalstats_row
+        parse_change csv_headers, csv_regionalstats_row, habitat
       else
-        parse_standard csv_headers, csv_regionalstats_row
+        parse_standard csv_headers, csv_regionalstats_row, habitat
       end
     end
   end
 
-  def parse_change csv_headers, csv_row
+  def parse_change csv_headers, csv_row, habitat
     #puts "parse change"
     total_value_years = {}
  
@@ -75,11 +75,11 @@ namespace :import do
         #puts "protected_percentage: #{protected_percentage}"
       end
     end
-    
-    insert_change_regional_stat(iso3, total_value_years, protected_value, protected_percentage)
+
+    insert_change_regional_stat(habitat, iso3, total_value_years, protected_value, protected_percentage)
   end
 
-  def parse_standard csv_headers, csv_row
+  def parse_standard csv_headers, csv_row, habitat
     #puts "parse standard"
 
     regionalstats_standard_hash = {
@@ -108,17 +108,37 @@ namespace :import do
       end
     end
 
-    insert_standard_regional_stat(iso3, total_value, total_value_protected, protected_percentage)
+    insert_standard_regional_stat(habitat, iso3, total_value, total_value_protected, protected_percentage)
   end
 
-  def insert_standard_regional_stat(iso3, total_value, total_value_protected, protected_percentage)
+  def insert_standard_regional_stat(habitat, iso3, total_value, total_value_protected, protected_percentage)
+    country = nil
+    habitat = Habitat.find_by(name: habitat)
     puts "insert change regional stat: iso3: #{iso3}, total_value: #{total_value}, 
     total_value_protected: #{total_value_protected}, protected_percentage: #{protected_percentage}"
+    if iso3.include? "/"
+      puts "Disputed territory #{iso3}"
+      country = Country.find_by(name: "Disputed")
+    else
+      country = Country.find_by(iso3: iso3)
+    end
+    puts "Country is: #{country&.name}"
+    byebug if country.nil?
   end
 
-  def insert_change_regional_stat(iso3, total_value_years, protected_value, protected_percentage)
+  def insert_change_regional_stat(habitat, iso3, total_value_years, protected_value, protected_percentage)
+    country = nil
+    habitat = Habitat.find_by(name: habitat)
     puts "insert change regional stat: iso3: #{iso3}, total_value_years: #{total_value_years}, 
     protected_value: #{protected_value}, protected_percentage: #{protected_percentage}"
+    if iso3.include? "/"
+      puts "Disputed territory #{iso3}"
+      country = Country.find_by(name: "Disputed")
+    else
+      country = Country.find_by(iso3: iso3)
+    end
+    puts "Country is: #{country&.name}"
+    byebug if country.nil?
   end
 
   def strip_key key
