@@ -114,6 +114,7 @@ namespace :import do
   def insert_standard_regional_stat(habitat, iso3, total_value, total_value_protected, protected_percentage)
     country = nil
     habitat = Habitat.find_by(name: habitat)
+    total_area, total_points = 0.0
     puts "insert change regional stat: iso3: #{iso3}, total_value: #{total_value}, 
     total_value_protected: #{total_value_protected}, protected_percentage: #{protected_percentage}"
     if (iso3.include? "/") || (iso3.include? "ABNJ")
@@ -123,7 +124,14 @@ namespace :import do
       country = Country.find_by(iso3: iso3)
     end
     puts "Country is: #{country&.name}, habitat is: #{habitat.name}"
-    #RegionalStat.create()
+    if habitat.name == "coldcorals"
+      total_points = total_value
+    else
+      total_area = total_value
+    end
+    byebug if (total_value_protected.nil? || total_points.nil? || total_area.nil?)
+    RegionalStat.create(habitat: habitat, country: country, total_area: total_area, total_points: total_points,
+                        total_protected: total_value_protected, protected_percentage: protected_percentage)
   end
 
   def insert_change_regional_stat(habitat, iso3, total_value_years, protected_value, protected_percentage)
