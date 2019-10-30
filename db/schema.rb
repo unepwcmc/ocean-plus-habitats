@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191029140219) do
+ActiveRecord::Schema.define(version: 20191030094237) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,18 @@ ActiveRecord::Schema.define(version: 20191029140219) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "country_stats", force: :cascade do |t|
+    t.bigint "habitat_id"
+    t.bigint "country_id"
+    t.decimal "protected_value", default: "0.0", null: false
+    t.decimal "total_value", default: "0.0", null: false
+    t.decimal "protected_percentage", default: "0.0", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["country_id"], name: "index_country_stats_on_country_id"
+    t.index ["habitat_id"], name: "index_country_stats_on_habitat_id"
+  end
+
   create_table "habitats", force: :cascade do |t|
     t.string "name", default: "", null: false
     t.string "title", default: "", null: false
@@ -51,20 +63,8 @@ ActiveRecord::Schema.define(version: 20191029140219) do
     t.text "wms_url"
   end
 
-  create_table "static_stats", force: :cascade do |t|
-    t.bigint "habitat_id"
-    t.bigint "country_id"
-    t.decimal "protected_value", default: "0.0", null: false
-    t.decimal "total_value", default: "0.0", null: false
-    t.decimal "protected_percentage", default: "0.0", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["country_id"], name: "index_static_stats_on_country_id"
-    t.index ["habitat_id"], name: "index_static_stats_on_habitat_id"
-  end
-
   add_foreign_key "change_stats", "countries"
   add_foreign_key "change_stats", "habitats"
-  add_foreign_key "static_stats", "countries"
-  add_foreign_key "static_stats", "habitats"
+  add_foreign_key "country_stats", "countries"
+  add_foreign_key "country_stats", "habitats"
 end

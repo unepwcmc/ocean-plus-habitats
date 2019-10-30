@@ -2,7 +2,7 @@ require 'csv'
 
 namespace :import do
   desc "import CSV data into database"
-  task :stats, [:csv_file] => [:environment] do
+  task :regionalstats, [:csv_file] => [:environment] do
 
     habitats = Habitat.all
 
@@ -10,11 +10,11 @@ namespace :import do
       puts habitat.name
       csv_file = "#{habitat.name}.csv"
 
-      import_csv_file(habitat.name, csv_file)
+      import_regional_csv_file(habitat.name, csv_file)
     end
   end
 
-  def import_csv_file(habitat, csv_file)
+  def import_regional_csv_file(habitat, csv_file)
 
     # db structure:
 
@@ -36,6 +36,9 @@ namespace :import do
 
     puts habitat
     puts csv_headers
+    puts csv_headers.length
+
+    byebug
 
   end
 end

@@ -2,7 +2,7 @@ require 'csv'
 
 namespace :import do
   desc "import CSV data into database"
-  task :staticstats, [:csv_file] => [:environment] do
+  task :countrystats, [:csv_file] => [:environment] do
 
     habitats = Habitat.all
     @global_coverage = {}
@@ -10,11 +10,11 @@ namespace :import do
     habitats.each do |habitat|
       csv_file = "#{habitat.name.capitalize}_Protected.csv"
       Rails.logger.info "import CSV: #{csv_file}"
-      import_csv_file(habitat.name, csv_file)
+      import_country_csv_file(habitat.name, csv_file)
 
       csv_file = "#{habitat.name.capitalize}_Total.csv"
       Rails.logger.info "import CSV: #{csv_file}"
-      import_csv_file(habitat.name, csv_file)
+      import_country_csv_file(habitat.name, csv_file)
 
       habitat.update_attributes(global_coverage: @global_coverage[habitat.name])
     end
@@ -27,7 +27,7 @@ namespace :import do
 
   end
 
-  def import_csv_file(habitat, csv_file)
+  def import_country_csv_file(habitat, csv_file)
     filename = "#{Rails.root}/lib/data/#{csv_file}"
 
     csv = File.open(filename, encoding: "utf-8")
@@ -52,9 +52,9 @@ namespace :import do
       end
 
       if csv_file.include? "Protected"
-        insert_static_stat("protected", habitat, iso3, value)
+        insert_country_stat("protected", habitat, iso3, value)
       elsif csv_file.include? "Total"
-        insert_static_stat("total", habitat, iso3, value)
+        insert_country_stat("total", habitat, iso3, value)
       end
     end
 
@@ -62,7 +62,7 @@ namespace :import do
 
   end
 
-  def insert_static_stat(kind, habitat, iso3, value)
+  def insert_country_stat(kind, habitat, iso3, value)
     Rails.logger.info "insert #{kind} value into habitat #{habitat}: #{value} into iso3: #{iso3}"
 
     case kind
@@ -86,15 +86,15 @@ namespace :import do
       Rails.logger.info "Cannot import #{kind} value into habitat #{habitat_name}: #{value} into iso3: #{iso3}"
       return
     end
-    static_stat = StaticStat.find_or_create_by(country_id: country.id, habitat_id: habitat.id)
-    static_stat.send("#{kind}_value=", value)
-    unless static_stat.save!
+    country_stat = CountryStat.find_or_create_by(country_id: country.id, habitat_id: habitat.id)
+    country_stat.send("#{kind}_value=", value)
+    unless country_stat.save!
       Rails.logger.info "Cannot import #{kind} value into habitat #{habitat_name}: #{value} into iso3: #{iso3}"
     end
   end
 
   def recalculate_protected_percentages
-    StaticStat.all.each do |stat|
+    CountryStat.all.each do |stat|
       stat.protected_percentage = 100 * (stat.protected_value / stat.total_value)
       stat.save!
     end
@@ -102,8 +102,8 @@ namespace :import do
 
   def recalculate_total_habitat_percentage_within_protected_area
     Habitat.all.each do |habitat|
-      habitat_total_area = StaticStat.where(habitat: habitat).pluck(:total_value).sum
-      habitat_total_protected_area = StaticStat.where(habitat: habitat).pluck(:protected_value).sum
+      habitat_total_area = CountryStat.where(habitat: habitat).pluck(:total_value).sum
+      habitat_total_protected_area = CountryStat.where(habitat: habitat).pluck(:protected_value).sum
 
       habitat.protected_percentage = 100 * (habitat_total_protected_area / habitat_total_area)
       habitat.save!
