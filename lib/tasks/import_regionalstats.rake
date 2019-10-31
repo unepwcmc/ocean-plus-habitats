@@ -145,17 +145,6 @@ namespace :import do
     else
       country = Country.find_by(iso3: iso3)
     end
-    # puts "Country is: #{country&.name}, habitat is: #{habitat.name}"
-    # puts "total_value_1996: #{total_value_years[:total_value_1996]}
-    # total_value_2007: #{total_value_years[:total_value_2007]}
-    # total_value_2008: #{total_value_years[:total_value_2008]}
-    # total_value_2009: #{total_value_years[:total_value_2009]}
-    # total_value_2010: #{total_value_years[:total_value_2010_baseline]}
-    # total_value_2015: #{total_value_years[:total_value_2015]}
-    # total_value_2016: #{total_value_years[:total_value_2016]}
-    # protected_value: #{protected_value}
-    # protected_percentage: #{protected_percentage}"
-    #byebug
     ChangeStat.create(habitat: habitat, country: country, 
                       total_value_1996: total_value_years[:total_value_1996] || 0,
                       total_value_2007: total_value_years[:total_value_2007] || 0,
