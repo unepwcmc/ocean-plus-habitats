@@ -11,6 +11,7 @@ import Habitat from '../Habitat.vue'
 import Tab from '../components/tabs/Tab.vue'
 import Tabs from '../components/tabs/Tabs.vue'
 import Mapbox from '../components/map/Mapbox.vue'
+import NavBurger from '../components/nav/NavBurger.vue'
 import StickyBar from '../components/sticky/StickyBar.vue'
 
 // create event hub and export so that it can be imported into .vue files
@@ -24,6 +25,7 @@ document.addEventListener('turbolinks:load', () => {
       Tab,
       Tabs,
       Mapbox,
+      NavBurger,
       StickyBar
     }
   })

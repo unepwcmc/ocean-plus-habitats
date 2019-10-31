@@ -8,8 +8,6 @@ class SiteController < ApplicationController
 
     @title = @habitat.title
 
-    @nav = @global['nav'].to_json
-
     @habitatData = HabitatsSerializer.new(@habitat, @chart_greatest_coverage, @chart_protected_areas, @global).serialize
 
     # respond_to do |format|

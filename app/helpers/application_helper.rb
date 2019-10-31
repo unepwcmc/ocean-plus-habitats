@@ -26,4 +26,23 @@ module ApplicationHelper
   def social_image_alt
     'Guanaco Torres del Paine Chile Gregoire Dubois'
   end
+
+  def get_nav_items
+    #FERDI - get all countries and then fill out object as follows
+    yml_key = 'CRI'.downcase
+
+    nav_items = {
+      countries: [
+        {
+          title: I18n.t("countries.#{yml_key}.title"),
+          url: country_path(54)
+        }
+      ],
+
+      regions: [
+        title: 'Region name',
+        url: '/'
+      ]
+    }
+  end
 end

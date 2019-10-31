@@ -4,8 +4,23 @@
       <%= image_tag 'logos/logo-ocean-plus-habitats.svg', class: 'logo--site', alt: 'The logo for Ocean+ Habitats' %>
     <% end %>
 
-    <nav>
-      
-    </nav>
+    <nav-burger class="nav--primary">
+      <div class="">
+        <p>Countries</p>
+        <nav>
+          <% get_nav_items[:countries].each do |country| %>
+            <%= link_to country[:title], country[:url], title: "View the page for #{country[:title]}" %>
+          <% end %>
+        </nav>
+      </div>
+      <div>
+        <p>Regions</p>
+        <nav>
+          <% get_nav_items[:regions].each do |country| %>
+            <%= link_to country[:title], country[:url], title: "View the page for #{country[:title]}" %>
+          <% end %>
+        </nav>
+      </div>
+    </nav-burger>
   </div> 
 </div>
