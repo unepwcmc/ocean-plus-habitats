@@ -25,6 +25,7 @@
 
 @mixin text-4 {
   @include responsive-styles(font-size, rem-calc(16), rem-calc(16), rem-calc(16));
+  font-weight: $semi-bold;
 }
 
 @mixin text-5 {
@@ -94,9 +95,13 @@
   @include text-5;
 }
 
-@mixin text-smallprint () {
+@mixin text-smallprint {
   @include text-6;
   font-style: italic;
+}
+
+@mixin text-tab-title {
+  @include text-4;
 }
 
 @mixin text-present-habitats-status {
@@ -107,5 +112,4 @@
 
 @mixin text-habitats-present-title {
   @include text-4;
-  font-weight: $semi-bold;
 }
