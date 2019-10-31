@@ -1,9 +1,9 @@
 <section class="section-padding bg--navy-dark white">
   <div class="container">
-    <h2 class="flex flex-v-center">
-      <span class="white"><%= t('countries.shared.habitat_condition.title') %></span>
+    <div class="h2-wrapper flex flex-v-center">
+      <h2><%= t('countries.shared.habitat_condition.title') %></h2>
       <modal-trigger id="citation" :modal-content="{ content: '<%= t('countries.shared.habitat_condition.citation'); %>' }" class="icon--citation margin-space-left"></modal-trigger>
-    </h2>
+    </div>
 
     <% t('countries.shared.habitat_condition.text').each do |p| %>
       <p class="text-body"><%= p %></p>
