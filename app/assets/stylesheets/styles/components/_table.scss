@@ -23,7 +23,7 @@
 
     &:first-child {
       @include flex-no-shrink;
-      width: 25%;
+      width: 24%;
     }
 
     &:not(:first-child) {
@@ -52,6 +52,7 @@
     }
 
     &__icon {
+      @include flex-no-shrink;
       width: rem-calc(40); height: rem-calc(40);
     }
 
