@@ -1,0 +1,15 @@
+<section class="section-padding bg--navy-dark white">
+  <div class="container">
+    <h2><%= t('countries.shared.targets.title') %></h2>
+
+    <tabs>
+      <% @target_tabs.each do |tab| %>
+        <tab id="target-tab-<%= tab[:id] %>" title="<%= tab[:title] %>">
+          <% @target_text[tab[:id].to_sym][:text].each do |p| %>
+            <p><%= p %></p>
+          <% end %>
+        </tab>
+      <% end %>
+    </tabs>
+  </div>
+</section>

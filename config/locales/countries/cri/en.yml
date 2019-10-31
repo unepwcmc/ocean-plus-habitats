@@ -14,3 +14,16 @@ en:
           citation: Seagrass Coral citation for Costa Rica
         - 
           citation: Cold-water Coral Coral citation for Costa Rica
+      targets:
+        aichi:
+          text:
+            - lorem sunt in culpa
+            - officia deserunt mollit anim id est liborum. officia deserunt mollit anim id est liborum.
+        sdg:
+          text:
+            - ecat cupidatat non proident, sunt in culpa qui officia mollit anim id est liborum.
+            - officia deserunt mollit anim id est liborum.
+        other:
+          text:
+            - sunt in culpa qui officia deserunt mollit anim id est liborum.
+            - ecat cupidatat non proident, 
