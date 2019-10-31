@@ -14,7 +14,7 @@ namespace :import do
       import_regional_csv_file(habitat.name, csv_file)
     end
 
-    # import regional seas country data CSVs
+    # import regional seas country data CSV
     csv_file = "regionalseas_country.csv"
 
     import_regionalseas_csv_file(csv_file)
