@@ -14,7 +14,7 @@
   font-family: $header-font;
   font-weight: $semi-bold;
   margin-top: 0;
-  margin-bottom: rem-calc(30);
+  margin-bottom: $header-margin-bottom;
 }
 
 @mixin text-3 {
@@ -57,6 +57,8 @@
 
 @mixin h2 {
   @include text-2;
+
+  .bg--navy-dark & { color: $white; }
 }
 
 @mixin h4 {
