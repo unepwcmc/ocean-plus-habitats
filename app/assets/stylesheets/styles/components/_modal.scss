@@ -1,0 +1,96 @@
+//--------------------------------------------------
+// settings
+//--------------------------------------------------
+$modal-button-mobile: 30px;
+$modal-button-tablet: 50px;
+$modal-button-laptop: 70px;
+
+@mixin modal-button-sizing($mobile, $tablet, $laptop) {
+  @include responsive-styles(width, $mobile, $tablet, $laptop);
+  @include responsive-styles(height, $mobile, $tablet, $laptop);
+
+  @include responsive-styles(top, calc(#{$mobile} * .25), calc(#{$tablet} * .25), calc(#{$laptop} * .25));
+  @include responsive-styles(right, calc(#{$mobile} * .25), calc(#{$tablet} * .25), calc(#{$laptop} * .25));
+}
+
+$modal-padding-mobile: $modal-button-mobile * 2;
+$modal-padding-tablet: $modal-button-tablet * 2;
+$modal-padding-laptop: $modal-button-laptop;
+
+//--------------------------------------------------
+// classes
+//--------------------------------------------------
+.modal {
+  background-color: rgba($black, .6);
+  
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $z-300;
+
+  &--active { display: block; }
+
+  &__dialog {
+    @include responsive-styles('font-size', 16px, 18px, 18px);
+    overflow-y: scroll;
+    padding-top: $modal-padding-mobile;
+    width: 100%; height: 100%;
+
+    background-color: $white;
+
+    @include breakpoint($small) { padding-top: $modal-padding-tablet; }
+    @include breakpoint($medium) {  padding-top: $modal-padding-laptop; }
+  }
+
+    &__close {
+      @include modal-button-sizing($modal-button-mobile, $modal-button-tablet, $modal-button-laptop);
+      background-color: $grey-dark;
+      border-radius: 100%;
+      cursor: pointer;
+    
+      position: absolute;
+
+      &::after {
+        content: '';
+        margin: auto;
+
+        display: block;
+      }
+
+      &:hover { opacity: .8; }
+    }
+
+    &__bg-image {
+      @include responsive-styles(height, 270px, 370px, 300px);
+      background-color: $grey;
+      background-size: cover;
+      width: 100%;
+    }
+
+      &__bg-image-caption {
+        color: $white;
+        bottom: 0;
+      }
+
+    &__staff {
+      background-color: $grey-light;
+      border-bottom: solid $grey-dark 36px;
+    }
+
+      &__staff-member {
+        @include responsive-styles(flex-wrap, wrap, nowrap, nowrap);
+        @include responsive-styles(width, 90%, 80%, 40%);
+      }
+
+        &__staff-image {
+          background-color: $grey;
+          flex-shrink: 0; //done this way for IE11
+          margin: 0 30px 30px 0;
+          width: 30%; height: 30%; //done this way for IE11
+
+          display: block;
+        }
+}

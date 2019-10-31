@@ -1,7 +1,111 @@
 //--------------------------------------------------
-// icons
+// shared mixins
+//--------------------------------------------------
+@mixin icon-basic() {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@mixin icon-button-reset() {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+@mixin icon-habitat() {
+  @include icon-basic;
+  width: rem-calc(75); height: rem-calc(75);
+
+  display: block;
+}
+
+@mixin icon-ribbon($colour, $point-height: rem-calc(8), ) {
+  $width: rem-calc(40);
+  $height: rem-calc(56);
+  
+  @include flex;
+  @include flex-center;
+  @include flex-no-shrink;
+  background-color: $colour;
+  width: $width; height: calc(#{$height} - #{$point-height});
+
+  position: relative;
+
+  &::before {
+    @include triangle-right-angle(calc(#{$width/2}), $point-height, $colour, 'right');
+  }
+  
+  &::after {
+    @include triangle-right-angle(calc(#{$width/2}), $point-height, $colour, 'left');
+  }
+}
+
+//--------------------------------------------------
+// specific mixins
+//--------------------------------------------------
+@mixin icon-ribbon-present {
+  @include icon-ribbon($green);
+}
+
+@mixin icon-ribbon-absent {
+  @include icon-ribbon($grey-dark);
+}
+
+@mixin icon-ribbon-unknown {
+  @include icon-ribbon($grey-dark);
+}
+
+@mixin icon-present {
+  @include icon-basic;
+  background-image: image_url('icons/tick.svg');
+  width: rem-calc(26); height: rem-calc(19);
+
+  display: block;
+}
+
+@mixin icon-absent {
+  @include icon-basic;
+  background-image: image_url('icons/cross.svg');
+  width: rem-calc(17); height: rem-calc(17);
+
+  display: block; 
+}
+
+@mixin icon-unknown {
+  @include icon-basic;
+  background-image: image_url('icons/question.svg');
+  width: rem-calc(13); height: rem-calc(22);
+
+  display: block;
+}
+
+//--------------------------------------------------
+// classes
 //--------------------------------------------------
 .icon {
+  &--citation {
+    @include icon-basic;
+    @include icon-button-reset;
+    @include flex-no-shrink;
+    background-image: image_url('icons/citation.svg');
+    width: rem-calc(36); height: rem-calc(36);
+  }
+  
+  @each $habitat in $habitats {
+    &--#{$habitat} {
+      @include icon-habitat;
+      background-image: image_url("icons/#{$habitat}.svg");
+    }
+
+    @each $status in $habitat_statuses {
+      &--#{$habitat}-#{$status} {
+        @include icon-habitat;
+        background-image: image_url("icons/#{$habitat}-#{$status}.svg");
+      }
+    }
+  }
 
   &--scroll {
     background-image: image_url('icons/icon-scroll.svg');

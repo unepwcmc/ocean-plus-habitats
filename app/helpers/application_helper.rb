@@ -44,5 +44,10 @@ module ApplicationHelper
         url: '/'
       ]
     }
+
+  def get_habitat_icon_class (habitat, status='')
+    status = status == 'present' || status == '' ? '' : "-#{status}"
+
+    "icon--#{habitat}#{status}"
   end
 end

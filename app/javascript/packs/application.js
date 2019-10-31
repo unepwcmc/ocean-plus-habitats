@@ -6,27 +6,38 @@ Vue.config.productionTip = false
 
 Vue.use(TurbolinksAdapter)
 
+import store from '../store/store.js'
+
 // components
 import Habitat from '../Habitat.vue'
-import Tab from '../components/tabs/Tab.vue'
-import Tabs from '../components/tabs/Tabs.vue'
 import Mapbox from '../components/map/Mapbox.vue'
 import NavBurger from '../components/nav/NavBurger.vue'
+import Modal from '../components/modal/Modal.vue'
+import ModalTrigger from '../components/modal/ModalTrigger.vue'
 import StickyBar from '../components/sticky/StickyBar.vue'
+import Tab from '../components/tabs/Tab.vue'
+import Tabs from '../components/tabs/Tabs.vue'
 
 // create event hub and export so that it can be imported into .vue files
 export const eventHub = new Vue()
 
 document.addEventListener('turbolinks:load', () => {
-  const app = new Vue({
-    el: '#v-app',
-    components: {
-      Habitat,
-      Tab,
-      Tabs,
-      Mapbox,
-      NavBurger,
-      StickyBar
-    }
-  })
+  if(document.getElementById('v-app')) {
+    Vue.prototype.$eventHub = new Vue()
+
+    const app = new Vue({
+      el: '#v-app',
+      store,
+      components: {
+        Habitat,
+        Mapbox,
+        Modal,
+        ModalTrigger,
+        NavBurger,
+        StickyBar,
+        Tab,
+        Tabs
+      }
+    })
+  }
 })
