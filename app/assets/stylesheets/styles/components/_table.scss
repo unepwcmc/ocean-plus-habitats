@@ -3,6 +3,8 @@
 // mixins
 //--------------------------------------------------
 @mixin table-cell-basic() {
+  @include flex;
+  @include flex-v-center;
   padding: rem-calc(0 12);
   width: 15%; height: rem-calc(66);
 }
@@ -11,49 +13,41 @@
 // table
 //--------------------------------------------------
 .table {
+  @include flex;
   border-collapse: collapse;
   font-weight: $semi-bold;
   margin-bottom: rem-calc(28);
-}
 
-//--------------------------------------------------
-// table head
-//--------------------------------------------------
-.table-head {
-  &__cell { 
-    @include table-cell-basic; 
-    text-align: left;
-  }
+  &__column {
+    @include flex-grow;
 
-    &__icon {
-      width: rem-calc(40); height: rem-calc(40);
+    &:first-child {
+      @include flex-no-shrink;
+      width: 25%;
     }
 
-    &__title {
-      margin-left: rem-calc(10);
-    }
-}
+    &:not(:first-child) {
+      max-width: 20%;
+      min-width: 15%;
 
-//--------------------------------------------------
-// table body
-//--------------------------------------------------
-.table-body {
-  &__row { 
-    &:first-child { 
-      .table-body__cell { border-top: none; }
+      .table__cell { 
+        &:not(:first-child) { 
+          @include flex-h-center;
+          border-left: solid 2px $grey-light;
+        }
+      }
     }
+
+    
   }
     
     &__cell { 
       @include table-cell-basic; 
-      border-top: solid 2px $grey-light;
-      border-left: solid 2px $grey-light;
-      text-align: center;
-
-      &:first-child { 
-        border-left: none; 
-        text-align: left;
-        width: 25%
+      width: 100%;
+      
+      &:nth-child(n+2):nth-child(-n+8) {
+        border-top: solid 2px $grey-light;
+        text-align: center;
       }
     }
 
