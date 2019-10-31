@@ -65,7 +65,7 @@ namespace :import do
         iso3 = csv_row[strip_key(regionalstats_change_hash[key])]&.strip
         #puts "iso3: #{iso3}"
       elsif total_value_array.include? key
-        (total_value_years[key] ||= []) << csv_row[strip_key(regionalstats_change_hash[key])]&.strip
+        (total_value_years[key] ||= csv_row[strip_key(regionalstats_change_hash[key])]&.strip)
         #puts "total_value: #{total_value_years}"
       elsif key == :protected_value
         protected_value = csv_row[strip_key(regionalstats_change_hash[key])]&.strip
@@ -115,8 +115,8 @@ namespace :import do
     country = nil
     habitat = Habitat.find_by(name: habitat)
     total_area, total_points = 0.0
-    puts "insert change regional stat: iso3: #{iso3}, total_value: #{total_value}, 
-    total_value_protected: #{total_value_protected}, protected_percentage: #{protected_percentage}"
+    # puts "insert change regional stat: iso3: #{iso3}, total_value: #{total_value}, 
+    # total_value_protected: #{total_value_protected}, protected_percentage: #{protected_percentage}"
     if (iso3.include? "/") || (iso3.include? "ABNJ")
       puts "Disputed territory #{iso3}"
       country = Country.find_by(name: "Disputed")
@@ -137,34 +137,35 @@ namespace :import do
   def insert_change_regional_stat(habitat, iso3, total_value_years, protected_value, protected_percentage)
     country = nil
     habitat = Habitat.find_by(name: habitat)
-    puts "insert change regional stat: iso3: #{iso3}, total_value_years: #{total_value_years}, 
-    protected_value: #{protected_value}, protected_percentage: #{protected_percentage}"
+    # puts "insert change regional stat: iso3: #{iso3}, total_value_years: #{total_value_years}, 
+    # protected_value: #{protected_value}, protected_percentage: #{protected_percentage}"
     if (iso3.include? "/") || (iso3.include? "ABNJ")
       puts "Disputed territory #{iso3}"
       country = Country.find_by(name: "Disputed")
     else
       country = Country.find_by(iso3: iso3)
     end
-    puts "Country is: #{country&.name}, habitat is: #{habitat.name}"
-    puts "total_value_1996: #{total_value_years[:total_value_1996]}
-    total_value_2007: #{total_value_years[:total_value_2007]}
-    total_value_2008: #{total_value_years[:total_value_2008]}
-    total_value_2009: #{total_value_years[:total_value_2009]}
-    total_value_2010: #{total_value_years[:total_value_2010_baseline]}
-    total_value_2015: #{total_value_years[:total_value_2015]}
-    total_value_2016: #{total_value_years[:total_value_2016]}"
-    byebug
+    # puts "Country is: #{country&.name}, habitat is: #{habitat.name}"
+    # puts "total_value_1996: #{total_value_years[:total_value_1996]}
+    # total_value_2007: #{total_value_years[:total_value_2007]}
+    # total_value_2008: #{total_value_years[:total_value_2008]}
+    # total_value_2009: #{total_value_years[:total_value_2009]}
+    # total_value_2010: #{total_value_years[:total_value_2010_baseline]}
+    # total_value_2015: #{total_value_years[:total_value_2015]}
+    # total_value_2016: #{total_value_years[:total_value_2016]}
+    # protected_value: #{protected_value}
+    # protected_percentage: #{protected_percentage}"
+    #byebug
     ChangeStat.create(habitat: habitat, country: country, 
-                      total_value_1996: total_value_years[:total_value_1996],
-                      total_value_2007: total_value_years[:total_value_2007],
-                      total_value_2008: total_value_years[:total_value_2008],
-                      total_value_2009: total_value_years[:total_value_2009],
-                      total_value_2010: total_value_years[:total_value_2010_baseline],
-                      total_value_2015: total_value_years[:total_value_2015],
-                      total_value_2016: total_value_years[:total_value_2016]
-                      # ,
-                      # protected_value: protected_value || 0,
-                      # protected_percentage: protected_percentage || 0
+                      total_value_1996: total_value_years[:total_value_1996] || 0,
+                      total_value_2007: total_value_years[:total_value_2007] || 0,
+                      total_value_2008: total_value_years[:total_value_2008] || 0,
+                      total_value_2009: total_value_years[:total_value_2009] || 0,
+                      total_value_2010: total_value_years[:total_value_2010_baseline] || 0,
+                      total_value_2015: total_value_years[:total_value_2015] || 0,
+                      total_value_2016: total_value_years[:total_value_2016] || 0,
+                      protected_value: protected_value,
+                      protected_percentage: protected_percentage
                       )
   end
 

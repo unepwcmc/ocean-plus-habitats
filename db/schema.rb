@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191030111334) do
+ActiveRecord::Schema.define(version: 20191031110216) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 20191030111334) do
     t.datetime "updated_at", null: false
     t.decimal "total_value_1996", default: "0.0", null: false
     t.decimal "total_value_2016", default: "0.0", null: false
+    t.decimal "protected_value", default: "0.0", null: false
+    t.decimal "protected_percentage", default: "0.0", null: false
     t.index ["country_id"], name: "index_change_stats_on_country_id"
     t.index ["habitat_id"], name: "index_change_stats_on_habitat_id"
   end
