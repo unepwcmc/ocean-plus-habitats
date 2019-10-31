@@ -16,7 +16,7 @@
         </div>
 
         <div class="card__content">
-          <i class="card__habitat-icon <%= get_habitat_icon_class(habitat[0][:id], habitat[1][:status]) %>"></i>
+          <i class="card__habitat-icon <%= get_habitat_icon_class(habitat[0][:id], habitat[1][:status]) %>" alt="<%= habitat[0][:title] %> icon"></i>
 
           <p class="card__habitat">
             <span class="card__habitat-title"><%= habitat[0][:title] %></span>

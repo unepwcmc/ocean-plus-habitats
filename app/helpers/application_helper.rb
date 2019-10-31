@@ -26,4 +26,10 @@ module ApplicationHelper
   def social_image_alt
     'Guanaco Torres del Paine Chile Gregoire Dubois'
   end
+
+  def get_habitat_icon_class (habitat, status='')
+    status = status == 'present' || status == '' ? '' : "-#{status}"
+
+    "icon--#{habitat}#{status}"
+  end
 end

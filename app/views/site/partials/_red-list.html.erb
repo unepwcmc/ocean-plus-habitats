@@ -9,9 +9,10 @@
       <tr class="table-head__row">
         <th></th>
         <% t('global.habitats').each do |th| %>
+        <%= th[:id] %>
           <th class="table-head__cell">
             <div class="flex flex-v-center">
-              <%= image_tag th[:icon], class: 'table-head__icon', alt: "#{th[:title]} icon" %>
+              <i class="table-head__icon <%= get_habitat_icon_class(th[:id]) %>" alt="<%= th[:title] %> icon"></i>
               <span class="table-head__title"><%= th[:title] %></span>
             </div>
           </th>

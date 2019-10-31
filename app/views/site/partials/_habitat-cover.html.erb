@@ -9,17 +9,17 @@
       <% @habitat_cover.each do |habitat| %>
         <div class="card__card">
           <div class="flex">
-            <%= image_tag habitat[:icon], class: 'card__icon', alt: "#{habitat[:title]} icon" %>
+            <i class="card__icon <%= get_habitat_icon_class(habitat[0][:id]) %>" alt="<%= habitat[0][:title] %> icon"></i>
             <span class="card__stat">-8%</span>
           </div>
 
           <div class="card__title-wrapper flex flex-v-center">
-            <h4 class="card__title"><%= habitat[:title] %></h4>
-            <modal-trigger id="citation" :modal-content="{ content: '<%= habitat[:citation_text] %>' }" class="icon--citation margin-space-left"></modal-trigger>
+            <h4 class="card__title"><%= habitat[0][:title] %></h4>
+            <modal-trigger id="citation" :modal-content="{ content: '<%= habitat[1][:citation_text] %>' }" class="icon--citation margin-space-left"></modal-trigger>
           </div>
 
           <div class="card__content">
-            <%= habitat[:text].html_safe %>
+            <%= habitat[1][:text].html_safe %>
           </div>
         </div>
       <% end %>

@@ -12,18 +12,20 @@ class SiteController < ApplicationController
 
     @habitatData = HabitatsSerializer.new(@habitat, @chart_greatest_coverage, @chart_protected_areas, @global).serialize
     
+    @habitats = I18n.t('global.habitats')
+
     #----------------------------------------------------------------------------#
     # FERDI variables will need adding to this object ---------------------------#
     # https://guides.rubyonrails.org/i18n.html#passing-variables-to-translations #
-    @habitat_cover = I18n.t('home.habitat_cover.habitats')
+    habitat_cover = I18n.t('home.habitat_cover.habitats')
     #----------------------------------------------------------------------------#
+
+    @habitat_cover = @habitats.zip(habitat_cover)
 
     # respond_to do |format|
     #   format.html
     #   format.json { render json: @habitatData }
     # end
-
-    @habitats = I18n.t('global.habitats')
 
     red_list_categories = I18n.t('home.red_list.categories')
     red_list_data = [[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5]]
