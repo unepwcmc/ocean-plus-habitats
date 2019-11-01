@@ -1,8 +1,6 @@
 <header class="header--country">
   <div class="header__content">
-    <% if country_flag_exists? @yml_key %>
-      <%= image_tag t("countries.#{@yml_key}.image_flag"), alt: '', class: 'header__icon' %>
-    <% end %>
+    <%= if_country_get_flag @yml_key %>
 
     <h1><%= t("countries.#{@yml_key}.title") %></h1>
   </div>
