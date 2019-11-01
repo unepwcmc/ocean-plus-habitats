@@ -31,7 +31,6 @@ export default {
   methods: {
     openNav () {
       this.$store.dispatch('nav/openNav', this.triggerId)
-      console.log('here')
     }
   }
 }

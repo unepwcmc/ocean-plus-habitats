@@ -1,7 +1,8 @@
 <template>
   <div
     class="nav__pane"
-    :class="{ 'nav--active' : isActive }">
+    :class="{ 'nav--active' : isActive }"
+  >
     <slot></slot>
   </div>
 </template>
@@ -21,8 +22,12 @@ export default {
     }
   },
 
+  created () {
+    this.$store.dispatch('nav/closeNav')
+  },
+
   mounted () {
-    // this.isActive ? reenableTabbing(this.navPaneItemContainer) : disableTabbing(this.navPaneItemContainer)
+    this.isActive ? reenableTabbing(this.navPane) : disableTabbing(this.navPane)
   },
 
   computed: {
@@ -32,6 +37,10 @@ export default {
 
     mixinTriggerId () {
       return 'nav-trigger-' + this.id
+    },
+
+    navPane () {
+      return this.$el.querySelector('.nav__pane')
     },
   }
 }
