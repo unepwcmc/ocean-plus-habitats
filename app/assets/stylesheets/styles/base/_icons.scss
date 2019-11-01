@@ -1,4 +1,12 @@
 //--------------------------------------------------
+// variables
+//--------------------------------------------------
+$burger-width: 25px;
+$burger-height: 25px;
+$burger-bar-height: 3px;
+$burger-colour: $body-font-color;
+
+//--------------------------------------------------
 // shared mixins
 //--------------------------------------------------
 @mixin icon-basic() {
@@ -21,7 +29,7 @@
   display: block;
 }
 
-@mixin icon-ribbon($colour, $point-height: rem-calc(8), ) {
+@mixin icon-ribbon($colour, $point-height: rem-calc(8)) {
   $width: rem-calc(40);
   $height: rem-calc(56);
   
@@ -86,7 +94,12 @@
 //--------------------------------------------------
 .icon {
   &--burger {
-    
+    @include burger($burger-width, $burger-height, $burger-bar-height, $burger-colour);
+
+    .nav--active & {
+
+      
+    }
   }
 
   &--citation {

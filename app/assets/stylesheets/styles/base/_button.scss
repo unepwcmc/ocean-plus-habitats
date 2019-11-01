@@ -49,6 +49,7 @@ $button-padding-laptop: 11px 24px;
 .button {
   &--burger {
     @include button--grey;
-    padding-right: rem-calc(54);
+    @include flex;
+    @include flex-v-center;
   }
 }

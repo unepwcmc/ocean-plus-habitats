@@ -50,8 +50,6 @@
       }
 
       &__trigger {
-        @include button--grey;
-
         position: relative;
 
         &.nav--active {

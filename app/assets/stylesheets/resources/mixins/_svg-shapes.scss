@@ -1,0 +1,107 @@
+//--------------------------------------------------
+// burger
+//--------------------------------------------------
+@keyframes burger-toggle-top {
+  40% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes burger-toggle-top-reverse {
+  40% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+}
+
+
+@keyframes burger-toggle-bottom {
+  40% {
+    top: 0;
+    transform: rotate(0);
+  }
+  100% {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes burger-toggle-bottom-reverse {
+  40% {
+    top: 0;
+    transform: rotate(0);
+  }
+  100% {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes burger-toggle-middle {
+  40% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes burger-toggle-middle-reverse {
+  40% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@mixin burger-bar($width, $height, $colour){
+  background-color: $burger-colour;
+  width: $width; height: $height;
+
+  display: block;
+
+  transform-origin: center;
+}
+
+@mixin burger($burger-width, $burger-height, $burger-bar-height, $burger-colour) {
+  @include burger-bar($burger-width, $burger-bar-height, $burger-colour);
+  position: relative;
+
+  animation: burger-toggle-middle-reverse .25s reverse;
+
+  .nav--active & { animation: burger-toggle-middle .25s forwards; }
+
+  &::before {
+    @include burger-bar($burger-width, $burger-bar-height, $burger-colour);
+    content: '';
+
+    position: absolute;
+    bottom: calc((#{$burger-height} - (3*#{$burger-bar-height}))/2);
+
+    animation: burger-toggle-top-reverse .25s reverse;
+
+    .nav--active & { animation: burger-toggle-top .25s forwards; }
+  }
+
+  &::after {
+    @include burger-bar($burger-width, $burger-bar-height, $burger-colour);
+    content: '';
+
+    position: absolute;
+    top: calc((#{$burger-height} - (3*#{$burger-bar-height}))/2);
+
+    animation: burger-toggle-bottom-reverse .25s reverse;
+    
+    .nav--active & { animation: burger-toggle-bottom .25s forwards; }
+  }
+}

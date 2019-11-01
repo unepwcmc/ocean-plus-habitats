@@ -4,7 +4,10 @@
     class="nav__trigger"
     :class="{ 'nav--active' : isActive }"
     aria-haspopup="dialog"
-    @click="openNav"><slot></slot></button>
+    @click="openNav"
+  >
+    <slot></slot>
+  </button>
 </template>
 
 <script>
