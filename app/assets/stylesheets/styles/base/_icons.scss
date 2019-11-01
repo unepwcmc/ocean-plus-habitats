@@ -85,6 +85,10 @@
 // classes
 //--------------------------------------------------
 .icon {
+  &--burger {
+    
+  }
+
   &--citation {
     @include icon-basic;
     @include icon-button-reset;

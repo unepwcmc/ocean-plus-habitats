@@ -69,15 +69,6 @@
   margin-bottom: rem-calc(10);
 }
 
-@mixin text-hero-home {
-  @include text-2;
-  color: $white;
-}
-
-@mixin text-body {
-  @include text-3;
-}
-
 @mixin text-a {
   color: inherit;
   font-weight: $semi-bold;
@@ -89,12 +80,21 @@
   }
 }
 
-@mixin text-tooltip {
+@mixin text-body {
   @include text-3;
+}
+
+@mixin text-hero-home {
+  @include text-2;
+  color: $white;
 }
 
 @mixin text-large {
   @include text-5;
+}
+
+@mixin text-nav {
+  @include text-3;
 }
 
 @mixin text-smallprint {
@@ -104,6 +104,10 @@
 
 @mixin text-tab-title {
   @include text-4;
+}
+
+@mixin text-tooltip {
+  @include text-3;
 }
 
 @mixin text-present-habitats-status {

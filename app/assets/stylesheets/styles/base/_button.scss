@@ -1,39 +1,54 @@
 //--------------------------------------------------
-// buttons
+// shared mixins
+//--------------------------------------------------
+@mixin button-basic {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+
+  &:hover { text-decoration: none; }
+}
+
+// $button-text-mobile: 20px;
+// $button-text-tablet: 25px;
+$button-text-laptop: 18px;
+
+@mixin button-font-size { 
+  font-size: $button-text-laptop;
+}
+
+// $button-padding-mobile: 16px 24px;
+// $button-padding-tablet: 16px 24px;
+$button-padding-laptop: 11px 24px;
+
+@mixin button-padding { 
+  padding: $button-padding-laptop;
+}
+
+@mixin button-rounded {
+  border-radius: $radius-button;
+}
+
+//--------------------------------------------------
+// specific mixins
+//--------------------------------------------------
+@mixin button--grey {
+  @include button-basic;
+  @include button-font-size;
+  @include button-padding;
+  @include button-rounded;
+  background-color: $grey-light;
+  font-weight: $semi-bold;
+}
+
+//--------------------------------------------------
+// classes
 //--------------------------------------------------
 .button {
-  font-size: $button-font-size-small;
-  padding: rem-calc(11 24);
-  
-  @include breakpoint($small) {
-    font-size: $button-font-size-medium;
-    padding: rem-calc(14 35);
-  }
-
-//--------------------------------------------------
-// styles
-//--------------------------------------------------
-  &--link-white {
-    color: $white;
-  }
-
-  //--------------------------------------------------
-  // margin
-  //--------------------------------------------------
-  &-margin-bottom {
-    margin-bottom: rem-calc(14);
-
-    @include breakpoint($small) { margin-bottom: rem-calc(30); }
-  }
-
-  &-margin-top {
-    margin-bottom: rem-calc(14);
-
-    @include breakpoint($small) { margin-bottom: rem-calc(30); }
-  }
-
-  &-margin {
-    @extend .button-margin-top;
-    @extend .button-margin-bottom;
+  &--burger {
+    @include button--grey;
+    padding-right: rem-calc(54);
   }
 }

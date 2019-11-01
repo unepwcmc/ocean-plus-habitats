@@ -40,11 +40,26 @@ module ApplicationHelper
       ],
 
       regions: [
-        title: 'Region name',
-        url: '/'
+        {
+          title: 'Region name',
+          url: '/'
+        },
+        {
+          title: 'Region name',
+          url: '/'
+        },
+        {
+          title: 'Region name',
+          url: '/'
+        },
+        {
+          title: 'Region name',
+          url: '/'
+        }
       ]
     }
-
+  end
+  
   def get_habitat_icon_class (habitat, status='')
     status = status == 'present' || status == '' ? '' : "-#{status}"
 
