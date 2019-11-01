@@ -1,0 +1,53 @@
+//--------------------------------------------------
+// nav
+//--------------------------------------------------
+.nav-wrapper {
+  height: rem-calc(74);
+}
+
+.nav-scrollable {
+  @include breakpoint_down($medium) {
+    overflow-x: scroll;
+
+    display: flex;
+  }
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 2;
+  }
+}
+
+.nav {
+  background-color: $nav; 
+  width: fit-content; height: rem-calc(74);
+
+  @include breakpoint($medium) { width: auto; }
+
+  &__a {
+    color: $white;
+    cursor: pointer;
+    border: solid 1px $nav;
+    border-radius: $radius-button;
+    font-size: rem-calc(20);
+    font-weight: $bold;
+    padding: rem-calc(4 16);
+    text-decoration: none;
+    white-space: nowrap;
+
+    @include breakpoint($small) { 
+      font-size: rem-calc(24);
+      padding: rem-calc(8 20);
+    }
+
+    &.active {
+      @for $i from 1 through length($names){
+        
+      }
+    }
+  }
+}

@@ -1,0 +1,123 @@
+//--------------------------------------------------
+// variables
+//--------------------------------------------------
+// - colours
+// - fonts
+// - dimensions
+// - breakpoins
+// - padding
+// - project specific
+//
+//--------------------------------------------------
+// colours
+//--------------------------------------------------
+$white: #ffffff;
+$grey-light: #f4f4f4;
+$grey: #7f7f7f;
+$grey-dark: #444444;
+$grey-xdark: #383838;
+$black: #000000;
+
+$navy: #293039;
+$navy-dark: #1F232A;
+$navy-xdark: #072029;
+$purple: #BA41FF;
+
+$nav: #1E2329;
+
+$blue-grey: #3A4552;
+$pink: #BA41FF;
+
+$theme-blue: #7AB6FF;
+$theme-green: #3FD18B;
+$theme-orange: #FF8A75;
+$theme-pink: #F35F8D;
+$theme-yellow: #FCDA68;
+
+$primary: $blue-grey;
+$secondary: $navy;
+
+//--------------------------------------------------
+// fonts
+//--------------------------------------------------
+$font-open-sans: 'open sans', sans-serif;
+
+$body-font: $font-open-sans;
+$body-font-color: $grey-xdark;
+$body-font-size: rem-calc(18);
+$body-line-height: 1.4;
+
+$header-font: $font-open-sans;
+$header-font-color: $navy-xdark;
+$header-font-size-mobile: rem-calc(50);
+$header-font-size-tablet: rem-calc(50);
+$header-font-size-laptop: rem-calc(50);
+$header-line-height: 1.2;
+
+$light: 300;
+$normal: 400;
+$semi-bold: 600;
+$bold: 700;
+
+$button-font-size-small: rem-calc(18);
+$button-font-size-medium: rem-calc(18);
+
+//--------------------------------------------------
+// breakpoints
+//--------------------------------------------------
+//! must be px
+$small: 720px;
+$medium: 960px;
+$large: 1200px;
+
+$site-width: rem-calc($large);
+
+//--------------------------------------------------
+// padding
+//--------------------------------------------------
+$gutter-small: rem-calc(15);
+$gutter-medium: rem-calc(24);
+$gutter-large: rem-calc(30);
+
+$page-padding-top-small: rem-calc(14);
+$page-padding-top-medium: rem-calc(26);
+$page-padding-top-large: rem-calc(30);
+
+$page-padding-bottom-small: rem-calc(32);
+$page-padding-bottom-medium: rem-calc(60);
+$page-padding-bottom-large: rem-calc(100);
+
+$section-padding-top-small: rem-calc(20);
+$section-padding-top-medium: rem-calc(50);
+$section-padding-top-large: rem-calc(120);
+
+$section-padding-bottom-small: rem-calc(30);
+$section-padding-bottom-medium: rem-calc(60);
+$section-padding-bottom-large: rem-calc(100);
+
+$section-padding-small-top-small: rem-calc(14);
+$section-padding-small-top-medium: rem-calc(20);
+$section-padding-small-top-large: rem-calc(24);
+
+$section-padding-small-bottom-small: rem-calc(10);
+$section-padding-small-bottom-medium: rem-calc(16);
+$section-padding-small-bottom-large: rem-calc(20);
+
+//--------------------------------------------------
+// style
+//--------------------------------------------------
+$radius-global: rem-calc(3);
+$radius-button: rem-calc(26);
+
+//--------------------------------------------------
+// topbar
+//--------------------------------------------------
+$topbarHeightSmall: rem-calc(47);
+$topbarHeightMedium: rem-calc(60);
+$topbarHeightLarge: rem-calc(93);
+
+//--------------------------------------------------
+// project specific
+//--------------------------------------------------
+$names: ['blue', 'green', 'orange', 'pink', 'yellow'];
+$colours: [$theme-blue, $theme-green, $theme-orange, $theme-pink, $theme-yellow];

@@ -1,0 +1,50 @@
+.header {
+//--------------------------------------------------
+// home
+//--------------------------------------------------
+  &--home {
+    background-color: $grey;
+    background-image: image_url('hero/hero-home.png');
+    background-size: cover;
+    background-position: center;
+    color: $white;
+    padding: rem-calc(85 0 95 0);
+
+    .header {
+      &__h1 {
+        @include h1-home;
+        width: 94%;
+      }
+
+      &__content {
+        
+      }
+
+        &__intro {
+          @include text-hero-home;
+          width: 72%;
+        }
+    }
+  }
+
+//--------------------------------------------------
+// country
+//--------------------------------------------------
+  &--country {
+    color: $body-font-color;
+    height: rem-calc(250);
+
+    .header {
+      &__content {
+        @include flex;
+        @include flex-center;
+        height: 100%;
+      }
+
+        &__icon {
+          margin-right: rem-calc(20);
+        }
+
+    }
+  }
+}

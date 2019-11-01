@@ -1,0 +1,78 @@
+//--------------------------------------------------
+// backgrounds
+//--------------------------------------------------
+.bg--grey-light { background-color: $grey-light; }
+.bg--navy { background-color: $navy; }
+.bg--navy-xdark { background-color: $navy-xdark; }
+
+.bg-image-overlay--white {
+  @include overlay(rgba($white, 0.16));
+}
+
+//--------------------------------------------------
+// fouc (flash of unstyled content)
+//--------------------------------------------------
+[v-cloak] { display: none; }
+
+//--------------------------------------------------
+// font
+//--------------------------------------------------
+.light { font-weight: $light;}
+.normal { font-weight: normal; }
+strong, .bold { font-weight: $bold; }
+.italic { font-style: italic; }
+
+.white { color: $white; }
+
+.text--smallprint {
+  font-size: rem-calc(10);
+  @include breakpoint($medium) { font-size: rem-calc(12); }
+}
+
+//--------------------------------------------------
+// dimensions
+//--------------------------------------------------
+.w-100 { width: 100%; }
+.h-100 { height: 100%; }
+
+//--------------------------------------------------
+// lists
+//--------------------------------------------------
+.ul-unstyled { @include ul-unstyled; }
+
+.ul-inline li { display: inline-block; }
+
+//--------------------------------------------------
+// display
+//--------------------------------------------------
+.display-block { display: block; }
+.display-inline { display: inline-block; }
+
+//--------------------------------------------------
+// positioning
+//--------------------------------------------------
+.center { text-align: center; }
+.right { text-align: right; }
+.left { text-align: left; }
+
+.margin-center { 
+  margin-left: center;
+  margin-right: center;
+}
+
+.relative { position: relative; }
+
+.absolute-center {
+  position: absolute;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+//--------------------------------------------------
+// margin & padding
+//--------------------------------------------------
+.no-margin { margin: 0; }
+.margin-center { margin: 0 auto; }
+.margin-space-left { margin-left: rem-calc(14); }
+.margin-space-right { margin-right: rem-calc(14); }

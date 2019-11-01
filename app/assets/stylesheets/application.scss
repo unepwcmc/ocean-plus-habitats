@@ -13,15 +13,24 @@
  *= require_self
  */
 
-// utilities 
-@import './utilities/rem-calc.scss';
-@import './utilities/variables.scss';
-@import './utilities/media-queries.scss';
-@import './utilities/flexbox.scss';
-@import './utilities/base.scss';
-@import './utilities/helpers.scss';
-@import './utilities/mixins-shared.scss';
+// resources 
+@import './resources/fonts/open-sans.scss';
 
-// components
-@import './components/*';
-@import './components-vue/*'
+@import './resources/mixins/rem-calc.scss';
+
+@import './resources/variables/base.scss';
+
+@import './resources/mixins/media-queries.scss';
+@import './resources/mixins/flexbox.scss';
+@import './resources/mixins/layout.scss';
+@import './resources/mixins/helpers.scss';
+@import './resources/mixins/text.scss';
+
+// styles
+@import './styles/helpers/*';
+
+@import './styles/base/button.scss';
+@import './styles/base/footer.scss';
+@import './styles/base/header.scss';
+
+@import './styles/components/*';
