@@ -92,6 +92,7 @@
 
     .nav--active & {
       background-image: image_url('icons/cross-grey-xdark.svg');
+      height: rem-calc(16);
     }
   }
 

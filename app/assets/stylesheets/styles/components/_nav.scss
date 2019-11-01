@@ -35,18 +35,16 @@
     &.nav {
       &__pane {
         background-color: $grey-light;
-        width: 100%; height: auto;
-        max-height: 0;
+        width: 100%;
         
+        display: none;
         position: absolute;
         top: 100%;
         right: 0;
         left: 0;
         z-index: $z-300;
 
-        transition: height .5s ease-in-out;
-
-        &.nav--active { max-height: rem-calc(400); }
+        &.nav--active { display: block; }
       }
 
       &__trigger {
