@@ -1,12 +1,4 @@
 //--------------------------------------------------
-// variables
-//--------------------------------------------------
-$burger-width: 25px;
-$burger-height: 25px;
-$burger-bar-height: 3px;
-$burger-colour: $body-font-color;
-
-//--------------------------------------------------
 // shared mixins
 //--------------------------------------------------
 @mixin icon-basic() {
@@ -94,11 +86,12 @@ $burger-colour: $body-font-color;
 //--------------------------------------------------
 .icon {
   &--burger {
-    @include burger($burger-width, $burger-height, $burger-bar-height, $burger-colour);
+    @include icon-basic;
+    background-image: image_url('icons/burger.svg');
+    width: rem-calc(24); height: rem-calc(13);
 
     .nav--active & {
-
-      
+      background-image: image_url('icons/cross-grey-xdark.svg');
     }
   }
 
