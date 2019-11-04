@@ -10,10 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191104150507) do
+ActiveRecord::Schema.define(version: 20191104151250) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "change_stats", force: :cascade do |t|
+    t.bigint "habitat_id"
+    t.bigint "geo_entity_id"
+    t.decimal "total_value_1996", default: "0.0", null: false
+    t.decimal "total_value_2007", default: "0.0", null: false
+    t.decimal "total_value_2008", default: "0.0", null: false
+    t.decimal "total_value_2009", default: "0.0", null: false
+    t.decimal "total_value_2010", default: "0.0", null: false
+    t.decimal "total_value_2015", default: "0.0", null: false
+    t.decimal "total_value_2016", default: "0.0", null: false
+    t.integer "baseline_year", default: 2010, null: false
+    t.decimal "protected_value", default: "0.0", null: false
+    t.decimal "protected_percentage", default: "0.0", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["geo_entity_id"], name: "index_change_stats_on_geo_entity_id"
+    t.index ["habitat_id"], name: "index_change_stats_on_habitat_id"
+  end
 
   create_table "geo_entities", force: :cascade do |t|
     t.string "name", null: false
@@ -48,6 +67,8 @@ ActiveRecord::Schema.define(version: 20191104150507) do
     t.text "wms_url"
   end
 
+  add_foreign_key "change_stats", "geo_entities"
+  add_foreign_key "change_stats", "habitats"
   add_foreign_key "geo_entity_stats", "geo_entities"
   add_foreign_key "geo_entity_stats", "habitats"
 end
