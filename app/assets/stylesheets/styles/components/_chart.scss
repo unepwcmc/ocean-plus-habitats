@@ -18,187 +18,26 @@
 }
 
 @mixin bar-label {
-  color: $grey-dark;
-  font-weight: $bold;
-  opacity: 0;
+  @include text-chart;
+  // opacity: 0;
 
   &.animate { opacity: 1; }
 }
 
-@mixin colour {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+@mixin chart-default {
+  background-color: $grey-light;
+}
 
-  @for $i from 1 through length($names){
-    
+@mixin chart-get-colours {
+  @each $habitat in $habitats {
+    &.theme--#{$habitat} { background-color: map-get($habitat_colours, $habitat); }
   }
 }
 
 //--------------------------------------------------
-// chart
+// chart types
 //--------------------------------------------------
 .chart {
-
-//--------------------------------------------------
-// column chart
-//--------------------------------------------------
-  &--column {
-    @include breakpoint($medium) { 
-      justify-content: space-between;
-
-      display: flex;
-    }
-
-    .chart {
-      &__content {
-        @include chart-content;
-      }
-
-      &__scrollable {
-        @include breakpoint-down($small) { 
-          overflow-x: auto;
-
-          display: flex;
-        }
-
-        @include breakpoint($medium) { width: 68%; }
-      }
-
-        &__chart {
-          @include breakpoint-down($small) { min-width: 200%; }
-          @include breakpoint($medium) { justify-content: space-between; }
-        }
-
-          &__bar {
-            background-color: $white;
-            box-shadow: 0 1px 2px 1px rgba($black, 0.2);
-            width: rem-calc(91); height: rem-calc(252);
-
-            position: relative;
-
-            @include breakpoint($small) { width: rem-calc(134); height: rem-calc(390); }
-          }
-
-            &__bar-label {
-              @include bar-label;
-              font-size: rem-calc(12);
-
-              position: relative;
-              top: rem-calc(22);
-              z-index: 1;
-
-              transition: opacity 1s ease-in-out;
-              
-              @include breakpoint($small) { font-size: rem-calc(17); }
-              @include breakpoint($medium) { font-size: rem-calc(18); }
-            }
-
-            &__colour {
-              @include colour;
-              right: 0;
-
-              transform: scaleY(0);
-              transform-origin: bottom;
-              transition: transform 1s ease-out;
-
-              &.animate { transform: scaleY(1); }
-            }
-
-          &__label {
-            @include chart-label;
-            margin-top: rem-calc(10);
-            width: rem-calc(91);
-          }
-    }
-  }
-
-//--------------------------------------------------
-// row chart
-//--------------------------------------------------
-  &--row {
-    width: 100%;
-
-    @include breakpoint($medium) { 
-      justify-content: space-between;
-
-      display: flex;
-    }
-
-    .chart {
-      &__content {
-        @include chart-content;
-      }
-
-      &__chart {
-        @include breakpoint($medium) { width: 68%; }
-      }
-
-      &__item {
-        margin-bottom: rem-calc(14);
-
-        position: relative;
-
-        @include breakpoint($medium) {
-          justify-content: flex-end;
-
-          display: flex;
-        }
-      }
-
-        &__bar {
-          background-color: $white;
-          box-shadow: 0 1px 2px 1px rgba($black, 0.2);
-          width: 100%; height: rem-calc(42);
-
-          position: relative;
-          
-          @include breakpoint($small) { height: rem-calc(84); }
-          @include breakpoint($medium) { width: rem-calc(690); }
-        }
-
-          &__bar-label {
-            @include bar-label;
-            font-size: rem-calc(20);
-
-            position: absolute;
-            top: 50%;
-            right: rem-calc(12);
-            z-index: 1;
-
-            transform: translateY(-50%);
-
-            transition: opacity 1s ease-in-out;
-
-            @include breakpoint($small) { 
-              font-size: rem-calc(30);
-
-              right: rem-calc(40); 
-            }
-          }
-
-          &__colour {
-            @include colour;
-            top: 0;
-              
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 1s ease-out;
-
-            &.animate { transform: scaleX(1); }
-          }
-
-        &__label {
-          @include chart-label;
-          margin: 0;
-
-          position: absolute;
-          top: 50%;
-          left: 0;
-          z-index: 1;
-
-          transform: translateY(-50%);
-        }
-      }
-  }
+  @import './charts/chart-row.scss';
+  @import './charts/chart-rows.scss';
 }

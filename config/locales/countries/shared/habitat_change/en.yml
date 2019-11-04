@@ -1,0 +1,7 @@
+en:
+  countries:
+    shared:
+      habitat_change:
+        title: Change in habitat cover
+        citation: Change in habitat cover citation text
+        chart-text: "km<sup>2</sup> change in ${habitat} cover"

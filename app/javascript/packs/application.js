@@ -9,7 +9,7 @@ Vue.use(TurbolinksAdapter)
 import store from '../store/store.js'
 
 // components
-import Habitat from '../Habitat.vue'
+import ChartRows from '../components/chart/ChartRows.vue'
 import Mapbox from '../components/map/Mapbox.vue'
 import Modal from '../components/modal/Modal.vue'
 import ModalTrigger from '../components/modal/ModalTrigger.vue'
@@ -28,7 +28,7 @@ document.addEventListener('turbolinks:load', () => {
       el: '#v-app',
       store,
       components: {
-        Habitat,
+        ChartRows,
         Mapbox,
         Modal,
         ModalTrigger,

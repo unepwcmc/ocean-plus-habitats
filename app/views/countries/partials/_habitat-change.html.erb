@@ -1,0 +1,9 @@
+<section class="section-padding">
+  <div class="container">
+    <div class="h2-wrapper flex flex-v-center">
+      <h2><%= t('countries.shared.habitat_change.title') %></h2>
+      <modal-trigger id="citation" :modal-content="{ content: '<%= t('countries.shared.habitat_change.citation'); %>' }" class="icon--citation margin-space-left"></modal-trigger>
+    </div>
+    <chart-rows :rows="<%= @habitat_change %>"></chart-rows>
+  </div>
+</section>

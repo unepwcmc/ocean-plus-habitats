@@ -29,6 +29,11 @@ class CountriesController < ApplicationController
 
     @target_tabs = I18n.t('countries.shared.targets.tabs')
     @target_text = country_yml[:targets]
+
+    @habitat_change = [
+      { id: 'warm-water-coral', title: '2009-2019',  previous: 80, current: 40 },
+      { id: 'mangrove', title: '2000-2010', previous: 50, current: 25 }
+    ].to_json
   end
 
   def getStatusText status

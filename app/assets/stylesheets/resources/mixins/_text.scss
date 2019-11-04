@@ -89,6 +89,11 @@
   }
 }
 
+@mixin text-chart {
+  @include text-4;
+  font-weight: $bold;
+}
+
 @mixin text-tooltip {
   @include text-3;
 }
