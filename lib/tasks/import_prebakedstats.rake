@@ -3,7 +3,7 @@ require 'csv'
 namespace :import do
 
   desc "import CSV data into database"
-  task :regionalstats, [:csv_file] => [:environment] do
+  task :prebakedstats, [:csv_file] => [:environment] do
     habitats = Habitat.all
 
     # import habitat data CSVs
