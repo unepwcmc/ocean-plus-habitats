@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191104145302) do
+ActiveRecord::Schema.define(version: 20191104145719) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "geo_entities", force: :cascade do |t|
     t.string "name", null: false
-    t.string "iso2", null: false
-    t.string "iso3", null: false
+    t.string "iso2"
+    t.string "iso3"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
