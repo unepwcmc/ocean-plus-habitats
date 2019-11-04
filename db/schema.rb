@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181120162249) do
+ActiveRecord::Schema.define(version: 20191104145302) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "countries", force: :cascade do |t|
+  create_table "geo_entities", force: :cascade do |t|
     t.string "name", null: false
     t.string "iso2", null: false
     t.string "iso3", null: false
@@ -48,6 +48,6 @@ ActiveRecord::Schema.define(version: 20181120162249) do
     t.index ["habitat_id"], name: "index_static_stats_on_habitat_id"
   end
 
-  add_foreign_key "static_stats", "countries"
+  add_foreign_key "static_stats", "geo_entities", column: "country_id"
   add_foreign_key "static_stats", "habitats"
 end

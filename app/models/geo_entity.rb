@@ -1,4 +1,4 @@
-class Country < ApplicationRecord
+class GeoEntity < ApplicationRecord
   has_many :country_stats
   has_many :regional_stats
   # At the moment, only mangroves have got change stats,
