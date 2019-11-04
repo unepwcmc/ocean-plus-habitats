@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191104145719) do
+ActiveRecord::Schema.define(version: 20191104150507) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,18 @@ ActiveRecord::Schema.define(version: 20191104145719) do
     t.string "iso3"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "geo_entity_stats", force: :cascade do |t|
+    t.bigint "habitat_id"
+    t.bigint "geo_entity_id"
+    t.decimal "protected_value", default: "0.0", null: false
+    t.decimal "total_value", default: "0.0", null: false
+    t.decimal "protected_percentage", default: "0.0", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["geo_entity_id"], name: "index_geo_entity_stats_on_geo_entity_id"
+    t.index ["habitat_id"], name: "index_geo_entity_stats_on_habitat_id"
   end
 
   create_table "habitats", force: :cascade do |t|
@@ -36,18 +48,6 @@ ActiveRecord::Schema.define(version: 20191104145719) do
     t.text "wms_url"
   end
 
-  create_table "static_stats", force: :cascade do |t|
-    t.bigint "habitat_id"
-    t.bigint "country_id"
-    t.decimal "protected_value", default: "0.0", null: false
-    t.decimal "total_value", default: "0.0", null: false
-    t.decimal "protected_percentage", default: "0.0", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["country_id"], name: "index_static_stats_on_country_id"
-    t.index ["habitat_id"], name: "index_static_stats_on_habitat_id"
-  end
-
-  add_foreign_key "static_stats", "geo_entities", column: "country_id"
-  add_foreign_key "static_stats", "habitats"
+  add_foreign_key "geo_entity_stats", "geo_entities"
+  add_foreign_key "geo_entity_stats", "habitats"
 end
