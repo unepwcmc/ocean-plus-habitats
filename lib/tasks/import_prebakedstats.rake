@@ -13,25 +13,8 @@ namespace :import do
 
       import_regional_csv_file(habitat.name, csv_file)
     end
-
-    # import regional seas country data CSV
-    csv_file = "regionalseas_country.csv"
-
-    import_regionalseas_csv_file(csv_file)
   end
 
-  def import_regionalseas_csv_file(csv_file)
-    filename = "#{Rails.root}/lib/data/#{csv_file}"
-
-    csv = File.open(filename, encoding: "utf-8")
-    csv_headers = File.readlines(csv).first.split(",")
-
-    CSV.parse(csv, headers: true, encoding: "utf-8") do |row|
-      csv_regionalseas_row = row.to_hash
-
-      parse_regionalseas csv_headers, csv_regionalseas_row
-    end
-  end
 
   def import_regional_csv_file(habitat, csv_file)
     filename = "#{Rails.root}/lib/data/#{csv_file}"
@@ -47,20 +30,6 @@ namespace :import do
         parse_standard csv_headers, csv_regionalstats_row, habitat
       end
     end
-  end
-
-  def parse_regionalseas csv_headers, csv_regionalseas_row
-    puts "csv_headers: #{csv_headers}"
-    puts "csv_regionalseas_row: #{csv_regionalseas_row}"
-
-    regionalseas_standard_hash = {
-      name: csv_headers[0],
-      convention: csv_headers[1],
-      iso3: csv_headers[2].chomp
-    }.freeze
-
-    puts regionalseas_standard_hash.inspect
-    byebug
   end
 
   def parse_change csv_headers, csv_row, habitat
