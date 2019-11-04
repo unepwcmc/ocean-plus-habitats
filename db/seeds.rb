@@ -17,7 +17,7 @@ end
 count = 0
 CSV.foreach('lib/data/countries.csv', headers: true) do |row|
   name, iso2, iso3 = [row['name'], row['alpha-2'], row['alpha-3']]
-  next if Country.where(name: name).first
-  count += 1 if Country.create(name: name, iso2: iso2, iso3: iso3)
+  next if GeoEntity.where(name: name).first
+  count += 1 if GeoEntity.create(name: name, iso2: iso2, iso3: iso3)
 end
 Rails.logger.info("#{count} countries were created successfully!")
