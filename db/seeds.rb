@@ -21,3 +21,11 @@ CSV.foreach('lib/data/countries.csv', headers: true) do |row|
   count += 1 if GeoEntity.create(name: name, iso2: iso2, iso3: iso3)
 end
 Rails.logger.info("#{count} countries were created successfully!")
+
+count = 0
+CSV.foreach('lib/data/regionalseas.csv', headers: true) do |row|
+  name, iso2, iso3 = [row['name'], nil, nil]
+  next if GeoEntity.where(name: name).first
+  count +=1 if GeoEntity.create(name: name, iso2: iso2, iso3: iso3)
+end
+Rails.logger.info("#{count} regions were created successfully!")
