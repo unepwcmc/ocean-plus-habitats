@@ -1,12 +1,12 @@
-Region,total_value,total_value_protected,percent_protected
-East Asian Seas,38186,8165,21
-Eastern Africa,9634,2676,28
-Mediterranean,1,1,61
-North-East Pacific,195,22,11
-North-West Pacific,1097,747,68
-Pacific,61753,33517,54
-Red Sea and Gulf of Aden,8361,2768,33
-ROPME Area,1052,95,9
-South-East Pacific,145,141,97
-South Asian Seas,4890,292,6
-Wider Caribbean,12991,5673,44
+"Region","total_value","protected_value","protected_percentage"
+"East Asian Seas",38186,8165,21
+"Eastern Africa",9634,2676,28
+"Mediterranean",1,1,61
+"North-East Pacific",195,22,11
+"North-West Pacific",1097,747,68
+"Pacific",61753,33517,54
+"Red Sea and Gulf of Aden",8361,2768,33
+"ROPME Area",1052,95,9
+"South-East Pacific",145,141,97
+"South Asian Seas",4890,292,6
+"Wider Caribbean",12991,5673,44
