@@ -5,32 +5,58 @@ namespace :import do
   desc "import CSV data into database"
   task :prebakedstats, [:csv_file] => [:environment] do
     habitats = Habitat.all
+    geo_entities = ["countries", "regions"].freeze
 
-    # import habitat data CSVs
-    habitats.each do |habitat|
-      puts habitat.name
-      csv_file = "#{habitat.name}.csv"
+    # import habitat data CSVs 
+    geo_entities.each do |geo_entity|
+      habitats.each do |habitat|
+        puts habitat.name
+        csv_file = "#{geo_entity}/#{habitat.name}.csv"
 
-      import_regional_csv_file(habitat.name, csv_file)
+        puts csv_file
+
+        #import_countries_csv_file(habitat.name, csv_file)
+        #import_regional_csv_file(habitat.name, csv_file)
+        import_new_csv_file(geo_entity, habitat.name, csv_file)
+      end
     end
   end
 
-
-  def import_regional_csv_file(habitat, csv_file)
+  def import_new_csv_file(geo_entity, habitat, csv_file)
     filename = "#{Rails.root}/lib/data/#{csv_file}"
     csv = File.open(filename, encoding: "utf-8")
     csv_headers = File.readlines(csv).first.split(",")
 
     CSV.parse(csv, headers: true, encoding: "utf-8") do |row|
-      csv_regionalstats_row = row.to_hash
+      csv_new_row = row.to_hash
 
       if csv_headers.grep(/baseline/).any?
-        parse_change csv_headers, csv_regionalstats_row, habitat
+        puts csv_new_row.inspect
+        #byebug
+        #parse_change csv_headers, csv_regionalstats_row, habitat
       else
-        parse_standard csv_headers, csv_regionalstats_row, habitat
+        puts csv_new_row.inspect
+        #byebug
+        #parse_standard csv_headers, csv_regionalstats_row, habitat
       end
     end
   end
+
+  # def import_regional_csv_file(habitat, csv_file)
+  #   filename = "#{Rails.root}/lib/data/#{csv_file}"
+  #   csv = File.open(filename, encoding: "utf-8")
+  #   csv_headers = File.readlines(csv).first.split(",")
+
+  #   CSV.parse(csv, headers: true, encoding: "utf-8") do |row|
+  #     csv_regionalstats_row = row.to_hash
+
+  #     if csv_headers.grep(/baseline/).any?
+  #       parse_change csv_headers, csv_regionalstats_row, habitat
+  #     else
+  #       parse_standard csv_headers, csv_regionalstats_row, habitat
+  #     end
+  #   end
+  # end
 
   def parse_change csv_headers, csv_row, habitat
     #puts "parse change"
