@@ -1,5 +1,8 @@
 class Habitat < ApplicationRecord
 
+  has_many :static_stats
+  has_many :change_stats
+
   def global_coverage_title(habitat_type)
     habitat_type == 'points' ? "Total number of #{title.downcase} records globally" : "Total global recorded coverage of #{title.downcase}"
   end
