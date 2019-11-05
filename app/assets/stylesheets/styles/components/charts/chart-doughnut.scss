@@ -62,6 +62,7 @@
       }
 
         &__panel {
+          @include text-sdg-panel;
           border-radius: 2px;
           color: $white;
           margin-top: rem-calc(44);
@@ -73,25 +74,18 @@
           transition: background-color ease .1s;
 
           @include breakpoint($medium) { 
-            font-size: rem-calc(18);
             padding: rem-calc(52 36); 
-
             height: 80%;
           }
         }
 
           &__panel-text {
-            font-size: rem-calc(14);
-
-            @include breakpoint($medium) { font-size: rem-calc(18); }
+            @include text-sdg-panel;
+            color: inherit;
           }
 
           &__smallprint {
-            font-size: rem-calc(12);
-            font-style: italic;
-            font-weight: $medium;
-
-            @include breakpoint($small) { font-size: rem-calc(14); }
+            @include text-sdg-smallprint;
           }
     }
   }

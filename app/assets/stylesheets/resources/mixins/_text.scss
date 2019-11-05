@@ -94,3 +94,13 @@
 @mixin text-footer-citation {
   font-size: rem-calc(16);
 }
+
+@mixin text-sdg-panel {
+  @include text-3;
+}
+
+@mixin text-sdg-smallprint {
+  @include responsive-styles(font-size, 12px, 14px, 14px);
+  font-style: italic;
+  font-weight: $medium;
+}
