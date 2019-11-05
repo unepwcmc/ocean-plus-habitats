@@ -45,11 +45,12 @@ class SiteController < ApplicationController
       SELECT DISTINCT geo_entities.id AS geo_entities_id,
                       geo_entities.iso3 AS iso3,
                       geo_entities.name AS name,
+                      geo_entity_stats.habitat_id as habitat_id,
                       geo_entity_stats.total_value AS total_value
 
                       FROM geo_entities
                       INNER JOIN geo_entity_stats ON geo_entities.id = geo_entity_stats.geo_entity_id
-
+                      INNER JOIN habitats ON habitats.id = geo_entity_stats.habitat_id
                       WHERE geo_entities.iso3 IS NOT NULL
 
                       ORDER BY total_value DESC
