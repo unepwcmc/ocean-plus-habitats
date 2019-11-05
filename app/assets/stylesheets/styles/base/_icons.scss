@@ -1,7 +1,29 @@
 //--------------------------------------------------
-// icons
+// shared mixins
+//--------------------------------------------------
+@mixin icon-basic() {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@mixin icon-button-reset() {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+//--------------------------------------------------
+// classes
 //--------------------------------------------------
 .icon {
+  &--citation {
+    @include icon-basic;
+    @include icon-button-reset;
+    background-image: image_url('icons/citation.svg');
+    width: rem-calc(36); height: rem-calc(36);
+  }
 
   &--scroll {
     background-image: image_url('icons/icon-scroll.svg');

@@ -14,8 +14,11 @@
 
 @mixin text-2 {
   @include responsive-styles(font-size, rem-calc(25), rem-calc(25), rem-calc(25)); 
+  color: $header-font-color;
   font-family: $header-font;
   font-weight: $semi-bold;
+  margin-top: 0;
+  margin-bottom: rem-calc(30);
 }
 
 @mixin text-3 {
@@ -26,6 +29,11 @@
 
 @mixin text-4 {
   // @include responsive-styles(font-size, rem-calc(18), rem-calc(20));
+}
+
+@mixin text-5 {
+  @include responsive-styles(font-size, rem-calc(40), rem-calc(40), rem-calc(40));
+  font-weight: $bold;
 }
 
 //--------------------------------------------------
@@ -49,9 +57,6 @@
 
 @mixin h2 {
   @include text-2;
-  color: $primary;
-  
-  text-align: center;
 }
 
 @mixin h3 {
@@ -89,6 +94,10 @@
 
 @mixin text-tooltip {
   @include text-3;
+}
+
+@mixin text-large {
+  @include text-5;
 }
 
 @mixin text-footer-citation {
