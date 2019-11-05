@@ -66,12 +66,14 @@ namespace :import do
       :total_value_2016
     ].freeze
 
-    iso3 = nil
+    iso3, name = nil
     protected_value, protected_percentage = 0
 
     regionalstats_change_hash.keys.each do |key|  
       if key == :iso3
         iso3 = csv_row[strip_key(regionalstats_change_hash[key])]&.strip
+      elsif key == :name
+        name = csv_row[strip_key(regionalstats_change_hash[key])]&.strip
         #puts "iso3: #{iso3}"
       elsif total_value_array.include? key
         (total_value_years[key] ||= csv_row[strip_key(regionalstats_change_hash[key])]&.strip)
@@ -85,7 +87,8 @@ namespace :import do
       end
     end
 
-    insert_change_stat(habitat, geo_entity_id, total_value_years, protected_value, protected_percentage)
+    geo_entity = fetch_geo_entity(name, iso3)
+    insert_change_stat(habitat, geo_entity, total_value_years, protected_value, protected_percentage)
   end
 
   def parse_geo_entity_stat csv_headers, csv_row, geo_entity_type, habitat
@@ -98,12 +101,14 @@ namespace :import do
       protected_percentage: csv_headers[3].chomp
     }.freeze
 
-    iso3 = nil
+    iso3, name = nil
     total_value, total_value_protected, protected_percentage = 0
 
     regionalstats_standard_hash.keys.each do |key|
       if key == :iso3
         iso3 = csv_row[strip_key(regionalstats_standard_hash[key])]&.strip
+      elsif key == :name
+        name = csv_row[strip_key(regionalstats_standard_hash[key])]&.strip
         #puts "iso3: #{iso3}"
       elsif key == :total_value
         total_value = csv_row[strip_key(regionalstats_standard_hash[key])]&.strip
@@ -116,11 +121,11 @@ namespace :import do
         #puts "protected_percentage: #{protected_percentage}"
       end
     end
-
-    insert_geo_entity_stat(habitat, geo_entity_type, total_value, total_value_protected, protected_percentage)
+    geo_entity = fetch_geo_entity(name, iso3)
+    insert_geo_entity_stat(habitat, geo_entity, total_value, total_value_protected, protected_percentage)
   end
 
-  def insert_geo_entity_stat(habitat, geo_entity_type, total_value, total_value_protected, protected_percentage)
+  def insert_geo_entity_stat(habitat, geo_entity, total_value, total_value_protected, protected_percentage)
     byebug
     country = nil
     habitat = Habitat.find_by(name: habitat)
@@ -144,7 +149,7 @@ namespace :import do
                         protected_percentage: protected_percentage || 0)
   end
 
-  def insert_change_stat(habitat, geo_entity_id, total_value_years, protected_value, protected_percentage)
+  def insert_change_stat(habitat, geo_entity, total_value_years, protected_value, protected_percentage)
     byebug
     country = nil
     habitat = Habitat.find_by(name: habitat)
@@ -172,4 +177,18 @@ namespace :import do
   def strip_key key
     key.tr('"\"', '')
   end
+
+  def fetch_geo_entity(name, iso3)
+    byebug
+    if name.present?
+      geo_entity = GeoEntity.find_by(name: name)
+    elsif (iso3.include? "/") || (iso3.include? "ABNJ")
+      puts "Disputed territory #{iso3}"
+      geo_entity = GeoEntity.find_by(name: "Disputed")
+    else
+      geo_entity = GeoEntity.find_by(iso3: iso3)
+    end
+    geo_entity
+  end
+
 end
