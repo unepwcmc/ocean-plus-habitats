@@ -34,7 +34,13 @@
       <div class="container">
         <h3 class="white">Commitments and pledges</h3>
         <tabs>
-          <tab v-for="commitment in habitat.commitments" :id="id(commitment.title)" :title="commitment.title" class="tab__content">
+          <tab 
+            v-for="(commitment, index) in habitat.commitments" 
+            :key="getId(index)"
+            :id="id(commitment.title)" 
+            :title="commitment.title" 
+            class="tab__content"
+          >
             <div v-for="item in commitment.list" class="tab__content-item flex">
               <template v-if="item.icon">
                 <img :src="item.icon" :alt="item.title" class="tab__content-icon">
@@ -140,6 +146,10 @@
           .catch(function (error) {
             console.log(error)
           })
+      },
+
+      getId (index) {
+        return `tab-${this.id}-${index}`
       }
     }
   }

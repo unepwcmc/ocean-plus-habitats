@@ -12,10 +12,23 @@ class SiteController < ApplicationController
 
     @habitatData = HabitatsSerializer.new(@habitat, @chart_greatest_coverage, @chart_protected_areas, @global).serialize
 
-    respond_to do |format|
-      format.html
-      format.json { render json: @habitatData }
+    doughnut_chart = I18n.t('home.sdg.doughnut_chart_data')
+    @doughnut_chart = []
+
+    doughnut_chart.each do |item|
+      @doughnut_chart.push({
+        'title': item[:title],
+        'colour': item[:colour],
+        'icon': ActionController::Base.helpers.image_url(item[:icon]),
+        'description': item[:description],
+        'url': item[:url]
+      })
     end
+
+    # respond_to do |format|
+    #   format.html
+    #   format.json { render json: @habitatData }
+    # end
   end
 
   private

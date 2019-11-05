@@ -7,6 +7,7 @@ Vue.config.productionTip = false
 Vue.use(TurbolinksAdapter)
 
 // components
+import ChartDoughnut from '../components/chart/ChartDoughnut'
 import Habitat from '../Habitat.vue'
 import Tab from '../components/tabs/Tab.vue'
 import Tabs from '../components/tabs/Tabs.vue'
@@ -20,6 +21,7 @@ document.addEventListener('turbolinks:load', () => {
   const app = new Vue({
     el: '#v-app',
     components: {
+      ChartDoughnut,
       Habitat,
       Tab,
       Tabs,
