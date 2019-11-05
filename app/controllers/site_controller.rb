@@ -42,13 +42,21 @@ class SiteController < ApplicationController
   def load_charts_data
 
     query = <<-SQL
-      SELECT geo_entities.id AS geo_entities_id,
-             geo_entity_stats.total_value AS total_value
+      SELECT DISTINCT geo_entities.id AS geo_entities_id,
+                      geo_entities.iso3 AS iso3,
+                      geo_entities.name AS name,
+                      geo_entity_stats.total_value AS total_value
 
-             FROM geo_entities
-             INNER JOIN geo_entity_stats ON geo_entities.id = geo_entity_stats.geo_entity_id
+                      FROM geo_entities
+                      INNER JOIN geo_entity_stats ON geo_entities.id = geo_entity_stats.geo_entity_id
 
-             SQL
+                      WHERE geo_entities.iso3 IS NOT NULL
+
+                      ORDER BY total_value DESC
+
+                      SQL
+
+             #GROUP BY geo_entities.id, geo_entities.iso3, geo_entities.name, geo_entity_stats.total_value
 
     geo_entity_stats = ActiveRecord::Base.connection.execute(query)
     # geo_entity_stats = []
@@ -62,6 +70,9 @@ class SiteController < ApplicationController
     # end
 
     puts geo_entity_stats.inspect
+    geo_entity_stats.first(30).each do |geo_entity_stat|
+      puts geo_entity_stat.inspect
+    end
     byebug
     top_five_countries = GeoEntity.countries.geo_entity_stat.where(habitat_id: @habitat.id)
                                    .order('total_value DESC')
