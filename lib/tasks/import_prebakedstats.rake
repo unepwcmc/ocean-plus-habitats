@@ -7,7 +7,7 @@ namespace :import do
     habitats = Habitat.all
     geo_entity_types = ["countries", "regions"].freeze
 
-    # import habitat data CSVs 
+    # import habitat data CSVs for each entity type
     geo_entity_types.each do |geo_entity_type|
       habitats.each do |habitat|
         puts habitat.name
@@ -29,18 +29,15 @@ namespace :import do
 
       if csv_headers.grep(/baseline/).any?
         puts csv_new_row.inspect
-        #byebug
         parse_change_stat csv_headers, csv_new_row, geo_entity_type, habitat
       else
         puts csv_new_row.inspect
-        #byebug
         parse_geo_entity_stat csv_headers, csv_new_row, geo_entity_type, habitat
       end
     end
   end
 
   def parse_change_stat csv_headers, csv_row, geo_entity_type, habitat
-    #puts "parse change"
     total_value_years = {}
  
     parse_change_stat_hash = {
@@ -74,16 +71,12 @@ namespace :import do
         iso3 = csv_row[strip_key(parse_change_stat_hash[key])]&.strip
       elsif key == :name
         name = csv_row[strip_key(parse_change_stat_hash[key])]&.strip
-        #puts "iso3: #{iso3}"
       elsif total_value_array.include? key
         (total_value_years[key] ||= csv_row[strip_key(parse_change_stat_hash[key])]&.strip)
-        #puts "total_value: #{total_value_years}"
       elsif key == :protected_value
         protected_value = csv_row[strip_key(parse_change_stat_hash[key])]&.strip
-        #puts "protected_value: #{protected_value}"
       elsif key == :protected_percentage
         protected_percentage = csv_row[strip_key(parse_change_stat_hash[key])]&.strip
-        #puts "protected_percentage: #{protected_percentage}"
       end
     end
 
@@ -92,8 +85,6 @@ namespace :import do
   end
 
   def parse_geo_entity_stat csv_headers, csv_row, geo_entity_type, habitat
-    #puts "parse standard"
-
     parse_geo_entity_stat_hash = {
       iso3: csv_headers[0],
       total_value: csv_headers[1],
@@ -109,16 +100,12 @@ namespace :import do
         iso3 = csv_row[strip_key(parse_geo_entity_stat_hash[key])]&.strip
       elsif key == :name
         name = csv_row[strip_key(parse_geo_entity_stat_hash[key])]&.strip
-        #puts "iso3: #{iso3}"
       elsif key == :total_value
         total_value = csv_row[strip_key(parse_geo_entity_stat_hash[key])]&.strip
-        #puts "total_value: #{total_value}"
       elsif key == :total_value_protected
         total_value_protected = csv_row[strip_key(parse_geo_entity_stat_hash[key])]&.strip
-        #puts "total_value_protected: #{total_value_protected}"
       elsif key == :protected_percentage
         protected_percentage = csv_row[strip_key(parse_geo_entity_stat_hash[key])]&.strip
-        #puts "protected_percentage: #{protected_percentage}"
       end
     end
     geo_entity = fetch_geo_entity(name, iso3)
@@ -127,8 +114,6 @@ namespace :import do
 
   def insert_geo_entity_stat(habitat, geo_entity, total_value, total_value_protected, protected_percentage)
     habitat = Habitat.find_by(name: habitat)
-    # puts "insert change regional stat: iso3: #{iso3}, total_value: #{total_value}, 
-    # total_value_protected: #{total_value_protected}, protected_percentage: #{protected_percentage}"
 
     puts "GeoEntity is: #{geo_entity&.name}, habitat is: #{habitat.name}"
     ges = GeoEntityStat.create(habitat: habitat, geo_entity: geo_entity, protected_value: total_value_protected || 0, 
@@ -139,10 +124,8 @@ namespace :import do
   end
 
   def insert_change_stat(habitat, geo_entity, total_value_years, protected_value, protected_percentage)
-    #byebug
     habitat = Habitat.find_by(name: habitat)
-    # puts "insert change regional stat: iso3: #{iso3}, total_value_years: #{total_value_years}, 
-    # protected_value: #{protected_value}, protected_percentage: #{protected_percentage}"
+
     puts "GeoEntity is: #{geo_entity&.name}, habitat is: #{habitat.name}"
     cs = ChangeStat.create(habitat: habitat, geo_entity: geo_entity, 
                       total_value_1996: total_value_years[:total_value_1996] || 0,
