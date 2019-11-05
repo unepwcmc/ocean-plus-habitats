@@ -14,13 +14,9 @@ body {
   margin: 0;
 }
 
-h1 {
-  @include h1;
-}
+h1 { @include h1; }
 
-h2 {
-
-}
+h2 {}
 
 h3 {
   color: $grey-dark;
@@ -31,13 +27,7 @@ h3 {
   @include breakpoint($small) { font-size: rem-calc(34); }
 }
 
-h4 {
-  font-size: rem-calc(12);
-  margin: rem-calc(0 0 10 0);
-
-  @include breakpoint($small) { font-size: rem-calc(14); }
-  @include breakpoint($medium) { font-size: rem-calc(16); }
-}
+h4 { @include h4; }
 
 p {
   line-height: $body-line-height;
@@ -46,18 +36,7 @@ p {
   @include breakpoint_down($small) { font-size: rem-calc(14); }
 }
 
-a {
-  color: inherit;
-  
-  &:hover { text-decoration: none; }
-
-  &.a--plain {
-    color: inherit;
-    text-decoration: none;
-
-    &:hover { text-decoration: underline; }
-  }
-}
+a { @include text-a; }
 
 ul {
 

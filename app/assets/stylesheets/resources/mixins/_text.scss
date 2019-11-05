@@ -54,6 +54,13 @@
   text-align: center;
 }
 
+@mixin h4 {
+  @include text-3;
+  font-weight: $semi-bold;
+  margin-top: 0;
+  margin-bottom: rem-calc(10);
+}
+
 @mixin text-hero-home {
   @include text-2;
   color: $white;
@@ -63,6 +70,21 @@
   @include text-3;
 }
 
+@mixin text-a {
+  color: inherit;
+  font-weight: $semi-bold;
+  text-decoration: none;
+
+  &:hover {
+    color: inherit;
+    text-decoration: underline;
+  }
+}
+
 @mixin text-tooltip {
   @include text-3;
+}
+
+@mixin text-footer-citation {
+  font-size: rem-calc(16);
 }
