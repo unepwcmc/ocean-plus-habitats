@@ -40,7 +40,30 @@ class SiteController < ApplicationController
   end
 
   def load_charts_data
-    top_five_countries = CountryStat.where(habitat_id: @habitat.id)
+
+    query = <<-SQL
+      SELECT geo_entities.id AS geo_entities_id,
+             geo_entity_stats.total_value AS total_value
+
+             FROM geo_entities
+             INNER JOIN geo_entity_stats ON geo_entities.id = geo_entity_stats.geo_entity_id
+
+             SQL
+
+    geo_entity_stats = ActiveRecord::Base.connection.execute(query)
+    # geo_entity_stats = []
+    # GeoEntity.countries.each do |ge|
+    #   geo_entity_stats << {
+    #     geo_entity_id: ge.id,
+    #     total_value: ge.geo_entity_stat&.total_value,
+    #     habitat_id: habitat.id
+    # }
+    #   #geo_entity_stats << ge.instance_variables.each_with_object({}) { |var, hash| hash[var.to_s.delete("@")] = ge.instance_variable_get(var) }
+    # end
+
+    puts geo_entity_stats.inspect
+    byebug
+    top_five_countries = GeoEntity.countries.geo_entity_stat.where(habitat_id: @habitat.id)
                                    .order('total_value DESC')
                                    .first(5)
     arbitrary_value = top_five_countries.first.total_value.to_f * 1.05
