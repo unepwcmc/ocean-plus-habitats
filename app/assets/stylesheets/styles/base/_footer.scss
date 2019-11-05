@@ -65,7 +65,7 @@ $footer-hero-height-laptop: rem-calc(590);
 
   &__citation {
     @include flex-no-shrink;
-    font-size: rem-calc(16);
+    @include text-footer-citation;
     padding-right: rem-calc(26);
     width: 30%;
   }

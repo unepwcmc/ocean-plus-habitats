@@ -84,3 +84,7 @@
 @mixin text-tooltip {
   @include text-3;
 }
+
+@mixin text-footer-citation {
+  font-size: rem-calc(16);
+}
