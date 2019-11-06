@@ -62,6 +62,12 @@
   .bg--navy-dark & { color: $white; }
 }
 
+@mixin h3 {
+  @include text-2;
+  margin-top: 0;
+  color: $white;
+}
+
 @mixin h4 {
   @include text-3;
   font-weight: $semi-bold;
@@ -97,6 +103,10 @@
   @include text-3;
 }
 
+@mixin text-sdg-panel {
+  @include text-3;
+}
+
 @mixin text-smallprint {
   @include text-6;
   font-style: italic;
@@ -118,4 +128,13 @@
 
 @mixin text-habitats-present-title {
   @include text-4;
+
+  @mixin text-footer-citation {
+  font-size: rem-calc(16);
+}
+
+@mixin text-sdg-smallprint {
+  @include responsive-styles(font-size, 12px, 14px, 14px);
+  font-style: italic;
+  font-weight: $medium;
 }

@@ -9,6 +9,7 @@ Vue.use(TurbolinksAdapter)
 import store from '../store/store.js'
 
 // components
+import ChartDoughnut from '../components/chart/ChartDoughnut'
 import Habitat from '../Habitat.vue'
 import Mapbox from '../components/map/Mapbox.vue'
 import NavMegaMenu from '../components/nav/NavMegaMenu.vue'
@@ -30,6 +31,7 @@ document.addEventListener('turbolinks:load', () => {
       el: '#v-app',
       store,
       components: {
+        ChartDoughnut,
         Habitat,
         Mapbox,
         Modal,
