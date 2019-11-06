@@ -3,7 +3,7 @@ class CountriesController < ApplicationController
   end
 
   def show
-    @country = Country.find(params[:id])
+    @country = GeoEntity.find_by(iso3: params[:id])
 
     @yml_key = @country[:iso3].downcase
   end
