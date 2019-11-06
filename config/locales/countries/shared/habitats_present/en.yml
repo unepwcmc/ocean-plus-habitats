@@ -1,0 +1,9 @@
+en:
+  countries:
+    shared:
+      habitats_present:
+        title: Habitats present in
+        title_present: Confirmed Presence
+        title_absent: Confirmed Absense
+        title_unknown: Not Known
+        citation: CITATION TEXT

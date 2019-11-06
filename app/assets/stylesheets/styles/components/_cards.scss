@@ -2,38 +2,6 @@
 // classes
 //--------------------------------------------------
 .cards {
-  &--habitat-change {
-    @include flex;
-    @include flex-wrap;
-    margin-top: rem-calc(34);
-
-    .card {
-      &__card {
-        margin-bottom: rem-calc(34);
-        padding-right: rem-calc(20);
-        width: 25%;
-      } 
-        &__icon {
-          width: rem-calc(75); height: rem-calc(75);
-          display: block;
-        }
-
-        &__stat {
-          @include text-large;
-          margin-left: rem-calc(12);
-        }
-
-        &__title-wrapper {
-          margin-top: rem-calc(4);
-        }
-
-          &__title {
-            margin-bottom: 0;
-          }
-
-        &__content {
-          margin-top: rem-calc(12);
-        }
-    }
-  }
+  @import './cards/cards-habitat-change';
+  @import './cards/cards-habitats-present';
 }

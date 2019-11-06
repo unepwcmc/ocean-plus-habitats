@@ -1,0 +1,61 @@
+&--habitats-present {
+  @include flex;
+  @include flex-h-between;
+
+  .card {
+    padding: rem-calc(0 20);
+    width: calc(20% - 18px); height: rem-calc(272);
+
+    &--present {
+      border: solid 1px $green;
+
+      .card__status-ribbon { @include icon-ribbon-present; }
+      .card__status-icon { @include icon-present; }
+    }
+
+    &--absent {
+      background-color: $grey-light;
+
+      .card__status-ribbon { @include icon-ribbon-absent; }
+      .card__status-icon { @include icon-absent; }
+    }
+
+    &--unknown {
+      border: solid 1px $grey-dark;
+
+      .card__status-ribbon { @include icon-ribbon-unknown; }
+      .card__status-icon { @include icon-unknown; }
+    }
+
+      &__status {
+        @include flex;
+        @include flex-v-center;
+        margin-bottom: rem-calc(22);
+      }
+
+        &__status-title {
+          @include text-present-habitats-status;
+          margin-left: rem-calc(12);
+
+          display: block;
+        }
+
+      &__content {
+        @include flex;
+        @include flex-column;
+        @include flex-v-center;
+        padding: rem-calc(0 11);
+      }
+
+        &__habitat {
+          @include flex;
+          @include flex-v-center;
+          margin-top: rem-calc(22);
+        }
+
+          &__habitat-title { 
+            @include text-habitats-present-title;
+            margin-right: rem-calc(12);
+          }
+  }
+}

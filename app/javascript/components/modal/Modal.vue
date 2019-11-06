@@ -69,7 +69,7 @@ export default {
 
   computed: {
     isActive () {
-      return this.$store.state.modal.isActive
+      return this.$store.state.modal.isActive && this.$store.state.modal.id === this.mixinTriggerId
     },
 
     mixinTriggerId () {

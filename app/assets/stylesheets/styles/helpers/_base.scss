@@ -15,7 +15,13 @@ body {
 }
 
 h1 { @include h1; }
-h2 { @include h2; }
+
+h2 { 
+  @include h2; 
+  
+  .h2-wrapper & { margin-bottom: 0; }
+}
+
 h3 { @include h3; }
 h4 { @include h4; }
 
@@ -42,6 +48,8 @@ blockquote {
 sup {
   font-size: .7em;
 }
+
+th { font-weight: inherit; }
 
 //--------------------------------------------------
 // site structure - reusable styles
