@@ -52,7 +52,7 @@ class SiteController < ApplicationController
                       INNER JOIN geo_entity_stats ON geo_entities.id = geo_entity_stats.geo_entity_id
                       INNER JOIN habitats ON habitats.id = geo_entity_stats.habitat_id
                       WHERE geo_entities.iso3 IS NOT NULL
-
+                      AND habitat_id = #{@habitat.id}
                       ORDER BY total_value DESC
 
                       SQL
@@ -60,43 +60,36 @@ class SiteController < ApplicationController
              #GROUP BY geo_entities.id, geo_entities.iso3, geo_entities.name, geo_entity_stats.total_value
 
     geo_entity_stats = ActiveRecord::Base.connection.execute(query)
-    # geo_entity_stats = []
-    # GeoEntity.countries.each do |ge|
-    #   geo_entity_stats << {
-    #     geo_entity_id: ge.id,
-    #     total_value: ge.geo_entity_stat&.total_value,
-    #     habitat_id: habitat.id
-    # }
-    #   #geo_entity_stats << ge.instance_variables.each_with_object({}) { |var, hash| hash[var.to_s.delete("@")] = ge.instance_variable_get(var) }
-    # end
 
     puts geo_entity_stats.inspect
-    geo_entity_stats.first(30).each do |geo_entity_stat|
+    geo_entity_stats.first(5).each do |geo_entity_stat|
       puts geo_entity_stat.inspect
     end
     byebug
-    top_five_countries = GeoEntity.countries.geo_entity_stat.where(habitat_id: @habitat.id)
-                                   .order('total_value DESC')
-                                   .first(5)
-    arbitrary_value = top_five_countries.first.total_value.to_f * 1.05
+    top_five_countries = geo_entity_stats.first(5)
+    # top_five_countries = GeoEntity.countries.geo_entity_stat.where(habitat_id: @habitat.id)
+    #                                .order('total_value DESC')
+    #                                .first(5)
+    byebug
+    arbitrary_value = top_five_countries.first["total_value"].to_f * 1.05
     @chart_greatest_coverage = top_five_countries.map do |stat|
       {
-        label: stat.country.name,
-        value: stat.total_value.to_f.round(0),
-        percent: 100*stat.total_value.to_f/arbitrary_value
+        label: stat["name"],
+        value: stat["total_value"].to_f.round(0),
+        percent: 100*stat["total_value"].to_f/arbitrary_value
       }
     end
 
-    top_five_country_ids = top_five_countries.map(&:country_id)
-    top_five_protected_areas = CountryStat.where(habitat: @habitat, country_id: top_five_country_ids)
-                                         .order("protected_percentage DESC")
-                                         .first(5)
+    #top_five_country_ids = top_five_countries.map(&:geo_entities_id)
+    # top_five_protected_areas = CountryStat.where(habitat: @habitat, country_id: top_five_country_ids)
+    #                                      .order("protected_percentage DESC")
+    #                                      .first(5)
 
-    @chart_protected_areas = top_five_protected_areas.map do |stat|
-      {
-        label: stat.country.name,
-        percent: stat.protected_percentage.to_f.round(1),
-      }
-    end
+    # @chart_protected_areas = top_five_protected_areas.map do |stat|
+    #   {
+    #     label: stat.country.name,
+    #     percent: stat.protected_percentage.to_f.round(1),
+    #   }
+    # end
   end
 end
