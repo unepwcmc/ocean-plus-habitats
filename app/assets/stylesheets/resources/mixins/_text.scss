@@ -128,8 +128,9 @@
 
 @mixin text-habitats-present-title {
   @include text-4;
+}
 
-  @mixin text-footer-citation {
+@mixin text-footer-citation {
   font-size: rem-calc(16);
 }
 
