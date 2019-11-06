@@ -26,6 +26,10 @@ strong, .bold { font-weight: $bold; }
 
 .text--smallprint { @include text-smallprint; }
 
+.font-alignment-padding-fix {
+  padding-bottom: 0.15em;
+}
+
 //--------------------------------------------------
 // dimensions
 //--------------------------------------------------
