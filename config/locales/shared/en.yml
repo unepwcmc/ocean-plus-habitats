@@ -4,3 +4,6 @@ en:
     footer_citation: 'UNEP-WCMC (2019). Ocean Habitat Profile for Ireland from the Ocean+, July 2019. Available at: <a href="habitats.oceanplus.org" target="_blank" title="">habitats.oceanplus.org</a>'
     footer_copyright: copyright
     footer_downloads_title: Download datasets
+
+    homepage: "%{name} home page"
+    visit: Visit %{name}

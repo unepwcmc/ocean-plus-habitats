@@ -5,7 +5,7 @@
     "@rails/webpacker": "3.5",
     "axios": "^0.18.0",
     "dotenv-webpack": "^1.5.5",
-    "es6-promise": "^4.2.5",
+    "es6-promise": "^4.2.8",
     "scrollmagic": "^2.0.6",
     "vue": "^2.5.17",
     "vue-loader": "14.2.2",

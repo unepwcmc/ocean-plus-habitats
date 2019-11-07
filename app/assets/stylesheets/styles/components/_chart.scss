@@ -38,6 +38,7 @@
 // chart types
 //--------------------------------------------------
 .chart {
+  @import './charts/chart-doughnut.scss';
   @import './charts/chart-row.scss';
   @import './charts/chart-rows.scss';
 }

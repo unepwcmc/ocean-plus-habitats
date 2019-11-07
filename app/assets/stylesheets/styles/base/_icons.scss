@@ -21,7 +21,7 @@
   display: block;
 }
 
-@mixin icon-ribbon($colour, $point-height: rem-calc(8), ) {
+@mixin icon-ribbon($colour, $point-height: rem-calc(8)) {
   $width: rem-calc(40);
   $height: rem-calc(56);
   
@@ -85,6 +85,17 @@
 // classes
 //--------------------------------------------------
 .icon {
+  &--burger {
+    @include icon-basic;
+    background-image: image_url('icons/burger.svg');
+    width: rem-calc(24); height: rem-calc(13);
+
+    .nav--active & {
+      background-image: image_url('icons/cross-grey-xdark.svg');
+      height: rem-calc(16);
+    }
+  }
+
   &--citation {
     @include icon-basic;
     @include icon-button-reset;

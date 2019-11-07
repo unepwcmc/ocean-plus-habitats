@@ -9,8 +9,11 @@ Vue.use(TurbolinksAdapter)
 import store from '../store/store.js'
 
 // components
+import ChartDoughnut from '../components/chart/ChartDoughnut'
 import ChartRows from '../components/chart/ChartRows.vue'
 import Mapbox from '../components/map/Mapbox.vue'
+import NavMegaMenu from '../components/nav/NavMegaMenu.vue'
+import NavTrigger from '../components/nav/NavTrigger.vue'
 import Modal from '../components/modal/Modal.vue'
 import ModalTrigger from '../components/modal/ModalTrigger.vue'
 import StickyBar from '../components/sticky/StickyBar.vue'
@@ -28,10 +31,13 @@ document.addEventListener('turbolinks:load', () => {
       el: '#v-app',
       store,
       components: {
+        ChartDoughnut,
         ChartRows,
         Mapbox,
         Modal,
         ModalTrigger,
+        NavMegaMenu,
+        NavTrigger,
         StickyBar,
         Tab,
         Tabs

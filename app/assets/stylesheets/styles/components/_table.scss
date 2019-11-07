@@ -1,4 +1,3 @@
-
 //--------------------------------------------------
 // mixins
 //--------------------------------------------------
@@ -48,6 +47,11 @@
       &:nth-child(n+2):nth-child(-n+8) {
         border-top: solid 2px $grey-light;
         text-align: center;
+      }
+
+      &:last-child {
+        background-color: $grey-light;
+        height: rem-calc(37);
       }
     }
 
