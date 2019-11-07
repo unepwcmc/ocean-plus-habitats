@@ -76,12 +76,10 @@ class SiteController < ApplicationController
     geo_entity_stats.first(5).each do |geo_entity_stat|
       puts geo_entity_stat.inspect
     end
-    byebug
     top_five_countries = geo_entity_stats.first(5)
     # top_five_countries = GeoEntity.countries.geo_entity_stat.where(habitat_id: @habitat.id)
     #                                .order('total_value DESC')
     #                                .first(5)
-    byebug
     arbitrary_value = top_five_countries.first["total_value"].to_f * 1.05
     @chart_greatest_coverage = top_five_countries.map do |stat|
       {
