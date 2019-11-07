@@ -22,32 +22,68 @@
   }
 }
 
+//--------------------------------------------------
+// classes
+//--------------------------------------------------
 .nav {
-  background-color: $nav; 
-  width: fit-content; height: rem-calc(74);
+//--------------------------------------------------
+// primary
+//--------------------------------------------------
+  &--primary {
+    @include text-nav;
 
-  @include breakpoint($medium) { width: auto; }
+    &.nav {
+      &__pane {
+        background-color: $grey-light;
+        width: 100%;
+        
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        z-index: $z-300;
 
-  &__a {
-    color: $white;
-    cursor: pointer;
-    border: solid 1px $nav;
-    border-radius: $radius-button;
-    font-size: rem-calc(20);
-    font-weight: $bold;
-    padding: rem-calc(4 16);
-    text-decoration: none;
-    white-space: nowrap;
+        &.nav--active { display: block; }
+      }
 
-    @include breakpoint($small) { 
-      font-size: rem-calc(24);
-      padding: rem-calc(8 20);
+      &__trigger {
+        position: relative;
+
+        &.nav--active {
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: 0;
+
+          &::after {
+            background-color: inherit;
+            content: '';
+            width: 100%; height: rem-calc(20);
+
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0;
+          }
+        }
+      }
     }
 
-    &.active {
-      @for $i from 1 through length($names){
-        
+    .nav {
+      &__columns {
+        @include flex;
+        padding-top: rem-calc(40);
+        padding-bottom: rem-calc(50);
       }
+
+        &__column {
+          width: 50%; 
+        }
+
+          &__a {
+            width: 32%;
+            
+            display: inline-block;
+          }
     }
   }
 }

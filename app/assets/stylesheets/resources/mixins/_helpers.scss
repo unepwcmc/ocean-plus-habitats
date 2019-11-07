@@ -82,6 +82,33 @@
   }
 }
 
+@mixin triangle-right-angle ($width, $height, $colour, $direction:'left') {
+  $coloured: #{$width} solid #{$colour};
+  $transparent: 0 solid transparent;
+
+  @if ($direction == 'right') {
+    border-right: $coloured;
+    border-left: $transparent;
+
+    right: 0;
+  }
+  
+  @if ($direction == 'left') {
+    border-right: $transparent;
+    border-left: $coloured;
+
+    left: 0;
+  }
+  
+  border-bottom: $height solid transparent;
+  content: '';
+  width: 0; height: 0; 
+  
+  display: block;
+  position: absolute;
+  bottom: -$height;
+}
+
 //--------------------------------------------------
 // spacing
 //--------------------------------------------------
