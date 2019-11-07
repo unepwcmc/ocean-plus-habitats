@@ -9,7 +9,6 @@ class CountriesController < ApplicationController
 
     country_yml = I18n.t("countries.#{@yml_key}")
 
-    habitats = I18n.t('global.habitats')
     habitat_citations = country_yml[:habitats_present_citations]
 
     habitats_present_data = [
@@ -31,12 +30,34 @@ class CountriesController < ApplicationController
     @target_text = country_yml[:targets]
 
     @habitat_change = [
-      { id: 'warm-water-coral', title: '2009-2019',  previous: 80, current: 40 },
-      { id: 'mangrove', title: '2000-2010', previous: 50, current: 25 }
+      { 
+        id: 'warm-water-coral',
+        title: getHabitatTitle('warm-water-coral'),
+        text: I18n.t('countries.shared.habitat_change.chart_text', km: 20, habitat: 'here', years: '2000-2019'),
+        previous: 80, 
+        current: 40 
+      },
+      { 
+        id: 'mangrove', 
+        title: getHabitatTitle('mangrove'),
+        text: I18n.t('countries.shared.habitat_change.chart_text', km: 40, habitat: 'here', years: '2000-2019'),
+        previous: 50, 
+        current: 25 
+      }
     ].to_json
+  end
+
+  private
+  def habitats
+    I18n.t('global.habitats')
   end
 
   def getStatusText status
     I18n.t("countries.shared.habitats_present.title_#{status}")
+  end
+
+  def getHabitatTitle id
+    habitat = habitats.select { |habitat| habitat[:id] === id }
+    habitat[0][:title]
   end
 end

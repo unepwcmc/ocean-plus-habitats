@@ -1,7 +1,10 @@
 <template>
   <div class="chart--rows">
     <div class="chart__legend">
-      
+      <chart-legend
+        :rows="rows"
+      >
+      </chart-legend>
     </div>
     <div class="chart__charts">
       <chart-row
