@@ -7,8 +7,10 @@ class CountriesController < ApplicationController
 
     @yml_key = @country[:iso3].downcase
 
+    country_yml = I18n.t("countries.#{@yml_key}")
+
     habitats = I18n.t('global.habitats')
-    habitat_citations = I18n.t("countries.#{@yml_key}.habitats_present_citations")
+    habitat_citations = country_yml[:habitats_present_citations]
 
     habitats_present_data = [
       { status: 'present', status_title: getStatusText('present')},
@@ -24,6 +26,9 @@ class CountriesController < ApplicationController
     red_list_data = [[1,2,3,4,5,6,7,28],[],[1,2,3,4,5,6,7,28],[1,2,3,4,5,6,7,28],[]] #FERDI NOTE THE TOTAL AT THE END
 
     @red_list_data = habitats.zip(red_list_data)
+
+    @target_tabs = I18n.t('countries.shared.targets.tabs')
+    @target_text = country_yml[:targets]
   end
 
   def getStatusText status

@@ -28,7 +28,7 @@ export default {
 
   methods: {
     openModal () {
-      this.$store.dispatch('modal/openModal', this.modalContent)
+      this.$store.dispatch('modal/openModal', { id: this.triggerId, content: this.modalContent })
     }
   }
 }

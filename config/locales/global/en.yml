@@ -21,3 +21,5 @@ en:
         id: cold-water-coral
         title: Cold-water Coral
         icon: icons/cold-coral.svg
+    nav:
+      burger_text: Explore a country/region

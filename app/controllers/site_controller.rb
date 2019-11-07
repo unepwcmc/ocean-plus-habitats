@@ -8,8 +8,6 @@ class SiteController < ApplicationController
 
     @title = @habitat.title
 
-    @nav = @global['nav'].to_json
-
     @habitatData = HabitatsSerializer.new(@habitat, @chart_greatest_coverage, @chart_protected_areas, @global).serialize
     
     @habitats = I18n.t('global.habitats')
@@ -17,10 +15,21 @@ class SiteController < ApplicationController
     #----------------------------------------------------------------------------#
     # FERDI variables will need adding to this object ---------------------------#
     # https://guides.rubyonrails.org/i18n.html#passing-variables-to-translations #
-    habitat_cover = I18n.t('home.habitat_cover.habitats')
+    @habitat_cover = I18n.t('home.habitat_cover.habitats')
     #----------------------------------------------------------------------------#
 
-    @habitat_cover = @habitats.zip(habitat_cover)
+    doughnut_chart = I18n.t('home.sdg.doughnut_chart_data')
+    @doughnut_chart = []
+
+    doughnut_chart.each do |item|
+      @doughnut_chart.push({
+        'title': item[:title],
+        'colour': item[:colour],
+        'icon': ActionController::Base.helpers.image_url(item[:icon]),
+        'description': item[:description],
+        'url': item[:url]
+      })
+    end
 
     # respond_to do |format|
     #   format.html

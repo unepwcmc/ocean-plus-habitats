@@ -1,8 +1,4 @@
 //--------------------------------------------------
-// variables
-//--------------------------------------------------
-
-//--------------------------------------------------
 // base mixins
 //--------------------------------------------------
 @mixin text-1 {
@@ -18,7 +14,7 @@
   font-family: $header-font;
   font-weight: $semi-bold;
   margin-top: 0;
-  margin-bottom: rem-calc(30);
+  margin-bottom: $header-margin-bottom;
 }
 
 @mixin text-3 {
@@ -29,6 +25,7 @@
 
 @mixin text-4 {
   @include responsive-styles(font-size, rem-calc(16), rem-calc(16), rem-calc(16));
+  font-weight: $semi-bold;
 }
 
 @mixin text-5 {
@@ -61,6 +58,14 @@
 
 @mixin h2 {
   @include text-2;
+
+  .bg--navy-dark & { color: $white; }
+}
+
+@mixin h3 {
+  @include text-2;
+  margin-top: 0;
+  color: $white;
 }
 
 @mixin h4 {
@@ -68,15 +73,6 @@
   font-weight: $semi-bold;
   margin-top: 0;
   margin-bottom: rem-calc(10);
-}
-
-@mixin text-hero-home {
-  @include text-2;
-  color: $white;
-}
-
-@mixin text-body {
-  @include text-3;
 }
 
 @mixin text-a {
@@ -90,17 +86,38 @@
   }
 }
 
-@mixin text-tooltip {
+@mixin text-body {
   @include text-3;
+}
+
+@mixin text-hero-home {
+  @include text-2;
+  color: $white;
 }
 
 @mixin text-large {
   @include text-5;
 }
 
-@mixin text-smallprint () {
+@mixin text-nav {
+  @include text-3;
+}
+
+@mixin text-sdg-panel {
+  @include text-3;
+}
+
+@mixin text-smallprint {
   @include text-6;
   font-style: italic;
+}
+
+@mixin text-tab-title {
+  @include text-4;
+}
+
+@mixin text-tooltip {
+  @include text-3;
 }
 
 @mixin text-present-habitats-status {
@@ -111,5 +128,14 @@
 
 @mixin text-habitats-present-title {
   @include text-4;
-  font-weight: $semi-bold;
+}
+
+@mixin text-footer-citation {
+  font-size: rem-calc(16);
+}
+
+@mixin text-sdg-smallprint {
+  @include responsive-styles(font-size, 12px, 14px, 14px);
+  font-style: italic;
+  font-weight: $medium;
 }
