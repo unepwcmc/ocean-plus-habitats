@@ -15,13 +15,6 @@ $bar-height: rem-calc(49);
 //--------------------------------------------------
 &--row {
   .chart {
-    &__title { 
-      @include text-chart; 
-      text-align: center;
-
-      display: block;
-    }
-
     &__wrapper {
       @include flex;
       @include flex-v-center;

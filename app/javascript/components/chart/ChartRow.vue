@@ -1,7 +1,5 @@
 <template>
   <div class="chart--row">
-    <span class="chart__title">{{ row.title }}</span>
-
     <div class="chart__wrapper">
       <span class="chart__index">{{ index + 1 }}.</span>
       <div class="chart__chart">

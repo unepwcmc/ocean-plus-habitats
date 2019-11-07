@@ -39,6 +39,7 @@
 //--------------------------------------------------
 .chart {
   @import './charts/chart-doughnut.scss';
+  @import './charts/chart-legend.scss';
   @import './charts/chart-row.scss';
   @import './charts/chart-rows.scss';
 }

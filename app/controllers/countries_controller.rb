@@ -33,14 +33,14 @@ class CountriesController < ApplicationController
       { 
         id: 'warm-water-coral',
         title: getHabitatTitle('warm-water-coral'),
-        text: I18n.t('countries.shared.habitat_change.chart_text', km: 20, habitat: 'here', years: '2000-2019'),
+        text: I18n.t('countries.shared.habitat_change.chart_text', km: 20, habitat: getHabitatTitle('warm-water-coral'), years: '2000-2019'),
         previous: 80, 
         current: 40 
       },
       { 
         id: 'mangrove', 
         title: getHabitatTitle('mangrove'),
-        text: I18n.t('countries.shared.habitat_change.chart_text', km: 40, habitat: 'here', years: '2000-2019'),
+        text: I18n.t('countries.shared.habitat_change.chart_text', km: 40, habitat: getHabitatTitle('warm-water-coral'), years: '2000-2019'),
         previous: 50, 
         current: 25 
       }

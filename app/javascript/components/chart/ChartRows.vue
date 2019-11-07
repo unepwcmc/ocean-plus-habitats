@@ -1,6 +1,6 @@
 <template>
   <div class="chart--rows">
-    <div class="chart__legend">
+    <div class="chart__legend-wrapper">
       <chart-legend
         :rows="rows"
       >

@@ -4,4 +4,4 @@ en:
       habitat_change:
         title: Change in habitat cover
         citation: Change in habitat cover citation text
-        chart_text: "%{km}<strong>km<sup>2</sup></strong> change in %{habitat} cover in <strong>%{years}</strong>"
+        chart_text: "<strong>%{km}km<sup>2</sup></strong> change in %{habitat} cover in <strong>%{years}</strong>"
