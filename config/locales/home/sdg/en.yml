@@ -3,12 +3,10 @@ en:
     sdg:
       title: How do habitats contribute to human wellbeing?
       text_1: 
-        - Habitats such as coral reefs, seagrasses and mangroves generate sources of nutrition through fish, provide protection to coastal communities from storms, and contribute to local economies through tourism. 
-        - Ocean habitats are not only important to local communities, but also collectively form the foundations of national, regional and international progress toward targets related to human wellbeing.
+        - Habitats such as coral reefs, seagrasses and mangroves generate sources of nutrition through fish, provide protection to coastal communities from storms, and contribute to local economies through tourism and resource provision. They also help to regulate our water and air, with far-reaching benefits for even inland communities. 
+        - These habitats are not only important for local communities, but also collectively form the foundations of national, regional and international progress toward targets related to human wellbeing, such as the UN Sustainable Development Goals and Targets. These can be explored further in the graphic below.
       text_2:
-        - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-      text_3: 
-        - For more information, please see the country or regional pages.
+        - For more information, please visit our country or regional pages.
       doughnut_chart_title: "Contribution of protected areas to achieving the UN Sustainable Development Goals"
       doughnut_chart_intro: "<p>As the Protected Planet Report 2016 showed, the benefits that protected areas provide are critical to address environmental and societal challenges.</p><p>The interactive figure below allows you to explore the contribution of protected areas to each of the Sustainable Development Goals'</p>"
       doughnut_chart_data:

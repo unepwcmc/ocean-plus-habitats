@@ -8,10 +8,6 @@
   <chart-doughnut :datasets="<%= @doughnut_chart.to_json %>" smallprint="<%= @smallprint %>"></chart-doughnut>
 
   <% t('home.sdg.text_2').each do |p| %>
-    <p><%= p %></p>
-  <% end %>
-
-  <% t('home.sdg.text_3').each do |p| %>
     <p class="bold"><%= p %></p>
   <% end %>
 </section>
