@@ -3,28 +3,23 @@ en:
     habitat_cover:
       title: Change in habitat cover
       habitats: 
-        -
-          id: warm-water-coral
+        warm-water-coral:
           title: Warm-water Coral
           text: ! '<strong>%{change_km}</strong> km<sup>2</sup> change in warm-water coral cover <strong>(%{change_percentage}%)</strong> (REF) <strong>(Baseline year; original total km<sup>2</sup>)</strong>'
           citation_text: 'Warm water coral tooltip text'
-        -
-          id: saltmarsh
+        saltmarsh:
           title: Saltmarsh
           text: ! '<strong>%{change_km}</strong> km<sup>2</sup> change in saltmarsh cover <strong>(%{change_percentage}%)</strong> (REF) <strong>(Baseline year; original total km<sup>2</sup>)</strong>'
           citation_text: 'Saltmarsh tooltip text'
-        -
-          id: mangrove
+        mangrove:
           title: Mangrove
           text: ! '<strong>%{change_km}</strong> km<sup>2</sup> change in mangrove cover <strong>(%{change_percentage}%)</strong> (REF) <strong>(Baseline year; original total km<sup>2</sup>)</strong>'
           citation_text: 'Mangrove tooltip text'
-        -
-          id: seagrass 
+        seagrass:
           title: Seagrass
           text: ! '<strong>%{change_km}</strong> km<sup>2</sup> change in seagrass cover <strong>(%{change_percentage}%)</strong> (REF) <strong>(Baseline year; original total km<sup>2</sup>)</strong>'
           citation_text: 'Seagrass tooltip text'
-        -
-          id: cold-water-coral
+        cold-water-coral:
           title: Cold-water Coral
           text: ! '<strong>%{change_km}</strong> km<sup>2</sup> change in cold-water coral cover <strong>(%{change_percentage}%)</strong> (REF) <strong>(Baseline year; original total km<sup>2</sup>)</strong>'
           citation_text: 'Cold-water coral tooltip text'
