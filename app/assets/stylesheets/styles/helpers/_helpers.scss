@@ -83,5 +83,5 @@ strong, .bold { font-weight: $bold; }
 // shadow
 //--------------------------------------------------
 .box-shadow {
-  box-shadow: $grey-light 0px 0px 5px 5px;
+  box-shadow: rgba($black, 0.08) 0px 0px 5px 5px;
 }
