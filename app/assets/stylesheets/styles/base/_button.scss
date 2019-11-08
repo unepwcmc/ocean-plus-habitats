@@ -1,4 +1,18 @@
 //--------------------------------------------------
+// variables
+//--------------------------------------------------
+// $button-padding-mobile: 16px 24px;
+// $button-padding-tablet: 16px 24px;
+$button-padding-laptop: 11px 24px;
+
+// $button-text-mobile: 20px;
+// $button-text-tablet: 25px;
+$button-text-laptop: 18px;
+
+$select-height: rem-calc(58);
+$select-width: rem-calc(300);
+
+//--------------------------------------------------
 // shared mixins
 //--------------------------------------------------
 @mixin button-basic {
@@ -11,17 +25,9 @@
   &:hover { text-decoration: none; }
 }
 
-// $button-text-mobile: 20px;
-// $button-text-tablet: 25px;
-$button-text-laptop: 18px;
-
 @mixin button-font-size { 
   font-size: $button-text-laptop;
 }
-
-// $button-padding-mobile: 16px 24px;
-// $button-padding-tablet: 16px 24px;
-$button-padding-laptop: 11px 24px;
 
 @mixin button-padding { 
   padding: $button-padding-laptop;
@@ -41,6 +47,25 @@ $button-padding-laptop: 11px 24px;
   @include button-rounded;
   background-color: $grey-light;
   font-weight: $semi-bold;
+}
+
+@mixin button--select {
+  @include button-basic;
+  @include button-padding;
+  @include text-select;
+  @include flex;
+  @include flex-v-center;
+  @include flex-h-between;
+  background-color: $grey-light;
+  margin: 0;
+  width: $select-width; height: $select-height;
+
+  &::after {
+    @include icon-chevron-down;
+    content: '';
+  }
+
+  &.active::after { transform: rotateZ(180deg); }
 }
 
 //--------------------------------------------------

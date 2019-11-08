@@ -103,6 +103,10 @@
   @include text-3;
 }
 
+@mixin text-select {
+  @include text-2;
+}
+
 @mixin text-sdg-panel {
   @include text-3;
 }

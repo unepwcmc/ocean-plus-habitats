@@ -7,7 +7,7 @@
       :id="toggleId"
       type="button"
       class="v-select__toggle"
-      :class="{'v-select__toggle--active': isActive}"
+      :class="{'active': isActive}"
       aria-haspopup="true"
       :aria-controls="dropdownId"
       :disabled="isDisabled"
@@ -18,7 +18,7 @@
     </button>
 
     <ul 
-      v-show="isActive" 
+      v-show="isActive"
       :id="dropdownId" 
       role="radiogroup" 
       class="v-select__dropdown"
