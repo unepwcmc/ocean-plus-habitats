@@ -15,7 +15,7 @@ class SiteController < ApplicationController
     #----------------------------------------------------------------------------#
     # FERDI variables will need adding to this object ---------------------------#
     # https://guides.rubyonrails.org/i18n.html#passing-variables-to-translations #
-    @habitat_cover = I18n.t('home.habitat_cover.habitats')
+    @habitat_cover = HabitatCoverSerializer.new.serialize
     #----------------------------------------------------------------------------#
 
     doughnut_chart = I18n.t('home.sdg.doughnut_chart_data')
@@ -37,7 +37,7 @@ class SiteController < ApplicationController
     # end
 
     @red_list_categories = I18n.t('home.red_list.categories')
-    red_list_data = [[1,2,3,4,5,6,7],[1,2,3,4,5,6,7],[1,2,3,4,5,6,7],[1,2,3,4,5,6,7],[1,2,3,4,5,6,7],[1,2,3,4,5,6,7],[1,2,3,4,5,6,7]]
+    red_list_data = [[1,2,3,4,5,6,7, 28],[1,2,3,4,5,6,7, 28],[1,2,3,4,5,6,7, 28],[1,2,3,4,5,6,7, 28],[1,2,3,4,5,6,7, 28],[1,2,3,4,5,6,7, 28],[1,2,3,4,5,6,7, 28]] #FERDI NOTE THE TOTAL AT THE END
 
     @red_list_data = @habitats.zip(red_list_data)
   end

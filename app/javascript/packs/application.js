@@ -10,7 +10,8 @@ import store from '../store/store.js'
 
 // components
 import ChartDoughnut from '../components/chart/ChartDoughnut'
-import Habitat from '../Habitat.vue'
+
+import ChartRows from '../components/chart/ChartRows.vue'
 import NavMegaMenu from '../components/nav/NavMegaMenu.vue'
 import NavTrigger from '../components/nav/NavTrigger.vue'
 import Modal from '../components/modal/Modal.vue'
@@ -32,7 +33,7 @@ document.addEventListener('turbolinks:load', () => {
       store,
       components: {
         ChartDoughnut,
-        Habitat,
+        ChartRows,
         Modal,
         ModalTrigger,
         NavMegaMenu,
