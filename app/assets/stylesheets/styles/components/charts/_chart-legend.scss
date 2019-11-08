@@ -1,0 +1,35 @@
+//--------------------------------------------------
+// variables
+//--------------------------------------------------
+$chart-legend-key-icon-size: rem-calc(22);
+
+//--------------------------------------------------
+// classes
+//--------------------------------------------------
+&__legend {
+  &-item {
+    @include flex;
+    @include flex-v-start;
+    width: 100%;
+  }
+
+    &-key-title {
+      @include text-chart;
+      @include flex-no-shrink;
+      width: 34%;
+    }
+
+    &-key-icon {
+      @include chart-get-colours;
+      @include flex-no-shrink;
+      border-radius: 100%;
+      margin-right: rem-calc(14);
+      width: $chart-legend-key-icon-size; height: $chart-legend-key-icon-size; 
+
+      display: inline-block;
+    }
+
+    &-key-text {
+      margin-right: 18%;
+    }
+}

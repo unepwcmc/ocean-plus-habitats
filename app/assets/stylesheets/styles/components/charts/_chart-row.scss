@@ -1,0 +1,85 @@
+//--------------------------------------------------
+// variables
+//--------------------------------------------------
+$bar-height: rem-calc(49);
+
+//--------------------------------------------------
+// variables
+//--------------------------------------------------
+@mixin chart-row-bar-basic {
+  height: $bar-height;
+}
+
+//--------------------------------------------------
+// classes
+//--------------------------------------------------
+&--row {
+  .chart {
+    &__wrapper {
+      @include flex;
+      @include flex-v-center;
+      margin: rem-calc(6 0 8 0);
+      width: 100%;
+    }
+    
+      &__chart {
+        @include flex;
+        @include flex-v-center;
+        background-color: $white;
+        box-shadow: inset 0px 0px 0px 1px $grey-light;
+        width: 100%;
+
+        position: relative;
+      }
+
+        &__index { 
+          @include text-chart; 
+          margin-right: rem-calc(12);
+        }
+
+        &__bar-previous {
+          @include chart-default;
+          @include chart-row-bar-basic;
+        }
+
+          &__bar-label {
+            @include bar-label;
+
+            position: absolute;
+            top: 50%;
+            right: rem-calc(12);
+            z-index: 1;
+
+            transform: translateY(-50%);
+            transition: opacity 1s ease-in-out;
+          }
+
+          &__bar-current {
+            @include flex;
+            @include chart-get-colours;
+            @include chart-row-bar-basic;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+              
+            // transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 1s ease-out;
+
+            &.animate { transform: scaleX(1); }
+          }
+
+        &__label {
+          @include chart-label;
+          margin: 0;
+
+          position: absolute;
+          top: 50%;
+          left: 0;
+          z-index: 1;
+
+          transform: translateY(-50%);
+        }
+      }
+}
