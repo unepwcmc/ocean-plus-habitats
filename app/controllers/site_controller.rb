@@ -15,7 +15,7 @@ class SiteController < ApplicationController
     #----------------------------------------------------------------------------#
     # FERDI variables will need adding to this object ---------------------------#
     # https://guides.rubyonrails.org/i18n.html#passing-variables-to-translations #
-    @habitat_cover = I18n.t('home.habitat_cover.habitats')
+    @habitat_cover = HabitatCoverSerializer.new.serialize
     #----------------------------------------------------------------------------#
 
     doughnut_chart = I18n.t('home.sdg.doughnut_chart_data')
