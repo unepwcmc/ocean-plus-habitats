@@ -1,0 +1,1173 @@
+Country,ISO3,Species,SpeciesID,SourceID
+Aruba,ABW,Acrostichum aureum,3,1
+Aruba,ABW,Avicennia germinans,64,1
+Aruba,ABW,Avicennia schaueriana,65,1
+Aruba,ABW,Conocarpus erectus,66,1
+Aruba,ABW,Laguncularia racemosa,67,1
+Aruba,ABW,Rhizophora mangle,70,1
+Angola,AGO,Acrostichum aureum,3,1
+Angola,AGO,Avicennia germinans,64,1
+Angola,AGO,Conocarpus erectus,66,1
+Angola,AGO,Laguncularia racemosa,67,1
+Angola,AGO,Rhizophora mangle,70,1
+Angola,AGO,Rhizophora racemosa,71,1
+Angola,AGO,Rhizophora harrisonii,72,1
+Anguilla,AIA,Avicennia germinans,64,1
+Anguilla,AIA,Conocarpus erectus,66,1
+Anguilla,AIA,Laguncularia racemosa,67,1
+Anguilla,AIA,Rhizophora mangle,70,1
+United Arab Emirates,ARE,Avicennia marina,13,1
+United Arab Emirates,ARE,Rhizophora mucronata,45,1
+American Samoa,ASM,Bruguiera gymnorrhiza,18,1
+American Samoa,ASM,Rhizophora samoensis,46,1
+American Samoa,ASM,Xylocarpus moluccensis,62,1
+Antigua and Barbuda,ATG,Acrostichum aureum,3,1
+Antigua and Barbuda,ATG,Avicennia germinans,64,1
+Antigua and Barbuda,ATG,Avicennia schaueriana,65,1
+Antigua and Barbuda,ATG,Conocarpus erectus,66,1
+Antigua and Barbuda,ATG,Laguncularia racemosa,67,1
+Antigua and Barbuda,ATG,Rhizophora mangle,70,1
+Australia,AUS,Acanthus ebracteatus,1,1
+Australia,AUS,Acanthus ilicifolius,2,1
+Australia,AUS,Acrostichum speciosum,5,1
+Australia,AUS,Aegialitis annulata,6,1
+Australia,AUS,Aegialitis rotundifolia,7,1
+Australia,AUS,Avicennia integra,12,1
+Australia,AUS,Avicennia marina,13,1
+Australia,AUS,Bruguiera cylindrica,16,1
+Australia,AUS,Bruguiera exaristata,17,1
+Australia,AUS,Bruguiera gymnorrhiza,18,1
+Australia,AUS,Bruguiera parviflora,20,1
+Australia,AUS,Bruguiera sexangula,21,1
+Australia,AUS,Bruguiera rhynchopetala,22,1
+Australia,AUS,Camptostemon schultzii,24,1
+Australia,AUS,Ceriops australis,25,1
+Australia,AUS,Ceriops decandra,26,1
+Australia,AUS,Ceriops tagal,27,1
+Australia,AUS,Cynometra iripa,28,1
+Australia,AUS,Diospyros littorea,29,1
+Australia,AUS,Dolichandrone spathacea,30,1
+Australia,AUS,Excoecaria agallocha,31,1
+Australia,AUS,Heritiera littoralis,35,1
+Australia,AUS,Lumnitzera littorea,38,1
+Australia,AUS,Lumnitzera racemosa,39,1
+Australia,AUS,Lumnitzera rosea,40,1
+Australia,AUS,Nypa fruticans,41,1
+Australia,AUS,Osbornia octodonta,42,1
+Australia,AUS,Pemphis acidula,43,1
+Australia,AUS,Rhizophora apiculata,44,1
+Australia,AUS,Rhizophora mucronata,45,1
+Australia,AUS,Rhizophora stylosa,47,1
+Australia,AUS,Rhizophora lamarckii,48,1
+Australia,AUS,Scyphiphora hydrophyllacea,51,1
+Australia,AUS,Sonneratia alba,52,1
+Australia,AUS,Sonneratia caseolaris,54,1
+Australia,AUS,Sonneratia caseolaris,56,1
+Australia,AUS,Sonneratia gulngai,58,1
+Australia,AUS,Sonneratia urama,60,1
+Australia,AUS,Xylocarpus granatum,61,1
+Australia,AUS,Avicennia germinans,64,1
+Benin,BEN,Acrostichum aureum,3,1
+Benin,BEN,Avicennia germinans,64,1
+Benin,BEN,Conocarpus erectus,66,1
+Benin,BEN,Laguncularia racemosa,67,1
+Benin,BEN,Rhizophora racemosa,71,1
+Benin,BEN,Rhizophora harrisonii,72,1
+"Bonaire, Sint Eustatius, and Saba",BES,Acrostichum aureum,3,1
+"Bonaire, Sint Eustatius, and Saba",BES,Avicennia germinans,64,1
+"Bonaire, Sint Eustatius, and Saba",BES,Avicennia schaueriana,65,1
+"Bonaire, Sint Eustatius, and Saba",BES,Conocarpus erectus,66,1
+"Bonaire, Sint Eustatius, and Saba",BES,Laguncularia racemosa,67,1
+"Bonaire, Sint Eustatius, and Saba",BES,Rhizophora mangle,70,1
+Bangladesh,BGD,Acrostichum aureum,3,1
+Bangladesh,BGD,Acrostichum danaeifolium,4,1
+Bangladesh,BGD,Aegialitis rotundifolia,7,1
+Bangladesh,BGD,Aegiceras corniculatum,8,1
+Bangladesh,BGD,Avicennia alba,11,1
+Bangladesh,BGD,Avicennia marina,13,1
+Bangladesh,BGD,Avicennia officinalis,14,1
+Bangladesh,BGD,Bruguiera gymnorrhiza,18,1
+Bangladesh,BGD,Bruguiera sexangula,21,1
+Bangladesh,BGD,Ceriops decandra,26,1
+Bangladesh,BGD,Ceriops tagal,27,1
+Bangladesh,BGD,Excoecaria agallocha,31,1
+Bangladesh,BGD,Excoecaria indica,32,1
+Bangladesh,BGD,Heritiera fomes,33,1
+Bangladesh,BGD,Kandelia candel,36,1
+Bangladesh,BGD,Nypa fruticans,41,1
+Bangladesh,BGD,Rhizophora apiculata,44,1
+Bangladesh,BGD,Rhizophora mucronata,45,1
+Bangladesh,BGD,Sonneratia apetala,53,1
+Bangladesh,BGD,Sonneratia caseolaris,54,1
+Bangladesh,BGD,Xylocarpus granatum,61,1
+Bangladesh,BGD,Xylocarpus moluccensis,62,1
+Bahrain,BHR,Avicennia marina,13,1
+Bahamas,BHS,Conocarpus erectus,66,1
+Bahamas,BHS,Laguncularia racemosa,67,1
+Bahamas,BHS,Rhizophora mangle,70,1
+Saint Barthélemy,BLM,Acrostichum aureum,3,1
+Saint Barthélemy,BLM,Avicennia germinans,64,1
+Saint Barthélemy,BLM,Avicennia schaueriana,65,1
+Saint Barthélemy,BLM,Conocarpus erectus,66,1
+Saint Barthélemy,BLM,Laguncularia racemosa,67,1
+Saint Barthélemy,BLM,Rhizophora mangle,70,1
+Belize,BLZ,Acrostichum aureum,3,1
+Belize,BLZ,Avicennia germinans,64,1
+Belize,BLZ,Conocarpus erectus,66,1
+Belize,BLZ,Laguncularia racemosa,67,1
+Belize,BLZ,Rhizophora mangle,70,1
+Bermuda,BMU,Avicennia germinans,64,1
+Bermuda,BMU,Conocarpus erectus,66,1
+Bermuda,BMU,Rhizophora mangle,70,1
+Brazil,BRA,Acrostichum aureum,3,1
+Brazil,BRA,Avicennia germinans,64,1
+Brazil,BRA,Avicennia schaueriana,65,1
+Brazil,BRA,Conocarpus erectus,66,1
+Brazil,BRA,Laguncularia racemosa,67,1
+Brazil,BRA,Rhizophora mangle,70,1
+Brazil,BRA,Rhizophora racemosa,71,1
+Brazil,BRA,Rhizophora harrisonii,72,1
+Barbados,BRB,Laguncularia racemosa,67,1
+Barbados,BRB,Rhizophora mangle,70,1
+Brunei Darussalam,BRN,Avicennia marina,13,1
+Brunei Darussalam,BRN,Excoecaria agallocha,31,1
+Brunei Darussalam,BRN,Heritiera littoralis,35,1
+Brunei Darussalam,BRN,Nypa fruticans,41,1
+Brunei Darussalam,BRN,Rhizophora apiculata,44,1
+Brunei Darussalam,BRN,Rhizophora mucronata,45,1
+Brunei Darussalam,BRN,Rhizophora stylosa,47,1
+Brunei Darussalam,BRN,Sonneratia alba,52,1
+Brunei Darussalam,BRN,Xylocarpus granatum,61,1
+China,CHN,Acanthus ebracteatus,1,1
+China,CHN,Acanthus ilicifolius,2,1
+China,CHN,Acrostichum aureum,3,1
+China,CHN,Acrostichum speciosum,5,1
+China,CHN,Aegiceras corniculatum,8,1
+China,CHN,Avicennia marina,13,1
+China,CHN,Bruguiera cylindrica,16,1
+China,CHN,Bruguiera gymnorrhiza,18,1
+China,CHN,Bruguiera parviflora,20,1
+China,CHN,Bruguiera sexangula,21,1
+China,CHN,Ceriops tagal,27,1
+China,CHN,Excoecaria agallocha,31,1
+China,CHN,Heritiera littoralis,35,1
+China,CHN,Kandelia obovata,37,1
+China,CHN,Lumnitzera littorea,38,1
+China,CHN,Lumnitzera racemosa,39,1
+China,CHN,Nypa fruticans,41,1
+China,CHN,Pemphis acidula,43,1
+China,CHN,Rhizophora apiculata,44,1
+China,CHN,Rhizophora mucronata,45,1
+China,CHN,Rhizophora stylosa,47,1
+China,CHN,Scyphiphora hydrophyllacea,51,1
+China,CHN,Sonneratia alba,52,1
+China,CHN,Sonneratia caseolaris,54,1
+China,CHN,Sonneratia ovata,57,1
+China,CHN,Xylocarpus granatum,61,1
+Côte D'Ivoire,CIV,Acrostichum aureum,3,1
+Côte D'Ivoire,CIV,Avicennia germinans,64,1
+Côte D'Ivoire,CIV,Conocarpus erectus,66,1
+Côte D'Ivoire,CIV,Laguncularia racemosa,67,1
+Côte D'Ivoire,CIV,Rhizophora racemosa,71,1
+Cameroon,CMR,Acrostichum aureum,3,1
+Cameroon,CMR,Avicennia germinans,64,1
+Cameroon,CMR,Conocarpus erectus,66,1
+Cameroon,CMR,Laguncularia racemosa,67,1
+Cameroon,CMR,Rhizophora mangle,70,1
+Cameroon,CMR,Rhizophora racemosa,71,1
+Cameroon,CMR,Rhizophora harrisonii,72,1
+Democratic Republic of the Congo,COD,Acrostichum aureum,3,1
+Democratic Republic of the Congo,COD,Avicennia germinans,64,1
+Democratic Republic of the Congo,COD,Conocarpus erectus,66,1
+Democratic Republic of the Congo,COD,Laguncularia racemosa,67,1
+Democratic Republic of the Congo,COD,Rhizophora mangle,70,1
+Democratic Republic of the Congo,COD,Rhizophora racemosa,71,1
+Congo,COG,Acrostichum aureum,3,1
+Congo,COG,Avicennia germinans,64,1
+Congo,COG,Conocarpus erectus,66,1
+Congo,COG,Laguncularia racemosa,67,1
+Congo,COG,Rhizophora mangle,70,1
+Congo,COG,Rhizophora racemosa,71,1
+Congo,COG,Rhizophora harrisonii,72,1
+Colombia,COL,Acrostichum aureum,3,1
+Colombia,COL,Avicennia bicolor,63,1
+Colombia,COL,Avicennia germinans,64,1
+Colombia,COL,Conocarpus erectus,66,1
+Colombia,COL,Laguncularia racemosa,67,1
+Colombia,COL,More oleifera,68,1
+Colombia,COL,Pelliciera rhizophoreae,69,1
+Colombia,COL,Rhizophora mangle,70,1
+Colombia,COL,Rhizophora racemosa,71,1
+Colombia,COL,Rhizophora harrisonii,72,1
+Colombia,COL,Tabebuia palustris,73,1
+Comoros,COM,Avicennia marina,13,1
+Comoros,COM,Bruguiera gymnorrhiza,18,1
+Comoros,COM,Ceriops tagal,27,1
+Comoros,COM,Heritiera littoralis,35,1
+Comoros,COM,Rhizophora mucronata,45,1
+Comoros,COM,Sonneratia alba,52,1
+Comoros,COM,Xylocarpus granatum,61,1
+Costa Rica,CRI,Acrostichum aureum,3,1
+Costa Rica,CRI,Avicennia bicolor,63,1
+Costa Rica,CRI,Avicennia germinans,64,1
+Costa Rica,CRI,Conocarpus erectus,66,1
+Costa Rica,CRI,Laguncularia racemosa,67,1
+Costa Rica,CRI,Pelliciera rhizophoreae,69,1
+Costa Rica,CRI,Rhizophora mangle,70,1
+Costa Rica,CRI,Rhizophora racemosa,71,1
+Costa Rica,CRI,Rhizophora harrisonii,72,1
+Costa Rica,CRI,Tabebuia palustris,73,1
+Cuba,CUB,Acrostichum aureum,3,1
+Cuba,CUB,Avicennia germinans,64,1
+Cuba,CUB,Conocarpus erectus,66,1
+Cuba,CUB,Laguncularia racemosa,67,1
+Cuba,CUB,Rhizophora mangle,70,1
+Curaçao,CUW,Acrostichum aureum,3,1
+Curaçao,CUW,Avicennia germinans,64,1
+Curaçao,CUW,Avicennia schaueriana,65,1
+Curaçao,CUW,Conocarpus erectus,66,1
+Curaçao,CUW,Laguncularia racemosa,67,1
+Curaçao,CUW,Rhizophora mangle,70,1
+Christmas Island,CXR,Bruguiera gymnorrhiza,18,1
+Christmas Island,CXR,Bruguiera sexangula,21,1
+Cayman Islands,CYM,Avicennia germinans,64,1
+Cayman Islands,CYM,Conocarpus erectus,66,1
+Cayman Islands,CYM,Laguncularia racemosa,67,1
+Cayman Islands,CYM,Rhizophora mangle,70,1
+Djibouti,DJI,Avicennia marina,13,1
+Djibouti,DJI,Rhizophora mucronata,45,1
+Dominica,DMA,Acrostichum aureum,3,1
+Dominica,DMA,Avicennia germinans,64,1
+Dominica,DMA,Avicennia schaueriana,65,1
+Dominica,DMA,Conocarpus erectus,66,1
+Dominica,DMA,Laguncularia racemosa,67,1
+Dominica,DMA,Rhizophora mangle,70,1
+Dominican Republic,DOM,Avicennia germinans,64,1
+Dominican Republic,DOM,Conocarpus erectus,66,1
+Dominican Republic,DOM,Laguncularia racemosa,67,1
+Dominican Republic,DOM,Rhizophora mangle,70,1
+Ecuador,ECU,Acrostichum aureum,3,1
+Ecuador,ECU,Avicennia germinans,64,1
+Ecuador,ECU,Conocarpus erectus,66,1
+Ecuador,ECU,Laguncularia racemosa,67,1
+Ecuador,ECU,Pelliciera rhizophoreae,69,1
+Ecuador,ECU,Rhizophora mangle,70,1
+Ecuador,ECU,Rhizophora racemosa,71,1
+Ecuador,ECU,Rhizophora harrisonii,72,1
+Egypt,EGY,Avicennia marina,13,1
+Egypt,EGY,Rhizophora mucronata,45,1
+Eritrea,ERI,Avicennia marina,13,1
+Eritrea,ERI,Ceriops tagal,27,1
+Eritrea,ERI,Rhizophora mucronata,45,1
+Fiji,FJI,Bruguiera gymnorrhiza,18,1
+Fiji,FJI,Excoecaria agallocha,31,1
+Fiji,FJI,Heritiera littoralis,35,1
+Fiji,FJI,Lumnitzera littorea,38,1
+Fiji,FJI,Rhizophora samoensis,46,1
+Fiji,FJI,Rhizophora x selala,50,1
+Fiji,FJI,Xylocarpus granatum,61,1
+"Micronesia, Federated States of",FSM,Acrostichum speciosum,5,1
+"Micronesia, Federated States of",FSM,Avicennia alba,11,1
+"Micronesia, Federated States of",FSM,Bruguiera hainesii,19,1
+"Micronesia, Federated States of",FSM,Diospyros littorea,29,1
+"Micronesia, Federated States of",FSM,Excoecaria agallocha,31,1
+"Micronesia, Federated States of",FSM,Excoecaria indica,32,1
+"Micronesia, Federated States of",FSM,Heritiera littoralis,35,1
+"Micronesia, Federated States of",FSM,Lumnitzera racemosa,39,1
+"Micronesia, Federated States of",FSM,Osbornia octodonta,42,1
+"Micronesia, Federated States of",FSM,Rhizophora apiculata,44,1
+"Micronesia, Federated States of",FSM,Rhizophora samoensis,46,1
+"Micronesia, Federated States of",FSM,Rhizophora stylosa,47,1
+"Micronesia, Federated States of",FSM,Rhizophora x selala,50,1
+"Micronesia, Federated States of",FSM,Sonneratia alba,52,1
+"Micronesia, Federated States of",FSM,Sonneratia hainanensis,59,1
+Gabon,GAB,Acrostichum aureum,3,1
+Gabon,GAB,Avicennia germinans,64,1
+Gabon,GAB,Conocarpus erectus,66,1
+Gabon,GAB,Laguncularia racemosa,67,1
+Gabon,GAB,Rhizophora mangle,70,1
+Gabon,GAB,Rhizophora racemosa,71,1
+Gabon,GAB,Rhizophora harrisonii,72,1
+Ghana,GHA,Acrostichum aureum,3,1
+Ghana,GHA,Avicennia germinans,64,1
+Ghana,GHA,Conocarpus erectus,66,1
+Ghana,GHA,Laguncularia racemosa,67,1
+Ghana,GHA,Rhizophora racemosa,71,1
+Ghana,GHA,Rhizophora harrisonii,72,1
+Guinea,GIN,Acrostichum aureum,3,1
+Guinea,GIN,Avicennia germinans,64,1
+Guinea,GIN,Conocarpus erectus,66,1
+Guinea,GIN,Laguncularia racemosa,67,1
+Guinea,GIN,Rhizophora mangle,70,1
+Guinea,GIN,Rhizophora racemosa,71,1
+Guinea,GIN,Rhizophora harrisonii,72,1
+Guadeloupe,GLP,Avicennia germinans,64,1
+Guadeloupe,GLP,Avicennia schaueriana,65,1
+Guadeloupe,GLP,Conocarpus erectus,66,1
+Guadeloupe,GLP,Laguncularia racemosa,67,1
+Guadeloupe,GLP,Rhizophora mangle,70,1
+The Gambia,GMB,Acrostichum aureum,3,1
+The Gambia,GMB,Avicennia germinans,64,1
+The Gambia,GMB,Conocarpus erectus,66,1
+The Gambia,GMB,Laguncularia racemosa,67,1
+The Gambia,GMB,Rhizophora mangle,70,1
+The Gambia,GMB,Rhizophora racemosa,71,1
+The Gambia,GMB,Rhizophora harrisonii,72,1
+Guinea-Bissau,GNB,Avicennia germinans,64,1
+Guinea-Bissau,GNB,Conocarpus erectus,66,1
+Guinea-Bissau,GNB,Laguncularia racemosa,67,1
+Guinea-Bissau,GNB,Rhizophora mangle,70,1
+Guinea-Bissau,GNB,Rhizophora racemosa,71,1
+Guinea-Bissau,GNB,Rhizophora harrisonii,72,1
+Equatorial Guinea,GNQ,Acrostichum aureum,3,1
+Equatorial Guinea,GNQ,Avicennia germinans,64,1
+Equatorial Guinea,GNQ,Conocarpus erectus,66,1
+Equatorial Guinea,GNQ,Laguncularia racemosa,67,1
+Equatorial Guinea,GNQ,Rhizophora mangle,70,1
+Equatorial Guinea,GNQ,Rhizophora racemosa,71,1
+Equatorial Guinea,GNQ,Rhizophora harrisonii,72,1
+Grenada,GRD,Acrostichum aureum,3,1
+Grenada,GRD,Avicennia germinans,64,1
+Grenada,GRD,Avicennia schaueriana,65,1
+Grenada,GRD,Conocarpus erectus,66,1
+Grenada,GRD,Laguncularia racemosa,67,1
+Grenada,GRD,Rhizophora mangle,70,1
+Guatemala,GTM,Avicennia bicolor,63,1
+Guatemala,GTM,Avicennia germinans,64,1
+Guatemala,GTM,Conocarpus erectus,66,1
+Guatemala,GTM,Laguncularia racemosa,67,1
+Guatemala,GTM,Rhizophora mangle,70,1
+Guatemala,GTM,Rhizophora harrisonii,72,1
+French Guiana,GUF,Acrostichum aureum,3,1
+French Guiana,GUF,Avicennia germinans,64,1
+French Guiana,GUF,Conocarpus erectus,66,1
+French Guiana,GUF,Laguncularia racemosa,67,1
+French Guiana,GUF,Rhizophora mangle,70,1
+French Guiana,GUF,Rhizophora racemosa,71,1
+Guam,GUM,Avicennia marina,13,1
+Guam,GUM,Bruguiera gymnorrhiza,18,1
+Guam,GUM,Heritiera littoralis,35,1
+Guam,GUM,Lumnitzera littorea,38,1
+Guam,GUM,Nypa fruticans,41,1
+Guam,GUM,Pemphis acidula,43,1
+Guam,GUM,Rhizophora apiculata,44,1
+Guam,GUM,Rhizophora lamarckii,48,1
+Guam,GUM,Xylocarpus granatum,61,1
+Guyana,GUY,Avicennia germinans,64,1
+Guyana,GUY,Conocarpus erectus,66,1
+Guyana,GUY,Laguncularia racemosa,67,1
+Guyana,GUY,Rhizophora mangle,70,1
+Honduras,HND,Acrostichum aureum,3,1
+Honduras,HND,Avicennia germinans,64,1
+Honduras,HND,Conocarpus erectus,66,1
+Honduras,HND,Laguncularia racemosa,67,1
+Honduras,HND,Rhizophora mangle,70,1
+Haiti,HTI,Avicennia germinans,64,1
+Haiti,HTI,Conocarpus erectus,66,1
+Haiti,HTI,Laguncularia racemosa,67,1
+Haiti,HTI,Rhizophora mangle,70,1
+Indonesia,IDN,Acanthus ebracteatus,1,1
+Indonesia,IDN,Acanthus ilicifolius,2,1
+Indonesia,IDN,Acrostichum aureum,3,1
+Indonesia,IDN,Acrostichum speciosum,5,1
+Indonesia,IDN,Aegialitis annulata,6,1
+Indonesia,IDN,Aegiceras corniculatum,8,1
+Indonesia,IDN,Aegiceras floridum,9,1
+Indonesia,IDN,Avicennia alba,11,1
+Indonesia,IDN,Avicennia marina,13,1
+Indonesia,IDN,Avicennia officinalis,14,1
+Indonesia,IDN,Avicennia rumphiana,15,1
+Indonesia,IDN,Bruguiera cylindrica,16,1
+Indonesia,IDN,Bruguiera exaristata,17,1
+Indonesia,IDN,Bruguiera gymnorrhiza,18,1
+Indonesia,IDN,Bruguiera hainesii,19,1
+Indonesia,IDN,Bruguiera parviflora,20,1
+Indonesia,IDN,Bruguiera sexangula,21,1
+Indonesia,IDN,Camptostemon philippinensis,23,1
+Indonesia,IDN,Camptostemon schultzii,24,1
+Indonesia,IDN,Ceriops decandra,26,1
+Indonesia,IDN,Ceriops tagal,27,1
+Indonesia,IDN,Dolichandrone spathacea,30,1
+Indonesia,IDN,Excoecaria agallocha,31,1
+Indonesia,IDN,Excoecaria indica,32,1
+Indonesia,IDN,Heritiera globosa,34,1
+Indonesia,IDN,Heritiera littoralis,35,1
+Indonesia,IDN,Kandelia candel,36,1
+Indonesia,IDN,Lumnitzera littorea,38,1
+Indonesia,IDN,Lumnitzera racemosa,39,1
+Indonesia,IDN,Nypa fruticans,41,1
+Indonesia,IDN,Osbornia octodonta,42,1
+Indonesia,IDN,Pemphis acidula,43,1
+Indonesia,IDN,Rhizophora apiculata,44,1
+Indonesia,IDN,Rhizophora mucronata,45,1
+Indonesia,IDN,Rhizophora stylosa,47,1
+Indonesia,IDN,Rhizophora lamarckii,48,1
+Indonesia,IDN,Scyphiphora hydrophyllacea,51,1
+Indonesia,IDN,Sonneratia alba,52,1
+Indonesia,IDN,Sonneratia caseolaris,54,1
+Indonesia,IDN,Sonneratia caseolaris,56,1
+Indonesia,IDN,Sonneratia ovata,57,1
+Indonesia,IDN,Sonneratia gulngai,58,1
+Indonesia,IDN,Sonneratia urama,60,1
+Indonesia,IDN,Xylocarpus granatum,61,1
+Indonesia,IDN,Xylocarpus moluccensis,62,1
+India,IND,Acanthus ebracteatus,1,1
+India,IND,Acanthus ilicifolius,2,1
+India,IND,Acrostichum aureum,3,1
+India,IND,Acrostichum speciosum,5,1
+India,IND,Aegialitis rotundifolia,7,1
+India,IND,Aegiceras corniculatum,8,1
+India,IND,Aglaia cucullata,10,1
+India,IND,Avicennia alba,11,1
+India,IND,Avicennia marina,13,1
+India,IND,Avicennia officinalis,14,1
+India,IND,Bruguiera cylindrica,16,1
+India,IND,Bruguiera gymnorrhiza,18,1
+India,IND,Bruguiera parviflora,20,1
+India,IND,Bruguiera sexangula,21,1
+India,IND,Ceriops decandra,26,1
+India,IND,Ceriops tagal,27,1
+India,IND,Cynometra iripa,28,1
+India,IND,Dolichandrone spathacea,30,1
+India,IND,Excoecaria agallocha,31,1
+India,IND,Heritiera fomes,33,1
+India,IND,Heritiera littoralis,35,1
+India,IND,Kandelia candel,36,1
+India,IND,Lumnitzera littorea,38,1
+India,IND,Lumnitzera racemosa,39,1
+India,IND,Nypa fruticans,41,1
+India,IND,Pemphis acidula,43,1
+India,IND,Rhizophora apiculata,44,1
+India,IND,Rhizophora mucronata,45,1
+India,IND,Rhizophora stylosa,47,1
+India,IND,Rhizophora lamarckii,48,1
+India,IND,Scyphiphora hydrophyllacea,51,1
+India,IND,Sonneratia alba,52,1
+India,IND,Sonneratia apetala,53,1
+India,IND,Sonneratia caseolaris,54,1
+India,IND,Sonneratia griffithii,55,1
+India,IND,Xylocarpus granatum,61,1
+India,IND,Xylocarpus moluccensis,62,1
+British Indian Ocean Territory,IOT,Lumnitzera racemosa,39,1
+British Indian Ocean Territory,IOT,Pemphis acidula,43,1
+Iran (Islamic Republic Of),IRN,Avicennia marina,13,1
+Iran (Islamic Republic Of),IRN,Rhizophora mucronata,45,1
+Jamaica,JAM,Acrostichum aureum,3,1
+Jamaica,JAM,Avicennia germinans,64,1
+Jamaica,JAM,Conocarpus erectus,66,1
+Jamaica,JAM,Laguncularia racemosa,67,1
+Jamaica,JAM,Rhizophora mangle,70,1
+Japan,JPN,Acrostichum aureum,3,1
+Japan,JPN,Avicennia marina,13,1
+Japan,JPN,Bruguiera gymnorrhiza,18,1
+Japan,JPN,Excoecaria agallocha,31,1
+Japan,JPN,Heritiera littoralis,35,1
+Japan,JPN,Kandelia obovata,37,1
+Japan,JPN,Lumnitzera racemosa,39,1
+Japan,JPN,Nypa fruticans,41,1
+Japan,JPN,Pemphis acidula,43,1
+Japan,JPN,Rhizophora stylosa,47,1
+Japan,JPN,Sonneratia alba,52,1
+Kenya,KEN,Avicennia marina,13,1
+Kenya,KEN,Bruguiera gymnorrhiza,18,1
+Kenya,KEN,Ceriops tagal,27,1
+Kenya,KEN,Heritiera littoralis,35,1
+Kenya,KEN,Lumnitzera racemosa,39,1
+Kenya,KEN,Rhizophora mucronata,45,1
+Kenya,KEN,Sonneratia alba,52,1
+Kenya,KEN,Xylocarpus granatum,61,1
+Cambodia,KHM,Acanthus ebracteatus,1,1
+Cambodia,KHM,Acanthus ilicifolius,2,1
+Cambodia,KHM,Acrostichum aureum,3,1
+Cambodia,KHM,Aegiceras corniculatum,8,1
+Cambodia,KHM,Avicennia alba,11,1
+Cambodia,KHM,Bruguiera gymnorrhiza,18,1
+Cambodia,KHM,Bruguiera sexangula,21,1
+Cambodia,KHM,Ceriops decandra,26,1
+Cambodia,KHM,Ceriops tagal,27,1
+Cambodia,KHM,Excoecaria agallocha,31,1
+Cambodia,KHM,Heritiera littoralis,35,1
+Cambodia,KHM,Lumnitzera littorea,38,1
+Cambodia,KHM,Lumnitzera racemosa,39,1
+Cambodia,KHM,Nypa fruticans,41,1
+Cambodia,KHM,Pemphis acidula,43,1
+Cambodia,KHM,Rhizophora apiculata,44,1
+Cambodia,KHM,Rhizophora mucronata,45,1
+Cambodia,KHM,Scyphiphora hydrophyllacea,51,1
+Cambodia,KHM,Sonneratia alba,52,1
+Cambodia,KHM,Sonneratia caseolaris,54,1
+Cambodia,KHM,Sonneratia caseolaris,56,1
+Cambodia,KHM,Xylocarpus granatum,61,1
+Kiribati,KIR,Bruguiera gymnorrhiza,18,1
+Kiribati,KIR,Lumnitzera littorea,38,1
+Kiribati,KIR,Rhizophora mucronata,45,1
+Kiribati,KIR,Sonneratia alba,52,1
+Saint Kitts and Nevis,KNA,Acrostichum aureum,3,1
+Saint Kitts and Nevis,KNA,Avicennia germinans,64,1
+Saint Kitts and Nevis,KNA,Avicennia schaueriana,65,1
+Saint Kitts and Nevis,KNA,Conocarpus erectus,66,1
+Saint Kitts and Nevis,KNA,Laguncularia racemosa,67,1
+Saint Kitts and Nevis,KNA,Rhizophora mangle,70,1
+Liberia,LBR,Acrostichum aureum,3,1
+Liberia,LBR,Avicennia germinans,64,1
+Liberia,LBR,Conocarpus erectus,66,1
+Liberia,LBR,Rhizophora mangle,70,1
+Liberia,LBR,Rhizophora racemosa,71,1
+Liberia,LBR,Rhizophora harrisonii,72,1
+Saint Lucia,LCA,Acrostichum aureum,3,1
+Saint Lucia,LCA,Avicennia germinans,64,1
+Saint Lucia,LCA,Avicennia schaueriana,65,1
+Saint Lucia,LCA,Conocarpus erectus,66,1
+Saint Lucia,LCA,Laguncularia racemosa,67,1
+Saint Lucia,LCA,Rhizophora mangle,70,1
+Sri Lanka,LKA,Acanthus ilicifolius,2,1
+Sri Lanka,LKA,Acrostichum aureum,3,1
+Sri Lanka,LKA,Aegiceras corniculatum,8,1
+Sri Lanka,LKA,Avicennia marina,13,1
+Sri Lanka,LKA,Avicennia officinalis,14,1
+Sri Lanka,LKA,Bruguiera cylindrica,16,1
+Sri Lanka,LKA,Bruguiera gymnorrhiza,18,1
+Sri Lanka,LKA,Bruguiera sexangula,21,1
+Sri Lanka,LKA,Ceriops tagal,27,1
+Sri Lanka,LKA,Cynometra iripa,28,1
+Sri Lanka,LKA,Dolichandrone spathacea,30,1
+Sri Lanka,LKA,Excoecaria agallocha,31,1
+Sri Lanka,LKA,Excoecaria indica,32,1
+Sri Lanka,LKA,Heritiera littoralis,35,1
+Sri Lanka,LKA,Lumnitzera littorea,38,1
+Sri Lanka,LKA,Lumnitzera racemosa,39,1
+Sri Lanka,LKA,Nypa fruticans,41,1
+Sri Lanka,LKA,Pemphis acidula,43,1
+Sri Lanka,LKA,Rhizophora apiculata,44,1
+Sri Lanka,LKA,Rhizophora mucronata,45,1
+Sri Lanka,LKA,Scyphiphora hydrophyllacea,51,1
+Sri Lanka,LKA,Sonneratia alba,52,1
+Sri Lanka,LKA,Sonneratia caseolaris,54,1
+Sri Lanka,LKA,Xylocarpus granatum,61,1
+Saint Martin,MAF,Acrostichum aureum,3,1
+Saint Martin,MAF,Avicennia germinans,64,1
+Saint Martin,MAF,Avicennia schaueriana,65,1
+Saint Martin,MAF,Conocarpus erectus,66,1
+Saint Martin,MAF,Laguncularia racemosa,67,1
+Saint Martin,MAF,Rhizophora mangle,70,1
+Madagascar,MDG,Avicennia marina,13,1
+Madagascar,MDG,Bruguiera gymnorrhiza,18,1
+Madagascar,MDG,Ceriops tagal,27,1
+Madagascar,MDG,Heritiera littoralis,35,1
+Madagascar,MDG,Lumnitzera racemosa,39,1
+Madagascar,MDG,Rhizophora mucronata,45,1
+Madagascar,MDG,Sonneratia alba,52,1
+Madagascar,MDG,Xylocarpus granatum,61,1
+Maldives,MDV,Acrostichum aureum,3,1
+Maldives,MDV,Avicennia marina,13,1
+Maldives,MDV,Bruguiera cylindrica,16,1
+Maldives,MDV,Bruguiera gymnorrhiza,18,1
+Maldives,MDV,Ceriops tagal,27,1
+Maldives,MDV,Excoecaria agallocha,31,1
+Maldives,MDV,Lumnitzera racemosa,39,1
+Maldives,MDV,Pemphis acidula,43,1
+Maldives,MDV,Rhizophora mucronata,45,1
+Maldives,MDV,Sonneratia caseolaris,54,1
+Mexico,MEX,Avicennia germinans,64,1
+Mexico,MEX,Conocarpus erectus,66,1
+Mexico,MEX,Laguncularia racemosa,67,1
+Mexico,MEX,Rhizophora mangle,70,1
+Mexico,MEX,Rhizophora harrisonii,72,1
+Marshall Islands,MHL,Bruguiera gymnorrhiza,18,1
+Marshall Islands,MHL,Lumnitzera littorea,38,1
+Marshall Islands,MHL,Pemphis acidula,43,1
+Marshall Islands,MHL,Sonneratia alba,52,1
+Marshall Islands,MHL,Xylocarpus granatum,61,1
+Myanmar,MMR,Acanthus ilicifolius,2,1
+Myanmar,MMR,Acrostichum aureum,3,1
+Myanmar,MMR,Aegialitis rotundifolia,7,1
+Myanmar,MMR,Aegiceras corniculatum,8,1
+Myanmar,MMR,Avicennia alba,11,1
+Myanmar,MMR,Avicennia marina,13,1
+Myanmar,MMR,Avicennia officinalis,14,1
+Myanmar,MMR,Bruguiera cylindrica,16,1
+Myanmar,MMR,Bruguiera gymnorrhiza,18,1
+Myanmar,MMR,Bruguiera parviflora,20,1
+Myanmar,MMR,Bruguiera sexangula,21,1
+Myanmar,MMR,Ceriops decandra,26,1
+Myanmar,MMR,Ceriops tagal,27,1
+Myanmar,MMR,Dolichandrone spathacea,30,1
+Myanmar,MMR,Excoecaria agallocha,31,1
+Myanmar,MMR,Excoecaria indica,32,1
+Myanmar,MMR,Heritiera fomes,33,1
+Myanmar,MMR,Heritiera littoralis,35,1
+Myanmar,MMR,Kandelia candel,36,1
+Myanmar,MMR,Lumnitzera littorea,38,1
+Myanmar,MMR,Lumnitzera racemosa,39,1
+Myanmar,MMR,Nypa fruticans,41,1
+Myanmar,MMR,Pemphis acidula,43,1
+Myanmar,MMR,Rhizophora apiculata,44,1
+Myanmar,MMR,Rhizophora mucronata,45,1
+Myanmar,MMR,Scyphiphora hydrophyllacea,51,1
+Myanmar,MMR,Sonneratia alba,52,1
+Myanmar,MMR,Sonneratia apetala,53,1
+Myanmar,MMR,Sonneratia caseolaris,54,1
+Myanmar,MMR,Sonneratia griffithii,55,1
+Myanmar,MMR,Xylocarpus granatum,61,1
+Myanmar,MMR,Xylocarpus moluccensis,62,1
+Northern Mariana Islands,MNP,Bruguiera gymnorrhiza,18,1
+Northern Mariana Islands,MNP,Excoecaria agallocha,31,1
+Northern Mariana Islands,MNP,Rhizophora stylosa,47,1
+Mozambique,MOZ,Acrostichum aureum,3,1
+Mozambique,MOZ,Avicennia marina,13,1
+Mozambique,MOZ,Bruguiera gymnorrhiza,18,1
+Mozambique,MOZ,Ceriops tagal,27,1
+Mozambique,MOZ,Heritiera littoralis,35,1
+Mozambique,MOZ,Lumnitzera racemosa,39,1
+Mozambique,MOZ,Pemphis acidula,43,1
+Mozambique,MOZ,Rhizophora mucronata,45,1
+Mozambique,MOZ,Sonneratia alba,52,1
+Mozambique,MOZ,Xylocarpus granatum,61,1
+Mauritania,MRT,Avicennia germinans,64,1
+Mauritania,MRT,Conocarpus erectus,66,1
+Mauritania,MRT,Rhizophora racemosa,71,1
+Montserrat,MSR,Acrostichum aureum,3,1
+Montserrat,MSR,Avicennia germinans,64,1
+Montserrat,MSR,Avicennia schaueriana,65,1
+Montserrat,MSR,Conocarpus erectus,66,1
+Montserrat,MSR,Laguncularia racemosa,67,1
+Montserrat,MSR,Rhizophora mangle,70,1
+Martinique,MTQ,Acrostichum aureum,3,1
+Martinique,MTQ,Avicennia germinans,64,1
+Martinique,MTQ,Avicennia schaueriana,65,1
+Martinique,MTQ,Conocarpus erectus,66,1
+Martinique,MTQ,Laguncularia racemosa,67,1
+Martinique,MTQ,Rhizophora mangle,70,1
+Mauritius,MUS,Acrostichum aureum,3,1
+Mauritius,MUS,Bruguiera gymnorrhiza,18,1
+Mauritius,MUS,Pemphis acidula,43,1
+Mauritius,MUS,Rhizophora mucronata,45,1
+Malaysia,MYS,Acanthus ebracteatus,1,1
+Malaysia,MYS,Acanthus ilicifolius,2,1
+Malaysia,MYS,Acrostichum aureum,3,1
+Malaysia,MYS,Acrostichum speciosum,5,1
+Malaysia,MYS,Aegiceras corniculatum,8,1
+Malaysia,MYS,Aglaia cucullata,10,1
+Malaysia,MYS,Avicennia alba,11,1
+Malaysia,MYS,Avicennia marina,13,1
+Malaysia,MYS,Avicennia officinalis,14,1
+Malaysia,MYS,Avicennia rumphiana,15,1
+Malaysia,MYS,Bruguiera cylindrica,16,1
+Malaysia,MYS,Bruguiera gymnorrhiza,18,1
+Malaysia,MYS,Bruguiera hainesii,19,1
+Malaysia,MYS,Bruguiera parviflora,20,1
+Malaysia,MYS,Bruguiera sexangula,21,1
+Malaysia,MYS,Ceriops decandra,26,1
+Malaysia,MYS,Ceriops tagal,27,1
+Malaysia,MYS,Dolichandrone spathacea,30,1
+Malaysia,MYS,Excoecaria agallocha,31,1
+Malaysia,MYS,Excoecaria indica,32,1
+Malaysia,MYS,Heritiera fomes,33,1
+Malaysia,MYS,Heritiera littoralis,35,1
+Malaysia,MYS,Kandelia candel,36,1
+Malaysia,MYS,Lumnitzera littorea,38,1
+Malaysia,MYS,Lumnitzera racemosa,39,1
+Malaysia,MYS,Nypa fruticans,41,1
+Malaysia,MYS,Osbornia octodonta,42,1
+Malaysia,MYS,Rhizophora apiculata,44,1
+Malaysia,MYS,Rhizophora mucronata,45,1
+Malaysia,MYS,Rhizophora stylosa,47,1
+Malaysia,MYS,Rhizophora lamarckii,48,1
+Malaysia,MYS,Scyphiphora hydrophyllacea,51,1
+Malaysia,MYS,Sonneratia alba,52,1
+Malaysia,MYS,Sonneratia caseolaris,54,1
+Malaysia,MYS,Sonneratia griffithii,55,1
+Malaysia,MYS,Sonneratia ovata,57,1
+Malaysia,MYS,Sonneratia gulngai,58,1
+Malaysia,MYS,Sonneratia urama,60,1
+Malaysia,MYS,Xylocarpus granatum,61,1
+Malaysia,MYS,Xylocarpus moluccensis,62,1
+Mayotte,MYT,Avicennia marina,13,1
+Mayotte,MYT,Bruguiera gymnorrhiza,18,1
+Mayotte,MYT,Ceriops tagal,27,1
+Mayotte,MYT,Heritiera littoralis,35,1
+Mayotte,MYT,Lumnitzera racemosa,39,1
+Mayotte,MYT,Rhizophora mucronata,45,1
+Mayotte,MYT,Sonneratia alba,52,1
+Mayotte,MYT,Xylocarpus granatum,61,1
+New Caledonia,NCL,Acanthus ilicifolius,2,1
+New Caledonia,NCL,Acrostichum aureum,3,1
+New Caledonia,NCL,Acrostichum speciosum,5,1
+New Caledonia,NCL,Avicennia marina,13,1
+New Caledonia,NCL,Bruguiera gymnorrhiza,18,1
+New Caledonia,NCL,Ceriops tagal,27,1
+New Caledonia,NCL,Cynometra iripa,28,1
+New Caledonia,NCL,Dolichandrone spathacea,30,1
+New Caledonia,NCL,Excoecaria agallocha,31,1
+New Caledonia,NCL,Heritiera littoralis,35,1
+New Caledonia,NCL,Lumnitzera littorea,38,1
+New Caledonia,NCL,Lumnitzera racemosa,39,1
+New Caledonia,NCL,Lumnitzera rosea,40,1
+New Caledonia,NCL,Pemphis acidula,43,1
+New Caledonia,NCL,Rhizophora apiculata,44,1
+New Caledonia,NCL,Rhizophora samoensis,46,1
+New Caledonia,NCL,Rhizophora stylosa,47,1
+New Caledonia,NCL,Rhizophora lamarckii,48,1
+New Caledonia,NCL,Rhizophora samoensis,49,1
+New Caledonia,NCL,Rhizophora x selala,50,1
+New Caledonia,NCL,Scyphiphora hydrophyllacea,51,1
+New Caledonia,NCL,Sonneratia alba,52,1
+New Caledonia,NCL,Sonneratia caseolaris,54,1
+New Caledonia,NCL,Xylocarpus granatum,61,1
+Nigeria,NGA,Acrostichum aureum,3,1
+Nigeria,NGA,Avicennia germinans,64,1
+Nigeria,NGA,Conocarpus erectus,66,1
+Nigeria,NGA,Laguncularia racemosa,67,1
+Nigeria,NGA,Rhizophora mangle,70,1
+Nigeria,NGA,Rhizophora racemosa,71,1
+Nigeria,NGA,Rhizophora harrisonii,72,1
+Nicaragua,NIC,Acrostichum aureum,3,1
+Nicaragua,NIC,Avicennia bicolor,63,1
+Nicaragua,NIC,Avicennia germinans,64,1
+Nicaragua,NIC,Conocarpus erectus,66,1
+Nicaragua,NIC,Laguncularia racemosa,67,1
+Nicaragua,NIC,Pelliciera rhizophoreae,69,1
+Nicaragua,NIC,Rhizophora mangle,70,1
+Nicaragua,NIC,Rhizophora racemosa,71,1
+Nicaragua,NIC,Rhizophora harrisonii,72,1
+Niue,NIU,Excoecaria agallocha,31,1
+Niue,NIU,Pemphis acidula,43,1
+Netherlands,NLD,Acrostichum aureum,3,1
+Netherlands,NLD,Avicennia germinans,64,1
+Netherlands,NLD,Avicennia schaueriana,65,1
+Netherlands,NLD,Conocarpus erectus,66,1
+Netherlands,NLD,Laguncularia racemosa,67,1
+Netherlands,NLD,Rhizophora mangle,70,1
+Nauru,NRU,Bruguiera gymnorrhiza,18,1
+Nauru,NRU,Rhizophora stylosa,47,1
+New Zealand,NZL,Avicennia marina,13,1
+New Zealand,NZL,Rhizophora stylosa,47,1
+Oman,OMN,Avicennia marina,13,1
+Pakistan,PAK,Aegiceras corniculatum,8,1
+Pakistan,PAK,Avicennia marina,13,1
+Pakistan,PAK,Ceriops tagal,27,1
+Pakistan,PAK,Rhizophora mucronata,45,1
+Panama,PAN,Acrostichum aureum,3,1
+Panama,PAN,Avicennia bicolor,63,1
+Panama,PAN,Avicennia germinans,64,1
+Panama,PAN,Conocarpus erectus,66,1
+Panama,PAN,Laguncularia racemosa,67,1
+Panama,PAN,More oleifera,68,1
+Panama,PAN,Pelliciera rhizophoreae,69,1
+Panama,PAN,Rhizophora mangle,70,1
+Panama,PAN,Rhizophora racemosa,71,1
+Panama,PAN,Rhizophora harrisonii,72,1
+Panama,PAN,Tabebuia palustris,73,1
+Peru,PER,Avicennia germinans,64,1
+Peru,PER,Conocarpus erectus,66,1
+Peru,PER,Laguncularia racemosa,67,1
+Peru,PER,Rhizophora mangle,70,1
+Peru,PER,Rhizophora racemosa,71,1
+Peru,PER,Rhizophora harrisonii,72,1
+Philippines,PHL,Acanthus ebracteatus,1,1
+Philippines,PHL,Acanthus ilicifolius,2,1
+Philippines,PHL,Acrostichum aureum,3,1
+Philippines,PHL,Acrostichum speciosum,5,1
+Philippines,PHL,Aegialitis annulata,6,1
+Philippines,PHL,Aegiceras corniculatum,8,1
+Philippines,PHL,Aegiceras floridum,9,1
+Philippines,PHL,Avicennia alba,11,1
+Philippines,PHL,Avicennia marina,13,1
+Philippines,PHL,Avicennia officinalis,14,1
+Philippines,PHL,Avicennia rumphiana,15,1
+Philippines,PHL,Bruguiera cylindrica,16,1
+Philippines,PHL,Bruguiera exaristata,17,1
+Philippines,PHL,Bruguiera gymnorrhiza,18,1
+Philippines,PHL,Bruguiera hainesii,19,1
+Philippines,PHL,Bruguiera parviflora,20,1
+Philippines,PHL,Bruguiera sexangula,21,1
+Philippines,PHL,Camptostemon philippinensis,23,1
+Philippines,PHL,Camptostemon schultzii,24,1
+Philippines,PHL,Ceriops decandra,26,1
+Philippines,PHL,Ceriops tagal,27,1
+Philippines,PHL,Cynometra iripa,28,1
+Philippines,PHL,Dolichandrone spathacea,30,1
+Philippines,PHL,Excoecaria agallocha,31,1
+Philippines,PHL,Heritiera littoralis,35,1
+Philippines,PHL,Kandelia obovata,37,1
+Philippines,PHL,Lumnitzera littorea,38,1
+Philippines,PHL,Lumnitzera racemosa,39,1
+Philippines,PHL,Lumnitzera rosea,40,1
+Philippines,PHL,Nypa fruticans,41,1
+Philippines,PHL,Osbornia octodonta,42,1
+Philippines,PHL,Pemphis acidula,43,1
+Philippines,PHL,Rhizophora apiculata,44,1
+Philippines,PHL,Rhizophora mucronata,45,1
+Philippines,PHL,Rhizophora stylosa,47,1
+Philippines,PHL,Rhizophora lamarckii,48,1
+Philippines,PHL,Scyphiphora hydrophyllacea,51,1
+Philippines,PHL,Sonneratia alba,52,1
+Philippines,PHL,Sonneratia caseolaris,54,1
+Philippines,PHL,Sonneratia ovata,57,1
+Philippines,PHL,Sonneratia gulngai,58,1
+Philippines,PHL,Xylocarpus granatum,61,1
+Palau,PLW,Acanthus ebracteatus,1,1
+Palau,PLW,Acrostichum aureum,3,1
+Palau,PLW,Acrostichum speciosum,5,1
+Palau,PLW,Avicennia alba,11,1
+Palau,PLW,Bruguiera gymnorrhiza,18,1
+Palau,PLW,Ceriops tagal,27,1
+Palau,PLW,Cynometra iripa,28,1
+Palau,PLW,Dolichandrone spathacea,30,1
+Palau,PLW,Excoecaria agallocha,31,1
+Palau,PLW,Heritiera littoralis,35,1
+Palau,PLW,Lumnitzera littorea,38,1
+Palau,PLW,Nypa fruticans,41,1
+Palau,PLW,Pemphis acidula,43,1
+Palau,PLW,Rhizophora apiculata,44,1
+Palau,PLW,Rhizophora mucronata,45,1
+Palau,PLW,Rhizophora stylosa,47,1
+Palau,PLW,Rhizophora lamarckii,48,1
+Palau,PLW,Scyphiphora hydrophyllacea,51,1
+Palau,PLW,Sonneratia alba,52,1
+Palau,PLW,Xylocarpus granatum,61,1
+Papua New Guinea,PNG,Acanthus ebracteatus,1,1
+Papua New Guinea,PNG,Acanthus ilicifolius,2,1
+Papua New Guinea,PNG,Acrostichum aureum,3,1
+Papua New Guinea,PNG,Acrostichum speciosum,5,1
+Papua New Guinea,PNG,Aegialitis annulata,6,1
+Papua New Guinea,PNG,Aegiceras corniculatum,8,1
+Papua New Guinea,PNG,Avicennia alba,11,1
+Papua New Guinea,PNG,Avicennia marina,13,1
+Papua New Guinea,PNG,Avicennia officinalis,14,1
+Papua New Guinea,PNG,Avicennia rumphiana,15,1
+Papua New Guinea,PNG,Bruguiera cylindrica,16,1
+Papua New Guinea,PNG,Bruguiera exaristata,17,1
+Papua New Guinea,PNG,Bruguiera gymnorrhiza,18,1
+Papua New Guinea,PNG,Bruguiera hainesii,19,1
+Papua New Guinea,PNG,Bruguiera parviflora,20,1
+Papua New Guinea,PNG,Bruguiera sexangula,21,1
+Papua New Guinea,PNG,Camptostemon schultzii,24,1
+Papua New Guinea,PNG,Ceriops decandra,26,1
+Papua New Guinea,PNG,Ceriops tagal,27,1
+Papua New Guinea,PNG,Cynometra iripa,28,1
+Papua New Guinea,PNG,Diospyros littorea,29,1
+Papua New Guinea,PNG,Dolichandrone spathacea,30,1
+Papua New Guinea,PNG,Excoecaria agallocha,31,1
+Papua New Guinea,PNG,Heritiera littoralis,35,1
+Papua New Guinea,PNG,Lumnitzera littorea,38,1
+Papua New Guinea,PNG,Lumnitzera racemosa,39,1
+Papua New Guinea,PNG,Lumnitzera rosea,40,1
+Papua New Guinea,PNG,Nypa fruticans,41,1
+Papua New Guinea,PNG,Osbornia octodonta,42,1
+Papua New Guinea,PNG,Pemphis acidula,43,1
+Papua New Guinea,PNG,Rhizophora apiculata,44,1
+Papua New Guinea,PNG,Rhizophora mucronata,45,1
+Papua New Guinea,PNG,Rhizophora lamarckii,48,1
+Papua New Guinea,PNG,Scyphiphora hydrophyllacea,51,1
+Papua New Guinea,PNG,Sonneratia alba,52,1
+Papua New Guinea,PNG,Sonneratia caseolaris,54,1
+Papua New Guinea,PNG,Sonneratia caseolaris,56,1
+Papua New Guinea,PNG,Sonneratia ovata,57,1
+Papua New Guinea,PNG,Sonneratia gulngai,58,1
+Papua New Guinea,PNG,Sonneratia urama,60,1
+Papua New Guinea,PNG,Xylocarpus granatum,61,1
+Papua New Guinea,PNG,Xylocarpus moluccensis,62,1
+Puerto Rico,PRI,Xylocarpus moluccensis,62,1
+Puerto Rico,PRI,Avicennia germinans,64,1
+Puerto Rico,PRI,Conocarpus erectus,66,1
+Puerto Rico,PRI,Laguncularia racemosa,67,1
+Puerto Rico,PRI,Rhizophora mangle,70,1
+Qatar,QAT,Avicennia marina,13,1
+Saudi Arabia,SAU,Avicennia marina,13,1
+Saudi Arabia,SAU,Rhizophora mucronata,45,1
+Sudan,SDN,Avicennia marina,13,1
+Senegal,SEN,Acrostichum aureum,3,1
+Senegal,SEN,Avicennia germinans,64,1
+Senegal,SEN,Conocarpus erectus,66,1
+Senegal,SEN,Laguncularia racemosa,67,1
+Senegal,SEN,Rhizophora mangle,70,1
+Senegal,SEN,Rhizophora racemosa,71,1
+Senegal,SEN,Rhizophora harrisonii,72,1
+Singapore,SGP,Acanthus ebracteatus,1,1
+Singapore,SGP,Acanthus ilicifolius,2,1
+Singapore,SGP,Acrostichum aureum,3,1
+Singapore,SGP,Acrostichum speciosum,5,1
+Singapore,SGP,Aegiceras corniculatum,8,1
+Singapore,SGP,Avicennia alba,11,1
+Singapore,SGP,Avicennia marina,13,1
+Singapore,SGP,Avicennia officinalis,14,1
+Singapore,SGP,Avicennia rumphiana,15,1
+Singapore,SGP,Bruguiera cylindrica,16,1
+Singapore,SGP,Bruguiera gymnorrhiza,18,1
+Singapore,SGP,Bruguiera parviflora,20,1
+Singapore,SGP,Ceriops tagal,27,1
+Singapore,SGP,Dolichandrone spathacea,30,1
+Singapore,SGP,Excoecaria agallocha,31,1
+Singapore,SGP,Heritiera littoralis,35,1
+Singapore,SGP,Kandelia candel,36,1
+Singapore,SGP,Lumnitzera littorea,38,1
+Singapore,SGP,Lumnitzera racemosa,39,1
+Singapore,SGP,Nypa fruticans,41,1
+Singapore,SGP,Pemphis acidula,43,1
+Singapore,SGP,Rhizophora apiculata,44,1
+Singapore,SGP,Rhizophora mucronata,45,1
+Singapore,SGP,Rhizophora stylosa,47,1
+Singapore,SGP,Scyphiphora hydrophyllacea,51,1
+Singapore,SGP,Sonneratia alba,52,1
+Singapore,SGP,Sonneratia caseolaris,54,1
+Singapore,SGP,Sonneratia ovata,57,1
+Singapore,SGP,Xylocarpus granatum,61,1
+Singapore,SGP,Xylocarpus moluccensis,62,1
+Solomon Islands,SLB,Acanthus ilicifolius,2,1
+Solomon Islands,SLB,Aegiceras corniculatum,8,1
+Solomon Islands,SLB,Avicennia alba,11,1
+Solomon Islands,SLB,Avicennia marina,13,1
+Solomon Islands,SLB,Bruguiera cylindrica,16,1
+Solomon Islands,SLB,Bruguiera gymnorrhiza,18,1
+Solomon Islands,SLB,Bruguiera parviflora,20,1
+Solomon Islands,SLB,Bruguiera sexangula,21,1
+Solomon Islands,SLB,Ceriops tagal,27,1
+Solomon Islands,SLB,Excoecaria agallocha,31,1
+Solomon Islands,SLB,Heritiera littoralis,35,1
+Solomon Islands,SLB,Lumnitzera littorea,38,1
+Solomon Islands,SLB,Nypa fruticans,41,1
+Solomon Islands,SLB,Osbornia octodonta,42,1
+Solomon Islands,SLB,Rhizophora apiculata,44,1
+Solomon Islands,SLB,Rhizophora mucronata,45,1
+Solomon Islands,SLB,Rhizophora stylosa,47,1
+Solomon Islands,SLB,Rhizophora lamarckii,48,1
+Solomon Islands,SLB,Scyphiphora hydrophyllacea,51,1
+Solomon Islands,SLB,Sonneratia alba,52,1
+Solomon Islands,SLB,Sonneratia caseolaris,54,1
+Solomon Islands,SLB,Sonneratia gulngai,58,1
+Solomon Islands,SLB,Xylocarpus granatum,61,1
+Solomon Islands,SLB,Xylocarpus moluccensis,62,1
+Sierra Leone,SLE,Avicennia germinans,64,1
+Sierra Leone,SLE,Conocarpus erectus,66,1
+Sierra Leone,SLE,Laguncularia racemosa,67,1
+Sierra Leone,SLE,Rhizophora mangle,70,1
+Sierra Leone,SLE,Rhizophora racemosa,71,1
+Sierra Leone,SLE,Rhizophora harrisonii,72,1
+El Salvador,SLV,Avicennia bicolor,63,1
+El Salvador,SLV,Avicennia germinans,64,1
+El Salvador,SLV,Conocarpus erectus,66,1
+El Salvador,SLV,Laguncularia racemosa,67,1
+El Salvador,SLV,Rhizophora mangle,70,1
+El Salvador,SLV,Rhizophora racemosa,71,1
+Somalia,SOM,Avicennia marina,13,1
+Somalia,SOM,Bruguiera gymnorrhiza,18,1
+Somalia,SOM,Ceriops tagal,27,1
+Somalia,SOM,Lumnitzera racemosa,39,1
+Somalia,SOM,Rhizophora mucronata,45,1
+Somalia,SOM,Sonneratia alba,52,1
+Sao Tome And Principe,STP,Acrostichum aureum,3,1
+Sao Tome And Principe,STP,Avicennia germinans,64,1
+Sao Tome And Principe,STP,Conocarpus erectus,66,1
+Sao Tome And Principe,STP,Rhizophora harrisonii,72,1
+Suriname,SUR,Acrostichum aureum,3,1
+Suriname,SUR,Avicennia germinans,64,1
+Suriname,SUR,Laguncularia racemosa,67,1
+Suriname,SUR,Rhizophora mangle,70,1
+Sint Maarten,SXM,Acrostichum aureum,3,1
+Sint Maarten,SXM,Avicennia germinans,64,1
+Sint Maarten,SXM,Avicennia schaueriana,65,1
+Sint Maarten,SXM,Conocarpus erectus,66,1
+Sint Maarten,SXM,Laguncularia racemosa,67,1
+Sint Maarten,SXM,Rhizophora mangle,70,1
+Seychelles,SYC,Acrostichum aureum,3,1
+Seychelles,SYC,Avicennia marina,13,1
+Seychelles,SYC,Bruguiera gymnorrhiza,18,1
+Seychelles,SYC,Ceriops tagal,27,1
+Seychelles,SYC,Lumnitzera racemosa,39,1
+Seychelles,SYC,Pemphis acidula,43,1
+Seychelles,SYC,Rhizophora mucronata,45,1
+Seychelles,SYC,Sonneratia alba,52,1
+Seychelles,SYC,Xylocarpus granatum,61,1
+Turks and Caicos Islands,TCA,Avicennia germinans,64,1
+Turks and Caicos Islands,TCA,Avicennia schaueriana,65,1
+Turks and Caicos Islands,TCA,Conocarpus erectus,66,1
+Turks and Caicos Islands,TCA,Laguncularia racemosa,67,1
+Turks and Caicos Islands,TCA,Rhizophora mangle,70,1
+Togo,TGO,Avicennia germinans,64,1
+Togo,TGO,Conocarpus erectus,66,1
+Togo,TGO,Rhizophora racemosa,71,1
+Thailand,THA,Acanthus ebracteatus,1,1
+Thailand,THA,Acanthus ilicifolius,2,1
+Thailand,THA,Acrostichum aureum,3,1
+Thailand,THA,Acrostichum speciosum,5,1
+Thailand,THA,Aegialitis rotundifolia,7,1
+Thailand,THA,Aegiceras corniculatum,8,1
+Thailand,THA,Avicennia alba,11,1
+Thailand,THA,Avicennia marina,13,1
+Thailand,THA,Avicennia officinalis,14,1
+Thailand,THA,Bruguiera cylindrica,16,1
+Thailand,THA,Bruguiera gymnorrhiza,18,1
+Thailand,THA,Bruguiera hainesii,19,1
+Thailand,THA,Bruguiera parviflora,20,1
+Thailand,THA,Bruguiera sexangula,21,1
+Thailand,THA,Ceriops decandra,26,1
+Thailand,THA,Ceriops tagal,27,1
+Thailand,THA,Cynometra iripa,28,1
+Thailand,THA,Dolichandrone spathacea,30,1
+Thailand,THA,Excoecaria agallocha,31,1
+Thailand,THA,Heritiera fomes,33,1
+Thailand,THA,Heritiera littoralis,35,1
+Thailand,THA,Kandelia candel,36,1
+Thailand,THA,Lumnitzera littorea,38,1
+Thailand,THA,Lumnitzera racemosa,39,1
+Thailand,THA,Nypa fruticans,41,1
+Thailand,THA,Pemphis acidula,43,1
+Thailand,THA,Rhizophora apiculata,44,1
+Thailand,THA,Rhizophora mucronata,45,1
+Thailand,THA,Scyphiphora hydrophyllacea,51,1
+Thailand,THA,Sonneratia alba,52,1
+Thailand,THA,Sonneratia caseolaris,54,1
+Thailand,THA,Sonneratia griffithii,55,1
+Thailand,THA,Sonneratia ovata,57,1
+Thailand,THA,Xylocarpus granatum,61,1
+Thailand,THA,Xylocarpus moluccensis,62,1
+Timor-Leste,TLS,Acanthus ilicifolius,2,1
+Timor-Leste,TLS,Acrostichum aureum,3,1
+Timor-Leste,TLS,Aegiceras corniculatum,8,1
+Timor-Leste,TLS,Avicennia marina,13,1
+Timor-Leste,TLS,Bruguiera parviflora,20,1
+Timor-Leste,TLS,Dolichandrone spathacea,30,1
+Timor-Leste,TLS,Excoecaria agallocha,31,1
+Timor-Leste,TLS,Heritiera littoralis,35,1
+Timor-Leste,TLS,Lumnitzera racemosa,39,1
+Timor-Leste,TLS,Rhizophora lamarckii,48,1
+Timor-Leste,TLS,Sonneratia alba,52,1
+Timor-Leste,TLS,Xylocarpus granatum,61,1
+Tonga,TON,Bruguiera gymnorrhiza,18,1
+Tonga,TON,Excoecaria agallocha,31,1
+Tonga,TON,Heritiera littoralis,35,1
+Tonga,TON,Lumnitzera littorea,38,1
+Tonga,TON,Pemphis acidula,43,1
+Tonga,TON,Rhizophora samoensis,46,1
+Tonga,TON,Rhizophora stylosa,47,1
+Tonga,TON,Xylocarpus granatum,61,1
+Trinidad And Tobago,TTO,Avicennia germinans,64,1
+Trinidad And Tobago,TTO,Avicennia schaueriana,65,1
+Trinidad And Tobago,TTO,Conocarpus erectus,66,1
+Trinidad And Tobago,TTO,Laguncularia racemosa,67,1
+Trinidad And Tobago,TTO,Rhizophora mangle,70,1
+Trinidad And Tobago,TTO,Rhizophora racemosa,71,1
+Trinidad And Tobago,TTO,Rhizophora harrisonii,72,1
+Tuvalu,TUV,Lumnitzera littorea,38,1
+Tuvalu,TUV,Pemphis acidula,43,1
+"Taiwan, Province of China ",TWN,Avicennia marina,13,1
+"Taiwan, Province of China ",TWN,Excoecaria agallocha,31,1
+"Taiwan, Province of China ",TWN,Heritiera littoralis,35,1
+"Taiwan, Province of China ",TWN,Kandelia obovata,37,1
+"Taiwan, Province of China ",TWN,Lumnitzera racemosa,39,1
+"Taiwan, Province of China ",TWN,Pemphis acidula,43,1
+"Taiwan, Province of China ",TWN,Rhizophora stylosa,47,1
+"Tanzania, United Republic of",TZA,Acrostichum aureum,3,1
+"Tanzania, United Republic of",TZA,Avicennia marina,13,1
+"Tanzania, United Republic of",TZA,Bruguiera gymnorrhiza,18,1
+"Tanzania, United Republic of",TZA,Ceriops tagal,27,1
+"Tanzania, United Republic of",TZA,Heritiera littoralis,35,1
+"Tanzania, United Republic of",TZA,Lumnitzera racemosa,39,1
+"Tanzania, United Republic of",TZA,Pemphis acidula,43,1
+"Tanzania, United Republic of",TZA,Rhizophora mucronata,45,1
+"Tanzania, United Republic of",TZA,Sonneratia alba,52,1
+"Tanzania, United Republic of",TZA,Xylocarpus granatum,61,1
+United States of America,USA,Acrostichum aureum,3,1
+United States of America,USA,Avicennia germinans,64,1
+United States of America,USA,Conocarpus erectus,66,1
+United States of America,USA,Laguncularia racemosa,67,1
+United States of America,USA,Rhizophora mangle,70,1
+Saint Vincent and the Grenadines,VCT,Acrostichum aureum,3,1
+Saint Vincent and the Grenadines,VCT,Avicennia germinans,64,1
+Saint Vincent and the Grenadines,VCT,Avicennia schaueriana,65,1
+Saint Vincent and the Grenadines,VCT,Conocarpus erectus,66,1
+Saint Vincent and the Grenadines,VCT,Laguncularia racemosa,67,1
+Saint Vincent and the Grenadines,VCT,Rhizophora mangle,70,1
+Venezuela (Bolivarian Republic of),VEN,Acrostichum aureum,3,1
+Venezuela (Bolivarian Republic of),VEN,Avicennia germinans,64,1
+Venezuela (Bolivarian Republic of),VEN,Conocarpus erectus,66,1
+Venezuela (Bolivarian Republic of),VEN,Laguncularia racemosa,67,1
+Venezuela (Bolivarian Republic of),VEN,Rhizophora mangle,70,1
+Venezuela (Bolivarian Republic of),VEN,Rhizophora racemosa,71,1
+Venezuela (Bolivarian Republic of),VEN,Rhizophora harrisonii,72,1
+British Virgin Islands,VGB,Acrostichum aureum,3,1
+British Virgin Islands,VGB,Avicennia germinans,64,1
+British Virgin Islands,VGB,Avicennia schaueriana,65,1
+British Virgin Islands,VGB,Conocarpus erectus,66,1
+British Virgin Islands,VGB,Laguncularia racemosa,67,1
+British Virgin Islands,VGB,Rhizophora mangle,70,1
+US Virgin Islands,VIR,Acrostichum aureum,3,1
+US Virgin Islands,VIR,Avicennia germinans,64,1
+US Virgin Islands,VIR,Avicennia schaueriana,65,1
+US Virgin Islands,VIR,Conocarpus erectus,66,1
+US Virgin Islands,VIR,Laguncularia racemosa,67,1
+US Virgin Islands,VIR,Rhizophora mangle,70,1
+Viet Nam,VNM,Acanthus ebracteatus,1,1
+Viet Nam,VNM,Acanthus ilicifolius,2,1
+Viet Nam,VNM,Acrostichum aureum,3,1
+Viet Nam,VNM,Aegiceras corniculatum,8,1
+Viet Nam,VNM,Aegiceras floridum,9,1
+Viet Nam,VNM,Avicennia alba,11,1
+Viet Nam,VNM,Avicennia marina,13,1
+Viet Nam,VNM,Avicennia officinalis,14,1
+Viet Nam,VNM,Bruguiera cylindrica,16,1
+Viet Nam,VNM,Bruguiera gymnorrhiza,18,1
+Viet Nam,VNM,Bruguiera parviflora,20,1
+Viet Nam,VNM,Bruguiera sexangula,21,1
+Viet Nam,VNM,Ceriops decandra,26,1
+Viet Nam,VNM,Ceriops tagal,27,1
+Viet Nam,VNM,Dolichandrone spathacea,30,1
+Viet Nam,VNM,Excoecaria agallocha,31,1
+Viet Nam,VNM,Heritiera littoralis,35,1
+Viet Nam,VNM,Kandelia candel,36,1
+Viet Nam,VNM,Kandelia obovata,37,1
+Viet Nam,VNM,Lumnitzera littorea,38,1
+Viet Nam,VNM,Lumnitzera racemosa,39,1
+Viet Nam,VNM,Nypa fruticans,41,1
+Viet Nam,VNM,Rhizophora apiculata,44,1
+Viet Nam,VNM,Rhizophora mucronata,45,1
+Viet Nam,VNM,Rhizophora stylosa,47,1
+Viet Nam,VNM,Scyphiphora hydrophyllacea,51,1
+Viet Nam,VNM,Sonneratia alba,52,1
+Viet Nam,VNM,Sonneratia caseolaris,54,1
+Viet Nam,VNM,Sonneratia ovata,57,1
+Viet Nam,VNM,Xylocarpus granatum,61,1
+Vanuatu,VUT,Avicennia marina,13,1
+Vanuatu,VUT,Bruguiera gymnorrhiza,18,1
+Vanuatu,VUT,Bruguiera parviflora,20,1
+Vanuatu,VUT,Ceriops tagal,27,1
+Vanuatu,VUT,Excoecaria agallocha,31,1
+Vanuatu,VUT,Heritiera littoralis,35,1
+Vanuatu,VUT,Lumnitzera littorea,38,1
+Vanuatu,VUT,Rhizophora apiculata,44,1
+Vanuatu,VUT,Rhizophora mucronata,45,1
+Vanuatu,VUT,Rhizophora samoensis,46,1
+Vanuatu,VUT,Rhizophora lamarckii,48,1
+Vanuatu,VUT,Sonneratia alba,52,1
+Vanuatu,VUT,Sonneratia caseolaris,54,1
+Vanuatu,VUT,Sonneratia gulngai,58,1
+Vanuatu,VUT,Xylocarpus granatum,61,1
+Wallis and Futuna,WLF,Acrostichum aureum,3,1
+Wallis and Futuna,WLF,Bruguiera gymnorrhiza,18,1
+Wallis and Futuna,WLF,Rhizophora samoensis,46,1
+Wallis and Futuna,WLF,Rhizophora stylosa,47,1
+Samoa,WSM,Bruguiera gymnorrhiza,18,1
+Samoa,WSM,Rhizophora samoensis,46,1
+Samoa,WSM,Rhizophora stylosa,47,1
+Samoa,WSM,Xylocarpus granatum,61,1
+Yemen,YEM,Avicennia marina,13,1
+Yemen,YEM,Rhizophora mucronata,45,1
+South Africa,ZAF,Acrostichum aureum,3,1
+South Africa,ZAF,Avicennia marina,13,1
+South Africa,ZAF,Bruguiera gymnorrhiza,18,1
+South Africa,ZAF,Ceriops tagal,27,1
+South Africa,ZAF,Lumnitzera racemosa,39,1
+South Africa,ZAF,Sonneratia alba,52,1
+Cocos (Keeling) Islands,CCK,Pemphis acidula,43,1
+Cocos (Keeling) Islands,CCK,Rhizophora apiculata,44,1
+Norfolk Island,NFK,Excoecaria agallocha,31,1
+French Polynesia,PYF,Rhizophora stylosa,47,1
+French Polynesia,PYF,Acrostichum aureum,3,1
+"Hong Kong Special Administrative Region of China, the",HKG,Kandelia obovata,37,1
+"Hong Kong Special Administrative Region of China, the",HKG,Avicennia marina,13,1
+"Hong Kong Special Administrative Region of China, the",HKG,Acanthus ilicifolius,2,1
+"Hong Kong Special Administrative Region of China, the",HKG,Aegiceras corniculatum,8,1
+Macao Special Administrative Region of China,MAC,Avicennia marina,13,1
+Macao Special Administrative Region of China,MAC,Acanthus ilicifolius,2,1
+Tokelau ,TKL,Pemphis acidula,43,1

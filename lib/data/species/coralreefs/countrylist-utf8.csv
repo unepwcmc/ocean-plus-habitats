@@ -1,0 +1,255 @@
+COUNTRY,ISO3,OCCURRENCE,PEER-REVIEWED EVIDENCE,Number of Species
+Indonesia,IDN,2,1; 3;,619
+Australia,AUS,2,1; 3;,592
+Philippines,PHL,2,1; 3;,588
+Malaysia,MYS,2,1; 3;,581
+Papua New Guinea,PNG,2,1; 3;,562
+Thailand,THA,2,1; 3;,549
+Singapore,SGP,2,1; 3;,545
+Solomon Islands,SLB,2,1; 3;,506
+Japan,JPN,2,1; 3;,461
+Palau,PLW,2,1; 3;,428
+Fiji,FJI,2,1; 3;,413
+New Caledonia,NCL,2,1; 3;,390
+Vanuatu,VUT,2,1; 3;,381
+India,IND,2,1; 3;,374
+Kiribati,KIR,2,1; 3;,360
+Tuvalu,TUV,2,1; 3;,352
+Madagascar,MDG,2,1; 3;,346
+Cambodia,KHM,2,1; 3;,342
+Marshall Islands,MHL,2,1; 3;,339
+Yemen,YEM,2,1; 3;,338
+British Indian Ocean Territory,IOT,2,1; 3;,332
+Myanmar,MMR,2,1; 3;,330
+Nauru,NRU,2,1; 3;,329
+Mozambique,MOZ,2,1; 3;,327
+Saudi Arabia,SAU,2,1; 3;,327
+Mauritius,MUS,2,1; 3;,323
+Seychelles,SYC,2,1; 3;,322
+Eritrea,ERI,2,1; 3;,321
+Comoros,COM,2,1; 3;,316
+Djibouti,DJI,2,1; 3;,315
+Mayotte,MYT,2,1; 3;,315
+Somalia,SOM,2,1; 3;,315
+Egypt,EGY,2,1; 3;,307
+Wallis and Futuna,WLF,2,1; 3;,307
+Israel,ISR,2,1; 3;,303
+Sri Lanka,LKA,2,1; 3;,302
+Sudan,SDN,2,1; 3;,301
+Jordan,JOR,2,1; 3;,299
+Reunion,REU,2,1; 3;,295
+United States Minor Outlying Islands,UMI,2,1; 3;,288
+American Samoa,ASM,2,1; 3;,284
+Samoa,WSM,2,1; 3;,283
+"Tanzania, United Republic of",TZA,2,1; 3;,279
+Kenya,KEN,2,1; 3;,278
+Guam,GUM,2,1; 3;,262
+Northern Mariana Islands,MNP,2,1; 3;,262
+Maldives,MDV,2,1; 3;,247
+Tonga,TON,2,1; 3;,220
+Niue,NIU,2,1; 3;,190
+French Polynesia,PYF,2,1; 3;,186
+Oman,OMN,2,1; 3;,181
+Cook Islands,COK,2,1; 3;,178
+United Arab Emirates,ARE,2,1; 3;,116
+Bahrain,BHR,2,1; 3;,108
+Cocos (Keeling) Islands,CCK,2,1; 3;,108
+Qatar,QAT,2,1; 3;,107
+Christmas Island,CXR,2,1; 3;,105
+Iraq,IRQ,2,3;,104
+Kuwait,KWT,2,1; 3;,104
+South Africa,ZAF,2,1; 3;,96
+Pakistan,PAK,2,3;,95
+Costa Rica,CRI,2,1; 3;,94
+Mexico,MEX,2,1; 3;,94
+Panama,PAN,2,1; 3;,94
+China,CHN,2,1; 3;,91
+Colombia,COL,2,1; 3;,90
+Guadeloupe,GLP,2,1; 3;,84
+Honduras,HND,2,1; 3;,84
+Nicaragua,NIC,2,1; 3;,79
+United States of America,USA,2,1; 3;,66
+Haiti,HTI,2,1; 3;,63
+Cuba,CUB,2,1; 3;,62
+Norfolk Island,NFK,2,3;,62
+"Bonaire, Sint Eustatius and Saba",BES,2,1; 3;,61
+Cayman Islands,CYM,2,1; 3;,60
+Jamaica,JAM,2,3;,60
+Belize,BLZ,2,1; 3;,59
+Curaçao,CUW,2,1; 3;,59
+Bahamas,BHS,2,1; 3;,58
+Dominican Republic,DOM,2,3;,58
+Dominica,DMA,2,1; 3;,57
+Grenada,GRD,2,1; 3;,57
+Saint Lucia,LCA,2,1; 3;,57
+Saint Vincent and the Grenadines,VCT,2,1; 3;,57
+Trinidad And Tobago,TTO,2,1; 3;,57
+Antigua and Barbuda,ATG,2,1; 3;,56
+Barbados,BRB,2,1; 3;,56
+Montserrat,MSR,2,1; 3;,56
+Anguilla,AIA,2,1; 3;,55
+Saint Kitts and Nevis,KNA,2,1; 3;,55
+Turks and Caicos Islands,TCA,2,1; 3;,55
+British Virgin Islands,VGB,2,1; 3;,53
+Sint Maarten,SXM,2,1; 3;,53
+Saint Barthélemy,BLM,2,1; 3;,51
+Chile,CHL,2,3;,45
+Bermuda,BMU,2,1; 3;,26
+Brazil,BRA,2,1; 3;,25
+Ecuador,ECU,2,1; 3;,25
+El Salvador,SLV,2,1; 3;,22
+New Zealand,NZL,2,3;,13
+Bangladesh,BGD,2,1; 3;,9
+Cabo Verde,CPV,2,3;,9
+Benin,BEN,2,3;,8
+Cameroon,CMR,2,3;,8
+Côte D'Ivoire,CIV,2,3;,8
+Equatorial Guinea,GNQ,2,3;,8
+Gabon,GAB,2,3;,8
+Ghana,GHA,2,3;,8
+Guinea,GIN,2,3;,8
+Guinea-Bissau,GNB,2,3;,8
+Liberia,LBR,2,3;,8
+Mauritania,MRT,2,3;,8
+Nigeria,NGA,2,3;,8
+Sao Tome And Principe,STP,2,3;,8
+Senegal,SEN,2,3;,8
+Sierra Leone,SLE,2,3;,8
+Togo,TGO,2,3;,8
+France,FRA,2,3;,5
+US Virgin Islands,VIR,2,1; 3;,5
+Algeria,DZA,2,3;,4
+Croatia,HRV,2,3;,4
+Greece,GRC,2,3;,4
+Italy,ITA,2,3;,4
+Lebanon,LBN,2,3;,4
+Spain,ESP,2,3;,4
+Tunisia,TUN,2,3;,4
+Turkey,TUR,2,3;,4
+Albania,ALB,2,3;,3
+Gibraltar,GIB,2,3;,3
+"Korea, Republic Of",KOR,2,3;,3
+Libya,LBY,2,3;,3
+Monaco,MCO,2,3;,3
+Morocco,MAR,2,3;,3
+Slovenia,SVN,2,3;,3
+Syrian Arab Republic,SYR,2,3;,3
+Cyprus,CYP,2,3;,2
+Guyana,GUY,2,3;,2
+Montenegro,MNE,2,3;,2
+Guatemala,GTM,2,1; 3;,1
+Malta,MLT,2,3;,1
+Martinique,MTQ,2,1; 3;,1
+"Palestine, State of",PSE,2,3;,1
+Puerto Rico,PRI,2,1; 3;,1
+Western Sahara,ESH,2,3;,1
+Afghanistan,AFG,0,Inland,0
+Åland Islands,ALA,0,1; 4;,0
+Andorra,AND,0,Inland,0
+Angola,AGO,1,N/A,0
+Antarctica,ATA,0,1; 4;,0
+Argentina,ARG,1,N/A,0
+Armenia,ARM,0,Inland,0
+Aruba,ABW,2,1;,0
+Austria,AUT,0,Inland,0
+Azerbaijan,AZE,0,1; 4;,0
+Belarus,BLR,0,Inland,0
+Belgium,BEL,0,1; 4;,0
+Bhutan,BTN,0,Inland,0
+Bolivia (Plurinational State of),BOL,0,Inland,0
+Bosnia and Herzegovina,BIH,1,N/A,0
+Botswana,BWA,0,Inland,0
+Bouvet Island,BVT,0,1; 4;,0
+British military base in Cyprus,GBRX,0,1; 4;,0
+Brunei Darussalam,BRN,2,1;,0
+Bulgaria,BGR,1,N/A,0
+Burkina Faso,BFA,0,Inland,0
+Burundi,BDI,0,Inland,0
+Canada,CAN,0,1; 4;,0
+Central African Republic,CAF,0,Inland,0
+Chad,TCD,0,Inland,0
+Congo,COG,1,N/A,0
+Czech Republic,CZE,0,Inland,0
+Democratic Republic of the Congo,COD,0,1; 4;,0
+Denmark,DNK,0,1; 4;,0
+Estonia,EST,0,1; 4;,0
+Ethiopia,ETH,0,Inland,0
+Falkland Islands (Malvinas),FLK,0,1; 4;,0
+Faroe Islands,FRO,0,1; 4;,0
+Finland,FIN,0,1; 4;,0
+French Guiana,GUF,1,N/A,0
+French Southern and Antarctic Territories,ATF,0,1; 4;,0
+Georgia,GEO,0,1; 4;,0
+Germany,DEU,0,1; 4;,0
+Greenland,GRL,0,1; 4;,0
+Guernsey,GGY,0,1; 4;,0
+Heard Island and McDonald Islands,HMD,0,1; 4;,0
+Holy See (the),VAT,0,Inland,0
+"Hong Kong Special Administrative Region of China, the",HKG,1,N/A,0
+Hungary,HUN,0,Inland,0
+Iceland,ISL,0,1; 4;,0
+Iran (Islamic Republic Of),IRN,2,1;,0
+Ireland,IRL,0,1; 4;,0
+Isle of Man,IMN,0,1; 4;,0
+Jersey,JEY,0,1; 4;,0
+Kazakhstan,KAZ,0,1; 4;,0
+Kingdom of Eswatini,SWZ,0,Inland,0
+"Korea, Democratic People's Republic Of",PRK,1,N/A,0
+Kyrgyzstan,KGZ,0,Inland,0
+Lao People's Democratic Republic,LAO,0,Inland,0
+Latvia,LVA,0,1; 4;,0
+Lesotho,LSO,0,Inland,0
+Liechtenstein,LIE,0,Inland,0
+Lithuania,LTU,0,1; 4;,0
+Luxembourg,LUX,0,Inland,0
+Macao Special Administrative Region of China,MAC,0,1; 4;,0
+Malawi,MWI,0,Inland,0
+Mali,MLI,0,Inland,0
+"Micronesia, Federated States of",FSM,2,1;,0
+"Moldova, Republic Of",MDA,0,Inland,0
+Mongolia,MNG,0,Inland,0
+Namibia,NAM,1,N/A,0
+Nepal,NPL,0,Inland,0
+Netherlands,NLD,0,1; 4;,0
+Netherlands (Antilles),NLD,2,1;,0
+Niger,NER,0,Inland,0
+North Macedonia,MKD,0,Inland,0
+Norway,NOR,0,1; 4;,0
+Paraguay,PRY,0,Inland,0
+Peru,PER,1,N/A,0
+Pitcairn Islands,PCN,2,1;,0
+Poland,POL,0,1; 4;,0
+Portugal,PRT,1,N/A,0
+Romania,ROU,0,1; 4;,0
+Russian Federation,RUS,0,1; 4;,0
+Rwanda,RWA,0,Inland,0
+"Saint Helena, Ascension and Tristan da Cunha  ",SHN,0,1; 4;,0
+Saint Martin,MAF,2,1;,0
+Saint Pierre and Miquelon,SPM,0,1; 4;,0
+San Marino,SMR,0,Inland,0
+Serbia,SRB,0,Inland,0
+Slovakia,SVK,0,Inland,0
+South Georgia and the South Sandwich Islands,SGS,0,1; 4;,0
+South Sudan,SSD,0,Inland,0
+Suriname,SUR,1,N/A,0
+Svalbard and Jan Mayen,SJM,1,N/A,0
+Sweden,SWE,0,1; 4;,0
+Switzerland,CHE,0,Inland,0
+"Taiwan, Province of China",TWN,2,1;,0
+Tajikistan,TJK,0,Inland,0
+The Gambia,GMB,1,N/A,0
+Timor-Leste,TLS,1,N/A,0
+Tokelau,TKL,2,1;,0
+Turkmenistan,TKM,0,1; 4;,0
+Uganda,UGA,0,Inland,0
+Ukraine,UKR,0,1; 4;,0
+United Kingdom of Great Britain and Northern Ireland,GBR,0,1; 4;,0
+Uruguay,URY,1,N/A,0
+Uzbekistan,UZB,0,Inland,0
+Venezuela (Bolivarian Republic of),VEN,2,1;,0
+Vietnam,VNM,2,1;,0
+Zambia,ZMB,0,Inland,0
+Zimbabwe,ZWE,0,Inland,0
+,,,,
+,,,,
+,,,,
