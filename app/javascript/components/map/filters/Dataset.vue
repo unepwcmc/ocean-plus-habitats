@@ -11,9 +11,7 @@
       :checked="isActive"
       @click="toggleDataset"
     >
-    <span class="custom-radio">
-      <span class="custom-radio__inner" />
-    </span>
+    <span :class="`custom-radio custom-radio--${config.id}`" />
     <span class="map-filters__filter-title">
       {{ name }}
     </span>

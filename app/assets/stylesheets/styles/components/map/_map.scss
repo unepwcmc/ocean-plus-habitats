@@ -28,13 +28,13 @@
 // Map filters
 //--------------------------------------------------
 .map-filters {
-  @include item-spacing;
   @include flex-no-shrink();
-  width: $pane-width-laptop;
   background-color: $background-colour;
   color: $white;
   overflow-y: scroll;
   overflow-x: hidden;
+  padding: 40px 20px;
+  width: $pane-width-laptop;
   height: 100%;
 
   z-index: 100;
@@ -44,19 +44,11 @@
   }
 
     &__filter {
-      min-height: 64px;
-      border: $border-thin $grey-light;
       margin-bottom: $item-spacing-medium;
-      padding: rem-calc(10);
-
-      &:hover {
-        box-shadow: rem-calc(2 3 3 2) rgba($black, 0.5);
-      }
     }
     
       &__filter-title {
         font-weight: $semi-bold;
-        margin-right: rem-calc(10);
       }
 }
 

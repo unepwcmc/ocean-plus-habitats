@@ -114,7 +114,7 @@ export default {
 
     reload () {
       this.datasets = [{
-        id: 'first_layer',
+        id: 'coralreefs',
         name: 'First Layer',
         sourceLayer: 'Ch2_Fg5_mcat5',
         tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Ch2_Fg5_Oct19/VectorTileServer/tile/{z}/{y}/{x}.pbf',
