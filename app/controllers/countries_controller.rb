@@ -27,6 +27,8 @@ class CountriesController < ApplicationController
 
     @red_list_data = habitats.zip(red_list_data)
 
+    @example_species_select = habitats.map { |habitat| { id: habitat[:id], name: habitat[:title] }}.to_json
+
     @target_tabs = I18n.t('countries.shared.targets.tabs')
     @target_text = country_yml[:targets]
   end

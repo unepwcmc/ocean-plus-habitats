@@ -1,0 +1,8 @@
+en:
+  countries:
+    shared:
+      example-species:
+        title: "Examples of species and their status for habitat:"
+        example_title_1: Examples of most common species
+        example_title_2: Examples of threatened species
+        link-text: IUCN Species page
