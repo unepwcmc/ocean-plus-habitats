@@ -4,6 +4,8 @@ const INPUT_SELECTORS = 'select, input, textarea, button, a, [tabindex]:not([tab
 
 const DISABLED_TAB_VALUE = -5
 
+export const TAB_KEYCODE = KEYCODES.tab
+
 export const isTabForward = e => e.keyCode === KEYCODES.tab && !e.shiftKey
 
 export const isTabBackward = e => e.keyCode === KEYCODES.tab && e.shiftKey

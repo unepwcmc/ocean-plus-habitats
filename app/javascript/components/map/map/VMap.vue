@@ -37,6 +37,10 @@ export default {
     mapboxToken: {
       type: String,
       required: true
+    },
+    boundingBox: {
+      type: Array,
+      defaut: null
     }
   },
 
@@ -48,6 +52,12 @@ export default {
         geocodingUrl: 'https://api.mapbox.com/geocoding/v5/mapbox.places'
       },
       firstForegroundLayerId: ''
+    }
+  },
+
+  watch: {
+    boundingBox () {
+      if (this.boundingBox) { this.zoomToBoundingBox() }
     }
   },
 
@@ -88,10 +98,15 @@ export default {
        this.$eventHub.$emit('map-load')
 
       if(this.search) { this.addSearchControl() }
+      if (this.boundingBox) { this.zoomToBoundingBox() }
     })
   },
 
   methods: {
+    zoomToBoundingBox() {
+      this.map.fitBounds(this.boundingBox)
+    },
+
     setFirstForegroundLayerId () {
       this.firstForegroundLayerId = getFirstForegroundLayerId(this.map)
     },

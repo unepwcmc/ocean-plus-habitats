@@ -11,6 +11,7 @@
       :search="search"
       :allow-no-selected-dataset="allowNoSelectedDataset"
       :mapbox-token="mapboxToken"
+      :bounding-box="initBoundingBox"
     />
   </div>
 </template>
@@ -19,6 +20,7 @@
 import FilterPane from './filters/FilterPane'
 import VMap from './map/VMap'
 import { getLayers } from './helpers/map-helpers'
+import { getCountryExtentByISO3 } from './helpers/request-helpers'
 
 export default {
   components: {
@@ -46,6 +48,10 @@ export default {
     filterPaneWarningText: {
       type: String,
       default: ''
+    },
+    iso3: {
+      type: String,
+      default: ''
     }
   },
 
@@ -53,7 +59,8 @@ export default {
     return {
       datasets: [],
       currentDatasetId: '',
-      mapboxToken: process.env.MAPBOX_TOKEN
+      mapboxToken: process.env.MAPBOX_TOKEN,
+      initBoundingBox: null
     }
   },
 
@@ -69,6 +76,10 @@ export default {
     this.$eventHub.$on('map-load', this.selectFirstLayer)
 
     this.reload()
+
+    if (this.iso3) {
+      this.setInitBoundingBox()
+    }
   },
 
   destroyed () {
@@ -78,6 +89,17 @@ export default {
   },
 
   methods: {
+    setInitBoundingBox () {
+      getCountryExtentByISO3(this.iso3, res => {
+        const extent = res.data.extent
+
+        this.initBoundingBox = [
+          [extent.xmin - 1, extent.ymin - 1],
+          [extent.xmax + 1, extent.ymax + 1]
+        ]
+      })
+    },
+
     getDatasetFromId (datasetId) {
       let dataset = null
 
