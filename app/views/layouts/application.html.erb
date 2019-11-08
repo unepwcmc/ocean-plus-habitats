@@ -6,16 +6,11 @@
 
   <body>
     <div id="v-app" v-cloak>
-      <%= render '/global/header-home' %>
-
-      <section class="container">
-        <chart-doughnut :datasets="<%= @doughnut_chart.to_json %>" smallprint="<%= @smallprint %>"></chart-doughnut>
-      </section>
-
-      <section class="container">
-        <v-map-interactive></v-map-interactive>
-      </section>
+      <%= yield %>
+      
       <%= render '/global/footer' %>
+
+      <modal id="citation"></modal>
     </div>
   </body>
 </html>

@@ -1,31 +1,21 @@
 //--------------------------------------------------
-// variables
-//--------------------------------------------------
-// - colours
-// - fonts
-// - dimensions
-// - breakpoins
-// - padding
-// - project specific
-//
-//--------------------------------------------------
 // colours
 //--------------------------------------------------
 $white: #ffffff;
-$grey-light: #f4f4f4;
+$grey-light: #F2F2F2;
 $grey: #7f7f7f;
 $grey-dark: #444444;
 $grey-xdark: #383838;
 $black: #000000;
 
+$green: #22A37B;
+
 $navy: #135D78;
-$navy-dark: #1F232A;
+$navy-dark: #0D485D;
 $navy-xdark: #072029;
 $purple: #BA41FF;
 
 $nav: #1E2329;
-
-
 
 $blue-grey: #3A4552;
 $pink: #BA41FF;
@@ -46,15 +36,16 @@ $font-open-sans: 'open sans', sans-serif;
 
 $body-font: $font-open-sans;
 $body-font-color: $grey-xdark;
-$body-font-size: rem-calc(18);
+$body-font-size: rem-calc(16);
 $body-line-height: 1.4;
 
 $header-font: $font-open-sans;
-$header-font-color: $navy-xdark;
+$header-font-color: $black;
 $header-font-size-mobile: rem-calc(50);
 $header-font-size-tablet: rem-calc(50);
 $header-font-size-laptop: rem-calc(50);
 $header-line-height: 1.2;
+$header-margin-bottom: 1.2em;
 
 $light: 300;
 $normal: 400;
@@ -91,11 +82,11 @@ $page-padding-bottom-large: rem-calc(100);
 
 $section-padding-top-small: rem-calc(20);
 $section-padding-top-medium: rem-calc(50);
-$section-padding-top-large: rem-calc(120);
+$section-padding-top-large: rem-calc(80);
 
 $section-padding-bottom-small: rem-calc(30);
 $section-padding-bottom-medium: rem-calc(60);
-$section-padding-bottom-large: rem-calc(100);
+$section-padding-bottom-large: rem-calc(80);
 
 $section-padding-small-top-small: rem-calc(14);
 $section-padding-small-top-medium: rem-calc(20);
@@ -126,7 +117,14 @@ $topbarHeightMedium: rem-calc(60);
 $topbarHeightLarge: rem-calc(93);
 
 //--------------------------------------------------
+// z-indicies
+//--------------------------------------------------
+$z-300: 300;
+
+//--------------------------------------------------
 // project specific
 //--------------------------------------------------
+$habitats: (warm-water-coral saltmarsh mangrove seagrass cold-water-coral); // must match names in app/config/locales/global/en/yml
+$habitat_statuses: (present absent unknown);
 $names: ['blue', 'green', 'orange', 'pink', 'yellow'];
 $colours: [$theme-blue, $theme-green, $theme-orange, $theme-pink, $theme-yellow];

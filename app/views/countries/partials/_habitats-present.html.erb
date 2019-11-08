@@ -1,0 +1,29 @@
+<section class="container section-padding">
+  <div class="flex">
+    <h2><%= t('countries.shared.habitats_present.title'); %>: <%= t("countries.#{@yml_key}.title") %></h2>
+    <modal-trigger id="citation" :modal-content="{ content: '<%= t('countries.shared.habitats_present.citation'); %>' }" class="icon--citation margin-space-left"></modal-trigger>
+  </div>
+
+  <div class="cards--habitats-present">
+    <% @habitats_present.each do |habitat| %>
+      <div class="card card--<%= habitat[1][:status] %>">
+        
+        <div class="card__status">
+          <span class="card__status-ribbon">
+            <i class="card__status-icon"></i>
+          </span>
+          <span class="card__status-title"><%= habitat[1][:status_title] %></span>
+        </div>
+
+        <div class="card__content">
+          <i class="card__habitat-icon <%= get_habitat_icon_class(habitat[0][:id], habitat[1][:status]) %>" alt="<%= habitat[0][:title] %> icon"></i>
+
+          <p class="card__habitat">
+            <span class="card__habitat-title"><%= habitat[0][:title] %></span>
+            <modal-trigger id="citation" :modal-content="{ content: '<%= habitat[2][:citation] %>' }" class="icon--citation"></modal-trigger>
+          </p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>

@@ -1,0 +1,15 @@
+en:
+  countries:
+    shared:
+      targets:
+        title: Contributions and Targets
+        tabs:
+          - 
+            id: aichi
+            title: Aichi Targets
+          - 
+            id: sdg
+            title: SDGs
+          - 
+            id: other
+            title: Other policies
