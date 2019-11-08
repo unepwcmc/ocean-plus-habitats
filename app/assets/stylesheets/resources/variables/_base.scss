@@ -122,11 +122,11 @@ $habitats: (coralreefs saltmarshes mangroves seagrasses coldcorals); // must mat
 $habitat_statuses: (present absent unknown);
 
 $habitat_colours: (
-  'warm-water-coral': $theme-pink,
-  'saltmarsh': $theme-purple,
-  'mangrove': $theme-yellow,
-  'seagrass': $theme-blue,
-  'cold-water-coral': $theme-red,
+  'coralreefs': $theme-pink,
+  'saltmarshes': $theme-purple,
+  'mangroves': $theme-yellow,
+  'seagrasses': $theme-blue,
+  'coldcorals': $theme-red,
 );
 
 $names: ['blue', 'green', 'orange', 'pink', 'yellow'];
