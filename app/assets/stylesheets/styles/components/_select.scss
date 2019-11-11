@@ -15,7 +15,7 @@ $radio-width: rem-calc(22);
 
   &__toggle { 
     @include button--select; 
-    @include shadow--grey-light;
+    @include box-shadow-grey;
     padding: rem-calc(11) $select-padding-side;
   }
     
@@ -27,7 +27,7 @@ $radio-width: rem-calc(22);
 
   &__dropdown {
     @include ul-unstyled;
-    @include shadow--grey-light;
+    @include box-shadow-grey;
     background-color: $white;
     padding: $select-padding-top 0;
     width: 100%;
