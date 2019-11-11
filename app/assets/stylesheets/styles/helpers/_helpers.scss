@@ -85,3 +85,10 @@ strong, .bold { font-weight: $bold; }
 .box-shadow {
   box-shadow: rgba($black, 0.08) 0px 0px 5px 5px;
 }
+
+//--------------------------------------------------
+// UI
+//--------------------------------------------------
+.hover--pointer {
+  cursor: pointer;
+}

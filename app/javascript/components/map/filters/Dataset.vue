@@ -1,22 +1,28 @@
 <template>
-  <label
-    :for="inputId"
-    class="map-filters__filter hover--pointer flex flex-v-center"
-    :class="{ 'map-filter--active': isActive}"
-  >
-    <span :class="`map-filters__filter-key--${config.id}`" />
-    <span class="map-filters__filter-title">
-      {{ name }}
-    </span>
-    <input
-      :id="inputId"
-      type="checkbox"
-      class="default-checkbox"
-      :checked="isActive"
-      @click="toggleDataset"
+  <div class="map-filters__filter">
+    <label
+      :for="inputId"
+      class="map-filters__filter-label hover--pointer flex flex-v-center"
+      :class="{ 'map-filter--active': isActive}"
     >
-    <span class="custom-checkbox" />
-  </label>
+      <span :class="`map-filters__filter-key--${config.id}`" />
+      <span class="map-filters__filter-title">
+        {{ name }}
+      </span>
+      <input
+        :id="inputId"
+        type="checkbox"
+        class="default-checkbox"
+        :checked="isActive"
+        @click="toggleDataset"
+      >
+      <span class="custom-checkbox" />
+    </label>
+    <div
+      class="map-filters__filter-description"
+      v-html="config.descriptionHtml" 
+    />
+  </div>
 </template>
 
 <script>

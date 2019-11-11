@@ -17,9 +17,9 @@
   }
 
   &-canvas {
-    border: 2px solid $grey;
+    border: 2px solid $grey-light;
     &:focus {
-      border-color: rgba($theme-blue, 0.5);
+      border-color: $navy;
     }
   }
 }
@@ -44,31 +44,46 @@
   }
 
     &__filter {
-      margin-bottom: $item-spacing-medium;
+      margin-bottom: $item-spacing-small;
     }
 
-    &__filter-key {
-      @include flex-no-shrink;
-      border: $border;
-      border-radius: 100%;
-      margin-right: rem-calc(10);
-      width: rem-calc(25); height: rem-calc(25);
+      &__filter-key {
+        @include flex-no-shrink;
+        border: $border;
+        border-radius: 100%;
+        margin-right: $key-margin;
+        width: $key-size; height: $key-size;
 
-      display: block;
+        display: block;
 
-      @for $i from 1 through length($habitats) {
-        $habitat: nth($habitats, $i);
-        $colour: map-get($habitat_colours, $habitat);
-      
-        &--#{$habitat} {
-          @extend .map-filters__filter-key;
-          background-color: $colour;
+        @for $i from 1 through length($habitats) {
+          $habitat: nth($habitats, $i);
+          $colour: map-get($habitat_colours, $habitat);
+        
+          &--#{$habitat} {
+            @extend .map-filters__filter-key;
+            background-color: $colour;
+          }
         }
       }
-    }
-    
+      
       &__filter-title {
-        font-weight: $semi-bold;
+        @include text-filter-title;
+      }
+
+      &__filter-description {
+        margin-left: $key-margin + $key-size;
+
+        p {
+          @include text-filter-description;
+          margin-bottom: rem-calc(4);
+
+          display: flex;
+
+          strong {
+            margin-right: 0.4em;
+          }
+        }
       }
 }
 
