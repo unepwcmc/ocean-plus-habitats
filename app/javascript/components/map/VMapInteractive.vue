@@ -52,28 +52,32 @@ export default {
     iso3: {
       type: String,
       default: ''
+    },
+    multipleDatasets: {
+      type: Boolean,
+      default: true
     }
   },
 
   data () {
     return {
       datasets: [],
-      currentDatasetId: '',
+      currentDatasetIds: [],
       mapboxToken: process.env.MAPBOX_TOKEN,
       initBoundingBox: null
     }
   },
 
   computed: {
-    currentDataset () {
-      return this.getDatasetFromId(this.currentDatasetId)
+    currentDatasets () {
+      return this.getDatasetsFromIds(this.currentDatasetIds)
     }
   },
 
   created () {
     this.$eventHub.$on('reload-all-facets', this.reload)
     this.$eventHub.$on('map-update-curr', this.updateCurrentDataset)
-    this.$eventHub.$on('map-load', this.selectFirstLayer)
+    this.$eventHub.$on('map-load', this.selectInitDatasets)
 
     this.reload()
 
@@ -85,7 +89,7 @@ export default {
   destroyed () {
     this.$eventHub.$off('reload-all-facets', this.reload)
     this.$eventHub.$off('map-update-curr', this.updateCurrentDataset)
-    this.$eventHub.$off('map-load', this.selectFirstLayer)
+    this.$eventHub.$off('map-load', this.selectInitDatasets)
   },
 
   methods: {
@@ -100,16 +104,16 @@ export default {
       })
     },
 
-    getDatasetFromId (datasetId) {
-      let dataset = null
+    getDatasetsFromIds (datasetIds) {
+      let datasetsFromIds = []
 
       this.datasets.forEach(ds => {
-        if (ds.id === datasetId) {
-          dataset = ds
+        if (datasetIds.indexOf(ds.id) >= 0) {
+          datasetsFromIds.push(ds)
         }
       })
 
-      return dataset
+      return datasetsFromIds
     },
 
     reload () {
@@ -131,55 +135,59 @@ export default {
       }]
     },
 
-    selectFirstLayer () {
+    selectInitDatasets () {
       if (this.datasets.length) {
-        this.$eventHub.$emit('select-' + this.datasets[0].id)
+        if (this.multipleDatasets) {
+          this.datasets.forEach(ds => {
+            this.$eventHub.$emit('select-' + ds.id)
+          })
+        } else {
+          this.$eventHub.$emit('select-' + this.datasets[0].id)
+        }
       }
     },
 
     updateCurrentDataset ({datasetId, showDataset, createDataset}) {
-
       this.deselectCurrentDatasetIfNecessary(datasetId, showDataset)
       this.handleDatasetUpdate({datasetId, showDataset, createDataset})
     },
 
     deselectCurrentDatasetIfNecessary (datasetId, showDataset) {
-      const isReplacingCurrentDataset = showDataset && 
-        this.currentDatasetId && 
-        datasetId !== this.currentDatasetId
+      if (this.multipleDatasets) { return }
+
+      // Logic for single select maps where only one dataset can be shown at a time
+      const isReplacingCurrentDataset = showDataset &&
+        this.currentDatasetIds.length === 1 &&
+        !this.isCurrentDataset(datasetId)
 
       if (isReplacingCurrentDataset) { 
-        this.$eventHub.$emit('deselect-' + this.currentDatasetId) 
+        this.$eventHub.$emit('deselect-' + this.currentDatasetIds[0]) 
       }
     },
 
     handleDatasetUpdate ({datasetId, showDataset, createDataset}) {
-      const newDataset = this.getDatasetFromId(datasetId)   
+      const newDataset = this.getDatasetsFromIds([datasetId])[0] 
 
       if (createDataset && showDataset) {
         this.$eventHub.$emit('map-create-and-show-layers', getLayers(newDataset, true))
-        this.currentDatasetId = datasetId
+        this.currentDatasetIds.push(datasetId)
       } else if (showDataset) {
         this.$eventHub.$emit('map-show-layers', this.getLayerIdsForMap(newDataset))
-        this.currentDatasetId = datasetId
+        this.currentDatasetIds.push(datasetId)
       } else {
         this.$eventHub.$emit('map-hide-layers', this.getLayerIdsForMap(newDataset))
-        if (this.currentDatasetId === datasetId) { this.currentDatasetId = '' } 
+        if (this.isCurrentDataset(datasetId)) { 
+          this.currentDatasetIds.splice(this.currentDatasetIds.indexOf(datasetId), 1) 
+        } 
       }
     },
 
+    isCurrentDataset (id) {
+      return this.currentDatasetIds.indexOf(id) >= 0
+    },
+
     getLayerIdsForMap(dataset) {
-      const layerIds = []
-
-      // if (dataset.map_type === 'Raster') {
-      layerIds.push(dataset.id)
-      // } else {
-      //   for (let i = 0; i < this.layerCount; i++) {
-      //     layerIds.push(dataset.id + '_' + i)
-      //   }
-      // }
-
-      return layerIds
+      return [dataset.id]
     }
   }
 }
