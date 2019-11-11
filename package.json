@@ -18,5 +18,12 @@
   },
   "devDependencies": {
     "webpack-dev-server": "2.11.2"
+  },
+  "scripts": {
+    "build": "RAILS_ENV=production NODE_ENV=production ./bin/webpack",
+    "dev": "./bin/webpack-dev-server",
+    "serve": "rails s",
+    "network-serve": "bash ./scripts/network-serve.sh",
+    "lint": "eslint --ext .js,.vue"
   }
 }

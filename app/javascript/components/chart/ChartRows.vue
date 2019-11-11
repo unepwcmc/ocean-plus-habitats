@@ -3,35 +3,37 @@
     <div class="chart__legend-wrapper">
       <chart-legend
         :rows="rows"
-      >
-      </chart-legend>
+      />
     </div>
     <div class="chart__charts">
       <chart-row
-        v-for="row, index in rows"
+        v-for="(row, index) in rows"
         :key="index"
         :index="index"
         :row="row"
-      >
-      </chart-row>
+      />
     </div>
   </div>
 </template>
 
 <script>
-  import ChartLegend from './ChartLegend'
-  import ChartRow from './ChartRow'
+import ChartLegend from './ChartLegend'
+import ChartRow from './ChartRow'
 
-  export default {
-    name: 'chart-rows',
+import mixinIds from '../../mixins/mixin-ids'
 
-    components: { ChartLegend, ChartRow },
+export default {
+  name: 'ChartRows',
 
-    props: {
-      rows: {
-        type: Array, // [{ id: String, previous: Number, current: Number }]
-        required: true
-      }
+  components: { ChartLegend, ChartRow },
+
+  mixins: [mixinIds],
+
+  props: {
+    rows: {
+      type: Array, // [{ id: String, previous: Number, current: Number }]
+      required: true
     }
   }
+}
 </script>

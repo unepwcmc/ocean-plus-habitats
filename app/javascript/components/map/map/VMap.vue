@@ -40,7 +40,7 @@ export default {
     },
     boundingBox: {
       type: Array,
-      defaut: null
+      default: null
     }
   },
 
@@ -95,7 +95,7 @@ export default {
       map.addControl(layersControl, 'bottom-left')
       map.addControl(navControl, 'bottom-left')
       this.setFirstForegroundLayerId()
-       this.$eventHub.$emit('map-load')
+      this.$eventHub.$emit('map-load')
 
       if(this.search) { this.addSearchControl() }
       if (this.boundingBox) { this.zoomToBoundingBox() }

@@ -163,7 +163,7 @@ export default {
       const layerIds = []
 
       // if (dataset.map_type === 'Raster') {
-        layerIds.push(dataset.id)
+      layerIds.push(dataset.id)
       // } else {
       //   for (let i = 0; i < this.layerCount; i++) {
       //     layerIds.push(dataset.id + '_' + i)

@@ -28,7 +28,7 @@ document.addEventListener('turbolinks:load', () => {
   if(document.getElementById('v-app')) {
     Vue.prototype.$eventHub = new Vue()
 
-    const app = new Vue({
+    new Vue({
       el: '#v-app',
       store,
       components: {

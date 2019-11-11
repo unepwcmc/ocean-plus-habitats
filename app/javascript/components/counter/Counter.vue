@@ -3,104 +3,104 @@
 </template>
 
 <script>
-  import ScrollMagic from 'scrollmagic'
+import ScrollMagic from 'scrollmagic'
 
-  export default {
-    name: 'counter',
+export default {
+  name: 'Counter',
 
-    props: {
-      smTrigger: {
-        type: String,
-        required: true
-      },
-      smTarget: {
-        type: String,
-        required: true
-      },
-      number: {
-        type: Number,
-        required: true
-      },
-      speed: {
-        type: Number,
-        default: 30
-      },
-      divisor: {
-        type: Number,
-        default: 50
-      }
+  props: {
+    smTrigger: {
+      type: String,
+      required: true
     },
-
-    data () {
-      return {
-        currentNumber: 0,
-        step: 0
-      }
+    smTarget: {
+      type: String,
+      required: true
     },
+    number: {
+      type: Number,
+      required: true
+    },
+    speed: {
+      type: Number,
+      default: 30
+    },
+    divisor: {
+      type: Number,
+      default: 50
+    }
+  },
 
-    watch: {
-      number () {
-        if(this.scene) { 
-          this.scene.removeClassToggle(true) 
-          this.currentNumber = 0
-          this.calcuateStep()
-        }
+  data () {
+    return {
+      currentNumber: 0,
+      step: 0
+    }
+  },
+
+  computed: {
+    styledNumber () {
+      const roundingNumber = 1
+
+      return (Math.ceil(this.currentNumber * roundingNumber)/roundingNumber).toLocaleString()
+    }
+  },
+
+  watch: {
+    number () {
+      if(this.scene) { 
+        this.scene.removeClassToggle(true) 
+        this.currentNumber = 0
+        this.calcuateStep()
+      }
         
-        this.scrollMagicHandlers()
-      }
-    },
-
-    computed: {
-      styledNumber () {
-        const roundingNumber = 1
-
-        return (Math.ceil(this.currentNumber * roundingNumber)/roundingNumber).toLocaleString()
-      }
-    },
-
-    created () {
-      this.calcuateStep()
-    },
-
-    mounted () {
       this.scrollMagicHandlers()
+    }
+  },
+
+  created () {
+    this.calcuateStep()
+  },
+
+  mounted () {
+    this.scrollMagicHandlers()
+  },
+
+  methods: {
+    calcuateStep () {
+      this.step = Math.abs(this.number - this.currentNumber) / this.divisor
     },
 
-    methods: {
-      calcuateStep () {
-        this.step = Math.abs(this.number - this.currentNumber) / this.divisor
-      },
+    count () {
+      const increase = this.currentNumber < this.number ? true : false
 
-      count () {
-        const increase = this.currentNumber < this.number ? true : false
+      let interval = window.setInterval(() => {
+        if(increase && this.currentNumber + this.step < this.number){
+          this.updateCurrentNumber(true)
 
-        let interval = window.setInterval(() => {
-          if(increase && this.currentNumber + this.step < this.number){
-              this.updateCurrentNumber(true)
+        } else if (!increase && this.currentNumber - this.step > this.number ){
+          this.updateCurrentNumber(false)
 
-          } else if (!increase && this.currentNumber - this.step > this.number ){
-              this.updateCurrentNumber(false)
+        } else {
+          this.currentNumber = this.number
+          clearInterval(interval)
+        }
+      }, this.speed)
+    },
 
-          } else {
-            this.currentNumber = this.number
-            clearInterval(interval)
-          }
-        }, this.speed)
-      },
+    updateCurrentNumber: function (increment) {
+      this.currentNumber = increment ? this.currentNumber + this.step : this.currentNumber - this.step
+    },
 
-      updateCurrentNumber: function (increment) {
-        this.currentNumber = increment ? this.currentNumber + this.step : this.currentNumber - this.step
-      },
+    scrollMagicHandlers () {
+      let scrollMagicCounter = new ScrollMagic.Controller()
 
-      scrollMagicHandlers () {
-        let scrollMagicCounter = new ScrollMagic.Controller()
-
-        this.scene = new ScrollMagic.Scene({ triggerElement: `.${this.smTrigger}`, reverse: true })
-          .on('start', () => {
-            if(this.$el.classList.contains(this.smTarget)) { this.count() }
-          })
-          .addTo(scrollMagicCounter)
-      }
+      this.scene = new ScrollMagic.Scene({ triggerElement: `.${this.smTrigger}`, reverse: true })
+        .on('start', () => {
+          if(this.$el.classList.contains(this.smTarget)) { this.count() }
+        })
+        .addTo(scrollMagicCounter)
     }
   }
+}
 </script>
