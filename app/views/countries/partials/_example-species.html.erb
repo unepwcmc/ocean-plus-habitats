@@ -1,10 +1,52 @@
 <section class="section-padding">
   <div class="container">
     <div class="h2-wrapper flex flex-v-center">
-      <h2><%= t('countries.shared.example_species.title') %></h2>
+      <h2 class="margin-space-right"><%= t('countries.shared.example_species.title') %></h2>
       <v-select id="example-species" :options="<%= @example_species_select %>"></v-select>
     </div>
 
-    <example-species></example-species>
+    <example-species>
+      <div>
+        <h3><%= t('countries.shared.example_species.example_title_1') %></h3>        
+        <div class="cards--example-species">
+          <div class="card">
+            <%= image_tag 'species/species.png', alt: 'Species name', class: 'card__image' %>
+
+            <div class="card__content">
+              <p class="card__title">
+                Common name
+                <span class="card__title-scientific">Scientific name</span>
+              </p>
+              <i class="card__icon icon--redlist">CR</i>
+              <a href="" class="card__link">IUCN Species page</a>
+            </div>
+          </div>
+          <div class="card">
+            <%= image_tag 'species/species.png', alt: 'Species name', class: 'card__image' %>
+
+            <div class="card__content">
+              <p class="card__title">
+                Common name
+                <span class="card__title-scientific">Scientific name</span>
+              </p>
+              <i class="card__icon icon--redlist">CR</i>
+              <a href="" class="card__link">IUCN Species page</a>
+            </div>
+          </div>
+          <div class="card">
+            <%= image_tag 'species/species.png', alt: 'Species name', class: 'card__image' %>
+
+            <div class="card__content">
+              <p class="card__title">
+                Common name
+                <span class="card__title-scientific">Scientific name</span>
+              </p>
+              <i class="card__icon icon--redlist">CR</i>
+              <a href="" class="card__link"><%= t('countries.shared.example_species.link_text') %></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </example-species>
   </div>
 </section>

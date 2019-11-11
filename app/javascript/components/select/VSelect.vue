@@ -142,6 +142,8 @@ export default {
       } else {
         this.selectedInternal = this.selected
       }
+
+      this.closeSelect()
     },
 
     isSelected (option) {

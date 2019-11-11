@@ -1,0 +1,41 @@
+&--example-species {
+  @include flex;
+
+  .card {
+    @include flex;
+    width: 33%;
+
+    &__image {
+      width: 50%;
+    }
+
+    &__content {
+      padding-left: rem-calc(20);
+      width: 50%;
+    }
+
+      &__title {
+        font-weight: $semi-bold;
+      }
+
+        &__title-scientific {
+          font-style: italic;
+
+          display: block;
+        }
+
+      &__icon {
+
+      }
+
+      &__link {
+        font-weight: $bold;
+        margin-top: rem-calc(14);
+        text-decoration: underline;
+
+        display: block;
+
+        &:hover { text-decoration: none; }
+      }
+  }
+}

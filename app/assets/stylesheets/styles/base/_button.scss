@@ -51,7 +51,6 @@ $select-width: rem-calc(300);
 
 @mixin button--select {
   @include button-basic;
-  @include button-padding;
   @include text-select;
   @include flex;
   @include flex-v-center;

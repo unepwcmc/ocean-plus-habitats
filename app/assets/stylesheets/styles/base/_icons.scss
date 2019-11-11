@@ -126,6 +126,22 @@
     }
   }
 
+  &--redlist {
+    @include flex;
+    @include flex-center;
+    background-color: $iucn;
+    border-radius: 100px;
+    border-top-right-radius: 0;
+    color: white;
+    font-size: rem-calc(14);
+    font-style: normal;
+    font-weight: $bold;
+    line-height: 1;
+    width: rem-calc(36); height: rem-calc(34);
+
+    &-grey { background-color: $grey; }
+  }
+
   &--scroll {
     background-image: image_url('icons/icon-scroll.svg');
     width: rem-calc(27); height: rem-calc(64);
