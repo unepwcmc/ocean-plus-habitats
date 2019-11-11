@@ -1,5 +1,5 @@
 set :stage, :staging
-set :branch, "refresh"
+set :branch, "develop"
 
 
 server "web-supported-staging.linode.unep-wcmc.org", user: 'wcmc', roles: %w{app web db}
