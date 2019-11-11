@@ -1,3 +1,10 @@
 <section class="container section-padding">
+  <h2><%= t('home.locations_map.title') %></h2>
+  <% t('home.locations_map.text').each do |p| %>
+    <p><%= p %></p>
+  <% end %>
   <v-map-interactive></v-map-interactive>
+  <p class="text--smallprint">
+    <%= t('shared.map_disclaimer') %>
+  </p>
 </section>
