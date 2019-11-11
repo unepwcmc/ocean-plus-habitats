@@ -4,17 +4,18 @@
     class="map-filters__filter hover--pointer flex flex-v-center"
     :class="{ 'map-filter--active': isActive}"
   >
-    <input
-      :id="inputId"
-      type="radio"
-      class="default-radio-button"
-      :checked="isActive"
-      @click="toggleDataset"
-    >
-    <span :class="`custom-radio custom-radio--${config.id}`" />
+    <span :class="`map-filters__filter-key--${config.id}`" />
     <span class="map-filters__filter-title">
       {{ name }}
     </span>
+    <input
+      :id="inputId"
+      type="checkbox"
+      class="default-checkbox"
+      :checked="isActive"
+      @click="toggleDataset"
+    >
+    <span class="custom-checkbox" />
   </label>
 </template>
 
