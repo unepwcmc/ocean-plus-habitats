@@ -40,7 +40,7 @@
             :name="dropdownOptionsName"
             :value="option"
           >
-          <span class="v-select__radio flex-no-shrink" />
+          <span class="v-select__radio" />
           <span>{{ option.name }}</span>
         </label>
       </li>

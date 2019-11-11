@@ -39,7 +39,7 @@
 
     props: {
       content: {
-        type: Object, //{ title: String, examples: [ { name_common: String, name_scientific: String, image: String, redlist: String, redlist_url: String} ] }
+        type: Object, //{ title: String, examples: { HABITAT_NAME: [ { name_common: String, name_scientific: String, image: String, redlist: String, redlist_url: String} ]} }
         required: true,
       },
       event: {

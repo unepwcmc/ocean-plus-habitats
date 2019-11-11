@@ -26,7 +26,8 @@ class CountriesController < ApplicationController
 
     @red_list_data = habitats.zip(red_list_data)
 
-    @example_species_select = habitats.map { |habitat| { id: habitat[:id], name: habitat[:title] }}.to_json
+    @example_species_select = habitats.map { |habitat| { id: habitat[:id], name: habitat[:title] }}
+    @example_species_selected = @example_species_select[2].to_json
 
     @example_species_common = {
       title: I18n.t('countries.shared.example_species.example_title_common'),
@@ -68,7 +69,7 @@ class CountriesController < ApplicationController
             redlist: 'LC', 
             redlist_url: 'url' 
           }
-        ]
+        ],
       }
     }.to_json
 

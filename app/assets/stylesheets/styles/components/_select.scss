@@ -2,7 +2,10 @@
 // variables
 //--------------------------------------------------
 $select-padding-side: rem-calc(24);
-$select-padding-top: rem-calc(16);;
+$select-padding-top: rem-calc(12);;
+$select-option-padding-top: rem-calc(6);
+
+$radio-width: rem-calc(22);
 
 //--------------------------------------------------
 // classes
@@ -12,6 +15,7 @@ $select-padding-top: rem-calc(16);;
 
   &__toggle { 
     @include button--select; 
+    @include shadow--grey-light;
     padding: rem-calc(11) $select-padding-side;
   }
     
@@ -23,8 +27,9 @@ $select-padding-top: rem-calc(16);;
 
   &__dropdown {
     @include ul-unstyled;
-    background-color: $grey-xlight;
-    border-top: solid 1px $grey;
+    @include shadow--grey-light;
+    background-color: $white;
+    padding: $select-padding-top 0;
     width: 100%;
 
     position: absolute;
@@ -39,15 +44,24 @@ $select-padding-top: rem-calc(16);;
         @include flex-v-center;
         @include text-select-option;
         cursor: pointer;
-        padding: $select-padding-top $select-padding-side;
+        padding: $select-option-padding-top $select-padding-side;
 
         position: relative;
+      }
 
-        &:hover {
-          background-color: $green;
+      &__default-radio {
+        @include input-hidden;
+
+        &:checked + .v-select__radio::before {
+          @include input-custom-radio-selected($green);
+        }
+
+        &:focus + .v-select__radio {
+          @include input-custom-focus;
         }
       }
-}
 
-// @include custom_input_focus_default('.v-select__default-checkbox', '.v-select__checkbox');
-// @include custom_input_focus_default('.v-select__default-radio', '.v-select__radio');
+      &__radio {
+        @include input-custom-radio($radio-width); 
+      }
+}
