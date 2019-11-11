@@ -10,7 +10,6 @@ import store from '../store/store.js'
 
 // components
 import ChartDoughnut from '../components/chart/ChartDoughnut'
-
 import ChartRows from '../components/chart/ChartRows.vue'
 import NavMegaMenu from '../components/nav/NavMegaMenu.vue'
 import NavTrigger from '../components/nav/NavTrigger.vue'
