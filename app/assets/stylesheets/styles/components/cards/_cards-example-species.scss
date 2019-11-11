@@ -1,5 +1,11 @@
 &--example-species {
-  @include flex;
+  margin-top: rem-calc(40);
+
+  .cards {
+    &__title { margin-bottom: rem-calc(40); }
+
+    &__cards { @include flex; }
+  }
 
   .card {
     @include flex;

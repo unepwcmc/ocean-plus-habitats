@@ -60,8 +60,8 @@ export default {
   name: 'v-select',
 
   mixins: [
-    mixinPopupCloseListeners({closeCallback: 'closeSelect'}),
-    mixinFocusCapture({toggleVariable: 'isActive', closeCallback: 'closeSelect', openCallback: 'openSelect'})
+    // mixinPopupCloseListeners({closeCallback: 'closeSelect'}),
+    // mixinFocusCapture({toggleVariable: 'isActive', closeCallback: 'closeSelect', openCallback: 'openSelect'})
   ],
 
   props: {
@@ -76,6 +76,9 @@ export default {
     selected: {
       type: Object,
       default: () => UNDEFINED_OBJECT
+    },
+    event: {
+      type: String,
     }
   },
 
@@ -112,6 +115,7 @@ export default {
 
     selectedInternal (newSelectedInternal) {
       this.$emit('update:selected-option', newSelectedInternal)
+      this.$eventHub.$emit(this.event, newSelectedInternal)
     }
   },
 
