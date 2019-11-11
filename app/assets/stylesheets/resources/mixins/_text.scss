@@ -93,8 +93,9 @@
   }
 }
 
-@mixin text-body {
-  @include text-3;
+@mixin text-chart {
+  @include text-4;
+  font-weight: $bold;
 }
 
 @mixin text-hero-home {

@@ -23,10 +23,10 @@ $pink: #BA41FF;
 
 $iucn: #D82007;
 
-$theme-blue: #7AB6FF;
-$theme-green: #3FD18B;
-$theme-orange: #FF8A75;
+$theme-blue: #88CCEE;
 $theme-pink: #F35F8D;
+$theme-purple: #332288;
+$theme-red: #E61354;
 $theme-yellow: #FCDA68;
 
 $primary: $blue-grey;
@@ -120,7 +120,16 @@ $z-300: 300;
 //--------------------------------------------------
 // project specific
 //--------------------------------------------------
-$habitats: (warm-water-coral saltmarsh mangrove seagrass cold-water-coral); // must match names in app/config/locales/global/en/yml
+$habitats: (coralreefs saltmarshes mangroves seagrasses coldcorals); // must match names in app/config/locales/global/en/yml
 $habitat_statuses: (present absent unknown);
+
+$habitat_colours: (
+  'coralreefs': $theme-pink,
+  'saltmarshes': $theme-purple,
+  'mangroves': $theme-yellow,
+  'seagrasses': $theme-blue,
+  'coldcorals': $theme-red,
+);
+
 $names: ['blue', 'green', 'orange', 'pink', 'yellow'];
-$colours: [$theme-blue, $theme-green, $theme-orange, $theme-pink, $theme-yellow];
+// $colours: [$theme-blue, $theme-green, $theme-orange, $theme-pink, $theme-yellow];

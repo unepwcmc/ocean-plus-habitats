@@ -10,6 +10,7 @@ import store from '../store/store.js'
 
 // components
 import ChartDoughnut from '../components/chart/ChartDoughnut'
+import ChartRows from '../components/chart/ChartRows.vue'
 import ExampleSpecies from '../components/content/ExampleSpecies.vue'
 import Mapbox from '../components/map/Mapbox.vue'
 import NavMegaMenu from '../components/nav/NavMegaMenu.vue'
@@ -33,6 +34,7 @@ document.addEventListener('turbolinks:load', () => {
       store,
       components: {
         ChartDoughnut,
+        ChartRows,
         ExampleSpecies,
         Mapbox,
         Modal,

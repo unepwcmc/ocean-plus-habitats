@@ -14,7 +14,7 @@
     }
 
     &--absent {
-      background-color: $grey-light;
+      background-color: $grey-xlight;
 
       .card__status-ribbon { @include icon-ribbon-absent; }
       .card__status-icon { @include icon-absent; }
