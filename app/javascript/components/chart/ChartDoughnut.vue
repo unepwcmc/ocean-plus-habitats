@@ -93,12 +93,7 @@
         >Find out more about this goal on the UN SDG website</a>
       </div>
 
-      <p
-        v-if="smallprint"
-        class="chart__smallprint"
-      >
-        {{ smallprint }}
-      </p>
+      <p class="chart__source" v-html="active.source"></p>
     </div>
   </div>  
 </template>
@@ -107,7 +102,7 @@
 import mixinIds from '../../mixins/mixin-ids'
 
 export default {
-  name: 'ChartDoughnut',
+  name: 'chart-doughnut',
 
   mixins: [mixinIds],
 
@@ -115,10 +110,6 @@ export default {
     datasets: {
       type: Array,
       required: true
-    },
-    smallprint: {
-      type: String,
-      default: ''
     }
   },
 
@@ -137,7 +128,8 @@ export default {
         description: '',
         url: '',
         colour: '',
-        icon: ''
+        icon: '',
+        source: ''
       },
     }
   },
@@ -154,6 +146,7 @@ export default {
       this.active.url = dataset.url
       this.active.colour = dataset.colour
       this.active.icon = dataset.icon
+      this.active.source = dataset.source
     },
 
     getSegmentStatus (title) {

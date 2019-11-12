@@ -72,6 +72,7 @@
   @include text-7;
   margin-top: 0;
   
+  &.heading--doughnut-chart,
   .bg--navy-dark & { color: $white; }
 }
 
@@ -146,7 +147,7 @@
   font-size: rem-calc(16);
 }
 
-@mixin text-sdg-smallprint {
+@mixin text-sdg-source {
   @include responsive-styles(font-size, 12px, 14px, 14px);
   font-style: italic;
   font-weight: $medium;

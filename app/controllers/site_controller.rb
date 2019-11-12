@@ -27,7 +27,8 @@ class SiteController < ApplicationController
         'colour': item[:colour],
         'icon': ActionController::Base.helpers.image_url(item[:icon]),
         'description': item[:description],
-        'url': item[:url]
+        'url': item[:url],
+        'source': item[:source]
       })
     end
 
