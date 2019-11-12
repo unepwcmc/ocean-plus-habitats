@@ -9,7 +9,7 @@
       class="v-select__toggle"
       :class="{'active': isActive}"
       aria-haspopup="true"
-      :aria-controls="dropdownId"
+      :aria-controls="mixinModalId"
       :disabled="isDisabled"
       @click="toggleSelect"
     >
@@ -19,7 +19,7 @@
 
     <ul 
       v-show="isActive"
-      :id="dropdownId" 
+      :id="mixinModalId" 
       role="radiogroup" 
       class="v-select__dropdown"
     >
@@ -31,6 +31,7 @@
         <label
           class="v-select__option-label"
           :for="getOptionInputId(option)"
+          @mouseup="closeSelect"
         >
           <input
             :id="getOptionInputId(option)"
@@ -86,11 +87,11 @@ export default {
     return {
       isActive: false,
       selectedInternal: null,
-      dropdownId: 'v-select-dropdown-' + this.id,
       dropdownOptionsName: 'v-select-dropdown-input' + this.id,
       toggleId: 'v-select-toggle-' + this.id,
       mixinTriggerId: 'v-select-toggle-' + this.id,
-      mixinIsRadioGroup: true
+      mixinIsRadioGroup: true,
+      mixinModalId: 'v-select-dropdown-' + this.id
     }
   },
 
@@ -114,7 +115,6 @@ export default {
     selectedInternal (newSelectedInternal) {
       this.$emit('update:selected-option', newSelectedInternal)
       this.$eventHub.$emit(this.event, newSelectedInternal)
-      this.closeSelect()
     }
   },
 
