@@ -23,7 +23,7 @@ en:
           icon: 'icons/sdg-goal-02.png'
           description: "Many coastal ecosystems, such as seagrasses, mangroves and coral reefs, provide vital breeding and nursery grounds, in which nutritionally and economically important fish and invertebrate species can thrive. Sustainable management of these ecosystems can thus help to boost and protect sources of nutrition to coastal populations to reduce hunger."
           url: "https://www.un.org/sustainabledevelopment/hunger/"
-          source: ""
+          source: " IUCN, 2017 <a href='https://www.iucn.org/news/forests/201708/mangroves-nurseries-world%E2%80%99s-seafood-supply' title='Mangroves: nurseries for the world’s seafood supply' target='_blank'>[ref]</a>"
         -
           title: "Good Health and Well-being"
           colour: "#4C9F38"
