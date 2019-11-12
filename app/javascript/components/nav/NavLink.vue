@@ -1,40 +1,42 @@
 <template>
-  <p class="nav__a no-margin" :class="[{ 'active': isActive }, theme]" @click="triggerNavItem">
+  <p
+    class="nav__a no-margin"
+    :class="[{ 'active': isActive }, theme]"
+    @click="triggerNavItem"
+  >
     {{ title }}  
   </p>  
 </template>
 
 <script>
-  import { eventHub } from '../../packs/application.js'
+export default {
+  name: 'NavLink',
 
-  export default {
-    name: 'nav-link',
-
-    props: {
-      title: {
-        type: String,
-        required: true
-      },
-      name: {
-        type: String,
-        required: true
-      },
-      theme: {
-        type: String,
-        required: true
-      }
+  props: {
+    title: {
+      type: String,
+      required: true
     },
-
-    data () {
-      return {
-        isActive: false
-      }
+    name: {
+      type: String,
+      required: true
     },
+    theme: {
+      type: String,
+      required: true
+    }
+  },
 
-    methods: {
-      triggerNavItem (selectedName) {
-        eventHub.$emit('changeHabitat', this.name)
-      }
+  data () {
+    return {
+      isActive: false
+    }
+  },
+
+  methods: {
+    triggerNavItem () {
+      this.$eventHub.$emit('changeHabitat', this.name)
     }
   }
+}
 </script>

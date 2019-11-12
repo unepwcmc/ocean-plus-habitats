@@ -1,37 +1,41 @@
 <template>
   <ul class="chart__legend ul-unstyled flex flex-wrap">
     <li 
-      v-for="row, index in rows" 
+      v-for="(row, index) in rows"
+      :key="getVForKey('legend-row', index)"
       class="chart__legend-item flex flex-v-center"
     >
-      <span :class="[themeClass(row.id), 'chart__legend-key-icon']"></span>
+      <span :class="[themeClass(row.id), 'chart__legend-key-icon']" />
       
       <span class="chart__legend-key-title">{{ index+1 }}. {{ row.title }}</span>
 
       <span 
-        v-html="row.text"
         class="chart__legend-key-text"
-      >
-      </span>
+        v-html="row.text"
+      />
     </li>
   </ul>
 </template>
 
 <script>
-  export default {
-    name: 'chart-legend',
+import mixinIds from '../../mixins/mixin-ids'
 
-    props: {
-      rows: {
-        type: Array,
-        required: true
-      }
-    },
+export default {
+  name: 'ChartLegend',
 
-    methods: {
-      themeClass (id) {
-        return `theme--${id}`
-      }
+  mixins: [mixinIds],
+
+  props: {
+    rows: {
+      type: Array,
+      required: true
+    }
+  },
+
+  methods: {
+    themeClass (id) {
+      return `theme--${id}`
     }
   }
+}
 </script>

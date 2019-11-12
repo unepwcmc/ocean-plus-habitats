@@ -3,12 +3,15 @@
     :id="triggerId"
     class="modal__trigger"
     aria-haspopup="dialog"
-    @click="openModal"><slot></slot></button>
+    @click="openModal"
+  >
+    <slot />
+  </button>
 </template>
 
 <script>
 export default {
-  name: 'modal-trigger',
+  name: 'ModalTrigger',
 
   props: {
     id: {
@@ -16,7 +19,8 @@ export default {
       required: true
     },
     modalContent: {
-      type: Object
+      type: Object,
+      required: true
     }
   },
 

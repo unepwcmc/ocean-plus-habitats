@@ -22,9 +22,11 @@
 
 @import './resources/mixins/media-queries.scss';
 @import './resources/mixins/flexbox.scss';
+@import './resources/mixins/form.scss';
 @import './resources/mixins/layout.scss';
 @import './resources/mixins/helpers.scss';
 @import './resources/mixins/text.scss';
+@import './resources/mixins/form-helpers.scss';
 
 // styles
 @import './styles/helpers/*';
@@ -36,3 +38,4 @@
 @import './styles/base/logos.scss';
 
 @import './styles/components/*';
+@import './styles/components/map/*';

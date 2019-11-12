@@ -1,33 +1,36 @@
 <template>
-  <div class="tabs__tab" v-show="isActive">
-    <slot></slot>
+  <div
+    v-show="isActive"
+    class="tabs__tab"
+  >
+    <slot />
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'tab',
+export default {
+  name: 'Tab',
 
-    props: {
-      id: {
-        type: String,
-        required: true
-      },
-      title: {
-        type: String,
-        required: true
-      },
-      active: Boolean
+  props: {
+    id: {
+      type: String,
+      required: true
     },
-
-    data () {
-      return {
-        isActive: false
-      }
+    title: {
+      type: String,
+      required: true
     },
+    active: Boolean
+  },
 
-    created () {
-      if (this.active) { this.isActive = true }
+  data () {
+    return {
+      isActive: false
     }
+  },
+
+  created () {
+    if (this.active) { this.isActive = true }
   }
+}
 </script>

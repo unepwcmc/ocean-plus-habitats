@@ -1,0 +1,162 @@
+@import './variables';
+@import './checkbox';
+
+.map {
+  &__container {
+    margin: rem-calc(35) 0;
+    overflow: hidden;
+    height: 600px;
+
+    flex-direction: row-reverse;
+    position: relative;
+  }
+}
+
+.mapboxgl {
+  &-map {
+    height: 100%; width: 100%;
+  }
+
+  &-canvas {
+    border: 2px solid $grey-light;
+    &:focus {
+      border-color: $navy;
+    }
+  }
+}
+
+//--------------------------------------------------
+// Map filters
+//--------------------------------------------------
+.map-filters {
+  @include flex-no-shrink();
+  background-color: $background-colour;
+  color: $white;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 40px 20px;
+  width: $pane-width-laptop;
+  height: 100%;
+
+  z-index: 100;
+
+  &__list {
+    @include ul-unstyled;
+  }
+
+    &__filter {
+      margin-bottom: $item-spacing-small;
+    }
+
+      &__filter-key {
+        @include flex-no-shrink;
+        border: $border;
+        border-radius: 100%;
+        margin-right: $key-margin;
+        width: $key-size; height: $key-size;
+
+        display: block;
+
+        @for $i from 1 through length($habitats) {
+          $habitat: nth($habitats, $i);
+          $colour: map-get($habitat_colours, $habitat);
+        
+          &--#{$habitat} {
+            @extend .map-filters__filter-key;
+            background-color: $colour;
+          }
+        }
+      }
+      
+      &__filter-title {
+        @include text-filter-title;
+      }
+
+      &__filter-description {
+        margin-left: $key-margin + $key-size;
+
+        p {
+          @include text-filter-description;
+          margin-bottom: rem-calc(4);
+
+          display: flex;
+
+          strong {
+            margin-right: 0.4em;
+          }
+        }
+      }
+}
+
+//--------------------------------------------------
+// Mapbox controls
+//--------------------------------------------------
+.mapbox-gl-layer-ctrl-btn {
+  background-image: linear-gradient(transparent, transparent),
+    url(https://api.mapbox.com/mapbox.js/v3.1.1/images/icons.svg);
+  background-position: center -103px;
+  background-repeat: no-repeat;
+  background-size: 26px 260px;
+
+  display: inline-block;
+  float: left;
+}
+
+.mapboxgl-ctrl-geocoder--icon-search.mapboxgl-ctrl-geocoder--icon {
+  top: 16px;
+}
+
+.mapbox-gl-layer-ctrl-layers {
+  display: none;
+}
+
+.mapbox-gl-layer-ctrl-layers.active {
+  display: inline-block;
+}
+
+.mapbox-gl-layer-ctrl-layers label {
+  display: inline-block;
+}
+
+.mapbox-gl-layer-ctrl-layers input {
+  vertical-align: middle;
+}
+
+.mapboxgl-ctrl.mapboxgl-ctrl-geocoder {
+  width: 100%;
+
+  @include breakpoint($small) {
+    width: 400px;
+  }
+}
+
+.mapboxgl-ctrl.mapboxgl-ctrl-geocoder input[type="text"] {
+  color: $black;
+  font-size: 16px;
+  padding: 15px 15px 15px 40px;
+  height: auto;
+}
+
+//--------------------------------------------------
+// Map popup
+//--------------------------------------------------
+.mapboxgl-map {
+  .mapboxgl-popup { max-width: none !important; } //max-width is being applied by mapbox in js
+
+    .mapboxgl-popup-content {
+      font-size: 18px;
+      padding: 12px 24px 16px 12px;
+      background-color: $navy;
+      color: $white;
+      line-height: 1.4;
+    }
+
+      .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+        border-top-color: $navy;
+      }
+
+      .mapboxgl-popup-close-button {
+        font-size: 18px;
+        color: $white;
+      }
+}

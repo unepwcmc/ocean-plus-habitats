@@ -45,16 +45,20 @@
 //--------------------------------------------------
 // specific mixins
 //--------------------------------------------------
-@mixin icon-ribbon-present {
-  @include icon-ribbon($green);
+@mixin icon-absent {
+  @include icon-basic;
+  background-image: image_url('icons/cross.svg');
+  width: rem-calc(17); height: rem-calc(17);
+
+  display: block; 
 }
 
-@mixin icon-ribbon-absent {
-  @include icon-ribbon($grey-dark);
-}
+@mixin icon-chevron-down {
+  @include icon-basic;
+  background-image: image_url('icons/chevron-down.svg');
+  width: rem-calc(13); height: rem-calc(8);
 
-@mixin icon-ribbon-unknown {
-  @include icon-ribbon($grey-dark);
+  display: block;
 }
 
 @mixin icon-present {
@@ -65,12 +69,16 @@
   display: block;
 }
 
-@mixin icon-absent {
-  @include icon-basic;
-  background-image: image_url('icons/cross.svg');
-  width: rem-calc(17); height: rem-calc(17);
+@mixin icon-ribbon-present {
+  @include icon-ribbon($green);
+}
 
-  display: block; 
+@mixin icon-ribbon-absent {
+  @include icon-ribbon($grey-dark);
+}
+
+@mixin icon-ribbon-unknown {
+  @include icon-ribbon($grey-dark);
 }
 
 @mixin icon-unknown {
@@ -116,6 +124,22 @@
         background-image: image_url("icons/#{$habitat}-#{$status}.svg");
       }
     }
+  }
+
+  &--redlist {
+    @include flex;
+    @include flex-center;
+    background-color: $iucn;
+    border-radius: 100%;
+    border-top-right-radius: 0;
+    color: white;
+    font-size: rem-calc(14);
+    font-style: normal;
+    font-weight: $bold;
+    line-height: 1;
+    width: rem-calc(36); height: rem-calc(34);
+
+    &-grey { background-color: $grey; }
   }
 
   &--scroll {
