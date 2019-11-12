@@ -130,7 +130,7 @@
     @include flex;
     @include flex-center;
     background-color: $iucn;
-    border-radius: 100px;
+    border-radius: 100%;
     border-top-right-radius: 0;
     color: white;
     font-size: rem-calc(14);
