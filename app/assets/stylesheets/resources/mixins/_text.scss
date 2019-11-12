@@ -151,3 +151,12 @@
   font-style: italic;
   font-weight: $medium;
 }
+
+@mixin text-filter-title {
+  @include text-6;
+  font-weight: $semi-bold;
+}
+
+@mixin text-filter-description {
+  @include responsive-styles(font-size, 12px, 12px, 12px);
+}

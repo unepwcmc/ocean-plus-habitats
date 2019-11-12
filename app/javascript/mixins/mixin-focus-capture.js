@@ -1,4 +1,4 @@
-import { getInputs, preventTab, TAB_KEYCODE } from "../helpers/focus-helpers";
+import { getInputs, preventTab, TAB_KEYCODE } from '../helpers/focus-helpers'
 
 export default ({toggleVariable, closeCallback, openCallback}) => ({
   data() {

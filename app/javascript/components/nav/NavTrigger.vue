@@ -6,13 +6,13 @@
     aria-haspopup="dialog"
     @click="openNav"
   >
-    <slot></slot>
+    <slot />
   </button>
 </template>
 
 <script>
 export default {
-  name: 'nav-trigger',
+  name: 'NavTrigger',
 
   props: {
     id: {

@@ -84,3 +84,10 @@ strong, .bold { font-weight: $bold; }
 //--------------------------------------------------
 .box-shadow--grey { @include box-shadow-grey; }
 .box-shadow--grey-light { @include box-shadow-grey-light; }
+
+//--------------------------------------------------
+// UI
+//--------------------------------------------------
+.hover--pointer {
+  cursor: pointer;
+}

@@ -11,7 +11,7 @@ $black: #000000;
 
 $green: #22A37B;
 
-$navy: #135D78;
+$navy: #0A2F3C; 
 $navy-dark: #0D485D;
 $navy-xdark: #072029;
 $purple: #BA41FF;
@@ -99,11 +99,18 @@ $section-padding-small-bottom-small: rem-calc(10);
 $section-padding-small-bottom-medium: rem-calc(16);
 $section-padding-small-bottom-large: rem-calc(20);
 
+$item-spacing-small: rem-calc(14);
+$item-spacing-medium: rem-calc(26);
+$item-spacing-large: rem-calc(40);
+
 //--------------------------------------------------
 // style
 //--------------------------------------------------
 $radius-global: rem-calc(3);
 $radius-button: rem-calc(26);
+
+$border-thin: solid rem-calc(1);
+$border-regular: solid rem-calc(2);
 
 //--------------------------------------------------
 // topbar
@@ -131,5 +138,5 @@ $habitat_colours: (
   'coldcorals': $theme-red,
 );
 
-$names: ['blue', 'green', 'orange', 'pink', 'yellow'];
-// $colours: [$theme-blue, $theme-green, $theme-orange, $theme-pink, $theme-yellow];
+// $colours: ($theme-blue, $theme-green, $theme-orange, $theme-pink, $theme-yellow);
+// $names: ('blue', 'green', 'orange', 'pink', 'yellow');

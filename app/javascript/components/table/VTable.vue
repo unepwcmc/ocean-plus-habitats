@@ -4,17 +4,19 @@
       v-for="(row, index) in items"
       :key="getVForKey('row', index)"
       :row="row"
-      :tooltipArray="tooltipArray"
+      :tooltip-array="tooltipArray"
     />
 
-    <span v-if="triggerElement" v-bind:class="loadingSpinnerClasses"></span>
+    <span
+      v-if="triggerElement"
+      :class="loadingSpinnerClasses"
+    />
   </div>
 </template>
 
 <script>
 import axios from 'axios'
 import ScrollMagic from 'scrollmagic'
-import { setCsrfToken } from '../../helpers/request-helpers'
 import mixinId from '../../mixins/mixin-ids'
 
 import TableRow from './TableRow'
