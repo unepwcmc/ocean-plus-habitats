@@ -41,6 +41,8 @@ class SiteController < ApplicationController
     red_list_data = [[1,2,3,4,5,6,7, 28],[1,2,3,4,5,6,7, 28],[1,2,3,4,5,6,7, 28],[1,2,3,4,5,6,7, 28],[1,2,3,4,5,6,7, 28],[1,2,3,4,5,6,7, 28],[1,2,3,4,5,6,7, 28]] #FERDI NOTE THE TOTAL AT THE END
 
     @red_list_data = @habitats.zip(red_list_data)
+
+    @red_list_modal = { title: 'Title hardcoded in controller', text: I18n.t('home.red_list.citation') }.to_json
   end
 
   private

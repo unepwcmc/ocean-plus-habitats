@@ -40,6 +40,21 @@ $select-width: rem-calc(300);
 //--------------------------------------------------
 // specific mixins
 //--------------------------------------------------
+@mixin button--close {
+  @include button-basic;
+  @include flex;
+  @include flex-center;
+  background-color: $navy;
+  border-radius: 100%;
+  
+  &:hover { opacity: .9; }
+
+  &:before { 
+    @include icon-close; 
+    content: '';
+  }
+}
+
 @mixin button--grey {
   @include button-basic;
   @include button-font-size;

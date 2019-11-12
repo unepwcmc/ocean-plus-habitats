@@ -4,7 +4,7 @@
 
 <%= render '/site/partials/habitat-change' %>
 
-<%= render '/site/partials/red-list' %>
+<%= render partial: '/site/partials/red-list', locals: { modal_content: @red_list_modal } %>
 
 <%= render '/site/partials/habitat-cover' %>
 

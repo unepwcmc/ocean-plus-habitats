@@ -108,6 +108,10 @@
   @include text-5;
 }
 
+@mixin text-modal-title {
+  @include text-2;
+}
+
 @mixin text-nav {
   @include text-3;
 }

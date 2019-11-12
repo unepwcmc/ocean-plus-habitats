@@ -14,51 +14,23 @@
           class="modal__close"
           @click="closeModal"
         />
-        MODAL
-
-        {{ data }}
-        <!-- <div class="container--small">
-          <h3>{{ data.title }}</h3>
-        </div>
-
-        <template v-for="section, index in content">
-          <div class="container--small">
-            <h4 v-if="hasTitle(section)">{{ section.title }}</h4>
-            <p v-for="p in section.text" v-html="p"></p>
-          </div>
-
-          <div v-if="index == 0" class="modal__bg-image item-margin--top item-margin--bottom relative" :style="{ 'background-image': `url(${data.modal.image})` }">
-            <div class="bg-image__caption modal__bg-image-caption flex flex-column gutter-left">
-              <span class="bg-image__title" v-html="data.modal.image_caption" />
-              <span class="bg-image__credit">{{ data.modal.image_credit }}</span>
-            </div>
-          </div>
-        </template>
+          
+        <h3 class="modal__title">{{ content.title }}</h3>
         
-        <div class="container--small">
-          <h4>{{ themeTitle }}</h4>
-          <div class="flex">
-            <span 
-              v-for="theme in themes"
-              :class="`icon--theme-${theme}`" />
-          </div>
+        <div>
+          <p
+            v-for="(p, index) in content.text"
+            :key="getVForKey('modal', index)"
+            v-html="p"
+          />
         </div>
-
-        <div class="modal__staff item-padding item-margin--top">
-          <div v-for="member in staff" class="modal__staff-member flex">
-            <img :src="member.image" :alt="`Profile image of ${member.name}`" class="modal__staff-image" />
-            <div>
-              <p class="no-margin"><strong>{{ member.name }}<br>{{ member.job }}</strong></p>
-              <p v-html="member.text"></p>
-            </div>
-          </div>
-        </div> -->
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import mixinIds from '../../mixins/mixin-ids'
 import mixinFocusCapture from '../../mixins/mixin-focus-capture'
 import mixinPopupCloseListeners from '../../mixins/mixin-popup-close-listeners'
 
@@ -66,6 +38,7 @@ export default {
   name: 'Modal',
 
   mixins: [
+    mixinIds,
     mixinFocusCapture({toggleVariable: 'isActive', closeCallback: 'closeModal'}), 
     mixinPopupCloseListeners({closeCallback: 'closeModal', closeOnClickOutside: false})
   ],
@@ -86,13 +59,9 @@ export default {
       return 'modal-trigger-' + this.id
     },
 
-    data () {
+    content () {
       return this.$store.state.modal.content
-    },
-
-    // content () {
-    //   return this.data.modal && this.data.modal.content ? this.data.modal.content : false
-    // }
+    }
   },
 
   methods: {
@@ -102,11 +71,7 @@ export default {
 
     closeModal () {
       this.toggleModal()
-    },
-
-    // hasTitle (content) {
-    //   return content.title
-    // }
+    }
   }
 }
 </script>
