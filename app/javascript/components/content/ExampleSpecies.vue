@@ -4,7 +4,8 @@
     
     <div class="cards__cards">
       <div 
-        v-for="example in examples" 
+        v-for="example, index in examples"
+        :key="getVForKey('card-example-species', index)"
         class="card"
       >
         <img 
