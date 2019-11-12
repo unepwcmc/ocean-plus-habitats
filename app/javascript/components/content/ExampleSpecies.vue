@@ -4,7 +4,7 @@
     
     <div class="cards__cards">
       <div 
-        v-for="example, index in examples"
+        v-for="(example, index) in examples"
         :key="getVForKey('card-example-species', index)"
         class="card"
       >
@@ -35,8 +35,12 @@
 </template>
 
 <script>
+  import mixinId from '../../mixins/mixin-ids'
+
   export default {
     name: 'example-species',
+
+    mixins: [ mixinId ],
 
     props: {
       content: {
