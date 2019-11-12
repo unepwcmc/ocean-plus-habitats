@@ -1,0 +1,65 @@
+// use hidden-input to hide a default input, but then make sure to position it in the same place as the custom input so the automatic scrolling/validation popups etc. are in the right place.
+
+// the default input must occur as the direct sibling before the custom input and putting both siblings inside the same label element should handle clicks appropriately.
+
+//--------------------------------------------------
+// general
+//--------------------------------------------------
+@mixin input-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: rem-calc(1);
+  margin: - rem-calc(1);
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+  width: rem-calc(1);
+  opacity: 0;
+  position: absolute;
+}
+
+@mixin input-custom-focus {
+  outline-width: rem-calc(2);
+  outline-style: solid;
+  outline-color: Highlight;
+  
+  @media (-webkit-min-device-pixel-ratio:0) {
+    outline-color: -webkit-focus-ring-color;
+    outline-style: auto;
+  }
+}
+
+//--------------------------------------------------
+// placeholder
+//--------------------------------------------------
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::placeholder { @content; }
+}
+
+//--------------------------------------------------
+// radio
+//--------------------------------------------------
+@mixin input-custom-radio($width) {
+  @include flex;
+  @include flex-no-shrink;
+  border-radius: 50%;
+  border: solid 1px $grey;
+  cursor: pointer;
+  margin-right: rem-calc(8);
+  width: $width; height: $width;
+
+  display: inline-block;
+  position: relative;
+}
+
+@mixin input-custom-radio-selected($colour) {
+  @include item-center;
+  background: $colour;
+  border-radius: 50%;
+  content: '';
+  width: 70%; height: 70%;
+
+  display: block;
+}

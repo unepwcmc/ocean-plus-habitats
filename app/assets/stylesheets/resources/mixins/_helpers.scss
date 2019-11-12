@@ -20,12 +20,8 @@
 //--------------------------------------------------
 // borders and shadows
 //--------------------------------------------------
-@mixin box-shadow($colour){
-  box-shadow: 2px 2px 4px $colour;
-}
-
-@mixin shadow--grey-light { @include box-shadow($grey-light); }
-@mixin shadow--grey { @include box-shadow($grey); }
+@mixin box-shadow-grey { box-shadow: 0px 3px 6px rgba($black, 0.15); }
+@mixin box-shadow-grey-light { box-shadow: 0px 0px 5px 5px rgba($black, 0.08); }
 
 //--------------------------------------------------
 // lists

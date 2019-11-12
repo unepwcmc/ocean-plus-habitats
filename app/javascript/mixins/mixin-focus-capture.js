@@ -4,7 +4,8 @@ export default ({toggleVariable, closeCallback, openCallback}) => ({
   data() {
     return {
       firstInput: null,
-      lastInput: null
+      lastInput: null,
+      modalElement: null
     }
   },
 
@@ -42,6 +43,8 @@ export default ({toggleVariable, closeCallback, openCallback}) => ({
     if(this[toggleVariable]) {
       this.addEventListeners()
     }
+
+    this.modalElement = this.mixinModalId ? document.querySelector('#' + this.mixinModalId) : this.$el
   },
 
   beforeDestroy() {
@@ -74,10 +77,6 @@ export default ({toggleVariable, closeCallback, openCallback}) => ({
       }
 
       return null
-    },
-
-    modalElement () {
-      return  this.mixinModalId ? document.querySelector('#' + this.mixinModalId) : this.$el
     }
   },
 
