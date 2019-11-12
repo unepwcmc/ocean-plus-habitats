@@ -46,7 +46,7 @@
         <a :href="active.url" title="Link to SDG website" target="_blank" class="button--link">Find out more about this goal on the UN SDG website</a>
       </div>
 
-      <p v-if="smallprint" class="chart__smallprint">{{ smallprint }}</p>
+      <p class="chart__source" v-html="active.source"></p>
     </div>
   </div>  
 </template>
@@ -59,8 +59,7 @@
       datasets: {
         type: Array,
         required: true
-      },
-      smallprint: String
+      }
     },
 
     data () {
@@ -95,6 +94,7 @@
         this.active.url = dataset.url
         this.active.colour = dataset.colour
         this.active.icon = dataset.icon
+        this.active.source = dataset.source
       },
 
       getSegmentStatus (title) {
