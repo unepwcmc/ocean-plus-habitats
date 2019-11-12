@@ -1,0 +1,67 @@
+//--------------------------------------------------
+// variables
+//--------------------------------------------------
+$select-padding-side: rem-calc(24);
+$select-padding-top: rem-calc(12);;
+$select-option-padding-top: rem-calc(6);
+
+$radio-width: rem-calc(22);
+
+//--------------------------------------------------
+// classes
+//--------------------------------------------------
+.v-select {
+  width: $select-width;
+
+  &__toggle { 
+    @include button--select; 
+    @include box-shadow-grey;
+    padding: rem-calc(11) $select-padding-side;
+  }
+    
+    &__dropdown-text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+  &__dropdown {
+    @include ul-unstyled;
+    @include box-shadow-grey;
+    background-color: $white;
+    padding: $select-padding-top 0;
+    width: 100%;
+
+    position: absolute;
+  }
+
+    &__option {
+      margin-bottom: 0;
+    }
+
+      &__option-label {
+        @include flex;
+        @include flex-v-center;
+        @include text-select-option;
+        cursor: pointer;
+        padding: $select-option-padding-top $select-padding-side;
+
+        position: relative;
+      }
+
+      &__default-radio {
+        @include input-hidden;
+
+        &:checked + .v-select__radio::before {
+          @include input-custom-radio-selected($green);
+        }
+
+        &:focus + .v-select__radio {
+          @include input-custom-focus;
+        }
+      }
+
+      &__radio {
+        @include input-custom-radio($radio-width); 
+      }
+}
