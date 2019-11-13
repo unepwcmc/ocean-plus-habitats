@@ -54,18 +54,31 @@ $footer-hero-height-laptop: rem-calc(590);
       @include flex;
       margin-right: rem-calc(32);
       opacity: .65;
-      max-width: rem-calc(170); height: rem-calc(46); 
+      height: rem-calc(46); 
 
       &.logo--site {
         margin-right: 0;
         opacity: 1;
-        max-width: rem-calc(170); height: rem-calc(46);
+        width: rem-calc(133); height: rem-calc(46);
+      }
+
+      &--unepwcmc {
+        @extend .footer__partner-logo;
+        width: rem-calc(170);
+      }
+      &--geobon {
+        @extend .footer__partner-logo;
+        width: rem-calc(162);
+      }
+      &--proteus {
+        @extend .footer__partner-logo;
+        width: rem-calc(153);
       }
     }
 
   &__citation {
     @include flex-no-shrink;
-    font-size: rem-calc(16);
+    @include text-footer-citation;
     padding-right: rem-calc(26);
     width: 30%;
   }

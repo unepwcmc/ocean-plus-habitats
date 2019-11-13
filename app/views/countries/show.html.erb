@@ -1,1 +1,9 @@
-<%= render '/global/header-country', locales: { title: @country.name }%>
+<%= render '/global/header-country' %>
+
+<%= render '/countries/partials/habitats-present' %>
+<%= render partial: '/countries/partials/map', locals: { iso3: @country.iso3 } %>
+<%= render '/countries/partials/red-list' %>
+<%= render '/countries/partials/example-species' %>
+<%= render '/countries/partials/habitat-condition' %>
+<%= render '/countries/partials/habitat-change' %>
+<%= render '/countries/partials/targets' %>

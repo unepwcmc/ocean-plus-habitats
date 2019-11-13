@@ -2,11 +2,14 @@
 // colours
 //--------------------------------------------------
 $white: #ffffff;
-$grey-light: #f4f4f4;
+$grey-xlight: #F2F2F2;
+$grey-light: #E5E0E0;
 $grey: #7f7f7f;
 $grey-dark: #444444;
 $grey-xdark: #383838;
 $black: #000000;
+
+$green: #22A37B;
 
 $navy-light: #135D78;
 $navy: #18424E;
@@ -17,15 +20,15 @@ $purple: #BA41FF;
 
 $nav: #1E2329;
 
-
-
 $blue-grey: #3A4552;
 $pink: #BA41FF;
 
-$theme-blue: #7AB6FF;
-$theme-green: #3FD18B;
-$theme-orange: #FF8A75;
+$iucn: #D82007;
+
+$theme-blue: #88CCEE;
 $theme-pink: #F35F8D;
+$theme-purple: #332288;
+$theme-red: #E61354;
 $theme-yellow: #FCDA68;
 
 $primary: $blue-grey;
@@ -38,15 +41,16 @@ $font-open-sans: 'open sans', sans-serif;
 
 $body-font: $font-open-sans;
 $body-font-color: $grey-xdark;
-$body-font-size: rem-calc(18);
+$body-font-size: rem-calc(16);
 $body-line-height: 1.4;
 
 $header-font: $font-open-sans;
-$header-font-color: $navy-xdark;
+$header-font-color: $black;
 $header-font-size-mobile: rem-calc(50);
 $header-font-size-tablet: rem-calc(50);
 $header-font-size-laptop: rem-calc(50);
 $header-line-height: 1.2;
+$header-margin-bottom: 1.2em;
 
 $light: 300;
 $normal: 400;
@@ -83,11 +87,11 @@ $page-padding-bottom-large: rem-calc(100);
 
 $section-padding-top-small: rem-calc(20);
 $section-padding-top-medium: rem-calc(50);
-$section-padding-top-large: rem-calc(120);
+$section-padding-top-large: rem-calc(80);
 
 $section-padding-bottom-small: rem-calc(30);
 $section-padding-bottom-medium: rem-calc(60);
-$section-padding-bottom-large: rem-calc(100);
+$section-padding-bottom-large: rem-calc(80);
 
 $section-padding-small-top-small: rem-calc(14);
 $section-padding-small-top-medium: rem-calc(20);
@@ -97,11 +101,18 @@ $section-padding-small-bottom-small: rem-calc(10);
 $section-padding-small-bottom-medium: rem-calc(16);
 $section-padding-small-bottom-large: rem-calc(20);
 
+$item-spacing-small: rem-calc(14);
+$item-spacing-medium: rem-calc(26);
+$item-spacing-large: rem-calc(40);
+
 //--------------------------------------------------
 // style
 //--------------------------------------------------
 $radius-global: rem-calc(3);
 $radius-button: rem-calc(26);
+
+$border-thin: solid rem-calc(1);
+$border-regular: solid rem-calc(2);
 
 //--------------------------------------------------
 // topbar
@@ -111,7 +122,23 @@ $topbarHeightMedium: rem-calc(60);
 $topbarHeightLarge: rem-calc(93);
 
 //--------------------------------------------------
+// z-indicies
+//--------------------------------------------------
+$z-300: 300;
+
+//--------------------------------------------------
 // project specific
 //--------------------------------------------------
-$names: ['blue', 'green', 'orange', 'pink', 'yellow'];
-$colours: [$theme-blue, $theme-green, $theme-orange, $theme-pink, $theme-yellow];
+$habitats: (coralreefs saltmarshes mangroves seagrasses coldcorals); // must match names in app/config/locales/global/en/yml
+$habitat_statuses: (present absent unknown);
+
+$habitat_colours: (
+  'coralreefs': $theme-pink,
+  'saltmarshes': $theme-purple,
+  'mangroves': $theme-yellow,
+  'seagrasses': $theme-blue,
+  'coldcorals': $theme-red,
+);
+
+// $colours: ($theme-blue, $theme-green, $theme-orange, $theme-pink, $theme-yellow);
+// $names: ('blue', 'green', 'orange', 'pink', 'yellow');

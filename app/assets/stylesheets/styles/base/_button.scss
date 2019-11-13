@@ -1,39 +1,79 @@
 //--------------------------------------------------
-// buttons
+// variables
+//--------------------------------------------------
+// $button-padding-mobile: 16px 24px;
+// $button-padding-tablet: 16px 24px;
+$button-padding-laptop: 11px 24px;
+
+// $button-text-mobile: 20px;
+// $button-text-tablet: 25px;
+$button-text-laptop: 18px;
+
+$select-height: rem-calc(58);
+$select-width: rem-calc(300);
+
+//--------------------------------------------------
+// shared mixins
+//--------------------------------------------------
+@mixin button-basic {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+
+  &:hover { text-decoration: none; }
+}
+
+@mixin button-font-size { 
+  font-size: $button-text-laptop;
+}
+
+@mixin button-padding { 
+  padding: $button-padding-laptop;
+}
+
+@mixin button-rounded {
+  border-radius: $radius-button;
+}
+
+//--------------------------------------------------
+// specific mixins
+//--------------------------------------------------
+@mixin button--grey {
+  @include button-basic;
+  @include button-font-size;
+  @include button-padding;
+  @include button-rounded;
+  background-color: $grey-light;
+  font-weight: $semi-bold;
+}
+
+@mixin button--select {
+  @include button-basic;
+  @include text-select;
+  @include flex;
+  @include flex-v-center;
+  @include flex-h-between;
+  background-color: $grey-light;
+  margin: 0;
+  width: $select-width; height: $select-height;
+
+  &::after {
+    @include icon-chevron-down;
+    content: '';
+  }
+
+  &.active::after { transform: rotateZ(180deg); }
+}
+
+//--------------------------------------------------
+// classes
 //--------------------------------------------------
 .button {
-  font-size: $button-font-size-small;
-  padding: rem-calc(11 24);
-  
-  @include breakpoint($small) {
-    font-size: $button-font-size-medium;
-    padding: rem-calc(14 35);
-  }
-
-//--------------------------------------------------
-// styles
-//--------------------------------------------------
-  &--link-white {
-    color: $white;
-  }
-
-  //--------------------------------------------------
-  // margin
-  //--------------------------------------------------
-  &-margin-bottom {
-    margin-bottom: rem-calc(14);
-
-    @include breakpoint($small) { margin-bottom: rem-calc(30); }
-  }
-
-  &-margin-top {
-    margin-bottom: rem-calc(14);
-
-    @include breakpoint($small) { margin-bottom: rem-calc(30); }
-  }
-
-  &-margin {
-    @extend .button-margin-top;
-    @extend .button-margin-bottom;
+  &--burger {
+    @include button--grey;
+    @include flex;
+    @include flex-v-center;
   }
 }

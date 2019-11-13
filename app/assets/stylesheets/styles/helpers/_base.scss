@@ -16,17 +16,13 @@ body {
 
 h1 { @include h1; }
 
-h2 {}
-
-h3 {
-  color: $grey-dark;
-  font-size: rem-calc(20);
-  font-weight: $normal;
-  margin-top: 0;
-
-  @include breakpoint($small) { font-size: rem-calc(34); }
+h2 { 
+  @include h2; 
+  
+  .h2-wrapper & { margin-bottom: 0; }
 }
 
+h3 { @include h3; }
 h4 { @include h4; }
 
 p {
@@ -52,6 +48,8 @@ blockquote {
 sup {
   font-size: .7em;
 }
+
+th { font-weight: inherit; }
 
 //--------------------------------------------------
 // site structure - reusable styles

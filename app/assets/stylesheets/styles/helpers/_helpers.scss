@@ -1,9 +1,9 @@
 //--------------------------------------------------
 // backgrounds
 //--------------------------------------------------
-.bg--grey-light { background-color: $grey-light; }
+.bg--grey-xlight { background-color: $grey-xlight; }
 .bg--navy { background-color: $navy; }
-.bg--navy-xdark { background-color: $navy-xdark; }
+.bg--navy-dark { background-color: $navy-dark; }
 
 .bg-image-overlay--white {
   @include overlay(rgba($white, 0.16));
@@ -24,9 +24,10 @@ strong, .bold { font-weight: $bold; }
 
 .white { color: $white; }
 
-.text--smallprint {
-  font-size: rem-calc(10);
-  @include breakpoint($medium) { font-size: rem-calc(12); }
+.text--smallprint { @include text-smallprint; }
+
+.font-alignment-padding-fix {
+  padding-bottom: 0.15em;
 }
 
 //--------------------------------------------------
@@ -76,3 +77,17 @@ strong, .bold { font-weight: $bold; }
 .margin-center { margin: 0 auto; }
 .margin-space-left { margin-left: rem-calc(14); }
 .margin-space-right { margin-right: rem-calc(14); }
+.h2-wrapper { margin-bottom: $header-margin-bottom; } 
+
+//--------------------------------------------------
+// shadow
+//--------------------------------------------------
+.box-shadow--grey { @include box-shadow-grey; }
+.box-shadow--grey-light { @include box-shadow-grey-light; }
+
+//--------------------------------------------------
+// UI
+//--------------------------------------------------
+.hover--pointer {
+  cursor: pointer;
+}

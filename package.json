@@ -5,14 +5,25 @@
     "@rails/webpacker": "3.5",
     "axios": "^0.18.0",
     "dotenv-webpack": "^1.5.5",
-    "es6-promise": "^4.2.5",
+    "es6-promise": "^4.2.8",
+    "eslint": "~5.16.0",
+    "eslint-loader": "^3.0.2",
+    "eslint-plugin-vue": "^6.0.0",
     "scrollmagic": "^2.0.6",
     "vue": "^2.5.17",
     "vue-loader": "14.2.2",
     "vue-template-compiler": "^2.5.17",
-    "vue-turbolinks": "^2.0.3"
+    "vue-turbolinks": "^2.0.3",
+    "vuex": "^3.1.1"
   },
   "devDependencies": {
     "webpack-dev-server": "2.11.2"
+  },
+  "scripts": {
+    "build": "RAILS_ENV=production NODE_ENV=production ./bin/webpack",
+    "dev": "./bin/webpack-dev-server",
+    "serve": "rails s",
+    "network-serve": "bash ./scripts/network-serve.sh",
+    "lint": "eslint --ext .js,.vue"
   }
 }

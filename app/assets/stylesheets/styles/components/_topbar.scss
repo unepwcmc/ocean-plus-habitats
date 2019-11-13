@@ -1,3 +1,11 @@
 //--------------------------------------------------
 // topbar
 //--------------------------------------------------
+.topbar {
+  &__content {
+    @include flex;
+    @include flex-v-center;
+    @include flex-h-between;
+    height: rem-calc(80);
+  }
+}

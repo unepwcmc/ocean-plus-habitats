@@ -1,0 +1,13 @@
+<section class="container section-padding">
+  <h2><%= t('home.sdg.title') %></h2>
+
+  <% t('home.sdg.text_1').each do |p| %>
+    <p><%= p %></p>
+  <% end %>
+
+  <chart-doughnut :datasets="<%= @doughnut_chart.to_json %>" smallprint="<%= @smallprint %>"></chart-doughnut>
+
+  <% t('home.sdg.text_2').each do |p| %>
+    <p class="bold"><%= p %></p>
+  <% end %>
+</section>

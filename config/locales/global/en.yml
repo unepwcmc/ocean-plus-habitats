@@ -1,0 +1,25 @@
+en:
+  global:
+    habitats: 
+      -
+        id: coralreefs
+        title: Warm-water Coral
+        icon: icons/warm-coral.svg
+      -
+        id: saltmarshes
+        title: Saltmarsh
+        icon: icons/saltmarshes.svg
+      -
+        id: mangroves
+        title: Mangrove
+        icon: icons/mangroves.svg
+      -
+        id: seagrasses
+        title: Seagrass
+        icon: icons/seagrasses.svg
+      -
+        id: coldcorals
+        title: Cold-water Coral
+        icon: icons/cold-coral.svg
+    nav:
+      burger_text: Explore a country/region

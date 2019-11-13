@@ -1,9 +1,19 @@
 <%= render '/global/header-home' %>
 
-<%= link_to 'Costa Rica', country_path(54) %>
-
 <sticky-bar class="sticky-bar--home sm-trigger-sticky">
   <div class="nav-scrollable sm-target-sticky">
     <nav-bar :nav="nav" :default="defaultHabitat" class="gutters flex flex-v-center flex-h-between"></nav-bar>
   </div>
 </sticky-bar>
+
+<%= render '/site/partials/map' %>
+
+<%= render '/site/partials/habitat-change' %>
+
+<%= render '/site/partials/red-list' %>
+
+<%= render '/site/partials/habitat-cover' %>
+
+<%= render '/site/partials/sdg' %>
+
+<modal id="citation"></modal>
