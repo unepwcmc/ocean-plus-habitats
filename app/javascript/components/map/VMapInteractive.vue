@@ -17,7 +17,6 @@
 </template>
 
 <script>
-//TODO: button text to yml
 import FilterPane from './filters/FilterPane'
 import VMap from './map/VMap'
 import { getLayers } from './helpers/map-helpers'
