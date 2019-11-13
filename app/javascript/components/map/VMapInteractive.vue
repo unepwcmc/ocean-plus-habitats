@@ -2,7 +2,7 @@
   <div class="map__container flex">
     <filter-pane 
       id="filters-layers"
-      title="Select a layer:"
+      button-text="Download datasets"
       class="flex-no-shrink"
       :allow-no-selected-dataset="allowNoSelectedDataset"
       :datasets="datasets"
@@ -17,6 +17,7 @@
 </template>
 
 <script>
+//TODO: button text to yml
 import FilterPane from './filters/FilterPane'
 import VMap from './map/VMap'
 import { getLayers } from './helpers/map-helpers'

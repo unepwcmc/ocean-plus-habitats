@@ -1,0 +1,55 @@
+.map-download-button {
+  &__dropdown {
+    @include ul-unstyled;
+    @include shadow--grey;
+    background-color: $navy-xdark;
+    border: $border-thin $blue;
+    padding: rem-calc(20 35);
+    width: rem-calc(140);
+
+    position: absolute;
+    top: calc(100% + #{rem-calc(6)});
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    &::before {
+      background-color: inherit;
+      border-top: $border-thin $blue;
+      border-left: $border-thin $blue;
+      content: "";
+      width: rem-calc(20); height: rem-calc(20);
+      
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+
+      transform: translate(0, -1px) translate(-50%, -50%)
+        scale(1.25, 1) rotate(45deg);
+    }
+  }
+
+    &__li {
+    margin-bottom: rem-calc(10);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+      &__option {
+        @include text-map-download-option;
+        @include flex;
+        @include flex-v-center;
+        color: $white;
+
+        &::before {
+          @include icon-download;
+          content: '';
+    
+          display: inline-block;
+          margin-right: rem-calc(14);
+        }
+      }
+}

@@ -121,6 +121,11 @@
   @include text-3;
 }
 
+@mixin text-map-download-option {
+  @include text-3;
+  font-weight: $semi-bold;
+}
+
 @mixin text-present-habitats-status {
   @include text-6;
   font-weight: $semi-bold;
