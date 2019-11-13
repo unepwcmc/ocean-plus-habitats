@@ -1,7 +1,7 @@
 <section class="container section-padding">
   <h2><%= t('home.locations_map.title') %></h2>
   <% t('home.locations_map.text').each do |p| %>
-    <p><%= p %></p>
+    <p><%= p.html_safe %></p>
   <% end %>
   <v-map-interactive></v-map-interactive>
   <p class="text--smallprint">

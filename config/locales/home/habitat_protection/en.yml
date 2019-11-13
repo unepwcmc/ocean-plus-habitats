@@ -1,0 +1,7 @@
+en:
+  home:
+    habitat_protection:
+      title: Are we protecting habitats?
+      text_1:
+        - An estimated [##%] of ocean habitats occur within protected areas [ref], with other locations potentially conserved through other effective area-based conservation measures (OECMs) [ref]. These other forms of conservation may include some indigenous and community conserved areas (ICCAs) not formally recognized as protected areas, for instance [ref].
+        - Although included within protected areas, the level of protection afforded to these habitats varies according to the purpose of the protected area and its management effectiveness [see ref].

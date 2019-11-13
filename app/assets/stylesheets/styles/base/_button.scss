@@ -1,4 +1,18 @@
 //--------------------------------------------------
+// variables
+//--------------------------------------------------
+// $button-padding-mobile: 16px 24px;
+// $button-padding-tablet: 16px 24px;
+$button-padding-laptop: 11px 24px;
+
+// $button-text-mobile: 20px;
+// $button-text-tablet: 25px;
+$button-text-laptop: 18px;
+
+$select-height: rem-calc(58);
+$select-width: rem-calc(300);
+
+//--------------------------------------------------
 // shared mixins
 //--------------------------------------------------
 @mixin button-basic {
@@ -61,6 +75,24 @@ $button-padding-wide-laptop: 14px 45px;
   background-color: $navy-2;
   border: $border-thin $blue-light;
   font-weight: $semi-bold;
+}
+
+@mixin button--select {
+  @include button-basic;
+  @include text-select;
+  @include flex;
+  @include flex-v-center;
+  @include flex-h-between;
+  background-color: $grey-light;
+  margin: 0;
+  width: $select-width; height: $select-height;
+
+  &::after {
+    @include icon-chevron-down;
+    content: '';
+  }
+
+  &.active::after { transform: rotateZ(180deg); }
 }
 
 //--------------------------------------------------

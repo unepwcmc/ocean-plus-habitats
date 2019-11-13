@@ -37,6 +37,12 @@
   @include responsive-styles(font-size, rem-calc(14), rem-calc(14), rem-calc(14));
 }
 
+@mixin text-7 {
+  @include responsive-styles(font-size, rem-calc(20), rem-calc(20), rem-calc(20));
+  color: $header-font-color;
+  font-weight: $semi-bold;
+}
+
 //--------------------------------------------------
 // mixins used in classes
 //--------------------------------------------------
@@ -63,9 +69,11 @@
 }
 
 @mixin h3 {
-  @include text-2;
+  @include text-7;
   margin-top: 0;
-  color: $white;
+  
+  &.heading--doughnut-chart,
+  .bg--navy-dark & { color: $white; }
 }
 
 @mixin h4 {
@@ -101,6 +109,14 @@
 }
 
 @mixin text-nav {
+  @include text-3;
+}
+
+@mixin text-select {
+  @include text-2;
+}
+
+@mixin text-select-option {
   @include text-3;
 }
 
@@ -140,7 +156,7 @@
   font-size: rem-calc(16);
 }
 
-@mixin text-sdg-smallprint {
+@mixin text-sdg-source {
   @include responsive-styles(font-size, 12px, 14px, 14px);
   font-style: italic;
   font-weight: $medium;

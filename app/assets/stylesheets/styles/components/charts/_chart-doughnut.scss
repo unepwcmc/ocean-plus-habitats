@@ -84,8 +84,8 @@
             color: inherit;
           }
 
-          &__smallprint {
-            @include text-sdg-smallprint;
+          &__source {
+            @include text-sdg-source;
           }
     }
   }
