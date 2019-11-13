@@ -6,4 +6,5 @@ en:
         title_present: Confirmed Presence
         title_absent: Confirmed Absense
         title_unknown: Not Known
-        citation: CITATION TEXT
+        citation: 
+          - CITATION TEXT
