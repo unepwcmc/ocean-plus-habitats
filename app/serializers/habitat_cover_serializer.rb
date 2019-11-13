@@ -9,11 +9,11 @@ class HabitatCoverSerializer
     
     @habitat_cover.each do |habitat, translations| 
       habitat_cover_item = translations
-      
+
       habitat_cover_item[:text] =
         I18n.t(
           "home.habitat_cover.habitats.#{habitat}.text",
-          change_km: -80000,
+          change_km: Habitat.find_by(name: habitat.to_s).calculate_global_cover_change,
           change_percentage: -8
         )
       habitat_cover_item[:change_percentage] = -8
