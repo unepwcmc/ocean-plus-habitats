@@ -6,6 +6,10 @@
 
   <body>
     <div id="v-app" v-cloak>
+      <translator 
+        :translations="<%= @current_translations.to_json %>"
+        :locale="<%= @current_language.to_json %>">
+      </translator>
       <%= yield %>
       
       <%= render '/global/footer' %>

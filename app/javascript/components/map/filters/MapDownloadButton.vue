@@ -41,13 +41,6 @@ import mixinPopupCloseListeners from '../../../mixins/mixin-popup-close-listener
 export default {
   mixins: [mixinPopupCloseListeners({closeCallback: 'close'}), mixinIds],
 
-  props: {
-    text: {
-      type: String,
-      default: ''
-    }
-  },
-
   data () {
     return {
       isActive: false,
@@ -72,6 +65,20 @@ export default {
       return {
         transform: this.isActive ? 'rotate(180deg)' : 'rotate(0deg)'
       }
+    },
+
+    translations () {
+      return this.$store.state.translations.translations
+    },
+
+    text () {
+      return this.translations.countries ? 
+        this.translations 
+          .countries
+          .shared
+          .locations_map
+          .download_button_text :
+        ''
     }
   },
   

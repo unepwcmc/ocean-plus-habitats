@@ -14,9 +14,7 @@
     </ul>
 
     <div class="map-filters__button-bar flex flex-h-center">
-      <map-download-button 
-        :text="buttonText"
-      />
+      <map-download-button />
     </div>
   </div>
 </template>
@@ -34,10 +32,6 @@ export default {
     id: {
       type: String,
       required: true
-    },
-    buttonText: {
-      type: String,
-      default: ''
     },
     allowNoSelectedDataset: {
       type: Boolean,

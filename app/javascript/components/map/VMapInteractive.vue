@@ -2,7 +2,6 @@
   <div class="map__container flex">
     <filter-pane 
       id="filters-layers"
-      button-text="Download datasets"
       class="flex-no-shrink"
       :allow-no-selected-dataset="allowNoSelectedDataset"
       :datasets="datasets"
@@ -41,14 +40,6 @@ export default {
     allowNoSelectedDataset: {
       type: Boolean,
       default: true
-    },
-    filterPaneFooterText: {
-      type: String,
-      default: ''
-    },
-    filterPaneWarningText: {
-      type: String,
-      default: ''
     },
     iso3: {
       type: String,
