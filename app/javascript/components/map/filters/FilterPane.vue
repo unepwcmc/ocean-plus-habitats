@@ -14,7 +14,7 @@
     </ul>
 
     <div class="map-filters__button-bar flex flex-h-center">
-      <map-download-button />
+      <map-download-button v-if="hasDownloadButton" />
     </div>
   </div>
 </template>
@@ -40,6 +40,10 @@ export default {
     datasets: {
       type: Array,
       default: () => []
+    },
+    hasDownloadButton: {
+      type: Boolean,
+      default: false
     }
   },
 

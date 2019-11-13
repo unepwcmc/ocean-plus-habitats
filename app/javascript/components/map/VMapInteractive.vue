@@ -5,6 +5,7 @@
       class="flex-no-shrink"
       :allow-no-selected-dataset="allowNoSelectedDataset"
       :datasets="datasets"
+      :has-download-button="hasDownloadButton"
     />
     <v-map
       :search="search"
@@ -48,6 +49,10 @@ export default {
     multipleDatasets: {
       type: Boolean,
       default: true
+    },
+    hasDownloadButton: {
+      type: Boolean,
+      default: false
     }
   },
 
