@@ -1,7 +1,7 @@
 .map-download-button {
   &__dropdown {
     @include ul-unstyled;
-    @include shadow--grey;
+    @include box-shadow-grey;
     background-color: $navy-xdark;
     border: $border-thin $blue;
     padding: rem-calc(20 35);
