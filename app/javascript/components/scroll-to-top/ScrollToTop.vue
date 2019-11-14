@@ -12,7 +12,8 @@ export default {
       increment: 20,
       start: 0,
       currentTime: 0,
-      duration: 0
+      duration: 0,
+      speed: 30
     }
   },
 
@@ -24,7 +25,7 @@ export default {
 
     setParams () {
       this.start = window.pageYOffset || document.documentElement.scrollTop,
-      this.duration = 20 * Math.sqrt(this.start)
+      this.duration = this.speed * Math.sqrt(this.start)
       this.currentTime = 0
     },
 
