@@ -81,6 +81,14 @@
   @include icon-ribbon($grey-dark);
 }
 
+@mixin icon-scroll-to-top {
+  @include icon-basic;
+  background-image: image_url('icons/scroll-to-top.svg');
+  width: rem-calc(80); height: rem-calc(80);
+
+  display: block;;
+}
+
 @mixin icon-unknown {
   @include icon-basic;
   background-image: image_url('icons/question.svg');

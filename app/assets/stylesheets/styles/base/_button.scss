@@ -67,6 +67,11 @@ $select-width: rem-calc(300);
   &.active::after { transform: rotateZ(180deg); }
 }
 
+@mixin button--scroll-to-top {
+  @include button-basic;
+  @include icon-scroll-to-top;
+}
+
 //--------------------------------------------------
 // classes
 //--------------------------------------------------

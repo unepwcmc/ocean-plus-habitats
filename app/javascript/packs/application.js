@@ -17,6 +17,7 @@ import NavTrigger from '../components/nav/NavTrigger.vue'
 import Modal from '../components/modal/Modal.vue'
 import ModalTrigger from '../components/modal/ModalTrigger.vue'
 import VSelect from '../components/select/VSelect.vue'
+import ScrollToTop from '../components/scroll-to-top/ScrollToTop.vue'
 import StickyBar from '../components/sticky/StickyBar.vue'
 import Tab from '../components/tabs/Tab.vue'
 import Tabs from '../components/tabs/Tabs.vue'
@@ -41,6 +42,7 @@ document.addEventListener('turbolinks:load', () => {
         NavMegaMenu,
         NavTrigger,
         VSelect,
+        ScrollToTop,
         StickyBar,
         Tab,
         Tabs,
