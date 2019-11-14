@@ -76,22 +76,39 @@ class CountriesController < ApplicationController
     @target_tabs = I18n.t('countries.shared.targets.tabs')
     @target_text = country_yml[:targets]
 
-    @habitat_change = [
-      { 
-        id: 'coralreefs',
-        title: get_habitat_title('coralreefs'),
-        text: I18n.t('countries.shared.habitat_change.chart_text', km: 20, habitat: get_habitat_title('coralreefs'), years: '2000-2019'),
-        previous: 80, 
-        current: 40 
-      },
-      { 
-        id: 'mangroves', 
-        title: get_habitat_title('mangroves'),
-        text: I18n.t('countries.shared.habitat_change.chart_text', km: 40, habitat: get_habitat_title('mangroves'), years: '2000-2019'),
-        previous: 50, 
-        current: 25 
+    @habitat_change = []
+    Habitat.all.each do |habitat|
+      country_cover_change = habitat.calculate_country_cover_change(@country.iso3)
+
+      change = { 
+        id: habitat.name,
+        title: get_habitat_title(habitat.name),
+        text: I18n.t('countries.shared.habitat_change.chart_text', km: country_cover_change[:change_km], habitat: get_habitat_title(habitat.name), years: '2010-2016'),
+        previous: country_cover_change[:previous_km], 
+        current: country_cover_change[:current_km]
       }
-    ].to_json
+
+      @habitat_change << change unless country_cover_change[:change_km] == 0
+
+    end
+
+    # @habitat_change = [
+    # { 
+    #     id: 'coralreefs',
+    #     title: get_habitat_title('coralreefs'),
+    #     text: I18n.t('countries.shared.habitat_change.chart_text', km: 0, habitat: get_habitat_title('coralreefs'), years: '2000-2019'),
+    #     previous: 0, 
+    #     current: 0
+    #   },
+    #   { 
+    #     id: 'mangroves', 
+    #     title: get_habitat_title('mangroves'),
+    #     text: I18n.t('countries.shared.habitat_change.chart_text', km: 40, habitat: get_habitat_title('mangroves'), years: '2010-2016'),
+    #     previous: 50, 
+    #     current: 25 
+    #   }
+    # ].to_json
+    @habitat_change.to_json
   end
 
   private

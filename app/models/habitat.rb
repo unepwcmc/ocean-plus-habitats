@@ -11,6 +11,25 @@ class Habitat < ApplicationRecord
     "Percentage of #{title.downcase} that occur within a marine protected area"
   end
 
+  def calculate_country_cover_change(iso3)
+    return country_cover_change = {
+      previous_km: 0,
+      current_km: 0,
+      change_km: 0
+    } unless name == "mangroves"
+    geo_entity_id = GeoEntity.find_by(iso3: iso3)
+    habitat_base_year = ChangeStat.where(habitat_id: id, geo_entity_id: geo_entity_id).pluck(:total_value_2010).first
+    habitat_last_year = ChangeStat.where(habitat_id: id, geo_entity_id: geo_entity_id).pluck(:total_value_2016).first
+    total_value_change = habitat_last_year - habitat_base_year
+
+    country_cover_change = {
+      previous_km: habitat_base_year.round(2),
+      current_km: habitat_last_year.round(2),
+      change_km: total_value_change.round(2)
+    }
+    country_cover_change
+  end
+
   def calculate_global_cover_change
     return global_cover_change = {
       change_km: 0,
