@@ -22,7 +22,7 @@ class Habitat < ApplicationRecord
     total_value_change_percentage = 0
 
     global_cover_change = {
-      change_km: total_value_change,
+      change_km: total_value_change.round(2),
       change_percentage: total_value_change_percentage
     }
     global_cover_change
