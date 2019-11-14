@@ -110,6 +110,11 @@ $button-padding-wide-laptop: 14px 45px;
   &.active::after { transform: rotateZ(180deg); }
 }
 
+@mixin button--scroll-to-top {
+  @include button-basic;
+  @include icon-scroll-to-top;
+}
+
 //--------------------------------------------------
 // classes
 //--------------------------------------------------
