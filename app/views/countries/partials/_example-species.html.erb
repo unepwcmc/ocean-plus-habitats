@@ -4,13 +4,13 @@
       <h2 class="margin-space-right"><%= t('countries.shared.example_species.title') %></h2>
       <v-select 
         id="example-species" 
-        :options="<%= @example_species_select.to_json %>" 
+        :options="<%= example_species_select.to_json %>" 
         event="example-species"
-        :selected="<%= @example_species_selected %>">
+        :selected="<%= example_species_selected %>">
       </v-select>
     </div>
 
-    <example-species :content="<%= @example_species_common %>" event="example-species"></example-species>
-    <example-species :content="<%= @example_species_threatened %>" event="example-species"></example-species>
+    <example-species :content="<%= example_species_common %>" event="example-species"></example-species>
+    <example-species :content="<%= example_species_threatened %>" event="example-species"></example-species>
   </div>
 </section>

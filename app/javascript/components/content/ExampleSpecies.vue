@@ -1,6 +1,8 @@
 <template>
   <div class="cards--example-species">
-    <h3 class="cards__title">{{ content.title }}</h3>
+    <h3 class="cards__title">
+      {{ content.title }}
+    </h3>
     
     <div class="cards__cards">
       <div 
@@ -35,44 +37,44 @@
 </template>
 
 <script>
-  import mixinId from '../../mixins/mixin-ids'
+import mixinId from '../../mixins/mixin-ids'
 
-  export default {
-    name: 'example-species',
+export default {
+  name: 'ExampleSpecies',
 
-    mixins: [ mixinId ],
+  mixins: [ mixinId ],
 
-    props: {
-      content: {
-        type: Object, //{ title: String, examples: { HABITAT_NAME: [ { name_common: String, name_scientific: String, image: String, redlist: String, redlist_url: String} ]} }
-        required: true,
-      },
-      event: {
-        type: String,
-        required: true
-      }
+  props: {
+    content: {
+      type: Object, //{ title: String, examples: { HABITAT_NAME: [ { name_common: String, name_scientific: String, image: String, redlist: String, redlist_url: String} ]} }
+      required: true,
     },
+    event: {
+      type: String,
+      required: true
+    }
+  },
 
-    data () {
-      return {
-        habitat: ''
-      }
-    },
+  data () {
+    return {
+      habitat: ''
+    }
+  },
 
-    created () {
-      this.$eventHub.$on(this.event, this.updateContent)
-    },
+  computed: {
+    examples () {
+      return this.content.examples[this.habitat]
+    }
+  },
 
-    computed: {
-      examples () {
-        return this.content.examples[this.habitat]
-      }
-    },
+  created () {
+    this.$eventHub.$on(this.event, this.updateContent)
+  },
 
-    methods: {
-      updateContent(habitat) {
-        this.habitat = habitat['id']
-      }
+  methods: {
+    updateContent(habitat) {
+      this.habitat = habitat['id']
     }
   }
+}
 </script>

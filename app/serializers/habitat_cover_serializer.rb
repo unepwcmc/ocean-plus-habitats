@@ -18,6 +18,7 @@ class HabitatCoverSerializer
         )
       habitat_cover_item[:change_percentage] = -8
       habitat_cover_item[:id] = habitat
+      habitat_cover_item[:modal_content] = { title: 'hardcoded in serializer', text: habitat_cover_item[:citation] }.to_json
 
       habitat_cover_array.push(habitat_cover_item)
     end
