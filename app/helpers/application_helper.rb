@@ -35,7 +35,7 @@ module ApplicationHelper
       countries: [
         {
           title: I18n.t("countries.#{yml_key}.title"),
-          url: country_path(57)
+          url: country_path("CRI")
         }
       ],
 
