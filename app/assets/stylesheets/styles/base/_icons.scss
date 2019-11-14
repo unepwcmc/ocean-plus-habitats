@@ -89,6 +89,12 @@
   display: block;
 }
 
+@mixin icon-download {
+  @include icon-basic;
+  background-image: image_url('icons/download.svg');
+  width: rem-calc(16); height: rem-calc(16);
+}
+
 //--------------------------------------------------
 // classes
 //--------------------------------------------------

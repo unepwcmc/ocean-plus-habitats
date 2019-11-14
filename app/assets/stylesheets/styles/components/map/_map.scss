@@ -4,7 +4,6 @@
 .map {
   &__container {
     margin: rem-calc(35) 0;
-    overflow: hidden;
     height: 600px;
 
     flex-direction: row-reverse;
@@ -32,12 +31,10 @@
   @include flex-no-shrink();
   background-color: $background-colour;
   color: $white;
-  overflow-y: scroll;
-  overflow-x: hidden;
   padding: 40px 20px;
-  width: $pane-width-laptop;
-  height: 100%;
+  width: $pane-width-laptop; height: 100%;
 
+  position: relative;
   z-index: 100;
 
   &__list {
@@ -86,6 +83,16 @@
           }
         }
       }
+  
+  &__button-bar {
+    background-color: $navy-xdark;
+    padding: rem-calc(8) 0;
+    width: 100%;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
 }
 
 //--------------------------------------------------

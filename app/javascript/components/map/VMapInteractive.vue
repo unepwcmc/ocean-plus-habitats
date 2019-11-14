@@ -2,10 +2,10 @@
   <div class="map__container flex">
     <filter-pane 
       id="filters-layers"
-      title="Select a layer:"
       class="flex-no-shrink"
       :allow-no-selected-dataset="allowNoSelectedDataset"
       :datasets="datasets"
+      :has-download-button="hasDownloadButton"
     />
     <v-map
       :search="search"
@@ -41,14 +41,6 @@ export default {
       type: Boolean,
       default: true
     },
-    filterPaneFooterText: {
-      type: String,
-      default: ''
-    },
-    filterPaneWarningText: {
-      type: String,
-      default: ''
-    },
     iso3: {
       type: String,
       default: ''
@@ -56,6 +48,10 @@ export default {
     multipleDatasets: {
       type: Boolean,
       default: true
+    },
+    hasDownloadButton: {
+      type: Boolean,
+      default: false
     }
   },
 

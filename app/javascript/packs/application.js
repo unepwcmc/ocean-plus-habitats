@@ -20,6 +20,7 @@ import VSelect from '../components/select/VSelect.vue'
 import StickyBar from '../components/sticky/StickyBar.vue'
 import Tab from '../components/tabs/Tab.vue'
 import Tabs from '../components/tabs/Tabs.vue'
+import Translator from '../components/translator/Translator'
 import VMapInteractive from '../components/map/VMapInteractive'
 
 // create event hub and export so that it can be imported into .vue files
@@ -44,6 +45,7 @@ document.addEventListener('turbolinks:load', () => {
         StickyBar,
         Tab,
         Tabs,
+        Translator,
         VMapInteractive
       }
     })
