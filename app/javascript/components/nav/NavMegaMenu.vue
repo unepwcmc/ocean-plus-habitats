@@ -3,23 +3,19 @@
     class="nav__pane"
     :class="{ 'nav--active' : isActive }"
   >
-    <slot></slot>
+    <slot />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'nav-mega-menu',
+  name: 'NavMegaMenu',
 
   props: {
     id: {
       type: String,
       required: true
     }
-  },
-
-  created () {
-    this.$store.dispatch('nav/closeNav')
   },
 
   computed: {
@@ -30,6 +26,10 @@ export default {
     mixinTriggerId () {
       return 'nav-trigger-' + this.id
     }
+  },
+
+  created () {
+    this.$store.dispatch('nav/closeNav')
   }
 }
 </script>

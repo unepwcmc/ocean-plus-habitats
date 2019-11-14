@@ -1,53 +1,48 @@
 <template>
-  <section class="section-padding sm-trigger-row">
-    <div class="container">
-      <div class="chart--row">
-        <div class="chart__content">
-          <h3>Top five countries and territories with habitat area covered by a protected area</h3>
+  <div class="chart--row">
+    <div class="chart__wrapper">
+      <span class="chart__index">{{ index + 1 }}.</span>
+      <div class="chart__chart">
+        <span 
+          v-if="row.previous > 0"
+          class="chart__bar-previous flex flex-v-center"
+          :style="{ width: row.previous + '%' }"
+        />
 
-          <p v-for="p in description" v-html="p"></p>
-        </div>
+        <span 
+          v-if="row.current > 0"
+          :class="[themeClass, 'chart__bar-current flex']"
+          :style="{ width: row.current + '%' }"
+        />
         
-        <div class="chart__chart">
-          <div v-for="item in data" class="chart__item">
-            <p class="chart__label bold">{{ item.label }}</p>
-            <div class="chart__bar sm-target-row">
-              <span class="chart__bar-label sm-target-child-row">{{ item.percent }}%</span>
-              <span class="chart__colour sm-target-child-row" :style="{ width: item.percent + '%' }"></span>
-            </div>
-          </div>
-        </div>
+        <span
+          v-if="row.current > 0"
+          class="chart__bar-label"
+        >{{ row.current }}%</span>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
-  import ScrollMagic from 'scrollmagic'
-
-  export default {
-    name: 'chart-row',
-
-    props: {
-      description: Array,
-      data: Array
+export default {
+  name: 'ChartRow',
+    
+  props: {
+    index: {
+      type: Number,
+      required: true
     },
+    row: {
+      type: Object, // [{ previous: Number, current: Number }]
+      required: true
+    }
+  },
 
-    updated () {
-      if(this.data.length > 0) { 
-        if(this.scene) { this.scene.removeClassToggle(true) }
-        this.scrollMagicHandlers()
-      }
-    },
-
-    methods: {
-      scrollMagicHandlers () {
-        let scrollMagicController = new ScrollMagic.Controller()
-
-        this.scene = new ScrollMagic.Scene({ triggerElement: '.sm-trigger-row', reverse: false })
-          .setClassToggle('.sm-target-row .sm-target-child-row, .sm-target-row', 'animate')
-          .addTo(scrollMagicController)
-      }
+  computed: {
+    themeClass () {
+      return `theme--${this.row.id}`
     }
   }
+}
 </script>

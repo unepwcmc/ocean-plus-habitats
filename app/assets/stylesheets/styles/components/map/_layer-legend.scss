@@ -1,0 +1,29 @@
+$layer-legend-desktop-width: rem-calc(565);
+$layer-legend-desktop-height: rem-calc(195);
+
+.layer-legend {
+  background-color: $navy;
+  box-shadow: 3px 5px 6px rgba($black, 0.4);
+  color: $white;
+
+  width: $layer-legend-desktop-width;
+  height: $layer-legend-desktop-height;
+
+  position: absolute;
+  right: rem-calc(32);
+  bottom: rem-calc(37);
+
+  &__title-bar {
+    margin-bottom: rem-calc(20);
+  }
+
+    &__title {
+      margin: 0 rem-calc(20) 0 0;
+    }
+
+  &__gradient {
+    border-radius: rem-calc(20);
+    margin-bottom: rem-calc(10);
+    width: 100%; height: rem-calc(20);
+  }
+}

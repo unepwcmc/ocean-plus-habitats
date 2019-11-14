@@ -4,51 +4,49 @@
       <li 
         v-for="(child, index) in children" 
         :key="getId(index)"
-        @click="triggerTab(child.id)" 
         class="tab__trigger" 
-        :class="{ 'tab-active': child.isActive }"
+        :class="{ 'tab-active': child.isActive }" 
+        @click="triggerTab(child.id)"
       >
         {{ child.title }}
       </li>
     </ul>
     
-    <slot></slot>
+    <slot />
   </div>  
 </template>
 
 <script>
-  import { eventHub } from '../../packs/application.js'
+export default {
+  name: 'Tabs',
 
-  export default {
-    name: 'tabs',
+  data () {
+    return {
+      children: []
+    }
+  },
 
-    data () {
-      return {
-        children: []
-      }
-    },
+  watch: {
+    children () {
+      if(this.children.length > 0) { this.triggerTab(this.children[0].id) }
+    }
+  },
 
-    created () {
-      this.children = this.$children
+  created () {
+    this.children = this.$children
       
+  },
+
+  methods: {
+    triggerTab (selectedId) {
+      this.children.forEach(child => {
+        child.isActive = child.id === selectedId
+      })
     },
 
-    watch: {
-      children () {
-        if(this.children.length > 0) { this.triggerTab(this.children[0].id) }
-      }
-    },
-
-    methods: {
-      triggerTab (selectedId) {
-        this.children.forEach(child => {
-          child.isActive = child.id === selectedId
-        })
-      },
-
-      getId (index) {
-        return `tab-${this.id}-${index}`
-      }
+    getId (index) {
+      return `tab-${this.id}-${index}`
     }
   }
+}
 </script>

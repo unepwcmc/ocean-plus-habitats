@@ -1,0 +1,78 @@
+<template>
+  <div class="cards--example-species">
+    <h3 class="cards__title">{{ content.title }}</h3>
+    
+    <div class="cards__cards">
+      <div 
+        v-for="(example, index) in examples"
+        :key="getVForKey('card-example-species', index)"
+        class="card"
+      >
+        <img 
+          :src="example.image" 
+          :alt="example.name_common" 
+          class="card__image"
+        >
+
+        <div class="card__content">
+          <p class="card__title">
+            {{ example.name_common }}
+            <span class="card__title-scientific">{{ example.name_scientific }}</span>
+          </p>
+          
+          <i class="card__icon icon--redlist">{{ example.redlist }}</i>
+          
+          <a 
+            :href="example.redlist_url" 
+            class="card__link"
+          >
+            IUCN Species page
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+  import mixinId from '../../mixins/mixin-ids'
+
+  export default {
+    name: 'example-species',
+
+    mixins: [ mixinId ],
+
+    props: {
+      content: {
+        type: Object, //{ title: String, examples: { HABITAT_NAME: [ { name_common: String, name_scientific: String, image: String, redlist: String, redlist_url: String} ]} }
+        required: true,
+      },
+      event: {
+        type: String,
+        required: true
+      }
+    },
+
+    data () {
+      return {
+        habitat: ''
+      }
+    },
+
+    created () {
+      this.$eventHub.$on(this.event, this.updateContent)
+    },
+
+    computed: {
+      examples () {
+        return this.content.examples[this.habitat]
+      }
+    },
+
+    methods: {
+      updateContent(habitat) {
+        this.habitat = habitat['id']
+      }
+    }
+  }
+</script>
