@@ -1,9 +1,43 @@
 <%= render '/global/header-country' %>
 
-<%= render '/countries/partials/habitats-present' %>
-<%= render partial: '/countries/partials/map', locals: { iso3: @country.iso3 } %>
-<%= render '/countries/partials/red-list' %>
-<%= render '/countries/partials/example-species' %>
-<%= render '/countries/partials/habitat-condition' %>
-<%= render '/countries/partials/habitat-change' %>
+<%= render partial: '/countries/partials/habitats-present', 
+  locals: { 
+    habitats_present: @habitats_present, 
+    modal_content: @habitats_present_modal 
+  }
+%>
+
+<%= render partial: '/countries/partials/map', 
+  locals: { 
+    iso3: @country.iso3 
+  } 
+%>
+
+<%= render partial: '/countries/partials/red-list', 
+  locals: { 
+    modal_content: @red_list_modal 
+  } 
+%>
+
+<%= render partial: '/countries/partials/example-species', 
+  locals: { 
+    example_species_select: @example_species_select, 
+    example_species_selected: @example_species_selected, 
+    example_species_common: @example_species_common, 
+    example_species_threatened: @example_species_threatened 
+  } 
+%>
+
+<%= render partial: '/countries/partials/habitat-condition', 
+  locals: { 
+    modal_content: @habitat_condition_modal 
+  } 
+%>
+
+<%= render partial: '/countries/partials/habitat-change', 
+  locals: { 
+    modal_content: @habitat_change_modal 
+  } 
+%>
+
 <%= render '/countries/partials/targets' %>

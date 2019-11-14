@@ -58,7 +58,7 @@ const UNDEFINED_OBJECT = { id: UNDEFINED_ID, name: 'None' }
 const DEFAULT_SELECT_MESSAGE = 'Select option'
 
 export default {
-  name: 'v-select',
+  name: 'VSelect',
 
   mixins: [
     mixinPopupCloseListeners({closeCallback: 'closeSelect'}),
@@ -80,6 +80,7 @@ export default {
     },
     event: {
       type: String,
+      required: true
     }
   },
 

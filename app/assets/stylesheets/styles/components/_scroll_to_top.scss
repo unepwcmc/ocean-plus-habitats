@@ -1,0 +1,10 @@
+.scroll-to-top {
+  @include button--scroll-to-top;
+
+  position: fixed;
+  right: rem-calc(10);
+  top: 50%;
+  z-index: $z-200;
+
+  transform: translateY(-50%);
+}

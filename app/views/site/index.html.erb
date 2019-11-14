@@ -2,12 +2,12 @@
 
 <%= render '/site/partials/map' %>
 
-<%= render '/site/partials/habitat-change' %>
+<%= render partial: '/site/partials/habitat-change', locals: { modal_content: @habitat_change_modal } %>
 
-<%= render '/site/partials/red-list' %>
+<%= render partial: '/site/partials/red-list', locals: { modal_content: @red_list_modal } %>
 
-<%= render '/site/partials/habitat-cover' %>
+<%= render partial: '/site/partials/habitat-cover', locals: { habitat_cover: @habitat_cover, modal_content: @habitat_cover_modal } %>
 
-<%= render '/site/partials/sdg' %>
+<%= render partial: '/site/partials/sdg', locals: { doughnut_chart: @doughnut_chart.to_json } %>
 
 <modal id="citation"></modal>

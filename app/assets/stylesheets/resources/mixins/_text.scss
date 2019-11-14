@@ -108,6 +108,10 @@
   @include text-5;
 }
 
+@mixin text-modal-title {
+  @include text-2;
+}
+
 @mixin text-nav {
   @include text-3;
 }
@@ -131,6 +135,15 @@
 
 @mixin text-tab-title {
   @include text-4;
+}
+
+@mixin text-tooltip {
+  @include text-3;
+}
+
+@mixin text-map-download-option {
+  @include text-3;
+  font-weight: $semi-bold;
 }
 
 @mixin text-present-habitats-status {

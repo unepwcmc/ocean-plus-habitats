@@ -5,7 +5,7 @@
     <p><%= p %></p>
   <% end %>
 
-  <chart-doughnut :datasets="<%= @doughnut_chart.to_json %>" smallprint="<%= @smallprint %>"></chart-doughnut>
+  <chart-doughnut :datasets="<%= doughnut_chart %>"></chart-doughnut>
 
   <% t('home.sdg.text_2').each do |p| %>
     <p class="bold"><%= p %></p>
