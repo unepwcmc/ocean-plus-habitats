@@ -10,7 +10,7 @@
         <div class="card__card">
           <div class="flex">
             <i class="card__icon <%= get_habitat_icon_class(habitat[:id]) %>" alt="<%= habitat[:title] %> icon"></i>
-            <span class="card__stat">-8%</span>
+            <span class="card__stat"><%= habitat[:change_percentage] %>%</span>
           </div>
 
           <div class="card__title-wrapper flex flex-v-center">
