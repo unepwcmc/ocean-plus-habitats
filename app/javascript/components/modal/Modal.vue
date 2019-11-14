@@ -15,7 +15,9 @@
           @click="closeModal"
         />
           
-        <h3 class="modal__title">{{ content.title }}</h3>
+        <h3 class="modal__title">
+          {{ content.title }}
+        </h3>
         
         <div>
           <p
