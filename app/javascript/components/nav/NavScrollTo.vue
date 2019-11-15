@@ -2,10 +2,10 @@
   <nav>
     <nav-link-scroll
       v-for="(link, index) in nav" 
-      :key="getVForKey(index)"
       :id="link.id"
+      :key="getVForKey(index)"
       :title="link.title"
-      v-on:click="scroll"
+      @click="scroll"
     />
   </nav>  
 </template>
@@ -16,11 +16,11 @@ import mixinSmoothScrollTo from '../../mixins/mixin-smooth-scroll-to'
 import NavLinkScroll from './NavLinkScroll.vue'
 
 export default {
-  name: 'nav-scroll-to',
-
-  mixins: [ mixinId, mixinSmoothScrollTo ],
+  name: 'NavScrollTo',
 
   components: { NavLinkScroll },
+
+  mixins: [ mixinId, mixinSmoothScrollTo ],
 
   props: {
     nav: {

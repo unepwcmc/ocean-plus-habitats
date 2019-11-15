@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'nav-link-scroll',
+  name: 'NavLinkScroll',
 
   props: {
     id: {
