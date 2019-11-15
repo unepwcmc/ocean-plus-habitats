@@ -1,13 +1,15 @@
-<section id="<%= id %>" class="container section-padding">
-  <h2><%= t('home.sdg.title') %></h2>
+<section id="<%= id %>" class="section-padding bg--grey-xlight">
+  <div class="container">
+    <h2><%= t('home.sdg.title') %></h2>
 
-  <% t('home.sdg.text_1').each do |p| %>
-    <p><%= p %></p>
-  <% end %>
+    <% t('home.sdg.text_1').each do |p| %>
+      <p><%= p %></p>
+    <% end %>
 
-  <chart-doughnut :datasets="<%= doughnut_chart %>"></chart-doughnut>
+    <chart-doughnut :datasets="<%= doughnut_chart %>"></chart-doughnut>
 
-  <% t('home.sdg.text_2').each do |p| %>
-    <p class="bold"><%= p %></p>
-  <% end %>
+    <% t('home.sdg.text_2').each do |p| %>
+      <p class="bold"><%= p %></p>
+    <% end %>
+  </div>
 </section>

@@ -124,7 +124,7 @@ export default {
       radiusText: 240,
       segmentWidth: 0,
       colours: {
-        grey: '#ededed',
+        grey: '#e5e5e5',
       },
       active: {
         title: '',
