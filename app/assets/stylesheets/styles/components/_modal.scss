@@ -21,7 +21,8 @@ $modal-padding-laptop: $modal-button-laptop;
 // classes
 //--------------------------------------------------
 .modal {
-  background-color: rgba($black, .6);
+  @include flex-center;
+  background-color: rgba($black, .1);
   
   display: none;
   position: fixed;
@@ -31,66 +32,32 @@ $modal-padding-laptop: $modal-button-laptop;
   left: 0;
   z-index: $z-300;
 
-  &--active { display: block; }
+  &--active { display: flex; }
 
   &__dialog {
     @include responsive-styles('font-size', 16px, 18px, 18px);
+    background-color: $white;
+    border: solid 1px $grey-dark;
     overflow-y: scroll;
     padding-top: $modal-padding-mobile;
-    width: 100%; height: 100%;
+    width: 70%; height: auto;
+    max-width: calc(#{$site-width}*.7); max-height: calc(80%);
 
-    background-color: $white;
-
-    @include breakpoint($small) { padding-top: $modal-padding-tablet; }
-    @include breakpoint($medium) {  padding-top: $modal-padding-laptop; }
+    position: relative;
   }
 
-    &__close {
-      @include modal-button-sizing($modal-button-mobile, $modal-button-tablet, $modal-button-laptop);
-      background-color: $grey-dark;
-      border-radius: 100%;
-      cursor: pointer;
-    
-      position: absolute;
-
-      &::after {
-        content: '';
-        margin: auto;
-
-        display: block;
-      }
-
-      &:hover { opacity: .8; }
+    &__content {
+      padding: 0 $item-spacing-large $item-spacing-large;
     }
 
-    &__bg-image {
-      @include responsive-styles(height, 270px, 370px, 300px);
-      background-color: $grey;
-      background-size: cover;
-      width: 100%;
-    }
-
-      &__bg-image-caption {
-        color: $white;
-        bottom: 0;
+      &__close {
+        @include button--close;
+        @include modal-button-sizing($modal-button-mobile, $modal-button-tablet, $modal-button-laptop);
+        
+        position: absolute;
       }
 
-    &__staff {
-      background-color: $grey-light;
-      border-bottom: solid $grey-dark 36px;
-    }
-
-      &__staff-member {
-        @include responsive-styles(flex-wrap, wrap, nowrap, nowrap);
-        @include responsive-styles(width, 90%, 80%, 40%);
+      &__title {
+        @include text-modal-title;
       }
-
-        &__staff-image {
-          background-color: $grey;
-          flex-shrink: 0; //done this way for IE11
-          margin: 0 30px 30px 0;
-          width: 30%; height: 30%; //done this way for IE11
-
-          display: block;
-        }
 }

@@ -5,15 +5,30 @@ en:
       image_flag: flags/costa-rica.svg
       habitats_present_citations:
         - 
-          citation: Warm-water Coral citation for Costa Rica
+          citation: 
+            title: Title in yml file
+            text:
+              - Warm-water Coral citation for Costa Rica
         - 
-          citation: Saltmarsh Coral citation for Costa Rica
+          citation: 
+            title: Title in yml file
+            text:
+              - Saltmarsh Coral citation for Costa Rica
         - 
-          citation: Mangrove Coral citation for Costa Rica
+          citation: 
+            title: Title in yml file
+            text:
+              - Mangrove Coral citation for Costa Rica
         - 
-          citation: Seagrass Coral citation for Costa Rica
+          citation: 
+            title: Title in yml file
+            text:
+              - Seagrass Coral citation for Costa Rica
         - 
-          citation: Cold-water Coral Coral citation for Costa Rica
+          citation: 
+            title: Title in yml file
+            text:
+              - Cold-water Coral Coral citation for Costa Rica
       targets:
         aichi:
           text:

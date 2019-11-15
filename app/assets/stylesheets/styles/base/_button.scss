@@ -25,12 +25,30 @@ $select-width: rem-calc(300);
   &:hover { text-decoration: none; }
 }
 
+// $button-text-mobile: 20px;
+// $button-text-tablet: 25px;
+$button-text-small-laptop: 16px;
+$button-text-laptop: 18px;
+
+@mixin button-font-size-small { 
+  font-size: $button-text-small-laptop;
+}
+
 @mixin button-font-size { 
   font-size: $button-text-laptop;
 }
 
+// $button-padding-mobile: 16px 24px;
+// $button-padding-tablet: 16px 24px;
+$button-padding-laptop: 11px 24px;
+$button-padding-wide-laptop: 14px 45px;
+
 @mixin button-padding { 
   padding: $button-padding-laptop;
+}
+
+@mixin button-padding-wide { 
+  padding: $button-padding-wide-laptop;
 }
 
 @mixin button-rounded {
@@ -40,12 +58,37 @@ $select-width: rem-calc(300);
 //--------------------------------------------------
 // specific mixins
 //--------------------------------------------------
+@mixin button--close {
+  @include button-basic;
+  @include flex;
+  @include flex-center;
+  background-color: $navy;
+  border-radius: 100%;
+  
+  &:hover { opacity: .9; }
+
+  &:before { 
+    @include icon-close; 
+    content: '';
+  }
+}
+
 @mixin button--grey {
   @include button-basic;
   @include button-font-size;
   @include button-padding;
   @include button-rounded;
   background-color: $grey-light;
+  font-weight: $semi-bold;
+}
+
+@mixin button--map-download {
+  @include button-basic;
+  @include button-font-size-small;
+  @include button-padding-wide;
+  @include button-rounded;
+  background-color: $navy;
+  border: $border-thin $blue-light;
   font-weight: $semi-bold;
 }
 
@@ -67,6 +110,11 @@ $select-width: rem-calc(300);
   &.active::after { transform: rotateZ(180deg); }
 }
 
+@mixin button--scroll-to-top {
+  @include button-basic;
+  @include icon-scroll-to-top;
+}
+
 //--------------------------------------------------
 // classes
 //--------------------------------------------------
@@ -75,5 +123,19 @@ $select-width: rem-calc(300);
     @include button--grey;
     @include flex;
     @include flex-v-center;
+  }
+
+  &--map-download {
+    @include button--map-download;
+    @include flex;
+    @include flex-v-center;
+
+    &::before {
+      @include icon-download;
+      content: '';
+
+      display: inline-block;
+      margin-right: rem-calc(8);
+    }
   }
 }

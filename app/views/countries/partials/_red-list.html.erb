@@ -1,7 +1,7 @@
 <section class="container section-padding--bottom">
   <div class="flex">
     <h2><%= t('home.red_list.title'); %></h2>
-    <modal-trigger id="citation" :modal-content="{ content: '<%= t('home.red_list.citation'); %>' }" class="icon--citation margin-space-left"></modal-trigger>
+    <modal-trigger id="citation" :modal-content="<%= modal_content %>" class="icon--citation margin-space-left"></modal-trigger>
   </div>
 
   <%= render 'shared/red-list-table' %>

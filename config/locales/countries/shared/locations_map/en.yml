@@ -1,0 +1,5 @@
+en:
+  countries:
+    shared:
+      locations_map:
+        download_button_text: Download datasets

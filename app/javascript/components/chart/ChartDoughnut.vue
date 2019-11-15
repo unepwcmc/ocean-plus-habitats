@@ -93,7 +93,10 @@
         >Find out more about this goal on the UN SDG website</a>
       </div>
 
-      <p class="chart__source" v-html="active.source"></p>
+      <p
+        class="chart__source"
+        v-html="active.source"
+      />
     </div>
   </div>  
 </template>
@@ -102,7 +105,7 @@
 import mixinIds from '../../mixins/mixin-ids'
 
 export default {
-  name: 'chart-doughnut',
+  name: 'ChartDoughnut',
 
   mixins: [mixinIds],
 
