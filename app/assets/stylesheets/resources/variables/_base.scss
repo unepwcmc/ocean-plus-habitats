@@ -9,32 +9,22 @@ $grey-dark: #444444;
 $grey-xdark: #383838;
 $black: #000000;
 
-$green: #22A37B;
-
 $blue-light: #0AD4FF;
 $blue: #0895B4;
 
-$navy: #0A2F3C; 
-$navy-2: #18424E;
-$navy-dark: #0D485D;
-$navy-xdark: #072029;
-$purple: #BA41FF;
-
-$nav: #1E2329;
-
-$blue-grey: #3A4552;
-$pink: #BA41FF;
+$green: #22A37B;
 
 $iucn: #D82007;
+
+$navy: #0A2F3C;
+$navy-dark: #0D485D;
+$navy-xdark: #072029;
 
 $theme-blue: #88CCEE;
 $theme-pink: #F35F8D;
 $theme-purple: #332288;
 $theme-red: #E61354;
 $theme-yellow: #FCDA68;
-
-$primary: $blue-grey;
-$secondary: $navy;
 
 //--------------------------------------------------
 // fonts
@@ -142,6 +132,3 @@ $habitat_colours: (
   'seagrasses': $theme-blue,
   'coldcorals': $theme-red,
 );
-
-// $colours: ($theme-blue, $theme-green, $theme-orange, $theme-pink, $theme-yellow);
-// $names: ('blue', 'green', 'orange', 'pink', 'yellow');
