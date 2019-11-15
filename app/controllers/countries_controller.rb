@@ -81,15 +81,13 @@ class CountriesController < ApplicationController
         id: 'coralreefs',
         title: get_habitat_title('coralreefs'),
         text: I18n.t('countries.shared.habitat_change.chart_text', km: 20, habitat: get_habitat_title('coralreefs'), years: '2000-2019'),
-        previous: 80, 
-        current: 40 
+        change: -1.4, 
       },
       { 
         id: 'mangroves', 
         title: get_habitat_title('mangroves'),
         text: I18n.t('countries.shared.habitat_change.chart_text', km: 40, habitat: get_habitat_title('mangroves'), years: '2000-2019'),
-        previous: 50, 
-        current: 25 
+        change: 3.2
       }
     ].to_json
   end
