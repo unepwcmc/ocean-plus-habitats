@@ -1,6 +1,12 @@
 //--------------------------------------------------
 // base mixins
 //--------------------------------------------------
+@mixin text-on-navy {
+  .bg--navy-light &,
+  .bg--navy &,
+  .bg--navy-dark & { color: $white; }
+}
+
 @mixin text-1 {
   @include responsive-styles(font-size, $header-font-size-mobile, $header-font-size-tablet, $header-font-size-laptop);
   font-weight: $bold;
@@ -9,6 +15,7 @@
 }
 
 @mixin text-2 {
+  @include text-on-navy;
   @include responsive-styles(font-size, rem-calc(25), rem-calc(25), rem-calc(25)); 
   color: $header-font-color;
   font-family: $header-font;
@@ -18,6 +25,7 @@
 }
 
 @mixin text-3 {
+  @include text-on-navy;
   @include responsive-styles(font-size, rem-calc(18), rem-calc(18), rem-calc(18));
   color: $body-font-color;
   font-family: $body-font;
@@ -38,6 +46,7 @@
 }
 
 @mixin text-7 {
+  @include text-on-navy;
   @include responsive-styles(font-size, rem-calc(20), rem-calc(20), rem-calc(20));
   color: $header-font-color;
   font-weight: $semi-bold;
@@ -64,16 +73,13 @@
 
 @mixin h2 {
   @include text-2;
-
-  .bg--navy-dark & { color: $white; }
 }
 
 @mixin h3 {
   @include text-7;
   margin-top: 0;
   
-  &.heading--doughnut-chart,
-  .bg--navy-dark & { color: $white; }
+  &.heading--doughnut-chart { color: $white; }
 }
 
 @mixin h4 {
@@ -114,6 +120,14 @@
 
 @mixin text-nav {
   @include text-3;
+}
+
+@mixin text-nav-tertiary {
+  @include text-3;
+  cursor: pointer;
+  font-weight: $semi-bold;
+
+  &:hover { text-decoration: underline; }
 }
 
 @mixin text-select {

@@ -12,7 +12,6 @@ $sticky-bar-height: rem-calc(100);
 
     .sticky-bar {
       &__target {
-        background-color: $navy-light;
         color: $white;
         width: 100%; height: $sticky-bar-height;
 
@@ -22,6 +21,8 @@ $sticky-bar-height: rem-calc(100);
           z-index: $z-300;
         }
       }
+
+        &__content { height: 100%; }
     }
   }
 }

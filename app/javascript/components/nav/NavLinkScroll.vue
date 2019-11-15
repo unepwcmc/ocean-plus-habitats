@@ -1,28 +1,29 @@
 <template>
-  <div :id="id" class="nav__link flex flex-v-center" @click="click">
-    <span role="menuitem" class="nav__button"></span>
-    <span class="nav__label">{{ item.label }}</span>
-  </div>
+  <span 
+    class="nav__link" 
+    @click="click"
+    v-html="title"
+  />
 </template>
 
 <script>
 export default {
-  name: 'name-link-scroll',
+  name: 'nav-link-scroll',
 
   props: {
-    item: {
+    id: {
       required: true,
-      type: Object
+      type: String
+    },
+    title: {
+      required: true,
+      type: String
     }
-  },
-
-  computed: {
-    id () { return `scroll-link-${this.item.id}` }
   },
 
   methods: {
     click () {
-      this.$emit('click', this.item.id)
+      this.$emit('click', this.id)
     }
   }
 }

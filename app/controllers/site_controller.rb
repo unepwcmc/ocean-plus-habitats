@@ -8,7 +8,7 @@ class SiteController < ApplicationController
 
     @title = @habitat.title
 
-    @nav_sticky = I18n.t('home.nav_sticky').to_json
+    @nav_tertiary = I18n.t('home.nav_sticky').to_json
 
     @habitatData = HabitatsSerializer.new(@habitat, @chart_greatest_coverage, @chart_protected_areas, @global).serialize
     @habitats = I18n.t('global.habitats')

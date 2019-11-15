@@ -13,9 +13,9 @@ en:
       - 
         id: change-in-habitats
         title: Change in habitats
-      - 
-        id: are-we-protecting-habitats
-        title: Are we protecting habitats?
-      - 
-        id: hotspots-of-biodiversity
-        title: Hotspots of diversity
+      # - 
+      #   id: are-we-protecting-habitats
+      #   title: Are we protecting habitats?
+      # - 
+      #   id: hotspots-of-biodiversity
+      #   title: Hotspots of diversity
