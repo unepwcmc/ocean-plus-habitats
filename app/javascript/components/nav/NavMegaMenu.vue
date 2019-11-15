@@ -29,7 +29,13 @@ export default {
   },
 
   created () {
-    this.$store.dispatch('nav/closeNav')
+    this.closeNav()
+  },
+
+  methods: {
+    closeNav () {
+      this.$store.dispatch('nav/closeNav')
+    }  
   }
 }
 </script>
