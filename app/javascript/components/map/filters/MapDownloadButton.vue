@@ -37,9 +37,13 @@
 <script>
 import mixinIds from '../../../mixins/mixin-ids'
 import mixinPopupCloseListeners from '../../../mixins/mixin-popup-close-listeners'
+import { getInputs, isTabForward } from '../../../helpers/focus-helpers'
 
 export default {
-  mixins: [mixinPopupCloseListeners({closeCallback: 'close'}), mixinIds],
+  mixins: [
+    mixinIds,
+    mixinPopupCloseListeners({closeCallback: 'close'}),
+  ],
 
   data () {
     return {
@@ -81,6 +85,10 @@ export default {
         ''
     }
   },
+
+  mounted () {
+    this.listenToTabOut()
+  },
   
   methods: {
     toggle () {
@@ -91,6 +99,14 @@ export default {
     },
     open () {
       this.isActive = true
+    },
+
+    listenToTabOut () {
+      const inputs = getInputs(this.$el.querySelector('#' + this.contentId))
+
+      inputs[inputs.length - 1].addEventListener('keydown', e => {
+        if (isTabForward(e)) { this.close() }
+      })
     }
   }
 }
