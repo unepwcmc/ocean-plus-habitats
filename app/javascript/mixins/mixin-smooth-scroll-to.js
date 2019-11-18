@@ -37,7 +37,11 @@ export default {
 
     setTriggerOffset () {
       // this offset accounts for the sticky bars at the top of the window
-      this.triggerOffset = document.querySelector('.sm-target-sticky').clientHeight
+      const stickyBars = document.querySelector('.sm-target-sticky')
+
+      if (stickyBars) {
+        this.triggerOffset = stickyBars.clientHeight
+      }
     },
     
     windowResized () {
