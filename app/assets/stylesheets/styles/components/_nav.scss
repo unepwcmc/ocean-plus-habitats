@@ -25,6 +25,8 @@
       }
 
       &__trigger {
+        overflow: visible;
+        
         position: relative;
 
         &.nav--active {
