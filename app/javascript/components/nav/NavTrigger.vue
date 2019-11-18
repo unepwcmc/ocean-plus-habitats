@@ -33,7 +33,7 @@ export default {
 
   methods: {
     toggleNav () {
-      this.$store.dispatch('nav/openNav', this.triggerId)
+      this.$store.dispatch('nav/toggleNav', this.triggerId)
     }
   }
 }

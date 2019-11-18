@@ -7,7 +7,7 @@ export const storeNav = {
   },
 
   actions: {
-    openNav ({ commit }, id) {
+    toggleNav ({ commit }, id) {
       commit('updateId', id)
       commit('updateStatus')
     },
