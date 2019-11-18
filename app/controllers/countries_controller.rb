@@ -87,21 +87,39 @@ class CountriesController < ApplicationController
       text: I18n.t('countries.shared.habitat_condition.citation') 
     }.to_json
 
-    @habitat_change = [
-      { 
-        id: 'coralreefs',
-        title: get_habitat_title('coralreefs'),
-        text: I18n.t('countries.shared.habitat_change.chart_text', km: 20, habitat: get_habitat_title('coralreefs'), years: '2000-2019'),
-        change: -1.4, 
-      },
-      { 
-        id: 'mangroves', 
-        title: get_habitat_title('mangroves'),
-        text: I18n.t('countries.shared.habitat_change.chart_text', km: 40, habitat: get_habitat_title('mangroves'), years: '2000-2019'),
-        change: 3.2
-      }]
+    # @habitat_change = [
+    #   { 
+    #     id: 'coralreefs',
+    #     title: get_habitat_title('coralreefs'),
+    #     text: I18n.t('countries.shared.habitat_change.chart_text', km: 20, habitat: get_habitat_title('coralreefs'), years: '2000-2019'),
+    #     change: -1.4, 
+    #   },
+    #   { 
+    #     id: 'mangroves', 
+    #     title: get_habitat_title('mangroves'),
+    #     text: I18n.t('countries.shared.habitat_change.chart_text', km: 40, habitat: get_habitat_title('mangroves'), years: '2000-2019'),
+    #     change: 3.2
+    #   }]
+
+    # @habitat_change = @habitat_change.to_json
+
+    @habitat_change = []
+    Habitat.all.each do |habitat|
+      country_cover_change = habitat.calculate_country_cover_change(@country.iso3)
+
+      change = { 
+        id: habitat.name,
+        title: get_habitat_title(habitat.name),
+        text: I18n.t('countries.shared.habitat_change.chart_text', km: country_cover_change[:change_km], habitat: get_habitat_title(habitat.name), years: '2000-2019'),
+        change: country_cover_change[:change_percentage]
+      }
+
+      @habitat_change << change unless country_cover_change[:change_km] == 0
+
+    end
 
     @habitat_change = @habitat_change.to_json
+
 
     @habitat_change_modal = { title: 'Title hardcoded in controller', text: I18n.t('countries.shared.habitat_change.citation') }.to_json
 
