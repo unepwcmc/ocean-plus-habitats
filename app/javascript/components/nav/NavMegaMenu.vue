@@ -18,18 +18,30 @@ export default {
     }
   },
 
-  computed: {
-    isActive () {
-      return this.$store.state.nav.isActive && this.$store.state.nav.id === this.mixinTriggerId
-    },
+  data () {
+    return {
+      isActive: false
+    }
+  },
 
+  computed: {
     mixinTriggerId () {
       return 'nav-trigger-' + this.id
+    },
+
+    navId () {
+      return `toggle-nav-${this.id}`
     }
   },
 
   created () {
-    this.$store.dispatch('nav/closeNav')
+    this.$eventHub.$on(this.navId, this.updateActiveState)
+  },
+
+  methods: {
+    updateActiveState (isActive) {
+      this.isActive = isActive
+    }
   }
 }
 </script>
