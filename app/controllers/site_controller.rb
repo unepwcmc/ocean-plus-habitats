@@ -1,13 +1,7 @@
 class SiteController < ApplicationController
-  respond_to? :json, :html
-  before_action :load_habitat
-
   def index
     @global = YAML.load(File.open("#{Rails.root}/lib/data/content/global.yml", 'r'))
 
-    @title = @habitat.title
-
-    @habitatData = HabitatsSerializer.new(@habitat, @chart_greatest_coverage, @chart_protected_areas, @global).serialize
     @habitats = I18n.t('global.habitats')
 
     @habitat_change_modal = { title: 'Title hardcoded in controller', text: I18n.t('home.habitat_change.citation') }.to_json
@@ -34,13 +28,5 @@ class SiteController < ApplicationController
         'source': item[:source]
       })
     end
-  end
-
-  private
-
-  def load_habitat
-    @habitat = Habitat.where(name: params['habitat'] || 'warmwater').first
-    @habitat ||= Habitat.where(name: 'coralreefs').first
-    @habitat_type = @habitat.type
   end
 end

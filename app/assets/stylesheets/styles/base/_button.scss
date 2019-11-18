@@ -87,7 +87,7 @@ $button-padding-wide-laptop: 14px 45px;
   @include button-font-size-small;
   @include button-padding-wide;
   @include button-rounded;
-  background-color: $navy-2;
+  background-color: $navy;
   border: $border-thin $blue-light;
   font-weight: $semi-bold;
 }
