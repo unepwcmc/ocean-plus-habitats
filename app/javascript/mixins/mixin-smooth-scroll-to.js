@@ -14,16 +14,8 @@ export default {
   },
 
   methods: {
-    currentEvent () {
-      const event = document.getElementById('v-current-event')
-      
-      if(event) {
-        const location = window.pageYOffset + event.getBoundingClientRect().top - this.triggerOffset - 10
-
-        this.$store.commit('filters/updateCurrentEvent', location)
-
-        this.$eventHub.$emit('backToTop')
-      }
+    backToTop () {
+      this.animate(0)
     },
 
     // scroll down to the section of the page which corresponds to the
@@ -32,6 +24,10 @@ export default {
       const offset = document.getElementById('section-' + id).offsetTop,
         top = offset - this.triggerOffset
 
+      this.animate(top)
+    },
+
+    animate (top) {
       if(this.supportsNativeSmoothScroll) {
         window.scrollTo({ top: top, behavior: 'smooth' })
       } else {
