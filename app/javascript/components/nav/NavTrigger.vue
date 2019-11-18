@@ -4,7 +4,7 @@
     class="nav__trigger"
     :class="{ 'nav--active' : isActive }"
     aria-haspopup="dialog"
-    @click="openNav"
+    @click="toggleNav"
   >
     <slot />
   </button>
@@ -32,8 +32,8 @@ export default {
   },
 
   methods: {
-    openNav () {
-      this.$store.dispatch('nav/openNav', this.triggerId)
+    toggleNav () {
+      this.$store.dispatch('nav/toggleNav', this.triggerId)
     }
   }
 }
