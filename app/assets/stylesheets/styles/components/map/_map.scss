@@ -70,7 +70,7 @@
       }
 
       &__filter-description {
-        margin-left: $key-margin + $key-size;
+        margin-left: calc(#{$key-margin} + #{$key-size});
 
         p {
           @include text-filter-description;
