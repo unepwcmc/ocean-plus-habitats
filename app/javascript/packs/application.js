@@ -14,6 +14,7 @@ import ChartRows from '../components/chart/ChartRows.vue'
 import ExampleSpecies from '../components/content/ExampleSpecies.vue'
 import NavMegaMenu from '../components/nav/NavMegaMenu.vue'
 import NavTrigger from '../components/nav/NavTrigger.vue'
+import NavScrollTo from '../components/nav/NavScrollTo.vue'
 import Modal from '../components/modal/Modal.vue'
 import ModalTrigger from '../components/modal/ModalTrigger.vue'
 import VSelect from '../components/select/VSelect.vue'
@@ -42,6 +43,7 @@ document.addEventListener('turbolinks:load', () => {
         ModalTrigger,
         NavMegaMenu,
         NavTrigger,
+        NavScrollTo,
         VSelect,
         ScrollToTop,
         StickyBar,

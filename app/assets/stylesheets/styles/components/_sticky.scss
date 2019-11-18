@@ -1,0 +1,28 @@
+//--------------------------------------------------
+// variables
+//--------------------------------------------------
+$sticky-bar-height: rem-calc(100);
+
+//--------------------------------------------------
+// classes
+//--------------------------------------------------
+.sticky-bar {
+  &--home {
+    height: $sticky-bar-height;
+
+    .sticky-bar {
+      &__target {
+        color: $white;
+        width: 100%; height: $sticky-bar-height;
+
+        &.sticky {
+          position: fixed;
+          top: 0;
+          z-index: $z-300;
+        }
+      }
+
+        &__content { height: 100%; }
+    }
+  }
+}

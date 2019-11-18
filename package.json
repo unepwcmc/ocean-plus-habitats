@@ -10,6 +10,7 @@
     "eslint-loader": "^3.0.2",
     "eslint-plugin-vue": "^6.0.0",
     "scrollmagic": "^2.0.6",
+    "smoothscroll-polyfill": "^0.4.4",
     "vue": "^2.5.17",
     "vue-loader": "14.2.2",
     "vue-template-compiler": "^2.5.17",
