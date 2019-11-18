@@ -11,6 +11,7 @@
         :key="index"
         :index="index"
         :row="row"
+        :max-value="maxValue"
       />
     </div>
   </div>
@@ -33,6 +34,12 @@ export default {
     rows: {
       type: Array, // [{ id: String, previous: Number, current: Number }]
       required: true
+    }
+  },
+
+  computed: {
+    maxValue () {
+      return Math.max(...this.rows.map(r => Math.abs(r.change))) * 1.5
     }
   }
 }

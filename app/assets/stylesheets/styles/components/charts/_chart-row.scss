@@ -2,6 +2,7 @@
 // variables
 //--------------------------------------------------
 $bar-height: rem-calc(49);
+$bar-center-divider-width: rem-calc(5);
 
 //--------------------------------------------------
 // variables
@@ -27,7 +28,7 @@ $bar-height: rem-calc(49);
         @include flex-v-center;
         background-color: $white;
         box-shadow: inset 0px 0px 0px 1px $grey-light;
-        width: 100%;
+        width: 100%; height: $bar-height;
 
         position: relative;
       }
@@ -36,10 +37,28 @@ $bar-height: rem-calc(49);
           @include text-chart; 
           margin-right: rem-calc(12);
         }
-
-        &__bar-previous {
-          @include chart-default;
+        
+        &__bar {
+          @include flex;
+          @include chart-get-colours;
           @include chart-row-bar-basic;
+          
+          position: absolute;
+          top: 0;
+          left: 50%;
+          
+          transform-origin: left;
+          transition: transform 1s ease-out;
+          
+          &.animate { transform: scaleX(1); }
+        }
+
+        &__bar-center {
+          background-color: $black;
+          width: $bar-center-divider-width; height: $bar-height;
+
+          position: absolute;
+          left: 50%;
         }
 
           &__bar-label {
@@ -52,22 +71,6 @@ $bar-height: rem-calc(49);
 
             transform: translateY(-50%);
             transition: opacity 1s ease-in-out;
-          }
-
-          &__bar-current {
-            @include flex;
-            @include chart-get-colours;
-            @include chart-row-bar-basic;
-
-            position: absolute;
-            top: 0;
-            left: 0;
-              
-            // transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 1s ease-out;
-
-            &.animate { transform: scaleX(1); }
           }
 
         &__label {

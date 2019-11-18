@@ -4,21 +4,15 @@
       <span class="chart__index">{{ index + 1 }}.</span>
       <div class="chart__chart">
         <span 
-          v-if="row.previous > 0"
-          class="chart__bar-previous flex flex-v-center"
-          :style="{ width: row.previous + '%' }"
+          :class="[themeClass, 'chart__bar flex flex-v-center']"
+          :style="{ width: rowWidthAbs + '%', left: rowLeft + '%' }"
         />
 
-        <span 
-          v-if="row.current > 0"
-          :class="[themeClass, 'chart__bar-current flex']"
-          :style="{ width: row.current + '%' }"
-        />
+        <span class="chart__bar-center" />
         
-        <span
-          v-if="row.current > 0"
-          class="chart__bar-label"
-        >{{ row.current }}%</span>
+        <span class="chart__bar-label">
+          {{ row.change }}%
+        </span>
       </div>
     </div>
   </div>
@@ -36,10 +30,26 @@ export default {
     row: {
       type: Object, // [{ previous: Number, current: Number }]
       required: true
+    },
+    maxValue: {
+      type: Number,
+      default: 100
     }
   },
 
   computed: {
+    rowWidth () {
+      return this.row.change / (2 * this.maxValue) * 100
+    },
+
+    rowLeft () {
+      return this.rowWidth < 0 ? 50 + this.rowWidth :  50
+    },
+
+    rowWidthAbs () {
+      return Math.abs(this.rowWidth)
+    },
+
     themeClass () {
       return `theme--${this.row.id}`
     }
