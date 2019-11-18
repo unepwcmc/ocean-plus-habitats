@@ -16,7 +16,7 @@
         
         display: none;
         position: absolute;
-        top: 100%;
+        top: calc(100% - 16px);
         right: 0;
         left: 0;
         z-index: $z-300;
@@ -25,24 +25,11 @@
       }
 
       &__trigger {
-        overflow: visible;
-        
         position: relative;
 
         &.nav--active {
           border-bottom-right-radius: 0;
           border-bottom-left-radius: 0;
-
-          &::after {
-            background-color: inherit;
-            content: '';
-            width: 100%; height: rem-calc(20);
-
-            display: block;
-            position: absolute;
-            top: 100%;
-            left: 0;
-          }
         }
       }
     }
