@@ -1,13 +1,6 @@
 //--------------------------------------------------
 // chart mixins
 //--------------------------------------------------
-@mixin chart-content {
-  @include breakpoint($medium) { 
-    padding-right: rem-calc(49);
-    width: 32%; 
-  }
-}
-
 @mixin chart-label {
   font-size: rem-calc(14);
 
