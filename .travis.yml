@@ -20,8 +20,8 @@ addons:
   postgresql: 9.6
   chrome: stable  
 before_script:
-- bundle exec sidekiq -d -L /tmp/sidekiq.log
-- sleep 1
+# - bundle exec sidekiq -d -L /tmp/sidekiq.log
+# - sleep 1
 - psql -c 'create database travis_ci_test' -U postgres
 - cp config/database.yml.travis config/database.yml
 - cp config/secrets.yml.travis config/secrets.yml
