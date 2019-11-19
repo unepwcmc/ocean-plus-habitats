@@ -31,6 +31,7 @@ before_script:
 script:
 - RAILS_ENV=test bundle exec rails webpacker:compile
 - RAILS_ENV=test bin/rake db:migrate
+- RAILS_ENV=test bundle exec rake import:prebakedstats
 - RAILS_ENV=test rails test
 # - RAILS_ENV=test rspec
 # notifications:
