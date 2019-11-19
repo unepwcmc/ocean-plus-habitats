@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191104151250) do
+ActiveRecord::Schema.define(version: 20191108104050) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,13 @@ ActiveRecord::Schema.define(version: 20191104151250) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "geo_entities_species", force: :cascade do |t|
+    t.integer "geo_entity_id"
+    t.integer "species_id"
+    t.index ["geo_entity_id"], name: "index_geo_entities_species_on_geo_entity_id"
+    t.index ["species_id"], name: "index_geo_entities_species_on_species_id"
+  end
+
   create_table "geo_entity_stats", force: :cascade do |t|
     t.bigint "habitat_id"
     t.bigint "geo_entity_id"
@@ -65,6 +72,17 @@ ActiveRecord::Schema.define(version: 20191104151250) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "wms_url"
+  end
+
+  create_table "species", force: :cascade do |t|
+    t.integer "species_id", null: false
+    t.string "scientific_name", null: false
+    t.string "common_name"
+    t.string "redlist_status", null: false
+    t.bigint "habitat_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["habitat_id"], name: "index_species_on_habitat_id"
   end
 
   add_foreign_key "change_stats", "geo_entities"
