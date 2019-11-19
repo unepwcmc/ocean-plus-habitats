@@ -69,13 +69,13 @@
 //--------------------------------------------------
   &--tertiary {
     @include flex;
-    @include flex-h-between;
-    @include flex-v-center;
+    @include flex-center;
     height: 100%;
 
     .nav {
       &__link {
         @include text-nav-tertiary;    
+        margin: 0 rem-calc(30);
       }
     }
   }
