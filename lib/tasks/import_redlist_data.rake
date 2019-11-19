@@ -37,9 +37,9 @@ namespace :import do
     countries_species_filename = "lib/data/species/#{habitat.name}/country_species_join-utf8.csv".freeze
 
     CSV.foreach(countries_species_filename, headers: true) do |row|
-      geo_entity = GeoEntity.find_by(iso3: row['ISO3'])
+      geo_entity = GeoEntity.find_by(iso3: row['iso3'])
       next unless geo_entity.present?
-      GeoEntitiesSpecies.create(species_id: row['SpeciesID'], geo_entity_id: geo_entity.id)
+      GeoEntitiesSpecies.create(species_id: row['species_id'], geo_entity_id: geo_entity.id)
     end
   end
 end
