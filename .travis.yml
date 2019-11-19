@@ -3,6 +3,7 @@ branches:
   only:
   - master
   - develop
+  - refresh
 sudo: false
 before_install:
 - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.6.0
