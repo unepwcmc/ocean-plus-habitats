@@ -7,14 +7,14 @@ export const storeNav = {
   },
 
   actions: {
-    openNav ({ commit }, id) {
+    toggleNav ({ commit }, id) {
       commit('updateId', id)
       commit('updateStatus')
     },
 
     closeNav ({ commit }) {
       commit('updateId', '')
-      commit('updateStatus')
+      commit('updateToInActive')
     }
   },
 
@@ -25,6 +25,10 @@ export const storeNav = {
 
     updateStatus () {
       this.state.nav.isActive = !this.state.nav.isActive
+    },
+
+    updateToInActive () {
+      this.state.nav.isActive = false
     }
   }
 }

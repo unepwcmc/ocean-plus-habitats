@@ -1,9 +1,9 @@
-<section class="container section-padding">
+<section id="<%= id %>" class="container section-padding">
   <h2><%= t('home.locations_map.title') %></h2>
   <% t('home.locations_map.text').each do |p| %>
     <p><%= p.html_safe %></p>
   <% end %>
-  <v-map-interactive></v-map-interactive>
+  <v-map-interactive :has-download-button="true"></v-map-interactive>
   <p class="text--smallprint">
     <%= t('shared.map_disclaimer') %>
   </p>

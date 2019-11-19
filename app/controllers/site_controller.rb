@@ -2,6 +2,8 @@ class SiteController < ApplicationController
   def index
     @global = YAML.load(File.open("#{Rails.root}/lib/data/content/global.yml", 'r'))
 
+    @nav_tertiary = I18n.t('home.nav_sticky').to_json
+
     @habitats = I18n.t('global.habitats')
 
     @habitat_change_modal = { title: 'Title hardcoded in controller', text: I18n.t('home.habitat_change.citation') }.to_json

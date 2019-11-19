@@ -98,14 +98,6 @@ th { font-weight: inherit; }
 .container {
   @extend .site-width;
   @extend %container;
-
-  &--small {
-    @extend %container;    
-
-    @include breakpoint($small) { width: 80%; }
-    @include breakpoint($medium) { width: 50%; }
-    @include breakpoint($large) { width: rem-calc(560); }
-  }
 }
 
 //--------------------------------------------------
