@@ -1,4 +1,5 @@
-cri:
+standard_change_stat:
+  geo_entity_id: cri.id
   total_value_1996: 0.377151194142222e3
   total_value_2007: 0.370168870723098e3
   total_value_2008: 0.370251387937232e3
