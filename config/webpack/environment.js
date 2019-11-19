@@ -1,11 +1,9 @@
 const { environment } = require('@rails/webpacker')
-const webpack = require('webpack')
+const { VueLoaderPlugin } = require('vue-loader')
 const vue =  require('./loaders/vue')
-const dotenv = require('dotenv')
+const DotenvPlugin = require('dotenv-webpack')
 
-dotenv.config({ path: '.env', silent: true })
-
-environment.plugins.prepend('Environment', new webpack.EnvironmentPlugin(JSON.parse(JSON.stringify(process.env))))
-environment.loaders.append('vue', vue)
-
+environment.plugins.prepend('DotenvPlugin', new DotenvPlugin())
+environment.plugins.prepend('VueLoaderPlugin', new VueLoaderPlugin())
+environment.loaders.prepend('vue', vue)
 module.exports = environment
