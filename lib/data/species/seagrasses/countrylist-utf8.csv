@@ -1,4 +1,4 @@
-COUNTRY,ISO3,OCCURRENCE,PEER-REVIEWED EVIDENCE,Number of Species
+country,iso3,occurrence,peer_reviewed_evidence,number_of_species
 Aruba,ABW,2,13; 61;,0
 Afghanistan,AFG,0,0,0
 Angola,AGO,2,1; 78,0

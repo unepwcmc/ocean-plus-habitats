@@ -1,4 +1,4 @@
-Country,ISO3,Species,SpeciesID,SourceID
+country,iso3,species,species_id,source_id
 Albania,ALB,Balanophyllia (Balanophyllia) europaea,232,5
 Albania,ALB,Cladocora caespitosa,495,5
 Algeria,DZA,Balanophyllia (Balanophyllia) europaea,232,5

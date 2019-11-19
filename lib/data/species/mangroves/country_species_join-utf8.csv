@@ -1,4 +1,4 @@
-Country,ISO3,Species,SpeciesID,SourceID
+country,iso3,species,species_id,source_id
 Aruba,ABW,Acrostichum aureum,3,1
 Aruba,ABW,Avicennia germinans,64,1
 Aruba,ABW,Avicennia schaueriana,65,1

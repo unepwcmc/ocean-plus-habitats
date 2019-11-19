@@ -1,4 +1,4 @@
-COUNTRY,ISO3,OCCURRENCE,PEER-REVIEWED EVIDENCE,Number of Species
+country,iso3,occurrence,peer_reviewed_evidence,number_of_species
 Afghanistan,AFG,0,Inland,0
 Åland Islands,ALA,1,N/A,0
 Albania,ALB,2,5;,2
