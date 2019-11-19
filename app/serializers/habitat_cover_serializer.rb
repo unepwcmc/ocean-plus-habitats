@@ -14,7 +14,9 @@ class HabitatCoverSerializer
         I18n.t(
           "home.habitat_cover.habitats.#{habitat}.text",
           change_km: -80000,
-          change_percentage: -8
+          change_percentage: -8,
+          baseline_year: 999999,
+          original_total: 999999
         )
       habitat_cover_item[:change_percentage] = -8
       habitat_cover_item[:id] = habitat
