@@ -1,0 +1,39 @@
+language: ruby
+branches:
+  only:
+  - master
+  - develop
+sudo: false
+before_install:
+- curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.6.0
+- export PATH=$HOME/.yarn/bin:$PATH
+- sudo apt-get install software-properties-common
+- sudo apt-get update
+cache:
+  yarn: true
+install:
+- bundle install
+bundler_args: "--without development production staging"
+rvm:
+- 2.6.1
+addons:
+  postgresql: 9.6
+  chrome: stable  
+before_script:
+- bundle exec sidekiq -d -L /tmp/sidekiq.log
+- sleep 1
+- psql -c 'create database travis_ci_test' -U postgres
+- cp config/database.yml.travis config/database.yml
+- cp config/secrets.yml.travis config/secrets.yml
+# - redis-server &
+- yarn install
+script:
+- RAILS_ENV=test bundle exec rails webpacker:compile
+- RAILS_ENV=test bin/rake db:migrate
+- RAILS_ENV=test rails test
+# - RAILS_ENV=test rspec
+# notifications:
+#   slack:
+#     secure: ???
+# services:
+#   - redis-server
