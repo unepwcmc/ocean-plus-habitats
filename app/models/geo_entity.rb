@@ -9,4 +9,21 @@ class GeoEntity < ApplicationRecord
 
   scope :countries, -> { where.not(iso3: nil) }
   scope :regions, -> { where(iso3: nil) }
+
+
+  # most common is to be determined in a meeting
+  # most threatened is to be ordered as follows;
+  #
+  # Critically Endangered, Endangered, Vulnerable
+  # CR is the most endangered, then comes EN, third VU
+  # and if there are not 3 species of these categories, NT (near threatened)
+  # could also be considered.
+  def get_species_images(type)
+    return nil if iso3.nil?
+    if type == :most_common
+      return 0
+    elsif type == :most_threatened
+      return 0
+    end
+  end
 end
