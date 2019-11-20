@@ -8,4 +8,8 @@
     @include flex-h-between;
     height: rem-calc(80);
   }
+
+    &__nav-trigger {
+      margin-left: auto; //for ie11
+    }
 }
