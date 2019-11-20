@@ -18,8 +18,8 @@ class GeoEntity < ApplicationRecord
   # CR is the most endangered, then comes EN, third VU
   # and if there are not 3 species of these categories, NT (near threatened)
   # could also be considered.
-  def get_species_images(type)
-    return nil if iso3.nil?
+  def get_species_images(habitat, type)
+    return nil if iso3.nil? || habitat.nil?
     if type == :most_common
       return 0
     elsif type == :most_threatened
