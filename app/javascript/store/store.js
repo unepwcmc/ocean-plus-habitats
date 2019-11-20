@@ -9,13 +9,11 @@ Vue.use(Vuex)
 
 // stores
 import { storeModal } from './_store-modal.js'
-import { storeNav } from './_store-nav.js'
 import { storeTranslations } from './_store_translations.js'
 
 export default new Vuex.Store({
   modules: {
     modal: storeModal,
-    nav: storeNav,
     translations: storeTranslations
   }
 })
