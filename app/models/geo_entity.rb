@@ -18,12 +18,20 @@ class GeoEntity < ApplicationRecord
   # CR is the most endangered, then comes EN, third VU
   # and if there are not 3 species of these categories, NT (near threatened)
   # could also be considered.
+
+  # Example output:
+  # => ["Tabebuia palustris", nil, "VU", "Pelliciera rhizophoreae", nil, "VU", "Avicennia bicolor", nil, "VU"]
+
   def get_species_images(habitat, type)
+    habitat_species = species.where(habitat_id: habitat.id, redlist_status: ["CR", "EN", "VU"])
+    habitat_species_nt = species.where(habitat_id: habitat.id, redlist_status: ["NT"])
     return nil if iso3.nil? || habitat.nil?
     if type == :most_common
       return 0
     elsif type == :most_threatened
-      return 0
+      hs = habitat_species.order(redlist_status: :asc).pluck(:scientific_name, :common_name, :redlist_status)
+      hs << habitat_species_nt.pluck(:scientific_name, :common_name, :redlist_status)
+      hs.flatten
     end
   end
 end
