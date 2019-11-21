@@ -30,8 +30,16 @@ class GeoEntity < ApplicationRecord
       return 0
     elsif type == :most_threatened
       hs = habitat_species.order(redlist_status: :asc).pluck(:scientific_name, :common_name, :redlist_status)
+                          .map { |sn, cn, rs| { scientific_name: sn, common_name: cn, redlist_status: rs } }
       hs << habitat_species_nt.pluck(:scientific_name, :common_name, :redlist_status)
-      hs.flatten
+                          .map { |sn, cn, rs| { scientific_name: sn, common_name: cn, redlist_status: rs } }
+      species_image_path(habitat, hs)
+    end
+  end
+
+  def species_image_path(habitat, species_hash)
+    species_hash.each do |species|
+      byebug
     end
   end
 end
