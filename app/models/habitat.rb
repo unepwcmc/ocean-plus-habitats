@@ -22,7 +22,6 @@ class Habitat < ApplicationRecord
     change_percentage = (change_km/habitat_base_year) * 100
     
     country_cover_change.merge!({change_km: change_km.round(2), change_percentage: change_percentage.round(2)})
-    country_cover_change
   end
 
   def calculate_global_cover_change
