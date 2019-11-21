@@ -87,22 +87,6 @@ class CountriesController < ApplicationController
       text: I18n.t('countries.shared.habitat_condition.citation') 
     }.to_json
 
-    # @habitat_change = [
-    #   { 
-    #     id: 'coralreefs',
-    #     title: get_habitat_title('coralreefs'),
-    #     text: I18n.t('countries.shared.habitat_change.chart_text', km: 20, habitat: get_habitat_title('coralreefs'), years: '2000-2019'),
-    #     change: -1.4, 
-    #   },
-    #   { 
-    #     id: 'mangroves', 
-    #     title: get_habitat_title('mangroves'),
-    #     text: I18n.t('countries.shared.habitat_change.chart_text', km: 40, habitat: get_habitat_title('mangroves'), years: '2000-2019'),
-    #     change: 3.2
-    #   }]
-
-    # @habitat_change = @habitat_change.to_json
-
     @habitat_change = []
     Habitat.all.each do |habitat|
       country_cover_change = habitat.calculate_country_cover_change(@country.iso3)
