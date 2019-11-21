@@ -87,23 +87,7 @@ class CountriesController < ApplicationController
       text: I18n.t('countries.shared.habitat_condition.citation') 
     }.to_json
 
-    @habitat_change = []
-    Habitat.all.each do |habitat|
-      country_cover_change = habitat.calculate_country_cover_change(@country.iso3)
-
-      change = { 
-        id: habitat.name,
-        title: get_habitat_title(habitat.name),
-        text: I18n.t('countries.shared.habitat_change.chart_text', km: country_cover_change[:change_km], habitat: get_habitat_title(habitat.name), years: '2000-2019'),
-        change: country_cover_change[:change_percentage]
-      }
-
-      @habitat_change << change unless country_cover_change[:change_km] == 0
-
-    end
-
-    @habitat_change = @habitat_change.to_json
-
+    @habitat_change = HabitatCountryChangeSerializer.new(@country).serialize.to_json
 
     @habitat_change_modal = { title: 'Title hardcoded in controller', text: I18n.t('countries.shared.habitat_change.citation') }.to_json
 
@@ -118,10 +102,5 @@ class CountriesController < ApplicationController
 
   def get_status_text status
     I18n.t("countries.shared.habitats_present.title_#{status}")
-  end
-
-  def get_habitat_title id
-    habitat = habitats.select { |habitat| habitat[:id] === id }
-    habitat[0][:title]
   end
 end
