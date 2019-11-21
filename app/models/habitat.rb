@@ -15,7 +15,7 @@ class Habitat < ApplicationRecord
     country_cover_change = { change_km: 0, change_percentage: 0 }
     return country_cover_change unless name == "mangroves"
     geo_entity_id = GeoEntity.find_by(iso3: iso3).id
-    habitat_base_year = ChangeStat.where(habitat_id: id, geo_entity_id: geo_entity_id).pluck(:total_value_2010).first
+    habitat_base_year = ChangeStat.where(habitat_id: id, geo_entity_id: geo_entity_id).pluck(baseline_year).first
     habitat_last_year = ChangeStat.where(habitat_id: id, geo_entity_id: geo_entity_id).pluck(:total_value_2016).first
 
     change_km = habitat_last_year - habitat_base_year
@@ -42,6 +42,10 @@ class Habitat < ApplicationRecord
       baseline_total: habitat_base_year.round(2)
     }
     global_cover_change
+  end
+
+  def baseline_year
+    :total_value_2010
   end
 
   def total_value_by_country
