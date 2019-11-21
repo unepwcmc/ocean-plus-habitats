@@ -32,12 +32,10 @@ class Habitat < ApplicationRecord
     total_value_change = habitat_last_year - habitat_base_year
     total_value_change_percentage = (total_value_change / habitat_base_year) * 100
 
-    global_cover_change = {
-      change_km: total_value_change.round(2),
-      change_percentage: total_value_change_percentage.round(2),
+    global_cover_change.merge!({
+      change_km: total_value_change.round(2), change_percentage: total_value_change_percentage.round(2),
       baseline_total: habitat_base_year.round(2)
-    }
-    global_cover_change
+    })
   end
 
   def baseline_year
