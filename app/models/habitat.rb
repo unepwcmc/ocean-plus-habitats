@@ -27,7 +27,7 @@ class Habitat < ApplicationRecord
   def calculate_global_cover_change
     global_cover_change = { change_km: 0, change_percentage: 0, baseline_total: 0 }
     return global_cover_change unless name == "mangroves"
-    habitat_base_year = ChangeStat.where(habitat_id: id).pluck(:total_value_2010).inject(0) { |sum, x| sum + x }
+    habitat_base_year = ChangeStat.where(habitat_id: id).pluck(baseline_year).inject(0) { |sum, x| sum + x }
     habitat_last_year = ChangeStat.where(habitat_id: id).pluck(:total_value_2016).inject(0) { |sum, x| sum + x }
     total_value_change = habitat_last_year - habitat_base_year
     total_value_change_percentage = (total_value_change / habitat_base_year) * 100
