@@ -1,6 +1,6 @@
 class Habitat < ApplicationRecord
 
-  has_many :static_stats
+  has_many :geo_entity_stats
   has_many :change_stats
 
   def global_coverage_title(habitat_type)
@@ -11,9 +11,39 @@ class Habitat < ApplicationRecord
     "Percentage of #{title.downcase} that occur within a marine protected area"
   end
 
-  def calculate_global_coverage
-    coverage = Carto.new(name).total_area.first['sum']
-    update_attributes(global_coverage: coverage.round)
+  def calculate_country_cover_change(iso3)
+    country_cover_change = { change_km: 0, change_percentage: 0 }
+    return country_cover_change unless name == "mangroves"
+    geo_entity_id = GeoEntity.find_by(iso3: iso3).id
+    habitat_base_year = ChangeStat.find_by(habitat_id: id, geo_entity_id: geo_entity_id).send("total_value_#{baseline_year}".to_sym)
+    habitat_last_year = ChangeStat.find_by(habitat_id: id, geo_entity_id: geo_entity_id).send(latest_year)
+    return country_cover_change if (habitat_base_year.nil? || habitat_last_year.nil?)
+    change_km = habitat_last_year - habitat_base_year
+    change_percentage = (change_km/habitat_base_year) * 100
+    
+    country_cover_change.merge!({change_km: change_km.round(2), change_percentage: change_percentage.round(2)})
+  end
+
+  def calculate_global_cover_change
+    global_cover_change = { change_km: 0, change_percentage: 0, baseline_year: baseline_year, original_total: 0 }
+    return global_cover_change unless name == "mangroves"
+    habitat_base_year = ChangeStat.includes(:geo_entity).where.not(geo_entities: { iso3: nil }).where(habitat_id: id).pluck("total_value_#{baseline_year}".to_sym).inject(0) { |sum, x| sum + x }
+    habitat_last_year = ChangeStat.includes(:geo_entity).where.not(geo_entities: { iso3: nil }).where(habitat_id: id).pluck(latest_year).inject(0) { |sum, x| sum + x }
+    total_value_change = habitat_last_year - habitat_base_year
+    total_value_change_percentage = (total_value_change / habitat_base_year) * 100
+
+    global_cover_change.merge!({
+      change_km: total_value_change.round(2), change_percentage: total_value_change_percentage.round(2),
+      baseline_year: baseline_year, original_total: habitat_base_year.round(2)
+    })
+  end
+
+  def baseline_year
+    2010
+  end
+
+  def latest_year
+    :total_value_2016
   end
 
   def total_value_by_country

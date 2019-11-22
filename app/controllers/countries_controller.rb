@@ -3,7 +3,7 @@ class CountriesController < ApplicationController
   end
 
   def show
-    @country = Country.find(params[:id])
+    @country = GeoEntity.find_by(iso3: params[:id])
 
     @yml_key = @country[:iso3].downcase
 
@@ -87,20 +87,7 @@ class CountriesController < ApplicationController
       text: I18n.t('countries.shared.habitat_condition.citation') 
     }.to_json
 
-    @habitat_change = [
-      { 
-        id: 'coralreefs',
-        title: get_habitat_title('coralreefs'),
-        text: I18n.t('countries.shared.habitat_change.chart_text', km: 20, habitat: get_habitat_title('coralreefs'), years: '2000-2019'),
-        change: -1.4, 
-      },
-      { 
-        id: 'mangroves', 
-        title: get_habitat_title('mangroves'),
-        text: I18n.t('countries.shared.habitat_change.chart_text', km: 40, habitat: get_habitat_title('mangroves'), years: '2000-2019'),
-        change: 3.2
-      }
-    ].to_json
+    @habitat_change = HabitatCountryChangeSerializer.new(@country).serialize.to_json
 
     @habitat_change_modal = { title: 'Title hardcoded in controller', text: I18n.t('countries.shared.habitat_change.citation') }.to_json
 
@@ -115,10 +102,5 @@ class CountriesController < ApplicationController
 
   def get_status_text status
     I18n.t("countries.shared.habitats_present.title_#{status}")
-  end
-
-  def get_habitat_title id
-    habitat = habitats.select { |habitat| habitat[:id] === id }
-    habitat[0][:title]
   end
 end

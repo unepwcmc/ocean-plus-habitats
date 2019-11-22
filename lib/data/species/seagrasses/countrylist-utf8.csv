@@ -1,0 +1,252 @@
+country,iso3,occurrence,peer_reviewed_evidence,number_of_species
+Aruba,ABW,2,13; 61;,0
+Afghanistan,AFG,0,0,0
+Angola,AGO,2,1; 78,0
+Anguilla,AIA,2,1; 33; 61;,0
+Åland Islands,ALA,2,11;12,0
+Albania,ALB,2,2; 57;,0
+Andorra,AND,0,0,0
+United Arab Emirates,ARE,2,1; 64; 75;,0
+Argentina,ARG,2,1;,0
+Armenia,ARM,0,0,0
+American Samoa,ASM,2,3; 4; 17; 48,0
+Antarctica,ATA,0,5; 28,0
+French Southern and Antarctic Territories,ATF,1,N/A,0
+Antigua and Barbuda,ATG,2,1; 61;,0
+Australia,AUS,2,1; 79,0
+Austria,AUT,0,0,0
+Azerbaijan,AZE,2,1;,0
+Burundi,BDI,0,0,0
+Belgium,BEL,1,N/A,0
+Benin,BEN,2,1;,0
+"Bonaire, Sint Eustatius, and Saba",BES,2,1; 42,0
+Burkina Faso,BFA,0,0,0
+Bangladesh,BGD,2,1; 50;,0
+Bulgaria,BGR,2,1;,0
+Bahrain,BHR,2,1; 64; 75;,0
+Bahamas,BHS,2,1; 84,0
+Bosnia and Herzegovina,BIH,1,N/A,0
+Saint Barthélemy,BLM,2,19; 61;,0
+Belarus,BLR,0,0,0
+Belize,BLZ,2,1; 23;,0
+Bermuda,BMU,2,1;,0
+Bolivia (Plurinational State of),BOL,0,0,0
+Brazil,BRA,2,1; 51;,0
+Barbados,BRB,2,1; 44;,0
+Brunei Darussalam,BRN,2,1;,0
+Bhutan,BTN,0,0,0
+Bouvet Island,BVT,0,1;,0
+Botswana,BWA,0,0,0
+Central African Republic,CAF,0,0,0
+Canada,CAN,2,1; 54;,0
+Cocos (Keeling) Islands,CCK,2,14; 15; 16,0
+Switzerland,CHE,0,0,0
+Chile,CHL,2,1; 55;,0
+China,CHN,2,1; 56;,0
+Côte D'Ivoire,CIV,1,N/A,0
+Cameroon,CMR,0,7; 8;,0
+Democratic Republic of the Congo,COD,1,7;,0
+Congo,COG,0,0,0
+Cook Islands,COK,0,17; 48;,0
+Colombia,COL,2,1; 61;,0
+Comoros,COM,2,1;,0
+Cabo Verde,CPV,2,28; 53;,0
+Costa Rica,CRI,2,1; 24; 61;,0
+Cuba,CUB,2,1;,0
+Curaçao,CUW,2,13;,0
+Christmas Island,CXR,0,14;,0
+Cayman Islands,CYM,2,1;,0
+Cyprus,CYP,2,1; 2,0
+Czech Republic,CZE,0,0,0
+Germany,DEU,2,1; 89,0
+Djibouti,DJI,1,7;,0
+Dominica,DMA,2,21; 22,0
+Denmark,DNK,2,1; 89,0
+Dominican Republic,DOM,2,1;,0
+Algeria,DZA,2,1; 25,0
+Ecuador,ECU,2,23; ,0
+Egypt,EGY,2,1; 25,0
+Eritrea,ERI,2,1;,0
+Western Sahara,ESH,2,1;,0
+Spain,ESP,2,1; 2,0
+Estonia,EST,2,1;,0
+Ethiopia,ETH,0,0,0
+Finland,FIN,2,1;,0
+Fiji,FJI,2,1; 17; 48;,0
+Falkland Islands (Malvinas),FLK,1,N/A,0
+France,FRA,2,1; 60; 67;,0
+Faroe Islands,FRO,1,N/A,0
+"Micronesia, Federated States of",FSM,2,1; 17; 48;,0
+Gabon,GAB,2,58;,0
+United Kingdom of Great Britain and Northern Ireland,GBR,2,1; 76;,0
+British military base in Cyprus,GBRX,2,1;,0
+Georgia,GEO,1,N/A,0
+Guernsey,GGY,2,27;,0
+Ghana,GHA,2,59;,0
+Gibraltar,GIB,1,28;,0
+Guinea,GIN,2,28;,0
+Guadeloupe,GLP,2,1; 19; 61,0
+The Gambia,GMB,2,28;,0
+Guinea-Bissau,GNB,2,1; 28;,0
+Equatorial Guinea,GNQ,2,65;,0
+Greece,GRC,2,1; 57;,0
+Grenada,GRD,2,1; 44;,0
+Greenland,GRL,2,1;,0
+Guatemala,GTM,2,1; 23;,0
+French Guiana,GUF,1,61;,0
+Guam,GUM,2,17; 48;,0
+Guyana,GUY,1,61;,0
+"Hong Kong Special Administrative Region of China, the",HKG,2,36; 37;,0
+Heard Island and McDonald Islands,HMD,0,1;,0
+Honduras,HND,2,1; 24; ,0
+Croatia,HRV,2,1; 57;,0
+Haiti,HTI,2,1;,0
+Hungary,HUN,0,0,0
+Indonesia,IDN,2,1; 62;,0
+Isle of Man,IMN,2,29;,0
+India,IND,2,1; 68;,0
+British Indian Ocean Territory,IOT,2,1;,0
+Ireland,IRL,2,1; 69;,0
+Iran (Islamic Republic Of),IRN,2,63; 64;,0
+Iraq,IRQ,0,Inland; 64;,0
+Iceland,ISL,2,1;,0
+Israel,ISR,2,1;,0
+Italy,ITA,2,1; 57;,0
+Jamaica,JAM,2,1; 44;,0
+Jersey,JEY,2,30;,0
+Jordan,JOR,2,1;,0
+Japan,JPN,2,1; 70;,0
+Kazakhstan,KAZ,2,1;,0
+Kenya,KEN,2,1; 25,0
+Kyrgyzstan,KGZ,0,0,0
+Cambodia,KHM,2,1;,0
+Kiribati,KIR,2,1; 17 48;,0
+Saint Kitts and Nevis,KNA,2,1; 61;,0
+"Korea, Republic Of",KOR,2,1;,0
+Kuwait,KWT,2,1; 64;,0
+Lao People's Democratic Republic,LAO,0,0,0
+Lebanon,LBN,2,1;,0
+Liberia,LBR,1,N/A,0
+Libya,LBY,2,1; 25,0
+Saint Lucia,LCA,2,1; 21; 44;,0
+Liechtenstein,LIE,0,0,0
+Sri Lanka,LKA,2,1; 73;,0
+Lesotho,LSO,0,0,0
+Lithuania,LTU,2,1;,0
+Luxembourg,LUX,0,0,0
+Latvia,LVA,2,1;,0
+Macao Special Administrative Region of China,MAC,1,N/A,0
+Saint Martin,MAF,2,19; 61;,0
+Morocco,MAR,2,1; 25,0
+Monaco,MCO,2,2;,0
+"Moldova, Republic Of",MDA,0,0,0
+Madagascar,MDG,2,1;,0
+Maldives,MDV,2,1;,0
+Mexico,MEX,2,1; 75;,0
+Marshall Islands,MHL,2,1; 17; 48;,0
+North Macedonia,MKD,0,0,0
+Mali,MLI,0,0,0
+Malta,MLT,2,2;,0
+Myanmar,MMR,2,1; 72,0
+Montenegro,MNE,2,31; 32; 57;,0
+Mongolia,MNG,0,0,0
+Northern Mariana Islands,MNP,2,35; 48;,0
+Mozambique,MOZ,2,1; 25,0
+Mauritania,MRT,2,1; 25; 28;,0
+Montserrat,MSR,2,33; 61;,0
+Martinique,MTQ,2,1; 19;,0
+Mauritius,MUS,2,1;,0
+Malawi,MWI,0,0,0
+Malaysia,MYS,2,1; 71;,0
+Mayotte,MYT,2,1; 19;,0
+Namibia,NAM,1,N/A,0
+New Caledonia,NCL,2,1; 17; 19; 48,0
+Niger,NER,0,0,0
+Norfolk Island,NFK,0,49;,0
+Nigeria,NGA,2,1;,0
+Nicaragua,NIC,2,1; 23; 24;,0
+Niue,NIU,1,48;,0
+Netherlands,NLD,2,1;,0
+Netherlands (Antillse),NLD,2,1; 42,0
+Norway,NOR,2,1; 81,0
+Nepal,NPL,0,0,0
+Nauru,NRU,0,33; 48; 77;,0
+New Zealand,NZL,2,1; 82,0
+Oman,OMN,2,1; 64;,0
+Pakistan,PAK,1,N/A,0
+Panama,PAN,2,1; 61;,0
+Pitcairn Islands,PCN,0,40; 48;,0
+Peru,PER,2,38; 39;,0
+Philippines,PHL,2,1; 83,0
+Palau,PLW,2,1; 17; 48;,0
+Papua New Guinea,PNG,2,1; 17; 48;,0
+Poland,POL,2,1;,0
+Puerto Rico,PRI,2,1; 44;,0
+"Korea, Democratic People's Republic Of",PRK,2,1;,0
+Portugal,PRT,2,1; 78,0
+Paraguay,PRY,0,0,0
+"Palestine, State of",PSE,1,N/A,0
+French Polynesia,PYF,2,1; 19; 48;,0
+Qatar,QAT,2,1; 64;,0
+Reunion,REU,2,6; 19;,0
+Romania,ROU,2,1;,0
+Russian Federation,RUS,2,1; 87,0
+Rwanda,RWA,0,0,0
+Saudi Arabia,SAU,2,1; 64;,0
+Sudan,SDN,2,1;,0
+Senegal,SEN,2,1; 28; 66,0
+Singapore,SGP,2,1;,0
+South Georgia and the South Sandwich Islands,SGS,0,1;,0
+"Saint Helena, Ascension and Tristan da Cunha  ",SHN,2,41;,0
+Svalbard and Jan Mayen,SJM,0,1;,0
+Solomon Islands,SLB,2,1; 17; 48;,0
+Sierra Leone,SLE,2,1; 28;,0
+El Salvador,SLV,1,24;,0
+San Marino,SMR,0,0,0
+Somalia,SOM,2,1;,0
+Saint Pierre and Miquelon,SPM,1,N/A,0
+Serbia,SRB,0,0,0
+South Sudan,SSD,0,0,0
+Sao Tome And Principe,STP,2,1;,0
+Suriname,SUR,1,N/A,0
+Slovakia,SVK,0,0,0
+Slovenia,SVN,2,1; 2;,0
+Sweden,SWE,2,1; 12,0
+Kingdom of Eswatini,SWZ,0,0,0
+Sint Maarten,SXM,2,42; 43,0
+Seychelles,SYC,2,1; 25,0
+Syrian Arab Republic,SYR,2,1;,0
+Turks and Caicos Islands,TCA,2,1;  74,0
+Chad,TCD,0,8;,0
+Togo,TGO,2,1; 7;,0
+Thailand,THA,2,1; 10;,0
+Tajikistan,TJK,0,0,0
+Tokelau ,TKL,0,48;,0
+Turkmenistan,TKM,2,1;,0
+Timor-Leste,TLS,2,1; 47;,0
+Tonga,TON,2,1; 17; 48;,0
+Trinidad And Tobago,TTO,2,1;,0
+Tunisia,TUN,2,1; 25,0
+Turkey,TUR,2,1; 88,0
+Tuvalu,TUV,2,17; 48;,0
+"Taiwan, Province of China ",TWN,2,45; 46;,0
+"Tanzania, United Republic of",TZA,2,1; 25,0
+Uganda,UGA,0,0,0
+Ukraine,UKR,2,1; 87,0
+United States Minor Outlying Islands,UMI,2,1;,0
+Uruguay,URY,1,1;,0
+United States of America,USA,2,1; 80,0
+Uzbekistan,UZB,0,0,0
+Holy See (the),VAT,0,0,0
+Saint Vincent and the Grenadines,VCT,2,1; 44;,0
+Venezuela (Bolivarian Republic of),VEN,2,1; 9; 61;,0
+British Virgin Islands,VGB,2,20; 33; 61;,0
+US Virgin Islands,VIR,2,1; 61;,0
+Viet Nam,VNM,2,1; 86,0
+Vanuatu,VUT,2,1; 17; 48;,0
+Wallis and Futuna,WLF,2,18; 19; 48,0
+Samoa,WSM,2,1; 17; 48;,0
+Yemen,YEM,2,1; 85;,0
+South Africa,ZAF,2,1; 25,0
+Zambia,ZMB,0,0,0
+Zimbabwe,ZWE,0,0,0
