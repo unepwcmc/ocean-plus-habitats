@@ -25,9 +25,9 @@ class Habitat < ApplicationRecord
   end
 
   def calculate_global_cover_change
-    global_cover_change = { change_km: 0, change_percentage: 0, baseline_total: 0 }
+    global_cover_change = { change_km: 0, change_percentage: 0, baseline_year: baseline_year, original_total: 0 }
     return global_cover_change unless name == "mangroves"
-    habitat_base_year = ChangeStat.where(habitat_id: id).pluck(baseline_year).inject(0) { |sum, x| sum + x }
+    habitat_base_year = ChangeStat.where(habitat_id: id).pluck("total_value_#{baseline_year}".to_sym).inject(0) { |sum, x| sum + x }
     habitat_last_year = ChangeStat.where(habitat_id: id).pluck(latest_year).inject(0) { |sum, x| sum + x }
     total_value_change = habitat_last_year - habitat_base_year
     byebug
@@ -35,12 +35,12 @@ class Habitat < ApplicationRecord
 
     global_cover_change.merge!({
       change_km: total_value_change.round(2), change_percentage: total_value_change_percentage.round(2),
-      baseline_total: habitat_base_year.round(2)
+      baseline_year: baseline_year, original_total: habitat_base_year.round(2)
     })
   end
 
   def baseline_year
-    :total_value_2010
+    2010
   end
 
   def latest_year
