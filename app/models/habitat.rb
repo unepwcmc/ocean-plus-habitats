@@ -30,6 +30,7 @@ class Habitat < ApplicationRecord
     habitat_base_year = ChangeStat.where(habitat_id: id).pluck(baseline_year).inject(0) { |sum, x| sum + x }
     habitat_last_year = ChangeStat.where(habitat_id: id).pluck(latest_year).inject(0) { |sum, x| sum + x }
     total_value_change = habitat_last_year - habitat_base_year
+    byebug
     total_value_change_percentage = (total_value_change / habitat_base_year) * 100
 
     global_cover_change.merge!({
