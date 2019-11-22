@@ -21,19 +21,26 @@ export default {
     }
   },
 
+  data () {
+    return {
+      isActive: false
+    }
+  },
+
   computed: {
     triggerId () {
       return 'nav-trigger-' + this.id
     },
 
-    isActive () {
-      return this.$store.state.nav.isActive && this.$store.state.nav.id === this.triggerId
-    },
+    navId () {
+      return `toggle-nav-${this.id}`
+    }
   },
 
   methods: {
     toggleNav () {
-      this.$store.dispatch('nav/toggleNav', this.triggerId)
+      this.isActive = !this.isActive
+      this.$eventHub.$emit(this.navId, this.isActive)
     }
   }
 }
