@@ -28,19 +28,13 @@ namespace :import do
   end
 
   def parse_change_stat csv_row, geo_entity_type, habitat
-    #byebug
     name = csv_row["name"] || csv_row["Region"]
-    puts csv_row.inspect
-    puts "name: #{csv_row["name"]} region: #{csv_row["Region"]} OR: #{name}"
     geo_entity = fetch_geo_entity(csv_row["name"] || csv_row["Region"], csv_row["iso3"])
     insert_change_stat(habitat, geo_entity, csv_row)
   end
 
   def parse_geo_entity_stat csv_row, geo_entity_type, habitat
-    #byebug
     name = csv_row["name"] || csv_row["Region"]
-    puts csv_row.inspect
-    puts "name: #{csv_row["name"]} region: #{csv_row["Region"]} OR: #{name}"
     geo_entity = fetch_geo_entity(csv_row["name"] || csv_row["Region"], csv_row["iso3"])
     insert_geo_entity_stat(habitat, geo_entity, csv_row)
   end
@@ -58,8 +52,6 @@ namespace :import do
 
   def insert_change_stat(habitat, geo_entity, csv_row)
     habitat = Habitat.find_by(name: habitat)
-
-    # byebug
 
     ChangeStat.create(habitat: habitat, geo_entity: geo_entity, 
                       total_value_1996: csv_row["total_value_1996"]&.strip || 0,
