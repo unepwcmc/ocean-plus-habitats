@@ -59,7 +59,7 @@ namespace :import do
   def insert_change_stat(habitat, geo_entity, csv_row)
     habitat = Habitat.find_by(name: habitat)
 
-    byebug
+    # byebug
 
     ChangeStat.create(habitat: habitat, geo_entity: geo_entity, 
                       total_value_1996: csv_row["total_value_1996"]&.strip || 0,
