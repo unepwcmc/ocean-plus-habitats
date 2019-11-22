@@ -21,23 +21,23 @@ namespace :import do
 
   def import_new_csv_file(geo_entity_type, habitat, csv_file)
     filename = "#{Rails.root}/lib/data/#{csv_file}"
-    csv = File.open(filename, encoding: "utf-8")
-    csv_headers = File.readlines(csv).first.split(",")
+    CSV.foreach(filename, headers: true, encoding: "utf-8") do |row|
+    #csv_headers = File.readlines(csv).first.split(",")
 
-    CSV.parse(csv, headers: true, encoding: "utf-8") do |row|
-      csv_new_row = row.to_hash
+    #CSV.parse(csv, headers: true, encoding: "utf-8") do |row|
 
-      if csv_headers.grep(/baseline/).any?
-        puts csv_new_row.inspect
-        parse_change_stat csv_headers, csv_new_row, geo_entity_type, habitat
+      if row.select {|k,v| /baseline/i =~ k}.any?
+        #puts csv_new_row.inspect
+        parse_change_stat csv_headers, row, geo_entity_type, habitat
       else
-        puts csv_new_row.inspect
-        parse_geo_entity_stat csv_headers, csv_new_row, geo_entity_type, habitat
+        #puts csv_new_row.inspect
+        parse_geo_entity_stat csv_headers, row, geo_entity_type, habitat
       end
     end
   end
 
   def parse_change_stat csv_headers, csv_row, geo_entity_type, habitat
+    byebug
     total_value_years = {}
  
     parse_change_stat_hash = {
@@ -85,6 +85,7 @@ namespace :import do
   end
 
   def parse_geo_entity_stat csv_headers, csv_row, geo_entity_type, habitat
+    byebug
     parse_geo_entity_stat_hash = {
       iso3: csv_headers[0],
       total_value: csv_headers[1],
