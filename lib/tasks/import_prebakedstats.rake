@@ -10,10 +10,10 @@ namespace :import do
     # import habitat data CSVs for each entity type
     geo_entity_types.each do |geo_entity_type|
       habitats.each do |habitat|
-        puts habitat.name
+        #puts habitat.name
         csv_file = "#{geo_entity_type}/#{habitat.name}.csv"
 
-        puts csv_file
+        #puts csv_file
         import_new_csv_file(geo_entity_type, habitat.name, csv_file)
       end
     end
@@ -23,10 +23,10 @@ namespace :import do
     filename = "#{Rails.root}/lib/data/#{csv_file}"
     CSV.foreach(filename, headers: true, encoding: "utf-8") do |row|
       if row.select {|k,v| /baseline/i =~ k}.any?
-        puts row.inspect
+        #puts row.inspect
         parse_change_stat row, geo_entity_type, habitat
       else
-        puts row.inspect
+        #puts row.inspect
         parse_geo_entity_stat row, geo_entity_type, habitat
       end
     end
@@ -111,30 +111,30 @@ namespace :import do
   def insert_geo_entity_stat(habitat, geo_entity, csv_row)
     habitat = Habitat.find_by(name: habitat)
 
-    puts "GeoEntity is: #{geo_entity&.name}, habitat is: #{habitat.name}"
-    ges = GeoEntityStat.create(habitat: habitat, geo_entity: geo_entity, protected_value: csv_row["total_value_protected"], 
-                        total_value: csv_row["total_value"], protected_percentage: csv_row["protected_percentage"])
+    #puts "GeoEntity is: #{geo_entity&.name}, habitat is: #{habitat.name}"
+    ges = GeoEntityStat.create(habitat: habitat, geo_entity: geo_entity, protected_value: csv_row["total_value_protected"]&.strip || 0, 
+                        total_value: csv_row["total_value"]&.strip || 0, protected_percentage: csv_row["protected_percentage"]&.strip || 0)
 
-    puts "GeoEntityStat is: #{ges.inspect}"
+    #puts "GeoEntityStat is: #{ges.inspect}"
     
   end
 
   def insert_change_stat(habitat, geo_entity, csv_row)
     habitat = Habitat.find_by(name: habitat)
 
-    puts "GeoEntity is: #{geo_entity&.name}, habitat is: #{habitat.name}"
+    #puts "GeoEntity is: #{geo_entity&.name}, habitat is: #{habitat.name}"
     cs = ChangeStat.create(habitat: habitat, geo_entity: geo_entity, 
-                      total_value_1996: csv_row["total_value_1996"],
-                      total_value_2007: csv_row["total_value_2007"],
-                      total_value_2008: csv_row["total_value_2008"],
-                      total_value_2009: csv_row["total_value_2009"],
-                      total_value_2010: csv_row["total_value_2010_baseline"],
-                      total_value_2015: csv_row["total_value_2015"],
-                      total_value_2016: csv_row["total_value_2016"],
-                      protected_value: csv_row["protected_value"],
-                      protected_percentage: csv_row["protected_percentage"]
+                      total_value_1996: csv_row["total_value_1996"] || 0,
+                      total_value_2007: csv_row["total_value_2007"] || 0,
+                      total_value_2008: csv_row["total_value_2008"] || 0,
+                      total_value_2009: csv_row["total_value_2009"] || 0,
+                      total_value_2010: csv_row["total_value_2010_baseline"] || 0,
+                      total_value_2015: csv_row["total_value_2015"] || 0,
+                      total_value_2016: csv_row["total_value_2016"] || 0,
+                      protected_value: csv_row["protected_value"] || 0,
+                      protected_percentage: csv_row["protected_percentage"] || 0
                       )
-    puts "ChangeStat is: #{cs.inspect}"
+    #puts "ChangeStat is: #{cs.inspect}"
   end
 
   def strip_key key
