@@ -28,25 +28,35 @@ namespace :import do
   end
 
   def parse_change_stat csv_row, geo_entity_type, habitat
-    geo_entity = fetch_geo_entity(csv_row["name"] | csv_row["Region"], csv_row["iso3"])
+    #byebug
+    puts csv_row.inspect
+    puts "name: #{csv_row["name"]} region: #{csv_row["Region"]} OR: #{csv_row["name"] || csv_row["Region"]}"
+    geo_entity = fetch_geo_entity(csv_row["name"] || csv_row["Region"], csv_row["iso3"])
     insert_change_stat(habitat, geo_entity, csv_row)
   end
 
   def parse_geo_entity_stat csv_row, geo_entity_type, habitat
-    geo_entity = fetch_geo_entity(csv_row["name"] | csv_row["Region"], csv_row["iso3"])
+    #byebug
+    puts csv_row.inspect
+    puts "name: #{csv_row["name"]} region: #{csv_row["Region"]} OR: #{csv_row["name"] || csv_row["Region"]}"
+    geo_entity = fetch_geo_entity(csv_row["name"] || csv_row["Region"], csv_row["iso3"])
     insert_geo_entity_stat(habitat, geo_entity, csv_row)
   end
 
   def insert_geo_entity_stat(habitat, geo_entity, csv_row)
     habitat = Habitat.find_by(name: habitat)
-    ges = GeoEntityStat.create(habitat: habitat, geo_entity: geo_entity, protected_value: csv_row["total_value_protected"]&.strip || 0, 
-                        total_value: csv_row["total_value"]&.strip || 0, protected_percentage: csv_row["protected_percentage"]&.strip || 0)
+    protected_value = csv_row["total_value_protected"]&.strip || 0
+    total_value = csv_row["total_value"]&.strip || 0
+    protected_percentage = csv_row["protected_percentage"]&.strip || 0
+
+    GeoEntityStat.create(habitat: habitat, geo_entity: geo_entity, protected_value: protected_value, 
+                        total_value: total_value, protected_percentage: protected_percentage)
   end
 
   def insert_change_stat(habitat, geo_entity, csv_row)
     habitat = Habitat.find_by(name: habitat)
 
-    cs = ChangeStat.create(habitat: habitat, geo_entity: geo_entity, 
+    ChangeStat.create(habitat: habitat, geo_entity: geo_entity, 
                       total_value_1996: csv_row["total_value_1996"] || 0,
                       total_value_2007: csv_row["total_value_2007"] || 0,
                       total_value_2008: csv_row["total_value_2008"] || 0,
