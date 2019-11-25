@@ -22,26 +22,6 @@ class GeoEntity < ApplicationRecord
   # Example output:
   # => ["Tabebuia palustris", nil, "VU", "Pelliciera rhizophoreae", nil, "VU", "Avicennia bicolor", nil, "VU"]
 
-  species_no_image_data = [
-    "Acrostichum danaeifolium",
-    "Avicennia integra",
-    "Avicennia rumphiana",
-    "Ceriops australis",
-    "Diospyros littorea",
-    "Dolichandrone spathacea",
-    "Kandelia obovata",
-    "Rhizophora samoensis",
-    "Sonneratia lanceolata",
-    "Avicennia bicolor",
-    "Avicennia schaueriana",
-    "Mora oleifera",
-    "Pelliciera rhizophorae",
-    "Tabebuia Ruppia maritima",
-    "Ruppia filifolia",
-    "Ruppia cirrhosa",
-    "Ruppia megacarpa",
-    "Ruppia tuberosapalustris"].freeze
-
   def get_species_images(habitat, type)
     habitat_species = species.where(habitat_id: habitat.id, redlist_status: ["CR", "EN", "VU"])
     habitat_species_nt = species.where(habitat_id: habitat.id, redlist_status: ["NT"])
