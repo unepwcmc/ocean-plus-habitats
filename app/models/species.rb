@@ -26,7 +26,7 @@ class Species < ApplicationRecord
     "Avicennia bicolor",
     "Avicennia schaueriana",
     "Mora oleifera",
-    "Pelliciera rhizophorae",
+    "Pelliciera rhizophoreae",
     "Tabebuia palustris",
     "Tabebuia Ruppia maritima",
     "Ruppia filifolia",

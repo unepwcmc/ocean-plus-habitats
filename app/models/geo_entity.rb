@@ -42,9 +42,11 @@ class GeoEntity < ApplicationRecord
   def species_image_path(habitat, species_hash)
     species_images = []
     species_hash.each do |sh|
-      byebug
-      next if (Species.get_species_without_image_data.include? sh[:scientific_name])
-      species_images << "/species/#{habitat.name}/#{sh[:scientific_name]}_atlas_of_#{habitat.name}.jpg"
+      if (Species.get_species_without_image_data.include? sh[:scientific_name])
+        species_images << "/species/species.png"
+      else
+        species_images << "/species/#{habitat.name}/#{sh[:scientific_name]}_atlas_of_#{habitat.name}.jpg"
+      end
     end
     species_images
   end
