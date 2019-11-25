@@ -37,4 +37,11 @@ class Species < ApplicationRecord
   def self.get_species_without_image_data
     NO_IMAGE_DATA
   end
+
+  def generate_redlist_url
+    iucn_genus = "bruguiera"
+    iucn_species = "cylindrica"
+
+    "https://apiv3.iucnredlist.org/api/v3/website/#{iucn_genus}%20#{iucn_species}"
+  end
 end
