@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CountriesControllerTest < ActionController::TestCase
+class SiteControllerTest < ActionController::TestCase
   setup do
     @change_stat = change_stats(:standard_change_stat)
     @habitat = habitats(:mangroves)
