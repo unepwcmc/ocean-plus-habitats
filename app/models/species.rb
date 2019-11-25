@@ -2,7 +2,7 @@ class Species < ApplicationRecord
   has_many :geo_entities_species, class_name: 'GeoEntitiesSpecies', primary_key: 'species_id'
   has_many :geo_entities, through: :geo_entities_species
 
-    # most common is to be determined in a meeting
+  # most common is to be determined in a meeting
   # most threatened is to be ordered as follows;
   #
   # Critically Endangered, Endangered, Vulnerable
