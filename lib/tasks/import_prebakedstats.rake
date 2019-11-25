@@ -28,34 +28,41 @@ namespace :import do
   end
 
   def parse_change_stat csv_row, geo_entity_type, habitat
-    geo_entity = fetch_geo_entity(csv_row["name"] | csv_row["Region"], csv_row["iso3"])
+    name = csv_row["name"] || csv_row["Region"]
+    geo_entity = fetch_geo_entity(csv_row["name"] || csv_row["Region"], csv_row["iso3"])
     insert_change_stat(habitat, geo_entity, csv_row)
   end
 
   def parse_geo_entity_stat csv_row, geo_entity_type, habitat
-    geo_entity = fetch_geo_entity(csv_row["name"] | csv_row["Region"], csv_row["iso3"])
+    name = csv_row["name"] || csv_row["Region"]
+    geo_entity = fetch_geo_entity(csv_row["name"] || csv_row["Region"], csv_row["iso3"])
     insert_geo_entity_stat(habitat, geo_entity, csv_row)
   end
 
   def insert_geo_entity_stat(habitat, geo_entity, csv_row)
     habitat = Habitat.find_by(name: habitat)
-    ges = GeoEntityStat.create(habitat: habitat, geo_entity: geo_entity, protected_value: csv_row["total_value_protected"]&.strip || 0, 
-                        total_value: csv_row["total_value"]&.strip || 0, protected_percentage: csv_row["protected_percentage"]&.strip || 0)
+
+    protected_value = csv_row["total_value_protected"]&.strip || 0
+    total_value = csv_row["total_value"]&.strip || 0
+    protected_percentage = csv_row["protected_percentage"]&.strip || 0
+
+    GeoEntityStat.create(habitat: habitat, geo_entity: geo_entity, protected_value: protected_value, 
+                        total_value: total_value, protected_percentage: protected_percentage)
   end
 
   def insert_change_stat(habitat, geo_entity, csv_row)
     habitat = Habitat.find_by(name: habitat)
 
-    cs = ChangeStat.create(habitat: habitat, geo_entity: geo_entity, 
-                      total_value_1996: csv_row["total_value_1996"] || 0,
-                      total_value_2007: csv_row["total_value_2007"] || 0,
-                      total_value_2008: csv_row["total_value_2008"] || 0,
-                      total_value_2009: csv_row["total_value_2009"] || 0,
-                      total_value_2010: csv_row["total_value_2010_baseline"] || 0,
-                      total_value_2015: csv_row["total_value_2015"] || 0,
-                      total_value_2016: csv_row["total_value_2016"] || 0,
-                      protected_value: csv_row["protected_value"] || 0,
-                      protected_percentage: csv_row["protected_percentage"] || 0
+    ChangeStat.create(habitat: habitat, geo_entity: geo_entity, 
+                      total_value_1996: csv_row["total_value_1996"]&.strip || 0,
+                      total_value_2007: csv_row["total_value_2007"]&.strip || 0,
+                      total_value_2008: csv_row["total_value_2008"]&.strip || 0,
+                      total_value_2009: csv_row["total_value_2009"]&.strip || 0,
+                      total_value_2010: csv_row["total_value_2010_baseline"]&.strip || 0,
+                      total_value_2015: csv_row["total_value_2015"]&.strip || 0,
+                      total_value_2016: csv_row["total_value_2016"]&.strip || 0,
+                      protected_value: csv_row["protected_value"]&.strip || 0,
+                      protected_percentage: csv_row["protected_percentage"]&.strip || 0
                       )
   end
 
@@ -69,5 +76,4 @@ namespace :import do
     end
     geo_entity
   end
-
 end
