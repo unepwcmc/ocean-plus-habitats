@@ -27,6 +27,7 @@ class Species < ApplicationRecord
     "Avicennia schaueriana",
     "Mora oleifera",
     "Pelliciera rhizophorae",
+    "Tabebuia palustris",
     "Tabebuia Ruppia maritima",
     "Ruppia filifolia",
     "Ruppia cirrhosa",

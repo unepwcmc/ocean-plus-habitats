@@ -31,15 +31,21 @@ class GeoEntity < ApplicationRecord
     elsif type == :most_threatened
       hs = habitat_species.order(redlist_status: :asc).pluck(:scientific_name, :common_name, :redlist_status)
                           .map { |sn, cn, rs| { scientific_name: sn, common_name: cn, redlist_status: rs } }
-      hs << habitat_species_nt.pluck(:scientific_name, :common_name, :redlist_status)
-                          .map { |sn, cn, rs| { scientific_name: sn, common_name: cn, redlist_status: rs } }
+      hs_nt = habitat_species_nt.pluck(:scientific_name, :common_name, :redlist_status)
+      .map { |sn, cn, rs| { scientific_name: sn, common_name: cn, redlist_status: rs } }
+
+      hs << hs_nt if hs_nt.present?
       species_image_path(habitat, hs)
     end
   end
 
   def species_image_path(habitat, species_hash)
-    species_hash.each do |species|
+    species_images = []
+    species_hash.each do |sh|
       byebug
+      next if (Species.get_species_without_image_data.include? sh[:scientific_name])
+      species_images << "/species/#{habitat.name}/#{sh[:scientific_name]}_atlas_of_#{habitat.name}.jpg"
     end
+    species_images
   end
 end
