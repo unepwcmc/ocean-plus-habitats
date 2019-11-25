@@ -58,6 +58,7 @@ $bar-center-divider-width: rem-calc(5);
           width: $bar-center-divider-width; height: $bar-height;
 
           position: absolute;
+          top: 0;
           left: 50%;
         }
 

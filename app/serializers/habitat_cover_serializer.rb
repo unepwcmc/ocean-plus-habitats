@@ -17,8 +17,8 @@ class HabitatCoverSerializer
           "home.habitat_cover.habitats.#{habitat}.text",
           change_km: habitat_global_change[:change_km],
           change_percentage: habitat_global_change[:change_percentage],
-          baseline_year: 999999,
-          original_total: 999999
+          baseline_year: habitat_global_change[:baseline_year],
+          original_total: habitat_global_change[:original_total]
         )
 
       habitat_cover_item[:change_percentage] = habitat_global_change[:change_percentage]
