@@ -22,7 +22,7 @@ namespace :import do
 
   def import_species(habitat)
     species_header = Species.new.attributes.keys.freeze
-    species_filename = "lib/data/species/#{habitat.name}/species-utf8.csv".freeze
+    species_filename = "#{Rails.root}/lib/data/species/#{habitat.name}/species-utf8.csv".freeze
 
     CSV.foreach(species_filename, headers: true) do |row|
       # TODO Remove empty rows from CSVs
@@ -34,7 +34,7 @@ namespace :import do
   end
 
   def import_countries_species(habitat)
-    countries_species_filename = "lib/data/species/#{habitat.name}/country_species_join-utf8.csv".freeze
+    countries_species_filename = "#{Rails.root}/lib/data/species/#{habitat.name}/country_species_join-utf8.csv".freeze
 
     CSV.foreach(countries_species_filename, headers: true) do |row|
       geo_entity = GeoEntity.find_by(iso3: row['iso3'])
