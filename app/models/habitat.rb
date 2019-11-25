@@ -19,7 +19,7 @@ class Habitat < ApplicationRecord
     habitat_last_year = ChangeStat.find_by(habitat_id: id, geo_entity_id: geo_entity_id).send(latest_year)
     return country_cover_change if (habitat_base_year.nil? || habitat_last_year.nil?)
     change_km = habitat_last_year - habitat_base_year
-    change_percentage = (change_km/habitat_base_year) * 100
+    change_percentage = (change_km/habitat_base_year) * 100 rescue nil
     
     country_cover_change.merge!({change_km: change_km.round(2), change_percentage: change_percentage.round(2)})
   end
@@ -30,7 +30,7 @@ class Habitat < ApplicationRecord
     habitat_base_year = ChangeStat.includes(:geo_entity).where.not(geo_entities: { iso3: nil }).where(habitat_id: id).pluck("total_value_#{baseline_year}".to_sym).inject(0) { |sum, x| sum + x }
     habitat_last_year = ChangeStat.includes(:geo_entity).where.not(geo_entities: { iso3: nil }).where(habitat_id: id).pluck(latest_year).inject(0) { |sum, x| sum + x }
     total_value_change = habitat_last_year - habitat_base_year
-    total_value_change_percentage = (total_value_change / habitat_base_year) * 100
+    total_value_change_percentage = (total_value_change / habitat_base_year) * 100 rescue nil
 
     global_cover_change.merge!({
       change_km: total_value_change.round(2), change_percentage: total_value_change_percentage.round(2),
