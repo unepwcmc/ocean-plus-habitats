@@ -8,7 +8,6 @@ class CountriesControllerTest < ActionController::TestCase
   end
 
   test "#index should return a successful response" do
-    #skip("skipping for now")
     get :index
 
     assert_response :success
