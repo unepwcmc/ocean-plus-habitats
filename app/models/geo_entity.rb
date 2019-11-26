@@ -7,9 +7,11 @@ class GeoEntity < ApplicationRecord
   # This can change in the future
   has_one :change_stat
 
+  has_many :regions, foreign_key: :country_id, class_name: 'GeoRelationship'
+  has_many :countries, foreign_key: :region_id, class_name: 'GeoRelationship'
+
   scope :countries, -> { where.not(iso3: nil) }
   scope :regions, -> { where(iso3: nil) }
-
 
   # most common is to be determined in a meeting
   # most threatened is to be ordered as follows;
