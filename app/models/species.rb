@@ -2,6 +2,7 @@ class Species < ApplicationRecord
   has_many :geo_entities_species, class_name: 'GeoEntitiesSpecies', primary_key: 'species_id'
   has_many :geo_entities, through: :geo_entities_species
 
+  THREATENED = ['CR', 'EN', 'VU'].freeze
   # most common is to be determined in a meeting
   # most threatened is to be ordered as follows;
   #
@@ -32,7 +33,8 @@ class Species < ApplicationRecord
     "Ruppia filifolia",
     "Ruppia cirrhosa",
     "Ruppia megacarpa",
-    "Ruppia tuberosapalustris"].freeze
+    "Ruppia tuberosapalustris"
+  ].freeze
 
   def self.get_species_without_image_data
     NO_IMAGE_DATA

@@ -34,18 +34,15 @@ class GeoEntity < ApplicationRecord
   # => ["Tabebuia palustris", nil, "VU", "Pelliciera rhizophoreae", nil, "VU", "Avicennia bicolor", nil, "VU"]
 
   def get_species_images(habitat, type)
-    habitat_species = all_species.where(habitat_id: habitat.id, redlist_status: ["CR", "EN", "VU"])
-    habitat_species_nt = all_species.where(habitat_id: habitat.id, redlist_status: ["NT"])
     return nil if habitat.nil?
-    if type == :most_common
-      return 0
-    elsif type == :most_threatened
-      hs = habitat_species.order(redlist_status: :asc).pluck(:scientific_name, :common_name, :redlist_status)
-                          .map { |sn, cn, rs| { scientific_name: sn, common_name: cn, redlist_status: rs } }
-      hs_nt = habitat_species_nt.pluck(:scientific_name, :common_name, :redlist_status)
-      .map { |sn, cn, rs| { scientific_name: sn, common_name: cn, redlist_status: rs } }
+    return [] if type == :most_common
+    if type == :most_threatened
+      hs = species_by_habitat_and_status(habitat.id)
+      return species_image_path(habitat, hs) if hs.count > 2
 
+      hs_nt = species_by_habitat_and_status(habitat.id, ['NT'])
       hs.concat hs_nt if hs_nt.present?
+
       species_image_path(habitat, hs)
     end
   end
@@ -60,5 +57,11 @@ class GeoEntity < ApplicationRecord
       end
     end
     species_images
+  end
+
+  def species_by_habitat_and_status(habitat_id, statuses=Species::THREATENED)
+    all_species.where(habitat_id: habitat_id, redlist_status: statuses).map do |_species|
+      _species.slice(:scientific_name, :common_name, :redlist_status)
+    end
   end
 end
