@@ -7,11 +7,20 @@ class GeoEntity < ApplicationRecord
   # This can change in the future
   has_one :change_stat
 
-  has_many :regions, foreign_key: :country_id, class_name: 'GeoRelationship'
-  has_many :countries, foreign_key: :region_id, class_name: 'GeoRelationship'
+  has_many :region_relationship, foreign_key: :country_id, class_name: 'GeoRelationship'
+  has_many :regions, through: :region_relationship, class_name: 'GeoEntity'
+  has_many :country_relationship, foreign_key: :region_id, class_name: 'GeoRelationship'
+  has_many :countries, through: :country_relationship, class_name: 'GeoEntity'
 
   scope :countries, -> { where.not(iso3: nil) }
   scope :regions, -> { where(iso3: nil) }
+
+  # Returns species data if directly attached to the GeoEntity,so a country
+  # Returns species data for all associated countries if it is a region
+  def all_species
+    return species if species.present?
+    Species.joins(:geo_entities).where(geo_entities: { id: countries.map(&:id) })
+  end
 
   # most common is to be determined in a meeting
   # most threatened is to be ordered as follows;
@@ -25,9 +34,9 @@ class GeoEntity < ApplicationRecord
   # => ["Tabebuia palustris", nil, "VU", "Pelliciera rhizophoreae", nil, "VU", "Avicennia bicolor", nil, "VU"]
 
   def get_species_images(habitat, type)
-    habitat_species = species.where(habitat_id: habitat.id, redlist_status: ["CR", "EN", "VU"])
-    habitat_species_nt = species.where(habitat_id: habitat.id, redlist_status: ["NT"])
-    return nil if iso3.nil? || habitat.nil?
+    habitat_species = all_species.where(habitat_id: habitat.id, redlist_status: ["CR", "EN", "VU"])
+    habitat_species_nt = all_species.where(habitat_id: habitat.id, redlist_status: ["NT"])
+    return nil if habitat.nil?
     if type == :most_common
       return 0
     elsif type == :most_threatened
@@ -36,7 +45,7 @@ class GeoEntity < ApplicationRecord
       hs_nt = habitat_species_nt.pluck(:scientific_name, :common_name, :redlist_status)
       .map { |sn, cn, rs| { scientific_name: sn, common_name: cn, redlist_status: rs } }
 
-      hs << hs_nt if hs_nt.present?
+      hs.concat hs_nt if hs_nt.present?
       species_image_path(habitat, hs)
     end
   end
@@ -44,7 +53,6 @@ class GeoEntity < ApplicationRecord
   def species_image_path(habitat, species_hash)
     species_images = []
     species_hash.each do |sh|
-      byebug
       if (Species.get_species_without_image_data.include? sh[:scientific_name])
         species_images << "/species/species.png"
       else
