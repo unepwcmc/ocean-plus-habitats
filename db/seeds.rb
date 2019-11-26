@@ -22,18 +22,4 @@ CSV.foreach('lib/data/countries.csv', headers: true) do |row|
 end
 Rails.logger.info("#{count} countries were created successfully!")
 
-count = 0
-CSV.foreach('lib/data/regionalseas.csv', headers: true) do |row|
-  name, iso2, iso3 = [row['name'], nil, nil]
-  next if GeoEntity.where(name: name).first
-  countries_iso_codes = row['iso3'].split('/')
-  new_region = GeoEntity.new(name: name, iso2: iso2, iso3: iso3)
-  if new_region.save
-    count+=1
-    countries_iso_codes.each do |country_iso|
-      country_id = GeoEntity.find_by(iso3: country_iso).id
-      GeoRelationship.create(country_id: country_id, region_id: new_region.id)
-    end
-  end
-end
-Rails.logger.info("#{count} regions were created successfully!")
+Rake::Task['import:regions'].invoke
