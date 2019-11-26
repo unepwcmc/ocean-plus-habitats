@@ -1,34 +1,34 @@
 en:
   countries:
-    cri:
-      title: Costa Rica
-      image_flag: flags/costa-rica.svg
+    idn:
+      title: Indonesia
+      image_flag: 
       habitats_present_citations:
         - 
           citation: 
             title: Title in yml file
             text:
-              - Warm-water Coral citation for Costa Rica
+              - Warm-water Coral citation for Indonesia
         - 
           citation: 
             title: Title in yml file
             text:
-              - Saltmarsh Coral citation for Costa Rica
+              - Saltmarsh Coral citation for Indonesia
         - 
           citation: 
             title: Title in yml file
             text:
-              - Mangrove Coral citation for Costa Rica
+              - Mangrove Coral citation for Indonesia
         - 
           citation: 
             title: Title in yml file
             text:
-              - Seagrass Coral citation for Costa Rica
+              - Seagrass Coral citation for Indonesia
         - 
           citation: 
             title: Title in yml file
             text:
-              - Cold-water Coral Coral citation for Costa Rica
+              - Cold-water Coral Coral citation for Indonesia
       targets:
         aichi:
           text:

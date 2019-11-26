@@ -29,32 +29,25 @@ module ApplicationHelper
 
   def get_nav_items
     #FERDI - get all countries and then fill out object as follows
-    yml_key = 'CRI'.downcase
-
     nav_items = {
       countries: [
         {
-          title: I18n.t("countries.#{yml_key}.title"),
-          url: country_path("CRI")
+          title: I18n.t("countries.are.title"),
+          url: country_path("ARE")
+        },
+        {
+          title: I18n.t("countries.idn.title"),
+          url: country_path("IDN")
         }
       ],
-
       regions: [
         {
-          title: 'Region name',
-          url: '/'
+          title: I18n.t("regions.mediterranean.title"),
+          url: country_path("mediterranean")
         },
         {
-          title: 'Region name',
-          url: '/'
-        },
-        {
-          title: 'Region name',
-          url: '/'
-        },
-        {
-          title: 'Region name',
-          url: '/'
+          title: I18n.t("regions.wider_caribbean.title"),
+          url: country_path("wider_caribbean")
         }
       ]
     }
