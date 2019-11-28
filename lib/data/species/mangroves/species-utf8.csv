@@ -1,4 +1,4 @@
-species_id,scientific_name,IUCN_Genus,IUCN_species,common_name,redlist_status,Timestamp_Redlist,Comment,URL
+species_id,scientific_name,IUCN_Genus,IUCN_species,common_name,redlist_status,Timestamp_Redlist,Comment,url
 1,Acanthus ebracteatus,Acanthus,ebracteatus,Holy Mangrove,LC,Feb-10,,https://apiv3.iucnredlist.org/api/v3/website/Acanthus%20ebracteatus
 2,Acanthus ilicifolius,Acanthus,ilicifolius,Holy Mangrove,LC,Feb-10,,https://apiv3.iucnredlist.org/api/v3/website/Acanthus%20ilicifolius
 3,Acrostichum aureum,Acrostichum,aureum,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Acrostichum%20aureum

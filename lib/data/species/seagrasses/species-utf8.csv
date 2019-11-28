@@ -1,4 +1,4 @@
-species_id,scientific_name,IUCN_Genus,IUCN_Species,redlist_status,Timestamp_redlist,common_name,Comment,URL
+species_id,scientific_name,IUCN_Genus,IUCN_Species,redlist_status,Timestamp_redlist,common_name,Comment,url
 1,Amphibolis antarctica,Amphibolis,antarctica,LC,Oct-07,,,apiv3.iucnredlist.org/api/v3/website/Amphibolis%20antarctica
 2,Amphibolis griffithii,Amphibolis,griffithii,LC,Nov-07,,,apiv3.iucnredlist.org/api/v3/website/Amphibolis%20griffithii
 3,Cymodocea angustata,Cymodocea,angustata,LC,Mar-18,,,apiv3.iucnredlist.org/api/v3/website/Cymodocea%20angustata

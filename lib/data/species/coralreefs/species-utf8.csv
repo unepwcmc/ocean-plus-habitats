@@ -1,4 +1,4 @@
-species_id,scientific_name,IUCN_Genus,IUCN_Species,redlist_status,Timestamp_redlist,common_name,Comment,URL
+species_id,scientific_name,IUCN_Genus,IUCN_Species,redlist_status,Timestamp_redlist,common_name,Comment,url
 1,Acanthastrea brevis,Acanthastrea,brevis,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acanthastrea%20brevis
 2,Acanthastrea echinata,Acanthastrea,echinata,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acanthastrea%20echinata
 3,Acanthastrea hemprichii,Acanthastrea,hemprichii,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acanthastrea%20hemprichii
