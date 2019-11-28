@@ -1,74 +1,74 @@
-species_id,scientific_name,IUCN_Genus,IUCN_species,common_name,redlist_status,Timestamp_Redlist,Comment
-1,Acanthus ebracteatus,Acanthus,ebracteatus,Holy Mangrove,LC,Feb-10,
-2,Acanthus ilicifolius,Acanthus,ilicifolius,Holy Mangrove,LC,Feb-10,
-3,Acrostichum aureum,Acrostichum,aureum,,LC,Mar-08,
-4,Acrostichum danaeifolium,Acrostichum,danaeifolium,,LC,Mar-08,
-5,Acrostichum speciosum,Acrostichum,speciosum,,LC,Mar-08,
-6,Aegialitis annulata,Aegialitis,annulata,,LC,Mar-08,
-7,Aegialitis rotundifolia,Aegialitis,rotundifolia,,NT,Mar-08,
-8,Aegiceras corniculatum,Aegiceras,corniculatum,,LC,Mar-08,
-9,Aegiceras floridum,Aegiceras,floridum,,NT,Mar-08,
-10,Aglaia cucullata,Aglaia,cucullata,,DD,Mar-08,not in WoRMS
-11,Avicennia alba,Avicennia,alba,,LC,Mar-08,
-12,Avicennia integra,Avicennia,integra,,VU,Mar-08,
-13,Avicennia marina,Avicennia,marina,Gray Mangrove,LC,Mar-08,
-14,Avicennia officinalis,Avicennia,officinalis,,LC,Mar-08,
-15,Avicennia rumphiana,Avicennia,rumphiana,,VU,Mar-08,
-16,Bruguiera cylindrica,Bruguiera,cylindrica,,LC,Mar-08,
-17,Bruguiera exaristata,Bruguiera,exaristata,,LC,Mar-08,
-18,Bruguiera gymnorrhiza,Bruguiera,gymnorhiza,,LC,Mar-08,Spelling
-19,Bruguiera hainesii,Bruguiera,hainesii,,CR,Mar-08,
-20,Bruguiera parviflora,Bruguiera,parviflora,,LC,Mar-08,
-21,Bruguiera sexangula,Bruguiera,sexangula,,LC,Mar-08,
-22,Bruguiera rhynchopetala,Bruguiera,rhynchopetala,,NE,N/A,not in WoRMS
-23,Camptostemon philippinensis,Camptostemon,philippinense,,EN,Mar-08,Spelling
-24,Camptostemon schultzii,Camptostemon,schultzii,,LC,Mar-08,
-25,Ceriops australis,Ceriops,australis,,LC,Mar-08,
-26,Ceriops decandra,Ceriops,decandra,,NT,Mar-08,
-27,Ceriops tagal,Ceriops,tagal,,LC,Mar-08,
-28,Cynometra iripa,Cynometra,iripa,,LC,Mar-08,not in WoRMS
-29,Diospyros littorea,Diospyros,littorea,,NE,N/A,not in WoRMS
-30,Dolichandrone spathacea,Dolichandrone,spathacea,,LC,Mar-08,not in WoRMS
-31,Excoecaria agallocha,Excoecaria,agallocha,,LC,Mar-08,
-32,Excoecaria indica,Excoecaria,indica,,DD,Mar-08,
-33,Heritiera fomes,Heritiera,fomes,,EN,Mar-08,
-34,Heritiera globosa,Heritiera,globosa,,EN,Mar-08,
-35,Heritiera littoralis,Heritiera,littoralis,,LC,Mar-08,
-36,Kandelia candel,Kandelia,candel,,LC,Mar-08,
-37,Kandelia obovata,Kandelia,obovata,,LC,Mar-08,
-38,Lumnitzera littorea,Lumnitzera,littorea,,LC,Mar-08,
-39,Lumnitzera racemosa,Lumnitzera,racemosa,,LC,Mar-08,
-40,Lumnitzera rosea,Lumnitzera,rosea,,LC,Mar-08,
-41,Nypa fruticans,Nypa,fruticans,Nypa Palm,LC,Mar-08,
-42,Osbornia octodonta,Osbornia,octodonta,,LC,Mar-08,
-43,Pemphis acidula,Pemphis,acidula,,LC,Mar-08,
-44,Rhizophora apiculata,Rhizophora,apiculata,,LC,Mar-08,
-45,Rhizophora mucronata,Rhizophora,mucronata,True Mangrove,LC,Mar-08,
-46,Rhizophora samoensis,Rhizophora,samoensis,,NT,Mar-08,
-47,Rhizophora stylosa,Rhizophora,stylosa,,LC,Mar-08,
-48,Rhizophora lamarckii,Rhizophora,lamarckii,,NE,N/A,not in WoRMS
-49,Rhizophora samoensis,Rhizophora,x neocaledonica,,NE,N/A,Synonym to R. samoensis
-50,Rhizophora x selala,Rhizophora,x selata,,NE,N/A,Spelling
-51,Scyphiphora hydrophyllacea,Scyphiphora,hydrophylacea,,LC,Mar-08,spelling
-52,Sonneratia alba,Sonneratia,alba,,LC,Mar-08,
-53,Sonneratia apetala,Sonneratia,apetala,,LC,Mar-08,
-54,Sonneratia caseolaris,Sonneratia,caseolaris,,LC,Mar-08,
-55,Sonneratia griffithii,Sonneratia,griffithii,,CR,Mar-08,not in WoRMS
-56,Sonneratia caseolaris,Sonneratia,lanceolata,,LC,Mar-08,synonym to S. caseolaris
-57,Sonneratia ovata,Sonneratia,ovata,,NT,Mar-08,
-58,Sonneratia gulngai,Sonneratia,gulngai,,NE,N/A,not in WoRMS
-59,Sonneratia hainanensis,Sonneratia,hainanensis,Hainan Sonneratia,CR,Jan-98,
-60,Sonneratia urama,Sonneratia,urama,,NE,N/A,not in WoRMS
-61,Xylocarpus granatum,Xylocarpus,granatum,,LC,Mar-08,
-62,Xylocarpus moluccensis,Xylocarpus,moluccensis,,LC,Mar-08,
-63,Avicennia bicolor,Avicennia,bicolor,,VU,Mar-08,
-64,Avicennia germinans,Avicennia,germinans,,LC,Mar-07,
-65,Avicennia schaueriana,Avicennia,schaueriana,,LC,Mar-07,
-66,Conocarpus erectus,Conocarpus,erectus,Silver-leaved Buttonwood,LC,Mar-07,
-67,Laguncularia racemosa,Laguncularia,racemosa,White mangrove,LC,Mar-07,
-68,More oleifera,Mora,oleifera,,VU,Mar-08,not in WoRMS
-69,Pelliciera rhizophoreae,Pelliciera,rhizophorae,,VU,Mar-07,spelling
-70,Rhizophora mangle,Rhizophora,mangle,Red Mangrove,LC,Mar-07,not in WoRMS
-71,Rhizophora racemosa,Rhizophora,racemosa,,LC,Mar-07,
-72,Rhizophora harrisonii,Rhizophora,x harrisonii,,NE,N/A,
-73,Tabebuia palustris,Tabebuia,palustris,,VU,Mar-08,not in WoRMS
+species_id,scientific_name,IUCN_Genus,IUCN_species,common_name,redlist_status,Timestamp_Redlist,Comment,URL
+1,Acanthus ebracteatus,Acanthus,ebracteatus,Holy Mangrove,LC,Feb-10,,https://apiv3.iucnredlist.org/api/v3/website/Acanthus%20ebracteatus
+2,Acanthus ilicifolius,Acanthus,ilicifolius,Holy Mangrove,LC,Feb-10,,https://apiv3.iucnredlist.org/api/v3/website/Acanthus%20ilicifolius
+3,Acrostichum aureum,Acrostichum,aureum,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Acrostichum%20aureum
+4,Acrostichum danaeifolium,Acrostichum,danaeifolium,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Acrostichum%20danaeifolium
+5,Acrostichum speciosum,Acrostichum,speciosum,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Acrostichum%20speciosum
+6,Aegialitis annulata,Aegialitis,annulata,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Aegialitis%20annulata
+7,Aegialitis rotundifolia,Aegialitis,rotundifolia,,NT,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Aegialitis%20rotundifolia
+8,Aegiceras corniculatum,Aegiceras,corniculatum,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Aegiceras%20corniculatum
+9,Aegiceras floridum,Aegiceras,floridum,,NT,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Aegiceras%20floridum
+10,Aglaia cucullata,Aglaia,cucullata,,DD,Mar-08,not in WoRMS,https://apiv3.iucnredlist.org/api/v3/website/Aglaia%20cucullata
+11,Avicennia alba,Avicennia,alba,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Avicennia%20alba
+12,Avicennia integra,Avicennia,integra,,VU,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Avicennia%20integra
+13,Avicennia marina,Avicennia,marina,Gray Mangrove,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Avicennia%20marina
+14,Avicennia officinalis,Avicennia,officinalis,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Avicennia%20officinalis
+15,Avicennia rumphiana,Avicennia,rumphiana,,VU,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Avicennia%20rumphiana
+16,Bruguiera cylindrica,Bruguiera,cylindrica,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Bruguiera%20cylindrica
+17,Bruguiera exaristata,Bruguiera,exaristata,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Bruguiera%20exaristata
+18,Bruguiera gymnorrhiza,Bruguiera,gymnorhiza,,LC,Mar-08,Spelling,https://apiv3.iucnredlist.org/api/v3/website/Bruguiera%20gymnorhiza
+19,Bruguiera hainesii,Bruguiera,hainesii,,CR,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Bruguiera%20hainesii
+20,Bruguiera parviflora,Bruguiera,parviflora,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Bruguiera%20parviflora
+21,Bruguiera sexangula,Bruguiera,sexangula,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Bruguiera%20sexangula
+22,Bruguiera rhynchopetala,Bruguiera,rhynchopetala,,NE,N/A,not in WoRMS,N/A
+23,Camptostemon philippinensis,Camptostemon,philippinense,,EN,Mar-08,Spelling,https://apiv3.iucnredlist.org/api/v3/website/Camptostemon%20philippinense
+24,Camptostemon schultzii,Camptostemon,schultzii,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Camptostemon%20schultzii
+25,Ceriops australis,Ceriops,australis,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Ceriops%20australis
+26,Ceriops decandra,Ceriops,decandra,,NT,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Ceriops%20decandra
+27,Ceriops tagal,Ceriops,tagal,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Ceriops%20tagal
+28,Cynometra iripa,Cynometra,iripa,,LC,Mar-08,not in WoRMS,https://apiv3.iucnredlist.org/api/v3/website/Cynometra%20iripa
+29,Diospyros littorea,Diospyros,littorea,,NE,N/A,not in WoRMS,N/A
+30,Dolichandrone spathacea,Dolichandrone,spathacea,,LC,Mar-08,not in WoRMS,https://apiv3.iucnredlist.org/api/v3/website/Dolichandrone%20spathacea
+31,Excoecaria agallocha,Excoecaria,agallocha,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Excoecaria%20agallocha
+32,Excoecaria indica,Excoecaria,indica,,DD,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Excoecaria%20indica
+33,Heritiera fomes,Heritiera,fomes,,EN,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Heritiera%20fomes
+34,Heritiera globosa,Heritiera,globosa,,EN,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Heritiera%20globosa
+35,Heritiera littoralis,Heritiera,littoralis,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Heritiera%20littoralis
+36,Kandelia candel,Kandelia,candel,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Kandelia%20candel
+37,Kandelia obovata,Kandelia,obovata,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Kandelia%20obovata
+38,Lumnitzera littorea,Lumnitzera,littorea,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Lumnitzera%20littorea
+39,Lumnitzera racemosa,Lumnitzera,racemosa,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Lumnitzera%20racemosa
+40,Lumnitzera rosea,Lumnitzera,rosea,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Lumnitzera%20rosea
+41,Nypa fruticans,Nypa,fruticans,Nypa Palm,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Nypa%20fruticans
+42,Osbornia octodonta,Osbornia,octodonta,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Osbornia%20octodonta
+43,Pemphis acidula,Pemphis,acidula,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Pemphis%20acidula
+44,Rhizophora apiculata,Rhizophora,apiculata,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Rhizophora%20apiculata
+45,Rhizophora mucronata,Rhizophora,mucronata,True Mangrove,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Rhizophora%20mucronata
+46,Rhizophora samoensis,Rhizophora,samoensis,,NT,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Rhizophora%20samoensis
+47,Rhizophora stylosa,Rhizophora,stylosa,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Rhizophora%20stylosa
+48,Rhizophora lamarckii,Rhizophora,lamarckii,,NE,N/A,not in WoRMS,N/A
+49,Rhizophora samoensis,Rhizophora,x neocaledonica,,NE,N/A,Synonym to R. samoensis,N/A
+50,Rhizophora x selala,Rhizophora,x selata,,NE,N/A,Spelling,N/A
+51,Scyphiphora hydrophyllacea,Scyphiphora,hydrophylacea,,LC,Mar-08,spelling,https://apiv3.iucnredlist.org/api/v3/website/Scyphiphora%20hydrophylacea
+52,Sonneratia alba,Sonneratia,alba,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Sonneratia%20alba
+53,Sonneratia apetala,Sonneratia,apetala,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Sonneratia%20apetala
+54,Sonneratia caseolaris,Sonneratia,caseolaris,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Sonneratia%20caseolaris
+55,Sonneratia griffithii,Sonneratia,griffithii,,CR,Mar-08,not in WoRMS,https://apiv3.iucnredlist.org/api/v3/website/Sonneratia%20griffithii
+56,Sonneratia caseolaris,Sonneratia,lanceolata,,LC,Mar-08,synonym to S. caseolaris,https://apiv3.iucnredlist.org/api/v3/website/Sonneratia%20lanceolata
+57,Sonneratia ovata,Sonneratia,ovata,,NT,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Sonneratia%20ovata
+58,Sonneratia gulngai,Sonneratia,gulngai,,NE,N/A,not in WoRMS,N/A
+59,Sonneratia hainanensis,Sonneratia,hainanensis,Hainan Sonneratia,CR,Jan-98,,https://apiv3.iucnredlist.org/api/v3/website/Sonneratia%20hainanensis
+60,Sonneratia urama,Sonneratia,urama,,NE,N/A,not in WoRMS,N/A
+61,Xylocarpus granatum,Xylocarpus,granatum,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Xylocarpus%20granatum
+62,Xylocarpus moluccensis,Xylocarpus,moluccensis,,LC,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Xylocarpus%20moluccensis
+63,Avicennia bicolor,Avicennia,bicolor,,VU,Mar-08,,https://apiv3.iucnredlist.org/api/v3/website/Avicennia%20bicolor
+64,Avicennia germinans,Avicennia,germinans,,LC,Mar-07,,https://apiv3.iucnredlist.org/api/v3/website/Avicennia%20germinans
+65,Avicennia schaueriana,Avicennia,schaueriana,,LC,Mar-07,,https://apiv3.iucnredlist.org/api/v3/website/Avicennia%20schaueriana
+66,Conocarpus erectus,Conocarpus,erectus,Silver-leaved Buttonwood,LC,Mar-07,,https://apiv3.iucnredlist.org/api/v3/website/Conocarpus%20erectus
+67,Laguncularia racemosa,Laguncularia,racemosa,White mangrove,LC,Mar-07,,https://apiv3.iucnredlist.org/api/v3/website/Laguncularia%20racemosa
+68,More oleifera,Mora,oleifera,,VU,Mar-08,not in WoRMS,https://apiv3.iucnredlist.org/api/v3/website/Mora%20oleifera
+69,Pelliciera rhizophoreae,Pelliciera,rhizophorae,,VU,Mar-07,spelling,https://apiv3.iucnredlist.org/api/v3/website/Pelliciera%20rhizophorae
+70,Rhizophora mangle,Rhizophora,mangle,Red Mangrove,LC,Mar-07,not in WoRMS,https://apiv3.iucnredlist.org/api/v3/website/Rhizophora%20mangle
+71,Rhizophora racemosa,Rhizophora,racemosa,,LC,Mar-07,,https://apiv3.iucnredlist.org/api/v3/website/Rhizophora%20racemosa
+72,Rhizophora harrisonii,Rhizophora,x harrisonii,,NE,N/A,,N/A
+73,Tabebuia palustris,Tabebuia,palustris,,VU,Mar-08,not in WoRMS,https://apiv3.iucnredlist.org/api/v3/website/Tabebuia%20palustris

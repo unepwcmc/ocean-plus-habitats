@@ -1,916 +1,916 @@
-species_id,scientific_name,IUCN_Genus,IUCN_Species,redlist_status,Timestamp_redlist,common_name,Comment
-1,Acanthastrea brevis,Acanthastrea,brevis,VU,Jan-08,,
-2,Acanthastrea echinata,Acanthastrea,echinata,LC,Jan-08,,
-3,Acanthastrea hemprichii,Acanthastrea,hemprichii,VU,Jan-08,,
-4,Acanthastrea minuta,Micromussa,minuta,NT,Jan-08,,Different Genus
-5,Acanthastrea pachysepta,Lobophyllia,pachysepta,NT,Jan-08,,Different Genus
-6,Acanthastrea rotundoflora,Acanthastrea,rotundoflora,NT,Jan-08,,
-7,Acanthastrea subechinata,Acanthastrea,subechinata,NT,Jan-08,,
-8,Acanthophyllia deshayesiana,Acanthophyllia,deshayesiana,NT,Jan-08,,
-9,Acropora abrolhosensis,Acropora,abrolhosensis,VU,Jan-08,,
-10,Acropora abrotanoides,Acropora,abrotanoides,LC,Jan-08,,
-11,Acropora abrotanoides,Acropora,irregularis,DD,Jan-08,,
-12,Acropora abrotanoides,Acropora,tutuilensis,DD,Jan-08,,Synonym to other species
-13,Acropora aculeus,Acropora,aculeus,VU,Jan-08,,Synonym to other species
-14,Acropora acuminata,Acropora,acuminata,VU,Jan-08,,
-15,Acropora anthocercis,Acropora,anthocercis,VU,Jan-08,,
-16,Acropora appressa,Acropora,appressa,NT,Jan-08,,
-17,Acropora arabensis,Acropora,arabensis,NT,Jan-08,,
-18,Acropora aspera,Acropora,aspera,VU,Jan-08,,
-19,Acropora austera,Acropora,austera,NT,Jan-08,,
-20,Acropora austera,Acropora,parahemprichii,DD,Jan-08,,Synonym to other species
-21,Acropora awi,Acropora,awi,VU,Jan-08,,Synonym to other species
-22,Acropora batunai,Acropora,batunai,VU,Jan-08,,
-23,Acropora branchi,Acropora,branchi,DD,Jan-08,,
-24,Acropora bushyensis,Acropora,bushyensis,LC,Jan-08,,
-25,Acropora cardenae,Acropora,cardenae,DD,Jan-08,,
-26,Acropora carduus,Acropora,carduus,NT,Jan-08,,
-27,Acropora caroliniana,Acropora,caroliniana,VU,Jan-08,,
-28,Acropora cerealis,Acropora,cerealis,LC,Jan-08,,
-29,Acropora cerealis,Acropora,tizardi,DD,Jan-08,,Synonym to other species
-30,Acropora cervicornis,Acropora,cervicornis,CR,Jan-08,,Synonym to other species
-31,Acropora chesterfieldensis,Acropora,chesterfieldensis,LC,Jan-08,,
-32,Acropora clathrata,Acropora,clathrata,LC,Jan-08,,
-33,Acropora clathrata,Acropora,orbicularis,DD,Jan-08,,Synonym to other species
-34,Acropora cophodactyla,Acropora,cophodactyla,DD,Jan-08,,Synonym to other species
-35,Acropora cytherea,Acropora,cytherea,LC,Jan-08,,
-36,Acropora cytherea,Acropora,efflorescens,DD,Jan-08,,Synonym to other species
-37,Acropora dendrum,Acropora,dendrum,VU,Jan-08,,Synonym to other species
-38,Acropora derawanensis,Acropora,derawanensis,VU,Jan-08,,
-39,Acropora desalwii,Acropora,desalwii,VU,Jan-08,,
-40,Acropora digitifera,Acropora,digitifera,NT,Jan-08,,
-41,Acropora digitifera,Acropora,schmitti,DD,Jan-08,,Synonym to other species
-42,Acropora divaricata,Acropora,divaricata,NT,Jan-08,,
-43,Acropora donei,Acropora,akajimensis,DD,Jan-08,,Synonym to other species
-44,Acropora donei,Acropora,donei,VU,Jan-08,,Synonym to other species
-45,Acropora downingi,Acropora,downingi,LC,Jan-08,,
-46,Acropora echinata,Acropora,echinata,VU,Jan-08,,Synonym to other species
-47,Acropora elegans,Acropora,elegans,VU,Jan-08,,
-48,Acropora elegantula,Acropora,elegantula,DD,Jan-08,,
-49,Acropora elseyi,Acropora,elseyi,LC,Jan-08,,
-50,Acropora eurystoma,Acropora,pagoensis,DD,Jan-08,,
-51,Acropora eurystoma,Acropora,eurystoma,NE,N/A,,
-52,Acropora exquisita,Acropora,exquisita,DD,Jan-08,,
-53,Acropora fastigata,Acropora,fastigata,DD,Jan-08,,
-54,Acropora fenneri,Acropora,fenneri,DD,Jan-08,,
-55,Acropora filiformis,Acropora,filiformis,DD,Jan-08,,
-56,Acropora florida,Acropora,florida,NT,Jan-08,,
-57,Acropora forskali,Acropora,forskali,DD,Jan-08,,
-58,Acropora gemmifera,Acropora,scherzeriana,DD,Jan-08,,
-59,Acropora gemmifera,Acropora,gemmifera,LC,Jan-08,,
-60,Acropora glauca,Acropora,glauca,NT,Jan-08,,
-61,Acropora globiceps,Acropora,globiceps,VU,Jan-08,,
-62,Acropora gomezi,Acropora,gomezi,DD,Jan-08,,
-63,Acropora grandis,Acropora,grandis,LC,Jan-08,,
-64,Acropora granulosa,Acropora,granulosa,NT,Jan-08,,
-65,Acropora halmaherae,Acropora,halmaherae,DD,Jan-08,,
-66,Acropora hemprichii,Acropora,hemprichii,VU,Jan-08,,
-67,Acropora hoeksemai,Acropora,hoeksemai,VU,Jan-08,,
-68,Acropora horrida,Acropora,horrida,VU,Jan-08,,
-69,Acropora horrida,Acropora,parilis,DD,Jan-08,,Synonym to other species
-70,Acropora horrida,Acropora,sekiseiensis,DD,Jan-08,,Synonym to other species
-71,Acropora humilis,Acropora,humilis,NT,Jan-08,,Synonym to other species
-72,Acropora humilis,Acropora,ocellata,DD,Jan-08,,Synonym to other species
-73,Acropora hyacinthus,Acropora,bifurcata,DD,Jan-08,,Synonym to other species
-74,Acropora hyacinthus,Acropora,hyacinthus,NT,Jan-08,,Synonym to other species
-75,Acropora indonesia,Acropora,indonesia,VU,Jan-08,,
-76,Acropora intermedia,Acropora,intermedia,NE,N/A,,Synonym to other species
-77,Acropora jacquelineae,Acropora,jacquelineae,VU,Jan-08,,
-78,Acropora japonica,Acropora,japonica,DD,Jan-08,,
-79,Acropora kimbeensis,Acropora,kimbeensis,VU,Jan-08,,
-80,Acropora kirstyae,Acropora,kirstyae,VU,Jan-08,,
-81,Acropora kosurini,Acropora,kosurini,VU,Jan-08,,
-82,Acropora lamarcki,Acropora,lamarcki,DD,Jan-08,,
-83,Acropora latistella,Acropora,latistella,LC,Jan-08,,
-84,Acropora listeri,Acropora,listeri,VU,Jan-08,,
-85,Acropora loisetteae,Acropora,loisetteae,VU,Jan-08,,
-86,Acropora lokani,Acropora,lokani,VU,Jan-08,,
-87,Acropora longicyathus,Acropora,longicyathus,LC,Jan-08,,
-88,Acropora longicyathus,Acropora,navini,DD,Jan-08,,Synonym to other species
-89,Acropora loripes,Acropora,lianae,DD,Jan-08,,Synonym to other species
-90,Acropora loripes,Acropora,loripes,NT,Jan-08,,
-91,Acropora loripes,Acropora,rosaria,DD,Jan-08,,Synonym to other species
-92,Acropora lovelli,Acropora,lovelli,VU,Jan-08,,
-93,Acropora lutkeni,Acropora,lutkeni,NT,Jan-08,,Synonym to other species
-94,Acropora microclados,Acropora,microclados,VU,Jan-08,,
-95,Acropora microphthalma,Acropora,inermis,DD,Jan-08,,
-96,Acropora microphthalma,Acropora,microphthalma,LC,Jan-08,,
-97,Acropora millepora,Acropora,convexa,DD,Jan-08,,Synonym to other species
-98,Acropora millepora,Acropora,millepora,NT,Jan-08,,
-99,Acropora mirabilis,Acropora,mirabilis,DD,Jan-08,,Synonym to other species
-100,Acropora monticulosa,Acropora,monticulosa,NT,Jan-08,,
-101,Acropora multiacuta,Acropora,multiacuta,VU,Jan-08,,
-102,Acropora muricata,Acropora,copiosa,DD,Jan-08,,Synonym to other species
-103,Acropora muricata,Acropora,formosa,NT,Jan-08,,Synonym to other species
-104,Acropora muricata,Acropora,muricata,NE,N/A,,
-105,Acropora nana,Acropora,nana,NT,Jan-08,,
-106,Acropora nasuta,Acropora,nasuta,NT,Jan-08,,Synonym to other species
-107,Acropora natalensis,Acropora,natalensis,DD,Jan-08,,
-108,Acropora palmata,Acropora,palmata,CR,Jan-08,,
-109,Acropora palmerae,Acropora,minuta,DD,Jan-08,,Synonym to other species
-110,Acropora palmerae,Acropora,palmerae,VU,Jan-08,,Synonym to other species
-111,Acropora paniculata,Acropora,paniculata,VU,Jan-08,,
-112,Acropora papillare,Acropora,papillare,VU,Jan-08,,
-113,Acropora pectinata,Acropora,pectinatus,DD,Jan-08,,Spelling
-114,Acropora pharaonis,Acropora,pharaonis,VU,Jan-08,,
-115,Acropora pichoni,Acropora,pichoni,NT,Jan-08,,
-116,Acropora plantaginea,Acropora,plantaginea,DD,Jan-08,,
-117,Acropora plumosa,Acropora,plumosa,VU,Jan-08,,
-118,Acropora polystoma,Acropora,massawensis,DD,Jan-08,,Synonym to other species
-119,Acropora polystoma,Acropora,polystoma,VU,Jan-08,,
-120,Acropora prolifera,Acropora,prolifera,NE,N/A,,
-121,Acropora proximalis,Acropora,proximalis,DD,Jan-08,,
-122,Acropora pruinosa,Acropora,pruinosa,DD,Jan-08,,
-123,Acropora pulchra,Acropora,pulchra,LC,Jan-08,,Synonym to other species
-124,Acropora retusa,Acropora,retusa,VU,Jan-08,,
-125,Acropora ridzwani,Acropora,ridzwani,DD,Jan-08,,
-126,Acropora robusta,Acropora,nobilis,LC,Jan-08,,
-127,Acropora robusta,Acropora,pinguis,DD,Jan-08,,Synonym to other species
-128,Acropora robusta,Acropora,robusta,LC,Jan-08,,
-129,Acropora rongelapensis,Acropora,rongelapensis,DD,Jan-08,,
-130,Acropora roseni,Acropora,roseni,EN,Jan-08,,
-131,Acropora rudis,Acropora,rudis,EN,Jan-08,,
-132,Acropora rufa,Acropora,rufus,DD,Jan-08,,Spelling
-133,Acropora russelli,Acropora,russelli,VU,Jan-08,,Synonym to other species
-134,Acropora samoensis,Acropora,samoensis,LC,Jan-08,,
-135,Acropora samoensis,Acropora,torresiana,DD,Jan-08,,Synonym to other species
-136,Acropora samoensis,Acropora,wallaceae,DD,Jan-08,,Different species
-137,Acropora sarmentosa,Acropora,sarmentosa,LC,Jan-08,,Synonym to other species
-138,Acropora sarmentosa,Acropora,vermiculata,DD,Jan-08,,Synonym to other species
-139,Acropora secale,Acropora,secale,NT,Jan-08,,Synonym to other species
-140,Acropora selago,Acropora,insignis,DD,Jan-08,,Synonym to other species
-141,Acropora selago,Acropora,selago,NT,Jan-08,,
-142,Acropora seriata,Acropora,seriata,DD,Jan-08,,
-143,Acropora simplex,Acropora,simplex,VU,Jan-08,,
-144,Acropora sirikitiae,Acropora,sirikitiae,NE,N/A,,
-145,Acropora solitaryensis,Acropora,solitaryensis,VU,Jan-08,,
-146,Acropora spathulata,Acropora,spathulata,LC,Jan-08,,
-147,Acropora speciosa,Acropora,rambleri,DD,Jan-08,,
-148,Acropora speciosa,Acropora,speciosa,VU,Jan-08,,
-149,Acropora spicifera,Acropora,spicifera,VU,Jan-08,,
-150,Acropora squamata,Acropora,squamata,NE,N/A,,Synonym to other species
-151,Acropora squarrosa,Acropora,maryae,DD,Jan-08,,Synonym to other species
-152,Acropora squarrosa,Acropora,squarrosa,LC,Jan-08,,
-153,Acropora stoddarti,Acropora,stoddarti,DD,Jan-08,,
-154,Acropora striata,Acropora,striata,VU,Jan-08,,
-155,Acropora subglabra,Acropora,subglabra,LC,Jan-08,,
-156,Acropora subulata,Acropora,subulata,LC,Jan-08,,
-157,Acropora suharsonoi,Acropora,suharsonoi,EN,Jan-08,,
-158,Acropora sukarnoi,Acropora,sukarnoi,DD,Jan-08,,
-159,Acropora tanegashimensis,Acropora,tanegashimensis,DD,Jan-08,,
-160,Acropora tenella,Acropora,tenella,VU,Jan-08,,
-161,Acropora tenuis,Acropora,macrostoma,DD,Jan-08,,
-162,Acropora tenuis,Acropora,plana,DD,Jan-08,,Synonym to other species
-163,Acropora tenuis,Acropora,tenuis,NT,Jan-08,,Synonym to other species
-164,Acropora teres,Acropora,teres,DD,Jan-08,,
-165,Acropora torihalimeda,Acropora,torihalimeda,DD,Jan-08,,
-166,Acropora tortuosa,Acropora,tortuosa,LC,Jan-08,,
-167,Acropora tumida,Acropora,tumida,DD,Jan-08,,
-168,Acropora turaki,Acropora,turaki,VU,Jan-08,,
-169,Acropora valenciennesi,Acropora,valenciennesi,LC,Jan-08,,
-170,Acropora valida,Acropora,parapharaonis,DD,Jan-08,,Synonym to other species
-171,Acropora valida,Acropora,valida,LC,Jan-08,,Synonym to other species
-172,Acropora valida,Acropora,variabilis,DD,Jan-08,,Synonym to other species
-173,Acropora variolosa,Acropora,variolosa,LC,Jan-08,,
-174,Acropora vaughani,Acropora,vaughani,VU,Jan-08,,
-175,Acropora verweyi,Acropora,verweyi,VU,Jan-08,,
-176,Acropora walindii,Acropora,walindii,VU,Jan-08,,
-177,Acropora willisae,Acropora,willisae,VU,Jan-08,,
-178,Acropora yongei,Acropora,yongei,LC,Jan-08,,
-179,Agaricia agaricites,Agaricia,agaricites,LC,Jan-08,,
-180,Agaricia fragilis,Agaricia,fragilis,DD,Jan-08,,
-181,Agaricia grahamae,Agaricia,grahamae,LC,Jan-08,,
-182,Agaricia humilis,Agaricia,humilis,LC,Jan-08,,
-183,Agaricia lamarcki,Agaricia,lamarcki,VU,Jan-08,,
-184,Agaricia tenuifolia,Agaricia,tenuifolia,NT,Jan-08,,
-185,Agaricia undata,Agaricia,undata,DD,Jan-08,,
-186,Alveopora allingi,Alveopora,allingi,VU,Jan-08,,
-187,Alveopora catalai,Alveopora,catalai,VU,Jan-08,,
-188,Alveopora daedalea,Alveopora,daedalea,VU,Jan-08,,
-189,Alveopora excelsa,Alveopora,excelsa,EN,Jan-08,,
-190,Alveopora fenestrata,Alveopora,fenestrata,VU,Jan-08,,
-191,Alveopora gigas,Alveopora,gigas,VU,Jan-08,Thin Leaf Lettuce Coral,
-192,Alveopora japonica,Alveopora,japonica,VU,Jan-08,,
-193,Alveopora marionensis,Alveopora,marionensis,VU,Jan-08,,
-194,Alveopora minuta,Alveopora,minuta,EN,Jan-08,,
-195,Alveopora ocellata,Alveopora,ocellata,DD,Jan-08,,
-196,Alveopora spongiosa,Alveopora,spongiosa,NT,Jan-08,,
-197,Alveopora tizardi,Alveopora,tizardi,LC,Jan-08,,
-198,Alveopora verrilliana,Alveopora,verrilliana,VU,Jan-08,,
-199,Alveopora viridis,Alveopora,viridis,NT,Jan-08,,
-200,Anacropora forbesi,Anacropora,forbesi,LC,Jan-08,,
-201,Anacropora matthai,Anacropora,matthai,VU,Jan-08,,
-202,Anacropora pillai,Anacropora,pillai,DD,Jan-08,,
-203,Anacropora puertogalerae,Anacropora,puertogalerae,VU,Jan-08,,
-204,Anacropora reticulata,Anacropora,reticulata,VU,Jan-08,,
-205,Anacropora spinosa,Anacropora,spinosa,EN,Jan-08,,
-206,Anacropora spumosa,Anacropora,spumosa,DD,Jan-08,,
-207,Anomastraea irregularis,Anomastraea,irregularis,VU,Jan-08,,
-208,Astrangia poculata,Astrangia,poculata,LC,Jan-08,,
-209,Astrea annuligera,Astrea,annuligera,NE,N/A,,
-210,Astrea annuligera,Montastrea,annuligera,NT,Jan-08,,
-211,Astrea curta,Astrea,curta,NE,N/A,,
-212,Astrea curta,Montastrea,curta,LC,Jan-08,,
-213,Astrea devantieri,Astrea,devantieri,NE,N/A,,
-214,Astrea devantieri,Plesiastrea,devantieri,NT,Jan-08,,
-215,Astrea rotulosa,Astrea,rotulosa,NE,N/A,,
-216,Astreopora acroporina,Astreopora,acroporina,NE,N/A,,
-217,Astreopora cenderawasih,Astreopora,cenderawasih,NE,N/A,,
-218,Astreopora cucullata,Astreopora,cucullata,VU,Jan-08,,
-219,Astreopora expansa,Astreopora,expansa,NT,Jan-08,,
-220,Astreopora gracilis,Astreopora,gracilis,LC,Jan-08,,
-221,Astreopora incrustans,Astreopora,incrustans,VU,Jan-08,,
-222,Astreopora listeri,Astreopora,listeri,LC,Jan-08,,
-223,Astreopora macrostoma,Astreopora,macrostoma,NT,Jan-08,,
-224,Astreopora monteporina,Astreopora,monteporina,NE,N/A,,
-225,Astreopora moretonensis,Astreopora,moretonensis,VU,Jan-08,,
-226,Astreopora myriophthalma,Astreopora,eliptica,DD,Jan-08,,Synonym to other species
-227,Astreopora myriophthalma,Astreopora,myriophthalma,LC,Jan-08,,
-228,Astreopora ocellata,Astreopora,ocellata,LC,Jan-08,,
-229,Astreopora randalli,Astreopora,randalli,LC,Jan-08,,
-230,Astreopora scabra,Astreopora,scabra,LC,Jan-08,,
-231,Astreopora suggesta,Astreopora,suggesta,LC,Jan-08,,
-232,Australogyra zelli,Australogyra,zelli,VU,Jan-08,,
-233,Australophyllia wilsoni,Symphyllia,wilsoni,LC,Jan-08,,Different genus
-234,Balanophyllia (Balanophyllia) europaea,Balanophyllia,europaea,LC,Jan-08,,Different genus
-235,Bernardpora stutchburyi,Bernardpora,stutchburyi,NE,N/A,,
-236,Bernardpora stutchburyi,Goniopora,stutchburyi,LC,Jan-08,,
-237,Blastomussa loyae,Blastomussa,loyae,EN,Jan-08,,
-238,Blastomussa merleti,Blastomussa,merleti,LC,Jan-08,,
-239,Blastomussa omanensis,Blastomussa,omanensis,NE,N/A,,
-240,Blastomussa vivida,Blastomussa,vivida,NE,N/A,,
-241,Blastomussa wellsi,Blastomussa,wellsi,NT,Jan-08,,
-242,Boninastrea boninensis,Boninastrea,boninensis,DD,Jan-08,Tooth coral,
-243,Cantharellus doederleini,Cantharellus,doederleini,LC,Jan-08,,
-244,Cantharellus jebbi,Cantharellus,jebbi,LC,Jan-08,,
-245,Cantharellus noumeae,Cantharellus,noumeae,EN,Jan-08,,
-246,Catalaphyllia jardinei,Catalaphyllia,jardinei,VU,Jan-08,,
-247,Caulastraea connata,Caulastrea,connata,VU,Jan-08,,spelling
-248,Caulastraea curvata,Caulastrea,curvata,VU,Jan-08,,spelling
-249,Caulastraea echinulata,Caulastrea,echinulata,VU,Jan-08,,spelling
-250,Caulastraea furcata,Caulastrea,furcata,LC,Jan-08,,spelling
-251,Caulastraea tumida,Caulastrea,tumida,NT,Jan-08,,spelling
-252,Cladocora arbuscula,Cladocora,arbuscula,LC,Jan-08,,
-253,Cladocora caespitosa,Cladocora,caespitosa,EN,Jan-08,,
-254,Coelastrea aspera,Goniastrea,aspera,LC,Jan-08,,Different genus
-255,Coelastrea palauensis,Goniastrea,palauensis,NT,Jan-08,,Different genus
-256,Coeloseris mayeri,Coeloseris,mayeri,LC,Jan-08,,
-257,Colpophyllia natans,Colpophyllia,natans,LC,Jan-08,,
-258,Coscinaraea columna,Coscinaraea,columna,LC,Jan-08,,
-259,Coscinaraea crassa,Coscinaraea,crassa,NT,Jan-08,,
-260,Coscinaraea exesa,Coscinaraea,exesa,LC,Jan-08,,
-261,Coscinaraea hahazimaensis,Coscinaraea,hahazimaensis,VU,Jan-08,,
-262,Coscinaraea marshae,Coscinaraea,marshae,LC,Jan-08,,
-263,Coscinaraea mcneilli,Coscinaraea,mcneilli,LC,Jan-08,,
-264,Coscinaraea monile,Coscinaraea,monile,LC,Jan-08,,
-265,Craterastrea levis,Craterestrea,levis,LC,Jan-08,,Spelling
-266,Ctenactis albitentaculata,Ctenactis,albitentaculata,NT,Jan-08,,
-267,Ctenactis crassa,Ctenactis,crassa,LC,Jan-08,,
-268,Ctenactis echinata,Ctenactis,echinata,LC,Jan-08,,
-269,Ctenella chagius,Ctenella,chagius,EN,Jan-08,,
-270,Cycloseris boschmai,Cycloseris,boschmai,NE,N/A,,
-271,Cycloseris costulata,Cycloseris,costulata,NE,N/A,,
-272,Cycloseris costulata,Fungia,costulata,LC,Jan-08,,
-273,Cycloseris curvata,Cycloseris,curvata,NE,N/A,,
-274,Cycloseris curvata,Fungia,curvata,VU,Jan-08,,
-275,Cycloseris cyclolites,Cycloseris,cyclolites,VU,Jan-08,,
-276,Cycloseris cyclolites,Fungia,cyclolites,LC,Jan-08,,
-277,Cycloseris distorta,Fungia,distorta,LC,Jan-08,,Different genus
-278,Cycloseris explanulata,Psammocora,explanulata,LC,Jan-08,,Different genus
-279,Cycloseris fragilis,Fungia,fragilis,LC,Jan-08,,Synonym to other species
-280,Cycloseris mokai,Cycloseris,mokai,NE,N/A,,
-281,Cycloseris mokai,Lithophyllon,mokai,LC,Jan-08,,
-282,Cycloseris sinensis,Cycloseris,sinensis,LC,Jan-08,,
-283,Cycloseris sinensis,Fungia,sinensis,LC,Jan-08,,
-284,Cycloseris somervillei,Cycloseris,somervillei,LC,Jan-08,,
-285,Cycloseris somervillei,Fungia,somervillei,LC,Jan-08,,
-286,Cycloseris tenuis,Cycloseris,tenuis,LC,Jan-08,,
-287,Cycloseris tenuis,Fungia,tenuis,LC,Jan-08,,
-288,Cycloseris vaughani,Cycloseris,vaughani,LC,Jan-08,,
-289,Cycloseris vaughani,Fungia,vaughani,LC,Jan-08,,
-290,Cycloseris wellsi,Coscinaraea,wellsi,LC,Jan-08,,Different genus
-291,Cynarina lacrymalis,Cynarina,lacrymalis,NT,Jan-08,,
-292,Cynarina macassarensis,Indophyllia,macassarensis,DD,Jan-08,,Different genus
-293,Cyphastrea agassizi,Cyphastrea,agassizi,VU,Jan-08,,
-294,Cyphastrea chalcidicum,Cyphastrea,chalcidicum,LC,Jan-08,,
-295,Cyphastrea decadia,Cyphastrea,decadia,LC,Jan-08,,
-296,Cyphastrea hexasepta,Cyphastrea,hexasepta,VU,Jan-08,,
-297,Cyphastrea japonica,Cyphastrea,japonica,LC,Jan-08,,
-298,Cyphastrea kausti,Cyphastrea,kausti,NE,N/A,,
-299,Cyphastrea microphthalma,Cyphastrea,microphthalma,LC,Jan-08,,
-300,Cyphastrea ocellina,Cyphastrea,ocellina,VU,Jan-08,,
-301,Cyphastrea serailia,Cyphastrea,serailia,LC,Jan-08,,
-302,Danafungia horrida,Fungia,horrida,LC,Jan-08,,Different genus
-303,Danafungia scruposa,Fungia,scruposa,LC,Jan-08,,Different genus
-304,Dendrogyra cylindrus,Dendrogyra,cylindrus,VU,Jan-08,,
-305,Dichocoenia stokesii,Dichocoenia,stellaris,DD,Jan-08,,
-306,Dichocoenia stokesii,Dichocoenia,stokesii,VU,Jan-08,,
-307,Diploastrea heliopora,Diploastrea,heliopora,NT,Jan-08,,
-308,Diploria labyrinthiformis,Diploria,labyrinthiformis,LC,Jan-08,,
-309,Dipsastraea albida,Favia,albidus,NT,Jan-08,,Different genus
-310,Dipsastraea amicorum,Dipsastraea,amicorum,NE,N/A,,
-311,Dipsastraea danai,Dipsastraea,danai,NE,N/A,,
-312,Dipsastraea danai,Favia,danae,LC,Jan-08,,
-313,Dipsastraea faviaformis,Acanthastrea,faviaformis,VU,Jan-08,,Different genus
-314,Dipsastraea favus,Favia,favus,LC,Jan-08,,Different genus
-315,Dipsastraea helianthoides,Favia,helianthoides,NT,Jan-08,,Different genus
-316,Dipsastraea lacuna,Favia,lacuna,NT,Jan-08,,Different genus
-317,Dipsastraea laddi,Dipsastraea,laddi,NE,N/A,,
-318,Dipsastraea laxa,Favia,laxa,NT,Jan-08,,Different genus
-319,Dipsastraea lizardensis,Favia,lizardensis,NT,Jan-08,,Different genus
-320,Dipsastraea maritima,Favia,maritima,NT,Jan-08,,Different genus
-321,Dipsastraea marshae,Favia,marshae,NT,Jan-08,,Different genus
-322,Dipsastraea matthaii,Favia,matthaii,NT,Jan-08,,Different genus
-323,Dipsastraea maxima,Favia,maxima,NT,Jan-08,,Different genus
-324,Dipsastraea pallida,Favia,pallida,LC,Jan-08,,Different genus
-325,Dipsastraea rosaria,Favia,rosaria,VU,Jan-08,,Different genus
-326,Dipsastraea rotumana,Favia,rotumana,LC,Jan-08,,Different genus
-327,Dipsastraea speciosa,Favia,speciosa,LC,Jan-08,,Different genus
-328,Dipsastraea truncata,Favia,truncatus,LC,Jan-08,,Different genus
-329,Dipsastraea veroni,Favia,veroni,NT,Jan-08,,Different genus
-330,Dipsastraea vietnamensis,Favia,vietnamensis,NT,Jan-08,,Different genus
-331,Dipsastraea wisseli,Dipsastraea,wisseli,NE,N/A,,
-332,Duncanopsammia axifuga,Duncanopsammia,axifuga,NT,Jan-08,,
-333,Echinomorpha nishihirai,Echinomorpha,nishihirai,NE,N/A,,
-334,Echinophyllia aspera,Echinophyllia,aspera,LC,Jan-08,,
-335,Echinophyllia costata,Echinophyllia,costata,VU,Jan-08,,
-336,Echinophyllia echinoporoides,Echinophyllia,echinoporoides,LC,Jan-08,,
-337,Echinophyllia glabra,Oxypora,glabra,LC,Jan-08,,Different genus
-338,Echinophyllia orpheensis,Echinophyllia,orpheensis,LC,Jan-08,,
-339,Echinophyllia patula,Echinophyllia,patula,LC,Jan-08,,
-340,Echinophyllia pectinata,Echinophyllia,pectinata,DD,Jan-08,,
-341,Echinophyllia tarae,Echinophyllia,tarae,NE,N/A,,
-342,Echinopora ashmorensis,Echinopora,ashmorensis,VU,Jan-08,,
-343,Echinopora forskaliana,Echinopora,forskaliana,NT,Jan-08,,
-344,Echinopora fruticulosa,Echinopora,fruticulosa,NT,Jan-08,,
-345,Echinopora gemmacea,Echinopora,gemmacea,LC,Jan-08,,
-346,Echinopora hirsutissima,Echinopora,hirsutissima,LC,Jan-08,,
-347,Echinopora horrida,Echinopora,horrida,NT,Jan-08,,
-348,Echinopora irregularis,Echinopora,irregularis,DD,Jan-08,,
-349,Echinopora lamellosa,Echinopora,lamellosa,LC,Jan-08,,
-350,Echinopora mammiformis,Echinopora,mammiformis,NT,Jan-08,,
-351,Echinopora pacifica,Echinopora,pacificus,NT,Jan-08,,Spelling
-352,Echinopora robusta,Echinopora,robusta,VU,Jan-08,,
-353,Echinopora taylorae,Echinopora,taylorae,NT,Jan-08,,
-354,Echinopora tiranensis,Echinopora,tiranensis,DD,Jan-08,,
-355,Erythrastrea flabellata,Erythrastrea,flabellata,NT,Jan-08,,
-356,Euphyllia baliensis,Euphyllia,baliensis,NE,N/A,,
-357,Euphyllia cristata,Euphyllia,cristata,VU,Jan-08,,
-358,Euphyllia glabrescens,Euphyllia,glabrescens,NT,Jan-08,,
-359,Euphyllia paraglabrescens,Euphyllia,paraglabrescens,VU,Jan-08,,
-360,Eusmilia fastigiata,Eusmilia,fastigiata,LC,Jan-08,,
-361,Favia fragum,Favia,fragum,LC,Jan-08,,
-362,Favia gravida,Favia,gravida,NE,N/A,,
-363,Favites abdita,Favites,abdita,NT,Jan-08,,
-364,Favites acuticollis,Favites,acuticollis,NT,Jan-08,,
-365,Favites chinensis,Favites,chinensis,NT,Jan-08,,
-366,Favites colemani,Favites,colemani,NE,N/A,,
-367,Favites colemani,Montastrea,colemani,NT,Jan-08,,
-368,Favites complanata,Favites,complanata,NT,Jan-08,,
-369,Favites flexuosa,Favites,flexuosa,NT,Jan-08,,
-370,Favites halicora,Favites,halicora,NT,Jan-08,,
-371,Favites magnistellata,Favites,magnistellata,NE,N/A,,
-372,Favites magnistellata,Montastrea,magnistellata,NT,Jan-08,,
-373,Favites melicerum,Favites,bestae,NT,Jan-08,,Different species
-374,Favites micropentagonus,Favites,micropentagona,NT,Jan-08,,Spelling
-375,Favites paraflexuosus,Favites,paraflexuosa,NT,Jan-08,,Spelling
-376,Favites pentagona,Favites,pentagona,LC,Jan-08,,
-377,Favites rotundata,Favia,rotundata,NT,Jan-08,,Different genus
-378,Favites spinosa,Favites,spinosa,VU,Jan-08,,
-379,Favites stylifera,Favites,stylifera,NT,Jan-08,,
-380,Favites valenciennesi,Favites,valenciennesi,NE,N/A,,
-381,Favites valenciennesi,Montastrea,valenciennesi,NT,Jan-08,,
-382,Favites vasta,Favites,vasta,NT,Jan-08,,
-383,Fimbriaphyllia ancora,Euphyllia,ancora,VU,Jan-08,,Different genus
-384,Fimbriaphyllia divisa,Euphyllia,divisa,NT,Jan-08,,Different genus
-385,Fimbriaphyllia paraancora,Euphyllia,paraancora,VU,Jan-08,,Different genus
-386,Fimbriaphyllia paradivisa,Euphyllia,paradivisa,VU,Jan-08,,Different genus
-387,Fimbriaphyllia yaeyamensis,Euphyllia,yaeyamaensis,NT,Jan-08,,Different genus
-388,Fungia fungites,Fungia,fungites,NT,Jan-08,,
-389,Fungia puishani,Fungia,puishani,DD,Jan-08,,
-390,Galaxea acrhelia,Galaxea,acrhelia,VU,Jan-08,,
-391,Galaxea astreata,Galaxea,astreata,VU,Jan-08,,
-392,Galaxea cryptoramosa,Galaxea,cryptoramosa,VU,Jan-08,,
-393,Galaxea fascicularis,Galaxea,fascicularis,NT,Jan-08,,
-394,Galaxea horrescens,Galaxea,horrescens,LC,Jan-08,,
-395,Galaxea longisepta,Galaxea,longisepta,NT,Jan-08,,
-396,Galaxea paucisepta,Galaxea,paucisepta,NT,Jan-08,,
-397,Gardineroseris planulata,Gardineroseris,planulata,LC,Jan-08,,
-398,Goniastrea columella,Goniastrea,columella,NT,Jan-08,,
-399,Goniastrea edwardsi,Goniastrea,edwardsi,LC,Jan-08,,
-400,Goniastrea favulus,Goniastrea,favulus,NT,Jan-08,,
-401,Goniastrea minuta,Goniastrea,minuta,NT,Jan-08,,
-402,Goniastrea pectinata,Goniastrea,pectinata,LC,Jan-08,,
-403,Goniastrea ramosa,Goniastrea,ramosa,VU,Jan-08,,
-404,Goniastrea retiformis,Goniastrea,retiformis,LC,Jan-08,,
-405,Goniastrea stelligera,Favia,stelligera,NT,Jan-08,,Different genus
-406,Goniastrea thecata,Goniastrea,thecata,NT,Jan-08,,
-407,Goniopora albiconus,Goniopora,albiconus,VU,Jan-08,,
-408,Goniopora burgosi,Goniopora,burgosi,VU,Jan-08,,
-409,Goniopora cellulosa,Goniopora,cellulosa,VU,Jan-08,,
-410,Goniopora ciliatus,Goniopora,ciliatus,LC,Jan-08,,
-411,Goniopora columna,Goniopora,columna,NT,Jan-08,,
-412,Goniopora diminuta,Micromussa,diminuta,DD,Jan-08,,Different genus
-413,Goniopora djiboutiensis,Goniopora,djiboutiensis,LC,Jan-08,,
-414,Goniopora eclipsensis,Goniopora,eclipsensis,LC,Jan-08,,
-415,Goniopora fruticosa,Goniopora,fruticosa,LC,Jan-08,,
-416,Goniopora lobata,Goniopora,lobata,NT,Jan-08,,
-417,Goniopora norfolkensis,Goniopora,norfolkensis,LC,Jan-08,,
-418,Goniopora paliformis,Poritipora,paliformis,VU,Jan-08,,Different genus
-419,Goniopora palmensis,Goniopora,palmensis,LC,Jan-08,,
-420,Goniopora pandoraensis,Goniopora,pandoraensis,LC,Jan-08,,
-421,Goniopora pearsoni,Goniopora,pearsoni,LC,Jan-08,,
-422,Goniopora pedunculata,Goniopora,minor,NT,Jan-08,,Different genus
-423,Goniopora pendulus,Goniopora,pendulus,LC,Jan-08,,
-424,Goniopora planulata,Goniopora,planulata,VU,Jan-08,,
-425,Goniopora polyformis,Goniopora,polyformis,VU,Jan-08,,
-426,Goniopora savignyi,Goniopora,savignyi,LC,Jan-08,,
-427,Goniopora somaliensis,Goniopora,somaliensis,LC,Jan-08,,
-428,Goniopora stokesi,Goniopora,stokesi,NT,Jan-08,,
-429,Goniopora sultani,Goniopora,sultani,LC,Jan-08,,
-430,Goniopora tantillus,Calathiscus,tantillus,DD,Jan-08,,Different genus
-431,Goniopora tenella,Goniopora,tenella,NT,Jan-08,,
-432,Goniopora tenuidens,Goniopora,tenuidens,LC,Jan-08,,
-433,Gyrosmilia interrupta,Gyrosmilia,interrupta,LC,Jan-08,,
-434,Halomitra clavator,Halomitra,clavator,VU,Jan-08,,
-435,Halomitra pileus,Halomitra,pileus,LC,Jan-08,,
-436,Heliofungia actiniformis,Heliofungia,actiniformis,VU,Jan-08,,
-437,Heliofungia fralinae,Fungia,fralinae,LC,Jan-08,,Different genus
-438,Heliopora coerulea,Heliopora,coerulea,VU,Jan-08,,
-439,Helioseris cucullata,Helioseris,cucullata,LC,Jan-08,,
-440,Herpolitha limax,Herpolitha,limax,LC,Jan-08,,
-441,Heterocyathus aequicostatus,Heterocyathus,aequicostatus,LC,Jan-08,,
-442,Heterocyathus alternatus,Heterocyathus,alternatus,LC,Jan-08,,
-443,Heterocyathus sulcatus,Heterocyathus,sulcatus,LC,Jan-08,,
-444,Heteropsammia cochlea,Heteropsammia,cochlea,LC,Jan-08,,
-445,Heteropsammia eupsammides,Heteropsammia,eupsammides,NT,Jan-08,,
-446,Heteropsammia moretonensis,Heteropsammia,moretonensis,NE,N/A,,
-447,Homophyllia australis,Homophyllia,australis,NE,N/A,,
-448,Homophyllia australis,Scolymia,australis,LC,Jan-08,,
-449,Homophyllia bowerbanki,Acanthastrea,bowerbanki,VU,Jan-08,,Different genus
-450,Homophyllia bowerbanki,Acanthastrea,hillae,NT,Jan-08,,Synonym to other species
-451,Horastrea indica,Horastrea,indica,VU,Jan-08,,
-452,Hydnophora bonsai,Hydnophora,bonsai,EN,Jan-08,,
-453,Hydnophora exesa,Hydnophora,exesa,NT,Jan-08,,
-454,Hydnophora grandis,Hydnophora,grandis,LC,Jan-08,,
-455,Hydnophora microconos,Hydnophora,microconos,NT,Jan-08,,
-456,Hydnophora pilosa,Hydnophora,pilosa,LC,Jan-08,,
-457,Hydnophora rigida,Hydnophora,rigida,LC,Jan-08,,
-458,Isophyllia rigida,Isophyllia,rigida,NE,N/A,,
-459,Isophyllia rigida,Isophyllastrea,rigida,LC,Jan-08,,
-460,Isophyllia sinuosa,Isophyllia,sinuosa,LC,Jan-08,,
-461,Isopora brueggemanni,Acropora,meridiana,DD,Jan-08,,Synonym to other species
-462,Isopora brueggemanni,Isopora,brueggemanni,VU,Jan-08,,
-463,Isopora crateriformis,Isopora,crateriformis,VU,Jan-08,,
-464,Isopora cuneata,Isopora,cuneata,VU,Jan-08,,
-465,Isopora elizabethensis,Isopora,elizabethensis,DD,Jan-08,,
-466,Isopora palifera,Isopora,palifera,NT,Jan-08,,
-467,Isopora togianensis,Isopora,togianensis,EN,Jan-08,,
-468,Leptastrea aequalis,Leptastrea,aequalis,VU,Jan-08,,
-469,Leptastrea bewickensis,Leptastrea,bewickensis,NT,Jan-08,,
-470,Leptastrea bottae,Leptastrea,bottae,NT,Jan-08,,
-471,Leptastrea inaequalis,Leptastrea,inaequalis,NT,Jan-08,,
-472,Leptastrea pruinosa,Leptastrea,pruinosa,LC,Jan-08,,
-473,Leptastrea purpurea,Leptastrea,purpurea,LC,Jan-08,,
-474,Leptastrea transversa,Leptastrea,transversa,LC,Jan-08,,
-475,Leptoria irregularis,Leptoria,irregularis,VU,Jan-08,,
-476,Leptoria phrygia,Leptoria,phrygia,NT,Jan-08,,
-477,Leptoseris amitoriensis,Leptoseris,amitoriensis,NT,Jan-08,,
-478,Leptoseris cailleti,Leptoseris,cailleti,LC,Jan-08,,
-479,Leptoseris explanata,Leptoseris,explanata,LC,Jan-08,,
-480,Leptoseris foliosa,Leptoseris,foliosa,LC,Jan-08,,
-481,Leptoseris gardineri,Leptoseris,gardineri,LC,Jan-08,,
-482,Leptoseris hawaiiensis,Leptoseris,hawaiiensis,LC,Jan-08,,
-483,Leptoseris incrustans,Leptoseris,incrustans,VU,Jan-08,,
-484,Leptoseris kalayaanensis,Leptoseris,kalayaanensis,NE,N/A,,
-485,Leptoseris mycetoseroides,Leptoseris,mycetoseroides,LC,Jan-08,,
-486,Leptoseris papyracea,Leptoseris,papyracea,LC,Jan-08,,
-487,Leptoseris scabra,Leptoseris,scabra,LC,Jan-08,,
-488,Leptoseris solida,Leptoseris,solida,LC,Jan-08,,
-489,Leptoseris striata,Leptoseris,striata,NT,Jan-08,,
-490,Leptoseris tubulifera,Leptoseris,tubulifera,LC,Jan-08,,
-491,Leptoseris yabei,Leptoseris,yabei,VU,Jan-08,,
-492,Lithophyllon concinna,Fungia,concinna,LC,Jan-08,,Different genus
-493,Lithophyllon ranjithi,Lithophyllon,ranjithi,EN,Jan-08,,
-494,Lithophyllon repanda,Fungia,repanda,LC,Jan-08,,
-495,Lithophyllon scabra,Fungia,scabra,LC,Jan-08,,
-496,Lithophyllon spinifer,Fungia,spinifer,LC,Jan-08,,
-497,Lithophyllon spinifer,Lithophyllon,spinifer,NE,N/A,,
-498,Lithophyllon undulatum,Lithophyllon,undulatum,NT,Jan-08,,
-499,Lobactis scutaria,Fungia,scutaria,LC,Jan-08,,
-500,Lobophyllia agaricia,Symphyllia,agaricia,LC,Jan-08,,
-501,Lobophyllia corymbosa,Lobophyllia,corymbosa,LC,Jan-08,,
-502,Lobophyllia dentata,Lobophyllia,dentatus,VU,Jan-08,,
-503,Lobophyllia diminuta,Lobophyllia,diminuta,VU,Jan-08,,
-504,Lobophyllia erythraea,Symphyllia,erythraea,LC,Jan-08,,
-505,Lobophyllia flabelliformis,Lobophyllia,flabelliformis,VU,Jan-08,,
-506,Lobophyllia hassi,Symphyllia,hassi,VU,Jan-08,,
-507,Lobophyllia hataii,Lobophyllia,hataii,LC,Jan-08,,
-508,Lobophyllia hemprichii,Lobophyllia,hemprichii,LC,Jan-08,,
-509,Lobophyllia ishigakiensis,Acanthastrea,ishigakiensis,VU,Jan-08,,
-510,Lobophyllia radians,Symphyllia,radians,LC,Jan-08,,
-511,Lobophyllia recta,Symphyllia,recta,LC,Jan-08,,
-512,Lobophyllia robusta,Lobophyllia,robusta,LC,Jan-08,,
-513,Lobophyllia rowleyensis,Australomussa,rowleyensis,NT,Jan-08,,
-514,Lobophyllia serrata,Lobophyllia,serratus,EN,Jan-08,,
-515,Lobophyllia valenciennesii,Symphyllia,valenciennesii,LC,Jan-08,,
-516,Lobophyllia vitiensis,Lobophyllia,vitiensis,NE,N/A,,
-517,Lobophyllia vitiensis,Scolymia,vitiensis,NT,Jan-08,,
-518,Madracis asanoi,Madracis,asanoi,DD,01/01/2008,,
-519,Madracis asperula,Madracis,asperula,DD,01/01/2008,,
-520,Madracis auretenra,Madracis,auretenra,LC,Jan-08,,
-521,Madracis carmabi,Madracis,carmabi,DD,01/01/2008,,
-522,Madracis decactis,Madracis,decactis,LC,01/01/2008,,
-523,Madracis formosa,Madracis,formosa,LC,01/01/2008,,
-524,Madracis kirbyi,Madracis,kirbyi,LC,01/01/2008,,
-525,Madracis myriaster,Madracis,myriaster,NE,N/A,,
-526,Madracis pharensis,Madracis,pharensis,LC,01/01/2008,,
-527,Madracis senaria,Madracis,senaria,LC,01/01/2008,,
-528,Manicina areolata,Manicina,areolata,LC,01/01/2008,,
-529,Meandrina brasiliensis,Meandrina,braziliensis,DD,Jan-08,,
-530,Meandrina brasiliensis,Meandrina,brasiliensis,DD,01/01/2008,,
-531,Meandrina danae,Meandrina,danae,LC,01/01/2008,,
-532,Meandrina jacksoni,Meandrina,jacksoni,NE,N/A,,
-533,Meandrina meandrites,Meandrina,meandrites,LC,01/01/2008,,
-534,Merulina ampliata,Merulina,ampliata,LC,01/01/2008,,
-535,Merulina scabricula,Merulina,scabricula,LC,01/01/2008,,
-536,Merulina scheeri,Merulina,scheeri,LC,01/01/2008,,
-537,Merulina triangularis,Paraclavarina,triangularis,NT,Jan-08,,
-538,Micromussa amakusensis,Micromussa,amakusensis,NT,01/01/2008,,
-539,Micromussa lordhowensis,Acanthastrea,lordhowensis,NT,Jan-08,,
-540,Micromussa multipunctata,Micromussa,multipunctata,NE,N/A,,
-541,Micromussa multipunctata,Montastrea,multipunctata,VU,Jan-08,,
-542,Micromussa regularis,Acanthastrea,regularis,VU,Jan-08,,
-543,Millepora alcicornis,Millepora,alcicornis,LC,Jan-08,,
-544,Millepora boschmai,Millepora,boschmai,CR,Jan-08,,
-545,Millepora braziliensis,Millepora,braziliensis,DD,Jan-08,,
-546,Millepora complanata,Millepora,complanata,LC,Jan-08,,
-547,Millepora dichotoma,Millepora,dichotoma,LC,Jan-08,,
-548,Millepora exaesa,Millepora,exaesa,LC,Jan-08,,
-549,Millepora exaesa,Millepora,tuberosa,EN,Jan-08,,
-550,Millepora foveolata,Millepora,foveolata,VU,Jan-08,,
-551,Millepora intricata,Millepora,intricata,LC,Jan-08,,
-552,Millepora intricata,Millepora,murrayi,NT,Jan-08,,
-553,Millepora latifolia,Millepora,latifolia,VU,Jan-08,,
-554,Millepora nitida,Millepora,nitida,DD,Jan-08,,
-555,Millepora platyphylla,Millepora,platyphylla,LC,Jan-08,,
-556,Millepora squarrosa,Millepora,squarrosa,LC,Jan-08,,
-557,Millepora squarrosa,Millepora,striata,EN,Jan-08,,
-558,Millepora tenera,Millepora,tenera,LC,Jan-08,,
-559,Montastraea cavernosa,Montastraea,cavernosa,LC,01/01/2008,,
-560,Montigyra kenti,Montigyra,kenti,DD,01/01/2008,,
-561,Montipora aequituberculata,Montipora,aequituberculata,LC,01/01/2008,,
-562,Montipora altasepta,Montipora,altasepta,VU,01/01/2008,,
-563,Montipora angulata,Montipora,angulata,VU,01/01/2008,,
-564,Montipora aspergillus,Montipora,aspergillus,DD,01/01/2008,,
-565,Montipora australiensis,Montipora,australiensis,VU,01/01/2008,,
-566,Montipora bilaminata,Montipora,bilaminata,NE,N/A,,
-567,Montipora cactus,Montipora,cactus,VU,01/01/2008,,
-568,Montipora calcarea,Montipora,calcarea,VU,01/01/2008,,
-569,Montipora caliculata,Montipora,caliculata,VU,01/01/2008,,
-570,Montipora capitata,Montipora,capitata,NT,01/01/2008,,
-571,Montipora capricornis,Montipora,capricornis,VU,01/01/2008,,
-572,Montipora carinata,Montipora,carinata,NE,N/A,,
-573,Montipora cebuensis,Montipora,cebuensis,VU,01/01/2008,,
-574,Montipora circumvallata,Montipora,circumvallata,LC,01/01/2008,,
-575,Montipora cocosensis,Montipora,cocosensis,VU,01/01/2008,,
-576,Montipora confusa,Montipora,confusa,NT,01/01/2008,,
-577,Montipora corbettensis,Montipora,corbettensis,VU,01/01/2008,,
-578,Montipora crassituberculata,Montipora,crassituberculata,VU,01/01/2008,,
-579,Montipora cryptus,Montipora,cryptus,NT,01/01/2008,,
-580,Montipora danae,Montipora,danae,LC,01/01/2008,,
-581,Montipora delicatula,Montipora,delicatula,VU,01/01/2008,,
-582,Montipora digitata,Montipora,digitata,LC,01/01/2008,,
-583,Montipora dilatata,Montipora,dilatata,EN,01/01/2008,,
-584,Montipora echinata,Montipora,echinata,DD,01/01/2008,,
-585,Montipora efflorescens,Montipora,efflorescens,NT,01/01/2008,,
-586,Montipora effusa,Montipora,effusa,NT,01/01/2008,,
-587,Montipora flabellata,Montipora,flabellata,VU,01/01/2008,,
-588,Montipora florida,Montipora,florida,VU,01/01/2008,,
-589,Montipora floweri,Montipora,floweri,LC,01/01/2008,,
-590,Montipora foliosa,Montipora,foliosa,NT,01/01/2008,,
-591,Montipora foveolata,Montipora,foveolata,NT,01/01/2008,,
-592,Montipora friabilis,Montipora,friabilis,VU,01/01/2008,,
-593,Montipora gaimardi,Montipora,gaimardi,VU,01/01/2008,,
-594,Montipora grisea,Montipora,grisea,LC,01/01/2008,,
-595,Montipora hemispherica,Montipora,hemispherica,DD,01/01/2008,,
-596,Montipora hispida,Montipora,hispida,LC,01/01/2008,,
-597,Montipora hispida,Montipora,hirsuta,NT,Jan-08,,
-598,Montipora hodgsoni,Montipora,hodgsoni,VU,01/01/2008,,
-599,Montipora hoffmeisteri,Montipora,hoffmeisteri,LC,01/01/2008,,
-600,Montipora incrassata,Montipora,incrassata,NT,01/01/2008,,
-601,Montipora informis,Montipora,informis,LC,01/01/2008,,
-602,Montipora kellyi,Montipora,kellyi,DD,01/01/2008,,
-603,Montipora lobulata,Montipora,lobulata,VU,01/01/2008,,
-604,Montipora mactanensis,Montipora,mactanensis,VU,01/01/2008,,
-605,Montipora malampaya,Montipora,malampaya,VU,01/01/2008,,
-606,Montipora meandrina,Montipora,meandrina,VU,01/01/2008,,
-607,Montipora millepora,Montipora,millepora,LC,01/01/2008,,
-608,Montipora mollis,Montipora,mollis,LC,01/01/2008,,
-609,Montipora monasteriata,Montipora,monasteriata,LC,01/01/2008,,
-610,Montipora myriophthalma,Montipora,myriophthalma,NE,N/A,,
-611,Montipora niugini,Montipora,niugini,NT,01/01/2008,,
-612,Montipora nodosa,Montipora,nodosa,NT,01/01/2008,,
-613,Montipora orientalis,Montipora,orientalis,VU,01/01/2008,,
-614,Montipora pachytuberculata,Montipora,pachytuberculata,DD,01/01/2008,,
-615,Montipora palawanensis,Montipora,palawanensis,NT,01/01/2008,,
-616,Montipora patula,Montipora,patula,VU,01/01/2008,,
-617,Montipora peltiformis,Montipora,peltiformis,NT,01/01/2008,,
-618,Montipora porites,Montipora,porites,NT,01/01/2008,,
-619,Montipora samarensis,Montipora,samarensis,VU,01/01/2008,,
-620,Montipora saudii,Montipora,saudii,NT,01/01/2008,,
-621,Montipora setosa,Montipora,setosa,EN,01/01/2008,,
-622,Montipora spongiosa,Montipora,spongiosa,LC,01/01/2008,,
-623,Montipora spongodes,Montipora,spongodes,LC,01/01/2008,,
-624,Montipora spumosa,Montipora,spumosa,LC,01/01/2008,,
-625,Montipora stellata,Montipora,stellata,LC,01/01/2008,,
-626,Montipora stilosa,Montipora,stilosa,VU,01/01/2008,,
-627,Montipora taiwanensis,Montipora,taiwanensis,DD,01/01/2008,,
-628,Montipora tuberculosa,Montipora,tuberculosa,LC,01/01/2008,,
-629,Montipora turgescens,Montipora,turgescens,LC,01/01/2008,,
-630,Montipora turtlensis,Montipora,turtlensis,VU,01/01/2008,,
-631,Montipora undata,Montipora,undata,NT,01/01/2008,,
-632,Montipora vaughani,Montipora,vaughani,DD,Jan-08,,
-633,Montipora venosa,Montipora,venosa,DD,01/01/2008,,
-634,Montipora verrilli,Montipora,verrilli,NT,01/01/2008,,
-635,Montipora verrucosa,Montipora,verrucosa,DD,01/01/2008,,
-636,Montipora verruculosa,Montipora,verruculosus,LC,Jan-08,,
-637,Montipora vietnamensis,Montipora,vietnamensis,VU,01/01/2008,,
-638,Moseleya latistellata,Moseleya,latistellata,VU,01/01/2008,,
-639,Mussa angulosa,Mussa,angulosa,LC,01/01/2008,,
-640,Mussismilia braziliensis,Mussismilia,braziliensis,DD,01/01/2008,,
-641,Mussismilia harttii,Mussismilia,harttii,DD,01/01/2008,,
-642,Mussismilia hispida,Mussismilia,hispida,DD,01/01/2008,,
-643,Mussismilia leptophylla,Favia,leptophylla,DD,Jan-08,,
-644,Mycedium elephantotus,Mycedium,elephantotus,LC,01/01/2008,,
-645,Mycedium mancaoi,Mycedium,mancaoi,LC,01/01/2008,,
-646,Mycedium robokaki,Mycedium,robokaki,LC,01/01/2008,,
-647,Mycedium spina,Mycedium,spina,DD,Jan-08,,
-648,Mycedium steeni,Mycedium,steeni,VU,01/01/2008,,
-649,Mycedium umbra,Mycedium,umbra,LC,01/01/2008,,
-650,Mycetophyllia aliciae,Mycetophyllia,aliciae,LC,01/01/2008,,
-651,Mycetophyllia danaana,Mycetophyllia,danaana,LC,01/01/2008,,
-652,Mycetophyllia ferox,Mycetophyllia,ferox,VU,01/01/2008,,
-653,Mycetophyllia lamarckiana,Mycetophyllia,lamarckiana,LC,01/01/2008,,
-654,Mycetophyllia reesi,Mycetophyllia,reesi,DD,01/01/2008,,
-655,Nemenzophyllia turbida,Nemenzophyllia,turbida,VU,01/01/2008,,
-656,nomen nudum,Acropora,khayranensis,DD,Jan-08,,nomen nudum
-657,nomen nudum,Acropora,paragemmifera,DD,Jan-08,,
-658,nomen nudum,Echinopora,grandicula,DD,Jan-08,,
-659,nomen nudum,Porites,ericacea,DD,Jan-08,,
-660,nomen nudum,Psammocora,interstinctus,DD,Jan-08,,
-661,nomen nudum,Stylocoeniella,muscosus,DD,Jan-08,,
-662,Not in WoRMS,Isopora,cylindrica,DD,Jan-08,,"According to WoRMS, ""Acropora cylindrica"" exists and is a synonym to ""Isopora togianensis""."
-663,Oculina diffusa,Oculina,diffusa,LC,01/01/2008,,
-664,Oculina patagonica,Oculina,patagonica,LC,01/01/2008,,
-665,Oculina robusta,Oculina,robusta,DD,01/01/2008,,
-666,Oculina tenella,Oculina,tenella,DD,01/01/2008,Delicate ivory bush coarl,
-667,Oculina valenciennesi,Oculina,valenciennesi,DD,01/01/2008,,
-668,Oculina varicosa,Oculina,varicosa,VU,01/01/2008,,
-669,Orbicella annularis,Montastraea,annularis,EN,Jan-08,,
-670,Orbicella annularis,Orbicella,annularis,EN,01/01/2008,,
-671,Orbicella faveolata,Montastraea,faveolata,EN,Jan-08,,
-672,Orbicella faveolata,Orbicella,faveolata,EN,01/01/2008,,
-673,Orbicella franksi,Montastraea,franksi,VU,Jan-08,,
-674,Orbicella franksi,Orbicella,franksi,VU,01/01/2008,,
-675,Oulastrea crispata,Oulastrea,crispata,LC,01/01/2008,,
-676,Oulophyllia bennettae,Oulophyllia,bennettae,NT,01/01/2008,,
-677,Oulophyllia crispa,Oulophyllia,crispa,NT,01/01/2008,,
-678,Oulophyllia levis,Oulophyllia,levis,LC,01/01/2008,,
-679,Oxypora convoluta,Oxypora,convoluta,DD,01/01/2008,,
-680,Oxypora crassispinosa,Oxypora,crassispinosa,LC,01/01/2008,,
-681,Oxypora echinata,Echinophyllia,echinata,LC,Jan-08,,
-682,Oxypora egyptensis,Oxypora,egyptensis,DD,01/01/2008,,
-683,Oxypora lacera,Oxypora,lacera,LC,01/01/2008,,
-684,Pachyseris foliosa,Pachyseris,foliosa,LC,01/01/2008,,
-685,Pachyseris gemmae,Pachyseris,gemmae,NT,01/01/2008,,
-686,Pachyseris inattesa,Pachyseris,inattesa,NE,N/A,,
-687,Pachyseris involuta,Pachyseris,involuta,VU,01/01/2008,,
-688,Pachyseris rugosa,Pachyseris,rugosa,VU,01/01/2008,,
-689,Pachyseris speciosa,Pachyseris,speciosa,LC,01/01/2008,,
-690,Palauastrea ramosa,Palauastrea,ramosa,NT,01/01/2008,,
-691,Paragoniastrea australensis,Goniastrea,australensis,LC,Jan-08,,
-692,Paragoniastrea deformis,Goniastrea,deformis,VU,Jan-08,,
-693,Paragoniastrea russelli,Favites,russelli,NT,Jan-08,,
-694,Paramontastraea peresi,Goniastrea,peresi,NT,Jan-08,,
-695,Paramontastraea salebrosa,Montastrea,salebrosa,VU,Jan-08,,
-696,Paramontastraea salebrosa,Paramontastraea,salebrosa,NE,N/A,,
-697,Paramontastraea serageldini,Montastrea,serageldini,VU,Jan-08,,
-698,Paramontastraea serageldini,Paramontastraea,serageldini,NE,N/A,,
-699,Pavona bipartita,Pavona,bipartita,VU,01/01/2008,,
-700,Pavona cactus,Pavona,cactus,VU,01/01/2008,,
-701,Pavona chiriquiensis,Pavona,chiriquiensis,LC,01/01/2008,,
-702,Pavona clavus,Pavona,clavus,LC,01/01/2008,,
-703,Pavona danai,Pavona,danai,VU,01/01/2008,,
-704,Pavona decussata,Pavona,decussata,VU,01/01/2008,,
-705,Pavona diffluens,Pavona,diffluens,VU,01/01/2008,,
-706,Pavona duerdeni,Pavona,duerdeni,LC,01/01/2008,,
-707,Pavona explanulata,Pavona,explanulata,LC,01/01/2008,,
-708,Pavona frondifera,Pavona,frondifera,LC,01/01/2008,,
-709,Pavona gigantea,Pavona,gigantea,LC,01/01/2008,,
-710,Pavona maldivensis,Pavona,maldivensis,LC,01/01/2008,,
-711,Pavona minuta,Pavona,minuta,NT,01/01/2008,,
-712,Pavona varians,Pavona,varians,LC,01/01/2008,,
-713,Pavona venosa,Pavona,venosa,VU,01/01/2008,,
-714,Pavona xarifae,Pavona,xarifae,DD,01/01/2008,,
-715,Pectinia africana,Pectinia,africanus,VU,Jan-08,,
-716,Pectinia alcicornis,Pectinia,alcicornis,VU,01/01/2008,,
-717,Pectinia crassa,Pectinia,crassa,DD,01/01/2008,,
-718,Pectinia elongata,Pectinia,elongata,NT,01/01/2008,,
-719,Pectinia lactuca,Pectinia,lactuca,VU,01/01/2008,,
-720,Pectinia maxima,Pectinia,maxima,EN,01/01/2008,,
-721,Pectinia paeonia,Pectinia,paeonia,NT,01/01/2008,,
-722,Pectinia pygmaea,Pectinia,pygmaeus,NT,Jan-08,,
-723,Pectinia teres,Pectinia,teres,NT,01/01/2008,,
-724,Physogyra lichtensteini,Physogyra,lichtensteini,VU,01/01/2008,,
-725,Physophyllia ayleni,Pectinia,ayleni,NT,Jan-08,,
-726,Platygyra acuta,Platygyra,acuta,NT,01/01/2008,,
-727,Platygyra carnosa,Platygyra,carnosus,NT,Jan-08,,
-728,Platygyra contorta,Platygyra,contorta,LC,01/01/2008,,
-729,Platygyra crosslandi,Platygyra,crosslandi,NT,01/01/2008,,
-730,Platygyra daedalea,Platygyra,daedalea,LC,01/01/2008,,
-731,Platygyra lamellina,Platygyra,lamellina,NT,01/01/2008,,
-732,Platygyra pini,Platygyra,pini,LC,01/01/2008,,
-733,Platygyra ryukyuensis,Platygyra,ryukyuensis,NT,01/01/2008,,
-734,Platygyra sinensis,Platygyra,sinensis,LC,01/01/2008,,
-735,Platygyra verweyi,Platygyra,verweyi,NT,01/01/2008,,
-736,Platygyra yaeyamaensis,Platygyra,yaeyamaensis,VU,01/01/2008,,
-737,Plerogyra cauliformis,Plerogyra,cauliformis,DD,01/01/2008,,
-738,Plerogyra diabolotus,Plerogyra,diabolotus,DD,Jan-08,,
-739,Plerogyra discus,Plerogyra,discus,VU,01/01/2008,,
-740,Plerogyra multilobata,Plerogyra,multilobata,DD,01/01/2008,,
-741,Plerogyra simplex,Plerogyra,simplex,NT,01/01/2008,,
-742,Plerogyra sinuosa,Plerogyra,sinuosa,NT,01/01/2008,,
-743,Plesiastrea versipora,Plesiastrea,versipora,LC,01/01/2008,,
-744,Pleuractis granulosa,Fungia,granulosa,LC,Jan-08,,
-745,Pleuractis gravis,Pleuractis,gravis,NE,N/A,,
-746,Pleuractis moluccensis,Fungia,moluccensis,LC,Jan-08,,
-747,Pleuractis paumotensis,Fungia,paumotensis,LC,Jan-08,,
-748,Pleuractis seychellensis,Fungia,seychellensis,VU,Jan-08,,
-749,Pleuractis taiwanensis,Fungia,taiwanensis,VU,Jan-08,,
-750,Pocillopora acuta,Pocillopora,acuta,NE,N/A,,
-751,Pocillopora aliciae,Pocillopora,aliciae,NE,N/A,,
-752,Pocillopora ankeli,Pocillopora,ankeli,VU,01/01/2008,,
-753,Pocillopora bairdi,Pocillopora,bairdi,NE,N/A,,
-754,Pocillopora brevicornis,Pocillopora,setichelli,LC,Jan-08,,different spelling AND species
-755,Pocillopora brevicornis,Pocillopora,brevicornis,NE,N/A,,
-756,Pocillopora capitata,Pocillopora,capitata,LC,01/01/2008,,
-757,Pocillopora damicornis,Pocillopora,damicornis,LC,01/01/2008,Cauliflower Coral,
-758,Pocillopora effusa,Pocillopora,effusus,DD,Jan-08,,
-759,Pocillopora elegans,Pocillopora,elegans,VU,01/01/2008,,
-760,Pocillopora fungiformis,Pocillopora,fungiformis,EN,01/01/2008,,
-761,Pocillopora grandis,Pocillopora,eydouxi,NT,Jan-08,,
-762,Pocillopora indiania,Pocillopora,indiania,VU,01/01/2008,,
-763,Pocillopora inflata,Pocillopora,inflata,VU,Jan-08,,
-764,Pocillopora kelleheri,Pocillopora,kelleheri,LC,01/01/2008,,
-765,Pocillopora ligulata,Pocillopora,ligulata,LC,01/01/2008,,
-766,Pocillopora meandrina,Pocillopora,meandrina,LC,01/01/2008,,
-767,Pocillopora molokensis,Pocillopora,molokensis,DD,01/01/2008,,
-768,Pocillopora verrucosa,Pocillopora,danae,VU,Jan-08,,
-769,Pocillopora verrucosa,Pocillopora,verrucosa,LC,01/01/2008,Rasp Coral,
-770,Pocillopora woodjonesi,Pocillopora,woodjonesi,LC,01/01/2008,,
-771,Pocillopora zelli,Pocillopora,zelli,LC,01/01/2008,,
-772,Podabacia crustacea,Podabacia,crustacea,LC,Jan-08,,
-773,Podabacia kunzmanni,Podabacia,kunzmanni,NE,N/A,,
-774,Podabacia lankaensis,Podabacia,lankaensis,EN,01/01/2008,,
-775,Podabacia motuporensis,Podabacia,motuporensis,NT,01/01/2008,,
-776,Podabacia sinai,Podabacia,sinai,DD,01/01/2008,,
-777,Polycyathus chaishanensis,Polycyathus,chaishanensis,NE,N/A,,
-778,Polycyathus isabela,Polycyathus,isabela,VU,01/01/2008,,
-779,Polyphyllia novaehiberniae,Polyphyllia,novaehiberniae,NT,01/01/2008,,
-780,Polyphyllia talpina,Polyphyllia,talpina,LC,01/01/2008,,
-781,Porites annae,Porites,annae,NT,01/01/2008,,
-782,Porites aranetai,Porites,aranetai,VU,01/01/2008,,
-783,Porites arnaudi,Porites,arnaudi,LC,01/01/2008,,
-784,Porites astreoides,Porites,astreoides,LC,01/01/2008,,
-785,Porites attenuata,Porites,attenuata,VU,01/01/2008,,
-786,Porites australiensis,Porites,australiensis,LC,01/01/2008,,
-787,Porites baueri,Porites,baueri,DD,01/01/2008,,
-788,Porites branneri,Porites,branneri,NT,01/01/2008,,
-789,Porites brighami,Porites,brighami,LC,01/01/2008,,
-790,Porites cocosensis,Porites,cocosensis,VU,01/01/2008,,
-791,Porites colonensis,Porites,colonensis,DD,01/01/2008,,
-792,Porites columnaris,Porites,columnaris,LC,01/01/2008,,
-793,Porites compressa,Porites,compressa,LC,01/01/2008,,
-794,Porites cumulatus,Porites,cumulatus,VU,01/01/2008,,
-795,Porites cylindrica,Porites,cylindrica,NT,01/01/2008,,
-796,Porites decasepta,Porites,decasepta,DD,01/01/2008,,
-797,Porites deformis,Porites,deformis,NT,01/01/2008,,
-798,Porites densa,Porites,densa,NT,01/01/2008,,
-799,Porites desilveri,Porites,desilveri,EN,01/01/2008,,
-800,Porites divaricata,Porites,divaricata,LC,01/01/2008,,
-801,Porites duerdeni,Porites,duerdeni,LC,01/01/2008,,
-802,Porites echinulata,Porites,echinulata,NT,01/01/2008,,
-803,Porites eridani,Porites,eridani,EN,01/01/2008,,
-804,Porites evermanni,Porites,evermanni,DD,01/01/2008,,
-805,Porites flavus,Porites,flavus,DD,01/01/2008,,
-806,Porites fontanesii,Porites,fontanesii,NE,N/A,,
-807,Porites furcata,Porites,furcata,LC,01/01/2008,,
-808,Porites gabonensis,Porites,bernardi,LC,Jan-08,,
-809,Porites harrisoni,Porites,harrisoni,NT,01/01/2008,,
-810,Porites hawaiiensis,Porites,hawaiiensis,NE,N/A,,
-811,Porites heronensis,Porites,heronensis,LC,01/01/2008,,
-812,Porites horizontalata,Porites,horizontalata,VU,01/01/2008,,
-813,Porites latistellata,Porites,latistella,LC,Jan-08,,
-814,Porites latistellata,Porites,latistellata,LC,01/01/2008,,
-815,Porites lichen,Porites,lichen,LC,01/01/2008,,
-816,Porites lobata,Porites,excavata,DD,Jan-08,,
-817,Porites lobata,Porites,lobata,NT,01/01/2008,,
-818,Porites lutea,Porites,lutea,LC,01/01/2008,,
-819,Porites mayeri,Porites,mayeri,LC,01/01/2008,,
-820,Porites monticulosa,Porites,monticulosa,LC,01/01/2008,,
-821,Porites murrayensis,Porites,murrayensis,NT,01/01/2008,,
-822,Porites myrmidonensis,Porites,myrmidonensis,LC,01/01/2008,,
-823,Porites napopora,Porites,napopora,VU,01/01/2008,,
-824,Porites negrosensis,Porites,negrosensis,NT,01/01/2008,,
-825,Porites nigrescens,Porites,nigrescens,VU,01/01/2008,,
-826,Porites nodifera,Porites,nodifera,LC,01/01/2008,,
-827,Porites okinawensis,Porites,okinawensis,VU,01/01/2008,,
-828,Porites ornata,Porites,ornata,EN,01/01/2008,,
-829,Porites panamensis,Porites,panamensis,LC,01/01/2008,,
-830,Porites porites,Porites,porites,LC,01/01/2008,,
-831,Porites profundus,Porites,profundus,LC,01/01/2008,,
-832,Porites pukoensis,Porites,pukoensis,CR,01/01/2008,,
-833,Porites randalli,Porites,randalli,NE,N/A,,
-834,Porites rugosus,Porites,rugosa,VU,Jan-08,,
-835,Porites rus,Porites,rus,LC,01/01/2008,,
-836,Porites sillimaniani,Porites,sillimaniana,VU,Jan-08,,
-837,Porites solida,Porites,solida,LC,01/01/2008,,
-838,Porites somaliensis,Porites,somaliensis,NT,01/01/2008,,
-839,Porites stephensoni,Porites,stephensoni,NT,01/01/2008,,
-840,Porites studeri,Porites,studeri,LC,01/01/2008,,
-841,Porites superfusa,Porites,superfusa,VU,01/01/2008,,
-842,Porites sverdrupi,Porites,sverdrupi,VU,01/01/2008,,
-843,Porites tuberculosus,Porites,tuberculosa,LC,Jan-08,,
-844,Porites vaughani,Porites,vaughani,LC,01/01/2008,,
-845,Psammocora albopicta,Psammocora,albopicta,DD,01/01/2008,,
-846,Psammocora contigua,Psammocora,contigua,NT,01/01/2008,,
-847,Psammocora contigua,Psammocora,decussata,DD,Jan-08,,
-848,Psammocora contigua,Psammocora,obtusangula,NT,Jan-08,,
-849,Psammocora contigua,Psammocora,ramosa,DD,Jan-08,,
-850,Psammocora digitata,Psammocora,digitata,NT,01/01/2008,,
-851,Psammocora haimiana,Psammocora,haimeana,LC,Jan-08,,spelling
-852,Psammocora nierstraszi,Psammocora,nierstraszi,LC,01/01/2008,,
-853,Psammocora nierstraszi,Psammocora,verrilli,DD,Jan-08,,
-854,Psammocora nierstraszi,Psammocora,vaughani,NT,Jan-08,,
-855,Psammocora profundacella,Psammocora,profundacella,LC,01/01/2008,,
-856,Psammocora profundacella,Psammocora,superficialis,LC,Jan-08,,
-857,Psammocora stellata,Psammocora,stellata,VU,01/01/2008,,
-858,Pseudodiploria clivosa,Diploria,clivosa,LC,Jan-08,,
-859,Pseudodiploria strigosa,Diploria,strigosa,LC,Jan-08,,
-860,Pseudosiderastrea formosa,Pseudosiderastrea,formosa,NE,N/A,,
-861,Pseudosiderastrea tayamai,Pseudosiderastrea,tayami,NT,01/01/2008,,
-862,Sandalolitha boucheti,Sandalolitha,boucheti,NE,N/A,,
-863,Sandalolitha dentata,Sandalolitha,dentata,LC,01/01/2008,,
-864,Sandalolitha robusta,Sandalolitha,robusta,LC,01/01/2008,,
-865,Scapophyllia cylindrica,Scapophyllia,cylindrica,LC,01/01/2008,,
-866,Schizoculina africana,Schizoculina,africana,DD,01/01/2008,,
-867,Schizoculina fissipara,Schizoculina,fissipara,DD,01/01/2008,,
-868,Sclerophyllia margariticola,Sclerophyllia,margariticola,NE,N/A,,
-869,Sclerophyllia maxima,Acanthastrea,maxima,NT,Jan-08,,
-870,Sclerophyllia maxima,Sclerophyllia,maxima,NE,N/A,,
-871,Scolymia cubensis,Scolymia,cubensis,LC,01/01/2008,,
-872,Scolymia lacera,Scolymia,lacera,LC,01/01/2008,,
-873,Scolymia wellsii,Scolymia,wellsi,DD,Jan-08,,
-874,Seriatopora aculeata,Seriatopora,aculeata,VU,01/01/2008,,
-875,Seriatopora caliendrum,Seriatopora,caliendrum,NT,01/01/2008,,
-876,Seriatopora dentritica,Seriatopora,dendritica,VU,Jan-08,,
-877,Seriatopora guttata,Seriatopora,guttatus,LC,Jan-08,,
-878,Seriatopora hystrix,Seriatopora,hystrix,LC,01/01/2008,,
-879,Seriatopora stellata,Seriatopora,stellata,NT,01/01/2008,,
-880,Siderastrea radians,Siderastrea,radians,LC,01/01/2008,,
-881,Siderastrea savignyana,Siderastrea,savignyana,LC,01/01/2008,,
-882,Siderastrea siderea,Siderastrea,glynni,CR,Jan-08,,
-883,Siderastrea siderea,Siderastrea,siderea,LC,01/01/2008,,
-884,Siderastrea stellata,Siderastrea,stellata,DD,01/01/2008,,
-885,Simplastrea vesicularis,Simplastrea,vesicularis,DD,01/01/2008,,
-886,Sinuorota hexagonalis,Fungia,hexagonalis,LC,Jan-08,,
-887,Sinuorota hexagonalis,Sinuorota,hexagonalis,NE,N/A,,
-888,Solenastrea bournoni,Solenastrea,bournoni,LC,01/01/2008,,
-889,Solenastrea hyades,Solenastrea,hyades,LC,01/01/2008,,
-890,Stephanocoenia intersepta,Stephanocoenia,intersepta,LC,01/01/2008,,
-891,Stylaraea punctata,Stylaraea,punctata,DD,01/01/2008,,
-892,Stylocoeniella armata,Stylocoeniella,armata,LC,01/01/2008,,
-893,Stylocoeniella cocosensis,Stylocoeniella,cocosensis,VU,01/01/2008,,
-894,Stylocoeniella guentheri,Stylocoeniella,guentheri,LC,01/01/2008,,
-895,Stylophora danae,Stylophora,danae,LC,01/01/2008,,
-896,Stylophora kuehlmanni,Stylophora,kuehlmanni,LC,01/01/2008,,
-897,Stylophora madagascarensis,Stylophora,madagascarensis,EN,01/01/2008,,
-898,Stylophora mamillata,Stylophora,mamillata,LC,01/01/2008,,
-899,Stylophora pistillata,Stylophora,pistillata,NT,01/01/2008,,
-900,Stylophora subseriata,Stylophora,subseriata,LC,01/01/2008,,
-901,Stylophora wellsi,Stylophora,wellsi,NT,01/01/2008,,
-902,taxon inquirendum,Acropora,haimei,DD,Jan-08,,taxon inquirendum
-903,Trachyphyllia geoffroyi,Trachyphyllia,geoffroyi,NT,01/01/2008,,
-904,Turbinaria bifrons,Turbinaria,bifrons,VU,01/01/2008,,
-905,Turbinaria conspicua,Turbinaria,conspicua,LC,01/01/2008,,
-906,Turbinaria frondens,Turbinaria,frondens,LC,01/01/2008,,
-907,Turbinaria heronensis,Turbinaria,heronensis,VU,01/01/2008,,
-908,Turbinaria irregularis,Turbinaria,irregularis,LC,01/01/2008,,
-909,Turbinaria mesenterina,Turbinaria,mesenterina,VU,01/01/2008,,
-910,Turbinaria patula,Turbinaria,patula,VU,01/01/2008,,
-911,Turbinaria peltata,Turbinaria,peltata,VU,01/01/2008,,
-912,Turbinaria radicalis,Turbinaria,radicalis,NT,01/01/2008,,
-913,Turbinaria reniformis,Turbinaria,reniformis,VU,01/01/2008,,
-914,Turbinaria stellulata,Turbinaria,stellulata,VU,01/01/2008,,
-915,Zoopilus echinatus,Zoopilus,echinatus,LC,01/01/2008,,
+species_id,scientific_name,IUCN_Genus,IUCN_Species,redlist_status,Timestamp_redlist,common_name,Comment,URL
+1,Acanthastrea brevis,Acanthastrea,brevis,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acanthastrea%20brevis
+2,Acanthastrea echinata,Acanthastrea,echinata,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acanthastrea%20echinata
+3,Acanthastrea hemprichii,Acanthastrea,hemprichii,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acanthastrea%20hemprichii
+4,Acanthastrea minuta,Micromussa,minuta,NT,Jan-08,,Different Genus,https://apiv3.iucnredlist.org/api/v3/website/Micromussa%20minuta
+5,Acanthastrea pachysepta,Lobophyllia,pachysepta,NT,Jan-08,,Different Genus,https://apiv3.iucnredlist.org/api/v3/website/Lobophyllia%20pachysepta
+6,Acanthastrea rotundoflora,Acanthastrea,rotundoflora,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acanthastrea%20rotundoflora
+7,Acanthastrea subechinata,Acanthastrea,subechinata,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acanthastrea%20subechinata
+8,Acanthophyllia deshayesiana,Acanthophyllia,deshayesiana,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acanthophyllia%20deshayesiana
+9,Acropora abrolhosensis,Acropora,abrolhosensis,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20abrolhosensis
+10,Acropora abrotanoides,Acropora,abrotanoides,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20abrotanoides
+11,Acropora abrotanoides,Acropora,irregularis,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20irregularis
+12,Acropora abrotanoides,Acropora,tutuilensis,DD,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20tutuilensis
+13,Acropora aculeus,Acropora,aculeus,VU,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20aculeus
+14,Acropora acuminata,Acropora,acuminata,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20acuminata
+15,Acropora anthocercis,Acropora,anthocercis,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20anthocercis
+16,Acropora appressa,Acropora,appressa,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20appressa
+17,Acropora arabensis,Acropora,arabensis,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20arabensis
+18,Acropora aspera,Acropora,aspera,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20aspera
+19,Acropora austera,Acropora,austera,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20austera
+20,Acropora austera,Acropora,parahemprichii,DD,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20parahemprichii
+21,Acropora awi,Acropora,awi,VU,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20awi
+22,Acropora batunai,Acropora,batunai,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20batunai
+23,Acropora branchi,Acropora,branchi,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20branchi
+24,Acropora bushyensis,Acropora,bushyensis,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20bushyensis
+25,Acropora cardenae,Acropora,cardenae,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20cardenae
+26,Acropora carduus,Acropora,carduus,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20carduus
+27,Acropora caroliniana,Acropora,caroliniana,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20caroliniana
+28,Acropora cerealis,Acropora,cerealis,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20cerealis
+29,Acropora cerealis,Acropora,tizardi,DD,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20tizardi
+30,Acropora cervicornis,Acropora,cervicornis,CR,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20cervicornis
+31,Acropora chesterfieldensis,Acropora,chesterfieldensis,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20chesterfieldensis
+32,Acropora clathrata,Acropora,clathrata,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20clathrata
+33,Acropora clathrata,Acropora,orbicularis,DD,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20orbicularis
+34,Acropora cophodactyla,Acropora,cophodactyla,DD,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20cophodactyla
+35,Acropora cytherea,Acropora,cytherea,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20cytherea
+36,Acropora cytherea,Acropora,efflorescens,DD,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20efflorescens
+37,Acropora dendrum,Acropora,dendrum,VU,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20dendrum
+38,Acropora derawanensis,Acropora,derawanensis,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20derawanensis
+39,Acropora desalwii,Acropora,desalwii,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20desalwii
+40,Acropora digitifera,Acropora,digitifera,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20digitifera
+41,Acropora digitifera,Acropora,schmitti,DD,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20schmitti
+42,Acropora divaricata,Acropora,divaricata,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20divaricata
+43,Acropora donei,Acropora,akajimensis,DD,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20akajimensis
+44,Acropora donei,Acropora,donei,VU,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20donei
+45,Acropora downingi,Acropora,downingi,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20downingi
+46,Acropora echinata,Acropora,echinata,VU,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20echinata
+47,Acropora elegans,Acropora,elegans,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20elegans
+48,Acropora elegantula,Acropora,elegantula,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20elegantula
+49,Acropora elseyi,Acropora,elseyi,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20elseyi
+50,Acropora eurystoma,Acropora,pagoensis,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20pagoensis
+51,Acropora eurystoma,Acropora,eurystoma,NE,N/A,,,N/A
+52,Acropora exquisita,Acropora,exquisita,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20exquisita
+53,Acropora fastigata,Acropora,fastigata,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20fastigata
+54,Acropora fenneri,Acropora,fenneri,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20fenneri
+55,Acropora filiformis,Acropora,filiformis,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20filiformis
+56,Acropora florida,Acropora,florida,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20florida
+57,Acropora forskali,Acropora,forskali,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20forskali
+58,Acropora gemmifera,Acropora,scherzeriana,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20scherzeriana
+59,Acropora gemmifera,Acropora,gemmifera,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20gemmifera
+60,Acropora glauca,Acropora,glauca,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20glauca
+61,Acropora globiceps,Acropora,globiceps,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20globiceps
+62,Acropora gomezi,Acropora,gomezi,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20gomezi
+63,Acropora grandis,Acropora,grandis,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20grandis
+64,Acropora granulosa,Acropora,granulosa,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20granulosa
+65,Acropora halmaherae,Acropora,halmaherae,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20halmaherae
+66,Acropora hemprichii,Acropora,hemprichii,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20hemprichii
+67,Acropora hoeksemai,Acropora,hoeksemai,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20hoeksemai
+68,Acropora horrida,Acropora,horrida,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20horrida
+69,Acropora horrida,Acropora,parilis,DD,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20parilis
+70,Acropora horrida,Acropora,sekiseiensis,DD,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20sekiseiensis
+71,Acropora humilis,Acropora,humilis,NT,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20humilis
+72,Acropora humilis,Acropora,ocellata,DD,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20ocellata
+73,Acropora hyacinthus,Acropora,bifurcata,DD,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20bifurcata
+74,Acropora hyacinthus,Acropora,hyacinthus,NT,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20hyacinthus
+75,Acropora indonesia,Acropora,indonesia,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20indonesia
+76,Acropora intermedia,Acropora,intermedia,NE,N/A,,Synonym to other species,N/A
+77,Acropora jacquelineae,Acropora,jacquelineae,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20jacquelineae
+78,Acropora japonica,Acropora,japonica,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20japonica
+79,Acropora kimbeensis,Acropora,kimbeensis,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20kimbeensis
+80,Acropora kirstyae,Acropora,kirstyae,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20kirstyae
+81,Acropora kosurini,Acropora,kosurini,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20kosurini
+82,Acropora lamarcki,Acropora,lamarcki,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20lamarcki
+83,Acropora latistella,Acropora,latistella,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20latistella
+84,Acropora listeri,Acropora,listeri,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20listeri
+85,Acropora loisetteae,Acropora,loisetteae,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20loisetteae
+86,Acropora lokani,Acropora,lokani,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20lokani
+87,Acropora longicyathus,Acropora,longicyathus,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20longicyathus
+88,Acropora longicyathus,Acropora,navini,DD,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20navini
+89,Acropora loripes,Acropora,lianae,DD,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20lianae
+90,Acropora loripes,Acropora,loripes,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20loripes
+91,Acropora loripes,Acropora,rosaria,DD,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20rosaria
+92,Acropora lovelli,Acropora,lovelli,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20lovelli
+93,Acropora lutkeni,Acropora,lutkeni,NT,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20lutkeni
+94,Acropora microclados,Acropora,microclados,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20microclados
+95,Acropora microphthalma,Acropora,inermis,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20inermis
+96,Acropora microphthalma,Acropora,microphthalma,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20microphthalma
+97,Acropora millepora,Acropora,convexa,DD,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20convexa
+98,Acropora millepora,Acropora,millepora,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20millepora
+99,Acropora mirabilis,Acropora,mirabilis,DD,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20mirabilis
+100,Acropora monticulosa,Acropora,monticulosa,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20monticulosa
+101,Acropora multiacuta,Acropora,multiacuta,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20multiacuta
+102,Acropora muricata,Acropora,copiosa,DD,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20copiosa
+103,Acropora muricata,Acropora,formosa,NT,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20formosa
+104,Acropora muricata,Acropora,muricata,NE,N/A,,,N/A
+105,Acropora nana,Acropora,nana,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20nana
+106,Acropora nasuta,Acropora,nasuta,NT,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20nasuta
+107,Acropora natalensis,Acropora,natalensis,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20natalensis
+108,Acropora palmata,Acropora,palmata,CR,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20palmata
+109,Acropora palmerae,Acropora,minuta,DD,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20minuta
+110,Acropora palmerae,Acropora,palmerae,VU,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20palmerae
+111,Acropora paniculata,Acropora,paniculata,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20paniculata
+112,Acropora papillare,Acropora,papillare,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20papillare
+113,Acropora pectinata,Acropora,pectinatus,DD,Jan-08,,Spelling,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20pectinatus
+114,Acropora pharaonis,Acropora,pharaonis,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20pharaonis
+115,Acropora pichoni,Acropora,pichoni,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20pichoni
+116,Acropora plantaginea,Acropora,plantaginea,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20plantaginea
+117,Acropora plumosa,Acropora,plumosa,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20plumosa
+118,Acropora polystoma,Acropora,massawensis,DD,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20massawensis
+119,Acropora polystoma,Acropora,polystoma,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20polystoma
+120,Acropora prolifera,Acropora,prolifera,NE,N/A,,,N/A
+121,Acropora proximalis,Acropora,proximalis,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20proximalis
+122,Acropora pruinosa,Acropora,pruinosa,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20pruinosa
+123,Acropora pulchra,Acropora,pulchra,LC,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20pulchra
+124,Acropora retusa,Acropora,retusa,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20retusa
+125,Acropora ridzwani,Acropora,ridzwani,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20ridzwani
+126,Acropora robusta,Acropora,nobilis,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20nobilis
+127,Acropora robusta,Acropora,pinguis,DD,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20pinguis
+128,Acropora robusta,Acropora,robusta,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20robusta
+129,Acropora rongelapensis,Acropora,rongelapensis,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20rongelapensis
+130,Acropora roseni,Acropora,roseni,EN,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20roseni
+131,Acropora rudis,Acropora,rudis,EN,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20rudis
+132,Acropora rufa,Acropora,rufus,DD,Jan-08,,Spelling,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20rufus
+133,Acropora russelli,Acropora,russelli,VU,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20russelli
+134,Acropora samoensis,Acropora,samoensis,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20samoensis
+135,Acropora samoensis,Acropora,torresiana,DD,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20torresiana
+136,Acropora samoensis,Acropora,wallaceae,DD,Jan-08,,Different species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20wallaceae
+137,Acropora sarmentosa,Acropora,sarmentosa,LC,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20sarmentosa
+138,Acropora sarmentosa,Acropora,vermiculata,DD,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20vermiculata
+139,Acropora secale,Acropora,secale,NT,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20secale
+140,Acropora selago,Acropora,insignis,DD,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20insignis
+141,Acropora selago,Acropora,selago,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20selago
+142,Acropora seriata,Acropora,seriata,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20seriata
+143,Acropora simplex,Acropora,simplex,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20simplex
+144,Acropora sirikitiae,Acropora,sirikitiae,NE,N/A,,,N/A
+145,Acropora solitaryensis,Acropora,solitaryensis,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20solitaryensis
+146,Acropora spathulata,Acropora,spathulata,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20spathulata
+147,Acropora speciosa,Acropora,rambleri,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20rambleri
+148,Acropora speciosa,Acropora,speciosa,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20speciosa
+149,Acropora spicifera,Acropora,spicifera,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20spicifera
+150,Acropora squamata,Acropora,squamata,NE,N/A,,Synonym to other species,N/A
+151,Acropora squarrosa,Acropora,maryae,DD,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20maryae
+152,Acropora squarrosa,Acropora,squarrosa,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20squarrosa
+153,Acropora stoddarti,Acropora,stoddarti,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20stoddarti
+154,Acropora striata,Acropora,striata,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20striata
+155,Acropora subglabra,Acropora,subglabra,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20subglabra
+156,Acropora subulata,Acropora,subulata,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20subulata
+157,Acropora suharsonoi,Acropora,suharsonoi,EN,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20suharsonoi
+158,Acropora sukarnoi,Acropora,sukarnoi,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20sukarnoi
+159,Acropora tanegashimensis,Acropora,tanegashimensis,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20tanegashimensis
+160,Acropora tenella,Acropora,tenella,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20tenella
+161,Acropora tenuis,Acropora,macrostoma,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20macrostoma
+162,Acropora tenuis,Acropora,plana,DD,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20plana
+163,Acropora tenuis,Acropora,tenuis,NT,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20tenuis
+164,Acropora teres,Acropora,teres,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20teres
+165,Acropora torihalimeda,Acropora,torihalimeda,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20torihalimeda
+166,Acropora tortuosa,Acropora,tortuosa,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20tortuosa
+167,Acropora tumida,Acropora,tumida,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20tumida
+168,Acropora turaki,Acropora,turaki,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20turaki
+169,Acropora valenciennesi,Acropora,valenciennesi,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20valenciennesi
+170,Acropora valida,Acropora,parapharaonis,DD,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20parapharaonis
+171,Acropora valida,Acropora,valida,LC,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20valida
+172,Acropora valida,Acropora,variabilis,DD,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20variabilis
+173,Acropora variolosa,Acropora,variolosa,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20variolosa
+174,Acropora vaughani,Acropora,vaughani,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20vaughani
+175,Acropora verweyi,Acropora,verweyi,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20verweyi
+176,Acropora walindii,Acropora,walindii,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20walindii
+177,Acropora willisae,Acropora,willisae,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20willisae
+178,Acropora yongei,Acropora,yongei,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20yongei
+179,Agaricia agaricites,Agaricia,agaricites,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Agaricia%20agaricites
+180,Agaricia fragilis,Agaricia,fragilis,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Agaricia%20fragilis
+181,Agaricia grahamae,Agaricia,grahamae,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Agaricia%20grahamae
+182,Agaricia humilis,Agaricia,humilis,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Agaricia%20humilis
+183,Agaricia lamarcki,Agaricia,lamarcki,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Agaricia%20lamarcki
+184,Agaricia tenuifolia,Agaricia,tenuifolia,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Agaricia%20tenuifolia
+185,Agaricia undata,Agaricia,undata,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Agaricia%20undata
+186,Alveopora allingi,Alveopora,allingi,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Alveopora%20allingi
+187,Alveopora catalai,Alveopora,catalai,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Alveopora%20catalai
+188,Alveopora daedalea,Alveopora,daedalea,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Alveopora%20daedalea
+189,Alveopora excelsa,Alveopora,excelsa,EN,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Alveopora%20excelsa
+190,Alveopora fenestrata,Alveopora,fenestrata,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Alveopora%20fenestrata
+191,Alveopora gigas,Alveopora,gigas,VU,Jan-08,Thin Leaf Lettuce Coral,,https://apiv3.iucnredlist.org/api/v3/website/Alveopora%20gigas
+192,Alveopora japonica,Alveopora,japonica,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Alveopora%20japonica
+193,Alveopora marionensis,Alveopora,marionensis,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Alveopora%20marionensis
+194,Alveopora minuta,Alveopora,minuta,EN,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Alveopora%20minuta
+195,Alveopora ocellata,Alveopora,ocellata,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Alveopora%20ocellata
+196,Alveopora spongiosa,Alveopora,spongiosa,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Alveopora%20spongiosa
+197,Alveopora tizardi,Alveopora,tizardi,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Alveopora%20tizardi
+198,Alveopora verrilliana,Alveopora,verrilliana,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Alveopora%20verrilliana
+199,Alveopora viridis,Alveopora,viridis,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Alveopora%20viridis
+200,Anacropora forbesi,Anacropora,forbesi,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Anacropora%20forbesi
+201,Anacropora matthai,Anacropora,matthai,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Anacropora%20matthai
+202,Anacropora pillai,Anacropora,pillai,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Anacropora%20pillai
+203,Anacropora puertogalerae,Anacropora,puertogalerae,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Anacropora%20puertogalerae
+204,Anacropora reticulata,Anacropora,reticulata,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Anacropora%20reticulata
+205,Anacropora spinosa,Anacropora,spinosa,EN,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Anacropora%20spinosa
+206,Anacropora spumosa,Anacropora,spumosa,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Anacropora%20spumosa
+207,Anomastraea irregularis,Anomastraea,irregularis,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Anomastraea%20irregularis
+208,Astrangia poculata,Astrangia,poculata,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Astrangia%20poculata
+209,Astrea annuligera,Astrea,annuligera,NE,N/A,,,N/A
+210,Astrea annuligera,Montastrea,annuligera,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Montastrea%20annuligera
+211,Astrea curta,Astrea,curta,NE,N/A,,,N/A
+212,Astrea curta,Montastrea,curta,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Montastrea%20curta
+213,Astrea devantieri,Astrea,devantieri,NE,N/A,,,N/A
+214,Astrea devantieri,Plesiastrea,devantieri,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Plesiastrea%20devantieri
+215,Astrea rotulosa,Astrea,rotulosa,NE,N/A,,,N/A
+216,Astreopora acroporina,Astreopora,acroporina,NE,N/A,,,N/A
+217,Astreopora cenderawasih,Astreopora,cenderawasih,NE,N/A,,,N/A
+218,Astreopora cucullata,Astreopora,cucullata,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Astreopora%20cucullata
+219,Astreopora expansa,Astreopora,expansa,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Astreopora%20expansa
+220,Astreopora gracilis,Astreopora,gracilis,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Astreopora%20gracilis
+221,Astreopora incrustans,Astreopora,incrustans,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Astreopora%20incrustans
+222,Astreopora listeri,Astreopora,listeri,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Astreopora%20listeri
+223,Astreopora macrostoma,Astreopora,macrostoma,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Astreopora%20macrostoma
+224,Astreopora monteporina,Astreopora,monteporina,NE,N/A,,,N/A
+225,Astreopora moretonensis,Astreopora,moretonensis,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Astreopora%20moretonensis
+226,Astreopora myriophthalma,Astreopora,eliptica,DD,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Astreopora%20eliptica
+227,Astreopora myriophthalma,Astreopora,myriophthalma,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Astreopora%20myriophthalma
+228,Astreopora ocellata,Astreopora,ocellata,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Astreopora%20ocellata
+229,Astreopora randalli,Astreopora,randalli,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Astreopora%20randalli
+230,Astreopora scabra,Astreopora,scabra,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Astreopora%20scabra
+231,Astreopora suggesta,Astreopora,suggesta,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Astreopora%20suggesta
+232,Australogyra zelli,Australogyra,zelli,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Australogyra%20zelli
+233,Australophyllia wilsoni,Symphyllia,wilsoni,LC,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Symphyllia%20wilsoni
+234,Balanophyllia (Balanophyllia) europaea,Balanophyllia,europaea,LC,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Balanophyllia%20europaea
+235,Bernardpora stutchburyi,Bernardpora,stutchburyi,NE,N/A,,,N/A
+236,Bernardpora stutchburyi,Goniopora,stutchburyi,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniopora%20stutchburyi
+237,Blastomussa loyae,Blastomussa,loyae,EN,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Blastomussa%20loyae
+238,Blastomussa merleti,Blastomussa,merleti,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Blastomussa%20merleti
+239,Blastomussa omanensis,Blastomussa,omanensis,NE,N/A,,,N/A
+240,Blastomussa vivida,Blastomussa,vivida,NE,N/A,,,N/A
+241,Blastomussa wellsi,Blastomussa,wellsi,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Blastomussa%20wellsi
+242,Boninastrea boninensis,Boninastrea,boninensis,DD,Jan-08,Tooth coral,,https://apiv3.iucnredlist.org/api/v3/website/Boninastrea%20boninensis
+243,Cantharellus doederleini,Cantharellus,doederleini,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Cantharellus%20doederleini
+244,Cantharellus jebbi,Cantharellus,jebbi,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Cantharellus%20jebbi
+245,Cantharellus noumeae,Cantharellus,noumeae,EN,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Cantharellus%20noumeae
+246,Catalaphyllia jardinei,Catalaphyllia,jardinei,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Catalaphyllia%20jardinei
+247,Caulastraea connata,Caulastrea,connata,VU,Jan-08,,spelling,https://apiv3.iucnredlist.org/api/v3/website/Caulastrea%20connata
+248,Caulastraea curvata,Caulastrea,curvata,VU,Jan-08,,spelling,https://apiv3.iucnredlist.org/api/v3/website/Caulastrea%20curvata
+249,Caulastraea echinulata,Caulastrea,echinulata,VU,Jan-08,,spelling,https://apiv3.iucnredlist.org/api/v3/website/Caulastrea%20echinulata
+250,Caulastraea furcata,Caulastrea,furcata,LC,Jan-08,,spelling,https://apiv3.iucnredlist.org/api/v3/website/Caulastrea%20furcata
+251,Caulastraea tumida,Caulastrea,tumida,NT,Jan-08,,spelling,https://apiv3.iucnredlist.org/api/v3/website/Caulastrea%20tumida
+252,Cladocora arbuscula,Cladocora,arbuscula,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Cladocora%20arbuscula
+253,Cladocora caespitosa,Cladocora,caespitosa,EN,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Cladocora%20caespitosa
+254,Coelastrea aspera,Goniastrea,aspera,LC,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Goniastrea%20aspera
+255,Coelastrea palauensis,Goniastrea,palauensis,NT,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Goniastrea%20palauensis
+256,Coeloseris mayeri,Coeloseris,mayeri,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Coeloseris%20mayeri
+257,Colpophyllia natans,Colpophyllia,natans,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Colpophyllia%20natans
+258,Coscinaraea columna,Coscinaraea,columna,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Coscinaraea%20columna
+259,Coscinaraea crassa,Coscinaraea,crassa,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Coscinaraea%20crassa
+260,Coscinaraea exesa,Coscinaraea,exesa,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Coscinaraea%20exesa
+261,Coscinaraea hahazimaensis,Coscinaraea,hahazimaensis,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Coscinaraea%20hahazimaensis
+262,Coscinaraea marshae,Coscinaraea,marshae,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Coscinaraea%20marshae
+263,Coscinaraea mcneilli,Coscinaraea,mcneilli,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Coscinaraea%20mcneilli
+264,Coscinaraea monile,Coscinaraea,monile,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Coscinaraea%20monile
+265,Craterastrea levis,Craterestrea,levis,LC,Jan-08,,Spelling,https://apiv3.iucnredlist.org/api/v3/website/Craterestrea%20levis
+266,Ctenactis albitentaculata,Ctenactis,albitentaculata,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Ctenactis%20albitentaculata
+267,Ctenactis crassa,Ctenactis,crassa,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Ctenactis%20crassa
+268,Ctenactis echinata,Ctenactis,echinata,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Ctenactis%20echinata
+269,Ctenella chagius,Ctenella,chagius,EN,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Ctenella%20chagius
+270,Cycloseris boschmai,Cycloseris,boschmai,NE,N/A,,,N/A
+271,Cycloseris costulata,Cycloseris,costulata,NE,N/A,,,N/A
+272,Cycloseris costulata,Fungia,costulata,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Fungia%20costulata
+273,Cycloseris curvata,Cycloseris,curvata,NE,N/A,,,N/A
+274,Cycloseris curvata,Fungia,curvata,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Fungia%20curvata
+275,Cycloseris cyclolites,Cycloseris,cyclolites,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Cycloseris%20cyclolites
+276,Cycloseris cyclolites,Fungia,cyclolites,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Fungia%20cyclolites
+277,Cycloseris distorta,Fungia,distorta,LC,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Fungia%20distorta
+278,Cycloseris explanulata,Psammocora,explanulata,LC,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Psammocora%20explanulata
+279,Cycloseris fragilis,Fungia,fragilis,LC,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Fungia%20fragilis
+280,Cycloseris mokai,Cycloseris,mokai,NE,N/A,,,N/A
+281,Cycloseris mokai,Lithophyllon,mokai,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Lithophyllon%20mokai
+282,Cycloseris sinensis,Cycloseris,sinensis,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Cycloseris%20sinensis
+283,Cycloseris sinensis,Fungia,sinensis,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Fungia%20sinensis
+284,Cycloseris somervillei,Cycloseris,somervillei,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Cycloseris%20somervillei
+285,Cycloseris somervillei,Fungia,somervillei,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Fungia%20somervillei
+286,Cycloseris tenuis,Cycloseris,tenuis,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Cycloseris%20tenuis
+287,Cycloseris tenuis,Fungia,tenuis,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Fungia%20tenuis
+288,Cycloseris vaughani,Cycloseris,vaughani,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Cycloseris%20vaughani
+289,Cycloseris vaughani,Fungia,vaughani,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Fungia%20vaughani
+290,Cycloseris wellsi,Coscinaraea,wellsi,LC,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Coscinaraea%20wellsi
+291,Cynarina lacrymalis,Cynarina,lacrymalis,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Cynarina%20lacrymalis
+292,Cynarina macassarensis,Indophyllia,macassarensis,DD,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Indophyllia%20macassarensis
+293,Cyphastrea agassizi,Cyphastrea,agassizi,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Cyphastrea%20agassizi
+294,Cyphastrea chalcidicum,Cyphastrea,chalcidicum,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Cyphastrea%20chalcidicum
+295,Cyphastrea decadia,Cyphastrea,decadia,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Cyphastrea%20decadia
+296,Cyphastrea hexasepta,Cyphastrea,hexasepta,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Cyphastrea%20hexasepta
+297,Cyphastrea japonica,Cyphastrea,japonica,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Cyphastrea%20japonica
+298,Cyphastrea kausti,Cyphastrea,kausti,NE,N/A,,,N/A
+299,Cyphastrea microphthalma,Cyphastrea,microphthalma,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Cyphastrea%20microphthalma
+300,Cyphastrea ocellina,Cyphastrea,ocellina,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Cyphastrea%20ocellina
+301,Cyphastrea serailia,Cyphastrea,serailia,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Cyphastrea%20serailia
+302,Danafungia horrida,Fungia,horrida,LC,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Fungia%20horrida
+303,Danafungia scruposa,Fungia,scruposa,LC,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Fungia%20scruposa
+304,Dendrogyra cylindrus,Dendrogyra,cylindrus,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Dendrogyra%20cylindrus
+305,Dichocoenia stokesii,Dichocoenia,stellaris,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Dichocoenia%20stellaris
+306,Dichocoenia stokesii,Dichocoenia,stokesii,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Dichocoenia%20stokesii
+307,Diploastrea heliopora,Diploastrea,heliopora,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Diploastrea%20heliopora
+308,Diploria labyrinthiformis,Diploria,labyrinthiformis,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Diploria%20labyrinthiformis
+309,Dipsastraea albida,Favia,albidus,NT,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Favia%20albidus
+310,Dipsastraea amicorum,Dipsastraea,amicorum,NE,N/A,,,N/A
+311,Dipsastraea danai,Dipsastraea,danai,NE,N/A,,,N/A
+312,Dipsastraea danai,Favia,danae,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Favia%20danae
+313,Dipsastraea faviaformis,Acanthastrea,faviaformis,VU,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Acanthastrea%20faviaformis
+314,Dipsastraea favus,Favia,favus,LC,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Favia%20favus
+315,Dipsastraea helianthoides,Favia,helianthoides,NT,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Favia%20helianthoides
+316,Dipsastraea lacuna,Favia,lacuna,NT,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Favia%20lacuna
+317,Dipsastraea laddi,Dipsastraea,laddi,NE,N/A,,,N/A
+318,Dipsastraea laxa,Favia,laxa,NT,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Favia%20laxa
+319,Dipsastraea lizardensis,Favia,lizardensis,NT,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Favia%20lizardensis
+320,Dipsastraea maritima,Favia,maritima,NT,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Favia%20maritima
+321,Dipsastraea marshae,Favia,marshae,NT,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Favia%20marshae
+322,Dipsastraea matthaii,Favia,matthaii,NT,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Favia%20matthaii
+323,Dipsastraea maxima,Favia,maxima,NT,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Favia%20maxima
+324,Dipsastraea pallida,Favia,pallida,LC,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Favia%20pallida
+325,Dipsastraea rosaria,Favia,rosaria,VU,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Favia%20rosaria
+326,Dipsastraea rotumana,Favia,rotumana,LC,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Favia%20rotumana
+327,Dipsastraea speciosa,Favia,speciosa,LC,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Favia%20speciosa
+328,Dipsastraea truncata,Favia,truncatus,LC,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Favia%20truncatus
+329,Dipsastraea veroni,Favia,veroni,NT,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Favia%20veroni
+330,Dipsastraea vietnamensis,Favia,vietnamensis,NT,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Favia%20vietnamensis
+331,Dipsastraea wisseli,Dipsastraea,wisseli,NE,N/A,,,N/A
+332,Duncanopsammia axifuga,Duncanopsammia,axifuga,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Duncanopsammia%20axifuga
+333,Echinomorpha nishihirai,Echinomorpha,nishihirai,NE,N/A,,,N/A
+334,Echinophyllia aspera,Echinophyllia,aspera,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Echinophyllia%20aspera
+335,Echinophyllia costata,Echinophyllia,costata,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Echinophyllia%20costata
+336,Echinophyllia echinoporoides,Echinophyllia,echinoporoides,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Echinophyllia%20echinoporoides
+337,Echinophyllia glabra,Oxypora,glabra,LC,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Oxypora%20glabra
+338,Echinophyllia orpheensis,Echinophyllia,orpheensis,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Echinophyllia%20orpheensis
+339,Echinophyllia patula,Echinophyllia,patula,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Echinophyllia%20patula
+340,Echinophyllia pectinata,Echinophyllia,pectinata,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Echinophyllia%20pectinata
+341,Echinophyllia tarae,Echinophyllia,tarae,NE,N/A,,,N/A
+342,Echinopora ashmorensis,Echinopora,ashmorensis,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Echinopora%20ashmorensis
+343,Echinopora forskaliana,Echinopora,forskaliana,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Echinopora%20forskaliana
+344,Echinopora fruticulosa,Echinopora,fruticulosa,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Echinopora%20fruticulosa
+345,Echinopora gemmacea,Echinopora,gemmacea,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Echinopora%20gemmacea
+346,Echinopora hirsutissima,Echinopora,hirsutissima,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Echinopora%20hirsutissima
+347,Echinopora horrida,Echinopora,horrida,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Echinopora%20horrida
+348,Echinopora irregularis,Echinopora,irregularis,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Echinopora%20irregularis
+349,Echinopora lamellosa,Echinopora,lamellosa,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Echinopora%20lamellosa
+350,Echinopora mammiformis,Echinopora,mammiformis,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Echinopora%20mammiformis
+351,Echinopora pacifica,Echinopora,pacificus,NT,Jan-08,,Spelling,https://apiv3.iucnredlist.org/api/v3/website/Echinopora%20pacificus
+352,Echinopora robusta,Echinopora,robusta,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Echinopora%20robusta
+353,Echinopora taylorae,Echinopora,taylorae,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Echinopora%20taylorae
+354,Echinopora tiranensis,Echinopora,tiranensis,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Echinopora%20tiranensis
+355,Erythrastrea flabellata,Erythrastrea,flabellata,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Erythrastrea%20flabellata
+356,Euphyllia baliensis,Euphyllia,baliensis,NE,N/A,,,N/A
+357,Euphyllia cristata,Euphyllia,cristata,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Euphyllia%20cristata
+358,Euphyllia glabrescens,Euphyllia,glabrescens,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Euphyllia%20glabrescens
+359,Euphyllia paraglabrescens,Euphyllia,paraglabrescens,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Euphyllia%20paraglabrescens
+360,Eusmilia fastigiata,Eusmilia,fastigiata,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Eusmilia%20fastigiata
+361,Favia fragum,Favia,fragum,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Favia%20fragum
+362,Favia gravida,Favia,gravida,NE,N/A,,,N/A
+363,Favites abdita,Favites,abdita,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Favites%20abdita
+364,Favites acuticollis,Favites,acuticollis,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Favites%20acuticollis
+365,Favites chinensis,Favites,chinensis,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Favites%20chinensis
+366,Favites colemani,Favites,colemani,NE,N/A,,,N/A
+367,Favites colemani,Montastrea,colemani,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Montastrea%20colemani
+368,Favites complanata,Favites,complanata,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Favites%20complanata
+369,Favites flexuosa,Favites,flexuosa,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Favites%20flexuosa
+370,Favites halicora,Favites,halicora,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Favites%20halicora
+371,Favites magnistellata,Favites,magnistellata,NE,N/A,,,N/A
+372,Favites magnistellata,Montastrea,magnistellata,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Montastrea%20magnistellata
+373,Favites melicerum,Favites,bestae,NT,Jan-08,,Different species,https://apiv3.iucnredlist.org/api/v3/website/Favites%20bestae
+374,Favites micropentagonus,Favites,micropentagona,NT,Jan-08,,Spelling,https://apiv3.iucnredlist.org/api/v3/website/Favites%20micropentagona
+375,Favites paraflexuosus,Favites,paraflexuosa,NT,Jan-08,,Spelling,https://apiv3.iucnredlist.org/api/v3/website/Favites%20paraflexuosa
+376,Favites pentagona,Favites,pentagona,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Favites%20pentagona
+377,Favites rotundata,Favia,rotundata,NT,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Favia%20rotundata
+378,Favites spinosa,Favites,spinosa,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Favites%20spinosa
+379,Favites stylifera,Favites,stylifera,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Favites%20stylifera
+380,Favites valenciennesi,Favites,valenciennesi,NE,N/A,,,N/A
+381,Favites valenciennesi,Montastrea,valenciennesi,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Montastrea%20valenciennesi
+382,Favites vasta,Favites,vasta,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Favites%20vasta
+383,Fimbriaphyllia ancora,Euphyllia,ancora,VU,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Euphyllia%20ancora
+384,Fimbriaphyllia divisa,Euphyllia,divisa,NT,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Euphyllia%20divisa
+385,Fimbriaphyllia paraancora,Euphyllia,paraancora,VU,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Euphyllia%20paraancora
+386,Fimbriaphyllia paradivisa,Euphyllia,paradivisa,VU,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Euphyllia%20paradivisa
+387,Fimbriaphyllia yaeyamensis,Euphyllia,yaeyamaensis,NT,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Euphyllia%20yaeyamaensis
+388,Fungia fungites,Fungia,fungites,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Fungia%20fungites
+389,Fungia puishani,Fungia,puishani,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Fungia%20puishani
+390,Galaxea acrhelia,Galaxea,acrhelia,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Galaxea%20acrhelia
+391,Galaxea astreata,Galaxea,astreata,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Galaxea%20astreata
+392,Galaxea cryptoramosa,Galaxea,cryptoramosa,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Galaxea%20cryptoramosa
+393,Galaxea fascicularis,Galaxea,fascicularis,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Galaxea%20fascicularis
+394,Galaxea horrescens,Galaxea,horrescens,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Galaxea%20horrescens
+395,Galaxea longisepta,Galaxea,longisepta,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Galaxea%20longisepta
+396,Galaxea paucisepta,Galaxea,paucisepta,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Galaxea%20paucisepta
+397,Gardineroseris planulata,Gardineroseris,planulata,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Gardineroseris%20planulata
+398,Goniastrea columella,Goniastrea,columella,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniastrea%20columella
+399,Goniastrea edwardsi,Goniastrea,edwardsi,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniastrea%20edwardsi
+400,Goniastrea favulus,Goniastrea,favulus,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniastrea%20favulus
+401,Goniastrea minuta,Goniastrea,minuta,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniastrea%20minuta
+402,Goniastrea pectinata,Goniastrea,pectinata,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniastrea%20pectinata
+403,Goniastrea ramosa,Goniastrea,ramosa,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniastrea%20ramosa
+404,Goniastrea retiformis,Goniastrea,retiformis,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniastrea%20retiformis
+405,Goniastrea stelligera,Favia,stelligera,NT,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Favia%20stelligera
+406,Goniastrea thecata,Goniastrea,thecata,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniastrea%20thecata
+407,Goniopora albiconus,Goniopora,albiconus,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniopora%20albiconus
+408,Goniopora burgosi,Goniopora,burgosi,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniopora%20burgosi
+409,Goniopora cellulosa,Goniopora,cellulosa,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniopora%20cellulosa
+410,Goniopora ciliatus,Goniopora,ciliatus,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniopora%20ciliatus
+411,Goniopora columna,Goniopora,columna,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniopora%20columna
+412,Goniopora diminuta,Micromussa,diminuta,DD,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Micromussa%20diminuta
+413,Goniopora djiboutiensis,Goniopora,djiboutiensis,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniopora%20djiboutiensis
+414,Goniopora eclipsensis,Goniopora,eclipsensis,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniopora%20eclipsensis
+415,Goniopora fruticosa,Goniopora,fruticosa,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniopora%20fruticosa
+416,Goniopora lobata,Goniopora,lobata,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniopora%20lobata
+417,Goniopora norfolkensis,Goniopora,norfolkensis,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniopora%20norfolkensis
+418,Goniopora paliformis,Poritipora,paliformis,VU,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Poritipora%20paliformis
+419,Goniopora palmensis,Goniopora,palmensis,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniopora%20palmensis
+420,Goniopora pandoraensis,Goniopora,pandoraensis,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniopora%20pandoraensis
+421,Goniopora pearsoni,Goniopora,pearsoni,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniopora%20pearsoni
+422,Goniopora pedunculata,Goniopora,minor,NT,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Goniopora%20minor
+423,Goniopora pendulus,Goniopora,pendulus,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniopora%20pendulus
+424,Goniopora planulata,Goniopora,planulata,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniopora%20planulata
+425,Goniopora polyformis,Goniopora,polyformis,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniopora%20polyformis
+426,Goniopora savignyi,Goniopora,savignyi,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniopora%20savignyi
+427,Goniopora somaliensis,Goniopora,somaliensis,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniopora%20somaliensis
+428,Goniopora stokesi,Goniopora,stokesi,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniopora%20stokesi
+429,Goniopora sultani,Goniopora,sultani,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniopora%20sultani
+430,Goniopora tantillus,Calathiscus,tantillus,DD,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Calathiscus%20tantillus
+431,Goniopora tenella,Goniopora,tenella,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniopora%20tenella
+432,Goniopora tenuidens,Goniopora,tenuidens,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniopora%20tenuidens
+433,Gyrosmilia interrupta,Gyrosmilia,interrupta,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Gyrosmilia%20interrupta
+434,Halomitra clavator,Halomitra,clavator,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Halomitra%20clavator
+435,Halomitra pileus,Halomitra,pileus,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Halomitra%20pileus
+436,Heliofungia actiniformis,Heliofungia,actiniformis,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Heliofungia%20actiniformis
+437,Heliofungia fralinae,Fungia,fralinae,LC,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Fungia%20fralinae
+438,Heliopora coerulea,Heliopora,coerulea,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Heliopora%20coerulea
+439,Helioseris cucullata,Helioseris,cucullata,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Helioseris%20cucullata
+440,Herpolitha limax,Herpolitha,limax,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Herpolitha%20limax
+441,Heterocyathus aequicostatus,Heterocyathus,aequicostatus,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Heterocyathus%20aequicostatus
+442,Heterocyathus alternatus,Heterocyathus,alternatus,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Heterocyathus%20alternatus
+443,Heterocyathus sulcatus,Heterocyathus,sulcatus,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Heterocyathus%20sulcatus
+444,Heteropsammia cochlea,Heteropsammia,cochlea,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Heteropsammia%20cochlea
+445,Heteropsammia eupsammides,Heteropsammia,eupsammides,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Heteropsammia%20eupsammides
+446,Heteropsammia moretonensis,Heteropsammia,moretonensis,NE,N/A,,,N/A
+447,Homophyllia australis,Homophyllia,australis,NE,N/A,,,N/A
+448,Homophyllia australis,Scolymia,australis,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Scolymia%20australis
+449,Homophyllia bowerbanki,Acanthastrea,bowerbanki,VU,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Acanthastrea%20bowerbanki
+450,Homophyllia bowerbanki,Acanthastrea,hillae,NT,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acanthastrea%20hillae
+451,Horastrea indica,Horastrea,indica,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Horastrea%20indica
+452,Hydnophora bonsai,Hydnophora,bonsai,EN,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Hydnophora%20bonsai
+453,Hydnophora exesa,Hydnophora,exesa,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Hydnophora%20exesa
+454,Hydnophora grandis,Hydnophora,grandis,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Hydnophora%20grandis
+455,Hydnophora microconos,Hydnophora,microconos,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Hydnophora%20microconos
+456,Hydnophora pilosa,Hydnophora,pilosa,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Hydnophora%20pilosa
+457,Hydnophora rigida,Hydnophora,rigida,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Hydnophora%20rigida
+458,Isophyllia rigida,Isophyllia,rigida,NE,N/A,,,N/A
+459,Isophyllia rigida,Isophyllastrea,rigida,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Isophyllastrea%20rigida
+460,Isophyllia sinuosa,Isophyllia,sinuosa,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Isophyllia%20sinuosa
+461,Isopora brueggemanni,Acropora,meridiana,DD,Jan-08,,Synonym to other species,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20meridiana
+462,Isopora brueggemanni,Isopora,brueggemanni,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Isopora%20brueggemanni
+463,Isopora crateriformis,Isopora,crateriformis,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Isopora%20crateriformis
+464,Isopora cuneata,Isopora,cuneata,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Isopora%20cuneata
+465,Isopora elizabethensis,Isopora,elizabethensis,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Isopora%20elizabethensis
+466,Isopora palifera,Isopora,palifera,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Isopora%20palifera
+467,Isopora togianensis,Isopora,togianensis,EN,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Isopora%20togianensis
+468,Leptastrea aequalis,Leptastrea,aequalis,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Leptastrea%20aequalis
+469,Leptastrea bewickensis,Leptastrea,bewickensis,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Leptastrea%20bewickensis
+470,Leptastrea bottae,Leptastrea,bottae,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Leptastrea%20bottae
+471,Leptastrea inaequalis,Leptastrea,inaequalis,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Leptastrea%20inaequalis
+472,Leptastrea pruinosa,Leptastrea,pruinosa,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Leptastrea%20pruinosa
+473,Leptastrea purpurea,Leptastrea,purpurea,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Leptastrea%20purpurea
+474,Leptastrea transversa,Leptastrea,transversa,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Leptastrea%20transversa
+475,Leptoria irregularis,Leptoria,irregularis,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Leptoria%20irregularis
+476,Leptoria phrygia,Leptoria,phrygia,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Leptoria%20phrygia
+477,Leptoseris amitoriensis,Leptoseris,amitoriensis,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Leptoseris%20amitoriensis
+478,Leptoseris cailleti,Leptoseris,cailleti,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Leptoseris%20cailleti
+479,Leptoseris explanata,Leptoseris,explanata,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Leptoseris%20explanata
+480,Leptoseris foliosa,Leptoseris,foliosa,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Leptoseris%20foliosa
+481,Leptoseris gardineri,Leptoseris,gardineri,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Leptoseris%20gardineri
+482,Leptoseris hawaiiensis,Leptoseris,hawaiiensis,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Leptoseris%20hawaiiensis
+483,Leptoseris incrustans,Leptoseris,incrustans,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Leptoseris%20incrustans
+484,Leptoseris kalayaanensis,Leptoseris,kalayaanensis,NE,N/A,,,N/A
+485,Leptoseris mycetoseroides,Leptoseris,mycetoseroides,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Leptoseris%20mycetoseroides
+486,Leptoseris papyracea,Leptoseris,papyracea,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Leptoseris%20papyracea
+487,Leptoseris scabra,Leptoseris,scabra,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Leptoseris%20scabra
+488,Leptoseris solida,Leptoseris,solida,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Leptoseris%20solida
+489,Leptoseris striata,Leptoseris,striata,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Leptoseris%20striata
+490,Leptoseris tubulifera,Leptoseris,tubulifera,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Leptoseris%20tubulifera
+491,Leptoseris yabei,Leptoseris,yabei,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Leptoseris%20yabei
+492,Lithophyllon concinna,Fungia,concinna,LC,Jan-08,,Different genus,https://apiv3.iucnredlist.org/api/v3/website/Fungia%20concinna
+493,Lithophyllon ranjithi,Lithophyllon,ranjithi,EN,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Lithophyllon%20ranjithi
+494,Lithophyllon repanda,Fungia,repanda,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Fungia%20repanda
+495,Lithophyllon scabra,Fungia,scabra,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Fungia%20scabra
+496,Lithophyllon spinifer,Fungia,spinifer,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Fungia%20spinifer
+497,Lithophyllon spinifer,Lithophyllon,spinifer,NE,N/A,,,N/A
+498,Lithophyllon undulatum,Lithophyllon,undulatum,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Lithophyllon%20undulatum
+499,Lobactis scutaria,Fungia,scutaria,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Fungia%20scutaria
+500,Lobophyllia agaricia,Symphyllia,agaricia,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Symphyllia%20agaricia
+501,Lobophyllia corymbosa,Lobophyllia,corymbosa,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Lobophyllia%20corymbosa
+502,Lobophyllia dentata,Lobophyllia,dentatus,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Lobophyllia%20dentatus
+503,Lobophyllia diminuta,Lobophyllia,diminuta,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Lobophyllia%20diminuta
+504,Lobophyllia erythraea,Symphyllia,erythraea,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Symphyllia%20erythraea
+505,Lobophyllia flabelliformis,Lobophyllia,flabelliformis,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Lobophyllia%20flabelliformis
+506,Lobophyllia hassi,Symphyllia,hassi,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Symphyllia%20hassi
+507,Lobophyllia hataii,Lobophyllia,hataii,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Lobophyllia%20hataii
+508,Lobophyllia hemprichii,Lobophyllia,hemprichii,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Lobophyllia%20hemprichii
+509,Lobophyllia ishigakiensis,Acanthastrea,ishigakiensis,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acanthastrea%20ishigakiensis
+510,Lobophyllia radians,Symphyllia,radians,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Symphyllia%20radians
+511,Lobophyllia recta,Symphyllia,recta,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Symphyllia%20recta
+512,Lobophyllia robusta,Lobophyllia,robusta,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Lobophyllia%20robusta
+513,Lobophyllia rowleyensis,Australomussa,rowleyensis,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Australomussa%20rowleyensis
+514,Lobophyllia serrata,Lobophyllia,serratus,EN,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Lobophyllia%20serratus
+515,Lobophyllia valenciennesii,Symphyllia,valenciennesii,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Symphyllia%20valenciennesii
+516,Lobophyllia vitiensis,Lobophyllia,vitiensis,NE,N/A,,,N/A
+517,Lobophyllia vitiensis,Scolymia,vitiensis,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Scolymia%20vitiensis
+518,Madracis asanoi,Madracis,asanoi,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Madracis%20asanoi
+519,Madracis asperula,Madracis,asperula,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Madracis%20asperula
+520,Madracis auretenra,Madracis,auretenra,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Madracis%20auretenra
+521,Madracis carmabi,Madracis,carmabi,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Madracis%20carmabi
+522,Madracis decactis,Madracis,decactis,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Madracis%20decactis
+523,Madracis formosa,Madracis,formosa,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Madracis%20formosa
+524,Madracis kirbyi,Madracis,kirbyi,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Madracis%20kirbyi
+525,Madracis myriaster,Madracis,myriaster,NE,N/A,,,N/A
+526,Madracis pharensis,Madracis,pharensis,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Madracis%20pharensis
+527,Madracis senaria,Madracis,senaria,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Madracis%20senaria
+528,Manicina areolata,Manicina,areolata,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Manicina%20areolata
+529,Meandrina brasiliensis,Meandrina,braziliensis,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Meandrina%20braziliensis
+530,Meandrina brasiliensis,Meandrina,brasiliensis,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Meandrina%20brasiliensis
+531,Meandrina danae,Meandrina,danae,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Meandrina%20danae
+532,Meandrina jacksoni,Meandrina,jacksoni,NE,N/A,,,N/A
+533,Meandrina meandrites,Meandrina,meandrites,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Meandrina%20meandrites
+534,Merulina ampliata,Merulina,ampliata,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Merulina%20ampliata
+535,Merulina scabricula,Merulina,scabricula,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Merulina%20scabricula
+536,Merulina scheeri,Merulina,scheeri,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Merulina%20scheeri
+537,Merulina triangularis,Paraclavarina,triangularis,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Paraclavarina%20triangularis
+538,Micromussa amakusensis,Micromussa,amakusensis,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Micromussa%20amakusensis
+539,Micromussa lordhowensis,Acanthastrea,lordhowensis,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acanthastrea%20lordhowensis
+540,Micromussa multipunctata,Micromussa,multipunctata,NE,N/A,,,N/A
+541,Micromussa multipunctata,Montastrea,multipunctata,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Montastrea%20multipunctata
+542,Micromussa regularis,Acanthastrea,regularis,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acanthastrea%20regularis
+543,Millepora alcicornis,Millepora,alcicornis,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Millepora%20alcicornis
+544,Millepora boschmai,Millepora,boschmai,CR,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Millepora%20boschmai
+545,Millepora braziliensis,Millepora,braziliensis,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Millepora%20braziliensis
+546,Millepora complanata,Millepora,complanata,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Millepora%20complanata
+547,Millepora dichotoma,Millepora,dichotoma,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Millepora%20dichotoma
+548,Millepora exaesa,Millepora,exaesa,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Millepora%20exaesa
+549,Millepora exaesa,Millepora,tuberosa,EN,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Millepora%20tuberosa
+550,Millepora foveolata,Millepora,foveolata,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Millepora%20foveolata
+551,Millepora intricata,Millepora,intricata,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Millepora%20intricata
+552,Millepora intricata,Millepora,murrayi,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Millepora%20murrayi
+553,Millepora latifolia,Millepora,latifolia,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Millepora%20latifolia
+554,Millepora nitida,Millepora,nitida,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Millepora%20nitida
+555,Millepora platyphylla,Millepora,platyphylla,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Millepora%20platyphylla
+556,Millepora squarrosa,Millepora,squarrosa,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Millepora%20squarrosa
+557,Millepora squarrosa,Millepora,striata,EN,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Millepora%20striata
+558,Millepora tenera,Millepora,tenera,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Millepora%20tenera
+559,Montastraea cavernosa,Montastraea,cavernosa,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montastraea%20cavernosa
+560,Montigyra kenti,Montigyra,kenti,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montigyra%20kenti
+561,Montipora aequituberculata,Montipora,aequituberculata,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20aequituberculata
+562,Montipora altasepta,Montipora,altasepta,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20altasepta
+563,Montipora angulata,Montipora,angulata,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20angulata
+564,Montipora aspergillus,Montipora,aspergillus,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20aspergillus
+565,Montipora australiensis,Montipora,australiensis,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20australiensis
+566,Montipora bilaminata,Montipora,bilaminata,NE,N/A,,,N/A
+567,Montipora cactus,Montipora,cactus,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20cactus
+568,Montipora calcarea,Montipora,calcarea,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20calcarea
+569,Montipora caliculata,Montipora,caliculata,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20caliculata
+570,Montipora capitata,Montipora,capitata,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20capitata
+571,Montipora capricornis,Montipora,capricornis,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20capricornis
+572,Montipora carinata,Montipora,carinata,NE,N/A,,,N/A
+573,Montipora cebuensis,Montipora,cebuensis,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20cebuensis
+574,Montipora circumvallata,Montipora,circumvallata,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20circumvallata
+575,Montipora cocosensis,Montipora,cocosensis,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20cocosensis
+576,Montipora confusa,Montipora,confusa,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20confusa
+577,Montipora corbettensis,Montipora,corbettensis,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20corbettensis
+578,Montipora crassituberculata,Montipora,crassituberculata,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20crassituberculata
+579,Montipora cryptus,Montipora,cryptus,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20cryptus
+580,Montipora danae,Montipora,danae,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20danae
+581,Montipora delicatula,Montipora,delicatula,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20delicatula
+582,Montipora digitata,Montipora,digitata,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20digitata
+583,Montipora dilatata,Montipora,dilatata,EN,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20dilatata
+584,Montipora echinata,Montipora,echinata,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20echinata
+585,Montipora efflorescens,Montipora,efflorescens,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20efflorescens
+586,Montipora effusa,Montipora,effusa,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20effusa
+587,Montipora flabellata,Montipora,flabellata,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20flabellata
+588,Montipora florida,Montipora,florida,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20florida
+589,Montipora floweri,Montipora,floweri,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20floweri
+590,Montipora foliosa,Montipora,foliosa,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20foliosa
+591,Montipora foveolata,Montipora,foveolata,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20foveolata
+592,Montipora friabilis,Montipora,friabilis,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20friabilis
+593,Montipora gaimardi,Montipora,gaimardi,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20gaimardi
+594,Montipora grisea,Montipora,grisea,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20grisea
+595,Montipora hemispherica,Montipora,hemispherica,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20hemispherica
+596,Montipora hispida,Montipora,hispida,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20hispida
+597,Montipora hispida,Montipora,hirsuta,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20hirsuta
+598,Montipora hodgsoni,Montipora,hodgsoni,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20hodgsoni
+599,Montipora hoffmeisteri,Montipora,hoffmeisteri,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20hoffmeisteri
+600,Montipora incrassata,Montipora,incrassata,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20incrassata
+601,Montipora informis,Montipora,informis,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20informis
+602,Montipora kellyi,Montipora,kellyi,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20kellyi
+603,Montipora lobulata,Montipora,lobulata,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20lobulata
+604,Montipora mactanensis,Montipora,mactanensis,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20mactanensis
+605,Montipora malampaya,Montipora,malampaya,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20malampaya
+606,Montipora meandrina,Montipora,meandrina,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20meandrina
+607,Montipora millepora,Montipora,millepora,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20millepora
+608,Montipora mollis,Montipora,mollis,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20mollis
+609,Montipora monasteriata,Montipora,monasteriata,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20monasteriata
+610,Montipora myriophthalma,Montipora,myriophthalma,NE,N/A,,,N/A
+611,Montipora niugini,Montipora,niugini,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20niugini
+612,Montipora nodosa,Montipora,nodosa,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20nodosa
+613,Montipora orientalis,Montipora,orientalis,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20orientalis
+614,Montipora pachytuberculata,Montipora,pachytuberculata,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20pachytuberculata
+615,Montipora palawanensis,Montipora,palawanensis,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20palawanensis
+616,Montipora patula,Montipora,patula,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20patula
+617,Montipora peltiformis,Montipora,peltiformis,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20peltiformis
+618,Montipora porites,Montipora,porites,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20porites
+619,Montipora samarensis,Montipora,samarensis,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20samarensis
+620,Montipora saudii,Montipora,saudii,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20saudii
+621,Montipora setosa,Montipora,setosa,EN,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20setosa
+622,Montipora spongiosa,Montipora,spongiosa,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20spongiosa
+623,Montipora spongodes,Montipora,spongodes,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20spongodes
+624,Montipora spumosa,Montipora,spumosa,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20spumosa
+625,Montipora stellata,Montipora,stellata,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20stellata
+626,Montipora stilosa,Montipora,stilosa,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20stilosa
+627,Montipora taiwanensis,Montipora,taiwanensis,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20taiwanensis
+628,Montipora tuberculosa,Montipora,tuberculosa,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20tuberculosa
+629,Montipora turgescens,Montipora,turgescens,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20turgescens
+630,Montipora turtlensis,Montipora,turtlensis,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20turtlensis
+631,Montipora undata,Montipora,undata,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20undata
+632,Montipora vaughani,Montipora,vaughani,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20vaughani
+633,Montipora venosa,Montipora,venosa,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20venosa
+634,Montipora verrilli,Montipora,verrilli,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20verrilli
+635,Montipora verrucosa,Montipora,verrucosa,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20verrucosa
+636,Montipora verruculosa,Montipora,verruculosus,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20verruculosus
+637,Montipora vietnamensis,Montipora,vietnamensis,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Montipora%20vietnamensis
+638,Moseleya latistellata,Moseleya,latistellata,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Moseleya%20latistellata
+639,Mussa angulosa,Mussa,angulosa,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Mussa%20angulosa
+640,Mussismilia braziliensis,Mussismilia,braziliensis,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Mussismilia%20braziliensis
+641,Mussismilia harttii,Mussismilia,harttii,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Mussismilia%20harttii
+642,Mussismilia hispida,Mussismilia,hispida,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Mussismilia%20hispida
+643,Mussismilia leptophylla,Favia,leptophylla,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Favia%20leptophylla
+644,Mycedium elephantotus,Mycedium,elephantotus,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Mycedium%20elephantotus
+645,Mycedium mancaoi,Mycedium,mancaoi,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Mycedium%20mancaoi
+646,Mycedium robokaki,Mycedium,robokaki,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Mycedium%20robokaki
+647,Mycedium spina,Mycedium,spina,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Mycedium%20spina
+648,Mycedium steeni,Mycedium,steeni,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Mycedium%20steeni
+649,Mycedium umbra,Mycedium,umbra,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Mycedium%20umbra
+650,Mycetophyllia aliciae,Mycetophyllia,aliciae,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Mycetophyllia%20aliciae
+651,Mycetophyllia danaana,Mycetophyllia,danaana,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Mycetophyllia%20danaana
+652,Mycetophyllia ferox,Mycetophyllia,ferox,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Mycetophyllia%20ferox
+653,Mycetophyllia lamarckiana,Mycetophyllia,lamarckiana,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Mycetophyllia%20lamarckiana
+654,Mycetophyllia reesi,Mycetophyllia,reesi,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Mycetophyllia%20reesi
+655,Nemenzophyllia turbida,Nemenzophyllia,turbida,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Nemenzophyllia%20turbida
+656,nomen nudum,Acropora,khayranensis,DD,Jan-08,,nomen nudum,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20khayranensis
+657,nomen nudum,Acropora,paragemmifera,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20paragemmifera
+658,nomen nudum,Echinopora,grandicula,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Echinopora%20grandicula
+659,nomen nudum,Porites,ericacea,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20ericacea
+660,nomen nudum,Psammocora,interstinctus,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Psammocora%20interstinctus
+661,nomen nudum,Stylocoeniella,muscosus,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Stylocoeniella%20muscosus
+662,Not in WoRMS,Isopora,cylindrica,DD,Jan-08,,"According to WoRMS, ""Acropora cylindrica"" exists and is a synonym to ""Isopora togianensis"".",https://apiv3.iucnredlist.org/api/v3/website/Isopora%20cylindrica
+663,Oculina diffusa,Oculina,diffusa,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Oculina%20diffusa
+664,Oculina patagonica,Oculina,patagonica,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Oculina%20patagonica
+665,Oculina robusta,Oculina,robusta,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Oculina%20robusta
+666,Oculina tenella,Oculina,tenella,DD,01/01/2008,Delicate ivory bush coarl,,https://apiv3.iucnredlist.org/api/v3/website/Oculina%20tenella
+667,Oculina valenciennesi,Oculina,valenciennesi,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Oculina%20valenciennesi
+668,Oculina varicosa,Oculina,varicosa,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Oculina%20varicosa
+669,Orbicella annularis,Montastraea,annularis,EN,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Montastraea%20annularis
+670,Orbicella annularis,Orbicella,annularis,EN,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Orbicella%20annularis
+671,Orbicella faveolata,Montastraea,faveolata,EN,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Montastraea%20faveolata
+672,Orbicella faveolata,Orbicella,faveolata,EN,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Orbicella%20faveolata
+673,Orbicella franksi,Montastraea,franksi,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Montastraea%20franksi
+674,Orbicella franksi,Orbicella,franksi,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Orbicella%20franksi
+675,Oulastrea crispata,Oulastrea,crispata,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Oulastrea%20crispata
+676,Oulophyllia bennettae,Oulophyllia,bennettae,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Oulophyllia%20bennettae
+677,Oulophyllia crispa,Oulophyllia,crispa,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Oulophyllia%20crispa
+678,Oulophyllia levis,Oulophyllia,levis,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Oulophyllia%20levis
+679,Oxypora convoluta,Oxypora,convoluta,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Oxypora%20convoluta
+680,Oxypora crassispinosa,Oxypora,crassispinosa,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Oxypora%20crassispinosa
+681,Oxypora echinata,Echinophyllia,echinata,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Echinophyllia%20echinata
+682,Oxypora egyptensis,Oxypora,egyptensis,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Oxypora%20egyptensis
+683,Oxypora lacera,Oxypora,lacera,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Oxypora%20lacera
+684,Pachyseris foliosa,Pachyseris,foliosa,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pachyseris%20foliosa
+685,Pachyseris gemmae,Pachyseris,gemmae,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pachyseris%20gemmae
+686,Pachyseris inattesa,Pachyseris,inattesa,NE,N/A,,,N/A
+687,Pachyseris involuta,Pachyseris,involuta,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pachyseris%20involuta
+688,Pachyseris rugosa,Pachyseris,rugosa,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pachyseris%20rugosa
+689,Pachyseris speciosa,Pachyseris,speciosa,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pachyseris%20speciosa
+690,Palauastrea ramosa,Palauastrea,ramosa,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Palauastrea%20ramosa
+691,Paragoniastrea australensis,Goniastrea,australensis,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniastrea%20australensis
+692,Paragoniastrea deformis,Goniastrea,deformis,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniastrea%20deformis
+693,Paragoniastrea russelli,Favites,russelli,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Favites%20russelli
+694,Paramontastraea peresi,Goniastrea,peresi,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Goniastrea%20peresi
+695,Paramontastraea salebrosa,Montastrea,salebrosa,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Montastrea%20salebrosa
+696,Paramontastraea salebrosa,Paramontastraea,salebrosa,NE,N/A,,,N/A
+697,Paramontastraea serageldini,Montastrea,serageldini,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Montastrea%20serageldini
+698,Paramontastraea serageldini,Paramontastraea,serageldini,NE,N/A,,,N/A
+699,Pavona bipartita,Pavona,bipartita,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pavona%20bipartita
+700,Pavona cactus,Pavona,cactus,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pavona%20cactus
+701,Pavona chiriquiensis,Pavona,chiriquiensis,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pavona%20chiriquiensis
+702,Pavona clavus,Pavona,clavus,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pavona%20clavus
+703,Pavona danai,Pavona,danai,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pavona%20danai
+704,Pavona decussata,Pavona,decussata,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pavona%20decussata
+705,Pavona diffluens,Pavona,diffluens,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pavona%20diffluens
+706,Pavona duerdeni,Pavona,duerdeni,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pavona%20duerdeni
+707,Pavona explanulata,Pavona,explanulata,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pavona%20explanulata
+708,Pavona frondifera,Pavona,frondifera,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pavona%20frondifera
+709,Pavona gigantea,Pavona,gigantea,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pavona%20gigantea
+710,Pavona maldivensis,Pavona,maldivensis,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pavona%20maldivensis
+711,Pavona minuta,Pavona,minuta,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pavona%20minuta
+712,Pavona varians,Pavona,varians,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pavona%20varians
+713,Pavona venosa,Pavona,venosa,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pavona%20venosa
+714,Pavona xarifae,Pavona,xarifae,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pavona%20xarifae
+715,Pectinia africana,Pectinia,africanus,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Pectinia%20africanus
+716,Pectinia alcicornis,Pectinia,alcicornis,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pectinia%20alcicornis
+717,Pectinia crassa,Pectinia,crassa,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pectinia%20crassa
+718,Pectinia elongata,Pectinia,elongata,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pectinia%20elongata
+719,Pectinia lactuca,Pectinia,lactuca,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pectinia%20lactuca
+720,Pectinia maxima,Pectinia,maxima,EN,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pectinia%20maxima
+721,Pectinia paeonia,Pectinia,paeonia,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pectinia%20paeonia
+722,Pectinia pygmaea,Pectinia,pygmaeus,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Pectinia%20pygmaeus
+723,Pectinia teres,Pectinia,teres,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pectinia%20teres
+724,Physogyra lichtensteini,Physogyra,lichtensteini,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Physogyra%20lichtensteini
+725,Physophyllia ayleni,Pectinia,ayleni,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Pectinia%20ayleni
+726,Platygyra acuta,Platygyra,acuta,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Platygyra%20acuta
+727,Platygyra carnosa,Platygyra,carnosus,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Platygyra%20carnosus
+728,Platygyra contorta,Platygyra,contorta,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Platygyra%20contorta
+729,Platygyra crosslandi,Platygyra,crosslandi,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Platygyra%20crosslandi
+730,Platygyra daedalea,Platygyra,daedalea,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Platygyra%20daedalea
+731,Platygyra lamellina,Platygyra,lamellina,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Platygyra%20lamellina
+732,Platygyra pini,Platygyra,pini,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Platygyra%20pini
+733,Platygyra ryukyuensis,Platygyra,ryukyuensis,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Platygyra%20ryukyuensis
+734,Platygyra sinensis,Platygyra,sinensis,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Platygyra%20sinensis
+735,Platygyra verweyi,Platygyra,verweyi,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Platygyra%20verweyi
+736,Platygyra yaeyamaensis,Platygyra,yaeyamaensis,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Platygyra%20yaeyamaensis
+737,Plerogyra cauliformis,Plerogyra,cauliformis,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Plerogyra%20cauliformis
+738,Plerogyra diabolotus,Plerogyra,diabolotus,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Plerogyra%20diabolotus
+739,Plerogyra discus,Plerogyra,discus,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Plerogyra%20discus
+740,Plerogyra multilobata,Plerogyra,multilobata,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Plerogyra%20multilobata
+741,Plerogyra simplex,Plerogyra,simplex,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Plerogyra%20simplex
+742,Plerogyra sinuosa,Plerogyra,sinuosa,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Plerogyra%20sinuosa
+743,Plesiastrea versipora,Plesiastrea,versipora,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Plesiastrea%20versipora
+744,Pleuractis granulosa,Fungia,granulosa,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Fungia%20granulosa
+745,Pleuractis gravis,Pleuractis,gravis,NE,N/A,,,N/A
+746,Pleuractis moluccensis,Fungia,moluccensis,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Fungia%20moluccensis
+747,Pleuractis paumotensis,Fungia,paumotensis,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Fungia%20paumotensis
+748,Pleuractis seychellensis,Fungia,seychellensis,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Fungia%20seychellensis
+749,Pleuractis taiwanensis,Fungia,taiwanensis,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Fungia%20taiwanensis
+750,Pocillopora acuta,Pocillopora,acuta,NE,N/A,,,N/A
+751,Pocillopora aliciae,Pocillopora,aliciae,NE,N/A,,,N/A
+752,Pocillopora ankeli,Pocillopora,ankeli,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pocillopora%20ankeli
+753,Pocillopora bairdi,Pocillopora,bairdi,NE,N/A,,,N/A
+754,Pocillopora brevicornis,Pocillopora,setichelli,LC,Jan-08,,different spelling AND species,https://apiv3.iucnredlist.org/api/v3/website/Pocillopora%20setichelli
+755,Pocillopora brevicornis,Pocillopora,brevicornis,NE,N/A,,,N/A
+756,Pocillopora capitata,Pocillopora,capitata,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pocillopora%20capitata
+757,Pocillopora damicornis,Pocillopora,damicornis,LC,01/01/2008,Cauliflower Coral,,https://apiv3.iucnredlist.org/api/v3/website/Pocillopora%20damicornis
+758,Pocillopora effusa,Pocillopora,effusus,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Pocillopora%20effusus
+759,Pocillopora elegans,Pocillopora,elegans,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pocillopora%20elegans
+760,Pocillopora fungiformis,Pocillopora,fungiformis,EN,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pocillopora%20fungiformis
+761,Pocillopora grandis,Pocillopora,eydouxi,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Pocillopora%20eydouxi
+762,Pocillopora indiania,Pocillopora,indiania,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pocillopora%20indiania
+763,Pocillopora inflata,Pocillopora,inflata,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Pocillopora%20inflata
+764,Pocillopora kelleheri,Pocillopora,kelleheri,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pocillopora%20kelleheri
+765,Pocillopora ligulata,Pocillopora,ligulata,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pocillopora%20ligulata
+766,Pocillopora meandrina,Pocillopora,meandrina,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pocillopora%20meandrina
+767,Pocillopora molokensis,Pocillopora,molokensis,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pocillopora%20molokensis
+768,Pocillopora verrucosa,Pocillopora,danae,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Pocillopora%20danae
+769,Pocillopora verrucosa,Pocillopora,verrucosa,LC,01/01/2008,Rasp Coral,,https://apiv3.iucnredlist.org/api/v3/website/Pocillopora%20verrucosa
+770,Pocillopora woodjonesi,Pocillopora,woodjonesi,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pocillopora%20woodjonesi
+771,Pocillopora zelli,Pocillopora,zelli,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pocillopora%20zelli
+772,Podabacia crustacea,Podabacia,crustacea,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Podabacia%20crustacea
+773,Podabacia kunzmanni,Podabacia,kunzmanni,NE,N/A,,,N/A
+774,Podabacia lankaensis,Podabacia,lankaensis,EN,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Podabacia%20lankaensis
+775,Podabacia motuporensis,Podabacia,motuporensis,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Podabacia%20motuporensis
+776,Podabacia sinai,Podabacia,sinai,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Podabacia%20sinai
+777,Polycyathus chaishanensis,Polycyathus,chaishanensis,NE,N/A,,,N/A
+778,Polycyathus isabela,Polycyathus,isabela,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Polycyathus%20isabela
+779,Polyphyllia novaehiberniae,Polyphyllia,novaehiberniae,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Polyphyllia%20novaehiberniae
+780,Polyphyllia talpina,Polyphyllia,talpina,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Polyphyllia%20talpina
+781,Porites annae,Porites,annae,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20annae
+782,Porites aranetai,Porites,aranetai,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20aranetai
+783,Porites arnaudi,Porites,arnaudi,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20arnaudi
+784,Porites astreoides,Porites,astreoides,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20astreoides
+785,Porites attenuata,Porites,attenuata,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20attenuata
+786,Porites australiensis,Porites,australiensis,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20australiensis
+787,Porites baueri,Porites,baueri,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20baueri
+788,Porites branneri,Porites,branneri,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20branneri
+789,Porites brighami,Porites,brighami,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20brighami
+790,Porites cocosensis,Porites,cocosensis,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20cocosensis
+791,Porites colonensis,Porites,colonensis,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20colonensis
+792,Porites columnaris,Porites,columnaris,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20columnaris
+793,Porites compressa,Porites,compressa,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20compressa
+794,Porites cumulatus,Porites,cumulatus,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20cumulatus
+795,Porites cylindrica,Porites,cylindrica,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20cylindrica
+796,Porites decasepta,Porites,decasepta,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20decasepta
+797,Porites deformis,Porites,deformis,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20deformis
+798,Porites densa,Porites,densa,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20densa
+799,Porites desilveri,Porites,desilveri,EN,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20desilveri
+800,Porites divaricata,Porites,divaricata,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20divaricata
+801,Porites duerdeni,Porites,duerdeni,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20duerdeni
+802,Porites echinulata,Porites,echinulata,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20echinulata
+803,Porites eridani,Porites,eridani,EN,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20eridani
+804,Porites evermanni,Porites,evermanni,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20evermanni
+805,Porites flavus,Porites,flavus,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20flavus
+806,Porites fontanesii,Porites,fontanesii,NE,N/A,,,N/A
+807,Porites furcata,Porites,furcata,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20furcata
+808,Porites gabonensis,Porites,bernardi,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20bernardi
+809,Porites harrisoni,Porites,harrisoni,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20harrisoni
+810,Porites hawaiiensis,Porites,hawaiiensis,NE,N/A,,,N/A
+811,Porites heronensis,Porites,heronensis,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20heronensis
+812,Porites horizontalata,Porites,horizontalata,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20horizontalata
+813,Porites latistellata,Porites,latistella,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20latistella
+814,Porites latistellata,Porites,latistellata,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20latistellata
+815,Porites lichen,Porites,lichen,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20lichen
+816,Porites lobata,Porites,excavata,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20excavata
+817,Porites lobata,Porites,lobata,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20lobata
+818,Porites lutea,Porites,lutea,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20lutea
+819,Porites mayeri,Porites,mayeri,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20mayeri
+820,Porites monticulosa,Porites,monticulosa,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20monticulosa
+821,Porites murrayensis,Porites,murrayensis,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20murrayensis
+822,Porites myrmidonensis,Porites,myrmidonensis,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20myrmidonensis
+823,Porites napopora,Porites,napopora,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20napopora
+824,Porites negrosensis,Porites,negrosensis,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20negrosensis
+825,Porites nigrescens,Porites,nigrescens,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20nigrescens
+826,Porites nodifera,Porites,nodifera,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20nodifera
+827,Porites okinawensis,Porites,okinawensis,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20okinawensis
+828,Porites ornata,Porites,ornata,EN,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20ornata
+829,Porites panamensis,Porites,panamensis,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20panamensis
+830,Porites porites,Porites,porites,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20porites
+831,Porites profundus,Porites,profundus,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20profundus
+832,Porites pukoensis,Porites,pukoensis,CR,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20pukoensis
+833,Porites randalli,Porites,randalli,NE,N/A,,,N/A
+834,Porites rugosus,Porites,rugosa,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20rugosa
+835,Porites rus,Porites,rus,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20rus
+836,Porites sillimaniani,Porites,sillimaniana,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20sillimaniana
+837,Porites solida,Porites,solida,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20solida
+838,Porites somaliensis,Porites,somaliensis,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20somaliensis
+839,Porites stephensoni,Porites,stephensoni,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20stephensoni
+840,Porites studeri,Porites,studeri,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20studeri
+841,Porites superfusa,Porites,superfusa,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20superfusa
+842,Porites sverdrupi,Porites,sverdrupi,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20sverdrupi
+843,Porites tuberculosus,Porites,tuberculosa,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20tuberculosa
+844,Porites vaughani,Porites,vaughani,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Porites%20vaughani
+845,Psammocora albopicta,Psammocora,albopicta,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Psammocora%20albopicta
+846,Psammocora contigua,Psammocora,contigua,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Psammocora%20contigua
+847,Psammocora contigua,Psammocora,decussata,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Psammocora%20decussata
+848,Psammocora contigua,Psammocora,obtusangula,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Psammocora%20obtusangula
+849,Psammocora contigua,Psammocora,ramosa,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Psammocora%20ramosa
+850,Psammocora digitata,Psammocora,digitata,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Psammocora%20digitata
+851,Psammocora haimiana,Psammocora,haimeana,LC,Jan-08,,spelling,https://apiv3.iucnredlist.org/api/v3/website/Psammocora%20haimeana
+852,Psammocora nierstraszi,Psammocora,nierstraszi,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Psammocora%20nierstraszi
+853,Psammocora nierstraszi,Psammocora,verrilli,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Psammocora%20verrilli
+854,Psammocora nierstraszi,Psammocora,vaughani,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Psammocora%20vaughani
+855,Psammocora profundacella,Psammocora,profundacella,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Psammocora%20profundacella
+856,Psammocora profundacella,Psammocora,superficialis,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Psammocora%20superficialis
+857,Psammocora stellata,Psammocora,stellata,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Psammocora%20stellata
+858,Pseudodiploria clivosa,Diploria,clivosa,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Diploria%20clivosa
+859,Pseudodiploria strigosa,Diploria,strigosa,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Diploria%20strigosa
+860,Pseudosiderastrea formosa,Pseudosiderastrea,formosa,NE,N/A,,,N/A
+861,Pseudosiderastrea tayamai,Pseudosiderastrea,tayami,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Pseudosiderastrea%20tayami
+862,Sandalolitha boucheti,Sandalolitha,boucheti,NE,N/A,,,N/A
+863,Sandalolitha dentata,Sandalolitha,dentata,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Sandalolitha%20dentata
+864,Sandalolitha robusta,Sandalolitha,robusta,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Sandalolitha%20robusta
+865,Scapophyllia cylindrica,Scapophyllia,cylindrica,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Scapophyllia%20cylindrica
+866,Schizoculina africana,Schizoculina,africana,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Schizoculina%20africana
+867,Schizoculina fissipara,Schizoculina,fissipara,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Schizoculina%20fissipara
+868,Sclerophyllia margariticola,Sclerophyllia,margariticola,NE,N/A,,,N/A
+869,Sclerophyllia maxima,Acanthastrea,maxima,NT,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Acanthastrea%20maxima
+870,Sclerophyllia maxima,Sclerophyllia,maxima,NE,N/A,,,N/A
+871,Scolymia cubensis,Scolymia,cubensis,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Scolymia%20cubensis
+872,Scolymia lacera,Scolymia,lacera,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Scolymia%20lacera
+873,Scolymia wellsii,Scolymia,wellsi,DD,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Scolymia%20wellsi
+874,Seriatopora aculeata,Seriatopora,aculeata,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Seriatopora%20aculeata
+875,Seriatopora caliendrum,Seriatopora,caliendrum,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Seriatopora%20caliendrum
+876,Seriatopora dentritica,Seriatopora,dendritica,VU,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Seriatopora%20dendritica
+877,Seriatopora guttata,Seriatopora,guttatus,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Seriatopora%20guttatus
+878,Seriatopora hystrix,Seriatopora,hystrix,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Seriatopora%20hystrix
+879,Seriatopora stellata,Seriatopora,stellata,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Seriatopora%20stellata
+880,Siderastrea radians,Siderastrea,radians,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Siderastrea%20radians
+881,Siderastrea savignyana,Siderastrea,savignyana,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Siderastrea%20savignyana
+882,Siderastrea siderea,Siderastrea,glynni,CR,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Siderastrea%20glynni
+883,Siderastrea siderea,Siderastrea,siderea,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Siderastrea%20siderea
+884,Siderastrea stellata,Siderastrea,stellata,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Siderastrea%20stellata
+885,Simplastrea vesicularis,Simplastrea,vesicularis,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Simplastrea%20vesicularis
+886,Sinuorota hexagonalis,Fungia,hexagonalis,LC,Jan-08,,,https://apiv3.iucnredlist.org/api/v3/website/Fungia%20hexagonalis
+887,Sinuorota hexagonalis,Sinuorota,hexagonalis,NE,N/A,,,N/A
+888,Solenastrea bournoni,Solenastrea,bournoni,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Solenastrea%20bournoni
+889,Solenastrea hyades,Solenastrea,hyades,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Solenastrea%20hyades
+890,Stephanocoenia intersepta,Stephanocoenia,intersepta,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Stephanocoenia%20intersepta
+891,Stylaraea punctata,Stylaraea,punctata,DD,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Stylaraea%20punctata
+892,Stylocoeniella armata,Stylocoeniella,armata,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Stylocoeniella%20armata
+893,Stylocoeniella cocosensis,Stylocoeniella,cocosensis,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Stylocoeniella%20cocosensis
+894,Stylocoeniella guentheri,Stylocoeniella,guentheri,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Stylocoeniella%20guentheri
+895,Stylophora danae,Stylophora,danae,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Stylophora%20danae
+896,Stylophora kuehlmanni,Stylophora,kuehlmanni,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Stylophora%20kuehlmanni
+897,Stylophora madagascarensis,Stylophora,madagascarensis,EN,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Stylophora%20madagascarensis
+898,Stylophora mamillata,Stylophora,mamillata,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Stylophora%20mamillata
+899,Stylophora pistillata,Stylophora,pistillata,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Stylophora%20pistillata
+900,Stylophora subseriata,Stylophora,subseriata,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Stylophora%20subseriata
+901,Stylophora wellsi,Stylophora,wellsi,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Stylophora%20wellsi
+902,taxon inquirendum,Acropora,haimei,DD,Jan-08,,taxon inquirendum,https://apiv3.iucnredlist.org/api/v3/website/Acropora%20haimei
+903,Trachyphyllia geoffroyi,Trachyphyllia,geoffroyi,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Trachyphyllia%20geoffroyi
+904,Turbinaria bifrons,Turbinaria,bifrons,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Turbinaria%20bifrons
+905,Turbinaria conspicua,Turbinaria,conspicua,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Turbinaria%20conspicua
+906,Turbinaria frondens,Turbinaria,frondens,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Turbinaria%20frondens
+907,Turbinaria heronensis,Turbinaria,heronensis,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Turbinaria%20heronensis
+908,Turbinaria irregularis,Turbinaria,irregularis,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Turbinaria%20irregularis
+909,Turbinaria mesenterina,Turbinaria,mesenterina,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Turbinaria%20mesenterina
+910,Turbinaria patula,Turbinaria,patula,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Turbinaria%20patula
+911,Turbinaria peltata,Turbinaria,peltata,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Turbinaria%20peltata
+912,Turbinaria radicalis,Turbinaria,radicalis,NT,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Turbinaria%20radicalis
+913,Turbinaria reniformis,Turbinaria,reniformis,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Turbinaria%20reniformis
+914,Turbinaria stellulata,Turbinaria,stellulata,VU,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Turbinaria%20stellulata
+915,Zoopilus echinatus,Zoopilus,echinatus,LC,01/01/2008,,,https://apiv3.iucnredlist.org/api/v3/website/Zoopilus%20echinatus

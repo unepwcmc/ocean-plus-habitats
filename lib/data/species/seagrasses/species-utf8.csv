@@ -1,65 +1,65 @@
-species_id,scientific_name,IUCN_Genus,IUCN_Species,redlist_status,Timestamp_redlist,common_name,Comment
-1,Amphibolis antarctica,Amphibolis,antarctica,LC,Oct-07,,
-2,Amphibolis griffithii,Amphibolis,griffithii,LC,Nov-07,,
-3,Cymodocea angustata,Cymodocea,angustata,LC,Mar-18,,
-4,Cymodocea nodosa,Cymodocea,nodosa,LC,Oct-07,Slender Seagrass,
-5,Cymodocea rotundata,Cymodocea,rotundata,LC,Mar-18,,
-6,Cymodocea serrulata,Cymodocea,serrulata,LC,Mar-08,,
-7,Enhalus acoroides,Enhalus,acoroides,LC,Oct-07,,
-8,Halodule beaudettei,Halodule,beaudettei,DD,Mar-07,,
-9,Halodule bermudensis,Halodule,bermudensis,DD,Mar-09,,
-10,Halodule emarginata,Halodule,emarginata,DD,Mar-07,,not recognized in WoRMS
-11,Halodule pinifolia,Halodule,pinifolia,LC,Oct-07,,
-12,Halodule uninervis,Halodule,uninervis,LC,Oct-07,,
-13,Halodule wrightii,Halodule,wrightii,LC,Mar-07,Shoal grass,
-14,Halophila australis,Halophila,australis,LC,Oct-07,,
-15,Halophila baillonis,Halophila,baillonii,VU,Mar-07,,Spelling
-16,Halophila beccarii,Halophila,beccarii,VU,Mar-07,Ocean Turf Grass,
-17,Halophila capricorni,Halophila,capricorni,LC,Mar-08,,
-18,Halophila decipiens,Halophila,decipiens,LC,Oct-07,,
-19,Halophila engelmannii,Halophila,engelmanni,NT,Mar-07,,Spelling
-20,Halophila hawaiiana,Halophila,hawaiiana,VU,Mar-08,,
-21,Halophila johnsonii,Halophila,johnsonii,LC,Oct-07,Johnson's Seagrass,
-22,Halophila minor,Halophila,minor,LC,May-09,,
-23,Halophila ovalis,Halophila,ovalis,LC,Oct-07,,
-24,Halophila ovata,Halophila,ovata,LC,Oct-07,,
-25,Halophila spinulosa,Halophila,spinulosa,LC,Mar-08,,
-26,Halophila stipulacea,Halophila,stipulacea,LC,Oct-07,,
-27,Halophila tricostata,Halophila,tricostata,LC,Oct-07,,
-28,Phyllospadix iwatensis,Phyllospadix,iwatensis,VU,Aug-08,Surfgrass,
-29,Phyllospadix japonicus,Phyllospadix,japonicus,EN,Aug-08,Asian Surf Grass,
-30,Phyllospadix scouleri,Phyllospadix,scouleri,LC,Oct-07,Surf Grass,
-31,Phyllospadix serrulatus,Phyllospadix,serrulatus,LC,Oct-07,Surfgrass,
-32,Phyllospadix torreyi,Phyllospadix,torreyi,LC,Oct-07,Surfgrass,
-33,Posidonia angustifolia,Posidonia,angustifolia,LC,Oct-07,,
-34,Posidonia australis,Posidonia,australis,NT,Oct-07,,
-35,Posidonia ostenfeldii,Posidonia,coriacea,LC,Oct-07,,Different species
-36,Posidonia denhartogii,Posidonia,denhartogii,LC,Oct-07,,
-37,Posidonia kirkmannii,Posidonia,kirkmanii,LC,Oct-07,,Spelling
-38,Posidonia oceanica,Posidonia,oceanica,LC,Oct-07,Neptune Grass,
-39,Posidonia ostenfeldii,Posidonia,ostenfeldii,LC,Oct-07,,
-40,Posidonia ostenfeldii,Posidonia,robertsoniae,LC,Oct-07,,Different species
-41,Posidonia sinuosa,Posidonia,sinuosa,VU,Oct-07,,
-42,Syringodium filiforme,Syringodium,filiforme,LC,Mar-07,Manatee grass,
-43,Syringodium isoetifolium,Syringodium,isoetifolium,LC,Feb-08,,
-44,Thalassia hemprichii,Thalassia,hemprichii,LC,Oct-07,Turtle Grass,
-45,Thalassia testudinum,Thalassia,testudinum,LC,Mar-07,,
-46,Thalassodendron ciliatum,Thalassodendron,ciliatum,LC,Mar-08,,
-47,Thalassodendron pachyrizum,Thalassodendron,pachyrhizum,LC,Mar-07,,Spelling
-48,Zostera asiatica,Zostera,asiatica,NT,Aug-08,,
-49,Zostera caespitosa,Zostera,caespitosa,VU,Aug-08,,
-50,Zostera (Zosterella) capensis,Zostera,capensis,VU,Mar-07,,subgenus
-51,Zostera muelleri subsp. capricorni,Zostera,capricorni,LC,Oct-07,,Old name!
-52,Zostera caulescens,Zostera,caulescens,NT,Aug-08,,
-53,Zostera japonica,Zostera,japonica,LC,Nov-07,Dwarf Eelgrass,
-54,Zostera subg. Zostera marina,Zostera,marina,LC,Oct-07,Eelgrass,subgenus
-55,Zostera muelleri subsp. mucronata,Zostera,mucronata,LC,Oct-07,,Old name!
-56,Zostera muelleri,Zostera,muelleri,LC,Oct-07,,
-57,Zostera noltei,Zostera,noltii,LC,Oct-07,Dwarf Eelgrass,Spelling
-58,Zostera novazelandica,Zostera,novazelandica,LC,Oct-07,,
-59,Zostera tasmanica,Zostera,tasmanica,LC,Oct-07,,
-60,Ruppia maritima,Ruppia,maritima,LC,Oct-07,widgeon grass/beaked tasselweed,
-61,Ruppia filifolia,Ruppia,filifolia,DD,Oct-07,,not recognized in WoRMS
-62,Ruppia cirrhosa,Ruppia,cirrhosa,LC,Oct-07,Spiral Ditchgrass,
-63,Ruppia megacarpa,Ruppia,megacarpa,LC,Oct-07,Large-fruit seatassel,
-64,Ruppia tuberosa,Ruppia,tuberosa,LC ,Oct-07,,
+species_id,scientific_name,IUCN_Genus,IUCN_Species,redlist_status,Timestamp_redlist,common_name,Comment,URL
+1,Amphibolis antarctica,Amphibolis,antarctica,LC,Oct-07,,,apiv3.iucnredlist.org/api/v3/website/Amphibolis%20antarctica
+2,Amphibolis griffithii,Amphibolis,griffithii,LC,Nov-07,,,apiv3.iucnredlist.org/api/v3/website/Amphibolis%20griffithii
+3,Cymodocea angustata,Cymodocea,angustata,LC,Mar-18,,,apiv3.iucnredlist.org/api/v3/website/Cymodocea%20angustata
+4,Cymodocea nodosa,Cymodocea,nodosa,LC,Oct-07,Slender Seagrass,,apiv3.iucnredlist.org/api/v3/website/Cymodocea%20nodosa
+5,Cymodocea rotundata,Cymodocea,rotundata,LC,Mar-18,,,apiv3.iucnredlist.org/api/v3/website/Cymodocea%20rotundata
+6,Cymodocea serrulata,Cymodocea,serrulata,LC,Mar-08,,,apiv3.iucnredlist.org/api/v3/website/Cymodocea%20serrulata
+7,Enhalus acoroides,Enhalus,acoroides,LC,Oct-07,,,apiv3.iucnredlist.org/api/v3/website/Enhalus%20acoroides
+8,Halodule beaudettei,Halodule,beaudettei,DD,Mar-07,,,apiv3.iucnredlist.org/api/v3/website/Halodule%20beaudettei
+9,Halodule bermudensis,Halodule,bermudensis,DD,Mar-09,,,apiv3.iucnredlist.org/api/v3/website/Halodule%20bermudensis
+10,Halodule emarginata,Halodule,emarginata,DD,Mar-07,,not recognized in WoRMS,apiv3.iucnredlist.org/api/v3/website/Halodule%20emarginata
+11,Halodule pinifolia,Halodule,pinifolia,LC,Oct-07,,,apiv3.iucnredlist.org/api/v3/website/Halodule%20pinifolia
+12,Halodule uninervis,Halodule,uninervis,LC,Oct-07,,,apiv3.iucnredlist.org/api/v3/website/Halodule%20uninervis
+13,Halodule wrightii,Halodule,wrightii,LC,Mar-07,Shoal grass,,apiv3.iucnredlist.org/api/v3/website/Halodule%20wrightii
+14,Halophila australis,Halophila,australis,LC,Oct-07,,,apiv3.iucnredlist.org/api/v3/website/Halophila%20australis
+15,Halophila baillonis,Halophila,baillonii,VU,Mar-07,,Spelling,apiv3.iucnredlist.org/api/v3/website/Halophila%20baillonii
+16,Halophila beccarii,Halophila,beccarii,VU,Mar-07,Ocean Turf Grass,,apiv3.iucnredlist.org/api/v3/website/Halophila%20beccarii
+17,Halophila capricorni,Halophila,capricorni,LC,Mar-08,,,apiv3.iucnredlist.org/api/v3/website/Halophila%20capricorni
+18,Halophila decipiens,Halophila,decipiens,LC,Oct-07,,,apiv3.iucnredlist.org/api/v3/website/Halophila%20decipiens
+19,Halophila engelmannii,Halophila,engelmanni,NT,Mar-07,,Spelling,apiv3.iucnredlist.org/api/v3/website/Halophila%20engelmanni
+20,Halophila hawaiiana,Halophila,hawaiiana,VU,Mar-08,,,apiv3.iucnredlist.org/api/v3/website/Halophila%20hawaiiana
+21,Halophila johnsonii,Halophila,johnsonii,LC,Oct-07,Johnson's Seagrass,,apiv3.iucnredlist.org/api/v3/website/Halophila%20johnsonii
+22,Halophila minor,Halophila,minor,LC,May-09,,,apiv3.iucnredlist.org/api/v3/website/Halophila%20minor
+23,Halophila ovalis,Halophila,ovalis,LC,Oct-07,,,apiv3.iucnredlist.org/api/v3/website/Halophila%20ovalis
+24,Halophila ovata,Halophila,ovata,LC,Oct-07,,,apiv3.iucnredlist.org/api/v3/website/Halophila%20ovata
+25,Halophila spinulosa,Halophila,spinulosa,LC,Mar-08,,,apiv3.iucnredlist.org/api/v3/website/Halophila%20spinulosa
+26,Halophila stipulacea,Halophila,stipulacea,LC,Oct-07,,,apiv3.iucnredlist.org/api/v3/website/Halophila%20stipulacea
+27,Halophila tricostata,Halophila,tricostata,LC,Oct-07,,,apiv3.iucnredlist.org/api/v3/website/Halophila%20tricostata
+28,Phyllospadix iwatensis,Phyllospadix,iwatensis,VU,Aug-08,Surfgrass,,apiv3.iucnredlist.org/api/v3/website/Phyllospadix%20iwatensis
+29,Phyllospadix japonicus,Phyllospadix,japonicus,EN,Aug-08,Asian Surf Grass,,apiv3.iucnredlist.org/api/v3/website/Phyllospadix%20japonicus
+30,Phyllospadix scouleri,Phyllospadix,scouleri,LC,Oct-07,Surf Grass,,apiv3.iucnredlist.org/api/v3/website/Phyllospadix%20scouleri
+31,Phyllospadix serrulatus,Phyllospadix,serrulatus,LC,Oct-07,Surfgrass,,apiv3.iucnredlist.org/api/v3/website/Phyllospadix%20serrulatus
+32,Phyllospadix torreyi,Phyllospadix,torreyi,LC,Oct-07,Surfgrass,,apiv3.iucnredlist.org/api/v3/website/Phyllospadix%20torreyi
+33,Posidonia angustifolia,Posidonia,angustifolia,LC,Oct-07,,,apiv3.iucnredlist.org/api/v3/website/Posidonia%20angustifolia
+34,Posidonia australis,Posidonia,australis,NT,Oct-07,,,apiv3.iucnredlist.org/api/v3/website/Posidonia%20australis
+35,Posidonia ostenfeldii,Posidonia,coriacea,LC,Oct-07,,Different species,apiv3.iucnredlist.org/api/v3/website/Posidonia%20coriacea
+36,Posidonia denhartogii,Posidonia,denhartogii,LC,Oct-07,,,apiv3.iucnredlist.org/api/v3/website/Posidonia%20denhartogii
+37,Posidonia kirkmannii,Posidonia,kirkmanii,LC,Oct-07,,Spelling,apiv3.iucnredlist.org/api/v3/website/Posidonia%20kirkmanii
+38,Posidonia oceanica,Posidonia,oceanica,LC,Oct-07,Neptune Grass,,apiv3.iucnredlist.org/api/v3/website/Posidonia%20oceanica
+39,Posidonia ostenfeldii,Posidonia,ostenfeldii,LC,Oct-07,,,apiv3.iucnredlist.org/api/v3/website/Posidonia%20ostenfeldii
+40,Posidonia ostenfeldii,Posidonia,robertsoniae,LC,Oct-07,,Different species,apiv3.iucnredlist.org/api/v3/website/Posidonia%20robertsoniae
+41,Posidonia sinuosa,Posidonia,sinuosa,VU,Oct-07,,,apiv3.iucnredlist.org/api/v3/website/Posidonia%20sinuosa
+42,Syringodium filiforme,Syringodium,filiforme,LC,Mar-07,Manatee grass,,apiv3.iucnredlist.org/api/v3/website/Syringodium%20filiforme
+43,Syringodium isoetifolium,Syringodium,isoetifolium,LC,Feb-08,,,apiv3.iucnredlist.org/api/v3/website/Syringodium%20isoetifolium
+44,Thalassia hemprichii,Thalassia,hemprichii,LC,Oct-07,Turtle Grass,,apiv3.iucnredlist.org/api/v3/website/Thalassia%20hemprichii
+45,Thalassia testudinum,Thalassia,testudinum,LC,Mar-07,,,apiv3.iucnredlist.org/api/v3/website/Thalassia%20testudinum
+46,Thalassodendron ciliatum,Thalassodendron,ciliatum,LC,Mar-08,,,apiv3.iucnredlist.org/api/v3/website/Thalassodendron%20ciliatum
+47,Thalassodendron pachyrizum,Thalassodendron,pachyrhizum,LC,Mar-07,,Spelling,apiv3.iucnredlist.org/api/v3/website/Thalassodendron%20pachyrhizum
+48,Zostera asiatica,Zostera,asiatica,NT,Aug-08,,,apiv3.iucnredlist.org/api/v3/website/Zostera%20asiatica
+49,Zostera caespitosa,Zostera,caespitosa,VU,Aug-08,,,apiv3.iucnredlist.org/api/v3/website/Zostera%20caespitosa
+50,Zostera (Zosterella) capensis,Zostera,capensis,VU,Mar-07,,subgenus,apiv3.iucnredlist.org/api/v3/website/Zostera%20capensis
+51,Zostera muelleri subsp. capricorni,Zostera,capricorni,LC,Oct-07,,Old name!,apiv3.iucnredlist.org/api/v3/website/Zostera%20capricorni
+52,Zostera caulescens,Zostera,caulescens,NT,Aug-08,,,apiv3.iucnredlist.org/api/v3/website/Zostera%20caulescens
+53,Zostera japonica,Zostera,japonica,LC,Nov-07,Dwarf Eelgrass,,apiv3.iucnredlist.org/api/v3/website/Zostera%20japonica
+54,Zostera subg. Zostera marina,Zostera,marina,LC,Oct-07,Eelgrass,subgenus,apiv3.iucnredlist.org/api/v3/website/Zostera%20marina
+55,Zostera muelleri subsp. mucronata,Zostera,mucronata,LC,Oct-07,,Old name!,apiv3.iucnredlist.org/api/v3/website/Zostera%20mucronata
+56,Zostera muelleri,Zostera,muelleri,LC,Oct-07,,,apiv3.iucnredlist.org/api/v3/website/Zostera%20muelleri
+57,Zostera noltei,Zostera,noltii,LC,Oct-07,Dwarf Eelgrass,Spelling,apiv3.iucnredlist.org/api/v3/website/Zostera%20noltii
+58,Zostera novazelandica,Zostera,novazelandica,LC,Oct-07,,,apiv3.iucnredlist.org/api/v3/website/Zostera%20novazelandica
+59,Zostera tasmanica,Zostera,tasmanica,LC,Oct-07,,,apiv3.iucnredlist.org/api/v3/website/Zostera%20tasmanica
+60,Ruppia maritima,Ruppia,maritima,LC,Oct-07,widgeon grass/beaked tasselweed,,apiv3.iucnredlist.org/api/v3/website/Ruppia%20maritima
+61,Ruppia filifolia,Ruppia,filifolia,DD,Oct-07,,not recognized in WoRMS,apiv3.iucnredlist.org/api/v3/website/Ruppia%20filifolia
+62,Ruppia cirrhosa,Ruppia,cirrhosa,LC,Oct-07,Spiral Ditchgrass,,apiv3.iucnredlist.org/api/v3/website/Ruppia%20cirrhosa
+63,Ruppia megacarpa,Ruppia,megacarpa,LC,Oct-07,Large-fruit seatassel,,apiv3.iucnredlist.org/api/v3/website/Ruppia%20megacarpa
+64,Ruppia tuberosa,Ruppia,tuberosa,LC ,Oct-07,,,apiv3.iucnredlist.org/api/v3/website/Ruppia%20tuberosa
