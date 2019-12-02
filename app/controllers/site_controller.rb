@@ -14,7 +14,7 @@ class SiteController < ApplicationController
     @red_list_data = @habitats.zip(red_list_data)
     @red_list_modal = { title: 'Title hardcoded in controller', text: I18n.t('home.red_list.citation') }.to_json
 
-    @habitat_cover = HabitatCoverSerializer.new.serialize
+    @habitat_cover = Serializers::HabitatCoverSerializer.new.serialize
     @habitat_cover_modal = { title: 'Title hardcoded in controller', text: I18n.t('home.habitat_cover.citation') }.to_json
 
     doughnut_chart = I18n.t('home.sdg.doughnut_chart_data')

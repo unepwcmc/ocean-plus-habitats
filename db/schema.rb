@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191108104050) do
+ActiveRecord::Schema.define(version: 20191128152823) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,6 +61,13 @@ ActiveRecord::Schema.define(version: 20191108104050) do
     t.index ["habitat_id"], name: "index_geo_entity_stats_on_habitat_id"
   end
 
+  create_table "geo_relationships", force: :cascade do |t|
+    t.bigint "country_id"
+    t.bigint "region_id"
+    t.index ["country_id"], name: "index_geo_relationships_on_country_id"
+    t.index ["region_id"], name: "index_geo_relationships_on_region_id"
+  end
+
   create_table "habitats", force: :cascade do |t|
     t.string "name", default: "", null: false
     t.string "title", default: "", null: false
@@ -82,6 +89,7 @@ ActiveRecord::Schema.define(version: 20191108104050) do
     t.bigint "habitat_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "url"
     t.index ["habitat_id"], name: "index_species_on_habitat_id"
   end
 
@@ -89,4 +97,6 @@ ActiveRecord::Schema.define(version: 20191108104050) do
   add_foreign_key "change_stats", "habitats"
   add_foreign_key "geo_entity_stats", "geo_entities"
   add_foreign_key "geo_entity_stats", "habitats"
+  add_foreign_key "geo_relationships", "geo_entities", column: "country_id"
+  add_foreign_key "geo_relationships", "geo_entities", column: "region_id"
 end
