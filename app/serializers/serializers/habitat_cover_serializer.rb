@@ -1,13 +1,13 @@
-class HabitatCoverSerializer
+class Serializers::HabitatCoverSerializer < Serializers::Base
 
   def initialize
-    @habitat_cover = I18n.t('home.habitat_cover.habitats')
+    super(I18n.t('home.habitat_cover.habitats'), 'habitat_cover')
   end
 
   def serialize
     habitat_cover_array = []
-    
-    @habitat_cover.each do |habitat, translations| 
+
+    @habitat_cover.each do |habitat, translations|
       habitat_cover_item = translations
 
       habitat_global_change = Habitat.find_by(name: habitat.to_s).calculate_global_cover_change
