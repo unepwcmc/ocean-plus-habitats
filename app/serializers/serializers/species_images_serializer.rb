@@ -38,11 +38,12 @@ class Serializers::SpeciesImagesSerializer < Serializers::Base
     }
   end
 
-  # TODO Some images seem to be missing
+  # TODO Some images seem to be missing.
+  # Probably the ones related to most common species.
   FALLBACK_IMAGE_PATH = 'species/species.png'.freeze
   def species_image(species)
     habitat = species.habitat.name
-    species_name = species.scientific_name.underscore.gsub(' ', '_')
+    species_name = species.scientific_name.parameterize.underscore
     asset_path = "species/#{habitat}/#{species_name}_atlas_of_#{habitat}.jpg"
     if has_asset?(asset_path)
       ActionController::Base.helpers.image_url(asset_path)
