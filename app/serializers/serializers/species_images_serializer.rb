@@ -32,9 +32,31 @@ class Serializers::SpeciesImagesSerializer < Serializers::Base
     {
       name_common: species.common_name,
       name_scientific: species.scientific_name,
-      image: ActionController::Base.helpers.image_url('species/species.png'),
+      image: species_image(species),
       redlist: species.redlist_status,
       redlist_url: species.url
     }
+  end
+
+  # TODO Some images seem to be missing
+  FALLBACK_IMAGE_PATH = 'species/species.png'.freeze
+  def species_image(species)
+    habitat = species.habitat.name
+    species_name = species.scientific_name.underscore.gsub(' ', '_')
+    asset_path = "species/#{habitat}/#{species_name}_atlas_of_#{habitat}.jpg"
+    if has_asset?(asset_path)
+      ActionController::Base.helpers.image_url(asset_path)
+    else
+      # Use species name in redlist url to find a possible matching with filename
+      # if first attempt with scientific_name fails
+      species_name = species.url.split('/').last.gsub('%20', '_').underscore
+      path = "species/#{habitat}/#{species_name}_atlas_of_#{habitat}.jpg"
+      asset_path = has_asset?(path) ? path : FALLBACK_IMAGE_PATH
+      ActionController::Base.helpers.image_url(asset_path)
+    end
+  end
+
+  def has_asset?(path)
+    Rails.application.assets.find_asset(path) != nil
   end
 end
