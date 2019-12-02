@@ -1,6 +1,7 @@
 class Habitat < ApplicationRecord
   has_many :geo_entity_stats
   has_many :change_stats
+  has_many :species
 
   def global_coverage_title(habitat_type)
     habitat_type == 'points' ? "Total number of #{title.downcase} records globally" : "Total global recorded coverage of #{title.downcase}"
@@ -19,7 +20,7 @@ class Habitat < ApplicationRecord
     return country_cover_change if (habitat_base_year.nil? || habitat_last_year.nil?)
     change_km = habitat_last_year - habitat_base_year
     change_percentage = (change_km/habitat_base_year) * 100
-    
+
     country_cover_change.merge!({change_km: change_km.round(2), change_percentage: change_percentage.round(2)})
   end
 
