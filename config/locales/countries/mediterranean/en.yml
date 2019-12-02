@@ -1,0 +1,43 @@
+en:
+  countries:
+    mediterranean:
+      title: Mediterranean
+      habitats_present_citations:
+        - 
+          citation: 
+            title: Title in yml file
+            text:
+              - Warm-water Coral citation for Mediterranean
+        - 
+          citation: 
+            title: Title in yml file
+            text:
+              - Saltmarsh Coral citation for Mediterranean
+        - 
+          citation: 
+            title: Title in yml file
+            text:
+              - Mangrove Coral citation for Mediterranean
+        - 
+          citation: 
+            title: Title in yml file
+            text:
+              - Seagrass Coral citation for Mediterranean
+        - 
+          citation: 
+            title: Title in yml file
+            text:
+              - Cold-water Coral Coral citation for Mediterranean
+      targets:
+        aichi:
+          text:
+            - lorem sunt in culpa
+            - officia deserunt mollit anim id est liborum. officia deserunt mollit anim id est liborum.
+        sdg:
+          text:
+            - ecat cupidatat non proident, sunt in culpa qui officia mollit anim id est liborum.
+            - officia deserunt mollit anim id est liborum.
+        other:
+          text:
+            - sunt in culpa qui officia deserunt mollit anim id est liborum.
+            - ecat cupidatat non proident, 

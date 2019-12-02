@@ -7,7 +7,7 @@ class Serializers::HabitatCountryChangeSerializer < Serializers::Base
   def serialize
     habitat_change = []
     Habitat.all.each do |habitat|
-      country_cover_change = habitat.calculate_country_cover_change(@country.iso3)
+      country_cover_change = habitat.calculate_country_cover_change(@country.name)
 
       change = {
         id: habitat.name,

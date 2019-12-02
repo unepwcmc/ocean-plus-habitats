@@ -1,0 +1,44 @@
+en:
+  countries:
+    united_arab_emirates:
+      title: United Arab Emirates
+      image_flag: flags/costa-rica.svg
+      habitats_present_citations:
+        - 
+          citation: 
+            title: Title in yml file
+            text:
+              - Warm-water Coral citation for United Arab Emirates
+        - 
+          citation: 
+            title: Title in yml file
+            text:
+              - Saltmarsh Coral citation for United Arab Emirates
+        - 
+          citation: 
+            title: Title in yml file
+            text:
+              - Mangrove Coral citation for United Arab Emirates
+        - 
+          citation: 
+            title: Title in yml file
+            text:
+              - Seagrass Coral citation for United Arab Emirates
+        - 
+          citation: 
+            title: Title in yml file
+            text:
+              - Cold-water Coral Coral citation for United Arab Emirates
+      targets:
+        aichi:
+          text:
+            - lorem sunt in culpa
+            - officia deserunt mollit anim id est liborum. officia deserunt mollit anim id est liborum.
+        sdg:
+          text:
+            - ecat cupidatat non proident, sunt in culpa qui officia mollit anim id est liborum.
+            - officia deserunt mollit anim id est liborum.
+        other:
+          text:
+            - sunt in culpa qui officia deserunt mollit anim id est liborum.
+            - ecat cupidatat non proident, 
