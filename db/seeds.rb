@@ -22,4 +22,6 @@ CSV.foreach('lib/data/countries.csv', headers: true) do |row|
 end
 Rails.logger.info("#{count} countries were created successfully!")
 
-Rake::Task['import:regions'].invoke
+%w(regions prebakedstats redlist_data).each do |import_type|
+  Rake::Task["import:#{import_type}"].invoke
+end
