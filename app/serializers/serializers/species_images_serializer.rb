@@ -61,7 +61,7 @@ class Serializers::SpeciesImagesSerializer < Serializers::Base
     if Rails.env.development?
       Rails.application.assets.find_asset(path) != nil
     else
-      Rails.application.assets_manifest.find_sources(path) != nil
+      Rails.application.assets_manifest.assets[path].present?
     end
   end
 end
