@@ -1,34 +1,33 @@
 en:
   countries:
-    idn:
-      title: Indonesia
-      image_flag: 
+    wider_caribbean:
+      title: Wider Caribbean
       habitats_present_citations:
         - 
           citation: 
             title: Title in yml file
             text:
-              - Warm-water Coral citation for Indonesia
+              - Warm-water Coral citation for Wider Caribbean
         - 
           citation: 
             title: Title in yml file
             text:
-              - Saltmarsh Coral citation for Indonesia
+              - Saltmarsh Coral citation for Wider Caribbean
         - 
           citation: 
             title: Title in yml file
             text:
-              - Mangrove Coral citation for Indonesia
+              - Mangrove Coral citation for Wider Caribbean
         - 
           citation: 
             title: Title in yml file
             text:
-              - Seagrass Coral citation for Indonesia
+              - Seagrass Coral citation for Wider Caribbean
         - 
           citation: 
             title: Title in yml file
             text:
-              - Cold-water Coral Coral citation for Indonesia
+              - Cold-water Coral Coral citation for Wider Caribbean
       targets:
         aichi:
           text:

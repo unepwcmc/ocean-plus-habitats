@@ -32,22 +32,22 @@ module ApplicationHelper
     nav_items = {
       countries: [
         {
-          title: I18n.t("countries.are.title"),
-          url: country_path("ARE")
+          title: I18n.t("countries.indonesia.title"),
+          url: country_path(105)
         },
         {
-          title: I18n.t("countries.idn.title"),
-          url: country_path("IDN")
+          title: I18n.t("countries.united_arab_emirates.title"),
+          url: country_path(234)
         }
       ],
       regions: [
         {
-          title: I18n.t("regions.mediterranean.title"),
-          url: country_path("mediterranean")
+          title: I18n.t("countries.mediterranean.title"),
+          url: country_path(257)
         },
         {
-          title: I18n.t("regions.wider_caribbean.title"),
-          url: country_path("wider_caribbean")
+          title: I18n.t("countries.wider_caribbean.title"),
+          url: country_path(267)
         }
       ]
     }

@@ -1,33 +1,34 @@
 en:
-  regions:
-    mediterranean:
-      title: Mediterranean
+  countries:
+    united_arab_emirates:
+      title: United Arab Emirates
+      image_flag: flags/costa-rica.svg
       habitats_present_citations:
         - 
           citation: 
             title: Title in yml file
             text:
-              - Warm-water Coral citation for Mediterranean
+              - Warm-water Coral citation for United Arab Emirates
         - 
           citation: 
             title: Title in yml file
             text:
-              - Saltmarsh Coral citation for Mediterranean
+              - Saltmarsh Coral citation for United Arab Emirates
         - 
           citation: 
             title: Title in yml file
             text:
-              - Mangrove Coral citation for Mediterranean
+              - Mangrove Coral citation for United Arab Emirates
         - 
           citation: 
             title: Title in yml file
             text:
-              - Seagrass Coral citation for Mediterranean
+              - Seagrass Coral citation for United Arab Emirates
         - 
           citation: 
             title: Title in yml file
             text:
-              - Cold-water Coral Coral citation for Mediterranean
+              - Cold-water Coral Coral citation for United Arab Emirates
       targets:
         aichi:
           text:
