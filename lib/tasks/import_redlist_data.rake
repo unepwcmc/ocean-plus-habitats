@@ -25,7 +25,6 @@ namespace :import do
     species_filename = "lib/data/species/#{habitat.name}/species-utf8.csv".freeze
 
     CSV.foreach(species_filename, headers: true) do |row|
-      # TODO Remove empty rows from CSVs
       next unless row['species_id']
       next if Species.find_by(species_id: row['species_id']).present?
       row_hash = row.to_hash.slice(*species_header)

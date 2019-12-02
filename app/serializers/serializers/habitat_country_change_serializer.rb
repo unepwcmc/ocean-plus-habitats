@@ -1,7 +1,7 @@
-class HabitatCountryChangeSerializer
+class Serializers::HabitatCountryChangeSerializer < Serializers::Base
 
   def initialize(country)
-    @country = country
+    super(country, 'country')
   end
 
   def serialize
