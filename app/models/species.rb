@@ -20,37 +20,4 @@ class Species < ApplicationRecord
   scope :near_threatened, -> { where(redlist_status: NEAR_THREATENED) }
   scope :threatened_and_near, -> { where(redlist_status: [THREATENED, NEAR_THREATENED].flatten) }
   scope :not_threatened, -> { where.not(redlist_status: THREATENED) }
-
-  NO_IMAGE_DATA = [
-    "Acrostichum danaeifolium",
-    "Avicennia integra",
-    "Avicennia rumphiana",
-    "Ceriops australis",
-    "Diospyros littorea",
-    "Dolichandrone spathacea",
-    "Kandelia obovata",
-    "Rhizophora samoensis",
-    "Sonneratia lanceolata",
-    "Avicennia bicolor",
-    "Avicennia schaueriana",
-    "Mora oleifera",
-    "Pelliciera rhizophoreae",
-    "Tabebuia palustris",
-    "Tabebuia Ruppia maritima",
-    "Ruppia filifolia",
-    "Ruppia cirrhosa",
-    "Ruppia megacarpa",
-    "Ruppia tuberosapalustris"
-  ].freeze
-
-  def self.get_species_without_image_data
-    NO_IMAGE_DATA
-  end
-
-  def generate_redlist_url
-    iucn_genus = "bruguiera"
-    iucn_species = "cylindrica"
-
-    "https://apiv3.iucnredlist.org/api/v3/website/#{iucn_genus}%20#{iucn_species}"
-  end
 end
