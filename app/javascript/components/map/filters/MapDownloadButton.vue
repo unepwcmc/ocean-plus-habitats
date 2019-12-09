@@ -76,7 +76,7 @@ export default {
     },
 
     text () {
-      return this.translations.countries ? 
+      return this.translations ? 
         this.translations 
           .countries
           .shared
