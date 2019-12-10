@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   root to: 'site#index'
 
-  resources :countries, only: [:index, :show]
+  resources :countries, only: [:index]
+  get 'countries/:name' => 'countries#show'
 end
