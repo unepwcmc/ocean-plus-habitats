@@ -115,11 +115,11 @@ export default {
     reload () {
       this.datasets = [{
         id: 'coralreefs',
-        name: 'Warm water coral',
+        name: 'Warm-water coral reefs',
         sourceLayer: 'Ch2_Fg5_mcat5',
         tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Ch2_Fg5_Oct19/VectorTileServer/tile/{z}/{y}/{x}.pbf',
         color: '#F35F8D',
-        descriptionHtml: '<p><strong>00%</strong>Warm water coral</p><p><strong>00%</strong>Percentage of warm water coral that occur within a marine protected area</p>'
+        descriptionHtml: '<p><strong>00%</strong>Warm-water coral reefs</p><p><strong>00%</strong>Percentage of warm water coral that occur within a marine protected area</p>'
       },
       {
         id: 'saltmarshes',
@@ -127,7 +127,7 @@ export default {
         sourceLayer: 'Ch2_Fg5_mcat5',
         tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Ch2_Fg5_Oct19/VectorTileServer/tile/{z}/{y}/{x}.pbf',
         color: '#332288',
-        descriptionHtml: '<p><strong>00%</strong>Saltmarsh</p><p><strong>00%</strong>Percentage of saltmarsh that occur within a marine protected area</p>'
+        descriptionHtml: '<p><strong>00%</strong>Saltmarshes</p><p><strong>00%</strong>Percentage of saltmarsh that occur within a marine protected area</p>'
       }]
     },
 

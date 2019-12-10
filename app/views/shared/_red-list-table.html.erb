@@ -5,7 +5,7 @@
     <% @red_list_categories.each do |column| %>
       <div class="table__cell">
         <%= image_tag column[:icon], class: 'table__icon', alt: "#{column[:title]} icon" %>
-        <span class="table__title"><%= column[:title] %></span>
+        <span class="table__title--capitalized"><%= column[:title] %></span>
       </div>
     <% end %>
 
