@@ -2,7 +2,7 @@ en:
   countries:
     indonesia:
       title: Indonesia
-      image_flag: 
+      image_flag: flags/indonesia.png
       habitats_present_citations:
         - 
           citation: 

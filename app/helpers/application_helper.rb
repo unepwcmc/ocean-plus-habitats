@@ -43,7 +43,7 @@ module ApplicationHelper
     return {} unless geo_entity_id
     {
       title: I18n.t("countries.#{item}.title"),
-      url: country_path(geo_entity_id)
+      url: country_path(geo_entity_name)
     }
   end
 
@@ -51,5 +51,13 @@ module ApplicationHelper
     status = status == 'present' || status == '' ? '' : "-#{status}"
 
     "icon--#{habitat}#{status}"
+  end
+
+  def country_path (country)
+    '/' + country.gsub(/ /, '-').gsub("'", '%27').downcase
+  end
+
+  def country_name_from_param (param_name)
+    param_name.gsub('-', ' ').gsub('%27', "'").titleize
   end
 end

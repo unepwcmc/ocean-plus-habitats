@@ -1,11 +1,12 @@
 class CountriesController < ApplicationController
+  include ApplicationHelper
+  
   def index
   end
 
   def show
-    @country = GeoEntity.find_by(id: params[:id])
-
-    @yml_key = @country[:name].downcase.gsub(/ /, '_')
+    @country = GeoEntity.find_by(name: country_name_from_param(params[:name]))
+    @yml_key = @country[:name].downcase.gsub(/ /, '_').gsub('%27', "")
 
     country_yml = I18n.t("countries.#{@yml_key}")
 
