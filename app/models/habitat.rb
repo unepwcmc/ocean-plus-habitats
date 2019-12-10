@@ -11,12 +11,13 @@ class Habitat < ApplicationRecord
     "Percentage of #{title.downcase} that occur within a marine protected area"
   end
 
-  def calculate_country_cover_change(name)
+  def calculate_country_cover_change(country_name)
     country_cover_change = { change_km: 0, change_percentage: 0 }
+    # We only got mangroves data at the moment
     return country_cover_change unless name == "mangroves"
-    geo_entity_id = GeoEntity.find_by(name: name).id
-    habitat_base_year = ChangeStat.find_by(habitat_id: id, geo_entity_id: geo_entity_id).send("total_value_#{baseline_year}".to_sym)
-    habitat_last_year = ChangeStat.find_by(habitat_id: id, geo_entity_id: geo_entity_id).send(latest_year)
+    geo_entity_id = GeoEntity.find_by(name: country_name).id
+    habitat_base_year = ChangeStat.find_by(habitat_id: id, geo_entity_id: geo_entity_id)&.send("total_value_#{baseline_year}".to_sym)
+    habitat_last_year = ChangeStat.find_by(habitat_id: id, geo_entity_id: geo_entity_id)&.send(latest_year)
     return country_cover_change if (habitat_base_year.nil? || habitat_last_year.nil?)
     change_km = habitat_last_year - habitat_base_year
     change_percentage = (change_km/habitat_base_year) * 100
