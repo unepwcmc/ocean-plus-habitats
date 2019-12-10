@@ -54,7 +54,7 @@ module ApplicationHelper
   end
 
   def country_path (country)
-    '/countries/' + country.gsub(/ /, '-').gsub("'", '%27').downcase
+    '/' + country.gsub(/ /, '-').gsub("'", '%27').downcase
   end
 
   def country_name_from_param (param_name)

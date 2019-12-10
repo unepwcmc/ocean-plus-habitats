@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   root to: 'site#index'
 
   resources :countries, only: [:index]
-  get 'countries/:name' => 'countries#show'
+  get '/:name' => 'countries#show'
 end
