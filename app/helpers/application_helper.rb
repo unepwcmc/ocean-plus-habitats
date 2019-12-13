@@ -60,4 +60,27 @@ module ApplicationHelper
   def country_name_from_param (param_name)
     param_name.gsub('-', ' ').gsub('%27', "'").titleize
   end
+
+  def nav_tertiary
+    I18n.t('home.nav_sticky').to_json
+  end
+
+  def red_list_categories
+    I18n.t('home.red_list.categories')
+  end
+
+  def habitat_cover_modal
+    { title: 'Title hardcoded in controller', text: I18n.t('home.habitat_cover.citation') }.to_json
+  end
+
+  def red_list_modal
+    { title: 'Title hardcoded in controller', text: I18n.t('home.red_list.citation') }.to_json
+  end
+
+  def habitat_change_modal
+    {
+      title: 'Title hardcoded in controller',
+      text: I18n.t('home.habitat_change.citation')
+    }.to_json
+  end
 end

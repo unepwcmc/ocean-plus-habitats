@@ -21,43 +21,22 @@ class CountriesController < ApplicationController
     ]
 
     @habitats_present = habitats.zip(habitats_present_data, habitat_citations)
-    @habitats_present_modal = {
-      title: 'Hardcoded title in controller',
-      text: I18n.t('countries.shared.habitats_present.citation')
-    }.to_json
 
-    @red_list_categories = I18n.t('home.red_list.categories')
     red_list_data = @country.count_species
     @red_list_data = habitats.each { |habitat| habitat['data'] = red_list_data[habitat[:id]] }
-
-    @red_list_modal = {
-      title: 'Title hardcoded in controller',
-      text: I18n.t('countries.shared.red_list.citation')
-    }.to_json
 
     @example_species_select = habitats.map { |habitat| { id: habitat[:id], name: habitat[:title] }}
     @example_species_selected = @example_species_select[2].to_json
 
     @example_species_common = Serializers::SpeciesImagesSerializer.new(@country.species).to_json
     @example_species_threatened = Serializers::SpeciesImagesSerializer.new(@country.species, true).to_json
-    @habitat_condition_modal = {
-      title: 'Title hardcoded in controller',
-      text: I18n.t('countries.shared.habitat_condition.citation')
-    }.to_json
 
     @habitat_change = Serializers::HabitatCountryChangeSerializer.new(@country).serialize.to_json
 
-    @habitat_change_modal = { title: 'Title hardcoded in controller', text: I18n.t('countries.shared.habitat_change.citation') }.to_json
-
-    @target_tabs = I18n.t('countries.shared.targets.tabs')
     @target_text = country_yml[:targets]
   end
 
   private
-
-  def habitats
-    I18n.t('global.habitats')
-  end
 
   def get_status_text status
     I18n.t("countries.shared.habitats_present.title_#{status}")
