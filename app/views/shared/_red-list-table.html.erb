@@ -11,16 +11,16 @@
 
     <div class="table__cell bold"><%= t('countries.shared.red_list.total') %>:</div>
   </div>
-  
-  <% @red_list_data.each do |column| %>
-    <% if column[1].length > 0 %>
+
+  <% @red_list_data.each do |habitat| %>
+    <% if habitat['data'].present? %>
       <div class="table__column">
         <div class="table__cell">
-          <i class="table__icon <%= get_habitat_icon_class(column[0][:id]) %>" alt="<%= column[0][:title] %> icon"></i>
-          <span class="table__title"><%= column[0][:title] %></span>
+          <i class="table__icon <%= get_habitat_icon_class(habitat[:id]) %>" alt="<%= habitat[:title] %> icon"></i>
+          <span class="table__title"><%= habitat[:title] %></span>
         </div>
 
-        <% column[1].each do |integer| %>
+        <% habitat['data'].each do |name, integer| %>
           <div class="table__cell"><%= integer %></div>
         <% end %>
       </div>

@@ -22,6 +22,13 @@ class GeoEntity < ApplicationRecord
     Species.joins(:geo_entities).where(geo_entities: { id: countries.map(&:id) })
   end
 
+  def count_species
+    hash = Species.count_by_category_and_habitat(all_species).compact
+    hash.each do |habitat|
+      hash[habitat.first] = Species.fill_and_sort_by_category(habitat.last)
+    end
+  end
+
   # most common is to be determined in a meeting
   # most threatened is to be ordered as follows;
   #

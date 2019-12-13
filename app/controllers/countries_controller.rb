@@ -1,6 +1,6 @@
 class CountriesController < ApplicationController
   include ApplicationHelper
-  
+
   def index
   end
 
@@ -27,9 +27,8 @@ class CountriesController < ApplicationController
     }.to_json
 
     @red_list_categories = I18n.t('home.red_list.categories')
-    red_list_data = [[1,2,3,4,5,6,7,28],[],[1,2,3,4,5,6,7,28],[1,2,3,4,5,6,7,28],[]] #FERDI NOTE THE TOTAL AT THE END
-
-    @red_list_data = habitats.zip(red_list_data)
+    red_list_data = @country.count_species
+    @red_list_data = habitats.each { |habitat| habitat['data'] = red_list_data[habitat[:id]] }
 
     @red_list_modal = {
       title: 'Title hardcoded in controller',
@@ -55,6 +54,7 @@ class CountriesController < ApplicationController
   end
 
   private
+
   def habitats
     I18n.t('global.habitats')
   end
