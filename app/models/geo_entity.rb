@@ -23,10 +23,7 @@ class GeoEntity < ApplicationRecord
   end
 
   def count_species
-    hash = Species.count_by_category_and_habitat(all_species).compact
-    hash.each do |habitat|
-      hash[habitat.first] = Species.fill_and_sort_by_category(habitat.last)
-    end
+    Species.count_species(all_species)
   end
 
   # most common is to be determined in a meeting

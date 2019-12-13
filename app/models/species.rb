@@ -23,8 +23,15 @@ class Species < ApplicationRecord
   scope :threatened_and_near, -> { where(redlist_status: [THREATENED, NEAR_THREATENED].flatten) }
   scope :not_threatened, -> { where.not(redlist_status: THREATENED) }
 
-  def self.count_by_category_and_habitat(species = nil)
+  def self.count_species(species = nil)
     species ||= all
+    hash = count_by_category_and_habitat(species).compact
+    hash.each do |habitat|
+      hash[habitat.first] = Species.fill_and_sort_by_category(habitat.last)
+    end
+  end
+
+  def self.count_by_category_and_habitat(species)
     groupings = {}
     species.group_by { |s| [s.redlist_status, s.habitat.name] }.map do |key, values|
       groupings[key.last] ||= {}
