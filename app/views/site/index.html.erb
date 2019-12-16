@@ -2,7 +2,7 @@
 
 <%= render partial: '/site/partials/nav-tertiary',
   locals: {
-    nav_tertiary: @nav_tertiary
+    nav_tertiary: nav_tertiary
   }
 %>
 
@@ -13,29 +13,29 @@
 %>
 
 <%= render partial: '/site/partials/sdg',
-  locals: { 
+  locals: {
     id: "section-#{t('home.nav_sticky')[1][:id]}",
-    doughnut_chart: @doughnut_chart.to_json 
-  } 
+    doughnut_chart: @doughnut_chart.to_json
+  }
 %>
 
 <%= render partial: '/site/partials/habitat-change',
-  locals: { 
+  locals: {
     id: "section-#{t('home.nav_sticky')[2][:id]}",
-    modal_content: @habitat_change_modal 
-  } 
+    modal_content: habitat_change_modal
+  }
 %>
 
 <%= render partial: '/site/partials/red-list',
-  locals: { 
-    modal_content: @red_list_modal 
-  } 
+  locals: {
+    modal_content: red_list_modal
+  }
 %>
 
 <%= render partial: '/site/partials/habitat-cover',
-  locals: { 
-    habitat_cover: @habitat_cover, modal_content: @habitat_cover_modal 
-  } 
+  locals: {
+    habitat_cover: @habitat_cover, modal_content: habitat_cover_modal
+  }
 %>
 
 <modal id="citation"></modal>

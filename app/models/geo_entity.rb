@@ -22,6 +22,10 @@ class GeoEntity < ApplicationRecord
     Species.joins(:geo_entities).where(geo_entities: { id: countries.map(&:id) })
   end
 
+  def count_species
+    Species.count_species(all_species)
+  end
+
   # most common is to be determined in a meeting
   # most threatened is to be ordered as follows;
   #

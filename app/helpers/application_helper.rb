@@ -73,4 +73,27 @@ module ApplicationHelper
     
     t('shared.footer_citation.global').html_safe
   end
+
+  def nav_tertiary
+    I18n.t('home.nav_sticky').to_json
+  end
+
+  def red_list_categories
+    I18n.t('home.red_list.categories')
+  end
+
+  def habitat_cover_modal
+    { title: 'Title hardcoded in controller', text: I18n.t('home.habitat_cover.citation') }.to_json
+  end
+
+  def red_list_modal
+    { title: 'Title hardcoded in controller', text: I18n.t('home.red_list.citation') }.to_json
+  end
+
+  def habitat_change_modal
+    {
+      title: 'Title hardcoded in controller',
+      text: I18n.t('home.habitat_change.citation')
+    }.to_json
+  end
 end
