@@ -26,14 +26,14 @@ class Species < ApplicationRecord
   def self.count_species(species = nil)
     species ||= all
     hash = count_by_category_and_habitat(species).compact
-    hash.each do |habitat|
-      hash[habitat.first] = Species.fill_and_sort_by_category(habitat.last)
+    hash.each do |habitat, categories_data|
+      hash[habitat] = Species.fill_and_sort_by_category(categories_data)
     end
   end
 
   def self.count_by_category_and_habitat(species)
     groupings = {}
-    species.group_by { |s| [s.redlist_status, s.habitat.name] }.map do |key, values|
+    species.group_by { |s| [s.redlist_status, s.habitat.name] }.each do |key, values|
       groupings[key.last] ||= {}
       groupings[key.last].merge!({ "#{key.first}" => values.count })
     end
