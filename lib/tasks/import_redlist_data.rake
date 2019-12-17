@@ -1,22 +1,30 @@
 require 'csv'
 
 namespace :import do
+  HABITATS = %w(mangroves seagrasses coralreefs coldcorals).freeze
+
   desc "import RedList species data into database"
   task :redlist_data => [:environment] do
-    HABITATS = %w(mangroves seagrasses coralreefs coldcorals).freeze
 
     HABITATS.each do |habitat|
       habitat_obj = Habitat.find_by(name: habitat)
 
-      unless habitat_obj.present?
-        p "Habitat #{habitat} not found!"
-        next
-      end
-
-      p "=====PROCESSING #{habitat}====="
+      next unless log_habitat(habitat_obj)
 
       import_species(habitat_obj)
       import_countries_species(habitat_obj)
+      import_occurrences(habitat_obj)
+    end
+  end
+
+  desc "import habitats occurrences"
+  task :occurrences => [:environment] do
+    HABITATS.each do |habitat|
+      habitat_obj = Habitat.find_by(name: habitat)
+
+      next unless log_habitat(habitat_obj)
+
+      import_occurrences(habitat_obj)
     end
   end
 
@@ -40,5 +48,29 @@ namespace :import do
       next unless geo_entity.present?
       GeoEntitiesSpecies.create(species_id: row['species_id'], geo_entity_id: geo_entity.id)
     end
+  end
+
+  # 0 = confirmed absence
+  # 1 = unknown
+  # 2 = confirmed presence
+  def import_occurrences(habitat)
+    countries_list_filename = "lib/data/species/#{habitat.name}/countrylist-utf8.csv".freeze
+    CSV.foreach(countries_list_filename, headers: true) do |row|
+      geo_entity = GeoEntity.find_by(iso3: row['iso3'])
+      occurrence = row['occurrence'].to_i
+      next unless geo_entity.present?
+      GeoEntityStat.find_or_initialize_by(geo_entity_id: geo_entity.id, habitat_id: habitat.id).
+        update_attributes!(occurrence: occurrence)
+    end
+  end
+
+  def log_habitat(habitat)
+    unless habitat.present?
+      p "Habitat #{habitat.name} not found!"
+      return false
+    end
+
+    p "=====PROCESSING #{habitat.name}====="
+    true
   end
 end
