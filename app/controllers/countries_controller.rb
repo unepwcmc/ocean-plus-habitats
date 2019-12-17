@@ -22,6 +22,7 @@ class CountriesController < ApplicationController
 
     @habitats_present = habitats.zip(habitats_present_data, habitat_citations)
 
+    @species_count = @country.species_count
     red_list_data = @country.count_species
     @red_list_data = habitats.each { |habitat| habitat['data'] = red_list_data[habitat[:id]] }
 
