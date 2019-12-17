@@ -29,7 +29,7 @@ habitats:
     wms_url: 'https://gis.unep-wcmc.org/arcgis/rest/services/marine/WCMC_013_014_Seagrass_WMS/MapServer/export?transparent=true&format=png32&bbox={bbox-epsg-3857}&bboxSR=EPSG:3857&imageSR=EPSG:3857&size=256,256&f=image'
   coldcorals:
     name: 'coldcorals'
-    title: 'Cold-water Corals'
+    title: 'Cold-water corals'
     theme: 'pink'
     poly_table: 'wcmc001_coldcorals2017_py_v5'
     point_table: 'wcmc001_coldcorals2017_pt_v5'

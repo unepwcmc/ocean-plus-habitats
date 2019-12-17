@@ -1,11 +1,15 @@
 //--------------------------------------------------
 // mixins
 //--------------------------------------------------
-@mixin table-cell-basic() {
+@mixin table-cell-basic {
   @include flex;
   @include flex-v-center;
   padding: rem-calc(0 12);
   width: 15%; height: rem-calc(66);
+}
+
+@mixin table-title {
+  margin-left: rem-calc(12);
 }
 
 //--------------------------------------------------
@@ -61,6 +65,12 @@
     }
 
     &__title {
-      margin-left: rem-calc(12);
+      @include table-title;
+
+      &--capitalized {
+        @include table-title;
+        
+        text-transform: capitalize;
+      }
     }
 }

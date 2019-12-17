@@ -119,12 +119,6 @@ $button-padding-wide-laptop: 14px 45px;
 // classes
 //--------------------------------------------------
 .button {
-  &--burger {
-    @include button--grey;
-    @include flex;
-    @include flex-v-center;
-  }
-
   &--map-download {
     @include button--map-download;
     @include flex;
