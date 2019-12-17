@@ -6,27 +6,27 @@ en:
         - citation here
       habitats: 
         coralreefs:
-          title: Warm-water Coral
+          title: Warm-water coral reefs
           text: ! '<strong>%{change_km}</strong> km<sup>2</sup> change in warm-water coral cover <strong>(%{change_percentage}%)</strong><br><strong>Baseline year: %{baseline_year}<br>Original total: %{original_total}km<sup>2</sup></strong>'
           citation: 
             - 'Warm water coral tooltip text'
         saltmarshes:
-          title: Saltmarsh
+          title: Saltmarshes
           text: ! '<strong>%{change_km}</strong> km<sup>2</sup> change in saltmarsh cover <strong>(%{change_percentage}%)</strong><br><strong>Baseline year: %{baseline_year}<br>Original total: %{original_total}km<sup>2</sup></strong>'
           citation: 
-            - 'Saltmarsh tooltip text'
+            - 'Saltmarshes tooltip text'
         mangroves:
-          title: Mangrove
+          title: Mangroves
           text: ! '<strong>%{change_km}</strong> km<sup>2</sup> change in mangrove cover <strong>(%{change_percentage}%)</strong><br><strong>Baseline year: %{baseline_year}<br>Original total: %{original_total}km<sup>2</sup></strong>'
           citation: 
-            - 'Mangrove tooltip text'
+            - 'Mangroves tooltip text'
         seagrasses:
-          title: Seagrass
+          title: Seagrasses
           text: ! '<strong>%{change_km}</strong> km<sup>2</sup> change in seagrass cover <strong>(%{change_percentage}%)</strong><br><strong>Baseline year: %{baseline_year}<br>Original total: %{original_total}km<sup>2</sup></strong>'
           citation: 
-            - 'Seagrass tooltip text'
+            - 'Seagrasses tooltip text'
         coldcorals:
-          title: Cold-water Coral
+          title: Cold-water corals
           text: ! '<strong>%{change_km}</strong> km<sup>2</sup> change in cold-water coral cover <strong>(%{change_percentage}%)</strong><br><strong>Baseline year: %{baseline_year}<br>Original total: %{original_total}km<sup>2</sup></strong>'
           citation: 
-            - 'Cold-water coral tooltip text'
+            - 'Cold-water corals tooltip text'
