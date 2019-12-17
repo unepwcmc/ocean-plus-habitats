@@ -9,6 +9,7 @@
           :key="dataset.id"
           :config="dataset"
           :allow-no-selected-dataset="allowNoSelectedDataset"
+          :disabled="dataset.disabled"
         />
       </li>
     </ul>

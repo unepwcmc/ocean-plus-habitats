@@ -83,4 +83,8 @@ module ApplicationHelper
       text: I18n.t('home.habitat_change.citation')
     }.to_json
   end
+
+  def habitats
+    I18n.t('global.habitats')
+  end
 end

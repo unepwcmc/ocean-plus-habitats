@@ -52,6 +52,10 @@ export default {
     hasDownloadButton: {
       type: Boolean,
       default: false
+    },
+    layers: {
+      type: Array,
+      default: () => {}
     }
   },
 
@@ -113,32 +117,23 @@ export default {
     },
 
     reload () {
-      this.datasets = [{
-        id: 'coralreefs',
-        name: 'Warm water coral',
-        sourceLayer: 'Ch2_Fg5_mcat5',
-        tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Ch2_Fg5_Oct19/VectorTileServer/tile/{z}/{y}/{x}.pbf',
-        color: '#F35F8D',
-        descriptionHtml: '<p><strong>00%</strong>Warm water coral</p><p><strong>00%</strong>Percentage of warm water coral that occur within a marine protected area</p>'
-      },
-      {
-        id: 'saltmarshes',
-        name: 'Saltmarshes',
-        sourceLayer: 'Ch2_Fg5_mcat5',
-        tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Ch2_Fg5_Oct19/VectorTileServer/tile/{z}/{y}/{x}.pbf',
-        color: '#332288',
-        descriptionHtml: '<p><strong>00%</strong>Saltmarsh</p><p><strong>00%</strong>Percentage of saltmarsh that occur within a marine protected area</p>'
-      }]
+      this.datasets = this.layers
     },
 
     selectInitDatasets () {
       if (this.datasets.length) {
         if (this.multipleDatasets) {
           this.datasets.forEach(ds => {
-            this.$eventHub.$emit('select-' + ds.id)
+            if (!ds.disabled) {
+              this.$eventHub.$emit('select-' + ds.id)
+            }
           })
         } else {
-          this.$eventHub.$emit('select-' + this.datasets[0].id)
+          const firstAvailableDataset = this.datasets.filter(d => !d.disabled)[0]
+          
+          if (firstAvailableDataset) {
+            this.$eventHub.$emit('select-' + firstAvailableDataset.id)
+          }
         }
       }
     },

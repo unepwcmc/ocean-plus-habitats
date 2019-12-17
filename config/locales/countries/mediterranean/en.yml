@@ -3,31 +3,26 @@ en:
     mediterranean:
       title: Mediterranean
       habitats_present_citations:
-        - 
-          citation: 
-            title: Title in yml file
-            text:
-              - Warm-water Coral citation for Mediterranean
-        - 
-          citation: 
-            title: Title in yml file
-            text:
-              - Saltmarsh Coral citation for Mediterranean
-        - 
-          citation: 
-            title: Title in yml file
-            text:
-              - Mangrove Coral citation for Mediterranean
-        - 
-          citation: 
-            title: Title in yml file
-            text:
-              - Seagrass Coral citation for Mediterranean
-        - 
-          citation: 
-            title: Title in yml file
-            text:
-              - Cold-water Coral Coral citation for Mediterranean
+        coralreefs: 
+          title: Title in yml file
+          text:
+            - Warm-water Coral citation for the Mediterranean
+        saltmarshes: 
+          title: Title in yml file
+          text:
+            - Saltmarsh Coral citation for the Mediterranean
+        mangroves: 
+          title: Title in yml file
+          text:
+            - Mangrove Coral citation for the Mediterranean
+        seagrasses: 
+          title: Title in yml file
+          text:
+            - Seagrass Coral citation for the Mediterranean
+        coldcorals: 
+          title: Title in yml file
+          text:
+            - Cold-water Coral Coral citation for the Mediterranean
       targets:
         aichi:
           text:

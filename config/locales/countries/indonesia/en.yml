@@ -4,31 +4,26 @@ en:
       title: Indonesia
       image_flag: flags/indonesia.png
       habitats_present_citations:
-        - 
-          citation: 
-            title: Title in yml file
-            text:
-              - Warm-water Coral citation for Indonesia
-        - 
-          citation: 
-            title: Title in yml file
-            text:
-              - Saltmarsh Coral citation for Indonesia
-        - 
-          citation: 
-            title: Title in yml file
-            text:
-              - Mangrove Coral citation for Indonesia
-        - 
-          citation: 
-            title: Title in yml file
-            text:
-              - Seagrass Coral citation for Indonesia
-        - 
-          citation: 
-            title: Title in yml file
-            text:
-              - Cold-water Coral Coral citation for Indonesia
+        coralreefs: 
+          title: Title in yml file
+          text:
+            - Warm-water Coral citation for Indonesia
+        saltmarshes: 
+          title: Title in yml file
+          text:
+            - Saltmarsh Coral citation for Indonesia
+        mangroves: 
+          title: Title in yml file
+          text:
+            - Mangrove Coral citation for Indonesia
+        seagrasses: 
+          title: Title in yml file
+          text:
+            - Seagrass Coral citation for Indonesia
+        coldcorals: 
+          title: Title in yml file
+          text:
+            - Cold-water Coral Coral citation for Indonesia
       targets:
         aichi:
           text:

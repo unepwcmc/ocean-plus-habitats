@@ -10,17 +10,46 @@ class CountriesController < ApplicationController
 
     country_yml = I18n.t("countries.#{@yml_key}")
 
-    habitat_citations = country_yml[:habitats_present_citations]
+    @habitats_present_status = {
+      coralreefs: 'unknown',
+      saltmarshes: 'absent',
+      mangroves: 'present',
+      seagrasses: 'present',
+      coldcorals: 'present'
+    }
 
-    habitats_present_data = [
-      { status: 'present', status_title: get_status_text('present')},
-      { status: 'absent', status_title: get_status_text('absent')},
-      { status: 'unknown', status_title: get_status_text('unknown')},
-      { status: 'present', status_title: get_status_text('present')},
-      { status: 'present', status_title: get_status_text('present')}
+    layers = [
+      {
+        id: 'coralreefs',
+        name: 'Warm water coral',
+        sourceLayer: 'Ch2_Fg5_mcat5',
+        tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Ch2_Fg5_Oct19/VectorTileServer/tile/{z}/{y}/{x}.pbf',
+        color: '#F35F8D',
+        descriptionHtml: '<p><strong>00</strong>Warm water coral</p><p><strong>00%</strong>Percentage of warm water coral that occur within a marine protected area</p>'
+      },
+      {
+        id: 'saltmarshes',
+        name: 'Saltmarshes',
+        sourceLayer: 'Ch2_Fg5_mcat5',
+        tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Ch2_Fg5_Oct19/VectorTileServer/tile/{z}/{y}/{x}.pbf',
+        color: '#332288',
+        descriptionHtml: '<p><strong>00</strong>Saltmarsh</p><p><strong>00%</strong>Percentage of saltmarsh that occur within a marine protected area</p>'
+      },
+      {
+        id: 'mangroves',
+        name: 'Mangroves',
+        sourceLayer: 'Ch2_Fg5_mcat5',
+        tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Ch2_Fg5_Oct19/VectorTileServer/tile/{z}/{y}/{x}.pbf',
+        color: '#D6A520',
+        descriptionHtml: '<p><strong>00</strong>Mangroves</p><p><strong>00%</strong>Percentage of mangroves that occur within a marine protected area</p>'
+      }
     ]
 
-    @habitats_present = habitats.zip(habitats_present_data, habitat_citations)
+    @dummy_layers = layers
+      .reject {|l| self.habitat_present_status(l) == 'absent'}
+      .map {|l| self.habitat_present_status(l) == 'unknown' ? l.merge({disabled: true}) : l}
+
+    @habitats_present = Serializers::HabitatsPresentSerializer.new(@habitats_present_status, country_yml).serialize
 
     red_list_data = @country.count_species
     @red_list_data = habitats.each { |habitat| habitat['data'] = red_list_data[habitat[:id]] }
@@ -36,9 +65,8 @@ class CountriesController < ApplicationController
     @target_text = country_yml[:targets]
   end
 
-  private
-
-  def get_status_text status
-    I18n.t("countries.shared.habitats_present.title_#{status}")
+  def habitat_present_status layer
+    # byebug
+    @habitats_present_status[layer[:id].to_sym]
   end
 end
