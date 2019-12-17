@@ -48,7 +48,10 @@
         cursor: default;
         pointer-events: none;
 
-        .map-filters__filter-key,
+        .map-filters__filter-key {
+          background-color: transparent;
+        }
+
         .custom-checkbox {
           opacity: 0;
         }

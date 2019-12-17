@@ -87,4 +87,8 @@ module ApplicationHelper
   def habitats
     I18n.t('global.habitats')
   end
+
+  def get_habitat_from_id (id)
+    habitats.select{ |h| h[:id] == id }[0]
+  end
 end
