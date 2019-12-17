@@ -39,6 +39,10 @@ class Habitat < ApplicationRecord
     })
   end
 
+  def occurrence(geo_entity_id)
+    geo_entity_stats.find_by(geo_entity_id: geo_entity_id)&.occurrence
+  end
+
   def baseline_year
     2010
   end

@@ -32,11 +32,11 @@ class Serializers::MapDatasetsSerializer < Serializers::Base
   def serialize
     map_datasets = DATASETS.reject {|ds| habitat_presence_status(ds) == 'absent'}
 
-    map_datasets.map do |ds| 
+    map_datasets.map do |ds|
       dataset = ds.dup
       dataset[:name] = get_habitat_from_id(ds[:id])[:title]
 
-      if habitat_presence_status(ds) == 'unknown' 
+      if habitat_presence_status(ds) == 'unknown'
         dataset[:disabled] = true
         dataset[:descriptionHtml] = not_available_dataset_html
       end
@@ -48,7 +48,7 @@ class Serializers::MapDatasetsSerializer < Serializers::Base
   private
 
   def habitat_presence_status dataset
-    @habitat_presence_statuses[dataset[:id].to_sym]
+    @habitat_presence_statuses[dataset[:id]]
   end
 
   def not_available_dataset_html

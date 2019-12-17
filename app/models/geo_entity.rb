@@ -1,7 +1,7 @@
 class GeoEntity < ApplicationRecord
   has_many :geo_entities_species, class_name: 'GeoEntitiesSpecies'
   has_many :species, through: :geo_entities_species
-  has_one :geo_entity_stat
+  has_many :geo_entity_stats
   # At the moment, only mangroves have got change stats,
   # which means there can only be one change_stat record per country.
   # This can change in the future
@@ -24,6 +24,18 @@ class GeoEntity < ApplicationRecord
 
   def count_species
     Species.count_species(all_species)
+  end
+
+  def occurrences
+    stats = countries.present? ? GeoEntityStat.where(geo_entity_id: countries.map(&:id)) : geo_entity_stats
+    _occurrences = stats.joins(:habitat).select('habitats.name, occurrence')
+    _occurrences = _occurrences.map(&:attributes).map { |attrs| attrs.slice('name', 'occurrence') }
+    hash = {}
+
+    _occurrences.map do |occurrence|
+      hash[occurrence['name']] = occurrence['occurrence']
+    end
+    GeoEntityStat::BASE_OCCURRENCES.merge(hash)
   end
 
   # most common is to be determined in a meeting

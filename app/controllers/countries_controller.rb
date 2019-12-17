@@ -3,19 +3,11 @@ class CountriesController < ApplicationController
 
   def show
     @country = GeoEntity.find_by(name: country_name_from_param(params[:name]))
-    @yml_key = @country[:name].downcase.gsub(/ /, '_').gsub('%27', "")
+    @yml_key = @country.name.downcase.gsub(/ /, '_').gsub('%27', "")
 
     country_yml = I18n.t("countries.#{@yml_key}")
 
-    #TODO: Ferdi to generate this from CSVs.
-    habitats_present_status = {
-      coralreefs: 'unknown',
-      saltmarshes: 'absent',
-      mangroves: 'present',
-      seagrasses: 'present',
-      coldcorals: 'present'
-    }
-
+    habitats_present_status = @country.occurrences
     @map_datasets = Serializers::MapDatasetsSerializer.new(habitats_present_status).serialize
     @habitats_present = Serializers::HabitatsPresentSerializer.new(habitats_present_status, country_yml).serialize
 

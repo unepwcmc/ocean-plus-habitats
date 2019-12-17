@@ -7,13 +7,14 @@ class Serializers::HabitatsPresentSerializer < Serializers::Base
   end
 
   def serialize
+    occurrences = base_occurrences.merge(@habitat_presence_statuses)
     habitats.map do |habitat|
-      id = habitat[:id].to_sym
+      id = habitat[:id]
 
       habitats_present = habitat.dup
-      habitats_present[:status] = @habitat_presence_statuses[id]
+      habitats_present[:status] = occurrences[id]
       habitats_present[:status_title] = get_status_text(habitats_present[:status])
-      habitats_present[:citation] = @country_yml[:habitats_present_citations][id]
+      habitats_present[:citation] = @country_yml[:habitats_present_citations][id.to_sym]
 
       habitats_present
     end
@@ -21,5 +22,9 @@ class Serializers::HabitatsPresentSerializer < Serializers::Base
 
   def get_status_text status
     I18n.t("countries.shared.habitats_present.title_#{status}")
+  end
+
+  def base_occurrences
+    GeoEntityStat::BASE_OCCURRENCES
   end
 end
