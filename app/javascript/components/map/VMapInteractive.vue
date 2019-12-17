@@ -4,7 +4,7 @@
       id="filters-layers"
       class="flex-no-shrink"
       :allow-no-selected-dataset="allowNoSelectedDataset"
-      :datasets="datasets"
+      :datasets="datasetsInternal"
       :has-download-button="hasDownloadButton"
     />
     <v-map
@@ -53,7 +53,7 @@ export default {
       type: Boolean,
       default: false
     },
-    layers: {
+    datasets: {
       type: Array,
       default: () => {}
     }
@@ -61,7 +61,7 @@ export default {
 
   data () {
     return {
-      datasets: [],
+      datasetsInternal: [],
       currentDatasetIds: [],
       mapboxToken: process.env.MAPBOX_TOKEN,
       initBoundingBox: null
@@ -107,7 +107,7 @@ export default {
     getDatasetsFromIds (datasetIds) {
       let datasetsFromIds = []
 
-      this.datasets.forEach(ds => {
+      this.datasetsInternal.forEach(ds => {
         if (datasetIds.indexOf(ds.id) >= 0) {
           datasetsFromIds.push(ds)
         }
@@ -117,19 +117,19 @@ export default {
     },
 
     reload () {
-      this.datasets = this.layers
+      this.datasetsInternal = this.datasets
     },
 
     selectInitDatasets () {
-      if (this.datasets.length) {
+      if (this.datasetsInternal.length) {
         if (this.multipleDatasets) {
-          this.datasets.forEach(ds => {
+          this.datasetsInternal.forEach(ds => {
             if (!ds.disabled) {
               this.$eventHub.$emit('select-' + ds.id)
             }
           })
         } else {
-          const firstAvailableDataset = this.datasets.filter(d => !d.disabled)[0]
+          const firstAvailableDataset = this.datasetsInternal.filter(d => !d.disabled)[0]
           
           if (firstAvailableDataset) {
             this.$eventHub.$emit('select-' + firstAvailableDataset.id)

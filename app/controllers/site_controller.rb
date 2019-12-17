@@ -1,8 +1,19 @@
 class SiteController < ApplicationController
-  def index
-    @global = YAML.load(File.open("#{Rails.root}/lib/data/content/global.yml", 'r'))
+  include ApplicationHelper
 
+  def index
     @habitats = habitats
+
+    #TODO: Ferdi to generate this from CSVs.
+    habitats_present_status = {
+      coralreefs: 'unknown',
+      saltmarshes: 'absent',
+      mangroves: 'present',
+      seagrasses: 'present',
+      coldcorals: 'present'
+    }
+
+    @map_datasets = Serializers::MapDatasetsSerializer.new(habitats_present_status).serialize
 
     red_list_data = Species.count_species
 

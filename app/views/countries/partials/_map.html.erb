@@ -2,8 +2,8 @@
   <v-map-interactive 
     iso3="<%= iso3 %>" 
     :has-download-button="true" 
-    :layers="<%= layers.to_json %>">
-  </v-map-interactive>
+    :datasets="<%= datasets.to_json %>"
+  ></v-map-interactive>
   <p class="text--smallprint">
     <%= t('shared.map_disclaimer') %>
   </p>
