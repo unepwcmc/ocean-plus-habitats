@@ -3,3 +3,4 @@ en:
     shared:
       locations_map:
         download_button_text: Download datasets
+        filter_description_html: '<p><strong>%{total}</strong> %{habitat}</p><p><strong>%{percentage}%</strong> Percentage of %{habitat_downcase} that occur within a marine protected area</p>'

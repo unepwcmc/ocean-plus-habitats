@@ -87,12 +87,6 @@
         p {
           @include text-filter-description;
           margin-bottom: rem-calc(4);
-
-          display: flex;
-
-          strong {
-            margin-right: 0.4em;
-          }
         }
       }
   

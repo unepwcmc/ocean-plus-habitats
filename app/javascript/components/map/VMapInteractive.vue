@@ -96,10 +96,11 @@ export default {
     setInitBoundingBox () {
       getCountryExtentByISO3(this.iso3, res => {
         const extent = res.data.extent
+        const padding = 5
 
         this.initBoundingBox = [
-          [extent.xmin - 1, extent.ymin - 1],
-          [extent.xmax + 1, extent.ymax + 1]
+          [extent.xmin - padding, extent.ymin - padding],
+          [extent.xmax + padding, extent.ymax + padding]
         ]
       })
     },

@@ -3,22 +3,31 @@ DATASETS = [
     id: 'coralreefs',
     sourceLayer: 'Ch2_Fg5_mcat5',
     tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Ch2_Fg5_Oct19/VectorTileServer/tile/{z}/{y}/{x}.pbf',
-    color: '#F35F8D',
-    descriptionHtml: '<p><strong>00</strong>Warm water coral</p><p><strong>00%</strong>Percentage of warm water coral that occur within a marine protected area</p>'
+    color: '#F35F8D'
   },
   {
     id: 'saltmarshes',
     sourceLayer: 'Ch2_Fg5_mcat5',
     tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Ch2_Fg5_Oct19/VectorTileServer/tile/{z}/{y}/{x}.pbf',
-    color: '#332288',
-    descriptionHtml: '<p><strong>00</strong>Saltmarsh</p><p><strong>00%</strong>Percentage of saltmarsh that occur within a marine protected area</p>'
+    color: '#332288'
   },
   {
     id: 'mangroves',
     sourceLayer: 'Ch2_Fg5_mcat5',
     tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Ch2_Fg5_Oct19/VectorTileServer/tile/{z}/{y}/{x}.pbf',
-    color: '#D6A520',
-    descriptionHtml: '<p><strong>00</strong>Mangroves</p><p><strong>00%</strong>Percentage of mangroves that occur within a marine protected area</p>'
+    color: '#D6A520'
+  },
+  {
+    id: 'seagrasses',
+    sourceLayer: 'Ch2_Fg5_mcat5',
+    tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Ch2_Fg5_Oct19/VectorTileServer/tile/{z}/{y}/{x}.pbf',
+    color: '#88CCEE'
+  },
+  {
+    id: 'coldcorals',
+    sourceLayer: 'Ch2_Fg5_mcat5',
+    tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Ch2_Fg5_Oct19/VectorTileServer/tile/{z}/{y}/{x}.pbf',
+    color: '#E61354'
   }
 ].freeze
 
@@ -35,17 +44,33 @@ class Serializers::MapDatasetsSerializer < Serializers::Base
     map_datasets.map do |ds|
       dataset = ds.dup
       dataset[:name] = get_habitat_from_id(ds[:id])[:title]
-
-      if habitat_presence_status(ds) == 'unknown'
-        dataset[:disabled] = true
-        dataset[:descriptionHtml] = not_available_dataset_html
-      end
+      dataset[:disabled] = habitat_presence_status(ds) == 'unknown' ? true : false
+      set_dataset_description_html(dataset)
 
       dataset
     end
   end
 
   private
+
+  def set_dataset_description_html dataset
+    if habitat_presence_status(dataset) == 'unknown'
+      dataset[:descriptionHtml] = not_available_dataset_html
+    else
+      total_units = dataset[:id] == 'coldcorals' ? 
+        'observations' : 'km<sup>2</sup>'
+
+      dataset[:descriptionHtml] = I18n.t(
+        'countries.shared.locations_map.filter_description_html', 
+        {
+          habitat: dataset[:name],
+          habitat_downcase: dataset[:name].downcase,
+          total: "#{100} #{total_units}",
+          percentage: 4.5,
+        }
+      )
+    end
+  end
 
   def habitat_presence_status dataset
     @habitat_presence_statuses[dataset[:id]]
