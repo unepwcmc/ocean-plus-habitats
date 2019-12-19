@@ -7,8 +7,10 @@ class CountriesController < ApplicationController
 
     country_yml = I18n.t("countries.#{@yml_key}")
 
+    habitats_protection_stats = @country.protection_stats
     habitats_present_status = @country.occurrences
-    @map_datasets = Serializers::MapDatasetsSerializer.new(habitats_present_status).serialize
+
+    @map_datasets = Serializers::MapDatasetsSerializer.new(habitats_present_status, habitats_protection_stats).serialize
     @habitats_present = Serializers::HabitatsPresentSerializer.new(habitats_present_status, country_yml).serialize
 
     red_list_data = @country.count_species

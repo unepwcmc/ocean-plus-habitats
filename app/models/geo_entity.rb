@@ -27,8 +27,7 @@ class GeoEntity < ApplicationRecord
   end
 
   def occurrences
-    stats = countries.present? ? GeoEntityStat.where(geo_entity_id: countries.map(&:id)) : geo_entity_stats
-    _occurrences = stats.joins(:habitat).select('habitats.name, occurrence')
+    _occurrences = countries_geo_entity_stats.joins(:habitat).select('habitats.name, occurrence')
     _occurrences = _occurrences.map(&:attributes).map { |attrs| attrs.slice('name', 'occurrence') }
     hash = {}
 
@@ -36,6 +35,29 @@ class GeoEntity < ApplicationRecord
       hash[occurrence['name']] = occurrence['occurrence']
     end
     GeoEntityStat::BASE_OCCURRENCES.merge(hash)
+  end
+
+  def protection_stats
+    _protection_stats = countries_geo_entity_stats.joins(:habitat).select('
+      habitats.name, 
+      geo_entity_stats.total_value, 
+      geo_entity_stats.protected_percentage
+    ')
+    _protection_stats = _protection_stats.map(&:attributes).map do |attrs| 
+      attrs.slice('name', 'total_value', 'protected_percentage')
+    end
+    
+    hash = {}
+    _protection_stats.map do |ps|
+      hash[ps['name']] = ps.except('name')
+    end
+    hash
+  end
+
+  private
+
+  def countries_geo_entity_stats
+    countries.present? ? GeoEntityStat.where(geo_entity_id: countries.map(&:id)) : geo_entity_stats
   end
 
   # most common is to be determined in a meeting
