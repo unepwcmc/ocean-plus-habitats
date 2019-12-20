@@ -10,28 +10,28 @@ namespace :import do
     geo_entity_types.each do |geo_entity_type|
       habitats.each do |habitat|
         csv_file = "#{geo_entity_type}/#{habitat.name}.csv"
-        import_new_csv_file(geo_entity_type, habitat.name, csv_file)
+        import_new_csv_file(habitat.name, csv_file)
       end
     end
   end
 
-  def import_new_csv_file(geo_entity_type, habitat, csv_file)
+  def import_new_csv_file(habitat, csv_file)
     filename = "#{Rails.root}/lib/data/#{csv_file}"
     CSV.foreach(filename, headers: true, encoding: "utf-8") do |row|
       if row.select {|k,v| /baseline/i =~ k}.any?
-        parse_change_stat row, geo_entity_type, habitat
+        parse_change_stat(row, habitat)
       end
-      parse_geo_entity_stat row, geo_entity_type, habitat
+      parse_geo_entity_stat(row, habitat)
     end
   end
 
-  def parse_change_stat csv_row, geo_entity_type, habitat
+  def parse_change_stat(csv_row, habitat)
     name = csv_row["name"] || csv_row["Region"]
     geo_entity = fetch_geo_entity(name, csv_row["iso3"])
     insert_change_stat(habitat, geo_entity, csv_row)
   end
 
-  def parse_geo_entity_stat csv_row, geo_entity_type, habitat
+  def parse_geo_entity_stat(csv_row, habitat)
     name = csv_row["name"] || csv_row["Region"]
     geo_entity = fetch_geo_entity(name, csv_row["iso3"])
     insert_geo_entity_stat(habitat, geo_entity, csv_row)
@@ -42,7 +42,7 @@ namespace :import do
 
     latest_year = get_latest_year(csv_row.headers)
     total_value_column = latest_year ? "total_value_#{latest_year}" : 'total_value'
-    protected_value = csv_row["total_value_protected"]&.strip || 0
+    protected_value = csv_row["protected_value"]&.strip || 0
     total_value = csv_row[total_value_column]&.strip || 0
     protected_percentage = csv_row["protected_percentage"]&.strip || 0
 
