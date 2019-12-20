@@ -4,7 +4,7 @@ class SiteController < ApplicationController
   def index
     @habitats = habitats
 
-    @map_datasets = Serializers::MapDatasetsSerializer.new().serialize
+    @map_datasets = Serializers::MapDatasetsSerializer.new(Habitat.global_protection_by_id).serialize
 
     red_list_data = Species.count_species
 

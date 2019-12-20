@@ -83,14 +83,17 @@ class Serializers::MapDatasetsSerializer < Serializers::Base
     else
       total_units = dataset[:id] == 'coldcorals' ? 'observations' : 'km<sup>2</sup>'
       habitat_stats = @habitat_protection_stats[dataset[:id]]
+      protected_percentage = habitat_stats['protected_percentage'].round(2)
+      total_value = habitat_stats['total_value']
+      total_value = total_units == 'observations' ? total_value.to_int : total_value.round(2)
 
       dataset[:descriptionHtml] = I18n.t(
         'countries.shared.locations_map.filter_description_html', 
         {
           habitat: dataset[:name],
           habitat_downcase: dataset[:name].downcase,
-          total: "#{habitat_stats['total_value'].round(2)} #{total_units}",
-          percentage: habitat_stats['protected_percentage'].round(2),
+          total: "#{total_value} #{total_units}",
+          percentage: protected_percentage,
         }
       )
     end

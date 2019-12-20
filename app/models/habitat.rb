@@ -83,6 +83,14 @@ class Habitat < ApplicationRecord
     all.map(&:global_protection)
   end
 
+  def self.global_protection_by_id
+    hash = {}
+    self.global_protection.each do |habitat_stats|
+      hash[habitat_stats['name']] = habitat_stats.except('name')
+    end
+    hash
+  end
+
   private
 
   def sum_country_areas(total_area_by_country)
