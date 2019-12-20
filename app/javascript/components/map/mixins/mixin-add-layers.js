@@ -32,7 +32,7 @@ export default {
             ['exponential', 0.8],
             ['zoom'],
             0, 4,
-            6, 0
+            8, 0
           ]
         } 
       } else {

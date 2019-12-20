@@ -60,6 +60,7 @@ HABITATS_PRESENCE_STATUSES_DEFAULT = {
 
 class Serializers::MapDatasetsSerializer < Serializers::Base
   include ApplicationHelper
+  include ActionView::Helpers::NumberHelper
 
   def initialize(habitat_protection_stats, habitat_presence_statuses=HABITATS_PRESENCE_STATUSES_DEFAULT)
     super(habitat_presence_statuses, 'habitat_presence_statuses')
@@ -85,11 +86,14 @@ class Serializers::MapDatasetsSerializer < Serializers::Base
     if habitat_presence_status(dataset) == 'unknown'
       dataset[:descriptionHtml] = not_available_dataset_html
     else
-      total_units = dataset[:id] == 'coldcorals' ? 'observations' : 'km<sup>2</sup>'
       habitat_stats = @habitat_protection_stats[dataset[:id]]
       protected_percentage = habitat_stats['protected_percentage'].round(2)
-      total_value = habitat_stats['total_value']
-      total_value = total_units == 'observations' ? total_value.to_int : total_value.round(2)
+      total_units = dataset[:id] == 'coldcorals' ? 'observations' : 'km<sup>2</sup>'
+      total_value = number_with_precision(
+        habitat_stats['total_value'],
+        precision: total_units == 'observations' ? 0 : 2,
+        delimiter: ','
+      )
 
       dataset[:descriptionHtml] = I18n.t(
         'countries.shared.locations_map.filter_description_html', 
@@ -97,7 +101,7 @@ class Serializers::MapDatasetsSerializer < Serializers::Base
           habitat: dataset[:name],
           habitat_downcase: dataset[:name].downcase,
           total: "#{total_value} #{total_units}",
-          percentage: protected_percentage,
+          percentage: protected_percentage.round(2),
         }
       )
     end
