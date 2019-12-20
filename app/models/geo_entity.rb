@@ -22,10 +22,6 @@ class GeoEntity < ApplicationRecord
     Species.joins(:geo_entities).where(geo_entities: { id: countries.map(&:id) })
   end
 
-  def species_count
-    all_species.count
-  end
-
   def count_species
     Species.count_species(all_species)
   end

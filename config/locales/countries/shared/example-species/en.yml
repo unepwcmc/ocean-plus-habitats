@@ -6,4 +6,4 @@ en:
         example_title_common: Examples of most common species
         example_title_threatened: Examples of threatened species
         link_text: IUCN Species page
-        total_species_count: 'Total number of species figure: %{count}'
+        total_species_count: 'Total number of species'
