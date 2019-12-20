@@ -105,6 +105,10 @@
   font-weight: $bold;
 }
 
+@mixin text-example-species-total-count {
+  @include text-7;
+}
+
 @mixin text-hero-home {
   @include text-2;
   color: $white;
