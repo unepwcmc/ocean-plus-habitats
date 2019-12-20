@@ -1,6 +1,6 @@
 export default {
   methods: {
-    addVectorTileLayer (layer) {
+    addVectorTileLayer (layer) {      
       const options = {
         'id': layer.id,
         'source': {

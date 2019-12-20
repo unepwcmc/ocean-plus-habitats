@@ -1,11 +1,23 @@
-export const getLayers = (config, isSelected) => {
+export const getSubLayerId = (layer, layerType) => layer.id + '-' + layerType
+
+export const getSubLayerIds = layer =>
+  ['poly', 'point'].map(layerType => getSubLayerId(layer, layerType))
+
+export const getSubLayers = (config, isSelected) => {
   const layers = []
   const layer = {
     ...config,
     visible: isSelected
   }
 
-  layers.push(layer) //TODO: handle multiple layers per dataset
+  Object.keys(layer.sourceLayers).forEach(layerType => {
+    layers.push({
+      ...layer,
+      type: layerType,
+      sourceLayer: layer.sourceLayers[layerType],
+      id: getSubLayerId(layer, layerType)
+    })
+  })
 
   return layers
 }
