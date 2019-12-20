@@ -1,32 +1,47 @@
 DATASETS = [
   {
     id: 'coralreefs',
-    sourceLayer: 'Ch2_Fg5_mcat5',
-    tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Ch2_Fg5_Oct19/VectorTileServer/tile/{z}/{y}/{x}.pbf',
+    sourceLayers: {
+      point: 'WCMC001_ColdCorals2017_Pt_v5',
+      poly: 'WCMC001_ColdCorals2017_Py_v5'
+    },
+    tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Global_Distribution_of_Cold_water_Corals/VectorTileServer/tile/{z}/{y}/{x}.pbf',
     color: '#F35F8D'
   },
   {
     id: 'saltmarshes',
-    sourceLayer: 'Ch2_Fg5_mcat5',
-    tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Ch2_Fg5_Oct19/VectorTileServer/tile/{z}/{y}/{x}.pbf',
+    sourceLayers: {
+      point: 'WCMC001_ColdCorals2017_Pt_v5',
+      poly: 'WCMC001_ColdCorals2017_Py_v5'
+    },
+    tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Global_Distribution_of_Cold_water_Corals/VectorTileServer/tile/{z}/{y}/{x}.pbf',
     color: '#332288'
   },
   {
     id: 'mangroves',
-    sourceLayer: 'Ch2_Fg5_mcat5',
-    tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Ch2_Fg5_Oct19/VectorTileServer/tile/{z}/{y}/{x}.pbf',
+    sourceLayers: {
+      point: 'WCMC001_ColdCorals2017_Pt_v5',
+      poly: 'WCMC001_ColdCorals2017_Py_v5'
+    },
+    tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Global_Distribution_of_Cold_water_Corals/VectorTileServer/tile/{z}/{y}/{x}.pbf',
     color: '#D6A520'
   },
   {
     id: 'seagrasses',
-    sourceLayer: 'Ch2_Fg5_mcat5',
-    tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Ch2_Fg5_Oct19/VectorTileServer/tile/{z}/{y}/{x}.pbf',
-    color: '#88CCEE'
+    sourceLayers: {
+      point: 'WCMC001_ColdCorals2017_Pt_v5',
+      poly: 'WCMC001_ColdCorals2017_Py_v5'
+    },
+    tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Global_Distribution_of_Cold_water_Corals/VectorTileServer/tile/{z}/{y}/{x}.pbf',
+    color: '#88CCEE',
   },
   {
     id: 'coldcorals',
-    sourceLayer: 'Ch2_Fg5_mcat5',
-    tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Ch2_Fg5_Oct19/VectorTileServer/tile/{z}/{y}/{x}.pbf',
+    sourceLayers: {
+      point: 'WCMC001_ColdCorals2017_Pt_v5',
+      poly: 'WCMC001_ColdCorals2017_Py_v5'
+    },
+    tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Global_Distribution_of_Cold_water_Corals/VectorTileServer/tile/{z}/{y}/{x}.pbf',
     color: '#E61354'
   }
 ].freeze

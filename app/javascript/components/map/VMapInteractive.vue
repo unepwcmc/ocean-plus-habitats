@@ -19,7 +19,7 @@
 <script>
 import FilterPane from './filters/FilterPane'
 import VMap from './map/VMap'
-import { getLayers } from './helpers/map-helpers'
+import { getSubLayers, getSubLayerIds } from './helpers/map-helpers'
 import { getCountryExtentByISO3 } from './helpers/request-helpers'
 
 export default {
@@ -161,13 +161,13 @@ export default {
       const newDataset = this.getDatasetsFromIds([datasetId])[0] 
 
       if (createDataset && showDataset) {
-        this.$eventHub.$emit('map-create-and-show-layers', getLayers(newDataset, true))
+        this.$eventHub.$emit('map-create-and-show-layers', getSubLayers(newDataset, true))
         this.currentDatasetIds.push(datasetId)
       } else if (showDataset) {
-        this.$eventHub.$emit('map-show-layers', this.getLayerIdsForMap(newDataset))
+        this.$eventHub.$emit('map-show-layers', getSubLayerIds(newDataset))
         this.currentDatasetIds.push(datasetId)
       } else {
-        this.$eventHub.$emit('map-hide-layers', this.getLayerIdsForMap(newDataset))
+        this.$eventHub.$emit('map-hide-layers', getSubLayerIds(newDataset))
         if (this.isCurrentDataset(datasetId)) { 
           this.currentDatasetIds.splice(this.currentDatasetIds.indexOf(datasetId), 1) 
         } 
@@ -176,10 +176,6 @@ export default {
 
     isCurrentDataset (id) {
       return this.currentDatasetIds.indexOf(id) >= 0
-    },
-
-    getLayerIdsForMap(dataset) {
-      return [dataset.id]
     }
   }
 }
