@@ -70,13 +70,13 @@ class Habitat < ApplicationRecord
   end
 
   def global_protection
-    stats = { name: name, total_value: 0, protected_value: 0 }
+    stats = { 'name' => name, 'total_value' => 0, 'protected_value' => 0 }
     geo_entity_stats.country_stats.map do |stat|
-      stats[:total_value] = stats[:total_value] + stat.total_value
-      stats[:protected_value] = stats[:protected_value] + stat.protected_value
+      stats['total_value'] = stats['total_value'] + stat.total_value
+      stats['protected_value'] = stats['protected_value'] + stat.protected_value
     end
-    protected_value = stats[:protected_value] > 0 ? stats[:protected_value] : 1
-    stats.merge({protected_percentage: stats[:total_value] / protected_value})
+    protected_value = stats['protected_value'] > 0 ? stats['protected_value'] : 1
+    stats.merge({'protected_percentage' => stats['total_value'] / protected_value})
   end
 
   def self.global_protection
