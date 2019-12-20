@@ -10,7 +10,7 @@ class CountriesController < ApplicationController
     habitats_protection_stats = @country.protection_stats
     habitats_present_status = @country.occurrences
 
-    @map_datasets = Serializers::MapDatasetsSerializer.new(habitats_present_status, habitats_protection_stats).serialize
+    @map_datasets = Serializers::MapDatasetsSerializer.new(habitats_protection_stats, habitats_present_status).serialize
     @habitats_present = Serializers::HabitatsPresentSerializer.new(habitats_present_status, country_yml).serialize
 
     red_list_data = @country.count_species

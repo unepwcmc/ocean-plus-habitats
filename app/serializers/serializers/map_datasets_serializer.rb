@@ -31,10 +31,18 @@ DATASETS = [
   }
 ].freeze
 
+HABITATS_PRESENCE_STATUSES_DEFAULT = {
+  coralreefs: 'present',
+  saltmarshes: 'present',
+  mangroves: 'present',
+  seagrasses: 'present',
+  coldcorals: 'present'
+}.freeze
+
 class Serializers::MapDatasetsSerializer < Serializers::Base
   include ApplicationHelper
 
-  def initialize(habitat_presence_statuses, habitat_protection_stats)
+  def initialize(habitat_protection_stats, habitat_presence_statuses=HABITATS_PRESENCE_STATUSES_DEFAULT)
     super(habitat_presence_statuses, 'habitat_presence_statuses')
     super(habitat_protection_stats, 'habitat_protection_stats')
   end
