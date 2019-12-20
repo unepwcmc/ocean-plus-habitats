@@ -20,9 +20,8 @@ namespace :import do
     CSV.foreach(filename, headers: true, encoding: "utf-8") do |row|
       if row.select {|k,v| /baseline/i =~ k}.any?
         parse_change_stat row, geo_entity_type, habitat
-      else
-        parse_geo_entity_stat row, geo_entity_type, habitat
       end
+      parse_geo_entity_stat row, geo_entity_type, habitat
     end
   end
 
@@ -41,12 +40,20 @@ namespace :import do
   def insert_geo_entity_stat(habitat, geo_entity, csv_row)
     habitat = Habitat.find_by(name: habitat)
 
+    latest_year = get_latest_year(csv_row.headers)
+    total_value_column = latest_year ? "total_value_#{latest_year}" : 'total_value'
     protected_value = csv_row["total_value_protected"]&.strip || 0
-    total_value = csv_row["total_value"]&.strip || 0
+    total_value = csv_row[total_value_column]&.strip || 0
     protected_percentage = csv_row["protected_percentage"]&.strip || 0
 
     GeoEntityStat.create(habitat: habitat, geo_entity: geo_entity, protected_value: protected_value,
                         total_value: total_value, protected_percentage: protected_percentage)
+  end
+
+  def get_latest_year(columns)
+    columns.map { |c| c.split('_').last }.
+      select { |c| c.match(/\A\d+\z/) }.
+      max
   end
 
   def insert_change_stat(habitat, geo_entity, csv_row)
