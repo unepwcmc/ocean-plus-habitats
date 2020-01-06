@@ -29,4 +29,4 @@ which is updated every month.
 
 Habitats data changes less often, so the coverage calculations are stored in the `Habitat` object.
 When the data changes, a new calculation process should be performed using the `calculate_global_coverage` method in
-the `Habiat` model.
+the `Habitat` model.
