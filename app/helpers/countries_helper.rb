@@ -33,8 +33,4 @@ module CountriesHelper
       text: I18n.t('countries.shared.habitat_change.citation')
     }.to_json
   end
-
-  def target_tabs
-    I18n.t('countries.shared.targets.tabs')
-  end
 end

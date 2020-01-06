@@ -25,6 +25,6 @@ class CountriesController < ApplicationController
 
     @habitat_change = Serializers::HabitatCountryChangeSerializer.new(@country, habitats_present_status).serialize.to_json
 
-    @target_text = country_yml[:targets]
+    @target_tabs = Serializers::TargetsSerializer.new.serialize
   end
 end

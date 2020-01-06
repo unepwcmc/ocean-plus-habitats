@@ -65,12 +65,15 @@ $icon-margin-medium: 20;
     
   }
 
-    &__list--icons {
+    &__list {
       padding-left: 0;
       
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      &--icons {
+        padding-left: 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
     }
 
       &__list-item {

@@ -52,5 +52,37 @@ en:
             id: other
             title: Other policies
             list:
-              - sunt in culpa qui officia deserunt mollit anim id est liborum.
-              - ecat cupidatat non proident, 
+              - 
+                id: coralreefs
+                list:
+                  - 'CBD COP 12, <a href="https://www.cbd.int/decision/cop/default.shtml?id=13386" title="Decision XII/23" target="_blank">Decision XII/23</a>: Priority Actions to Achieve Aichi Biodiversity Target 10 for Coral Reefs and Closely Associated Ecosystems (2014)'
+                  - 'UNEA Resolution 2/12 on <a href="http://wedocs.unep.org/bitstream/handle/20.500.11822/11187/K1607234_UNEPEA2_RES12E.pdf?sequence=1&isAllowed=y" title="Sustainable Coral Reefs Management" target="_blank">Sustainable Coral Reefs Management</a>'
+                  - 'UN Framework for Convention on Climate Change (UNFCCC): Coral reefs feature prominently for adaptation actions to minimize climate change impacts, and in Nationally Determined Contributions (NDCs) of State Parties'
+                  - '<a href="http://www.cites.org/eng" title="Convention on International Trade of Endangered Species of Wild Fauna and Flora (CITES)" target="_blank">Convention on International Trade of Endangered Species of Wild Fauna and Flora (CITES)</a>'
+              - 
+                id: saltmarshes
+                list:
+                  - '<a href="https://www.ramsar.org/" title="Ramsar Convention on Wetlands of International Importance" target="_blank">Ramsar Convention on Wetlands of International Importance</a>'
+                  - '<a href="http://natura2000.eea.europa.eu/" title="Natura 2000" target="_blank">Natura 2000</a>'
+                  - '<a href="http://ec.europa.eu/environment/nature/legislation/habitatsdirective/index_en.htm" title="Habitats Directive" target="_blank">Habitats Directive</a>'
+              -
+                id: mangroves
+                list:
+                  - '<a href="https://www.ramsar.org/" title="Ramsar Convention on Wetlands of International Importance" target="_blank">Ramsar Convention on Wetlands of International Importance</a>'
+                  - '<a href="https://www.cbd.int/decision/cop/?id=7742" title="CBD COP 7, Decision VII/5" target="_blank">CBD COP 7, Decision VII/5</a>: Marine and coastal biodiversity, including measures to manage coastal and marine ecosystems, including mangroves, seagrass beds and coral reefs'
+              - 
+                id: seagrasses
+                list:
+                  - '<a href="https://www.ramsar.org/" title="Ramsar Convention on Wetlands of International Importance" target="_blank">Ramsar Convention on Wetlands of International Importance</a>'
+                  - '<a href="http://natura2000.eea.europa.eu/" title="Natura 2000" target="_blank">Natura 2000</a>'
+                  - '<a href="http://ec.europa.eu/environment/nature/legislation/habitatsdirective/index_en.htm" title="Habitats Directive" target="_blank">Habitats Directive</a>'
+                  - '<a href="https://www.cbd.int/decision/cop/?id=7742" title="CBD COP 7, Decision VII/5" target="_blank">CBD COP 7, Decision VII/5</a>: Marine and coastal biodiversity, including measures to manage coastal and marine ecosystems, including mangroves, seagrass beds and coral reefs'
+              - 
+                id: coldcorals
+                list:
+                  - '<a href="http://data.unep-wcmc.org/decisions/6" title="Specially Protected Areas of Mediterranean Importance (SPAMI)" target="_blank">Specially Protected Areas of Mediterranean Importance (SPAMI)</a>'
+                  - '<a href="http://www.cites.org/eng" title="Convention on International Trade of Endangered Species of Wild Fauna and Flora (CITES)" target="_blank">Convention on International Trade of Endangered Species of Wild Fauna and Flora (CITES)</a>'
+                  - 'UNGA Resolution<a href="https://undocs.org/A/RES/61/105" title="A/RES/61/105" target="_blank">A/RES/61/105</a>:<a href="http://www.fao.org/in-action/vulnerable-marine-ecosystems/en/" title="Vulnerable Marine Ecosystems" target="_blank"> Vulnerable Marine Ecosystems</a>, including seamounts, hydrothermal vents and cold-water corals'
+                  - '<a href="https://www.cbd.int/decision/cop/?id=11663" title="CBD COP Decision IX/20" target="_blank">CBD COP Decision IX/20</a> and <a href="https://www.cbd.int/doc/decisions/cop-10/cop-10-dec-29-en.pdf" title="Decision X/29" target="_blank">Decision X/29</a>: Marine and coastal biodiversity, including Ecologically or Biologically Significant Marine Areas (EBSAs)'
+
+
