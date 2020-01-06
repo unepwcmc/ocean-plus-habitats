@@ -1,7 +1,6 @@
 //--------------------------------------------------
 // variables
 //--------------------------------------------------
-$bar-height: rem-calc(49);
 $bar-center-divider-width: rem-calc(5);
 
 //--------------------------------------------------
@@ -19,7 +18,7 @@ $bar-center-divider-width: rem-calc(5);
     &__wrapper {
       @include flex;
       @include flex-v-center;
-      margin: rem-calc(6 0 8 0);
+      margin: $chart-row-margin;
       width: 100%;
     }
     

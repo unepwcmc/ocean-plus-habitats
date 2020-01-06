@@ -23,7 +23,7 @@ class CountriesController < ApplicationController
     @example_species_common = Serializers::SpeciesImagesSerializer.new(@country.species).to_json
     @example_species_threatened = Serializers::SpeciesImagesSerializer.new(@country.species, true).to_json
 
-    @habitat_change = Serializers::HabitatCountryChangeSerializer.new(@country).serialize.to_json
+    @habitat_change = Serializers::HabitatCountryChangeSerializer.new(@country, habitats_present_status).serialize.to_json
 
     @target_text = country_yml[:targets]
   end
