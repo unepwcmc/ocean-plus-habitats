@@ -46,8 +46,11 @@ namespace :import do
     total_value = csv_row[total_value_column]&.strip || 0
     protected_percentage = csv_row["protected_percentage"]&.strip || 0
 
-    GeoEntityStat.create(habitat: habitat, geo_entity: geo_entity, protected_value: protected_value,
-                        total_value: total_value, protected_percentage: protected_percentage)
+    GeoEntityStat.find_or_create_by(habitat: habitat, geo_entity: geo_entity) do |stat|
+      stat.protected_value      = protected_value
+      stat.total_value          = total_value
+      stat.protected_percentage = protected_percentage
+    end
   end
 
   def get_latest_year(columns)
@@ -59,17 +62,17 @@ namespace :import do
   def insert_change_stat(habitat, geo_entity, csv_row)
     habitat = Habitat.find_by(name: habitat)
 
-    ChangeStat.create(habitat: habitat, geo_entity: geo_entity,
-                      total_value_1996: csv_row["total_value_1996"]&.strip || 0,
-                      total_value_2007: csv_row["total_value_2007"]&.strip || 0,
-                      total_value_2008: csv_row["total_value_2008"]&.strip || 0,
-                      total_value_2009: csv_row["total_value_2009"]&.strip || 0,
-                      total_value_2010: csv_row["total_value_2010_baseline"]&.strip || 0,
-                      total_value_2015: csv_row["total_value_2015"]&.strip || 0,
-                      total_value_2016: csv_row["total_value_2016"]&.strip || 0,
-                      protected_value: csv_row["protected_value"]&.strip || 0,
-                      protected_percentage: csv_row["protected_percentage"]&.strip || 0
-                      )
+    ChangeStat.find_or_create_by(habitat: habitat, geo_entity: geo_entity) do |stat|
+      stat.total_value_1996     = csv_row["total_value_1996"]&.strip || 0,
+      stat.total_value_2007     = csv_row["total_value_2007"]&.strip || 0,
+      stat.total_value_2008     = csv_row["total_value_2008"]&.strip || 0,
+      stat.total_value_2009     = csv_row["total_value_2009"]&.strip || 0,
+      stat.total_value_2010     = csv_row["total_value_2010_baseline"]&.strip || 0,
+      stat.total_value_2015     = csv_row["total_value_2015"]&.strip || 0,
+      stat.total_value_2016     = csv_row["total_value_2016"]&.strip || 0,
+      stat.protected_value      = csv_row["protected_value"]&.strip || 0,
+      stat.protected_percentage = csv_row["protected_percentage"]&.strip || 0
+    end
   end
 
   def fetch_geo_entity(name, iso3)
