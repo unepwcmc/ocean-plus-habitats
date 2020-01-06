@@ -22,6 +22,7 @@ $icon-margin-medium: 20;
   }
   
   &__triggers {
+    border-bottom: solid 1px $white;
     margin-bottom: rem-calc(20);
 
     @include breakpoint($medium) { margin-bottom: rem-calc(24); }
@@ -29,37 +30,56 @@ $icon-margin-medium: 20;
 
     &__trigger {
       @include text-tab-title;
-      border-top: solid 1px $white;
-      border-right: solid 1px $white;
-      border-bottom: solid 1px $white;
       cursor: pointer;
-      padding: rem-calc(18 8);
+      margin-bottom: 0;
       text-align: center;
-      min-width: rem-calc(216);
+      width: rem-calc(216); line-height: 3.4em;
 
-      &.tab-active { border-bottom: none; }
+      position: relative;
+
+      &.tab-active { 
+        border-top: solid 1px $white;
+        border-right: solid 1px $white;
+        border-left: solid 1px $white;
+
+        &:first-child {
+          border-left: none;
+        }
+
+        &::after {
+          background-color: $navy-dark;
+          content: '';
+          width: 100%; height: rem-calc(2);
+      
+          display: block;
+          position: absolute;
+          top: 100%;
+          left: 0;
+      
+          // transform: translateY(-50%);
+        }
+      }
     }
 
   &__tabs {
     
   }
 
-    &__content {
-      @include breakpoint($small) {
-        justify-content: space-between;
-        flex-wrap: wrap;
-
-        display: flex;
-      }
+    &__list--icons {
+      padding-left: 0;
+      
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
 
-      &__content-item {
-        font-size: rem-calc(16);
+      &__list-item {
+        font-size: rem-calc(14);
         margin-bottom: rem-calc(14);
+        width: 48%; 
 
         @include breakpoint($medium) { 
-          font-size: rem-calc(18);
-          width: 48%; 
+          font-size: rem-calc(16);
         }
       }
 

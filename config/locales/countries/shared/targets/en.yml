@@ -7,9 +7,50 @@ en:
           - 
             id: aichi
             title: Aichi Targets
+            list: 
+              -
+                icon: 'icons/aichi-5.svg'
+                text: '<strong>Target 5.</strong> The rate of loss of all natural habitats, including forests, is at least halved and where feasible brought close to zero, and degradation and fragmentation is significantly reduced.'
+              -
+                icon: 'icons/aichi-10.svg'
+                text: '<strong>Target 10.</strong> The multiple anthropogenic pressures on coral reefs, and other vulnerable ecosystems impacted by climate change or ocean acidification are minimized, so as to maintain their integrity and functioning.'
+              -
+                icon: 'icons/aichi-11.svg'
+                text: '<strong>Target 11.</strong> At least 10 per cent of coastal and marine areas, especially areas of particular importance for biodiversity and ecosystem services, are conserved through effectively and equitably managed.'
+              -
+                icon: 'icons/aichi-14.svg'
+                text: '<strong>Target 14.</strong> Ecosystems that provide essential services are restored and safeguarded.'
+              -
+                icon: 'icons/aichi-15.svg'
+                text: '<strong>Target 15.</strong> Ecosystem resilience and the contribution of biodiversity to carbon stocks has been enhanced, through conservation and restoration, including restoration of at least 15 per cent of degraded ecosystems.'
+              -
+                icon: 'icons/aichi-17.svg'
+                text: '<strong>Target 17.</strong> Parties have developed, adopted as a policy instrument, and commenced implementing effective, participatory and updated national biodiversity strategy and action plans.'
+              -
+                icon: 'icons/aichi-19.svg'
+                text: '<strong>Target 19.</strong> Knowledge, the science base and technologies relating to biodiversity, its values, functioning, status and trends, and the consequences of its loss, are improved, widely shared and transferred, and applied.'
           - 
             id: sdg
             title: SDGs
+            list:
+              -
+                icon: 'icons/sdg-goal-12.png'
+                text: '<strong>SDG 12.2</strong> Achieve the sustainable management and efficient use of natural resources.'
+              -
+                icon: 'icons/sdg-goal-14.png'
+                text: '<strong>SDG 14.2</strong> Sustainably manage and protect marine and coastal ecosystems […], including by strengthening their resilience, and take action for their restoration in order to achieve healthy and productive oceans.'
+              -
+                icon: 'icons/sdg-goal-14.png'
+                text: '<strong>SDG 14.5</strong> Conserve at least 10 per cent of coastal and marine areas, consistent with national and international law and based on the best available scientific information.'
+              -
+                icon: 'icons/sdg-goal-15.png'
+                text: '<strong>SDG 15.5</strong> Take urgent and significant action to reduce the degradation of natural habitats, halt the loss of biodiversity and, by 2020, protect and prevent the extinction of threatened species.'
+              -
+                icon: 'icons/sdg-goal-15.png'
+                text: '<strong>SDG 15.9</strong> Integrate ecosystem and biodiversity values into national and local planning, development processes, poverty reduction strategies and accounts.'
           - 
             id: other
             title: Other policies
+            list:
+              - sunt in culpa qui officia deserunt mollit anim id est liborum.
+              - ecat cupidatat non proident, 
