@@ -12,6 +12,7 @@ import store from '../store/store.js'
 import ChartDoughnut from '../components/chart/ChartDoughnut'
 import ChartRows from '../components/chart/ChartRows.vue'
 import ExampleSpecies from '../components/content/ExampleSpecies.vue'
+import ExampleSpeciesCount from '../components/content/ExampleSpeciesCount.vue'
 import NavMegaMenu from '../components/nav/NavMegaMenu.vue'
 import NavTrigger from '../components/nav/NavTrigger.vue'
 import NavScrollTo from '../components/nav/NavScrollTo.vue'
@@ -39,6 +40,7 @@ document.addEventListener('turbolinks:load', () => {
         ChartDoughnut,
         ChartRows,
         ExampleSpecies,
+        ExampleSpeciesCount,
         Modal,
         ModalTrigger,
         NavMegaMenu,

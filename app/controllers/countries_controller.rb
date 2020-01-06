@@ -15,6 +15,7 @@ class CountriesController < ApplicationController
 
     red_list_data = @country.count_species
     @red_list_data = habitats.each { |habitat| habitat['data'] = red_list_data[habitat[:id]] }
+    @species_count_by_id = Serializers::HabitatSpeciesCountSerializer.new(@red_list_data).to_json
 
     @example_species_select = habitats.map { |habitat| { id: habitat[:id], name: habitat[:title] }}
     @example_species_selected = @example_species_select[2].to_json

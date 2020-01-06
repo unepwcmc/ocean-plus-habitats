@@ -46,7 +46,7 @@ namespace :import do
     CSV.foreach(countries_species_filename, headers: true) do |row|
       geo_entity = GeoEntity.find_by(iso3: row['iso3'])
       next unless geo_entity.present?
-      GeoEntitiesSpecies.create(species_id: row['species_id'], geo_entity_id: geo_entity.id)
+      GeoEntitiesSpecies.find_or_create_by(species_id: row['species_id'], geo_entity_id: geo_entity.id)
     end
   end
 
