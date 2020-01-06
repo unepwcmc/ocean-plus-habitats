@@ -1,26 +1,17 @@
 class CountriesController < ApplicationController
   include ApplicationHelper
 
-  def index
-  end
-
   def show
     @country = GeoEntity.find_by(name: country_name_from_param(params[:name]))
-    @yml_key = @country[:name].downcase.gsub(/ /, '_').gsub('%27', "")
+    @yml_key = @country.name.downcase.gsub(/ /, '_').gsub('%27', "")
 
     country_yml = I18n.t("countries.#{@yml_key}")
 
-    habitat_citations = country_yml[:habitats_present_citations]
+    habitats_protection_stats = @country.protection_stats
+    habitats_present_status = @country.occurrences
 
-    habitats_present_data = [
-      { status: 'present', status_title: get_status_text('present')},
-      { status: 'absent', status_title: get_status_text('absent')},
-      { status: 'unknown', status_title: get_status_text('unknown')},
-      { status: 'present', status_title: get_status_text('present')},
-      { status: 'present', status_title: get_status_text('present')}
-    ]
-
-    @habitats_present = habitats.zip(habitats_present_data, habitat_citations)
+    @map_datasets = Serializers::MapDatasetsSerializer.new(habitats_protection_stats, habitats_present_status).serialize
+    @habitats_present = Serializers::HabitatsPresentSerializer.new(habitats_present_status, country_yml).serialize
 
     red_list_data = @country.count_species
     @red_list_data = habitats.each { |habitat| habitat['data'] = red_list_data[habitat[:id]] }
@@ -35,11 +26,5 @@ class CountriesController < ApplicationController
     @habitat_change = Serializers::HabitatCountryChangeSerializer.new(@country).serialize.to_json
 
     @target_text = country_yml[:targets]
-  end
-
-  private
-
-  def get_status_text status
-    I18n.t("countries.shared.habitats_present.title_#{status}")
   end
 end

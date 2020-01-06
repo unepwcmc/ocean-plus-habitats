@@ -43,6 +43,19 @@
 
     &__filter {
       margin-bottom: $item-spacing-small;
+
+      &.disabled {
+        cursor: default;
+        pointer-events: none;
+
+        .map-filters__filter-key {
+          background-color: transparent;
+        }
+
+        .custom-checkbox {
+          opacity: 0;
+        }
+      }
     }
 
       &__filter-key {
@@ -59,7 +72,6 @@
           $colour: map-get($habitat_colours, $habitat);
         
           &--#{$habitat} {
-            @extend .map-filters__filter-key;
             background-color: $colour;
           }
         }
@@ -75,12 +87,6 @@
         p {
           @include text-filter-description;
           margin-bottom: rem-calc(4);
-
-          display: flex;
-
-          strong {
-            margin-right: 0.4em;
-          }
         }
       }
   

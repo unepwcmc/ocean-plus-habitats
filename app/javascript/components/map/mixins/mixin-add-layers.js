@@ -1,6 +1,6 @@
 export default {
   methods: {
-    addVectorTileLayer (layer) {
+    addVectorTileLayer (layer) {            
       const options = {
         'id': layer.id,
         'source': {
@@ -14,9 +14,27 @@ export default {
       if (layer.type === 'point') {
         options['type'] = 'circle'
         options['paint'] = { 
-          'circle-radius': 2,
+          'circle-radius': [
+            'interpolate',
+            ['exponential', 1],
+            ['zoom'],
+            0, 1,
+            6, 3
+          ],
           'circle-color': layer.color,
         }
+      } else if (layer.type === 'line') {
+        options['type'] = 'line'
+        options['paint'] = {
+          'line-color': layer.color,
+          'line-width': [
+            'interpolate',
+            ['exponential', 0.8],
+            ['zoom'],
+            0, 4,
+            8, 0
+          ]
+        } 
       } else {
         options['type'] = 'fill'
         options['paint'] = {

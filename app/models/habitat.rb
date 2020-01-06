@@ -39,6 +39,10 @@ class Habitat < ApplicationRecord
     })
   end
 
+  def occurrence(geo_entity_id)
+    geo_entity_stats.find_by(geo_entity_id: geo_entity_id)&.occurrence
+  end
+
   def baseline_year
     2010
   end
@@ -63,6 +67,28 @@ class Habitat < ApplicationRecord
 
   def type
     name == "coldcorals" ? "points" : "area"
+  end
+
+  def global_protection
+    stats = { 'name' => name, 'total_value' => 0, 'protected_value' => 0 }
+    geo_entity_stats.country_stats.map do |stat|
+      stats['total_value'] = stats['total_value'] + stat.total_value
+      stats['protected_value'] = stats['protected_value'] + stat.protected_value
+    end
+    protected_value = stats['protected_value'] > 0 ? stats['protected_value'] : 1
+    stats.merge({'protected_percentage' => stats['total_value'] / protected_value})
+  end
+
+  def self.global_protection
+    all.map(&:global_protection)
+  end
+
+  def self.global_protection_by_id
+    hash = {}
+    self.global_protection.each do |habitat_stats|
+      hash[habitat_stats['name']] = habitat_stats.except('name')
+    end
+    hash
   end
 
   private

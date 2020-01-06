@@ -7,10 +7,4 @@ class ApplicationController < ActionController::Base
     @language_options = [{id: 'en', name: 'English'}]
     @current_language = @language_options.select{ |lan| lan[:id] == I18n.locale.to_s }[0]
   end
-
-  private
-
-  def habitats
-    I18n.t('global.habitats')
-  end
 end

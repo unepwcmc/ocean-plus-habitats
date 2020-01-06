@@ -4,7 +4,7 @@
       id="filters-layers"
       class="flex-no-shrink"
       :allow-no-selected-dataset="allowNoSelectedDataset"
-      :datasets="datasets"
+      :datasets="datasetsInternal"
       :has-download-button="hasDownloadButton"
     />
     <v-map
@@ -19,7 +19,7 @@
 <script>
 import FilterPane from './filters/FilterPane'
 import VMap from './map/VMap'
-import { getLayers } from './helpers/map-helpers'
+import { getSubLayers, getSubLayerIds } from './helpers/map-helpers'
 import { getCountryExtentByISO3 } from './helpers/request-helpers'
 
 export default {
@@ -52,12 +52,16 @@ export default {
     hasDownloadButton: {
       type: Boolean,
       default: false
+    },
+    datasets: {
+      type: Array,
+      default: () => {}
     }
   },
 
   data () {
     return {
-      datasets: [],
+      datasetsInternal: [],
       currentDatasetIds: [],
       mapboxToken: process.env.MAPBOX_TOKEN,
       initBoundingBox: null
@@ -92,10 +96,11 @@ export default {
     setInitBoundingBox () {
       getCountryExtentByISO3(this.iso3, res => {
         const extent = res.data.extent
+        const padding = 5
 
         this.initBoundingBox = [
-          [extent.xmin - 1, extent.ymin - 1],
-          [extent.xmax + 1, extent.ymax + 1]
+          [extent.xmin - padding, extent.ymin - padding],
+          [extent.xmax + padding, extent.ymax + padding]
         ]
       })
     },
@@ -103,7 +108,7 @@ export default {
     getDatasetsFromIds (datasetIds) {
       let datasetsFromIds = []
 
-      this.datasets.forEach(ds => {
+      this.datasetsInternal.forEach(ds => {
         if (datasetIds.indexOf(ds.id) >= 0) {
           datasetsFromIds.push(ds)
         }
@@ -113,32 +118,23 @@ export default {
     },
 
     reload () {
-      this.datasets = [{
-        id: 'coralreefs',
-        name: 'Warm-water coral reefs',
-        sourceLayer: 'Ch2_Fg5_mcat5',
-        tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Ch2_Fg5_Oct19/VectorTileServer/tile/{z}/{y}/{x}.pbf',
-        color: '#F35F8D',
-        descriptionHtml: '<p><strong>00%</strong>Warm-water coral reefs</p><p><strong>00%</strong>Percentage of warm water coral that occur within a marine protected area</p>'
-      },
-      {
-        id: 'saltmarshes',
-        name: 'Saltmarshes',
-        sourceLayer: 'Ch2_Fg5_mcat5',
-        tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Ch2_Fg5_Oct19/VectorTileServer/tile/{z}/{y}/{x}.pbf',
-        color: '#332288',
-        descriptionHtml: '<p><strong>00%</strong>Saltmarshes</p><p><strong>00%</strong>Percentage of saltmarsh that occur within a marine protected area</p>'
-      }]
+      this.datasetsInternal = this.datasets
     },
 
     selectInitDatasets () {
-      if (this.datasets.length) {
+      if (this.datasetsInternal.length) {
         if (this.multipleDatasets) {
-          this.datasets.forEach(ds => {
-            this.$eventHub.$emit('select-' + ds.id)
+          this.datasetsInternal.forEach(ds => {
+            if (!ds.disabled) {
+              this.$eventHub.$emit('select-' + ds.id)
+            }
           })
         } else {
-          this.$eventHub.$emit('select-' + this.datasets[0].id)
+          const firstAvailableDataset = this.datasetsInternal.filter(d => !d.disabled)[0]
+          
+          if (firstAvailableDataset) {
+            this.$eventHub.$emit('select-' + firstAvailableDataset.id)
+          }
         }
       }
     },
@@ -165,13 +161,13 @@ export default {
       const newDataset = this.getDatasetsFromIds([datasetId])[0] 
 
       if (createDataset && showDataset) {
-        this.$eventHub.$emit('map-create-and-show-layers', getLayers(newDataset, true))
+        this.$eventHub.$emit('map-create-and-show-layers', getSubLayers(newDataset, true))
         this.currentDatasetIds.push(datasetId)
       } else if (showDataset) {
-        this.$eventHub.$emit('map-show-layers', this.getLayerIdsForMap(newDataset))
+        this.$eventHub.$emit('map-show-layers', getSubLayerIds(newDataset))
         this.currentDatasetIds.push(datasetId)
       } else {
-        this.$eventHub.$emit('map-hide-layers', this.getLayerIdsForMap(newDataset))
+        this.$eventHub.$emit('map-hide-layers', getSubLayerIds(newDataset))
         if (this.isCurrentDataset(datasetId)) { 
           this.currentDatasetIds.splice(this.currentDatasetIds.indexOf(datasetId), 1) 
         } 
@@ -180,10 +176,6 @@ export default {
 
     isCurrentDataset (id) {
       return this.currentDatasetIds.indexOf(id) >= 0
-    },
-
-    getLayerIdsForMap(dataset) {
-      return [dataset.id]
     }
   }
 }

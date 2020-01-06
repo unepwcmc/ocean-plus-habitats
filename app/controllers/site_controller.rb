@@ -1,8 +1,10 @@
 class SiteController < ApplicationController
-  def index
-    @global = YAML.load(File.open("#{Rails.root}/lib/data/content/global.yml", 'r'))
+  include ApplicationHelper
 
+  def index
     @habitats = habitats
+
+    @map_datasets = Serializers::MapDatasetsSerializer.new(Habitat.global_protection_by_id).serialize
 
     red_list_data = Species.count_species
 

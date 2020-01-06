@@ -1,11 +1,14 @@
 <template>
-  <div class="map-filters__filter">
+  <div 
+    class="map-filters__filter"
+    :class="{'disabled': disabled}"
+  >
     <label
       :for="inputId"
       class="map-filters__filter-label hover--pointer flex flex-v-center"
       :class="{ 'map-filter--active': isActive}"
     >
-      <span :class="`map-filters__filter-key--${config.id}`" />
+      <span :class="`map-filters__filter-key map-filters__filter-key--${config.id}`" />
       <span class="map-filters__filter-title">
         {{ name }}
       </span>
@@ -38,6 +41,10 @@ export default {
     allowNoSelectedDataset: {
       required: true,
       type: Boolean
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
 
