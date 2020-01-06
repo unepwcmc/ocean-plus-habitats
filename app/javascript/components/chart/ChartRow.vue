@@ -11,7 +11,7 @@
         <span class="chart__bar-center" />
         
         <span class="chart__bar-label">
-          {{ row.change }}%
+          {{ chartLabel(row) }}
         </span>
       </div>
     </div>
@@ -52,6 +52,12 @@ export default {
 
     themeClass () {
       return `theme--${this.row.id}`
+    },
+  },
+
+  methods: {
+    chartLabel (row) {
+      return row.is_available ? row.change + '%' : ''
     }
   }
 }

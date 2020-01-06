@@ -10,7 +10,8 @@ $chart-legend-key-icon-size: rem-calc(22);
   &-item {
     @include flex;
     @include flex-v-start;
-    width: 100%;
+    margin: $chart-row-margin;
+    width: 100%; height: $bar-height;
   }
 
     &-key-title {
