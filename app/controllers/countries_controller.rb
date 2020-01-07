@@ -26,5 +26,7 @@ class CountriesController < ApplicationController
     @habitat_change = Serializers::HabitatCountryChangeSerializer.new(@country, habitats_present_status).serialize.to_json
 
     @target_text = country_yml[:targets]
+
+    @custom_bounding_box = country_yml[:bounding_box] || []
   end
 end

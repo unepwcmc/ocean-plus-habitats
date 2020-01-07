@@ -2,6 +2,13 @@ en:
   countries:
     mediterranean:
       title: Mediterranean
+      bounding_box:
+        -
+          - 90
+          - -15
+        -
+          - 146
+          - 11
       habitats_present_citations:
         coralreefs: 
           title: Title in yml file
