@@ -27,6 +27,6 @@ class CountriesController < ApplicationController
 
     @target_text = country_yml[:targets]
 
-    @custom_bounding_box = country_yml[:bounding_box] || []
+    @custom_bounding_box = @country.bounding_box || []
   end
 end
