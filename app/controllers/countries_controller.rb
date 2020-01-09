@@ -24,7 +24,5 @@ class CountriesController < ApplicationController
     @example_species_threatened = Serializers::SpeciesImagesSerializer.new(@country.species, true).to_json
 
     @habitat_change = Serializers::HabitatCountryChangeSerializer.new(@country, habitats_present_status).serialize.to_json
-
-    @target_tabs = Serializers::TargetsSerializer.new.serialize
   end
 end

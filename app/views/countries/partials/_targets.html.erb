@@ -3,7 +3,7 @@
     <h2><%= t('countries.shared.targets.title') %></h2>
 
     <tabs>
-      <% @target_tabs.each do |tab| %>
+      <% target_tabs.each do |tab| %>
         <tab id="target-tab-<%= tab[:id] %>" title="<%= tab[:title] %>">
           <ul class="<%= tab[:id] == 'other' ? 'tab__list' : 'tab__list--icons' %>">
             <% tab[:list].each do |p| %>
