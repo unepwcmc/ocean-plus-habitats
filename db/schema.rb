@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191128152823) do
+ActiveRecord::Schema.define(version: 20200109132010) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,11 +40,14 @@ ActiveRecord::Schema.define(version: 20191128152823) do
     t.string "iso3"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "bounding_box", default: [], array: true
+    t.index ["bounding_box"], name: "index_geo_entities_on_bounding_box", using: :gin
   end
 
   create_table "geo_entities_species", force: :cascade do |t|
     t.integer "geo_entity_id"
     t.integer "species_id"
+    t.index ["geo_entity_id", "species_id"], name: "index_geo_entities_species_on_geo_entity_id_and_species_id", unique: true
     t.index ["geo_entity_id"], name: "index_geo_entities_species_on_geo_entity_id"
     t.index ["species_id"], name: "index_geo_entities_species_on_species_id"
   end
@@ -57,6 +60,7 @@ ActiveRecord::Schema.define(version: 20191128152823) do
     t.decimal "protected_percentage", default: "0.0", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "occurrence", limit: 2, default: 1
     t.index ["geo_entity_id"], name: "index_geo_entity_stats_on_geo_entity_id"
     t.index ["habitat_id"], name: "index_geo_entity_stats_on_habitat_id"
   end
