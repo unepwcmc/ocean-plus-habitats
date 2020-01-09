@@ -8,7 +8,7 @@ namespace :import do
     CSV.foreach('lib/data/countries.csv', headers: true) do |row|
       name, iso2, iso3, bounding_box = [row['name'], row['alpha-2'], row['alpha-3'], row['bounding-box']]
       # convert from string into array of arrays
-      bounding_box = bounding_box.split(';').map { |bb| bb.split(' ').map(&:to_i) }
+      bounding_box = bounding_box.split(';').map { |bb| bb.split(' ').map(&:to_f) }
       GeoEntity.find_or_initialize_by(name: name, iso2: iso2, iso3: iso3).
         update_attributes!(bounding_box: bounding_box)
     end
