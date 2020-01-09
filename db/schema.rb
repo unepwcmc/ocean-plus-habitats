@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20200109132010) do
     t.string "iso3"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "bounding_box", default: [], array: true
+    t.float "bounding_box", default: [], array: true
     t.index ["bounding_box"], name: "index_geo_entities_on_bounding_box", using: :gin
   end
 
