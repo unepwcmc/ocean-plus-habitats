@@ -103,7 +103,7 @@ Hong Kong,HK,HKG,344,ISO 3166-2:HK,Asia,Eastern Asia,,142,30,,100 0;0 0
 Hungary,HU,HUN,348,ISO 3166-2:HU,Europe,Eastern Europe,,150,151,,101 0;0 0
 Iceland,IS,ISL,352,ISO 3166-2:IS,Europe,Northern Europe,,150,154,,102 0;0 0
 India,IN,IND,356,ISO 3166-2:IN,Asia,Southern Asia,,142,34,,103 0;0 0
-Indonesia,ID,IDN,360,ISO 3166-2:ID,Asia,South-eastern Asia,,142,35,,104 0;0 0
+Indonesia,ID,IDN,360,ISO 3166-2:ID,Asia,South-eastern Asia,,142,35,,90.00708007828302 -15.999610900622542;135.99999999980025 1.081250190743731
 Iran (Islamic Republic of),IR,IRN,364,ISO 3166-2:IR,Asia,Southern Asia,,142,34,,105 0;0 0
 Iraq,IQ,IRQ,368,ISO 3166-2:IQ,Asia,Western Asia,,142,145,,106 0;0 0
 Ireland,IE,IRL,372,ISO 3166-2:IE,Europe,Northern Europe,,150,154,,107 0;0 0
