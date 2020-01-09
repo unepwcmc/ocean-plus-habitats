@@ -2,31 +2,24 @@ en:
   countries:
     mediterranean:
       title: Mediterranean
-      bounding_box:
-        -
-          - 90
-          - -15
-        -
-          - 146
-          - 11
       habitats_present_citations:
-        coralreefs: 
+        coralreefs:
           title: Title in yml file
           text:
             - Warm-water Coral citation for the Mediterranean
-        saltmarshes: 
+        saltmarshes:
           title: Title in yml file
           text:
             - Saltmarsh Coral citation for the Mediterranean
-        mangroves: 
+        mangroves:
           title: Title in yml file
           text:
             - Mangrove Coral citation for the Mediterranean
-        seagrasses: 
+        seagrasses:
           title: Title in yml file
           text:
             - Seagrass Coral citation for the Mediterranean
-        coldcorals: 
+        coldcorals:
           title: Title in yml file
           text:
             - Cold-water Coral Coral citation for the Mediterranean
@@ -42,4 +35,4 @@ en:
         other:
           text:
             - sunt in culpa qui officia deserunt mollit anim id est liborum.
-            - ecat cupidatat non proident, 
+            - ecat cupidatat non proident,
