@@ -56,6 +56,10 @@ export default {
     datasets: {
       type: Array,
       default: () => {}
+    },
+    customBoundingBox: {
+      type: Array,
+      default: () => []
     }
   },
 
@@ -80,10 +84,7 @@ export default {
     this.$eventHub.$on('map-load', this.selectInitDatasets)
 
     this.reload()
-
-    if (this.iso3) {
-      this.setInitBoundingBox()
-    }
+    this.setInitBoundingBox()
   },
 
   destroyed () {
@@ -94,6 +95,14 @@ export default {
 
   methods: {
     setInitBoundingBox () {
+      if (this.customBoundingBox.length) {
+        this.initBoundingBox = this.customBoundingBox
+      } else if (this.iso3) {
+        this.setInitBoundingBoxFromIso()
+      }
+    },
+
+    setInitBoundingBoxFromIso () {      
       getCountryExtentByISO3(this.iso3, res => {
         const extent = res.data.extent
         const padding = 5

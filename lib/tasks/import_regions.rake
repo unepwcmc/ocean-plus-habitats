@@ -1,13 +1,19 @@
 require 'csv'
 
 namespace :import do
-  desc "import RedList species data into database"
+  desc "import regions data into database"
   task :regions => [:environment] do
     current_regions_count = GeoEntity.regions.count
     current_relationships_count = GeoRelationship.count
     CSV.foreach('lib/data/regionalseas.csv', headers: true) do |row|
-      name, iso2, iso3 = [row['name'], nil, nil]
+      name, iso2, iso3, bounding_box = [row['name'], nil, nil, row['bounding-box']]
       region = GeoEntity.where(name: name, iso2: iso2, iso3: iso3).first_or_create
+
+      if bounding_box.present? && bounding_box.include?(';')
+        bounding_box = bounding_box.split(';').map { |bb| bb.split(' ').map(&:to_f) }
+        region.update_attributes!(bounding_box: bounding_box)
+      end
+
       countries_iso_codes = row['iso3'].split('/')
       countries_iso_codes.each do |country_iso|
         country_id = GeoEntity.find_by(iso3: country_iso)
