@@ -112,6 +112,6 @@ class Serializers::MapDatasetsSerializer < Serializers::Base
   end
 
   def not_available_dataset_html
-    "<p>#{I18n.t('shared.map_not_available')}</p>"
+    "<p>#{I18n.t('global.map_not_available')}</p>"
   end
 end

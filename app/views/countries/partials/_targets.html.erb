@@ -5,9 +5,28 @@
     <tabs>
       <% target_tabs.each do |tab| %>
         <tab id="target-tab-<%= tab[:id] %>" title="<%= tab[:title] %>">
-          <% @target_text[tab[:id].to_sym][:text].each do |p| %>
-            <p><%= p %></p>
-          <% end %>
+          <ul class="<%= tab[:id] == 'other' ? 'tab__list' : 'tab__list--icons' %>">
+            <% tab[:list].each do |p| %>
+              <li class="tab__list-item flex">
+                <% if p.is_a?(Hash) && !p[:icon].nil? %>
+                  <%= image_tag p[:icon], alt: p[:title], class: "tab__content-icon" %>
+
+                  <p class="tab__content-text">
+                    <%= p[:text].html_safe %>
+                  </p>
+                <% else %>
+                  <div>
+                    <h3><%= p[:title] %></h3>
+                    <ul>
+                      <% p[:list].each do |item| %>
+                        <li><%= item.html_safe %></li>
+                      <% end %>
+                    </ul>
+                  </div>
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
         </tab>
       <% end %>
     </tabs>
