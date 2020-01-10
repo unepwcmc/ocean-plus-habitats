@@ -25,6 +25,10 @@ class CountriesController < ApplicationController
 
     @habitat_change = Serializers::HabitatCountryChangeSerializer.new(@country, habitats_present_status).serialize.to_json
     
-    @custom_bounding_box = @country.bounding_box || []
+    @custom_bounding_box = has_bounding_box ? @country.bounding_box : []
+  end
+
+  def has_bounding_box
+    @country.bounding_box.flatten.inject { |sum, n| sum.abs + n.abs } > 0
   end
 end
