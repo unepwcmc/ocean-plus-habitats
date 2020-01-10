@@ -9,8 +9,10 @@ namespace :import do
       name, iso2, iso3, bounding_box = [row['name'], nil, nil, row['bounding-box']]
       region = GeoEntity.where(name: name, iso2: iso2, iso3: iso3).first_or_create
 
-      bounding_box = bounding_box.split(';').map { |bb| bb.split(' ').map(&:to_f) }
-      region.update_attributes!(bounding_box: bounding_box)
+      if bounding_box.present? && bounding_box.include?(';')
+        bounding_box = bounding_box.split(';').map { |bb| bb.split(' ').map(&:to_f) }
+        region.update_attributes!(bounding_box: bounding_box)
+      end
 
       countries_iso_codes = row['iso3'].split('/')
       countries_iso_codes.each do |country_iso|
