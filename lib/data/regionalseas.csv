@@ -1,57 +1,57 @@
 name,iso3,bounding-box
-Antarctic,ABNJ,0 0;0 0
-Antarctic,ATA,0 0;0 0
-Antarctic,ATF,0 0;0 0
-Antarctic,BVT,0 0;0 0
-Antarctic,HMD,0 0;0 0
-Antarctic,SGS,0 0;0 0
-Antarctic,ZAF,0 0;0 0
-Baltic Sea,DEU,0 0;0 0
-Baltic Sea,DNK,0 0;0 0
-Baltic Sea,EST,0 0;0 0
-Baltic Sea,FIN,0 0;0 0
-Baltic Sea,LTU,0 0;0 0
-Baltic Sea,LVA,0 0;0 0
-Baltic Sea,POL,0 0;0 0
-Baltic Sea,RUS,0 0;0 0
-Baltic Sea,SWE,0 0;0 0
-Black Sea,BGR,0 0;0 0
-Black Sea,GEO,0 0;0 0
-Black Sea,ROU,0 0;0 0
-Black Sea,RUS,0 0;0 0
-Black Sea,TUR,0 0;0 0
-Black Sea,UKR,0 0;0 0
-Caspian Sea,AZE,0 0;0 0
-Caspian Sea,IRN,0 0;0 0
-Caspian Sea,KAZ,0 0;0 0
-Caspian Sea,RUS,0 0;0 0
-Caspian Sea,TKM,0 0;0 0
-East Asian Seas,CHN,0 0;0 0
-East Asian Seas,CHN/PHL/VNM/TWN/MYS,0 0;0 0
-East Asian Seas,CHN/TWN/VNM,0 0;0 0
-East Asian Seas,HKG,0 0;0 0
-East Asian Seas,IDN,0 0;0 0
-East Asian Seas,KHM,0 0;0 0
-East Asian Seas,MMR,0 0;0 0
-East Asian Seas,MYS,0 0;0 0
-East Asian Seas,PHL,0 0;0 0
-East Asian Seas,SGP,0 0;0 0
-East Asian Seas,THA,0 0;0 0
-East Asian Seas,TWN,0 0;0 0
-East Asian Seas,VNM,0 0;0 0
-Eastern Africa,ATF,0 0;0 0
-Eastern Africa,COM,0 0;0 0
-Eastern Africa,KEN,0 0;0 0
-Eastern Africa,KEN/SOM,0 0;0 0
-Eastern Africa,MDG,0 0;0 0
-Eastern Africa,MOZ,0 0;0 0
-Eastern Africa,MUS,0 0;0 0
-Eastern Africa,MYT,0 0;0 0
-Eastern Africa,REU,0 0;0 0
-Eastern Africa,SOM,0 0;0 0
-Eastern Africa,SYC,0 0;0 0
-Eastern Africa,TZA,0 0;0 0
-Eastern Africa,ZAF,0 0;0 0
+Antarctic,ABNJ,
+Antarctic,ATA,
+Antarctic,ATF,
+Antarctic,BVT,
+Antarctic,HMD,
+Antarctic,SGS,
+Antarctic,ZAF,
+Baltic Sea,DEU,
+Baltic Sea,DNK,
+Baltic Sea,EST,
+Baltic Sea,FIN,
+Baltic Sea,LTU,
+Baltic Sea,LVA,
+Baltic Sea,POL,
+Baltic Sea,RUS,
+Baltic Sea,SWE,
+Black Sea,BGR,
+Black Sea,GEO,
+Black Sea,ROU,
+Black Sea,RUS,
+Black Sea,TUR,
+Black Sea,UKR,
+Caspian Sea,AZE,
+Caspian Sea,IRN,
+Caspian Sea,KAZ,
+Caspian Sea,RUS,
+Caspian Sea,TKM,
+East Asian Seas,CHN,
+East Asian Seas,CHN/PHL/VNM/TWN/MYS,
+East Asian Seas,CHN/TWN/VNM,
+East Asian Seas,HKG,
+East Asian Seas,IDN,
+East Asian Seas,KHM,
+East Asian Seas,MMR,
+East Asian Seas,MYS,
+East Asian Seas,PHL,
+East Asian Seas,SGP,
+East Asian Seas,THA,
+East Asian Seas,TWN,
+East Asian Seas,VNM,
+Eastern Africa,ATF,
+Eastern Africa,COM,
+Eastern Africa,KEN,
+Eastern Africa,KEN/SOM,
+Eastern Africa,MDG,
+Eastern Africa,MOZ,
+Eastern Africa,MUS,
+Eastern Africa,MYT,
+Eastern Africa,REU,
+Eastern Africa,SOM,
+Eastern Africa,SYC,
+Eastern Africa,TZA,
+Eastern Africa,ZAF,
 Mediterranean,ALB,-10.1 26.2;41.5 47.8
 Mediterranean,CYP,-10.1 26.2;41.5 47.8
 Mediterranean,DZA,-10.1 26.2;41.5 47.8
@@ -72,119 +72,119 @@ Mediterranean,SVN,-10.1 26.2;41.5 47.8
 Mediterranean,SYR,-10.1 26.2;41.5 47.8
 Mediterranean,TUN,-10.1 26.2;41.5 47.8
 Mediterranean,TUR,-10.1 26.2;41.5 47.8
-North-East Atlantic,ABNJ,0 0;0 0
-North-East Atlantic,BEL,0 0;0 0
-North-East Atlantic,DEU,0 0;0 0
-North-East Atlantic,DNK,0 0;0 0
-North-East Atlantic,ESP,0 0;0 0
-North-East Atlantic,FRA,0 0;0 0
-North-East Atlantic,FRO,0 0;0 0
-North-East Atlantic,GBR,0 0;0 0
-North-East Atlantic,GGY,0 0;0 0
-North-East Atlantic,GRL,0 0;0 0
-North-East Atlantic,IRL,0 0;0 0
-North-East Atlantic,ISL,0 0;0 0
-North-East Atlantic,JEY,0 0;0 0
-North-East Atlantic,NLD,0 0;0 0
-North-East Atlantic,NOR,0 0;0 0
-North-East Atlantic,PRT,0 0;0 0
-North-East Atlantic,RUS,0 0;0 0
-North-East Atlantic,SJM,0 0;0 0
-North-East Atlantic,SWE,0 0;0 0
-North-East Pacific,COL,0 0;0 0
-North-East Pacific,CRI,0 0;0 0
-North-East Pacific,GTM,0 0;0 0
-North-East Pacific,HND,0 0;0 0
-North-East Pacific,MEX,0 0;0 0
-North-East Pacific,NIC,0 0;0 0
-North-East Pacific,PAN,0 0;0 0
-North-East Pacific,SLV,0 0;0 0
-North-West Pacific,CHN,0 0;0 0
-North-West Pacific,CHN/TWN/JPN,0 0;0 0
-North-West Pacific,JPN,0 0;0 0
-North-West Pacific,JPN/KOR,0 0;0 0
-North-West Pacific,KOR,0 0;0 0
-North-West Pacific,PRK,0 0;0 0
-North-West Pacific,RUS,0 0;0 0
-North-West Pacific,RUS/JPN,0 0;0 0
-Pacific,ABNJ,0 0;0 0
-Pacific,ASM,0 0;0 0
-Pacific,AUS,0 0;0 0
-Pacific,AUS/PNG,0 0;0 0
-Pacific,COK,0 0;0 0
-Pacific,FJI,0 0;0 0
-Pacific,FSM,0 0;0 0
-Pacific,GUM,0 0;0 0
-Pacific,KIR,0 0;0 0
-Pacific,MHL,0 0;0 0
-Pacific,MNP,0 0;0 0
-Pacific,NCL,0 0;0 0
-Pacific,NFK,0 0;0 0
-Pacific,NIU,0 0;0 0
-Pacific,NRU,0 0;0 0
-Pacific,NZL,0 0;0 0
-Pacific,PCN,0 0;0 0
-Pacific,PLW,0 0;0 0
-Pacific,PNG,0 0;0 0
-Pacific,PYF,0 0;0 0
-Pacific,SLB,0 0;0 0
-Pacific,TKL,0 0;0 0
-Pacific,TON,0 0;0 0
-Pacific,TUV,0 0;0 0
-Pacific,UMI,0 0;0 0
-Pacific,VUT,0 0;0 0
-Pacific,WLF,0 0;0 0
-Pacific,WSM,0 0;0 0
-Red Sea and Gulf of Aden,DJI,0 0;0 0
-Red Sea and Gulf of Aden,EGY,0 0;0 0
-Red Sea and Gulf of Aden,EGY/SDN,0 0;0 0
-Red Sea and Gulf of Aden,JOR,0 0;0 0
-Red Sea and Gulf of Aden,SAU,0 0;0 0
-Red Sea and Gulf of Aden,SDN,0 0;0 0
-Red Sea and Gulf of Aden,SOM,0 0;0 0
-Red Sea and Gulf of Aden,YEM,0 0;0 0
-ROPME Area,ARE,0 0;0 0
-ROPME Area,BHR,0 0;0 0
-ROPME Area,IRN,0 0;0 0
-ROPME Area,IRQ,0 0;0 0
-ROPME Area,KWT,0 0;0 0
-ROPME Area,OMN,0 0;0 0
-ROPME Area,QAT,0 0;0 0
-ROPME Area,SAU,0 0;0 0
-South-East Pacific,ARG,0 0;0 0
-South-East Pacific,CHL,0 0;0 0
-South-East Pacific,COL,0 0;0 0
-South-East Pacific,ECU,0 0;0 0
-South-East Pacific,PAN,0 0;0 0
-South-East Pacific,PER,0 0;0 0
-South Asian Seas,BGD,0 0;0 0
-South Asian Seas,IND,0 0;0 0
-South Asian Seas,LKA,0 0;0 0
-South Asian Seas,MDV,0 0;0 0
-South Asian Seas,PAK,0 0;0 0
-West and Central Africa - WACAF,AGO,0 0;0 0
-West and Central Africa - WACAF,BEN,0 0;0 0
-West and Central Africa - WACAF,CIV,0 0;0 0
-West and Central Africa - WACAF,CMR,0 0;0 0
-West and Central Africa - WACAF,COD,0 0;0 0
-West and Central Africa - WACAF,COG,0 0;0 0
-West and Central Africa - WACAF,CPV,0 0;0 0
-West and Central Africa - WACAF,GAB,0 0;0 0
-West and Central Africa - WACAF,GHA,0 0;0 0
-West and Central Africa - WACAF,GIN,0 0;0 0
-West and Central Africa - WACAF,GMB,0 0;0 0
-West and Central Africa - WACAF,GNB,0 0;0 0
-West and Central Africa - WACAF,GNQ,0 0;0 0
-West and Central Africa - WACAF,LBR,0 0;0 0
-West and Central Africa - WACAF,MRT,0 0;0 0
-West and Central Africa - WACAF,NAM,0 0;0 0
-West and Central Africa - WACAF,NGA,0 0;0 0
-West and Central Africa - WACAF,NGA/STP,0 0;0 0
-West and Central Africa - WACAF,SEN,0 0;0 0
-West and Central Africa - WACAF,SLE,0 0;0 0
-West and Central Africa - WACAF,STP,0 0;0 0
-West and Central Africa - WACAF,TGO,0 0;0 0
-West and Central Africa - WACAF,ZAF,0 0;0 0
+North-East Atlantic,ABNJ,
+North-East Atlantic,BEL,
+North-East Atlantic,DEU,
+North-East Atlantic,DNK,
+North-East Atlantic,ESP,
+North-East Atlantic,FRA,
+North-East Atlantic,FRO,
+North-East Atlantic,GBR,
+North-East Atlantic,GGY,
+North-East Atlantic,GRL,
+North-East Atlantic,IRL,
+North-East Atlantic,ISL,
+North-East Atlantic,JEY,
+North-East Atlantic,NLD,
+North-East Atlantic,NOR,
+North-East Atlantic,PRT,
+North-East Atlantic,RUS,
+North-East Atlantic,SJM,
+North-East Atlantic,SWE,
+North-East Pacific,COL,
+North-East Pacific,CRI,
+North-East Pacific,GTM,
+North-East Pacific,HND,
+North-East Pacific,MEX,
+North-East Pacific,NIC,
+North-East Pacific,PAN,
+North-East Pacific,SLV,
+North-West Pacific,CHN,
+North-West Pacific,CHN/TWN/JPN,
+North-West Pacific,JPN,
+North-West Pacific,JPN/KOR,
+North-West Pacific,KOR,
+North-West Pacific,PRK,
+North-West Pacific,RUS,
+North-West Pacific,RUS/JPN,
+Pacific,ABNJ,
+Pacific,ASM,
+Pacific,AUS,
+Pacific,AUS/PNG,
+Pacific,COK,
+Pacific,FJI,
+Pacific,FSM,
+Pacific,GUM,
+Pacific,KIR,
+Pacific,MHL,
+Pacific,MNP,
+Pacific,NCL,
+Pacific,NFK,
+Pacific,NIU,
+Pacific,NRU,
+Pacific,NZL,
+Pacific,PCN,
+Pacific,PLW,
+Pacific,PNG,
+Pacific,PYF,
+Pacific,SLB,
+Pacific,TKL,
+Pacific,TON,
+Pacific,TUV,
+Pacific,UMI,
+Pacific,VUT,
+Pacific,WLF,
+Pacific,WSM,
+Red Sea and Gulf of Aden,DJI,
+Red Sea and Gulf of Aden,EGY,
+Red Sea and Gulf of Aden,EGY/SDN,
+Red Sea and Gulf of Aden,JOR,
+Red Sea and Gulf of Aden,SAU,
+Red Sea and Gulf of Aden,SDN,
+Red Sea and Gulf of Aden,SOM,
+Red Sea and Gulf of Aden,YEM,
+ROPME Area,ARE,
+ROPME Area,BHR,
+ROPME Area,IRN,
+ROPME Area,IRQ,
+ROPME Area,KWT,
+ROPME Area,OMN,
+ROPME Area,QAT,
+ROPME Area,SAU,
+South-East Pacific,ARG,
+South-East Pacific,CHL,
+South-East Pacific,COL,
+South-East Pacific,ECU,
+South-East Pacific,PAN,
+South-East Pacific,PER,
+South Asian Seas,BGD,
+South Asian Seas,IND,
+South Asian Seas,LKA,
+South Asian Seas,MDV,
+South Asian Seas,PAK,
+West and Central Africa - WACAF,AGO,
+West and Central Africa - WACAF,BEN,
+West and Central Africa - WACAF,CIV,
+West and Central Africa - WACAF,CMR,
+West and Central Africa - WACAF,COD,
+West and Central Africa - WACAF,COG,
+West and Central Africa - WACAF,CPV,
+West and Central Africa - WACAF,GAB,
+West and Central Africa - WACAF,GHA,
+West and Central Africa - WACAF,GIN,
+West and Central Africa - WACAF,GMB,
+West and Central Africa - WACAF,GNB,
+West and Central Africa - WACAF,GNQ,
+West and Central Africa - WACAF,LBR,
+West and Central Africa - WACAF,MRT,
+West and Central Africa - WACAF,NAM,
+West and Central Africa - WACAF,NGA,
+West and Central Africa - WACAF,NGA/STP,
+West and Central Africa - WACAF,SEN,
+West and Central Africa - WACAF,SLE,
+West and Central Africa - WACAF,STP,
+West and Central Africa - WACAF,TGO,
+West and Central Africa - WACAF,ZAF,
 Wider Caribbean,ABW,-96.08 6.23;-54.62 28.43
 Wider Caribbean,AIA,-96.08 6.23;-54.62 28.43
 Wider Caribbean,ATG,-96.08 6.23;-54.62 28.43

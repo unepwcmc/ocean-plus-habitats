@@ -3,7 +3,7 @@
     iso3="<%= iso3 %>" 
     :has-download-button="true" 
     :datasets="<%= datasets.to_json %>"
-    :custom-bounding-box="<%= @custom_bounding_box.to_json %>"
+    :custom-bounding-box="<%= @country.bounding_box.to_json %>"
   ></v-map-interactive>
   <p class="text--smallprint">
     <%= t('global.map_disclaimer') %>
