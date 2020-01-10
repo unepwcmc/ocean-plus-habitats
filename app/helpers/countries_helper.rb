@@ -35,6 +35,12 @@ module CountriesHelper
   end
 
   def target_tabs
-    I18n.t('countries.shared.targets.tabs')
+    target_tabs = I18n.t('countries.shared.targets.tabs')
+
+    target_tabs[2][:list].each do |habitat| 
+      habitat[:title] = get_habitat_from_id(habitat[:id])[:title]
+    end
+
+    target_tabs
   end
 end

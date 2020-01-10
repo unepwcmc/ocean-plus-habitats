@@ -64,14 +64,14 @@ module ApplicationHelper
   def footer_citation
     if params[:name] 
       return t(
-        'shared.footer_citation.region', 
+        'global.footer_citation.region', 
         region: country_name_from_param(params[:name]),
         year: Date.today.year,
         month: Date.today.strftime('%B')
       ).html_safe
     end
     
-    t('shared.footer_citation.global').html_safe
+    t('global.footer_citation.global').html_safe
   end
 
   def nav_tertiary
