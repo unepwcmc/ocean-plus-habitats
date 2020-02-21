@@ -20,8 +20,8 @@ class CountriesController < ApplicationController
     @example_species_select = habitats.map { |habitat| { id: habitat[:id], name: habitat[:title] }}
     @example_species_selected = @example_species_select[2].to_json
 
-    @example_species_common = Serializers::SpeciesImagesSerializer.new(@country.species).to_json
-    @example_species_threatened = Serializers::SpeciesImagesSerializer.new(@country.species, true).to_json
+    @example_species_common = Serializers::SpeciesImagesSerializer.new(@country.all_species).to_json
+    @example_species_threatened = Serializers::SpeciesImagesSerializer.new(@country.all_species, true).to_json
 
     @habitat_change = Serializers::HabitatCountryChangeSerializer.new(@country, habitats_present_status).serialize.to_json
   end
