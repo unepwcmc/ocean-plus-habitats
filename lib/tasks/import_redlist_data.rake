@@ -34,7 +34,7 @@ namespace :import do
 
     CSV.foreach(species_filename, headers: true) do |row|
       next unless row['species_id']
-      next if Species.find_by(species_id: row['species_id']).present?
+      next if Species.find_by(species_id: row['species_id'], habitat_id: habitat.id).present?
       row_hash = row.to_hash.slice(*species_header)
       Species.create(row_hash.merge(habitat_id: habitat.id))
     end
@@ -46,7 +46,9 @@ namespace :import do
     CSV.foreach(countries_species_filename, headers: true) do |row|
       geo_entity = GeoEntity.find_by(iso3: row['iso3'])
       next unless geo_entity.present?
-      GeoEntitiesSpecies.find_or_create_by(species_id: row['species_id'], geo_entity_id: geo_entity.id)
+      species = Species.find_by(species_id: row['species_id'], habitat_id: habitat.id)
+      next unless species.present?
+      GeoEntitiesSpecies.find_or_create_by(species_id: species.id, geo_entity_id: geo_entity.id)
     end
   end
 
