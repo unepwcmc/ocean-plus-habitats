@@ -62,4 +62,4 @@ species_id,scientific_name,IUCN_Genus,IUCN_Species,redlist_status,Timestamp_redl
 61,Ruppia filifolia,Ruppia,filifolia,DD,Oct-07,,not recognized in WoRMS,apiv3.iucnredlist.org/api/v3/website/Ruppia%20filifolia
 62,Ruppia cirrhosa,Ruppia,cirrhosa,LC,Oct-07,Spiral Ditchgrass,,apiv3.iucnredlist.org/api/v3/website/Ruppia%20cirrhosa
 63,Ruppia megacarpa,Ruppia,megacarpa,LC,Oct-07,Large-fruit seatassel,,apiv3.iucnredlist.org/api/v3/website/Ruppia%20megacarpa
-64,Ruppia tuberosa,Ruppia,tuberosa,LC ,Oct-07,,,apiv3.iucnredlist.org/api/v3/website/Ruppia%20tuberosa
+64,Ruppia tuberosa,Ruppia,tuberosa,LC,Oct-07,,,apiv3.iucnredlist.org/api/v3/website/Ruppia%20tuberosa
