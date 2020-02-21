@@ -38,6 +38,21 @@ class GeoEntity < ApplicationRecord
   end
 
   def protection_stats
+    sql_select = <<-SQL
+      habitats.name,
+      geo_entity_stats.total_value,
+      geo_entity_stats.protected_value,
+      geo_entity_stats.protected_percentage
+    SQL
+
+    geo_entity_stats.joins(:habitat).
+      select(sql_select).
+      map(&:attributes).map { |ges| ges.except('id') }.
+      group_by { |ges| ges['name'] }.
+      transform_values(&:first)
+  end
+
+  def calculated_protection_stats
     _protection_stats = countries_geo_entity_stats.joins(:habitat).select('
       habitats.name,
       geo_entity_stats.total_value,
@@ -56,7 +71,7 @@ class GeoEntity < ApplicationRecord
     end
     hash.each do |habitat, h|
       total_value = h['total_value'] > 0 ? h['total_value'] : 1
-      h['protected_percentage'] = h['protected_value'] / total_value
+      h['protected_percentage'] = h['protected_value'] / total_value * 100
     end
     hash
   end
