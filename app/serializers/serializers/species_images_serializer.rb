@@ -22,10 +22,12 @@ class Serializers::SpeciesImagesSerializer < Serializers::Base
   end
 
   def serialize_species
-    species = @threatened ? @species.threatened_and_near.limit(3) : @species.not_threatened.limit(3)
-    species.group_by { |sp| sp.habitat.name }.each do |_, _species|
-      _species.map! { |s| species_hash(s) }
+    species = @threatened ? @species.threatened : @species.most_common
+    hash = {}
+    species.order_by_category.group_by { |sp| sp.habitat.name }.each do |habitat, _species|
+      hash[habitat] = _species.first(3).map! { |s| species_hash(s) }
     end
+    hash
   end
 
   def species_hash(species)

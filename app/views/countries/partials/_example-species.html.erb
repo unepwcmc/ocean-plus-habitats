@@ -2,16 +2,16 @@
   <div class="container">
     <div class="h2-wrapper flex flex-v-center">
       <h2 class="margin-space-right"><%= t('countries.shared.example_species.title') %></h2>
-      <v-select 
-        id="example-species" 
-        :options="<%= example_species_select.to_json %>" 
+      <v-select
+        id="example-species"
+        :options="<%= example_species_select.to_json %>"
         event="example-species"
         :selected="<%= example_species_selected %>"
       >
       </v-select>
     </div>
 
-    <example-species-count 
+    <example-species-count
       :species-count-by-habitat="<%= species_count_by_id %>"
       text="<%= t('countries.shared.example_species.total_species_count') %>"
       event="example-species"

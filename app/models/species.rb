@@ -5,8 +5,9 @@ class Species < ApplicationRecord
 
   THREATENED = %w(CR EN VU).freeze
   NEAR_THREATENED = 'NT'.freeze
-  LEAST_CONCERN = %w(LC DD NE).freeze
-  IUCN_CATEGORIES = [THREATENED, NEAR_THREATENED, LEAST_CONCERN].flatten.freeze
+  LEAST_CONCERN = 'LC'.freeze
+  OTHER_CATEGORIES = %w(DD NE).freeze
+  IUCN_CATEGORIES = [THREATENED, NEAR_THREATENED, LEAST_CONCERN, OTHER_CATEGORIES].flatten.freeze
   # most common is to be determined in a meeting
   # most threatened is to be ordered as follows;
   #
@@ -22,6 +23,8 @@ class Species < ApplicationRecord
   scope :near_threatened, -> { where(redlist_status: NEAR_THREATENED) }
   scope :threatened_and_near, -> { where(redlist_status: [THREATENED, NEAR_THREATENED].flatten) }
   scope :not_threatened, -> { where.not(redlist_status: THREATENED) }
+  scope :most_common, -> { where(redlist_status: LEAST_CONCERN) }
+  scope :order_by_category, -> { order('redlist_status ASC') }
 
   def self.count_species(species = nil)
     species ||= all
