@@ -83,7 +83,9 @@ class Serializers::MapDatasetsSerializer < Serializers::Base
   private
 
   def set_dataset_description_html dataset
-    if habitat_presence_status(dataset) == 'unknown'
+    # TODO Adding nil check is a workaround so to avoid this to break until new data is imported
+    if habitat_presence_status(dataset) == 'unknown' ||
+        @habitat_protection_stats[dataset[:id]].nil?
       dataset[:descriptionHtml] = not_available_dataset_html
     else
       habitat_stats = @habitat_protection_stats[dataset[:id]]
@@ -96,7 +98,7 @@ class Serializers::MapDatasetsSerializer < Serializers::Base
       )
 
       dataset[:descriptionHtml] = I18n.t(
-        'countries.shared.locations_map.filter_description_html', 
+        'countries.shared.locations_map.filter_description_html',
         {
           habitat: dataset[:name],
           habitat_downcase: dataset[:name].downcase,
