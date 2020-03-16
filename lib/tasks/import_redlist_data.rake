@@ -35,6 +35,7 @@ namespace :import do
     CSV.foreach(species_filename, headers: true) do |row|
       next unless row['species_id']
       next if Species.find_by(species_id: row['species_id'], habitat_id: habitat.id).present?
+      row['url'] = 'https://'.concat(row['url']) if (row['url'] != 'N/A' && !row['url'].include?('https'))
       row_hash = row.to_hash.slice(*species_header)
       Species.create(row_hash.merge(habitat_id: habitat.id))
     end
