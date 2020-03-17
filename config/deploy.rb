@@ -1,7 +1,7 @@
 # config valid only for current version of Capistrano
 # lock "3.11.0"
 
-set :application, 'ocean-plus-habitats'
+set :application, 'ocean-plus-habitats-new'
 
 set :repo_url, 'https://github.com/unepwcmc/ocean-plus-habitats.git'
 

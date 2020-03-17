@@ -1,11 +1,11 @@
 set :stage, :production
-set :branch, "supported-production"
+set :branch, "new_production_deploy"
 
 
 server "web-supported-production.linode.unep-wcmc.org", user: 'wcmc', roles: %w{app web db}
 
-set :application, "ocean-plus-habitats"
-set :server_name, "ocean-plus-habitats.web-supported-production.linode.unep-wcmc.org"
+set :application, "ocean-plus-habitats-new"
+set :server_name, "ocean-plus-habitats-new.web-supported-production.linode.unep-wcmc.org"
 set :sudo_user, "wcmc"
 set :app_port, "80"
 
