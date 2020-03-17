@@ -1,0 +1,54 @@
+&--protection-dials {
+  @include flex;
+  @include flex-h-between;
+  margin-top: rem-calc(80);
+  margin-bottom: rem-calc(50);
+
+  .card {
+    padding: rem-calc(0 10);
+    width: 20%;
+
+    flex: 1 1 20%;
+
+    &--unknown {
+      .card__dial-circle--colour {
+        display: none;
+      }
+      .card__habitat-status {
+        opacity: .4;
+      }
+    }
+
+      &__status {
+        @include flex;
+        @include flex-v-center;
+        margin-bottom: rem-calc(22);
+      }
+
+        &__dial {
+          margin-bottom: rem-calc(10);
+        }
+
+        &__habitat {
+          text-align: center;
+        }
+
+          &__habitat-title {
+            @include text-protection-dials-title;
+            margin-bottom: rem-calc(15);
+          }
+
+          &__habitat-status {
+            @include text-protection-dials-status;
+
+            display: block;
+          }
+
+          &__habitat-percentage {
+            color: $grey;
+            font-size: rem-calc(22);
+
+            display: block;
+          }
+  }
+}

@@ -1,0 +1,65 @@
+.v-dial {
+  &__wrapper {
+    margin-right: auto;
+    margin-left: auto;
+
+    position: relative;
+  }
+
+  &__icon {
+    width: rem-calc(75);
+    height: rem-calc(75);
+    z-index: 1;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+  }
+
+  &__meter {
+    color: $grey;
+    width: 100%;
+    height: 100%;
+
+    transform: rotate(-90deg);
+
+    &--coralreefs {
+      color: $color-coralreefs;
+    }
+    &--saltmarshes {
+      color: $color-saltmarshes;
+    }
+    &--mangroves {
+      color: $color-mangroves;
+    }
+    &--seagrasses {
+      color: $color-seagrasses;
+    }
+    &--coldcorals {
+      color: $color-coldcorals;
+    }
+  }
+
+  &__circle {
+    &--outline-curves {
+      stroke: $grey-xlight;
+      stroke-width: 16;
+      fill: none;
+    }
+
+    &--background {
+       stroke: $white;
+       stroke-width: 13;
+       stroke-dasharray: 475;
+       fill: none;
+    }
+
+    &--colour {
+       stroke: currentColor;
+       stroke-width: 6;
+       fill: none;
+    }
+  }
+}
