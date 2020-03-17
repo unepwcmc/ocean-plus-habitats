@@ -43,10 +43,10 @@ namespace :import do
     habitat = Habitat.find_by(name: habitat)
 
     latest_year = get_latest_year(csv_row.headers)
-    total_value_column = latest_year ? "total_value_#{latest_year}" : 'total_value'
-    protected_value = csv_row["protected_value"]&.strip || 0
+    total_value_column = latest_year ? "total_area_#{latest_year}" : 'total_area'
+    protected_value = csv_row["protected_area"]&.strip || 0
     total_value = csv_row[total_value_column]&.strip || 0
-    protected_percentage = csv_row["protected_percentage"]&.strip || 0
+    protected_percentage = csv_row["percent_protected"]&.strip || 0
 
     GeoEntityStat.find_or_create_by(habitat: habitat, geo_entity: geo_entity) do |stat|
       stat.protected_value      = protected_value
@@ -72,8 +72,8 @@ namespace :import do
       stat.total_value_2010     = csv_row["total_value_2010_baseline"]&.strip || 0,
       stat.total_value_2015     = csv_row["total_value_2015"]&.strip || 0,
       stat.total_value_2016     = csv_row["total_value_2016"]&.strip || 0,
-      stat.protected_value      = csv_row["protected_value"]&.strip || 0,
-      stat.protected_percentage = csv_row["protected_percentage"]&.strip || 0
+      stat.protected_value      = csv_row["protected_area"]&.strip || 0,
+      stat.protected_percentage = csv_row["percent_protected"]&.strip || 0
     end
   end
 
