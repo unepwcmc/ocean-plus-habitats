@@ -6,6 +6,7 @@ class GeoEntity < ApplicationRecord
   # which means there can only be one change_stat record per country.
   # This can change in the future
   has_one :change_stat
+  has_one :coastal_stat
 
   has_many :region_relationship, foreign_key: :country_id, class_name: 'GeoRelationship'
   has_many :regions, through: :region_relationship, class_name: 'GeoEntity'
