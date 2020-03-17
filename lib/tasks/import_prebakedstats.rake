@@ -65,13 +65,13 @@ namespace :import do
     habitat = Habitat.find_by(name: habitat)
 
     ChangeStat.find_or_create_by(habitat: habitat, geo_entity: geo_entity) do |stat|
-      stat.total_value_1996     = csv_row["total_value_1996"]&.strip || 0,
-      stat.total_value_2007     = csv_row["total_value_2007"]&.strip || 0,
-      stat.total_value_2008     = csv_row["total_value_2008"]&.strip || 0,
-      stat.total_value_2009     = csv_row["total_value_2009"]&.strip || 0,
-      stat.total_value_2010     = csv_row["total_value_2010_baseline"]&.strip || 0,
-      stat.total_value_2015     = csv_row["total_value_2015"]&.strip || 0,
-      stat.total_value_2016     = csv_row["total_value_2016"]&.strip || 0,
+      stat.total_value_1996     = csv_row["total_area_1996"]&.strip || 0,
+      stat.total_value_2007     = csv_row["total_area_2007"]&.strip || 0,
+      stat.total_value_2008     = csv_row["total_area_2008"]&.strip || 0,
+      stat.total_value_2009     = csv_row["total_area_2009"]&.strip || 0,
+      stat.total_value_2010     = csv_row["total_area_2010_baseline"]&.strip || 0,
+      stat.total_value_2015     = csv_row["total_area_2015"]&.strip || 0,
+      stat.total_value_2016     = csv_row["total_area_2016"]&.strip || 0,
       stat.protected_value      = csv_row["protected_area"]&.strip || 0,
       stat.protected_percentage = csv_row["percent_protected"]&.strip || 0
     end

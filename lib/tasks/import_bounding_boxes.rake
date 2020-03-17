@@ -9,6 +9,7 @@ namespace :import do
   end
 
   def import_bounding_boxes_for(geo_entity_type)
+    # TODO Currently waiting for new list of countries
     filename = "lib/data/#{geo_entity_type}.csv"
     CSV.foreach(filename, headers: true) do |row|
       name, iso2, iso3, bounding_box = [row['name'], row['alpha-2'], row['alpha-3'], row['bounding-box']]

@@ -5,6 +5,8 @@ namespace :import do
   task :countries => [:environment] do
     current_count = GeoEntity.countries.count
     Rails.logger.info("There are #{current_count} countries")
+    # TODO Currently waiting for new list of countries
+    # ISO2 can probably go as we would only work with ISO3
     CSV.foreach('lib/data/countries.csv', headers: true) do |row|
       name, iso2, iso3, bounding_box = [row['name'], row['alpha-2'], row['alpha-3'], row['bounding-box']]
       attributes = {
