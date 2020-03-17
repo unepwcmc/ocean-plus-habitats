@@ -4,12 +4,14 @@ namespace :import do
   desc "import CSV data into database"
   task :prebakedstats, [:csv_file] => [:environment] do
     habitats = Habitat.all
-    geo_entity_types = ["countries", "regions"].freeze
+    dir = 'habitat_coverage_protection'
+    geo_entity_types = ["country", "regions"].freeze
 
     # import habitat data CSVs for each entity type
     geo_entity_types.each do |geo_entity_type|
       habitats.each do |habitat|
-        csv_file = "#{geo_entity_type}/#{habitat.name}.csv"
+        filename = "#{habitat.name.singularize}_#{geo_entity_type}_output.csv"
+        csv_file = "#{dir}/#{filename}"
         import_new_csv_file(habitat.name, csv_file)
       end
     end
@@ -26,14 +28,14 @@ namespace :import do
   end
 
   def parse_change_stat(csv_row, habitat)
-    name = csv_row["name"] || csv_row["Region"]
-    geo_entity = fetch_geo_entity(name, csv_row["iso3"])
+    name = csv_row['iso3'] || csv_row['name']
+    geo_entity = fetch_geo_entity(name)
     insert_change_stat(habitat, geo_entity, csv_row)
   end
 
   def parse_geo_entity_stat(csv_row, habitat)
-    name = csv_row["name"] || csv_row["Region"]
-    geo_entity = fetch_geo_entity(name, csv_row["iso3"])
+    name = csv_row['iso3'] || csv_row['name']
+    geo_entity = fetch_geo_entity(name)
     insert_geo_entity_stat(habitat, geo_entity, csv_row)
   end
 
@@ -75,13 +77,11 @@ namespace :import do
     end
   end
 
-  def fetch_geo_entity(name, iso3)
-    if name.present?
-      geo_entity = GeoEntity.find_by(name: name)
-    elsif (iso3.include? "/") || (iso3.include? "ABNJ")
+  def fetch_geo_entity(name)
+    if (name.include? "/") || (name.include? "ABNJ")
       geo_entity = GeoEntity.find_by(name: "Disputed")
     else
-      geo_entity = GeoEntity.find_by(iso3: iso3) || nil
+      geo_entity = GeoEntity.find_by(iso3: name) || GeoEntity.find_by(name: name)
     end
     geo_entity
   end
