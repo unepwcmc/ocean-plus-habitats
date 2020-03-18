@@ -8,11 +8,11 @@ en:
         id: protection-level
         title: Level of protection
       -
-        id: change-in-habitats
-        title: Change in habitats
-      -
         id: species-composition
         title: Species composition
       -
-        id: importance-of-habitats
-        title: Importance to wellbeing
+        id: habitat-condition
+        title: Habitat condition
+      -
+        id: contributions-and-targets
+        title: Contributions and targets

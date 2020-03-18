@@ -8,7 +8,7 @@
 
 <%= render partial: '/countries/partials/habitats-present',
   locals: {
-    id: "section-#{t('home.nav_sticky')[0][:id]}",
+    id: "section-#{t('countries.nav_sticky')[0][:id]}",
     habitats_present: @habitats_present,
     modal_content: habitats_present_modal
   }
@@ -23,14 +23,13 @@
 
 <%= render partial: '/countries/partials/red-list',
   locals: {
-    id: "section-#{t('home.nav_sticky')[1][:id]}",
+    id: "section-#{t('countries.nav_sticky')[2][:id]}",
     modal_content: country_red_list_modal
   }
 %>
 
 <%= render partial: '/countries/partials/example-species',
   locals: {
-    id: "section-#{t('home.nav_sticky')[2][:id]}",
     species_count_by_id: @species_count_by_id,
     example_species_select: @example_species_select,
     example_species_selected: @example_species_selected,
@@ -41,16 +40,19 @@
 
 <%= render partial: '/countries/partials/habitat-condition',
   locals: {
-    id: "section-#{t('home.nav_sticky')[3][:id]}",
+    id: "section-#{t('countries.nav_sticky')[3][:id]}",
     modal_content: habitat_condition_modal
   }
 %>
 
 <%= render partial: '/countries/partials/habitat-change',
   locals: {
-    id: "section-#{t('home.nav_sticky')[4][:id]}",
     modal_content: country_habitat_change_modal
   }
 %>
 
-<%= render '/countries/partials/targets' %>
+<%= render partial: '/countries/partials/targets',
+  locals: {
+    id: "section-#{t('countries.nav_sticky')[4][:id]}"
+  }
+%>
