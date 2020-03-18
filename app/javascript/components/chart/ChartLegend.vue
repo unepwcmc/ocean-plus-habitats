@@ -1,15 +1,15 @@
 <template>
   <ul class="chart__legend ul-unstyled flex flex-wrap">
-    <li 
+    <li
       v-for="(row, index) in rows"
       :key="getVForKey('legend-row', index)"
       class="chart__legend-item flex flex-v-center"
     >
       <span :class="[themeClass(row.id), 'chart__legend-key-icon']" />
-      
+
       <span class="chart__legend-key-title">{{ index+1 }}. {{ row.title }}</span>
 
-      <span 
+      <span
         class="chart__legend-key-text"
         v-html="row.text"
       />
@@ -29,11 +29,16 @@ export default {
     rows: {
       type: Array,
       required: true
+    },
+    theme: {
+      type: String,
+      default: null
     }
   },
 
   methods: {
     themeClass (id) {
+      // return this.theme ? `theme--${this.theme}` : `theme--${id}`
       return `theme--${id}`
     }
   }

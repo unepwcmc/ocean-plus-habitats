@@ -25,9 +25,12 @@ $chart-legend-key-icon-size: rem-calc(22);
       @include flex-no-shrink;
       border-radius: 100%;
       margin-right: rem-calc(14);
-      width: $chart-legend-key-icon-size; height: $chart-legend-key-icon-size; 
+      width: $chart-legend-key-icon-size; height: $chart-legend-key-icon-size;
 
       display: inline-block;
+
+      &.theme--multiple { background-color: $chart-green; }
+      &.theme--notcovered { background-color: $grey; }
     }
 
     &-key-text {

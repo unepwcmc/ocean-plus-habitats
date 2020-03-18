@@ -1,0 +1,13 @@
+en:
+  countries:
+    shared:
+      habitats_representation:
+        title: Representation of Habitats
+        description:
+          -
+            'An estimated ##% of ocean habitats are covered by protected areas with additional protection offered by other effective area-based conservation measures (OECMs). These other forms of conservation may include some indigenous and community conserved areas (ICCAs) not formally recongized as protected areas, for instance.'
+          -
+            'Although included within protected areas, the level of protection afforded to these habitats varies according to the purpose of the protected area. Protected area management effectiveness.'
+        footer:
+          - Multiple habitats are lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean commodo ligula eget dolor. Aenean massa.
+          - Cold-water corals are not included in this data visualisation, lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean commodo ligula eget dolor. Aenean massa.

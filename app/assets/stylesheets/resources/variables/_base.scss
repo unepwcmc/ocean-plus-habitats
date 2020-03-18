@@ -27,6 +27,26 @@ $theme-purple: #332288;
 $theme-red: #E61354;
 $theme-yellow: #FCDA68;
 
+$chart-blue-light: #96D6E6;
+$chart-blue: #53CCF7;
+$chart-blue-dark: #2179A7;
+$chart-blue-xdark: #133151;
+$chart-green-light: #BFD2A5;
+$chart-green: #86BF37;
+$chart-green-dark: #587828;
+$chart-green-xdark: #2E3A1C;
+$chart-navy: #2179A7;
+$chart-orange: #E9624D;
+$chart-pink: #9A014F;
+$chart-purple: #423781;
+$chart-teal: #227190;
+$chart-yellow: #F7BA02;
+
+$theme-gradient-blue: $chart-blue-xdark $chart-blue-dark $chart-blue $chart-blue-light $grey-light;
+$theme-gradient-green: $chart-green-xdark $chart-green-dark $chart-green $chart-green-light $grey-light;
+$theme-gradient-rainbow: $chart-pink $chart-yellow $chart-green $chart-blue $grey-light;
+$theme-gradient-habitats: $chart-green $theme-pink $theme-purple $theme-yellow $theme-blue $grey;
+
 //--------------------------------------------------
 // fonts
 //--------------------------------------------------
@@ -131,5 +151,5 @@ $habitat_colours: (
   'saltmarshes': $theme-purple,
   'mangroves': $theme-yellow,
   'seagrasses': $theme-blue,
-  'coldcorals': $theme-red,
+  'coldcorals': $theme-red
 );

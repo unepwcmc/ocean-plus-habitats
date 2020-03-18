@@ -1,0 +1,74 @@
+<% @stacked_row_chart = {
+  legend: [
+    {
+      id: "multiple",
+      title: "Multiple habitats"
+    },
+    {
+      id: "coralreefs",
+      title: "Warm-water coral reefs"
+    },
+    {
+      id: "saltmarshes",
+      title: "Saltmarshes"
+    },
+    {
+      id: "mangroves",
+      title: "Mangroves"
+    },
+    {
+      id: "seagrasses",
+      title: "Seagrasses"
+    },
+    {
+      id: "notcovered",
+      title: "Not covered"
+    }
+  ],
+  chart: {
+    chart_title: "% of length of coastline: xxx,xxx km",
+    theme: "green",
+    rows: [
+      {
+        percent: '21'.to_f.round,
+        label: "1."
+      },
+      {
+        percent: '22'.to_f.round,
+        label: "2."
+      },
+      {
+        percent: '15'.to_f.round,
+        label: "3."
+      },
+      {
+        percent: '13'.to_f.round,
+        label: "4."
+      },
+      {
+        percent: 27,
+        label: "5."
+      },
+      {
+        percent: 2,
+        label: "6."
+      }
+    ]
+  }
+} %>
+
+<section class="container section-padding--bottom">
+  <h2><%= t('countries.shared.habitats_representation.title'); %></h2>
+  <% t('countries.shared.habitats_representation.description').each do |p| %>
+  <p class="text-body"><%= p %></p>
+  <% end %>
+  <chart-row-stacked
+    title="<%= @stacked_row_chart[:chart][:chart_title] %>"
+    :rows="<%= @stacked_row_chart[:chart][:rows].to_json %>"
+    theme="<%= @stacked_row_chart[:chart][:theme] %>"
+    :legend="<%= @stacked_row_chart[:legend].to_json %>">
+  </chart-row-stacked>
+  <% t('countries.shared.habitats_representation.footer').each do |p| %>
+    <p class="text--smallprint"><%= p %></p>
+  <% end %>
+</section>
