@@ -1,8 +1,5 @@
 en:
-  home:
-    general:
-      title: Explore the world's marine & coastal habitats
-      description: Ocean+ Habitats is an evolving platform providing the world's decision-makers and communities of practice with the best possible global information, knowledge and tools required to manage and conserve ocean ecosystems.
+  countries:
     nav_sticky:
       -
         id: where-are-they

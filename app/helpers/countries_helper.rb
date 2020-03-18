@@ -6,6 +6,10 @@ module CountriesHelper
     country && flag ? image_tag(I18n.t("countries.#{yml_key}.image_flag"), alt: '', class: 'header__icon') : nil
   end
 
+  def nav_tertiary
+    I18n.t('countries.nav_sticky').to_json
+  end
+
   def country_red_list_modal
     {
       title: 'Title hardcoded in controller',
@@ -37,7 +41,7 @@ module CountriesHelper
   def target_tabs
     target_tabs = I18n.t('countries.shared.targets.tabs')
 
-    target_tabs[2][:list].each do |habitat| 
+    target_tabs[2][:list].each do |habitat|
       habitat[:title] = get_habitat_from_id(habitat[:id])[:title]
     end
 

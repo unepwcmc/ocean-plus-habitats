@@ -2,7 +2,7 @@
 // classes
 //--------------------------------------------------
 .nav {
-  
+
 //--------------------------------------------------
 // primary
 //--------------------------------------------------
@@ -13,7 +13,7 @@
       &__pane {
         background-color: $grey-light;
         width: 100%;
-        
+
         display: none;
         position: absolute;
         top: calc(100% - 8px);
@@ -42,12 +42,12 @@
       }
 
         &__column {
-          width: 50%; 
+          width: 50%;
         }
 
           &__a {
             width: 32%;
-            
+
             display: inline-block;
           }
     }
@@ -63,8 +63,14 @@
 
     .nav {
       &__link {
-        @include text-nav-tertiary;    
-        margin: 0 rem-calc(30);
+        @include text-nav-tertiary;
+        margin-right: rem-calc(30);
+
+        flex: 0 0 auto;
+
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
   }
