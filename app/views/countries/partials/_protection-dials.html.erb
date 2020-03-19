@@ -1,4 +1,4 @@
-<section id="<%= id %>" class="container section-padding--bottom">
+<section id="<%= id %>" class="container section-padding--top">
   <div>
     <h2>
       <%= t('countries.shared.protection_dials.title_html'); %>
@@ -31,7 +31,7 @@
                 <%= dataset_status_title(dataset) %>
               <% else %>
                 <span class="card__habitat-percentage"><%= protected_percentage(dataset) %>%</span>
-                of <%= total_value(dataset) %> <%= total_units(dataset) %>
+                of <%= number_with_delimiter(total_value(dataset), :delimiter => ',') %> <%= total_units(dataset) %>
               <% end %>
             </p>
           </div>
