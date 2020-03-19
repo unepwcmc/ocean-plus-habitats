@@ -78,7 +78,7 @@ namespace :import do
   end
 
   def fetch_geo_entity(name)
-    if (name.include? "/") || (name.include? "ABNJ")
+    if (name.include? "/") || (name.include? "ABNJ") || (name.include? 'DPT')
       geo_entity = GeoEntity.find_by(name: "Disputed")
     else
       geo_entity = GeoEntity.find_by(iso3: name) || GeoEntity.find_by(name: name)
