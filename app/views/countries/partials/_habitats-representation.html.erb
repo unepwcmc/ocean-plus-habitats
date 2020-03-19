@@ -1,0 +1,18 @@
+<section class="container section-padding--top">
+  <h2>
+    <%= t('countries.shared.habitats_representation.title'); %>
+    <modal-trigger id="citation" :modal-content="<%= modal_content %>" class="icon--citation margin-space-left"></modal-trigger>
+  </h2>
+  <% t('countries.shared.habitats_representation.description').each do |p| %>
+  <p class="text-body"><%= p %></p>
+  <% end %>
+  <chart-row-stacked
+    title="<%= @stacked_row_chart[:chart][:chart_title] %>"
+    :rows="<%= @stacked_row_chart[:chart][:rows].to_json %>"
+    theme="<%= @stacked_row_chart[:chart][:theme] %>"
+    :legend="<%= @stacked_row_chart[:legend].to_json %>">
+  </chart-row-stacked>
+  <% t('countries.shared.habitats_representation.footer').each do |p| %>
+    <p class="text--smallprint"><%= p %></p>
+  <% end %>
+</section>

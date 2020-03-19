@@ -7,11 +7,13 @@ $grey-light: #E5E5E5;
 $grey: #7f7f7f;
 $grey-dark: #444444;
 $grey-xdark: #383838;
+$grey-xxdark: #161615;
 $black: #000000;
 
 $blue-light: #0AD4FF;
 $blue: #0895B4;
 
+$green-light: #86BF37;
 $green: #22A37B;
 
 $iucn: #D82007;
@@ -26,6 +28,8 @@ $theme-pink: #F35F8D;
 $theme-purple: #332288;
 $theme-red: #E61354;
 $theme-yellow: #FCDA68;
+
+$theme-gradient-habitats: $green-light $theme-pink $theme-purple $theme-yellow $theme-blue $grey;
 
 $color-coralreefs: #CB47B5;
 $color-saltmarshes: $theme-purple;
@@ -137,5 +141,5 @@ $habitat_colours: (
   'saltmarshes': $theme-purple,
   'mangroves': $theme-yellow,
   'seagrasses': $theme-blue,
-  'coldcorals': $theme-red,
+  'coldcorals': $theme-red
 );

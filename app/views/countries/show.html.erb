@@ -37,6 +37,12 @@
   }
 %>
 
+<%= render partial: '/countries/partials/habitats-representation',
+  locals: {
+    modal_content: country_red_list_modal
+  }
+%>
+
 <%= render partial: '/countries/partials/example-species',
   locals: {
     species_count_by_id: @species_count_by_id,
