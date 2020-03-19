@@ -6,7 +6,7 @@ module CountriesHelper
     country && flag ? image_tag(I18n.t("countries.#{yml_key}.image_flag"), alt: '', class: 'header__icon') : nil
   end
 
-  def nav_tertiary
+  def nav_tertiary_countries
     I18n.t('countries.nav_sticky').to_json
   end
 
