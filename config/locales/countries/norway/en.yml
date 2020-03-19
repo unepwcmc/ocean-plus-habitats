@@ -1,0 +1,39 @@
+en:
+  countries:
+    norway:
+      title: Norway
+      image_flag: flags/norway.png
+      habitats_present_citations:
+        coralreefs:
+          title: Title in yml file
+          text:
+            - Warm-water Coral citation for Norway
+        saltmarshes:
+          title: Title in yml file
+          text:
+            - Saltmarsh Coral citation for Norway
+        mangroves:
+          title: Title in yml file
+          text:
+            - Mangrove Coral citation for Norway
+        seagrasses:
+          title: Title in yml file
+          text:
+            - Seagrass Coral citation for Norway
+        coldcorals:
+          title: Title in yml file
+          text:
+            - Cold-water Coral Coral citation for Norway
+      targets:
+        aichi:
+          text:
+            - lorem sunt in culpa
+            - officia deserunt mollit anim id est liborum. officia deserunt mollit anim id est liborum.
+        sdg:
+          text:
+            - ecat cupidatat non proident, sunt in culpa qui officia mollit anim id est liborum.
+            - officia deserunt mollit anim id est liborum.
+        other:
+          text:
+            - sunt in culpa qui officia deserunt mollit anim id est liborum.
+            - ecat cupidatat non proident,
