@@ -60,6 +60,10 @@
        stroke: currentColor;
        stroke-width: 6;
        fill: none;
+
+       .card--unknown & {
+         display: none;
+       }
     }
   }
 }

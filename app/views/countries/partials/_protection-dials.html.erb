@@ -12,34 +12,26 @@
 
   <div class="cards--protection-dials">
     <% map_datasets.each do |dataset| %>
-      <%
-        dataset_status = @country.occurrences[dataset[:id]]
-        dataset_status_title = I18n.t("countries.shared.habitats_present.title_#{@country.occurrences[dataset[:id]]}")
-        icon_class = get_habitat_icon_class(dataset[:id], @country.occurrences[dataset[:id]])
-        protected_percentage = @country.protection_stats[dataset[:id]] ? @country.protection_stats[dataset[:id]]['protected_percentage'].round(2) : 0
-        total_value = @country.protection_stats[dataset[:id]] ? @country.protection_stats[dataset[:id]]['total_value'].to_i : 0
-        total_units = dataset[:id] == 'coldcorals' ? 'observations' : 'km<sup>2</sup>'.html_safe
-      %>
-      <div class="card card--<%= dataset_status %>">
+      <div class="card card--<%= dataset_status(dataset) %>">
 
         <div class="card__content">
           <div class="card__dial">
             <v-dial
             id="<%= dataset[:id] %>"
             name="<%= dataset[:name] %>"
-            icon-class="<%= icon_class %>"
-            :percentage="<%= protected_percentage %>"
+            icon-class="<%= icon_class(dataset) %>"
+            :percentage="<%= protected_percentage(dataset) %>"
             :width="180"
             >
           </div>
           <div class="card__habitat">
             <p class="card__habitat-title"><%= dataset[:name] %></p>
             <p class="card__habitat-status">
-              <% if (dataset_status == 'unknown') %>
-                <%= dataset_status_title %>
+              <% if (dataset_status(dataset) == 'unknown') %>
+                <%= dataset_status_title(dataset) %>
               <% else %>
-                <span class="card__habitat-percentage"><%= protected_percentage %>%</span>
-                of <%= total_value %> <%= total_units %>
+                <span class="card__habitat-percentage"><%= protected_percentage(dataset) %>%</span>
+                of <%= total_value(dataset) %> <%= total_units(dataset) %>
               <% end %>
             </p>
           </div>
