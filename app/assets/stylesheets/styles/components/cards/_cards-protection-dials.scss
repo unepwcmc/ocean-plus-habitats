@@ -22,25 +22,24 @@
 
       &__habitat {
         text-align: center;
-      }
 
-        &__habitat-title {
+        &-title {
           @include text-protection-dials-title;
           margin-bottom: rem-calc(22);
         }
 
-        &__habitat-status {
+        &-status {
           @include text-protection-dials-status;
 
           display: block;
         }
 
-          &__habitat-percentage {
-            color: $grey;
-            font-size: rem-calc(22);
+        &-percentage {
+          color: $grey;
+          font-size: rem-calc(22);
 
-            display: block;
-          }
-
+          display: block;
+        }
+      }
   }
 }
