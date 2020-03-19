@@ -23,7 +23,7 @@
 
     .chart {
       &__chart {
-        margin-top: rem-calc(54);
+        margin-top: rem-calc(80);
         width: 100%; height: rem-calc(32);
 
         @include breakpoint($small) {
@@ -31,28 +31,35 @@
         }
       }
 
+      &__title {
+        font-size: rem-calc(20);
+        font-weight: $normal;
+        margin-top: rem-calc(50);
+      }
+
         &__bar {
+          border: $border-thin $grey-xxdark;
           margin-bottom: 0;
           height: 100%;
 
           position: relative;
 
-          &.chart-theme--blue { @include bars($theme-gradient-blue); }
-          &.chart-theme--green { @include bars($theme-gradient-green); }
-          &.chart-theme--rainbow { @include bars($theme-gradient-rainbow); }
           &.chart-theme--habitats { @include bars($theme-gradient-habitats); }
+
+          &:nth-child(n+2) {
+            border-left: 0;
+          }
 
           &:nth-child(even) {
             .chart__percent {
-              bottom: unset;
               top: calc(100% + 14px);
+              bottom: unset;
             }
           }
         }
 
           &__percent {
             position: absolute;
-
             bottom: calc(100% + 14px);
             left: 50%;
 

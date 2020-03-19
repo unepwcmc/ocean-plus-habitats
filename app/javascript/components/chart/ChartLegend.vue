@@ -7,7 +7,7 @@
     >
       <span :class="[themeClass(row.id), 'chart__legend-key-icon']" />
 
-      <span class="chart__legend-key-title">{{ index+1 }}. {{ row.title }}</span>
+      <span class="chart__legend-key-title"><span class="chart__legend-key-index">{{ index+1 }}. </span>{{ row.title }}</span>
 
       <span
         class="chart__legend-key-text"
@@ -38,7 +38,6 @@ export default {
 
   methods: {
     themeClass (id) {
-      // return this.theme ? `theme--${this.theme}` : `theme--${id}`
       return `theme--${id}`
     }
   }
