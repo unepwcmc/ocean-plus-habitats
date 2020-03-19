@@ -6,6 +6,10 @@ module CountriesHelper
     country && flag ? image_tag(I18n.t("countries.#{yml_key}.image_flag"), alt: '', class: 'header__icon') : nil
   end
 
+  def nav_tertiary_countries
+    I18n.t('countries.nav_sticky').to_json
+  end
+
   def country_red_list_modal
     {
       title: 'Title hardcoded in controller',
