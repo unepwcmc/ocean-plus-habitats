@@ -14,6 +14,14 @@
   }
 %>
 
+<%= render partial: '/countries/partials/protection-dials',
+  locals: {
+    map_datasets: @map_datasets,
+    habitats_present: @habitats_present,
+    modal_content: habitats_present_modal
+  }
+%>
+
 <%= render partial: '/countries/partials/red-list',
   locals: {
     modal_content: country_red_list_modal
