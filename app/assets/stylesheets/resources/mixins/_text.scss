@@ -16,7 +16,7 @@
 
 @mixin text-2 {
   @include text-on-navy;
-  @include responsive-styles(font-size, rem-calc(25), rem-calc(25), rem-calc(25)); 
+  @include responsive-styles(font-size, rem-calc(25), rem-calc(25), rem-calc(25));
   color: $header-font-color;
   font-family: $header-font;
   font-weight: $semi-bold;
@@ -78,7 +78,7 @@
 @mixin h3 {
   @include text-7;
   margin-top: 0;
-  
+
   &.heading--doughnut-chart { color: $white; }
 }
 
@@ -191,4 +191,14 @@
 
 @mixin text-filter-description {
   @include responsive-styles(font-size, 12px, 12px, 12px);
+}
+
+@mixin text-protection-dials-title {
+  @include text-4;
+  font-weight: $bold;
+}
+
+@mixin text-protection-dials-status {
+  @include text-4;
+  font-weight: $normal;
 }

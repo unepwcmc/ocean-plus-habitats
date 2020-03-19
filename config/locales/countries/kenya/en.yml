@@ -1,29 +1,29 @@
 en:
   countries:
-    indonesia:
-      title: Indonesia
-      image_flag: flags/indonesia.png
+    kenya:
+      title: Kenya
+      image_flag: flags/kenya.png
       habitats_present_citations:
         coralreefs:
           title: Title in yml file
           text:
-            - Warm-water Coral citation for Indonesia
+            - Warm-water Coral citation for Kenya
         saltmarshes:
           title: Title in yml file
           text:
-            - Saltmarsh Coral citation for Indonesia
+            - Saltmarsh Coral citation for Kenya
         mangroves:
           title: Title in yml file
           text:
-            - Mangrove Coral citation for Indonesia
+            - Mangrove Coral citation for Kenya
         seagrasses:
           title: Title in yml file
           text:
-            - Seagrass Coral citation for Indonesia
+            - Seagrass Coral citation for Kenya
         coldcorals:
           title: Title in yml file
           text:
-            - Cold-water Coral Coral citation for Indonesia
+            - Cold-water Coral Coral citation for Kenya
       targets:
         aichi:
           text:

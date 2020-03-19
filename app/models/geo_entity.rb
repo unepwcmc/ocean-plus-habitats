@@ -32,7 +32,9 @@ class GeoEntity < ApplicationRecord
     hash = {}
 
     _occurrences.map do |occurrence|
-      hash[occurrence['name']] = occurrence['occurrence']
+      _occurrence = occurrence['occurrence']
+      next if hash[occurrence['name']] == 'present'
+      hash[occurrence['name']] = _occurrence unless _occurrence == 'unknown'
     end
     GeoEntityStat::BASE_OCCURRENCES.merge(hash)
   end

@@ -1,0 +1,43 @@
+<section id="<%= id %>" class="container section-padding--bottom">
+  <div>
+    <h2>
+      <%= t('countries.shared.protection_dials.title_html'); %>
+      <modal-trigger id="citation" :modal-content="<%= modal_content %>" class="icon--citation margin-space-left"></modal-trigger>
+    </h2>
+
+    <% t('countries.shared.protection_dials.description_html').each do |p| %>
+      <p><%= p.html_safe %></p>
+    <% end %>
+  </div>
+
+  <div class="cards--protection-dials">
+    <% map_datasets.each do |dataset| %>
+      <div class="card card--<%= dataset_status(dataset) %>">
+
+        <div class="card__content">
+          <div class="card__dial">
+            <v-dial
+            id="<%= dataset[:id] %>"
+            name="<%= dataset[:name] %>"
+            icon-class="<%= icon_class(dataset) %>"
+            :percentage="<%= protected_percentage(dataset) %>"
+            :width="180"
+            >
+          </div>
+          <div class="card__habitat">
+            <p class="card__habitat-title"><%= dataset[:name] %></p>
+            <p class="card__habitat-status">
+              <% if (dataset_status(dataset) == 'unknown') %>
+                <%= dataset_status_title(dataset) %>
+              <% else %>
+                <span class="card__habitat-percentage"><%= protected_percentage(dataset) %>%</span>
+                of <%= total_value(dataset) %> <%= total_units(dataset) %>
+              <% end %>
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <p class="text--smallprint"><%= t('countries.shared.protection_dials.footer'); %></p>
+</section>

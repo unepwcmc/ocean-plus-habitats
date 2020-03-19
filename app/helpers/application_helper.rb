@@ -27,7 +27,7 @@ module ApplicationHelper
     'Guanaco Torres del Paine Chile Gregoire Dubois'
   end
 
-  COUNTRIES = %w(indonesia united_arab_emirates).freeze
+  COUNTRIES = %w(indonesia united_arab_emirates australia kenya norway ireland).freeze
   REGIONS = %w(mediterranean wider_caribbean).freeze
   def get_nav_items
     #FERDI - get all countries and then fill out object as follows
@@ -53,24 +53,24 @@ module ApplicationHelper
     "icon--#{habitat}#{status}"
   end
 
-  def country_path (country)
+  def country_path(country)
     '/' + country.gsub(/ /, '-').gsub("'", '%27').downcase
   end
 
-  def country_name_from_param (param_name)
+  def country_name_from_param(param_name)
     param_name.gsub('-', ' ').gsub('%27', "'").titleize
   end
 
   def footer_citation
-    if params[:name] 
+    if params[:name]
       return t(
-        'global.footer_citation.region', 
+        'global.footer_citation.region',
         region: country_name_from_param(params[:name]),
         year: Date.today.year,
         month: Date.today.strftime('%B')
       ).html_safe
     end
-    
+
     t('global.footer_citation.global').html_safe
   end
 
@@ -101,7 +101,7 @@ module ApplicationHelper
     I18n.t('global.habitats')
   end
 
-  def get_habitat_from_id (id)
+  def get_habitat_from_id(id)
     habitats.select{ |h| h[:id] == id }[0]
   end
 end

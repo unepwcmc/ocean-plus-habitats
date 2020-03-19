@@ -26,6 +26,7 @@ import Tab from '../components/tabs/Tab.vue'
 import Tabs from '../components/tabs/Tabs.vue'
 import Translator from '../components/translator/Translator'
 import VMapInteractive from '../components/map/VMapInteractive'
+import VDial from '../components/dial/VDial'
 
 // create event hub and export so that it can be imported into .vue files
 export const eventHub = new Vue()
@@ -54,7 +55,8 @@ document.addEventListener('turbolinks:load', () => {
         Tab,
         Tabs,
         Translator,
-        VMapInteractive
+        VMapInteractive,
+        VDial
       }
     })
   }
