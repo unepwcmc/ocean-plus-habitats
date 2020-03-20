@@ -15,7 +15,7 @@ namespace :import do
       next unless row['buffer'] == '30'
       habitats = Habitat.all
       name = row['iso3'] || row['name']
-      geo_entity = fetch_geo_entity(name)
+      geo_entity = fetch_country(name)
       habitats.each do |habitat|
         parse_coastal_stat(row, habitat, geo_entity)
       end
@@ -43,5 +43,14 @@ namespace :import do
 
     coast = CoastalStat.find_or_create_by(geo_entity: geo_entity)
     coast.update_attributes(attributes)
+  end
+
+  def fetch_country(name)
+    if (name.include? "/") || (name.include? "ABNJ")
+      geo_entity = GeoEntity.find_by(name: "Disputed")
+    else
+      geo_entity = GeoEntity.find_by(iso3: name) || GeoEntity.find_by(name: name)
+    end
+    geo_entity
   end
 end

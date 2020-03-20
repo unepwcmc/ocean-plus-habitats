@@ -25,8 +25,6 @@ class CountriesController < ApplicationController
 
     @habitat_change = Serializers::HabitatCountryChangeSerializer.new(@country, habitats_present_status).serialize.to_json
 
-    coastal_stat = @country.coastal_stat
-    habitat_stats = @country.geo_entity_stats
-    @stacked_row_chart = Serializers::RepresentationHabitatsSerializer.new(coastal_stat, habitat_stats).serialize
+    @stacked_row_chart = Serializers::RepresentationHabitatsSerializer.new(@country).serialize
   end
 end

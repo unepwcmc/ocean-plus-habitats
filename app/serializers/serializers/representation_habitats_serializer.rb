@@ -1,16 +1,19 @@
 class Serializers::RepresentationHabitatsSerializer < Serializers::Base
 
-  def initialize(coastal_stat, habitat_stats)
-    super(coastal_stat, 'coastal_stat')
-    super(habitat_stats, 'habitat_stats')
+  def initialize(country)
+    super(country, 'country')
   end
 
   def serialize
-    coastal = @coastal_stat.attributes.slice('total_coast_length', 'multiple_habitat_length')
+    return {} if @country.iso3.nil?
+    coastal = CoastalStat.find_by(geo_entity_id: @country)
+                         .attributes
+                         .slice('total_coast_length', 'multiple_habitat_length')
     tot = coastal['total_coast_length']
+    hab_stats = GeoEntityStat.where(geo_entity_id: @country)
     legend, rows = [], []
     Habitat.where.not(name: 'coldcorals').each_with_index do |habitat, label|
-      stat = @habitat_stats.find_by(habitat_id: habitat)
+      stat = hab_stats.find_by(habitat_id: habitat)
       value = stat.try(:coastal_coverage) || 0
       legend << { id: habitat.name, title: habitat.title }
       rows << { percent: ((value / tot) * 100).round, label: "#{label + 2}." }
