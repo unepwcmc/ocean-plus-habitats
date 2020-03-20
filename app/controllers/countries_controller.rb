@@ -25,63 +25,8 @@ class CountriesController < ApplicationController
 
     @habitat_change = Serializers::HabitatCountryChangeSerializer.new(@country, habitats_present_status).serialize.to_json
 
-    @stacked_row_chart = {
-      legend: [
-        {
-          id: "multiple",
-          title: "Multiple habitats"
-        },
-        {
-          id: "coralreefs",
-          title: "Warm-water coral reefs"
-        },
-        {
-          id: "saltmarshes",
-          title: "Saltmarshes"
-        },
-        {
-          id: "mangroves",
-          title: "Mangroves"
-        },
-        {
-          id: "seagrasses",
-          title: "Seagrasses"
-        },
-        {
-          id: "notcovered",
-          title: "Not covered"
-        }
-      ],
-      chart: {
-        chart_title: "% of length of coastline: xxx,xxx km",
-        theme: "habitats",
-        rows: [
-          {
-            percent: '21'.to_f.round,
-            label: "1."
-          },
-          {
-            percent: '22'.to_f.round,
-            label: "2."
-          },
-          {
-            percent: '15'.to_f.round,
-            label: "3."
-          },
-          {
-            percent: '13'.to_f.round,
-            label: "4."
-          },
-          {
-            percent: 27,
-            label: "5."
-          },
-          {
-            percent: 2,
-            label: "6."
-          }
-        ]
-      }
-    }
+    coastal_stat = @country.coastal_stat
+    habitat_stats = @country.geo_entity_stats
+    @stacked_row_chart = Serializers::RepresentationHabitatsSerializer.new(coastal_stat, habitat_stats).serialize
   end
 end
