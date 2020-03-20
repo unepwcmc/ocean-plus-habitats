@@ -10,12 +10,16 @@ export const getSubLayers = (config, isSelected) => {
     visible: isSelected
   }
 
-  Object.keys(layer.sourceLayers).forEach(layerType => {
+  layer.sourceLayers.forEach(layerType => {
+    const subName = layerType.sub_name || layerType.type
+
     layers.push({
       ...layer,
-      type: layerType,
-      sourceLayer: layer.sourceLayers[layerType],
-      id: getSubLayerId(layer, layerType)
+      color: layerType.color || layer.color,
+      type: layerType.type,
+      sourceLayer: layerType.name,
+      filter_id: layerType.filter_id,
+      id: getSubLayerId(layer, subName)
     })
   })
 

@@ -1,50 +1,92 @@
 DATASETS = [
   {
     id: 'coralreefs',
-    sourceLayers: {
-      point: 'WCMC008_CoralReef2018_Pt_v4',
-      poly: 'WCMC008_CoralReef2018_Py_v4',
-      line: 'WCMC008_CoralReef2018_Py_v4'
-    },
+    sourceLayers: [
+      {
+        type: 'point',
+        name: 'WCMC008_CoralReef2018_Pt_v4',
+      },
+      {
+        type: 'poly',
+        name: 'WCMC008_CoralReef2018_Py_v4',
+      },
+      {
+        type: 'line',
+        name: 'WCMC008_CoralReef2018_Py_v4'
+      }
+    ],
     tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Global_Distribution_of_Coral_Reefs/VectorTileServer/tile/{z}/{y}/{x}.pbf',
     color: '#F35F8D'
   },
   {
     id: 'saltmarshes',
-    sourceLayers: {
-      point: 'WCMC027_Saltmarshes_Pt_v6',
-      poly: 'WCMC027_Saltmarshes_Py_v6',
-      line: 'WCMC027_Saltmarshes_Py_v6',
-    },
+    sourceLayers: [
+      {
+        type: 'point',
+        name: 'WCMC027_Saltmarshes_Pt_v6',
+      },
+      {
+        type: 'poly',
+        name: 'WCMC027_Saltmarshes_Py_v6',
+      },
+      {
+        type: 'line',
+        name: 'WCMC027_Saltmarshes_Py_v6'
+      }
+    ],
     tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Global_Distribution_of_Saltmarshes/VectorTileServer/tile/{z}/{y}/{x}.pbf',
     color: '#332288'
   },
   {
     id: 'mangroves',
-    sourceLayers: {
-      poly: 'GMW_2016_v2',
-      line: 'GMW_2016_v2',
-    },
+    sourceLayers: [
+      {
+        type: 'poly',
+        name: 'GMW_2016_v2',
+      },
+      {
+        type: 'line',
+        name: 'GMW_2016_v2',
+      }
+    ],
     tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Global_Mangrove_Watch_2016/VectorTileServer/tile/{z}/{y}/{x}.pbf',
     color: '#D6A520'
   },
   {
     id: 'seagrasses',
-    sourceLayers: {
-      point: 'WCMC_013_014_SeagrassesPt_v6',
-      poly: 'WCMC_013_014_SeagrassesPy_v6',
-      line: 'WCMC_013_014_SeagrassesPy_v6'
-    },
+    sourceLayers: [
+      {
+        type: 'point',
+        name: 'WCMC_013_014_SeagrassesPt_v6'
+      },
+      {
+        type: 'poly',
+        name: 'WCMC_013_014_SeagrassesPy_v6'
+      },
+      {
+        type: 'line',
+        name: 'WCMC_013_014_SeagrassesPy_v6'
+      }
+    ],
     tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Global_Distribution_of_Seagrasses/VectorTileServer/tile/{z}/{y}/{x}.pbf',
     color: '#88CCEE',
   },
   {
     id: 'coldcorals',
-    sourceLayers: {
-      point: 'WCMC001_ColdCorals2017_Pt_v5',
-      poly: 'WCMC001_ColdCorals2017_Py_v5',
-      line: 'WCMC001_ColdCorals2017_Py_v5'
-    },
+    sourceLayers: [
+      {
+        type: 'point',
+        name: 'WCMC001_ColdCorals2017_Pt_v5',
+      },
+      {
+        type: 'poly',
+        name: 'WCMC001_ColdCorals2017_Py_v5',
+      },
+      {
+        type: 'line',
+        name: 'WCMC001_ColdCorals2017_Py_v5'
+      }
+    ],
     tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Global_Distribution_of_Cold_water_Corals/VectorTileServer/tile/{z}/{y}/{x}.pbf',
     color: '#E61354'
   }
