@@ -37,11 +37,13 @@
   }
 %>
 
-<%= render partial: '/countries/partials/habitats-representation',
-  locals: {
-    modal_content: country_red_list_modal
-  }
-%>
+<% unless @stacked_row_chart.empty? %>
+  <%= render partial: '/countries/partials/habitats-representation',
+    locals: {
+      modal_content: country_red_list_modal
+    }
+  %>
+<% end %>
 
 <%= render partial: '/countries/partials/example-species',
   locals: {
