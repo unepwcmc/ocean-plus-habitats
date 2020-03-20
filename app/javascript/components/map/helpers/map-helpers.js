@@ -1,7 +1,7 @@
 export const getSubLayerId = (layer, layerType) => layer.id + '-' + layerType
 
 export const getSubLayerIds = layer =>
-  ['poly', 'point', 'line'].map(layerType => getSubLayerId(layer, layerType))
+  ['poly', 'point', 'line', 'no-data', '0-20', '21-40', '41-60', '61-80', '81-100'].map(layerType => getSubLayerId(layer, layerType))
 
 export const getSubLayers = (config, isSelected) => {
   const layers = []
