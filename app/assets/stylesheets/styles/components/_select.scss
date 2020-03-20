@@ -13,12 +13,16 @@ $radio-width: rem-calc(22);
 .v-select {
   width: $select-width;
 
-  &__toggle { 
-    @include button--select; 
+  .nav--primary & {
+    width: auto;
+  }
+
+  &__toggle {
+    @include button--select;
     @include box-shadow-grey;
     padding: rem-calc(11) $select-padding-side;
   }
-    
+
     &__dropdown-text {
       overflow: hidden;
       text-overflow: ellipsis;
@@ -62,6 +66,6 @@ $radio-width: rem-calc(22);
       }
 
       &__radio {
-        @include input-custom-radio($radio-width); 
+        @include input-custom-radio($radio-width);
       }
 }

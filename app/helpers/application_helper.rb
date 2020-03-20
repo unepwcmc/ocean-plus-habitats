@@ -42,7 +42,8 @@ module ApplicationHelper
     geo_entity_id = GeoEntity.find_by_name(geo_entity_name)&.id
     return {} unless geo_entity_id
     {
-      title: I18n.t("countries.#{item}.title"),
+      id: geo_entity_id,
+      name: I18n.t("countries.#{item}.title"),
       url: country_path(geo_entity_name)
     }
   end
@@ -103,5 +104,12 @@ module ApplicationHelper
 
   def get_habitat_from_id(id)
     habitats.select{ |h| h[:id] == id }[0]
+  end
+
+  def get_countries_search_config
+    {
+      id: 'country',
+      label: I18n.t('global.main_menu.search_by_country')
+    }.to_json
   end
 end

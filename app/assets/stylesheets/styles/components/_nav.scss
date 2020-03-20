@@ -42,7 +42,11 @@
       }
 
         &__column {
-          width: 50%;
+          width: calc(50% - #{$gutter-medium / 2});
+
+          &:first-child {
+            margin-right: $gutter-medium;
+          }
         }
 
           &__a {
