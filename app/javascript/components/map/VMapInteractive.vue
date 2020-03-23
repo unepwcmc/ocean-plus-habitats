@@ -1,13 +1,14 @@
 <template>
   <div class="map__container flex">
-    <filter-pane 
-      id="filters-layers"
+    <filter-pane
+      :id="filterId"
       class="flex-no-shrink"
       :allow-no-selected-dataset="allowNoSelectedDataset"
       :datasets="datasetsInternal"
       :has-download-button="hasDownloadButton"
     />
     <v-map
+      :id="id"
       :search="search"
       :allow-no-selected-dataset="allowNoSelectedDataset"
       :mapbox-token="mapboxToken"
@@ -29,6 +30,10 @@ export default {
   },
 
   props: {
+    id: {
+      type: String,
+      default: 'map-target'
+    },
     search: {
       type: Boolean,
       default: false
@@ -75,12 +80,15 @@ export default {
   computed: {
     currentDatasets () {
       return this.getDatasetsFromIds(this.currentDatasetIds)
+    },
+    filterId () {
+      return "filters-layers-" + this.id
     }
   },
 
   created () {
     this.$eventHub.$on('reload-all-facets', this.reload)
-    this.$eventHub.$on('map-update-curr', this.updateCurrentDataset)
+    this.$eventHub.$on('map-update-curr-' + this.filterId, this.updateCurrentDataset)
     this.$eventHub.$on('map-load', this.selectInitDatasets)
 
     this.reload()
@@ -89,7 +97,7 @@ export default {
 
   destroyed () {
     this.$eventHub.$off('reload-all-facets', this.reload)
-    this.$eventHub.$off('map-update-curr', this.updateCurrentDataset)
+    this.$eventHub.$off('map-update-curr-' + this.filterId, this.updateCurrentDataset)
     this.$eventHub.$off('map-load', this.selectInitDatasets)
   },
 
@@ -102,7 +110,7 @@ export default {
       }
     },
 
-    setInitBoundingBoxFromIso () {      
+    setInitBoundingBoxFromIso () {
       getCountryExtentByISO3(this.iso3, res => {
         const extent = res.data.extent
         const padding = 5
@@ -135,14 +143,14 @@ export default {
         if (this.multipleDatasets) {
           this.datasetsInternal.forEach(ds => {
             if (!ds.disabled) {
-              this.$eventHub.$emit('select-' + ds.id)
+              this.$eventHub.$emit('select-' + this.filterId + ds.id)
             }
           })
         } else {
           const firstAvailableDataset = this.datasetsInternal.filter(d => !d.disabled)[0]
-          
+
           if (firstAvailableDataset) {
-            this.$eventHub.$emit('select-' + firstAvailableDataset.id)
+            this.$eventHub.$emit('select-' + this.filterId + firstAvailableDataset.id)
           }
         }
       }
@@ -161,25 +169,25 @@ export default {
         this.currentDatasetIds.length === 1 &&
         !this.isCurrentDataset(datasetId)
 
-      if (isReplacingCurrentDataset) { 
-        this.$eventHub.$emit('deselect-' + this.currentDatasetIds[0]) 
+      if (isReplacingCurrentDataset) {
+        this.$eventHub.$emit('deselect-' + this.filterId + this.currentDatasetIds[0])
       }
     },
 
     handleDatasetUpdate ({datasetId, showDataset, createDataset}) {
-      const newDataset = this.getDatasetsFromIds([datasetId])[0] 
+      const newDataset = this.getDatasetsFromIds([datasetId])[0]
 
       if (createDataset && showDataset) {
-        this.$eventHub.$emit('map-create-and-show-layers', getSubLayers(newDataset, true))
+        this.$eventHub.$emit('map-create-and-show-layers-' + this.id, getSubLayers(newDataset, true))
         this.currentDatasetIds.push(datasetId)
       } else if (showDataset) {
-        this.$eventHub.$emit('map-show-layers', getSubLayerIds(newDataset))
+        this.$eventHub.$emit('map-show-layers-' + this.id, getSubLayerIds(newDataset))
         this.currentDatasetIds.push(datasetId)
       } else {
-        this.$eventHub.$emit('map-hide-layers', getSubLayerIds(newDataset))
-        if (this.isCurrentDataset(datasetId)) { 
-          this.currentDatasetIds.splice(this.currentDatasetIds.indexOf(datasetId), 1) 
-        } 
+        this.$eventHub.$emit('map-hide-layers-' + this.id, getSubLayerIds(newDataset))
+        if (this.isCurrentDataset(datasetId)) {
+          this.currentDatasetIds.splice(this.currentDatasetIds.indexOf(datasetId), 1)
+        }
       }
     },
 

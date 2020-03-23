@@ -1,6 +1,6 @@
-DATASETS = [
+EEZ_DATASETS = [
   {
-    id: 'coralreefs',
+    id: 'eez-coralreefs',
     sourceLayers: [
       {
         type: 'poly',
@@ -49,7 +49,7 @@ DATASETS = [
     color: '#F35F8D'
   },
   {
-    id: 'saltmarshes',
+    id: 'eez-saltmarshes',
     sourceLayers: [
       {
         type: 'poly',
@@ -98,7 +98,7 @@ DATASETS = [
     color: '#332288'
   },
   {
-    id: 'mangroves',
+    id: 'eez-mangroves',
     sourceLayers: [
       {
         type: 'poly',
@@ -147,7 +147,7 @@ DATASETS = [
     color: '#D6A520'
   },
   {
-    id: 'seagrasses',
+    id: 'eez-seagrasses',
     sourceLayers: [
       {
         type: 'poly',
@@ -196,7 +196,7 @@ DATASETS = [
     color: '#88CCEE',
   },
   {
-    id: 'coldcorals',
+    id: 'eez-coldcorals',
     sourceLayers: [
       {
         type: 'poly',
@@ -246,70 +246,16 @@ DATASETS = [
   }
 ].freeze
 
-HABITATS_PRESENCE_STATUSES_DEFAULT = {
-  coralreefs: 'present',
-  saltmarshes: 'present',
-  mangroves: 'present',
-  seagrasses: 'present',
-  coldcorals: 'present'
-}.freeze
-
 class Serializers::EezMapDatasetsSerializer < Serializers::Base
-  include ApplicationHelper
-  include ActionView::Helpers::NumberHelper
-
-  def initialize(habitat_protection_stats, habitat_presence_statuses=HABITATS_PRESENCE_STATUSES_DEFAULT)
-    super(habitat_presence_statuses, 'habitat_presence_statuses')
-    super(habitat_protection_stats, 'habitat_protection_stats')
+  def initialize
   end
 
   def serialize
-    map_datasets = DATASETS.reject {|ds| habitat_presence_status(ds) == 'absent'}
-
-    map_datasets.map do |ds|
+    EEZ_DATASETS.map do |ds|
       dataset = ds.dup
-      dataset[:name] = get_habitat_from_id(ds[:id])[:title]
-      dataset[:disabled] = habitat_presence_status(ds) == 'unknown' ? true : false
-      set_dataset_description_html(dataset)
+      dataset[:name] = ds[:id].split('-').last.camelize
 
       dataset
     end
-  end
-
-  private
-
-  def set_dataset_description_html dataset
-    # TODO Adding nil check is a workaround so to avoid this to break until new data is imported
-    if habitat_presence_status(dataset) == 'unknown' ||
-        @habitat_protection_stats[dataset[:id]].nil?
-      dataset[:descriptionHtml] = not_available_dataset_html
-    else
-      habitat_stats = @habitat_protection_stats[dataset[:id]]
-      protected_percentage = habitat_stats['protected_percentage'].round(2)
-      total_units = dataset[:id] == 'coldcorals' ? 'observations' : 'km<sup>2</sup>'
-      total_value = number_with_precision(
-        habitat_stats['total_value'],
-        precision: total_units == 'observations' ? 0 : 2,
-        delimiter: ','
-      )
-
-      dataset[:descriptionHtml] = I18n.t(
-        'countries.shared.locations_map.filter_description_html',
-        {
-          habitat: dataset[:name],
-          habitat_downcase: dataset[:name].downcase,
-          total: "#{total_value} #{total_units}",
-          percentage: protected_percentage.round(2),
-        }
-      )
-    end
-  end
-
-  def habitat_presence_status dataset
-    @habitat_presence_statuses[dataset[:id]]
-  end
-
-  def not_available_dataset_html
-    "<p>#{I18n.t('global.map_not_available')}</p>"
   end
 end

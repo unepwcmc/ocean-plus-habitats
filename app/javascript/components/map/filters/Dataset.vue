@@ -21,6 +21,10 @@
       >
       <span class="custom-checkbox" />
     </label>
+    <div
+      class="map-filters__filter-description"
+      v-html="config.descriptionHtml"
+    />
   </div>
 </template>
 
@@ -71,14 +75,14 @@ export default {
 
   mounted() {
     this.$eventHub.$on('map-reload-layers', this.reloadDataset)
-    this.$eventHub.$on('deselect-' + this.datasetId, this.deselectDataset)
-    this.$eventHub.$on('select-' + this.datasetId, this.selectDataset)
+    this.$eventHub.$on('deselect-' + this.$parent.id + this.datasetId, this.deselectDataset)
+    this.$eventHub.$on('select-' + this.$parent.id + this.datasetId, this.selectDataset)
   },
 
   destroyed() {
     this.$eventHub.$off('map-reload-layers', this.reloadDataset)
-    this.$eventHub.$off('deselect-' + this.datasetId, this.deselectDataset)
-    this.$eventHub.$off('select-' + this.datasetId, this.selectDataset)
+    this.$eventHub.$off('deselect-' + this.$parent.id + this.datasetId, this.deselectDataset)
+    this.$eventHub.$off('select-' + this.$parent.id + this.datasetId, this.selectDataset)
   },
 
   methods: {
@@ -103,7 +107,7 @@ export default {
       const createDataset = showDataset && (!this.datasetLayersCreated || forceCreate)
 
       if (showDataset) { this.datasetLayersCreated = true }
-      this.$eventHub.$emit('map-update-curr', {
+      this.$eventHub.$emit('map-update-curr-' + this.$parent.id, {
         datasetId: this.datasetId,
         showDataset,
         createDataset

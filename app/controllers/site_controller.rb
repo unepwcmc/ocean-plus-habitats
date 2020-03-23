@@ -6,6 +6,8 @@ class SiteController < ApplicationController
 
     @map_datasets = Serializers::MapDatasetsSerializer.new(Habitat.global_protection_by_id).serialize
 
+    @eez_map_datasets = Serializers::EezMapDatasetsSerializer.new.serialize
+
     red_list_data = Species.count_species
 
     @red_list_data = @habitats.each { |habitat| habitat['data'] = red_list_data[habitat[:id]] }
