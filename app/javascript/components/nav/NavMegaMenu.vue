@@ -16,14 +16,20 @@
         <p class="bold">
           Regions
         </p>
-        <nav class="flex">
-          <a
-            v-for="region in regions"
-            :key="region.id"
-            :href="region.url"
-            :title="`View the page for ${region.name}`"
-            class="nav__a"
-          >{{ region.name }}</a>
+        <nav class="nav__links">
+          <ul class="nav__links-items">
+            <li
+              v-for="region in regions"
+              :key="region.id"
+              class="nav__links-item"
+            >
+              <a
+                :href="region.url"
+                :title="`View the page for ${region.name}`"
+                class="nav__a"
+              >{{ region.name }}</a>
+            </li>
+          </ul>
         </nav>
       </div>
     </div>
