@@ -31,7 +31,7 @@ namespace :import do
        .uniq { |r| r.values_at('iso3', 'habitat') }.each do |row|
 
       habitat = Habitat.find_by(title: row['habitat'])
-      next unless log_habitat(habitat)
+      next unless log_habitat(row, habitat)
 
       import_occurrences(row, habitat)
     end
@@ -61,7 +61,7 @@ namespace :import do
   def import_occurrences(row, habitat)
     geo_entity = GeoEntity.find_by(iso3: row['iso3'])
     return unless geo_entity.present?
-    occurrence = row['occurrence'].to_i
+    occurrence = row['occurence'].to_i
     GeoEntityStat.find_or_initialize_by(geo_entity_id: geo_entity.id, habitat_id: habitat.id)
                  .update_attributes!(occurrence: occurrence)
   end
