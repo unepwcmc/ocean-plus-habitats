@@ -10,7 +10,7 @@ namespace :import do
     # import habitat data CSVs for each entity type
     geo_entity_types.each do |geo_entity_type|
       habitats.each do |habitat|
-        filename = "#{habitat.name.singularize}_#{geo_entity_type}_output.csv"
+        filename = "#{habitat.name}_#{geo_entity_type}_output.csv"
         csv_file = "#{dir}/#{filename}"
         import_new_csv_file(habitat.name, csv_file)
       end
@@ -28,13 +28,13 @@ namespace :import do
   end
 
   def parse_change_stat(csv_row, habitat)
-    name = csv_row['iso3'] || csv_row['name']
+    name = csv_row['iso3'] || csv_row['region']
     geo_entity = fetch_geo_entity(name)
     insert_change_stat(habitat, geo_entity, csv_row)
   end
 
   def parse_geo_entity_stat(csv_row, habitat)
-    name = csv_row['iso3'] || csv_row['name']
+    name = csv_row['iso3'] || csv_row['region']
     geo_entity = fetch_geo_entity(name)
     insert_geo_entity_stat(habitat, geo_entity, csv_row)
   end
