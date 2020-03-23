@@ -13,7 +13,7 @@
         />
       </div>
       <div class="nav__column">
-        <p class="bold">
+        <p class="nav__heading">
           Regions
         </p>
         <nav class="nav__links">
