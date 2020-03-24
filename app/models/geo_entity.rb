@@ -84,6 +84,7 @@ class GeoEntity < ApplicationRecord
 
   private
 
+  # TODO Consider removing this and using directly associated stats for regions too
   def countries_geo_entity_stats
     countries.present? ? GeoEntityStat.where(geo_entity_id: countries.map(&:id)) : geo_entity_stats
   end
