@@ -31,8 +31,8 @@ export default {
 
   props: {
     id: {
-      type: String,
-      default: 'map-target'
+      required: true,
+      type: String
     },
     search: {
       type: Boolean,

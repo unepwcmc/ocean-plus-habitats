@@ -1,261 +1,57 @@
-EEZ_DATASETS = [
-  {
-    id: 'eez-coralreefs',
-    sourceLayers: [
-      {
-        type: 'poly',
-        name: 'ProtectionCoralReef',
-        sub_name: 'no-data',
-        filter_id: 1,
-        color: '#332288'
-      },
-      {
-        type: 'poly',
-        name: 'ProtectionCoralReef',
-        sub_name: '0-20',
-        filter_id: 2,
-        color: '#000000'
-      },
-      {
-        type: 'poly',
-        name: 'ProtectionCoralReef',
-        sub_name: '21-40',
-        filter_id: 3,
-        color: '#332288'
-      },
-      {
-        type: 'poly',
-        name: 'ProtectionCoralReef',
-        sub_name: '41-60',
-        filter_id: 4,
-        color: '#000000'
-      },
-      {
-        type: 'poly',
-        name: 'ProtectionCoralReef',
-        sub_name: '61-80',
-        filter_id: 5,
-        color: '#332288'
-      },
-      {
-        type: 'poly',
-        name: 'ProtectionCoralReef',
-        sub_name: '81-100',
-        filter_id: 6,
-        color: '#000000'
-      }
-    ],
-    tilesUrl: 'https://data-gis.unep-wcmc.org/server/rest/services/Hosted/Coral_Reef_Projection/VectorTileServer/tile/{z}/{y}/{x}.pbf',
-    color: '#F35F8D'
-  },
-  {
-    id: 'eez-saltmarshes',
-    sourceLayers: [
-      {
-        type: 'poly',
-        name: 'ProtectionSaltmarsh',
-        sub_name: 'no-data',
-        filter_id: 1,
-        color: '#332288'
-      },
-      {
-        type: 'poly',
-        name: 'ProtectionSaltmarsh',
-        sub_name: '0-20',
-        filter_id: 2,
-        color: '#000000'
-      },
-      {
-        type: 'poly',
-        name: 'ProtectionSaltmarsh',
-        sub_name: '21-40',
-        filter_id: 3,
-        color: '#332288'
-      },
-      {
-        type: 'poly',
-        name: 'ProtectionSaltmarsh',
-        sub_name: '41-60',
-        filter_id: 4,
-        color: '#000000'
-      },
-      {
-        type: 'poly',
-        name: 'ProtectionSaltmarsh',
-        sub_name: '61-80',
-        filter_id: 5,
-        color: '#332288'
-      },
-      {
-        type: 'poly',
-        name: 'ProtectionSaltmarsh',
-        sub_name: '81-100',
-        filter_id: 6,
-        color: '#000000'
-      }
-    ],
-    tilesUrl: 'https://data-gis.unep-wcmc.org/server/rest/services/Hosted/Saltmarsh_Projection/VectorTileServer/tile/{z}/{y}/{x}.pbf',
-    color: '#332288'
-  },
-  {
-    id: 'eez-mangroves',
-    sourceLayers: [
-      {
-        type: 'poly',
-        name: 'ProtectionMangroves',
-        sub_name: 'no-data',
-        filter_id: 1,
-        color: '#332288'
-      },
-      {
-        type: 'poly',
-        name: 'ProtectionMangroves',
-        sub_name: '0-20',
-        filter_id: 2,
-        color: '#000000'
-      },
-      {
-        type: 'poly',
-        name: 'ProtectionMangroves',
-        sub_name: '21-40',
-        filter_id: 3,
-        color: '#332288'
-      },
-      {
-        type: 'poly',
-        name: 'ProtectionMangroves',
-        sub_name: '41-60',
-        filter_id: 4,
-        color: '#000000'
-      },
-      {
-        type: 'poly',
-        name: 'ProtectionMangroves',
-        sub_name: '61-80',
-        filter_id: 5,
-        color: '#332288'
-      },
-      {
-        type: 'poly',
-        name: 'ProtectionMangroves',
-        sub_name: '81-100',
-        filter_id: 6,
-        color: '#000000'
-      }
-    ],
-    tilesUrl: 'https://data-gis.unep-wcmc.org/server/rest/services/Hosted/Mangrove_Projection/VectorTileServer/tile/{z}/{y}/{x}.pbf',
-    color: '#D6A520'
-  },
-  {
-    id: 'eez-seagrasses',
-    sourceLayers: [
-      {
-        type: 'poly',
-        name: 'ProtectionSeagrasses',
-        sub_name: 'no-data',
-        filter_id: 1,
-        color: '#332288'
-      },
-      {
-        type: 'poly',
-        name: 'ProtectionSeagrasses',
-        sub_name: '0-20',
-        filter_id: 2,
-        color: '#000000'
-      },
-      {
-        type: 'poly',
-        name: 'ProtectionSeagrasses',
-        sub_name: '21-40',
-        filter_id: 3,
-        color: '#332288'
-      },
-      {
-        type: 'poly',
-        name: 'ProtectionSeagrasses',
-        sub_name: '41-60',
-        filter_id: 4,
-        color: '#000000'
-      },
-      {
-        type: 'poly',
-        name: 'ProtectionSeagrasses',
-        sub_name: '61-80',
-        filter_id: 5,
-        color: '#332288'
-      },
-      {
-        type: 'poly',
-        name: 'ProtectionSeagrasses',
-        sub_name: '81-100',
-        filter_id: 6,
-        color: '#000000'
-      }
-    ],
-    tilesUrl: 'https://data-gis.unep-wcmc.org/server/rest/services/Hosted/Seagrass_Projection/VectorTileServer/tile/{z}/{y}/{x}.pbf',
-    color: '#88CCEE',
-  },
-  {
-    id: 'eez-coldcorals',
-    sourceLayers: [
-      {
-        type: 'poly',
-        name: 'ProtectionColdCoral',
-        sub_name: 'no-data',
-        filter_id: 1,
-        color: '#332288'
-      },
-      {
-        type: 'poly',
-        name: 'ProtectionColdCoral',
-        sub_name: '0-20',
-        filter_id: 2,
-        color: '#000000'
-      },
-      {
-        type: 'poly',
-        name: 'ProtectionColdCoral',
-        sub_name: '21-40',
-        filter_id: 3,
-        color: '#332288'
-      },
-      {
-        type: 'poly',
-        name: 'ProtectionColdCoral',
-        sub_name: '41-60',
-        filter_id: 4,
-        color: '#000000'
-      },
-      {
-        type: 'poly',
-        name: 'ProtectionColdCoral',
-        sub_name: '61-80',
-        filter_id: 5,
-        color: '#332288'
-      },
-      {
-        type: 'poly',
-        name: 'ProtectionColdCoral',
-        sub_name: '81-100',
-        filter_id: 6,
-        color: '#000000'
-      }
-    ],
-    tilesUrl: 'https://data-gis.unep-wcmc.org/server/rest/services/Hosted/Cold_Coral_Projection/VectorTileServer/tile/{z}/{y}/{x}.pbf',
-    color: '#E61354'
-  }
-].freeze
+EEZ_COLORS = {
+  'no-data' => '#939393',
+  '0-20' => '#E3E3E3',
+  '21-40' => '#B3CDE3',
+  '41-60' => '#8C96C6',
+  '61-80' => '#8856A7',
+  '81-100' => '#810F7C'
+}.freeze
 
 class Serializers::EezMapDatasetsSerializer < Serializers::Base
   def initialize
   end
 
   def serialize
-    EEZ_DATASETS.map do |ds|
-      dataset = ds.dup
-      dataset[:name] = ds[:id].split('-').last.camelize
+    Habitat.pluck(:name).map do |habitat|
+      eez_dataset_hash(habitat)
+    end
+  end
 
-      dataset
+  private
+
+  SERVICES = {
+    'coralreefs' => 'Coral_Reef_Projection',
+    'saltmarshes' => 'Saltmarsh_Projection',
+    'mangroves' => 'Mangrove_Projection',
+    'seagrasses' => 'Seagrass_Projection',
+    'coldcorals' => 'Cold_Coral_Projection'
+  }.freeze
+  def eez_dataset_hash(habitat)
+    {
+      id: "eez-#{habitat}",
+      name: habitat.camelize,
+      sourceLayers: source_layers(habitat),
+      tilesUrl: "https://data-gis.unep-wcmc.org/server/rest/services/Hosted/#{SERVICES[habitat]}/VectorTileServer/tile/{z}/{y}/{x}.pbf"
+    }
+  end
+
+  LAYERS = %w(no-data 0-20 21-40 41-60 61-80 81-100).freeze
+  NAMES = {
+    'coralreefs' => 'ProtectionCoralReef',
+    'saltmarshes' => 'ProtectionSaltmarsh',
+    'mangroves' => 'ProtectionMangroves',
+    'seagrasses' => 'ProtectionSeagrasses',
+    'coldcorals' => 'ProtectionColdCoral'
+  }.freeze
+  def source_layers(habitat)
+    LAYERS.map.with_index do |l, idx|
+      {
+        type: 'poly',
+        name: NAMES[habitat],
+        sub_name: l,
+        filter_id: idx + 1,
+        color: EEZ_COLORS[l]
+      }
     end
   end
 end
