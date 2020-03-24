@@ -3,8 +3,30 @@ require 'csv'
 namespace :import do
 
   desc "import RedList species data into database"
-  task :new_redlist_data => [:environment] do
+  task :new_redlist_data, [:geo_type] => [:environment] do |t, args|
+    if args[:geo_type].present?
+      send("import_for_#{args[:geo_type]}")
+    else
+      import_for_countries
+      import_for_regions
+    end
+  end
 
+  desc "import habitats occurrences"
+  task :occurrences => [:environment] do
+    species_filename = "lib/data/iucn_redlist/country_species.csv".freeze
+
+    CSV.read(species_filename, headers: true)
+       .uniq { |r| r.values_at('iso3', 'habitat') }.each do |row|
+
+      habitat = Habitat.where('LOWER(title) = ?', row['habitat'].downcase).first
+      next unless log_habitat(row, habitat)
+
+      import_occurrences(row, habitat)
+    end
+  end
+
+  def import_for_countries
     species_filename = "lib/data/iucn_redlist/country_species.csv".freeze
     prev_iso, prev_hab = nil, nil
     @failed_report = []
@@ -22,21 +44,22 @@ namespace :import do
       prev_iso, prev_hab = current_iso, current_hab
     end
 
-    log_failed
+    log_failed('countries')
   end
 
-  desc "import habitats occurrences"
-  task :occurrences => [:environment] do
-    species_filename = "lib/data/iucn_redlist/country_species.csv".freeze
+  def import_for_regions
+    species_filename = "lib/data/iucn_redlist/region_species.csv".freeze
+    @failed_report = []
 
-    CSV.read(species_filename, headers: true)
-       .uniq { |r| r.values_at('iso3', 'habitat') }.each do |row|
-
+    CSV.foreach(species_filename, headers: true) do |row|
       habitat = Habitat.where('LOWER(title) = ?', row['habitat'].downcase).first
       next unless log_habitat(row, habitat)
 
-      import_occurrences(row, habitat)
+      import_species(row, habitat)
+      import_regions_species(row, habitat)
     end
+
+    log_failed('regions')
   end
 
   def import_species(row, habitat)
@@ -49,9 +72,7 @@ namespace :import do
     row['url'] = 'https://'.concat(row['url']) if (row['url'] != 'N/A' && !row['url'].match(/^https/))
     row_hash = row.to_hash.slice(*species_header)
     species = Species.new(row_hash.merge(habitat_id: habitat.id))
-    unless species.save
-      report_failed(failed_report, :species, scientific_name)
-    end
+    report_failed(row, species.errors.messages) unless species.save
   end
 
   def import_countries_species(row, habitat)
@@ -71,9 +92,33 @@ namespace :import do
     end
 
     geo_entity = GeoEntity.find_or_create_by(iso3: 'GBL', name: 'Global') if iso3.downcase == 'global'
+    create_geo_entities_species(row, species, geo_entity)
+  end
+
+
+  def import_regions_species(row, habitat)
+    region = row['region']
+
+    geo_entity = GeoEntity.find_by(iso3: nil, name: region)
+    if geo_entity.blank?
+      report_failed(row, "GeoEntity not found!")
+      return
+    end
+
+    scientific_name = row['scientific_name']
+    species = Species.find_by(scientific_name: scientific_name, habitat_id: habitat.id)
+    unless species.present?
+      report_failed(row, "Species, habitat pair not found!")
+      return
+    end
+
+    create_geo_entities_species(row, species, geo_entity)
+  end
+
+  def create_geo_entities_species(row, species, geo_entity)
     ges = GeoEntitiesSpecies.find_or_initialize_by(species_id: species.id, geo_entity_id: geo_entity.id)
     report_failed(row, "Species, GeoEntity pair already existing!") if ges.id
-    report_failed(row, ges.errors) unless ges.save
+    report_failed(row, ges.errors.messages) unless ges.save
   end
 
   # 0 = confirmed absence
@@ -101,9 +146,9 @@ namespace :import do
     @failed_report << row.values_at(*row.headers).push(error)
   end
 
-  def log_failed
+  def log_failed(geo_type)
     if @failed_report.present?
-      filename = 'tmp/failed_report.csv'
+      filename = "tmp/failed_report_#{geo_type}.csv"
       p "A report with rows which failed to import has been generated here: #{filename}"
       CSV.open(filename, 'w') do |csv|
         @failed_report.each { |row| csv << row }
