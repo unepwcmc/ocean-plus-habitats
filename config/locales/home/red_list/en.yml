@@ -2,10 +2,12 @@ en:
   home:
     red_list:
       title: IUCN Red List status of species occurring in habitats
-      citation: 
+      citation:
         - RED LIST CITATION TEXT
         - RED LIST CITATION TEXT 2
-      smallprint: The designations employed and the presentation of material on this map do not imply the expression of any opinion whatsoever on the part of the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries.
+      smallprint_1: '<strong>Source:</strong> Data adapted from the <a href="https://www.iucnredlist.org/" title="Visit the IUCN Red List of Threatened Species site" target="_blank" rel="noopener">IUCN Red List of Threatened Species</a>.'
+      smallprint_2: '<strong>Warning:</strong> These statuses derive from global assessments, and do not necessarily reflect each species’ status by country.'
+      smallprint_3: '<strong>Last updated:</strong> March 2020'
       categories:
         -
           title: Critically endangered
@@ -26,5 +28,5 @@ en:
           title: Data deficient
           icon: icons/data-deficient.svg
         -
-          title: Not assessed
+          title: Not evaluated
           icon: icons/not-assessed.svg

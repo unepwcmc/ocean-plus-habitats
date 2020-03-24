@@ -3,7 +3,7 @@
     <h2><%= t('home.sdg.title') %></h2>
 
     <% t('home.sdg.text_1').each do |p| %>
-      <p><%= p %></p>
+      <p><%= p.html_safe %></p>
     <% end %>
 
     <chart-doughnut :datasets="<%= doughnut_chart %>"></chart-doughnut>

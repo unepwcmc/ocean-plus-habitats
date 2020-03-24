@@ -2,9 +2,9 @@ en:
   home:
     sdg:
       title: How do habitats contribute to human wellbeing?
-      text_1: 
-        - Habitats such as coral reefs, seagrasses and mangroves generate sources of nutrition through fish, provide protection to coastal communities from storms, and contribute to local economies through tourism and resource provision. They also help to regulate our water and air, with far-reaching benefits for even inland communities. 
-        - These habitats are not only important for local communities, but also collectively form the foundations of national, regional and international progress toward targets related to human wellbeing, such as the UN Sustainable Development Goals and Targets. These can be explored further in the graphic below.
+      text_1:
+        - Habitats such as coral reefs, seagrasses and mangroves generate sources of nutrition through fish, provide protection to coastal communities from storms, and contribute to local economies through tourism.
+        - 'These habitats are not only important for local communities, but also collectively form the foundations of national, regional and international progress toward targets related to human wellbeing, such as the <a href= "https://sustainabledevelopment.un.org/?menu=1300" title="Visit the UN Sustainable Development Goals and Targets site" target="_blank" rel="noopener">UN Sustainable Development Goals and Targets</a>. These can be explored further in the graphic below.'
       text_2:
         - For more information, please visit our country or regional pages.
       doughnut_chart_title: "Contribution of protected areas to achieving the UN Sustainable Development Goals"
