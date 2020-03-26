@@ -69,7 +69,7 @@ namespace :import do
     return if scientific_name == 'NA'
     return if Species.find_by(scientific_name: scientific_name, habitat_id: habitat.id).present?
 
-    row['url'] = 'https://'.concat(row['url']) if (row['url'] != 'N/A' && !row['url'].match(/^https/))
+    row['url'] = 'https://'.concat(row['url']) if (row['url'] != 'NA' && !row['url'].match(/^https/))
     row_hash = row.to_hash.slice(*species_header)
     species = Species.new(row_hash.merge(habitat_id: habitat.id))
     report_failed(row, species.errors.messages) unless species.save
@@ -147,12 +147,12 @@ namespace :import do
   end
 
   def log_failed(geo_type)
-    if @failed_report.present?
-      filename = "tmp/failed_report_#{geo_type}.csv"
-      p "A report with rows which failed to import has been generated here: #{filename}"
-      CSV.open(filename, 'w') do |csv|
-        @failed_report.each { |row| csv << row }
-      end
+    return unless @failed_report.present?
+
+    filename = "tmp/failed_report_#{geo_type}.csv"
+    p "A report with rows which failed to import has been generated here: #{filename}"
+    CSV.open(filename, 'w') do |csv|
+      @failed_report.each { |row| csv << row }
     end
   end
 end
