@@ -4,12 +4,14 @@ namespace :import do
   desc "import CSV data into database"
   task :prebakedstats, [:csv_file] => [:environment] do
     habitats = Habitat.all
-    geo_entity_types = ["countries", "regions"].freeze
+    dir = 'habitat_coverage_protection'
+    geo_entity_types = ["country", "regions"].freeze
 
     # import habitat data CSVs for each entity type
     geo_entity_types.each do |geo_entity_type|
       habitats.each do |habitat|
-        csv_file = "#{geo_entity_type}/#{habitat.name}.csv"
+        filename = "#{habitat.name}_#{geo_entity_type}_output.csv"
+        csv_file = "#{dir}/#{filename}"
         import_new_csv_file(habitat.name, csv_file)
       end
     end
@@ -26,14 +28,14 @@ namespace :import do
   end
 
   def parse_change_stat(csv_row, habitat)
-    name = csv_row["name"] || csv_row["Region"]
-    geo_entity = fetch_geo_entity(name, csv_row["iso3"])
+    name = csv_row['iso3'] || csv_row['region']
+    geo_entity = fetch_geo_entity(name)
     insert_change_stat(habitat, geo_entity, csv_row)
   end
 
   def parse_geo_entity_stat(csv_row, habitat)
-    name = csv_row["name"] || csv_row["Region"]
-    geo_entity = fetch_geo_entity(name, csv_row["iso3"])
+    name = csv_row['iso3'] || csv_row['region']
+    geo_entity = fetch_geo_entity(name)
     insert_geo_entity_stat(habitat, geo_entity, csv_row)
   end
 
@@ -41,10 +43,10 @@ namespace :import do
     habitat = Habitat.find_by(name: habitat)
 
     latest_year = get_latest_year(csv_row.headers)
-    total_value_column = latest_year ? "total_value_#{latest_year}" : 'total_value'
-    protected_value = csv_row["protected_value"]&.strip || 0
+    total_value_column = latest_year ? "total_area_#{latest_year}" : 'total_area'
+    protected_value = csv_row["protected_area"]&.strip || 0
     total_value = csv_row[total_value_column]&.strip || 0
-    protected_percentage = csv_row["protected_percentage"]&.strip || 0
+    protected_percentage = csv_row["percent_protected"]&.strip || 0
 
     GeoEntityStat.find_or_create_by(habitat: habitat, geo_entity: geo_entity) do |stat|
       stat.protected_value      = protected_value
@@ -63,25 +65,23 @@ namespace :import do
     habitat = Habitat.find_by(name: habitat)
 
     ChangeStat.find_or_create_by(habitat: habitat, geo_entity: geo_entity) do |stat|
-      stat.total_value_1996     = csv_row["total_value_1996"]&.strip || 0,
-      stat.total_value_2007     = csv_row["total_value_2007"]&.strip || 0,
-      stat.total_value_2008     = csv_row["total_value_2008"]&.strip || 0,
-      stat.total_value_2009     = csv_row["total_value_2009"]&.strip || 0,
-      stat.total_value_2010     = csv_row["total_value_2010_baseline"]&.strip || 0,
-      stat.total_value_2015     = csv_row["total_value_2015"]&.strip || 0,
-      stat.total_value_2016     = csv_row["total_value_2016"]&.strip || 0,
-      stat.protected_value      = csv_row["protected_value"]&.strip || 0,
-      stat.protected_percentage = csv_row["protected_percentage"]&.strip || 0
+      stat.total_value_1996     = csv_row["total_area_1996"]&.strip || 0,
+      stat.total_value_2007     = csv_row["total_area_2007"]&.strip || 0,
+      stat.total_value_2008     = csv_row["total_area_2008"]&.strip || 0,
+      stat.total_value_2009     = csv_row["total_area_2009"]&.strip || 0,
+      stat.total_value_2010     = csv_row["total_area_2010_baseline"]&.strip || 0,
+      stat.total_value_2015     = csv_row["total_area_2015"]&.strip || 0,
+      stat.total_value_2016     = csv_row["total_area_2016"]&.strip || 0,
+      stat.protected_value      = csv_row["protected_area"]&.strip || 0,
+      stat.protected_percentage = csv_row["percent_protected"]&.strip || 0
     end
   end
 
-  def fetch_geo_entity(name, iso3)
-    if name.present?
-      geo_entity = GeoEntity.find_by(name: name)
-    elsif (iso3.include? "/") || (iso3.include? "ABNJ")
+  def fetch_geo_entity(name)
+    if (name.include? "/") || (name.include? "ABNJ") || (name.include? 'DPT')
       geo_entity = GeoEntity.find_by(name: "Disputed")
     else
-      geo_entity = GeoEntity.find_by(iso3: iso3) || nil
+      geo_entity = GeoEntity.find_by(iso3: name) || GeoEntity.find_by(name: name)
     end
     geo_entity
   end

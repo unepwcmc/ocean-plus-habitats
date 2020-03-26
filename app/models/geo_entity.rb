@@ -17,7 +17,10 @@ class GeoEntity < ApplicationRecord
   scope :regions, -> { where(iso3: nil) }
 
   # Returns species data if directly attached to the GeoEntity, so a country.
-  # Returns species data for all associated countries if it is a region
+  # Returns species data for all associated countries if it is a region.
+  # With the current importers, species are directly associated to regions
+  # via the geo_entity_id.
+  # TODO Consider removing this method
   def all_species
     return species if species.present?
     Species.joins(:geo_entities).where(geo_entities: { id: countries.map(&:id) })
@@ -81,6 +84,7 @@ class GeoEntity < ApplicationRecord
 
   private
 
+  # TODO Consider removing this and using directly associated stats for regions too
   def countries_geo_entity_stats
     countries.present? ? GeoEntityStat.where(geo_entity_id: countries.map(&:id)) : geo_entity_stats
   end
