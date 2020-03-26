@@ -1,9 +1,11 @@
-<section class="section-padding">
+<section class="section-padding--bottom">
   <div class="container">
     <div class="h2-wrapper flex flex-v-center">
       <h2><%= t('countries.shared.habitat_change.title') %></h2>
       <modal-trigger id="citation" :modal-content="<%= modal_content %>" class="icon--citation margin-space-left"></modal-trigger>
     </div>
+    <p><%= t('countries.shared.habitat_change.intro_text') %></p>
     <chart-rows :rows="<%= @habitat_change %>"></chart-rows>
+    <p class="text--smallprint"><%= t('countries.shared.habitat_change.smallprint').html_safe %></p>
   </div>
 </section>

@@ -1,0 +1,16 @@
+en:
+  countries:
+    shared:
+      ancillary:
+        sources_title: "Main national data sources"
+        sources:
+          - '<a href="#" title="Source #1">Source #1</a>'
+          - '<a href="#" title="Source #2">Source #2</a>'
+          - '<a href="#" title="Source #3">Source #3</a>'
+        sources_note: '<strong>Are we missing data?<br/><a href="mailto:oceanplus@unep-wcmc.org" title="Send an email to the Ocean+ team">Submit/contribute</a>.</strong>'
+        citation_title: Citation
+        citation_text: 'UNEP-WCMC (year). Ocean+ Habitats: %{country_name} [On-line], [insert month/year of the version downloaded]. Available at: <a href="/%{country_name}" title="Visit the country page for %{country_name}">habitats.oceanplus.org/%{country_name}</a>'
+        downloads_title: Downloads
+        downloads:
+          - '<a href="#" title="Download spatial data">Download spatial data</a>'
+          - '<a href="#" title="Download the statistics">Download the statistics</a>'

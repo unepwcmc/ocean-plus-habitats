@@ -19,7 +19,7 @@ class Serializers::RepresentationHabitatsSerializer < Serializers::Base
     {
       legend: @legend,
       chart: {
-        chart_title: "% of length of coastline: #{@coastal_stat.total_coast_length.round} km",
+        coastline_length: @coastal_stat.total_coast_length.round,
         theme: "habitats",
         rows: @rows
       }

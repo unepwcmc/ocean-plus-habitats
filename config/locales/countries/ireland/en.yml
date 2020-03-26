@@ -2,7 +2,7 @@ en:
   countries:
     ireland:
       title: Republic of Ireland
-      image_flag: flags/ireland.png
+      image_flag: flags/ireland.svg
       habitats_present_citations:
         coralreefs:
           title: Title in yml file

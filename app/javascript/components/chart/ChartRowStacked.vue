@@ -1,12 +1,5 @@
 <template>
   <div class="chart--row-stacked">
-    <h3
-      v-if="title"
-      class="chart__title"
-    >
-      {{ title }}
-    </h3>
-
     <ul class="chart__chart ul-unstyled flex">
       <li
         v-for="(row, i) in rows"

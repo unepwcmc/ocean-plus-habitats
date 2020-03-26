@@ -2,7 +2,7 @@ en:
   countries:
     indonesia:
       title: Indonesia
-      image_flag: flags/indonesia.png
+      image_flag: flags/indonesia.svg
       habitats_present_citations:
         coralreefs:
           title: Title in yml file
