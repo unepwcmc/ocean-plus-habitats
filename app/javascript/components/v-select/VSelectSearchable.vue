@@ -66,7 +66,7 @@
           <li
             v-for="(option, index) in filteredOptions"
             v-show="matchesSearchTerm(option)"
-            :id="option.id"
+            :id="getOptionInputId(option)"
             :key="option.id"
             :class="['v-select__option flex', conditionalOptionClasses(option, index)]"
             role="option"
@@ -83,7 +83,7 @@
 
 <script>
 import mixinSelectShared from '../../mixins/mixin-select-shared'
-import { UNDEFINED_ID } from '../../helpers/countries-helpers.js'
+const UNDEFINED_ID = '__UNDEFINED__'
 
 export default {
   mixins: [
@@ -168,9 +168,9 @@ export default {
       if (this.selectedInternal === UNDEFINED_ID) {
         this.searchTerm = ''
       } else {
-        this.selectedOption = this.getOptionFromId(this.selectedInternal)
+        const selectedOption = this.getOptionFromId(this.selectedInternal)
 
-        this.searchTerm = this.selectedOption ? this.selectedOption.name : ''
+        this.searchTerm = selectedOption ? selectedOption.name : ''
       }
     }
   }
