@@ -182,6 +182,8 @@ $list-item-margin-medium: rem-calc(16);
         }
 
         &.highlighted {
+          background-color: $grey-xlight;
+
           .v-select__radio {
             box-shadow: 0 0 0 2px $green-light;
           }

@@ -60,6 +60,12 @@ export default {
 
     showSearchIcon () {
       return this.hasSearchIcon && !this.showResetIcon
+    },
+
+    container () {
+      console.log('hree')
+
+      return this.$el.querySelector('#' + this.dropdownId)
     }
   },
 
@@ -137,7 +143,9 @@ export default {
     },
 
     scrollToHighlightedOption () {
-      this.$el.querySelector('#' + this.highlightedOptionId).scrollIntoView()
+      const highlightedOption = this.$el.querySelector('#' + this.highlightedOptionId)
+      
+      this.container.scrollTop = highlightedOption.offsetTop
     },
 
     conditionalOptionClasses (option, index) {
