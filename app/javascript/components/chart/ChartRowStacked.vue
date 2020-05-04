@@ -9,7 +9,8 @@
 
     <ul class="chart__chart ul-unstyled flex">
       <li
-        v-for="row in rows"
+        v-for="(row, i) in rows"
+        :key="`chart-row-${_uid}-${i}`"
         class="chart__bar flex flex-v-center"
         :class="themeClass"
         :style="{ width: row.percent + '%' }"
@@ -39,14 +40,21 @@ export default {
   components: { ChartLegend },
 
   props: {
-    title: String,
-    theme: String,
+    title: {
+      type: String,
+      default: ''
+    },
+    theme: {
+      type: String,
+      default: ''
+    },
     rows: {
       type: Array,
       required: true
     },
     legend: {
-      type: Array
+      type: Array,
+      default: () => []
     }
   },
 
