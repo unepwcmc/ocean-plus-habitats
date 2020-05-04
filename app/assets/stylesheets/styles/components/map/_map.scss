@@ -39,6 +39,9 @@
 
   &__list {
     @include ul-unstyled;
+    li {
+      margin-bottom: rem-calc(42);
+    }
   }
 
     &__filter {
@@ -70,13 +73,13 @@
         @for $i from 1 through length($habitats) {
           $habitat: nth($habitats, $i);
           $colour: map-get($habitat_colours, $habitat);
-        
+
           &--#{$habitat} {
             background-color: $colour;
           }
         }
       }
-      
+
       &__filter-title {
         @include text-filter-title;
       }
@@ -89,7 +92,7 @@
           margin-bottom: rem-calc(4);
         }
       }
-  
+
   &__button-bar {
     background-color: $navy-xdark;
     padding: rem-calc(8) 0;
