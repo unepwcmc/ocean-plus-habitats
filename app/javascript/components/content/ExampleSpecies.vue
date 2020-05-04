@@ -31,9 +31,8 @@
             target="_blank"
           >
             IUCN Species page
-
-          </a>
           <i class="fas fa-external-link-square-alt"></i>
+          </a>
         </div>
       </div>
     </div>
