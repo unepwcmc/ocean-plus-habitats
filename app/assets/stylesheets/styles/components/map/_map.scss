@@ -39,10 +39,11 @@
 
   &__list {
     @include ul-unstyled;
-    li {
+  }
+
+    &__list-li {
       margin-bottom: rem-calc(42);
     }
-  }
 
     &__filter {
       margin-bottom: $item-spacing-small;
