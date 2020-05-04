@@ -3,33 +3,37 @@
     <h3 class="cards__title">
       {{ content.title }}
     </h3>
-    
+    <p v-if="!examples">No species could be found for this particular habitat and category.</p>
     <div class="cards__cards">
-      <div 
+      <div
         v-for="(example, index) in examples"
         :key="getVForKey('card-example-species', index)"
         class="card"
       >
-        <img 
-          :src="example.image" 
-          :alt="example.name_common" 
+        <img
+          :src="example.image"
+          :alt="example.name_common"
           class="card__image"
         >
 
         <div class="card__content">
           <p class="card__title">
             {{ example.name_common }}
+            <br v-if="!example.name_common">
             <span class="card__title-scientific">{{ example.name_scientific }}</span>
           </p>
-          
+
           <i class="card__icon icon--redlist">{{ example.redlist }}</i>
-          
-          <a 
-            :href="example.redlist_url" 
+
+          <a
+            :href="example.redlist_url"
             class="card__link"
+            target="_blank"
           >
             IUCN Species page
+
           </a>
+          <i class="fas fa-external-link-square-alt"></i>
         </div>
       </div>
     </div>

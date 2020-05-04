@@ -2,7 +2,7 @@ en:
   home:
     red_list:
       title: IUCN Red List status of species occurring in habitats
-      citation: 
+      citation:
         - RED LIST CITATION TEXT
         - RED LIST CITATION TEXT 2
       smallprint: The designations employed and the presentation of material on this map do not imply the expression of any opinion whatsoever on the part of the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries.
@@ -26,5 +26,5 @@ en:
           title: Data deficient
           icon: icons/data-deficient.svg
         -
-          title: Not assessed
+          title: Not evaluated
           icon: icons/not-assessed.svg
