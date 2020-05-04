@@ -63,8 +63,6 @@ export default {
     },
 
     container () {
-      console.log('hree')
-
       return this.$el.querySelector('#' + this.dropdownId)
     }
   },
@@ -144,7 +142,7 @@ export default {
 
     scrollToHighlightedOption () {
       const highlightedOption = this.$el.querySelector('#' + this.highlightedOptionId)
-      
+
       this.container.scrollTop = highlightedOption.offsetTop
     },
 
