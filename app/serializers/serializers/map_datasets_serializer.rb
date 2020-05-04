@@ -74,7 +74,6 @@ class Serializers::MapDatasetsSerializer < Serializers::Base
       dataset = ds.dup
       dataset[:name] = get_habitat_from_id(ds[:id])[:title]
       dataset[:disabled] = habitat_presence_status(ds) == 'unknown' ? true : false
-      set_dataset_description_html(dataset)
 
       dataset
     end
@@ -82,32 +81,6 @@ class Serializers::MapDatasetsSerializer < Serializers::Base
 
   private
 
-  def set_dataset_description_html dataset
-    # TODO Adding nil check is a workaround so to avoid this to break until new data is imported
-    if habitat_presence_status(dataset) == 'unknown' ||
-        @habitat_protection_stats[dataset[:id]].nil?
-      dataset[:descriptionHtml] = not_available_dataset_html
-    else
-      habitat_stats = @habitat_protection_stats[dataset[:id]]
-      protected_percentage = habitat_stats['protected_percentage'].round(2)
-      total_units = dataset[:id] == 'coldcorals' ? 'observations' : 'km<sup>2</sup>'
-      total_value = number_with_precision(
-        habitat_stats['total_value'],
-        precision: total_units == 'observations' ? 0 : 2,
-        delimiter: ','
-      )
-
-      dataset[:descriptionHtml] = I18n.t(
-        'countries.shared.locations_map.filter_description_html',
-        {
-          habitat: dataset[:name],
-          habitat_downcase: dataset[:name].downcase,
-          total: "#{total_value} #{total_units}",
-          percentage: protected_percentage.round(2),
-        }
-      )
-    end
-  end
 
   def habitat_presence_status dataset
     @habitat_presence_statuses[dataset[:id]]
