@@ -1,8 +1,9 @@
 <template>
   <div class="map-filters flex flex-column">
     <ul class="map-filters__list">
-      <li 
-        v-for="dataset in datasets" 
+      <li
+        class="map-filters__list-li"
+        v-for="dataset in datasets"
         :key="dataset.id"
       >
         <dataset
@@ -28,7 +29,7 @@ export default {
   name: 'FilterPane',
 
   components: { Dataset, MapDownloadButton },
-  
+
   props: {
     id: {
       type: String,
@@ -58,7 +59,7 @@ export default {
     togglePane () {
       this.isActive ? this.closePane() : this.openPane()
     },
-    
+
     openPane () {
       this.isActive = true
     },
