@@ -17,10 +17,10 @@
       <i class="drop-arrow arrow-svg" />
     </button>
 
-    <ul 
+    <ul
       v-show="isActive"
-      :id="mixinModalId" 
-      role="radiogroup" 
+      :id="mixinModalId"
+      role="radiogroup"
       class="v-select__dropdown"
     >
       <li

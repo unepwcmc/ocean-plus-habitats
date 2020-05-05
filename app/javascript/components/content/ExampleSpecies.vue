@@ -14,6 +14,7 @@
           :src="example.image"
           :alt="example.name_common"
           class="card__image"
+          :class="{'card__image-svg': example.has_image == false}"
         >
 
         <div class="card__content">

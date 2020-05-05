@@ -4,7 +4,7 @@ en:
       habitats_present:
         title: Habitats present in
         title_present: Confirmed Presence
-        title_absent: Confirmed Absense
+        title_absent: Confirmed Absence
         title_unknown: Not Known
-        citation: 
+        citation:
           - CITATION TEXT
