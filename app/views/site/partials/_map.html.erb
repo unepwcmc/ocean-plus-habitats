@@ -3,11 +3,11 @@
   <% t('home.locations_map.text').each do |p| %>
     <p><%= p.html_safe %></p>
   <% end %>
-  <v-map-interactive 
+  <v-map-interactive
     :has-download-button="true"
     :datasets="<%= datasets.to_json %>"
   ></v-map-interactive>
   <p class="text--smallprint">
-    <%= t('global.map_disclaimer') %>
+    <%= t('global.map_disclaimer').html_safe %>
   </p>
 </section>

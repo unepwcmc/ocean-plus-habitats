@@ -22,7 +22,7 @@ module CountriesHelper
   end
 
   def dataset_status_title(dataset)
-    dataset_status_title = I18n.t("countries.shared.protection_dials.title_#{dataset_status(dataset)}")
+    dataset_status_title = I18n.t("countries.shared.proportion_protected.title_#{dataset_status(dataset)}")
   end
 
   def icon_class(dataset)
