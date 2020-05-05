@@ -3,7 +3,7 @@
     <h3 class="cards__title">
       {{ content.title }}
     </h3>
-    <p v-if="!examples">No species could be found for this particular habitat and category.</p>
+    <p v-show="!examples">No species could be found for this particular habitat and category.</p>
     <div class="cards__cards">
       <div
         v-for="(example, index) in examples"
@@ -18,9 +18,11 @@
         >
 
         <div class="card__content">
-          <p class="card__title">
+          <p
+            class="card__title"
+            :class="{'card__title-noname': !example.name_common}"
+          >
             {{ example.name_common }}
-            <br v-if="!example.name_common">
             <span class="card__title-scientific">{{ example.name_scientific }}</span>
           </p>
 
@@ -32,7 +34,8 @@
             target="_blank"
           >
             IUCN Species page
-          <i class="fas fa-external-link-square-alt"></i>
+          <!-- <i class="fas fa-external-link-square-alt"></i> -->
+          <!-- TODO - need to use an actual svg for the icon that does not require attribution -->
           </a>
         </div>
       </div>

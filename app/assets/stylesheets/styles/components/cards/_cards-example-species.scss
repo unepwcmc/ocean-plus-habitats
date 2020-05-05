@@ -12,7 +12,7 @@
     width: 33%;
 
     &__image {
-      width: 50%;
+      width: 35%;
     }
 
     &__image-svg {
@@ -26,6 +26,10 @@
 
       &__title {
         font-weight: $semi-bold;
+      }
+
+      &__title-noname {
+        margin-bottom: rem-calc(16);
       }
 
         &__title-scientific {
