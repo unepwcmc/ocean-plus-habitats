@@ -26,4 +26,10 @@ class SiteController < ApplicationController
       })
     end
   end
+
+  def about
+  end
+
+  def methodologies
+  end
 end

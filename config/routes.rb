@@ -5,4 +5,6 @@ Rails.application.routes.draw do
 
   resources :countries, only: [:index]
   get '/:name' => 'countries#show'
+  get 'site/methodologies' => 'site#methodologies'
+  get 'site/about' => 'site#about'
 end
