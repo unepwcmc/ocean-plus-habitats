@@ -128,8 +128,9 @@ namespace :import do
     geo_entity = GeoEntity.find_by(iso3: row['iso3'])
     return unless geo_entity.present?
     occurrence = row['occurence'].to_i
-    GeoEntityStat.find_or_initialize_by(geo_entity_id: geo_entity.id, habitat_id: habitat.id)
-                 .update_attributes!(occurrence: occurrence)
+    GeoEntityStat.find_or_initialize_by(geo_entity_id: geo_entity.id, habitat_id: habitat.id) do |ges|
+      ges.update_attributes!(occurrence: occurrence) unless ges.present?
+    end
   end
 
   def log_habitat(row, habitat)
