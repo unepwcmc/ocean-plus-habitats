@@ -3,9 +3,10 @@ en:
     shared:
       example_species:
         title: "Examples of species and their status for habitat:"
-        example_title_common: Examples of most common species
+        example_title_common: Examples of common species
         example_title_threatened: Examples of threatened species
         link_text: IUCN Species page
         total_species_count: 'Total number of species'
         smallprint: '<strong>Sources:</strong> Species images, where available, were drawn from the <a href="https://books.google.co.uk/books/about/World_Atlas_of_Mangroves.html?id=wzSCkulW9SQC" title="Visit the World Atlas of Mangroves site" target="_blank" rel="noopener">World Atlas of Mangroves</a> (Spalding et al., 2010) and the <a href="https://www.unep-wcmc.org/resources-and-data/world-atlas-of-seagrasses" title="Visit the World Atlas of Seagrasses site" target="_blank" rel="noopener">World Atlas of Seagrasses</a> (Green and Short, 2003). Saltmarshes, cold-water corals and warm-water coral reefs do not currently have detailed species images. Species Red List statuses were drawn from the <a href="https://www.iucnredlist.org/"  title="Visit the IUCN Red List of Threatened Species site" target="_blank" rel="noopener">IUCN Red List of Threatened Species</a>.'
         last_updated: 'Last updated: Month, Year'
+

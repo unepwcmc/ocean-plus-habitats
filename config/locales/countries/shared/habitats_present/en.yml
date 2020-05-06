@@ -6,7 +6,7 @@ en:
         intro_text: Based on the scientific literature, the following marine and coastal habitats are known to occur in %{country_name}.
         disclaimer: '<strong>Warning:</strong> Known presence of habitats may not be reflected in the map below due to limited availability or permitted access to spatial data on the locations of these habitats. If you are aware of available spatial data or information that can be used to improve the state of knowledge regarding these habitats, please contact us at <a href="mailto:oceanplus@unep-wcmc.org" title="Send an email to the Ocean+ team">oceanplus@unep-wcmc.org</a>.'
         title_present: Confirmed Presence
-        title_absent: Confirmed Absense
+        title_absent: Confirmed Absence
         title_unknown: Not Known
         citation:
           - CITATION TEXT
