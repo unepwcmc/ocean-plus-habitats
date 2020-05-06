@@ -1,7 +1,7 @@
 //--------------------------------------------------
 // html elements
 //--------------------------------------------------
-* { 
+* {
   box-sizing: border-box;
   font-family: $body-font;
   -webkit-font-smoothing: antialiased;
@@ -17,9 +17,9 @@ body {
 
 h1 { @include h1; }
 
-h2 { 
-  @include h2; 
-  
+h2 {
+  @include h2;
+
   .h2-wrapper & { margin-bottom: 0; }
 }
 
@@ -39,7 +39,7 @@ ul {
 
 }
 
-li {  
+li {
   margin-bottom: rem-calc(14);
 }
 
@@ -61,12 +61,12 @@ th { font-weight: inherit; }
   padding-left: rem-calc($gutter-small);
   width: 100%;
 
-  @include breakpoint($medium){ 
+  @include breakpoint($medium){
     padding-right: rem-calc($gutter-medium);
     padding-left: rem-calc($gutter-medium);
   }
 
-  @include breakpoint($large){ 
+  @include breakpoint($large){
     padding-right: rem-calc($gutter-large);
     padding-left: rem-calc($gutter-large);
   }
@@ -75,7 +75,7 @@ th { font-weight: inherit; }
 //--------------------------------------------------
 // site structure
 //--------------------------------------------------
-.site-width { 
+.site-width {
   @include breakpoint($large){ width: $site-width; }
 }
 
@@ -156,4 +156,21 @@ th { font-weight: inherit; }
 .section-padding-small {
   @extend .section-padding-small--top;
   @extend .section-padding-small--bottom;
+}
+
+//--------------------------------------------------
+// form
+//--------------------------------------------------
+
+%hidden-input {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: rem-calc(1);
+  margin: - rem-calc(1);
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+  width: rem-calc(1);
+  opacity: 0;
+  position: absolute;
 }

@@ -118,6 +118,12 @@ $border-thin: solid rem-calc(1);
 $border-regular: solid rem-calc(2);
 
 //--------------------------------------------------
+// shadows
+//--------------------------------------------------
+$shadow-light: rem-calc(0 1 2 1) rgba($grey-light, 0.5);
+$shadow-dark: rem-calc(0 1 2 1) rgba($black, 0.5);
+
+//--------------------------------------------------
 // topbar
 //--------------------------------------------------
 $topbarHeightSmall: rem-calc(47);

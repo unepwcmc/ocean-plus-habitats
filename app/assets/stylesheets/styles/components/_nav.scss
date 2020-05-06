@@ -35,6 +35,11 @@
     }
 
     .nav {
+      &__heading {
+        font-weight: $bold;
+        margin-bottom: .7em;
+      }
+
       &__columns {
         @include flex;
         padding-top: rem-calc(40);
@@ -42,14 +47,26 @@
       }
 
         &__column {
-          width: 50%;
+          width: calc(50% - #{$gutter-medium / 2});
+
+          &:first-child {
+            margin-right: $gutter-medium;
+          }
         }
 
-          &__a {
-            width: 32%;
+          &__links-items {
+            @include ul-unstyled;
 
-            display: inline-block;
+            display: flex;
+            flex-wrap: wrap;
           }
+
+            &__links-item {
+              margin-right: rem-calc(20);
+              width: calc(((1 / 3) * 100%) - #{rem-calc(20)});
+
+              flex: 0 1 calc(((1 / 3) * 100%) - #{rem-calc(20)});
+            }
     }
   }
 

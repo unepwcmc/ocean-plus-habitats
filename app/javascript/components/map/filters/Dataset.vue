@@ -1,5 +1,5 @@
 <template>
-  <div 
+  <div
     class="map-filters__filter"
     :class="{'disabled': disabled}"
   >
@@ -21,10 +21,6 @@
       >
       <span class="custom-checkbox" />
     </label>
-    <div
-      class="map-filters__filter-description"
-      v-html="config.descriptionHtml" 
-    />
   </div>
 </template>
 
@@ -32,7 +28,7 @@
 
 export default {
   name: 'Layer',
-  
+
   props: {
     config: {
       required: true,
@@ -81,7 +77,7 @@ export default {
 
   destroyed() {
     this.$eventHub.$off('map-reload-layers', this.reloadDataset)
-    this.$eventHub.$off('deselect-' + this.datasetId, this.deselectDataset) 
+    this.$eventHub.$off('deselect-' + this.datasetId, this.deselectDataset)
     this.$eventHub.$off('select-' + this.datasetId, this.selectDataset)
   },
 
@@ -108,8 +104,8 @@ export default {
 
       if (showDataset) { this.datasetLayersCreated = true }
       this.$eventHub.$emit('map-update-curr', {
-        datasetId: this.datasetId, 
-        showDataset, 
+        datasetId: this.datasetId,
+        showDataset,
         createDataset
       })
     }
