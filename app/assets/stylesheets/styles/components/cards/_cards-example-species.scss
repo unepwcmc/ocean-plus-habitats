@@ -1,5 +1,6 @@
 &--example-species {
   margin-top: rem-calc(40);
+  margin-bottom: $page-padding-bottom-small;
 
   .cards {
     &__title { margin-bottom: rem-calc(40); }

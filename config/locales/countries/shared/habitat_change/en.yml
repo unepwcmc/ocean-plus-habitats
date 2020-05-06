@@ -2,8 +2,10 @@ en:
   countries:
     shared:
       habitat_change:
-        title: Change in habitat cover
-        citation: 
+        title: Change in habitat extent
+        intro_text: The following describes the known change in habitat extent, based on available data. Often, datasets tracking yearly change in extent are not available at a national level for many habitats, though new data are becoming available with technological advances.
+        citation:
           - Change in habitat cover citation text
         chart_text: "<strong>%{km}km<sup>2</sup></strong> change in %{habitat} cover in <strong>%{years}</strong>"
         chart_text_not_available: Data not available
+        smallprint: '<strong>Note:</strong> In many cases, an exact estimate of spatial change in the distribution of habitats at the national level is unknown. Changes in the availability and use of remote sensing technology is beginning to generate new data that can improve our understanding of change in extent over time.'

@@ -2,25 +2,25 @@ en:
   countries:
     united_arab_emirates:
       title: United Arab Emirates
-      image_flag: flags/united-arab-emirates.png
+      image_flag: flags/united-arab-emirates.svg
       habitats_present_citations:
-        coralreefs: 
+        coralreefs:
           title: Title in yml file
           text:
             - Warm-water Coral citation for United Arab Emirates
-        saltmarshes: 
+        saltmarshes:
           title: Title in yml file
           text:
             - Saltmarsh Coral citation for United Arab Emirates
-        mangroves: 
+        mangroves:
           title: Title in yml file
           text:
             - Mangrove Coral citation for United Arab Emirates
-        seagrasses: 
+        seagrasses:
           title: Title in yml file
           text:
             - Seagrass Coral citation for United Arab Emirates
-        coldcorals: 
+        coldcorals:
           title: Title in yml file
           text:
             - Cold-water Coral Coral citation for United Arab Emirates
@@ -36,4 +36,4 @@ en:
         other:
           text:
             - sunt in culpa qui officia deserunt mollit anim id est liborum.
-            - ecat cupidatat non proident, 
+            - ecat cupidatat non proident,

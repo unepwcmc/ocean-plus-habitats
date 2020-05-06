@@ -1,0 +1,8 @@
+en:
+  countries:
+    shared:
+      habitat_representation:
+        title: Habitat Representation
+        intro_text: "The proportion of %{country_name}'s coastline that is located near shallow-water habitats is illustrated below."
+        chart_heading: "Percentage of coastline (%{coastline_length} km<sup>2</sup>) covered by habitats"
+        chart_note: "<strong>Note:</strong> 'Multiple habitats' represent locations where more than one habitat occurs along the coastline. Cold-water corals are not included in this data visualisation."

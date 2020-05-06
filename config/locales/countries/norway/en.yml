@@ -2,7 +2,7 @@ en:
   countries:
     norway:
       title: Norway
-      image_flag: flags/norway.png
+      image_flag: flags/norway.svg
       habitats_present_citations:
         coralreefs:
           title: Title in yml file

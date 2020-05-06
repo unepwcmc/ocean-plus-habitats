@@ -1,29 +1,29 @@
 en:
   countries:
-    australia:
-      title: Australia
-      image_flag: flags/australia.svg
+    argentina:
+      title: Argentina
+      image_flag: flags/argentina.png
       habitats_present_citations:
         coralreefs:
           title: Title in yml file
           text:
-            - Warm-water Coral citation for Australia
+            - Warm-water Coral citation for Argentina
         saltmarshes:
           title: Title in yml file
           text:
-            - Saltmarsh Coral citation for Australia
+            - Saltmarsh Coral citation for Argentina
         mangroves:
           title: Title in yml file
           text:
-            - Mangrove Coral citation for Australia
+            - Mangrove Coral citation for Argentina
         seagrasses:
           title: Title in yml file
           text:
-            - Seagrass Coral citation for Australia
+            - Seagrass Coral citation for Argentina
         coldcorals:
           title: Title in yml file
           text:
-            - Cold-water Coral Coral citation for Australia
+            - Cold-water Coral Coral citation for Argentina
       targets:
         aichi:
           text:

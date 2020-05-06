@@ -3,8 +3,6 @@ en:
     shared:
       habitat_condition:
         title: Habitat condition
-        text:
-          - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-          - laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est liborum.
-        citation: 
+        text: 'Insufficient data exists to assess habitat condition in %{country_name} at this time. If you are aware of available spatial data or information that can be used to improve the state of knowledge regarding habitat condition, please contact us at <a href="mailto:oceanplus@unep-wcmc.org" title="Send an email to the Ocean+ team">oceanplus@unep-wcmc.org</a>.'
+        citation:
           - Habitat condition citation
