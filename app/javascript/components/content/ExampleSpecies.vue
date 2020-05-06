@@ -34,8 +34,8 @@
             target="_blank"
           >
             IUCN Species page
-          <!-- <i class="fas fa-external-link-square-alt"></i> -->
-          <!-- TODO - need to use an actual svg for the icon that does not require attribution -->
+          <i class="card__icon icon--externaltab"></i>
+
           </a>
         </div>
       </div>
