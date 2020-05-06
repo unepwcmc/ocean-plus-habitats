@@ -2,7 +2,7 @@ en:
   countries:
     australia:
       title: Australia
-      image_flag: flags/australia.png
+      image_flag: flags/australia.svg
       habitats_present_citations:
         coralreefs:
           title: Title in yml file

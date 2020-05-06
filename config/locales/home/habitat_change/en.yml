@@ -3,11 +3,7 @@ en:
     habitat_change:
       title: How are habitats changing?
       text_1:
-        - Globally, coastal and marine habitats are in decline, impacted by coastal development, overfishing, pollution, and climate change. Approximately 50% of live coral cover has been lost since the 1870s, and climate change and other drivers have led to accelerated losses in recent decades [ref]. Seagrass meadows have decreased in extent by over 10% per decade between 1970 and 2000 [ref]. 
-        - While our knowledge of ecosystem health globally is still relatively limited, the species that comprise these habitats are assessed through the IUCN Red List of Threatened Species [ref], with an emerging IUCN Red List of Ecosystems [ref].
-        - Despite current trends, there is hope. The UN Decade on Ecosystem Restoration (2021-2030) offers the international community an opportunity to work together to reverse ecosystem fragmentation and degradation, helping to restore the critical ecosystems that humans and biodiversity alike depend on for survival.
+        - Globally, coastal and marine habitats are in decline, impacted by coastal development, overfishing, pollution, and climate change. Nearly 50% of coastal wetlands have been lost over the last 100 years, with 20 - 90% of remaining wetlands projected to be lost by 2100. Approximately 50% of live coral cover has been lost since the 1870s, and climate change and other drivers have led to accelerated losses in recent decades. Seagrass meadows have decreased in extent by over 10% per decade between 1970 and 2000.
       text_2:
-        - "Sources:"
-        - "IPBES (2019) Summary for policymakers of the global assessment report of biodiversity and ecosystem services of the Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services. URL: https://www.ipbes.net/system/tdf/ipbes_7_10_add.1_en_1.pdf?file=1&type=node&id=35329"
-        - "IPCC (2019) Special Report on the Ocean and Cryosphere in a Changing Climate – Summary for Policymakers. URL: https://www.ipcc.ch/srocc/home/"
-
+        - While our knowledge of ecosystem health globally is still relatively limited, the species that comprise these habitats are assessed through the IUCN Red List of Threatened Species, with an emerging IUCN Red List of Ecosystems.
+        - Despite current trends, there is hope. The UN Decade on Ecosystem Restoration (2021-2030) offers the international community an opportunity to work together to reverse ecosystem fragmentation and degradation, helping to restore the critical ecosystems that humans and biodiversity alike depend on for survival.

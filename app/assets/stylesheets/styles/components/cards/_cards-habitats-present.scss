@@ -1,6 +1,7 @@
 &--habitats-present {
   @include flex;
   @include flex-h-between;
+  margin-bottom: $page-padding-bottom-small;
 
   .card {
     padding: rem-calc(0 20);
@@ -53,7 +54,7 @@
           margin-top: rem-calc(22);
         }
 
-          &__habitat-title { 
+          &__habitat-title {
             @include text-habitats-present-title;
             margin-right: rem-calc(12);
           }
