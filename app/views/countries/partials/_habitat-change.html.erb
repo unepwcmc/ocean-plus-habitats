@@ -10,7 +10,7 @@
         <div class="card__card">
           <div class="flex">
             <i class="card__icon <%= get_habitat_icon_class(habitat[:id], habitat[:status]) %>" alt="<%= habitat[:title] %> icon"></i>
-            <span class="card__stat"><%= habitat[:change] == 0 ? '-' : habitat[:change].to_s.concat('%') %></span>
+            <span class="card__stat"><%= habitat[:change] == 0 ? '' : habitat[:change].to_s.concat('%') %></span>
           </div>
 
           <div class="card__title-wrapper flex flex-v-center">
