@@ -26,7 +26,7 @@ class CountriesController < ApplicationController
      ( habitat[:id] ==  'mangroves' ||  habitat[:id] ==  'seagrasses' ) || ( habitat[:id] == 'saltmarshes' || habitat[:id] == 'coralreefs' || habitat[:id] == 'coldcorals')
     }.to_json
 
-    @habitat_change = Serializers::HabitatCountryChangeSerializer.new(@country, habitats_present_status).serialize.to_json
+    @habitat_change = Serializers::HabitatCountryChangeSerializer.new(@country, habitats_present_status).serialize
 
     @stacked_row_chart = Serializers::RepresentationHabitatsSerializer.new(@country).serialize
   end
