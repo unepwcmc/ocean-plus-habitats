@@ -23,9 +23,17 @@ class CountriesController < ApplicationController
     @example_species_select = habitats.reject { |habitat| habitat['data'].nil? }.sort { |h1, h2| h2['data'].last[1] <=> h1['data'].last[1] }.
     map { |habitat| { id: habitat[:id], name: habitat[:title] }}
 
-    @example_species_selected = @example_species_select.find { |habitat|
-     habitat[:id] ==  ('mangroves' ||  'seagrasses' || 'saltmarshes' || 'coralreefs' || 'coldcorals')
-    }.to_json
+    if @example_species_select.find { |habitat| habitat[:id] == 'mangroves'}
+      @example_species_selected = @example_species_select.find { |habitat| habitat[:id] == 'mangroves'}.to_json
+    elsif @example_species_select.find { |habitat| habitat[:id] == 'seagrasses'}
+      @example_species_selected = @example_species_select.find { |habitat| habitat[:id] == 'seagrasses'}.to_json
+    else
+      @example_species_selected = @example_species_select[0].to_json
+    end
+
+    # @example_species_selected = @example_species_select.find { |habitat|
+    #  habitat[:id] ==  ( 'mangroves' || 'seagrasses' || 'saltmarshes' || 'coralreefs' || 'coldcorals' )
+    # }.to_json
 
     @habitat_change = Serializers::HabitatCountryChangeSerializer.new(@country, habitats_present_status).serialize
 
