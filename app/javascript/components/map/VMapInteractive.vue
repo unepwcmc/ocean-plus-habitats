@@ -141,6 +141,9 @@ export default {
     selectInitDatasets () {
       if (this.datasetsInternal.length) {
         if (this.multipleDatasets) {
+          if (/(eez)/.test(this.datasetsInternal[0].id)) {
+            return this.$eventHub.$emit('select-' + this.filterId + this.datasetsInternal[0].id)
+          }
           this.datasetsInternal.forEach(ds => {
             if (!ds.disabled) {
               this.$eventHub.$emit('select-' + this.filterId + ds.id)
