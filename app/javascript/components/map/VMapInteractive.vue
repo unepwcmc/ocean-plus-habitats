@@ -7,13 +7,16 @@
       :datasets="datasetsInternal"
       :has-download-button="hasDownloadButton"
     />
-    <v-map
-      :id="id"
-      :search="search"
-      :allow-no-selected-dataset="allowNoSelectedDataset"
-      :mapbox-token="mapboxToken"
-      :bounding-box="initBoundingBox"
-    />
+    <div :class="[id == 'eez-map' ? 'eez-map' : 'habitat-map' ]">
+      <v-map
+        :id="id"
+        :search="search"
+        :allow-no-selected-dataset="allowNoSelectedDataset"
+        :mapbox-token="mapboxToken"
+        :bounding-box="initBoundingBox"
+      />
+    <div v-if="id == 'eez-map'" class="eez-map-legend"></div>
+    </div>
   </div>
 </template>
 

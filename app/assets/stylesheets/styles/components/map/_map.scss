@@ -8,7 +8,22 @@
 
     flex-direction: row-reverse;
     position: relative;
+
+    border: 1px solid $navy;
   }
+}
+
+.eez-map {
+  height: 89%;
+  width: 100%;
+  padding-left: rem-calc(28);
+  padding-top: rem-calc(28);
+  padding-right: rem-calc(28);
+}
+
+.habitat-map {
+  height: 100%;
+  width: 100%;
 }
 
 .mapboxgl {
@@ -79,6 +94,15 @@
             background-color: $colour;
           }
         }
+
+        // @for $i from 1 through length($eez-habitats) {
+        //   $eez-habitat: nth($eez-habitats, $i);
+        //   $colour: map-get($eez-habitat_colours, $eez-habitat);
+
+        //   &--#{$eez-habitat} {
+        //     background-color: $colour;
+        //   }
+        // }
       }
 
       &__filter-title {
@@ -177,3 +201,14 @@
         color: $white;
       }
 }
+
+//--------------------------------------------------
+// EEZ map legend
+//--------------------------------------------------
+
+.eez-map-legend {
+  height: 11%;
+  width: 100%;
+  background-color: transparent;
+}
+
