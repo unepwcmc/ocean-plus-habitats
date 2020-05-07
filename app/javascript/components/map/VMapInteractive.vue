@@ -165,7 +165,9 @@ export default {
     },
 
     deselectCurrentDatasetIfNecessary (datasetId, showDataset) {
-      if (this.multipleDatasets) { return }
+      if (this.multipleDatasets) {
+        if (!(/(eez)/.test(datasetId))) { return }
+      }
 
       // Logic for single select maps where only one dataset can be shown at a time
       const isReplacingCurrentDataset = showDataset &&
