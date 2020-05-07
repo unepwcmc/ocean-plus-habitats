@@ -19,9 +19,17 @@
         v-if="id == 'eez-map'"
         class="eez-map-legend"
       >
-        <p><i>Extent of marine protected area coverage (%):</i><p>
-        <div class="eez-map-legend_keys" v-for="extent in datasets[0].sourceLayers" :key="extent.id">
-          <span :key="extent.id" :class="`eez-map-legend_key-${extent}`" /><p>{{ extent.sub_name | correct }}</p>
+        <p><i>Extent of marine protected area coverage (%):</i></p>
+        <div
+          v-for="extent in datasets[0].sourceLayers"
+          :key="extent.id"
+          class="eez-map-legend_keys"
+        >
+          <span
+            :key="extent.id"
+            class="eez-map-legend_key"
+            :style="{ 'background-color': extent.color }"
+          /><p>{{ extent.sub_name | correct }}</p>
         </div>
       </div>
     </div>
