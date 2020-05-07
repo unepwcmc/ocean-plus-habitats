@@ -7,7 +7,7 @@
       :datasets="datasetsInternal"
       :has-download-button="hasDownloadButton"
     />
-    <div :class="[id == 'eez-map' ? 'eez-map' : 'habitat-map' ]">
+    <div :class="[id == 'eez-map' ? 'maptype_eezmap' : 'maptype_habitatmap' ]">
       <v-map
         :id="id"
         :search="search"
@@ -15,7 +15,15 @@
         :mapbox-token="mapboxToken"
         :bounding-box="initBoundingBox"
       />
-    <div v-if="id == 'eez-map'" class="eez-map-legend"></div>
+      <div
+        v-if="id == 'eez-map'"
+        class="eez-map-legend"
+      >
+        <p><i>Extent of marine protected area coverage (%):</i><p>
+        <div class="eez-map-legend_keys" v-for="extent in datasets[0].sourceLayers" :key="extent.id">
+          <span :key="extent.id" :class="`eez-map-legend_key-${extent}`" /><p>{{ extent.sub_name | correct }}</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -31,7 +39,14 @@ export default {
     FilterPane,
     VMap
   },
+  filters: {
+    correct: function (value) {
+      if (value != 'no-data') return value
+      value = value.toString()
 
+      return value.charAt(0).toUpperCase() + value.slice(1).replace(/-/g, ' ')
+    }
+  },
   props: {
     id: {
       required: true,
@@ -103,6 +118,7 @@ export default {
     this.$eventHub.$off('map-update-curr-' + this.filterId, this.updateCurrentDataset)
     this.$eventHub.$off('map-load', this.selectInitDatasets)
   },
+
 
   methods: {
     setInitBoundingBox () {

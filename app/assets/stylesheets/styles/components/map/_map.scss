@@ -13,17 +13,18 @@
   }
 }
 
-.eez-map {
-  height: 89%;
-  width: 100%;
-  padding-left: rem-calc(28);
-  padding-top: rem-calc(28);
-  padding-right: rem-calc(28);
-}
-
-.habitat-map {
-  height: 100%;
-  width: 100%;
+.maptype {
+  &_eezmap {
+    height: 89%;
+    width: 100%;
+    padding-left: rem-calc(28);
+    padding-top: rem-calc(28);
+    padding-right: rem-calc(28);
+  }
+  &_habitatmap {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .mapboxgl {
@@ -94,15 +95,6 @@
             background-color: $colour;
           }
         }
-
-        // @for $i from 1 through length($eez-habitats) {
-        //   $eez-habitat: nth($eez-habitats, $i);
-        //   $colour: map-get($eez-habitat_colours, $eez-habitat);
-
-        //   &--#{$eez-habitat} {
-        //     background-color: $colour;
-        //   }
-        // }
       }
 
       &__filter-title {
@@ -207,8 +199,36 @@
 //--------------------------------------------------
 
 .eez-map-legend {
+  font-size: 0.7rem;
   height: 11%;
   width: 100%;
-  background-color: transparent;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &_keys {
+    @include flex-no-shrink;
+    display: flex;
+  }
+
+  &_key {
+    @include flex-no-shrink;
+    border: $border;
+    border-radius: 100%;
+    margin-right: $key-margin;
+    width: $key-size; height: $key-size;
+    display: block;
+
+    @for $i from 1 through length($eez_ranges) {
+        $layer: nth($eez_ranges, $i);
+        $colour: map-get($eez_layers, $layer);
+
+        &--#{$layer} {
+          background-color: $colour;
+        }
+      }
+  }
+
 }
+
 
