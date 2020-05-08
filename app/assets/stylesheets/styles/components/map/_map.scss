@@ -214,7 +214,7 @@
 
   &_key {
     @include flex-no-shrink;
-    border: $border;
+    border: $border-dark;
     border-radius: 100%;
     margin-right: $key-margin;
     width: $key-size * 2; height: $key-size * 2;

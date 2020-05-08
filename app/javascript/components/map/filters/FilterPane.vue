@@ -14,21 +14,16 @@
         />
       </li>
     </ul>
-
-    <div class="map-filters__button-bar flex flex-h-center">
-      <map-download-button v-if="hasDownloadButton" />
-    </div>
   </div>
 </template>
 
 <script>
 import Dataset from './Dataset'
-import MapDownloadButton from './MapDownloadButton'
 
 export default {
   name: 'FilterPane',
 
-  components: { Dataset, MapDownloadButton },
+  components: { Dataset },
 
   props: {
     id: {
@@ -42,10 +37,6 @@ export default {
     datasets: {
       type: Array,
       default: () => []
-    },
-    hasDownloadButton: {
-      type: Boolean,
-      default: false
     }
   },
 

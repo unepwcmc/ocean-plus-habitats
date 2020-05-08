@@ -7,7 +7,7 @@
       :datasets="datasetsInternal"
       :has-download-button="hasDownloadButton"
     />
-    <div :class="[id == 'eez-map' ? 'maptype_eezmap' : 'maptype_habitatmap' ]">
+    <div :class="[isEez ? 'maptype_eezmap' : 'maptype_habitatmap' ]">
       <v-map
         :id="id"
         :search="search"
@@ -16,7 +16,7 @@
         :bounding-box="initBoundingBox"
       />
       <div
-        v-if="id == 'eez-map'"
+        v-if="isEez"
         class="eez-map-legend"
       >
         <p><i>Extent of marine protected area coverage (%):</i></p>
@@ -48,7 +48,7 @@ export default {
     VMap
   },
   filters: {
-    correct: function (value) {
+    correct(value) {
       if (value != 'no-data') return value
       value = value.toString()
 
@@ -109,6 +109,9 @@ export default {
     },
     filterId () {
       return "filters-layers-" + this.id
+    },
+    isEez () {
+      return this.id == 'eez-map'
     }
   },
 

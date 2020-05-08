@@ -9,8 +9,11 @@
       :class="{ 'map-filter--active': isActive}"
     >
       <span :class="`map-filters__filter-key map-filters__filter-key--${config.id}`" />
-      <span class="map-filters__filter-title">
-        {{ name }}
+      <span
+        class="map-filters__filter-title"
+        :class="[isEez ? 'map-filters_filter-title_eezmap' : '']"
+      >
+        {{ isEez ? title : name }}
       </span>
       <input
         :id="inputId"
@@ -19,7 +22,10 @@
         :checked="isActive"
         @click="toggleDataset"
       >
-      <span class="custom-checkbox" />
+      <span
+        v-if="!isEez"
+        class="custom-checkbox"
+      />
     </label>
     <div
       class="map-filters__filter-description"
@@ -48,11 +54,14 @@ export default {
     }
   },
 
+
+
   data() {
     return {
       selected: false,
       datasetLayersCreated: false,
       name: this.config.name,
+      title: this.config.title,
       datasetId: this.config.id
     }
   },
@@ -61,7 +70,9 @@ export default {
     isActive() {
       return this.selected
     },
-
+    isEez() {
+      return /(eez)/.test(this.config.id)
+    },
     inputId() {
       return `dataset_${this.datasetId}_${this.name}_input`
     },
