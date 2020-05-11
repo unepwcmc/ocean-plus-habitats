@@ -17,8 +17,8 @@ $chart-legend-key-icon-size: rem-calc(22);
   &-item {
     @include flex;
     @include flex-v-start;
-    margin: $chart-row-margin;
-    width: 100%; height: $bar-height;
+    margin: none;
+    width: 100%; height: $bar-height / 2;
 
     .chart--row-stacked & {
       margin-right: rem-calc(30);
@@ -30,6 +30,7 @@ $chart-legend-key-icon-size: rem-calc(22);
     &-key-title {
       @include text-chart;
       @include flex-no-shrink;
+      font-weight: $normal;
       width: 34%;
 
       .chart--row-stacked & {
@@ -54,7 +55,7 @@ $chart-legend-key-icon-size: rem-calc(22);
 
       .chart--row-stacked & {
         border-radius: 3px;
-        border: $border-thin $grey-xxdark;
+        border: $border-thin $grey-xlight;
 
         &.theme--multiple { background-color: $green-light; }
         &.theme--notcovered { background-color: $grey; }
