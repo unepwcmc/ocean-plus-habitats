@@ -14,10 +14,10 @@ class Serializers::HabitatCountryChangeSerializer < Serializers::Base
 
     if status == 'absent'
       cover_change = 0
-      text = 'Confirmed absence'
+      text = I18n.t('countries.shared.habitat_change.chart_text_confirmed_absence')
     elsif status == 'unknown'
       cover_change = 0
-      text = 'Presence unknown'
+      text = I18n.t('countries.shared.habitat_change.chart_text_presence_unknown')
     else
       country_cover_change = habitat.calculate_country_cover_change(@country.name)
       cover_change = country_cover_change[:change_percentage]
