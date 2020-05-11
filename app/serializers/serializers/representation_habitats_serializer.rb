@@ -33,7 +33,7 @@ class Serializers::RepresentationHabitatsSerializer < Serializers::Base
       habitat_stat = @geo_stat.find_by(habitat_id: habitat)
       value = habitat_stat.coastal_coverage || 0
 
-      @legend << { id: habitat.name, title: habitat.title }
+      @legend << { id: habitat.name, title: habitat.name == 'coralreefs' ? 'Warm-water coral reefs' : habitat.title }
       @rows << row(value, @coastal_stat.total_coast_length, idx)
     end
   end
