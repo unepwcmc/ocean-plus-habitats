@@ -37,6 +37,7 @@ namespace :import do
 
       import_species(row, habitat)
       import_countries_species(row, habitat)
+      import_geo_entity_stat_sources(row, habitat)
 
       current_iso, current_hab = row['iso3'], row['habitat']
       next if (current_iso == prev_iso) && (current_hab == prev_hab)
@@ -119,6 +120,35 @@ namespace :import do
     ges = GeoEntitiesSpecies.find_or_initialize_by(species_id: species.id, geo_entity_id: geo_entity.id)
     report_failed(row, "Species, GeoEntity pair already existing!") if ges.id
     report_failed(row, ges.errors.messages) unless ges.save
+  end
+
+  def import_geo_entity_stat_sources(row, habitat)
+    iso3 = row['iso3']
+    citation = row['source_id'].split(';')
+
+    geo_entity = GeoEntity.find_by(iso3: iso3)
+    if geo_entity.blank? && !iso3.downcase == 'global'
+      report_failed(row, "GeoEntity not found!")
+      return
+    end
+
+    sources = Source.where(citation_id: citation)
+    if sources.blank?
+      report_failed(row, 'Source not found!')
+      return
+    end
+
+    geo_entity_stat = GeoEntityStat.find_by(geo_entity_id: geo_entity.id, habitat_id: habitat.id)
+    if geo_entity_stat.blank?
+      report_failed(row, 'GeoEntityStat not found!')
+      return
+    end
+
+    sources.each do |source|
+      gess = GeoEntityStatsSources.find_or_initialize_by(geo_entity_stat_id: geo_entity_stat.id, citation_id: source.citation_id)
+      report_failed(row, "GeoEntityStat, Source pair already existing!") if gess.id
+      report_failed(row, gess.errors.messages) unless gess.save
+    end
   end
 
   # 0 = confirmed absence
