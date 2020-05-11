@@ -1,5 +1,6 @@
 <template>
   <div class="map-filters flex flex-column">
+    <p v-show="isEez">{{ eezMessage }}</p>
     <ul class="map-filters__list">
       <li
         class="map-filters__list-li"
@@ -42,7 +43,13 @@ export default {
 
   data () {
     return {
-      isActive: true
+      isActive: true,
+      eezMessage: 'Select an Ocean Habitat'
+    }
+  },
+  computed: {
+    isEez() {
+      return /(eez)/.test(this.id)
     }
   },
 
