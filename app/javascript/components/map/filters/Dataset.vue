@@ -8,10 +8,13 @@
       class="map-filters__filter-label hover--pointer flex flex-v-center"
       :class="{ 'map-filter--active': isActive}"
     >
-      <span :class="`map-filters__filter-key map-filters__filter-key--${config.id}`" />
+      <span
+        :class="[ !isEez ? `map-filters__filter-key map-filters__filter-key--${config.id}` : isActive ? 'map-filters__filter-key map-filters__filter-key--active':
+        'map-filters__filter-key']"
+      />
       <span
         class="map-filters__filter-title"
-        :class="[isEez ? 'map-filters_filter-title_eezmap' : '']"
+        :class="{ 'map-filters_filter-title_eezmap' : isActive }"
       >
         {{ isEez ? title : name }}
       </span>
@@ -27,10 +30,6 @@
         class="custom-checkbox"
       />
     </label>
-    <div
-      class="map-filters__filter-description"
-      v-html="config.descriptionHtml"
-    />
   </div>
 </template>
 

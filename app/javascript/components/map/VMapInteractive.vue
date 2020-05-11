@@ -108,7 +108,7 @@ export default {
       return this.getDatasetsFromIds(this.currentDatasetIds)
     },
     filterId () {
-      return "filters-layers-" + this.id
+      return 'filters-layers-' + this.id
     },
     isEez () {
       return this.id == 'eez-map'

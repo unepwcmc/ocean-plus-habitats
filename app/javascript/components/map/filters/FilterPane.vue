@@ -1,11 +1,16 @@
 <template>
   <div class="map-filters flex flex-column">
-    <p v-show="isEez">{{ eezMessage }}</p>
+    <p
+      v-show="isEez"
+      class="map-filters__eezMessage"
+    >
+      {{ eezMessage }}
+    </p>
     <ul class="map-filters__list">
       <li
-        class="map-filters__list-li"
         v-for="dataset in datasets"
         :key="dataset.id"
+        class="map-filters__list-li"
       >
         <dataset
           :key="dataset.id"
