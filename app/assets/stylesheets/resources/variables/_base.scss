@@ -29,7 +29,7 @@ $theme-purple: #332288;
 $theme-red: #E61354;
 $theme-yellow: #FCDA68;
 
-$theme-gradient-habitats: $green-light $theme-pink $theme-purple $theme-yellow $theme-blue $grey;
+$theme-gradient-habitats: $green-light $color-coralreefs $theme-purple $theme-yellow $theme-blue $grey;
 
 $color-coralreefs: #CB47B5;
 $color-saltmarshes: $theme-purple;
@@ -143,7 +143,7 @@ $habitats: (coralreefs saltmarshes mangroves seagrasses coldcorals); // must mat
 $habitat_statuses: (present absent unknown);
 
 $habitat_colours: (
-  'coralreefs': $theme-pink,
+  'coralreefs': $color-coralreefs,
   'saltmarshes': $theme-purple,
   'mangroves': $theme-yellow,
   'seagrasses': $theme-blue,

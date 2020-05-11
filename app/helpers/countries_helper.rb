@@ -38,7 +38,8 @@ module CountriesHelper
   end
 
   def total_units(dataset)
-    total_units = dataset[:id] == 'coldcorals' ? 'observations' : 'km<sup>2</sup>'.html_safe
+    # total_units = dataset[:id] == 'coldcorals' ? 'observations' : 'km<sup>2</sup>'.html_safe
+    'km<sup>2</sup>'.html_safe if total_units = dataset[:id] == 'coldcorals'
   end
 
   def habitats_present_modal
