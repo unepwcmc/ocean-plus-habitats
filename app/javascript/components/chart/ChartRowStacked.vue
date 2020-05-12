@@ -18,7 +18,6 @@
     <chart-legend
       v-if="legend"
       :rows="legend"
-      :percentages="rows"
       :theme="theme"
       class="chart__legend"
     />
@@ -42,10 +41,6 @@ export default {
       type: String,
       default: ''
     },
-    rows: {
-      type: Array,
-      required: true
-    },
     legend: {
       type: Array,
       default: () => []
@@ -54,7 +49,7 @@ export default {
 
   computed: {
     rowsPruned() {
-      return this.rows.filter(habitat => habitat.percent > 0 )
+      return this.legend.filter(habitat => habitat.percent > 0 )
     },
     themeClass () {
       return `chart-theme--${this.theme}`
