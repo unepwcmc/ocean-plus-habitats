@@ -2,7 +2,7 @@
   <div
     class="eez-map-legend"
   >
-    <span><i>Extent of marine protected area coverage (%):</i></span>
+    <span class="eez-map-legend__text">{{ text }}</span>
     <div
       v-for="extent in layers"
       :key="extent.id"
@@ -34,6 +34,10 @@ export default {
     datasets: {
       type: Array,
       default: () => []
+    },
+    text: {
+      type: String,
+      default: ''
     }
   },
   data () {

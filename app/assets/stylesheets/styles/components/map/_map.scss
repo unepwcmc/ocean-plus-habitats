@@ -233,7 +233,9 @@
     width: $key-size * 2; height: $key-size * 2;
     display: block;
   }
-
+  &__text {
+    font-style: italic;
+  }
 }
 
 

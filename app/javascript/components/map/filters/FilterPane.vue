@@ -4,7 +4,7 @@
       v-show="isEez"
       class="map-filters__eezMessage"
     >
-      {{ eezMessage }}
+      {{ message }}
     </p>
     <ul class="map-filters__list">
       <li
@@ -43,13 +43,16 @@ export default {
     datasets: {
       type: Array,
       default: () => []
+    },
+    message: {
+      type: String,
+      default: ''
     }
   },
 
   data () {
     return {
-      isActive: true,
-      eezMessage: 'Select an Ocean Habitat'
+      isActive: true
     }
   },
   computed: {

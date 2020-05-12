@@ -6,6 +6,7 @@
       :allow-no-selected-dataset="allowNoSelectedDataset"
       :datasets="datasetsInternal"
       :has-download-button="hasDownloadButton"
+      :message="message"
     />
     <div :class="[isEez ? 'maptype--eez' : 'maptype--habitat' ]">
       <v-map
@@ -18,6 +19,7 @@
       <eez-legend
         v-if="isEez"
         :datasets="datasetsInternal"
+        :text="text"
       />
     </div>
   </div>
@@ -72,6 +74,14 @@ export default {
     customBoundingBox: {
       type: Array,
       default: () => []
+    },
+    text: {
+      type: String,
+      default: ''
+    },
+    message: {
+      type: String,
+      default: ''
     }
   },
 
