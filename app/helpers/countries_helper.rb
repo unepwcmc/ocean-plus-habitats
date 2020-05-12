@@ -37,11 +37,6 @@ module CountriesHelper
     total_value = @country.protection_stats[dataset[:id]] ? @country.protection_stats[dataset[:id]]['total_value'].to_i : 0
   end
 
-  def total_units(dataset)
-    # total_units = dataset[:id] == 'coldcorals' ? 'observations' : 'km<sup>2</sup>'.html_safe
-    'km<sup>2</sup>'.html_safe if total_units = dataset[:id] == 'coldcorals'
-  end
-
   def habitats_present_modal
     {
       title: 'Hardcoded title in controller',

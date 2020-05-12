@@ -2,7 +2,7 @@ en:
   countries:
     argentina:
       title: Argentina
-      image_flag: flags/argentina.png
+      image_flag: flags/argentina.svg
       habitats_present_citations:
         coralreefs:
           title: Title in yml file
