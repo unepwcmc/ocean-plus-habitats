@@ -47,13 +47,13 @@ class Serializers::RepresentationHabitatsSerializer < Serializers::Base
       id: 'multiple',
       title: 'Multiple habitats',
       percent: row(@coastal_stat.multiple_habitat_length, @coastal_stat.total_coast_length),
-      label: 1
+      label: '3.'
     )
   end
 
   def add_not_covered
     percent_value = 100 - @legend.map { |habitat| habitat[:percent] }.inject(0, :+)
-    @legend.push(id: 'notcovered', title: 'Not covered', percent: percent_value, labe: '6.')
+    @legend.push(id: 'notcovered', title: 'Not covered', percent: percent_value, label: '6.')
   end
 
   def row(value, total_length)
