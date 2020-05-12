@@ -1,6 +1,5 @@
 en:
-  home:
-    eez_map:
-      eez_message: Select an Ocean Habitat
-      eez_extent: Extent of marine protected area coverage (%)
+  eez_map:
+    eez_message: Select an Ocean Habitat
+    eez_extent: "Extent of marine protected area coverage (%):"
 
