@@ -6,17 +6,16 @@
     <label
       :for="inputId"
       class="map-filters__filter-label hover--pointer flex flex-v-center"
-      :class="{ 'map-filter--active': isActive}"
+      :class="{ 'map-filter--active': isActive }"
     >
       <span
-        :class="[ !isEez ? `map-filters__filter-key map-filters__filter-key--${config.id}` : isActive ? 'map-filters__filter-key map-filters__filter-key--active':
-        'map-filters__filter-key']"
+        :class="[ 'map-filters__filter-key', standardClass, isActiveClass ]"
       />
       <span
         class="map-filters__filter-title"
         :class="{ 'map-filters_filter-title_eezmap' : isActive }"
       >
-        {{ isEez ? title : name }}
+        {{ correctName }}
       </span>
       <input
         :id="inputId"
@@ -70,7 +69,16 @@ export default {
       return this.selected
     },
     isEez() {
-      return /(eez)/.test(this.config.id)
+      return /(eez)/.test(this.datasetId)
+    },
+    standardClass() {
+      return !this.isEez ? `map-filters__filter-key--${this.datasetId}` : this.isActiveClass
+    },
+    isActiveClass() {
+      return this.isActive ? 'map-filters__filter-key--active' : ''
+    },
+    correctName() {
+      return this.isEez ? this.title : this.name
     },
     inputId() {
       return `dataset_${this.datasetId}_${this.name}_input`

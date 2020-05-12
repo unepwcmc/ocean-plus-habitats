@@ -14,14 +14,14 @@
 }
 
 .maptype {
-  &_eezmap {
+  &--eez {
     height: 89%;
     width: 100%;
     padding-left: rem-calc(28);
     padding-top: rem-calc(28);
     padding-right: rem-calc(28);
   }
-  &_habitatmap {
+  &--habitat {
     height: 100%;
     width: 100%;
   }
@@ -57,7 +57,7 @@
   &__eezMessage {
     @include text-7;
     color: $white;
-    text-align: center;
+    text-align: left;
     padding-bottom: rem-calc(14);
   }
 
@@ -68,10 +68,6 @@
     &__list-li {
       padding-top: rem-calc(14);
       padding-bottom: rem-calc(14);
-
-      &--active {
-        background-color: $eezmap-filter-active;
-      }
     }
 
     &__filter {
@@ -110,7 +106,7 @@
         }
 
         &--active {
-          background-color: $checkbox-checked;
+          background-color: $green;
         }
       }
 
@@ -223,12 +219,13 @@
   justify-content: space-around;
   align-items: center;
 
-  &_keys {
+  &__key {
     @include flex-no-shrink;
     display: flex;
+    align-items: center;
   }
 
-  &_key {
+  &__color {
     @include flex-no-shrink;
     border: $border-dark;
     border-radius: 100%;

@@ -7,7 +7,7 @@
       :datasets="datasetsInternal"
       :has-download-button="hasDownloadButton"
     />
-    <div :class="[isEez ? 'maptype_eezmap' : 'maptype_habitatmap' ]">
+    <div :class="[isEez ? 'maptype--eez' : 'maptype--habitat' ]">
       <v-map
         :id="id"
         :search="search"
@@ -15,23 +15,10 @@
         :mapbox-token="mapboxToken"
         :bounding-box="initBoundingBox"
       />
-      <div
+      <eez-legend
         v-if="isEez"
-        class="eez-map-legend"
-      >
-        <p><i>Extent of marine protected area coverage (%):</i></p>
-        <div
-          v-for="extent in datasets[0].sourceLayers"
-          :key="extent.id"
-          class="eez-map-legend_keys"
-        >
-          <span
-            :key="extent.id"
-            class="eez-map-legend_key"
-            :style="{ 'background-color': extent.color }"
-          /><p>{{ extent.sub_name | correct }}</p>
-        </div>
-      </div>
+        :datasets="datasetsInternal"
+      />
     </div>
   </div>
 </template>
@@ -39,21 +26,15 @@
 <script>
 import FilterPane from './filters/FilterPane'
 import VMap from './map/VMap'
+import EezLegend from './legend/VEEZMapLegend'
 import { getSubLayers, getSubLayerIds } from './helpers/map-helpers'
 import { getCountryExtentByISO3 } from './helpers/request-helpers'
 
 export default {
   components: {
     FilterPane,
+    EezLegend,
     VMap
-  },
-  filters: {
-    correct(value) {
-      if (value != 'no-data') return value
-      value = value.toString()
-
-      return value.charAt(0).toUpperCase() + value.slice(1).replace(/-/g, ' ')
-    }
   },
   props: {
     id: {
