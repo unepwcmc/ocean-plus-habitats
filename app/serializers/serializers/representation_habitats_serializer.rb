@@ -11,17 +11,28 @@ class Serializers::RepresentationHabitatsSerializer < Serializers::Base
 
     @geo_stat = GeoEntityStat.where(geo_entity_id: @country)
     @legend, @rows = [], []
+    @legend = []
+
 
     add_habitats_stats
     add_multiple_habitats
     add_not_covered
 
+    # {
+    #   legend: @legend,
+    #   chart: {
+    #     coastline_length: @coastal_stat.total_coast_length.round,
+    #     theme: "habitats",
+    #     rows: @rows
+    #   }
+    # }
+
+
     {
       legend: @legend,
       chart: {
         coastline_length: @coastal_stat.total_coast_length.round,
-        theme: "habitats",
-        rows: @rows
+        theme: "habitats"
       }
     }
   end
@@ -32,9 +43,17 @@ class Serializers::RepresentationHabitatsSerializer < Serializers::Base
     Habitat.all.each_with_index do |habitat, idx|
       habitat_stat = @geo_stat.find_by(habitat_id: habitat)
       value = habitat_stat.coastal_coverage || 0
+      total_length = @coastal_stat.total_coast_length
 
-      @legend << { id: habitat.name, title: habitat.name == 'coralreefs' ? 'Warm-water coral reefs' : habitat.title }
-      @rows << row(value, @coastal_stat.total_coast_length, idx)
+      @legend << {
+        id: habitat.name,
+        title: habitat.name == 'coralreefs' ? 'Warm-water coral reefs' : habitat.title
+        percent: ((value / total_length) * 100).round,
+        label: "#{idx + 2}."
+      }
+
+      # @legend << { id: habitat.name, title: habitat.name == 'coralreefs' ? 'Warm-water coral reefs' : habitat.title }
+      # @rows << row(value, @coastal_stat.total_coast_length, idx)
     end
   end
 

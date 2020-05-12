@@ -2,7 +2,7 @@
   <div class="chart--row-stacked">
     <ul class="chart__chart ul-unstyled flex">
       <li
-        v-for="(row, i) in rows"
+        v-for="(row, i) in rowsPruned"
         :key="`chart-row-${_uid}-${i}`"
         class="chart__bar flex flex-v-center"
         :class="themeClass"
@@ -18,6 +18,7 @@
     <chart-legend
       v-if="legend"
       :rows="legend"
+      :percentages="rows"
       :theme="theme"
       class="chart__legend"
     />
@@ -52,6 +53,9 @@ export default {
   },
 
   computed: {
+    rowsPruned() {
+      return this.rows.filter(habitat => habitat.percent > 0 )
+    },
     themeClass () {
       return `chart-theme--${this.theme}`
     }
