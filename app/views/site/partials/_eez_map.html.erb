@@ -4,11 +4,13 @@
     <p><%= p.html_safe %></p>
   <% end %>
   <v-map-interactive
-    :id="'map-target'"
+    :id="'eez-map'"
     :has-download-button="true"
     :datasets="<%= datasets.to_json %>"
+    text="<%= t('home.eez_map.eez_extent') %>"
+    message="<%= t('home.eez_map.eez_message') %>"
   ></v-map-interactive>
   <p class="text--smallprint">
-    <%= t('global.map_disclaimer').html_safe %>
+    <%= t('global.map_disclaimer') %>
   </p>
 </section>
