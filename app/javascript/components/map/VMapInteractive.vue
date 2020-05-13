@@ -28,7 +28,7 @@
 <script>
 import FilterPane from './filters/FilterPane'
 import VMap from './map/VMap'
-import EezLegend from './legend/VEEZMapLegend'
+import EezLegend from './legend/VMapLegendEez'
 import { getSubLayers, getSubLayerIds } from './helpers/map-helpers'
 import { getCountryExtentByISO3 } from './helpers/request-helpers'
 
