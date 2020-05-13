@@ -6,29 +6,38 @@
       :allow-no-selected-dataset="allowNoSelectedDataset"
       :datasets="datasetsInternal"
       :has-download-button="hasDownloadButton"
+      :message="message"
     />
-    <v-map
-      :id="id"
-      :search="search"
-      :allow-no-selected-dataset="allowNoSelectedDataset"
-      :mapbox-token="mapboxToken"
-      :bounding-box="initBoundingBox"
-    />
+    <div :class="[isEez ? 'maptype--eez' : 'maptype--habitat' ]">
+      <v-map
+        :id="id"
+        :search="search"
+        :allow-no-selected-dataset="allowNoSelectedDataset"
+        :mapbox-token="mapboxToken"
+        :bounding-box="initBoundingBox"
+      />
+      <eez-legend
+        v-if="isEez"
+        :datasets="datasetsInternal"
+        :text="text"
+      />
+    </div>
   </div>
 </template>
 
 <script>
 import FilterPane from './filters/FilterPane'
 import VMap from './map/VMap'
+import EezLegend from './legend/VMapLegendEez'
 import { getSubLayers, getSubLayerIds } from './helpers/map-helpers'
 import { getCountryExtentByISO3 } from './helpers/request-helpers'
 
 export default {
   components: {
     FilterPane,
+    EezLegend,
     VMap
   },
-
   props: {
     id: {
       required: true,
@@ -65,6 +74,14 @@ export default {
     customBoundingBox: {
       type: Array,
       default: () => []
+    },
+    text: {
+      type: String,
+      default: ''
+    },
+    message: {
+      type: String,
+      default: ''
     }
   },
 
@@ -82,7 +99,10 @@ export default {
       return this.getDatasetsFromIds(this.currentDatasetIds)
     },
     filterId () {
-      return "filters-layers-" + this.id
+      return 'filters-layers-' + this.id
+    },
+    isEez () {
+      return this.id == 'eez-map'
     }
   },
 
@@ -100,6 +120,7 @@ export default {
     this.$eventHub.$off('map-update-curr-' + this.filterId, this.updateCurrentDataset)
     this.$eventHub.$off('map-load', this.selectInitDatasets)
   },
+
 
   methods: {
     setInitBoundingBox () {
@@ -141,6 +162,9 @@ export default {
     selectInitDatasets () {
       if (this.datasetsInternal.length) {
         if (this.multipleDatasets) {
+          if (this.isEez) {
+            return this.$eventHub.$emit('select-' + this.filterId + this.datasetsInternal[0].id)
+          }
           this.datasetsInternal.forEach(ds => {
             if (!ds.disabled) {
               this.$eventHub.$emit('select-' + this.filterId + ds.id)
@@ -162,7 +186,9 @@ export default {
     },
 
     deselectCurrentDatasetIfNecessary (datasetId, showDataset) {
-      if (this.multipleDatasets) { return }
+      if (this.multipleDatasets) {
+        if (!this.isEez) { return }
+      }
 
       // Logic for single select maps where only one dataset can be shown at a time
       const isReplacingCurrentDataset = showDataset &&

@@ -1,16 +1,21 @@
 <template>
   <div
     class="map-filters__filter"
-    :class="{'disabled': disabled}"
+    :class="{ 'disabled': disabled, 'map-filters__filter--eez': isEez, 'map-filters__filter--eez--active': isEezActive }"
   >
     <label
       :for="inputId"
       class="map-filters__filter-label hover--pointer flex flex-v-center"
-      :class="{ 'map-filter--active': isActive}"
+      :class="{ 'map-filter--active': isActive }"
     >
-      <span :class="`map-filters__filter-key map-filters__filter-key--${config.id}`" />
-      <span class="map-filters__filter-title">
-        {{ name }}
+      <span
+        :class="[ 'map-filters__filter-key', standardClass, isActiveClass ]"
+      />
+      <span
+        class="map-filters__filter-title"
+        :class="{ 'map-filters_filter-title_eezmap' : isActive }"
+      >
+        {{ correctName }}
       </span>
       <input
         :id="inputId"
@@ -19,12 +24,11 @@
         :checked="isActive"
         @click="toggleDataset"
       >
-      <span class="custom-checkbox" />
+      <span
+        v-if="!isEez"
+        class="custom-checkbox"
+      />
     </label>
-    <div
-      class="map-filters__filter-description"
-      v-html="config.descriptionHtml"
-    />
   </div>
 </template>
 
@@ -48,11 +52,14 @@ export default {
     }
   },
 
+
+
   data() {
     return {
       selected: false,
       datasetLayersCreated: false,
       name: this.config.name,
+      title: this.config.title,
       datasetId: this.config.id
     }
   },
@@ -61,7 +68,21 @@ export default {
     isActive() {
       return this.selected
     },
-
+    isEez() {
+      return /(eez)/.test(this.datasetId)
+    },
+    isEezActive() {
+      return this.isEez && this.isActive
+    },
+    standardClass() {
+      return !this.isEez ? `map-filters__filter-key--${this.datasetId}` : this.isActiveClass
+    },
+    isActiveClass() {
+      return this.isEezActive ? 'map-filters__filter-key--active' : ''
+    },
+    correctName() {
+      return this.isEez ? this.title : this.name
+    },
     inputId() {
       return `dataset_${this.datasetId}_${this.name}_input`
     },

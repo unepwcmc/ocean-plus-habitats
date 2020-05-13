@@ -37,6 +37,7 @@ $color-mangroves: #D6A621;
 $color-seagrasses: $theme-blue;
 $color-coldcorals: $theme-red;
 
+
 //--------------------------------------------------
 // fonts
 //--------------------------------------------------
@@ -139,7 +140,8 @@ $z-300: 300;
 //--------------------------------------------------
 // project specific
 //--------------------------------------------------
-$habitats: (coralreefs saltmarshes mangroves seagrasses coldcorals); // must match names in app/config/locales/global/en/yml
+// must match names in app/config/locales/global/en/yml
+$habitats: (coralreefs saltmarshes mangroves seagrasses coldcorals);
 $habitat_statuses: (present absent unknown);
 
 $habitat_colours: (
@@ -149,3 +151,5 @@ $habitat_colours: (
   'seagrasses': $theme-blue,
   'coldcorals': $theme-red
 );
+
+
