@@ -2,6 +2,7 @@
   <h2><%= t('countries.shared.habitat_extent.title') %></h2>
   <p><%= t('countries.shared.habitat_extent.intro_text', country_name: t("countries.#{@yml_key}.title")) %></p>
   <v-map-interactive
+    id="'map-target'"
     iso3="<%= iso3 %>"
     :has-download-button="true"
     :datasets="<%= datasets.to_json %>"
