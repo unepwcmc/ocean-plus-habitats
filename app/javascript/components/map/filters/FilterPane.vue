@@ -1,10 +1,17 @@
 <template>
   <div class="map-filters flex flex-column">
+    <p
+      v-show="isEez"
+      class="map-filters__eezMessage"
+    >
+      {{ message }}
+    </p>
     <ul class="map-filters__list">
       <li
-        class="map-filters__list-li"
         v-for="dataset in datasets"
         :key="dataset.id"
+        class="map-filters__list-li"
+        :class="{ 'map-filters__list-li--eez': isEez }"
       >
         <dataset
           :key="dataset.id"
@@ -14,21 +21,16 @@
         />
       </li>
     </ul>
-
-    <div class="map-filters__button-bar flex flex-h-center">
-      <map-download-button v-if="hasDownloadButton" />
-    </div>
   </div>
 </template>
 
 <script>
 import Dataset from './Dataset'
-import MapDownloadButton from './MapDownloadButton'
 
 export default {
   name: 'FilterPane',
 
-  components: { Dataset, MapDownloadButton },
+  components: { Dataset },
 
   props: {
     id: {
@@ -43,15 +45,20 @@ export default {
       type: Array,
       default: () => []
     },
-    hasDownloadButton: {
-      type: Boolean,
-      default: false
+    message: {
+      type: String,
+      default: ''
     }
   },
 
   data () {
     return {
       isActive: true
+    }
+  },
+  computed: {
+    isEez() {
+      return /(eez)/.test(this.id)
     }
   },
 
