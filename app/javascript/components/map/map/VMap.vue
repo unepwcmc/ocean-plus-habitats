@@ -22,6 +22,10 @@ export default {
   mixins: [mixinAddLayers],
   /* eslint-disable no-undef */
   props: {
+    id: {
+      required: true,
+      type: String
+    },
     search: {
       type: Boolean,
       default: false
@@ -46,7 +50,6 @@ export default {
 
   data() {
     return {
-      id: 'map-target',
       mapbox: {
         accessToken: this.mapboxToken,
         geocodingUrl: 'https://api.mapbox.com/geocoding/v5/mapbox.places'
@@ -62,9 +65,9 @@ export default {
   },
 
   mounted() {
-    this.$eventHub.$on('map-create-and-show-layers', this.addLayers)
-    this.$eventHub.$on('map-show-layers', this.showLayers)
-    this.$eventHub.$on('map-hide-layers', this.hideLayers)
+    this.$eventHub.$on('map-create-and-show-layers-' + this.id, this.addLayers)
+    this.$eventHub.$on('map-show-layers-' + this.id, this.showLayers)
+    this.$eventHub.$on('map-hide-layers-' + this.id, this.hideLayers)
 
     mapboxgl.accessToken = this.mapbox.accessToken
 

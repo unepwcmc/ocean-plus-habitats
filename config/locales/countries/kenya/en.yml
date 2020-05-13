@@ -1,0 +1,39 @@
+en:
+  countries:
+    kenya:
+      title: Kenya
+      image_flag: flags/kenya.svg
+      habitats_present_citations:
+        coralreefs:
+          title: Title in yml file
+          text:
+            - Warm-water Coral citation for Kenya
+        saltmarshes:
+          title: Title in yml file
+          text:
+            - Saltmarsh Coral citation for Kenya
+        mangroves:
+          title: Title in yml file
+          text:
+            - Mangrove Coral citation for Kenya
+        seagrasses:
+          title: Title in yml file
+          text:
+            - Seagrass Coral citation for Kenya
+        coldcorals:
+          title: Title in yml file
+          text:
+            - Cold-water Coral Coral citation for Kenya
+      targets:
+        aichi:
+          text:
+            - lorem sunt in culpa
+            - officia deserunt mollit anim id est liborum. officia deserunt mollit anim id est liborum.
+        sdg:
+          text:
+            - ecat cupidatat non proident, sunt in culpa qui officia mollit anim id est liborum.
+            - officia deserunt mollit anim id est liborum.
+        other:
+          text:
+            - sunt in culpa qui officia deserunt mollit anim id est liborum.
+            - ecat cupidatat non proident,

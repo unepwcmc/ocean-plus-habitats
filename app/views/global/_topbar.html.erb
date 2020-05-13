@@ -3,33 +3,23 @@
     <%= link_to root_path, title: 'Visit the Ocean+ Habitats home page' do %>
       <%= image_tag 'logos/logo-ocean-plus-habitats.svg', class: 'logo--site', alt: 'The logo for Ocean+ Habitats' %>
     <% end %>
+    <%= link_to 'About', about_path, style: 'padding: 10rem' %>
+    <%= link_to 'Methodologies', methodologies_path %>
 
     <nav-trigger id="nav-primary" class="topbar__nav-trigger nav--primary">
       <span class="margin-space-right font-alignment-padding-fix">
         <%= t('global.nav.burger_text') %>
       </span>
-      <i class="icon--burger"></i>  
+      <i class="icon--burger"></i>
     </nav-trigger>
 
-    <nav-mega-menu id="nav-primary" class="nav--primary">
-      <div class="nav__columns container">
-        <div class="nav__column">
-          <p class="bold">Countries</p>
-          <nav class="flex">
-            <% get_nav_items[:countries].each do |country| %>
-              <%= link_to country[:title], country[:url], title: "View the page for #{country[:title]}", class: 'nav__a' %>
-            <% end %>
-          </nav>
-        </div>
-        <div class="nav__column">
-          <p class="bold">Regions</p>
-          <nav class="flex">
-            <% get_nav_items[:regions].each do |country| %>
-              <%= link_to country[:title], country[:url], title: "View the page for #{country[:title]}", class: 'nav__a' %>
-            <% end %>
-          </nav>
-        </div>
-      </div>
-    </nav-mega-menu>
-  </div> 
+    <nav-mega-menu
+      id="nav-primary"
+      class="nav--primary container"
+      :countries="<%= get_nav_items[:countries].to_json %>"
+      :regions="<%= get_nav_items[:regions].to_json %>"
+      :config="<%= get_countries_search_config %>"
+      regions-title="<%= t('global.main_menu.regions_title') %>"
+    />
+  </div>
 </div>

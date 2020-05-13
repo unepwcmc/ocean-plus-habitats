@@ -31,7 +31,7 @@
 @mixin icon-ribbon($colour, $point-height: rem-calc(8)) {
   $width: rem-calc(40);
   $height: rem-calc(56);
-  
+
   @include flex;
   @include flex-center;
   @include flex-no-shrink;
@@ -43,7 +43,7 @@
   &::before {
     @include triangle-right-angle(calc(#{$width/2}), $point-height, $colour, 'right');
   }
-  
+
   &::after {
     @include triangle-right-angle(calc(#{$width/2}), $point-height, $colour, 'left');
   }
@@ -134,7 +134,7 @@
     background-image: image_url('icons/citation.svg');
     width: rem-calc(36); height: rem-calc(36);
   }
-  
+
   @each $habitat in $habitats {
     &--#{$habitat} {
       @include icon-habitat;
@@ -163,6 +163,13 @@
     width: rem-calc(36); height: rem-calc(34);
 
     &-grey { background-color: $grey; }
+  }
+
+  &--externaltab {
+    background-image: url('icons/external_tab.svg');
+    height: 20px;
+    width: 20px;
+    display: block;
   }
 
   &--scroll {

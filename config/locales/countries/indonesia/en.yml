@@ -2,25 +2,25 @@ en:
   countries:
     indonesia:
       title: Indonesia
-      image_flag: flags/indonesia.png
+      image_flag: flags/indonesia.svg
       habitats_present_citations:
-        coralreefs: 
+        coralreefs:
           title: Title in yml file
           text:
             - Warm-water Coral citation for Indonesia
-        saltmarshes: 
+        saltmarshes:
           title: Title in yml file
           text:
             - Saltmarsh Coral citation for Indonesia
-        mangroves: 
+        mangroves:
           title: Title in yml file
           text:
             - Mangrove Coral citation for Indonesia
-        seagrasses: 
+        seagrasses:
           title: Title in yml file
           text:
             - Seagrass Coral citation for Indonesia
-        coldcorals: 
+        coldcorals:
           title: Title in yml file
           text:
             - Cold-water Coral Coral citation for Indonesia
@@ -36,4 +36,4 @@ en:
         other:
           text:
             - sunt in culpa qui officia deserunt mollit anim id est liborum.
-            - ecat cupidatat non proident, 
+            - ecat cupidatat non proident,

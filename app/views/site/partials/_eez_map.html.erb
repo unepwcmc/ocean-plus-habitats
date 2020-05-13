@@ -1,0 +1,16 @@
+<section id="<%= id %>" class="container section-padding">
+  <h2><%= t('home.locations_map.title') %></h2>
+  <% t('home.locations_map.text').each do |p| %>
+    <p><%= p.html_safe %></p>
+  <% end %>
+  <v-map-interactive
+    :id="'eez-map'"
+    :has-download-button="true"
+    :datasets="<%= datasets.to_json %>"
+    text="<%= t('home.eez_map.eez_extent') %>"
+    message="<%= t('home.eez_map.eez_message') %>"
+  ></v-map-interactive>
+  <p class="text--smallprint">
+    <%= t('global.map_disclaimer') %>
+  </p>
+</section>

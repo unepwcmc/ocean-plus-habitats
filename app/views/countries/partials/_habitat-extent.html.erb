@@ -1,0 +1,13 @@
+<section class="container section-padding--top">
+  <h2><%= t('countries.shared.habitat_extent.title') %></h2>
+  <p><%= t('countries.shared.habitat_extent.intro_text', country_name: t("countries.#{@yml_key}.title")) %></p>
+  <v-map-interactive
+    id="'map-target'"
+    iso3="<%= iso3 %>"
+    :has-download-button="true"
+    :datasets="<%= datasets.to_json %>"
+    :custom-bounding-box="<%= @country.bounding_box.to_json %>"
+  ></v-map-interactive>
+  <p class="text--smallprint"><%= t('global.map_disclaimer').html_safe %></p>
+  <p class="text--smallprint"><%= t('countries.shared.habitat_extent.map_note').html_safe %></p>
+</section>

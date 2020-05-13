@@ -6,6 +6,7 @@ class GeoEntity < ApplicationRecord
   # which means there can only be one change_stat record per country.
   # This can change in the future
   has_one :change_stat
+  has_one :coastal_stat
 
   has_many :region_relationship, foreign_key: :country_id, class_name: 'GeoRelationship'
   has_many :regions, through: :region_relationship, class_name: 'GeoEntity'
@@ -16,7 +17,10 @@ class GeoEntity < ApplicationRecord
   scope :regions, -> { where(iso3: nil) }
 
   # Returns species data if directly attached to the GeoEntity, so a country.
-  # Returns species data for all associated countries if it is a region
+  # Returns species data for all associated countries if it is a region.
+  # With the current importers, species are directly associated to regions
+  # via the geo_entity_id.
+  # TODO Consider removing this method
   def all_species
     return species if species.present?
     Species.joins(:geo_entities).where(geo_entities: { id: countries.map(&:id) })
@@ -32,7 +36,9 @@ class GeoEntity < ApplicationRecord
     hash = {}
 
     _occurrences.map do |occurrence|
-      hash[occurrence['name']] = occurrence['occurrence']
+      _occurrence = occurrence['occurrence']
+      next if hash[occurrence['name']] == 'present'
+      hash[occurrence['name']] = _occurrence unless _occurrence == 'unknown'
     end
     GeoEntityStat::BASE_OCCURRENCES.merge(hash)
   end
@@ -78,6 +84,7 @@ class GeoEntity < ApplicationRecord
 
   private
 
+  # TODO Consider removing this and using directly associated stats for regions too
   def countries_geo_entity_stats
     countries.present? ? GeoEntityStat.where(geo_entity_id: countries.map(&:id)) : geo_entity_stats
   end

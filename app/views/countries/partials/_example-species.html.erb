@@ -1,4 +1,4 @@
-<section class="section-padding--bottom">
+<section class="section-padding">
   <div class="container">
     <div class="h2-wrapper flex flex-v-center">
       <h2 class="margin-space-right"><%= t('countries.shared.example_species.title') %></h2>
@@ -17,7 +17,8 @@
       event="example-species"
     ></example-species-count>
 
-    <example-species :content="<%= example_species_common %>" event="example-species"></example-species>
     <example-species :content="<%= example_species_threatened %>" event="example-species"></example-species>
+    <example-species :content="<%= example_species_common %>" event="example-species"></example-species>
+    <p class="text--smallprint"><%= t('countries.shared.example_species.smallprint').html_safe %></p>
   </div>
 </section>

@@ -1,0 +1,18 @@
+en:
+  countries:
+    nav_sticky:
+      -
+        id: where-are-they
+        title: Habitat location
+      -
+        id: protection-level
+        title: Level of protection
+      -
+        id: species-composition
+        title: Species composition
+      -
+        id: habitat-condition
+        title: Habitat condition
+      -
+        id: contributions-and-targets
+        title: Contributions and targets

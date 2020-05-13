@@ -13,10 +13,17 @@
   }
 %>
 
-<%= render partial: '/site/partials/sdg',
+<%= render partial: '/site/partials/eez_map',
+  locals: {
+    id: 'eez_map',#"section-#{t('home.nav_sticky')[0][:id]}",
+    datasets: @eez_map_datasets
+  }
+%>
+
+<%= render partial: '/site/partials/habitat-cover',
   locals: {
     id: "section-#{t('home.nav_sticky')[1][:id]}",
-    doughnut_chart: @doughnut_chart.to_json
+    habitat_cover: @habitat_cover, modal_content: habitat_cover_modal
   }
 %>
 
@@ -29,13 +36,15 @@
 
 <%= render partial: '/site/partials/red-list',
   locals: {
+    id: "section-#{t('home.nav_sticky')[3][:id]}",
     modal_content: red_list_modal
   }
 %>
 
-<%= render partial: '/site/partials/habitat-cover',
+<%= render partial: '/site/partials/sdg',
   locals: {
-    habitat_cover: @habitat_cover, modal_content: habitat_cover_modal
+    id: "section-#{t('home.nav_sticky')[4][:id]}",
+    doughnut_chart: @doughnut_chart.to_json
   }
 %>
 

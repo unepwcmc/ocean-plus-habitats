@@ -8,12 +8,29 @@
 
     flex-direction: row-reverse;
     position: relative;
+
+    border: 1px solid $navy;
+  }
+}
+
+.maptype {
+  &--eez {
+    height: 89%;
+    width: 100%;
+    padding-left: rem-calc(28);
+    padding-top: rem-calc(28);
+    padding-right: rem-calc(28);
+  }
+  &--habitat {
+    height: 100%;
+    width: 100%;
   }
 }
 
 .mapboxgl {
   &-map {
     height: 100%; width: 100%;
+    border: 1px solid $navy;
   }
 
   &-canvas {
@@ -31,18 +48,40 @@
   @include flex-no-shrink();
   background-color: $background-colour;
   color: $white;
-  padding: 40px 20px;
+  padding: 40px 0px;
   width: $pane-width-laptop; height: 100%;
 
   position: relative;
   z-index: 100;
 
+
+  &__eezMessage {
+    @include text-7;
+    color: $white;
+    text-align: left;
+    padding-left: 20px;
+    padding-bottom: rem-calc(14);
+  }
+
   &__list {
     @include ul-unstyled;
   }
 
+    &__list-li {
+      padding-top: rem-calc(14);
+      padding-bottom: rem-calc(14);
+
+      &--eez {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+    }
+
     &__filter {
       margin-bottom: $item-spacing-small;
+      padding-left: 20px;
+      padding-right: 20px;
 
       &.disabled {
         cursor: default;
@@ -56,6 +95,19 @@
           opacity: 0;
         }
       }
+
+      &--eez {
+        @include flex;
+        @include flex-v-center;
+        height: 75px;
+        margin-bottom: 0;
+
+        &--active {
+          background-color: $navy-dark;
+        }
+
+      }
+
     }
 
       &__filter-key {
@@ -70,13 +122,17 @@
         @for $i from 1 through length($habitats) {
           $habitat: nth($habitats, $i);
           $colour: map-get($habitat_colours, $habitat);
-        
+
           &--#{$habitat} {
             background-color: $colour;
           }
         }
+
+        &--active {
+          background-color: $green;
+        }
       }
-      
+
       &__filter-title {
         @include text-filter-title;
       }
@@ -89,7 +145,7 @@
           margin-bottom: rem-calc(4);
         }
       }
-  
+
   &__button-bar {
     background-color: $navy-xdark;
     padding: rem-calc(8) 0;
@@ -173,3 +229,36 @@
         color: $white;
       }
 }
+
+//--------------------------------------------------
+// EEZ map legend
+//--------------------------------------------------
+
+.eez-map-legend {
+  @include flex;
+  @include flex-v-center;
+  @include flex-h-around;
+  font-size: 0.7rem;
+  height: 11%;
+  width: 100%;
+
+  &__key {
+    @include flex;
+    @include flex-no-shrink;
+    @include flex-v-center;
+  }
+
+  &__color {
+    @include flex-no-shrink;
+    border: $border-dark;
+    border-radius: 100%;
+    margin-right: $key-margin;
+    width: $key-size * 2; height: $key-size * 2;
+    display: block;
+  }
+  &__text {
+    font-style: italic;
+  }
+}
+
+

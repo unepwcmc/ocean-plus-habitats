@@ -7,17 +7,40 @@ $chart-legend-key-icon-size: rem-calc(22);
 // classes
 //--------------------------------------------------
 &__legend {
+
+  .chart--row-stacked & {
+    max-width: 75%;
+
+    display: flex;
+  }
+
   &-item {
     @include flex;
     @include flex-v-start;
     margin: $chart-row-margin;
     width: 100%; height: $bar-height;
+
+    .chart--row-stacked & {
+      margin-right: rem-calc(30);
+
+      flex: 0 0 calc(((1 / 3) * 100%) - 30px);
+    }
   }
 
     &-key-title {
       @include text-chart;
       @include flex-no-shrink;
       width: 34%;
+
+      .chart--row-stacked & {
+        width: 100%;
+      }
+    }
+
+    &-key-index {
+      .chart--row-stacked & {
+        display: none;
+      }
     }
 
     &-key-icon {
@@ -25,9 +48,17 @@ $chart-legend-key-icon-size: rem-calc(22);
       @include flex-no-shrink;
       border-radius: 100%;
       margin-right: rem-calc(14);
-      width: $chart-legend-key-icon-size; height: $chart-legend-key-icon-size; 
+      width: $chart-legend-key-icon-size; height: $chart-legend-key-icon-size;
 
       display: inline-block;
+
+      .chart--row-stacked & {
+        border-radius: 3px;
+        border: $border-thin $grey-xxdark;
+
+        &.theme--multiple { background-color: $green-light; }
+        &.theme--notcovered { background-color: $grey; }
+      }
     }
 
     &-key-text {

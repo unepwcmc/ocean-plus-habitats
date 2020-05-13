@@ -1,21 +1,46 @@
 <%= render '/global/header-country' %>
 
+<%= render partial: '/countries/partials/nav-tertiary',
+  locals: {
+    nav_tertiary: nav_tertiary_countries
+  }
+%>
+
 <%= render partial: '/countries/partials/habitats-present',
   locals: {
+    id: "section-#{t('countries.nav_sticky')[0][:id]}",
     habitats_present: @habitats_present,
     modal_content: habitats_present_modal
   }
 %>
 
-<%= render partial: '/countries/partials/map',
+<%= render partial: '/countries/partials/habitat-extent',
   locals: {
     iso3: @country.iso3,
     datasets: @map_datasets
   }
 %>
 
+<% unless @stacked_row_chart.empty? %>
+  <%= render partial: '/countries/partials/habitat-representation',
+    locals: {
+      modal_content: country_red_list_modal
+    }
+  %>
+<% end %>
+
+<%= render partial: '/countries/partials/proportion-protected',
+  locals: {
+    id: "section-#{t('countries.nav_sticky')[1][:id]}",
+    map_datasets: @map_datasets,
+    habitats_present: @habitats_present,
+    modal_content: habitats_present_modal
+  }
+%>
+
 <%= render partial: '/countries/partials/red-list',
   locals: {
+    id: "section-#{t('countries.nav_sticky')[2][:id]}",
     modal_content: country_red_list_modal
   }
 %>
@@ -30,16 +55,23 @@
   }
 %>
 
-<%= render partial: '/countries/partials/habitat-condition',
-  locals: {
-    modal_content: habitat_condition_modal
-  }
-%>
-
 <%= render partial: '/countries/partials/habitat-change',
   locals: {
     modal_content: country_habitat_change_modal
   }
 %>
 
-<%= render '/countries/partials/targets' %>
+<%= render partial: '/countries/partials/habitat-condition',
+  locals: {
+    id: "section-#{t('countries.nav_sticky')[3][:id]}",
+    modal_content: habitat_condition_modal
+  }
+%>
+
+<%= render partial: '/countries/partials/targets',
+  locals: {
+    id: "section-#{t('countries.nav_sticky')[4][:id]}"
+  }
+%>
+
+<%= render partial: '/countries/partials/ancillary' %>

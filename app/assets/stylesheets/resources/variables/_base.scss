@@ -7,11 +7,13 @@ $grey-light: #E5E5E5;
 $grey: #7f7f7f;
 $grey-dark: #444444;
 $grey-xdark: #383838;
+$grey-xxdark: #161615;
 $black: #000000;
 
 $blue-light: #0AD4FF;
 $blue: #0895B4;
 
+$green-light: #86BF37;
 $green: #22A37B;
 
 $iucn: #D82007;
@@ -26,6 +28,15 @@ $theme-pink: #F35F8D;
 $theme-purple: #332288;
 $theme-red: #E61354;
 $theme-yellow: #FCDA68;
+
+$theme-gradient-habitats: $green-light $theme-pink $theme-purple $theme-yellow $theme-blue $grey;
+
+$color-coralreefs: #CB47B5;
+$color-saltmarshes: $theme-purple;
+$color-mangroves: #D6A621;
+$color-seagrasses: $theme-blue;
+$color-coldcorals: $theme-red;
+
 
 //--------------------------------------------------
 // fonts
@@ -108,6 +119,12 @@ $border-thin: solid rem-calc(1);
 $border-regular: solid rem-calc(2);
 
 //--------------------------------------------------
+// shadows
+//--------------------------------------------------
+$shadow-light: rem-calc(0 1 2 1) rgba($grey-light, 0.5);
+$shadow-dark: rem-calc(0 1 2 1) rgba($black, 0.5);
+
+//--------------------------------------------------
 // topbar
 //--------------------------------------------------
 $topbarHeightSmall: rem-calc(47);
@@ -123,7 +140,8 @@ $z-300: 300;
 //--------------------------------------------------
 // project specific
 //--------------------------------------------------
-$habitats: (coralreefs saltmarshes mangroves seagrasses coldcorals); // must match names in app/config/locales/global/en/yml
+// must match names in app/config/locales/global/en/yml
+$habitats: (coralreefs saltmarshes mangroves seagrasses coldcorals);
 $habitat_statuses: (present absent unknown);
 
 $habitat_colours: (
@@ -131,5 +149,7 @@ $habitat_colours: (
   'saltmarshes': $theme-purple,
   'mangroves': $theme-yellow,
   'seagrasses': $theme-blue,
-  'coldcorals': $theme-red,
+  'coldcorals': $theme-red
 );
+
+
