@@ -1,7 +1,7 @@
 <template>
   <div
     class="map-filters__filter"
-    :class="{'disabled': disabled}"
+    :class="{ 'disabled': disabled, 'map-filters__filter--eez': isEez, 'map-filters__filter--eez--active': isEezActive }"
   >
     <label
       :for="inputId"
@@ -71,11 +71,14 @@ export default {
     isEez() {
       return /(eez)/.test(this.datasetId)
     },
+    isEezActive() {
+      return this.isEez && this.isActive
+    },
     standardClass() {
       return !this.isEez ? `map-filters__filter-key--${this.datasetId}` : this.isActiveClass
     },
     isActiveClass() {
-      return this.isActive ? 'map-filters__filter-key--active' : ''
+      return this.isEezActive ? 'map-filters__filter-key--active' : ''
     },
     correctName() {
       return this.isEez ? this.title : this.name

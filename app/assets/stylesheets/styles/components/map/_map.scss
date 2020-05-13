@@ -48,16 +48,18 @@
   @include flex-no-shrink();
   background-color: $background-colour;
   color: $white;
-  padding: 40px 20px;
+  padding: 40px 0px;
   width: $pane-width-laptop; height: 100%;
 
   position: relative;
   z-index: 100;
 
+
   &__eezMessage {
     @include text-7;
     color: $white;
     text-align: left;
+    padding-left: 20px;
     padding-bottom: rem-calc(14);
   }
 
@@ -68,10 +70,18 @@
     &__list-li {
       padding-top: rem-calc(14);
       padding-bottom: rem-calc(14);
+
+      &--eez {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
     }
 
     &__filter {
       margin-bottom: $item-spacing-small;
+      padding-left: 20px;
+      padding-right: 20px;
 
       &.disabled {
         cursor: default;
@@ -85,6 +95,19 @@
           opacity: 0;
         }
       }
+
+      &--eez {
+        @include flex;
+        @include flex-v-center;
+        height: 75px;
+        margin-bottom: 0;
+
+        &--active {
+          background-color: $navy-dark;
+        }
+
+      }
+
     }
 
       &__filter-key {
@@ -212,17 +235,17 @@
 //--------------------------------------------------
 
 .eez-map-legend {
+  @include flex;
+  @include flex-v-center;
+  @include flex-h-around;
   font-size: 0.7rem;
   height: 11%;
   width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 
   &__key {
+    @include flex;
     @include flex-no-shrink;
-    display: flex;
-    align-items: center;
+    @include flex-v-center;
   }
 
   &__color {

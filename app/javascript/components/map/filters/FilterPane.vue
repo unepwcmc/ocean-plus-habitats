@@ -11,6 +11,7 @@
         v-for="dataset in datasets"
         :key="dataset.id"
         class="map-filters__list-li"
+        :class="{ 'map-filters__list-li--eez': isEez }"
       >
         <dataset
           :key="dataset.id"

@@ -162,7 +162,7 @@ export default {
     selectInitDatasets () {
       if (this.datasetsInternal.length) {
         if (this.multipleDatasets) {
-          if (/(eez)/.test(this.datasetsInternal[0].id)) {
+          if (this.isEez) {
             return this.$eventHub.$emit('select-' + this.filterId + this.datasetsInternal[0].id)
           }
           this.datasetsInternal.forEach(ds => {
@@ -187,7 +187,7 @@ export default {
 
     deselectCurrentDatasetIfNecessary (datasetId, showDataset) {
       if (this.multipleDatasets) {
-        if (!(/(eez)/.test(datasetId))) { return }
+        if (!this.isEez) { return }
       }
 
       // Logic for single select maps where only one dataset can be shown at a time
