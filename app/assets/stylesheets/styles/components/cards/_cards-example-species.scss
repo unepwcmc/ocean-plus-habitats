@@ -1,5 +1,6 @@
 &--example-species {
   margin-top: rem-calc(40);
+  margin-bottom: $page-padding-bottom-small;
 
   .cards {
     &__title { margin-bottom: rem-calc(40); }
@@ -12,7 +13,11 @@
     width: 33%;
 
     &__image {
-      width: 50%;
+      width: 35%;
+    }
+
+    &__image-svg {
+      width: 25%;
     }
 
     &__content {
@@ -22,6 +27,10 @@
 
       &__title {
         font-weight: $semi-bold;
+      }
+
+      &__title-noname {
+        margin-top: rem-calc(16);
       }
 
         &__title-scientific {

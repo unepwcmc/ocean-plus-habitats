@@ -52,6 +52,7 @@ namespace :import do
       stat.protected_value      = protected_value
       stat.total_value          = total_value
       stat.protected_percentage = protected_percentage
+      stat.occurrence           = 2
     end
   end
 

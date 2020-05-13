@@ -27,7 +27,7 @@ module ApplicationHelper
     'Guanaco Torres del Paine Chile Gregoire Dubois'
   end
 
-  COUNTRIES = %w(indonesia united_arab_emirates australia kenya norway ireland).freeze
+  COUNTRIES = %w(indonesia united_arab_emirates argentina australia kenya norway ireland).freeze
   REGIONS = %w(mediterranean wider_caribbean).freeze
   def get_nav_items
     #FERDI - get all countries and then fill out object as follows

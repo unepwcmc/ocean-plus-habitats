@@ -2,7 +2,7 @@ en:
   countries:
     kenya:
       title: Kenya
-      image_flag: flags/kenya.png
+      image_flag: flags/kenya.svg
       habitats_present_citations:
         coralreefs:
           title: Title in yml file

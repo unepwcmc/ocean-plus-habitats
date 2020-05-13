@@ -1,0 +1,7 @@
+en:
+  countries:
+    shared:
+      habitat_extent:
+        title: Habitat extent
+        intro_text: According to currently available spatial data, these habitats are found in the following locations throughout %{country_name}.
+        map_note: '<strong>Note:</strong> In some cases, spatial data exist but are not yet available under an open data licence or online. If you have or are aware of information missing here, please contact us at <a href="mailto:oceanplus@unep-wcmc.org" title="Send an email to the Ocean+ team">oceanplus@unep-wcmc.org</a>.'
