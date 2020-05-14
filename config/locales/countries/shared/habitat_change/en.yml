@@ -8,4 +8,6 @@ en:
           - Change in habitat cover citation text
         chart_text: "<strong>%{km}km<sup>2</sup></strong> change in %{habitat} cover in <strong>%{years}</strong>"
         chart_text_not_available: Data not available
+        chart_text_confirmed_absence: Confirmed absence
+        chart_text_presence_unknown: Presence unknown
         smallprint: '<strong>Note:</strong> In many cases, an exact estimate of spatial change in the distribution of habitats at the national level is unknown. Changes in the availability and use of remote sensing technology is beginning to generate new data that can improve our understanding of change in extent over time.'

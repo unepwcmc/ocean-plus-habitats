@@ -28,5 +28,6 @@
     "serve": "rails s",
     "network-serve": "bash ./scripts/network-serve.sh",
     "lint": "eslint --ext .js,.vue"
-  }
+  },
+  "version": "0.0.0"
 }

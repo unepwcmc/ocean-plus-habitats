@@ -10,25 +10,40 @@ class Serializers::HabitatCountryChangeSerializer < Serializers::Base
   end
 
   def get_habitat_change habitat
-    return nil unless @habitats_presence_data[habitat.name] == 'present'
-    
-    country_cover_change = habitat.calculate_country_cover_change(@country.name)
-    change = {
-      id: habitat.name,
-      title: habitat.title,
-      change: country_cover_change[:change_percentage],
-      text: I18n.t('countries.shared.habitat_change.chart_text_not_available')
-    }
+    status = @habitats_presence_data[habitat.name]
 
-    unless change[:change] == 0
-      change[:is_available] = true
-      change[:text] = I18n.t('countries.shared.habitat_change.chart_text', 
-        km: country_cover_change[:change_km], 
-        habitat: habitat.title, 
-        years: '2000-2019'
-      )
+    if status == 'absent'
+      cover_change = 0
+      text = I18n.t('countries.shared.habitat_change.chart_text_confirmed_absence')
+    elsif status == 'unknown'
+      cover_change = 0
+      text = I18n.t('countries.shared.habitat_change.chart_text_presence_unknown')
+    else
+      country_cover_change = habitat.calculate_country_cover_change(@country.name)
+      cover_change = country_cover_change[:change_percentage]
+      text = I18n.t('countries.shared.habitat_change.chart_text_not_available')
+    end
+
+    change = {
+        id: habitat.name,
+        title: habitat.title,
+        status: status,
+        change: cover_change,
+        text: text
+      }
+
+    if status == 'present'
+      unless change[:change] == 0
+          change[:is_available] = true
+          change[:text] = I18n.t('countries.shared.habitat_change.chart_text',
+            km: country_cover_change[:change_km],
+            habitat: habitat.title,
+            years: '2000-2019'
+          )
+      end
     end
 
     change
   end
 end
+

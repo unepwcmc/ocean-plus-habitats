@@ -55,9 +55,9 @@
   }
 %>
 
-<%= render partial: '/countries/partials/habitat-change',
+<%= render partial: '/countries/partials/habitat-change-country',
   locals: {
-    modal_content: country_habitat_change_modal
+    habitat_change: @habitat_change, modal_content: country_habitat_change_modal
   }
 %>
 

@@ -13,6 +13,13 @@
   }
 %>
 
+<%= render partial: '/site/partials/eez_map',
+  locals: {
+    id: 'eez_map',#"section-#{t('home.nav_sticky')[0][:id]}",
+    datasets: @eez_map_datasets
+  }
+%>
+
 <%= render partial: '/site/partials/habitat-cover',
   locals: {
     id: "section-#{t('home.nav_sticky')[1][:id]}",

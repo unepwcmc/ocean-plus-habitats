@@ -1,7 +1,7 @@
 export const getSubLayerId = (layer, layerType) => layer.id + '-' + layerType
 
 export const getSubLayerIds = layer =>
-  ['poly', 'point', 'line'].map(layerType => getSubLayerId(layer, layerType))
+  ['poly', 'point', 'line', 'no-data', '0-20', '21-40', '41-60', '61-80', '81-100'].map(layerType => getSubLayerId(layer, layerType))
 
 export const getSubLayers = (config, isSelected) => {
   const layers = []
@@ -10,12 +10,16 @@ export const getSubLayers = (config, isSelected) => {
     visible: isSelected
   }
 
-  Object.keys(layer.sourceLayers).forEach(layerType => {
+  layer.sourceLayers.forEach(layerType => {
+    const subName = layerType.sub_name || layerType.type
+
     layers.push({
       ...layer,
-      type: layerType,
-      sourceLayer: layer.sourceLayers[layerType],
-      id: getSubLayerId(layer, layerType)
+      color: layerType.color || layer.color,
+      type: layerType.type,
+      sourceLayer: layerType.name,
+      filter_id: layerType.filter_id,
+      id: getSubLayerId(layer, subName)
     })
   })
 
