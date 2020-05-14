@@ -9,9 +9,7 @@ $chart-legend-key-icon-size: rem-calc(22);
 &__legend {
 
   .chart--row-stacked & {
-    max-width: 90%;
-
-    display: flex;
+    @include flex;
   }
 
   &-item {
