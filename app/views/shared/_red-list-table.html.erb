@@ -16,19 +16,16 @@
 
   <% @red_list_data.each do |habitat| %>
     <div class="table__column">
+      <div class="table__cell">
+        <i class="table__icon <%= habitat['data'].present? ? get_habitat_icon_class(habitat[:id]) :
+        get_habitat_icon_class(habitat[:id]) + '-absent'  %>" alt="<%= habitat[:title] %> icon"></i>
+        <span class="table__title"><%= habitat[:title] %></span>
+      </div>
       <% if habitat['data'].present? %>
-        <div class="table__cell">
-          <i class="table__icon <%= get_habitat_icon_class(habitat[:id]) %>" alt="<%= habitat[:title] %> icon"></i>
-          <span class="table__title"><%= habitat[:title] %></span>
-        </div>
         <% habitat['data'].each do |name, integer| %>
           <div class="table__cell"><%= integer %></div>
         <% end %>
       <% else %>
-        <div class="table__cell">
-          <i class="table__icon <%= get_habitat_icon_class(habitat[:id])-%>-absent" alt="<%= habitat[:title] %> icon"></i>
-          <span class="table__title"><%= habitat[:title] %></span>
-        </div>
         <% present_habitat['data'].length.times do %>
           <div class="table__cell">-</div>
         <% end %>

@@ -24,7 +24,7 @@
           <div class="card__habitat">
             <p class="card__habitat-title"><%= dataset[:name] %></p>
             <p class="card__habitat-status">
-              <% if (dataset_status(dataset) == 'unknown') %>
+              <% if (dataset_status(dataset) == 'unknown' || dataset_status(dataset) == 'absent') %>
                 <%= dataset_status_title(dataset) %>
               <% else %>
                 <span class="card__habitat-percentage"><%= protected_percentage(dataset) %>%</span>

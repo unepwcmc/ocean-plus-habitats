@@ -9,6 +9,7 @@
       :class="{ 'map-filter--active': isActive }"
     >
       <span
+        v-show="!disabled"
         :class="[ 'map-filters__filter-key', standardClass, isActiveClass ]"
       />
       <span

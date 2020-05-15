@@ -84,6 +84,7 @@
       padding-right: 20px;
 
       &.disabled {
+        color: $grey;
         cursor: default;
         pointer-events: none;
 
