@@ -76,7 +76,7 @@ export default {
 
   computed: {
     circumference() {
-      return this.width * Math.PI
+      return 2 * this.radius * Math.PI
     },
     strokeOffset() {
       return (this.inversePercentage / 100) * this.circumference
