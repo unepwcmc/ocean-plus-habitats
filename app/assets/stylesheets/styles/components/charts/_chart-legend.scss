@@ -42,7 +42,7 @@ $chart-legend-key-icon-size: rem-calc(22);
     }
 
     &-key-icon {
-      @include chart-get-colours;
+      @include legend-get-colours;
       @include flex-no-shrink;
       border-radius: 100%;
       margin-right: rem-calc(14);
@@ -52,7 +52,7 @@ $chart-legend-key-icon-size: rem-calc(22);
 
       .chart--row-stacked & {
         border-radius: 3px;
-        border: $border-thin $grey-xlight;
+        border: $border-thin $grey;
 
         &.theme--multiple { background-color: $green-light; }
         &.theme--notcovered { background-color: $grey; }

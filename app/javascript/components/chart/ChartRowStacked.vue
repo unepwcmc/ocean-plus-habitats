@@ -5,7 +5,7 @@
         v-for="(row, i) in rowsPruned"
         :key="`chart-row-${_uid}-${i}`"
         class="chart__bar flex flex-v-center"
-        :class="themeClass"
+        :class="`chart-theme--${row.id}`"
         :style="{ width: row.percent + '%' }"
       >
         <span
@@ -50,10 +50,8 @@ export default {
   computed: {
     rowsPruned() {
       return this.legend.filter(habitat => habitat.percent > 0 )
-    },
-    themeClass () {
-      return `chart-theme--${this.theme}`
     }
   }
 }
 </script>
+
