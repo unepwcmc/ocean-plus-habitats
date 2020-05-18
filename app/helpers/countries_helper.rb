@@ -49,6 +49,11 @@ module CountriesHelper
     end
   end
 
+  def habitat_status(habitat)
+    return 'present' if @habitats_present.nil?
+    @habitats_present.find { |hab_present| hab_present[:id] == habitat[:id] }[:status]
+  end
+
   def habitats_present_modal
     {
       title: 'Hardcoded title in controller',
