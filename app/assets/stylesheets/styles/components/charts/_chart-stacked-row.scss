@@ -45,11 +45,11 @@
 
           position: relative;
 
-          &.chart-theme--habitats { @include bars($theme-gradient-habitats); }
+          // &.chart-theme--habitats { @include bars($theme-gradient-habitats); }
 
-          @each $habitat in $theme-gradient-habitat-colours {
+          @each $habitat, $value in $theme_gradient_habitat_colours {
             &.chart-theme--#{$habitat} {
-              background-color: map-get($theme-gradient-habitat-colours, $habitat);
+              background-color: $value;
             }
           }
 
