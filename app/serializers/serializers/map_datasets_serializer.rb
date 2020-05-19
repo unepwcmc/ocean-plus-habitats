@@ -110,12 +110,10 @@ class Serializers::MapDatasetsSerializer < Serializers::Base
   end
 
   def serialize
-    map_datasets = DATASETS.reject {|ds| habitat_presence_status(ds) == 'absent'}
-
-    map_datasets.map do |ds|
+    DATASETS.map do |ds|
       dataset = ds.dup
       dataset[:name] = get_habitat_from_id(ds[:id])[:title]
-      dataset[:disabled] = habitat_presence_status(ds) == 'unknown' ? true : false
+      dataset[:disabled] = habitat_presence_status(ds) == 'unknown' || habitat_presence_status(ds) == 'absent'  ? true : false
 
       dataset
     end

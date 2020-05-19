@@ -20,8 +20,8 @@ class Serializers::RepresentationHabitatsSerializer < Serializers::Base
     {
       legend: @legend,
       chart: {
-        coastline_length: @coastal_stat.total_coast_length.round,
-        theme: "habitats"
+        coastline_length: ActiveSupport::NumberHelper.number_to_delimited(@coastal_stat.total_coast_length.round),
+        theme: "habitats",
       }
     }
   end
