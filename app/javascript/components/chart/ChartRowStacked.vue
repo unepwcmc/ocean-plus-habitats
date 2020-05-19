@@ -2,10 +2,10 @@
   <div class="chart--row-stacked">
     <ul class="chart__chart ul-unstyled flex">
       <li
-        v-for="(row, i) in rows"
+        v-for="(row, i) in rowsPruned"
         :key="`chart-row-${_uid}-${i}`"
         class="chart__bar flex flex-v-center"
-        :class="themeClass"
+        :class="`chart-theme--${row.id}`"
         :style="{ width: row.percent + '%' }"
       >
         <span
@@ -41,10 +41,6 @@ export default {
       type: String,
       default: ''
     },
-    rows: {
-      type: Array,
-      required: true
-    },
     legend: {
       type: Array,
       default: () => []
@@ -52,9 +48,10 @@ export default {
   },
 
   computed: {
-    themeClass () {
-      return `chart-theme--${this.theme}`
+    rowsPruned() {
+      return this.legend.filter(habitat => habitat.percent > 0 )
     }
   }
 }
 </script>
+

@@ -21,7 +21,7 @@ $bar-center-divider-width: rem-calc(5);
       margin: $chart-row-margin;
       width: 100%;
     }
-    
+
       &__chart {
         @include flex;
         @include flex-v-center;
@@ -32,23 +32,23 @@ $bar-center-divider-width: rem-calc(5);
         position: relative;
       }
 
-        &__index { 
-          @include text-chart; 
+        &__index {
+          @include text-chart;
           margin-right: rem-calc(12);
         }
-        
+
         &__bar {
           @include flex;
-          @include chart-get-colours;
+          @include legend-get-colours;
           @include chart-row-bar-basic;
-          
+
           position: absolute;
           top: 0;
           left: 50%;
-          
+
           transform-origin: left;
           transition: transform 1s ease-out;
-          
+
           &.animate { transform: scaleX(1); }
         }
 

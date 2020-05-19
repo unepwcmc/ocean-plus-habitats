@@ -13,6 +13,7 @@
   }
 }
 
+
 //--------------------------------------------------
 // stacked row chart
 //--------------------------------------------------
@@ -38,13 +39,26 @@
       }
 
         &__bar {
-          border: $border-thin $grey-xxdark;
+          border: $border-thin $grey-xlight;
           margin-bottom: 0;
           height: 100%;
 
           position: relative;
 
           &.chart-theme--habitats { @include bars($theme-gradient-habitats); }
+
+          @each $habitat, $value in $theme_gradient_habitat_colours {
+            &.chart-theme--#{$habitat} {
+              background-color: $value;
+
+              @for $i from 1 through 7 {
+                .chart_percent {
+                  @if $i%2 != 0 { @include chart-tooltip('bottom', $value); }
+                  @if $i%2 == 0 { @include chart-tooltip('top', $value); }
+                }
+              }
+            }
+          }
 
           &:nth-child(n+2) {
             border-left: 0;

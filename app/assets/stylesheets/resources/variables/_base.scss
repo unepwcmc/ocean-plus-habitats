@@ -38,6 +38,7 @@ $color-coldcorals: $theme-red;
 
 $theme-gradient-habitats: $green-light $theme-magenta $theme-purple $theme-yellow $theme-blue $theme-red $grey;
 
+
 //--------------------------------------------------
 // fonts
 //--------------------------------------------------
@@ -153,3 +154,12 @@ $habitat_colours: (
 );
 
 
+$theme_gradient_habitat_colours: (
+  'coralreefs': $theme-pink,
+  'saltmarshes': $theme-purple,
+  'mangroves': $theme-yellow,
+  'seagrasses': $theme-blue,
+  'coldcorals': $theme-red,
+  'multiple': $green-light,
+  'notcovered': $grey
+);

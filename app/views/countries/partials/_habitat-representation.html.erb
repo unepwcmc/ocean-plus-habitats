@@ -7,7 +7,6 @@
 
   <h3><%= t('countries.shared.habitat_representation.chart_heading', coastline_length: @stacked_row_chart[:chart][:coastline_length]).html_safe %></h3>
   <chart-row-stacked
-    :rows="<%= @stacked_row_chart[:chart][:rows].to_json %>"
     theme="<%= @stacked_row_chart[:chart][:theme] %>"
     :legend="<%= @stacked_row_chart[:legend].to_json %>">
   </chart-row-stacked>
