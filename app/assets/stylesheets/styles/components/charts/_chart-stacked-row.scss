@@ -45,11 +45,18 @@
 
           position: relative;
 
-          // &.chart-theme--habitats { @include bars($theme-gradient-habitats); }
+          &.chart-theme--habitats { @include bars($theme-gradient-habitats); }
 
           @each $habitat, $value in $theme_gradient_habitat_colours {
             &.chart-theme--#{$habitat} {
               background-color: $value;
+
+              @for $i from 1 through 7 {
+                .chart_percent {
+                  @if $i%2 != 0 { @include chart-tooltip('bottom', $value); }
+                  @if $i%2 == 0 { @include chart-tooltip('top', $value); }
+                }
+              }
             }
           }
 
