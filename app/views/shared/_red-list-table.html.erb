@@ -12,25 +12,19 @@
     <div class="table__cell bold"><%= t('countries.shared.red_list.total') %>:</div>
   </div>
 
-  <% present_habitat = @red_list_data.find { |habitat| habitat['data'].present? } %>
-
   <% @red_list_data.each do |habitat| %>
     <div class="table__column">
+      <div class="table__cell">
+        <i class="table__icon <%= get_habitat_icon_class(habitat[:id], habitat_status(habitat)) %>" alt="<%= habitat[:title] %> icon"></i>
+        <span class="table__title"><%= habitat[:title] %></span>
+      </div>
       <% if habitat['data'].present? %>
-        <div class="table__cell">
-          <i class="table__icon <%= get_habitat_icon_class(habitat[:id]) %>" alt="<%= habitat[:title] %> icon"></i>
-          <span class="table__title"><%= habitat[:title] %></span>
-        </div>
         <% habitat['data'].each do |name, integer| %>
           <div class="table__cell"><%= integer %></div>
         <% end %>
       <% else %>
-        <div class="table__cell">
-          <i class="table__icon <%= get_habitat_icon_class(habitat[:id])-%>-absent" alt="<%= habitat[:title] %> icon"></i>
-          <span class="table__title"><%= habitat[:title] %></span>
-        </div>
-        <% present_habitat['data'].length.times do %>
-          <div class="table__cell">-</div>
+        <% habitat_with_data['data'].length.times do %>
+          <%= habitats_present_redlist.include?(habitat) ? "<div class=\"table__cell\">0</div>".html_safe : "<div class=\"table__cell\">-</div>".html_safe %>
         <% end %>
       <% end %>
     </div>

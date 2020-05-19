@@ -37,6 +37,23 @@ module CountriesHelper
     total_value = @country.protection_stats[dataset[:id]] ? @country.protection_stats[dataset[:id]]['total_value'].to_i : 0
   end
 
+  def habitat_with_data
+    @red_list_data.find { |habitat| habitat['data'].present? }
+  end
+
+  def habitats_present_redlist
+    if @habitats_present.nil?
+      @red_list_data
+    else
+      @red_list_data.reject { |habitat| @habitats_present.find { |a| a[:id] == habitat[:id] && a[:status] != 'present' } }
+    end
+  end
+
+  def habitat_status(habitat)
+    return 'present' if @habitats_present.nil?
+    @habitats_present.find { |hab_present| hab_present[:id] == habitat[:id] }[:status]
+  end
+
   def habitats_present_modal
     {
       title: 'Hardcoded title in controller',
