@@ -29,6 +29,10 @@ class SiteController < ApplicationController
     end
   end
 
+  def download_stats
+    send_data GeoEntityStat.to_csv, filename: "Ocean-habitas-stats-#{Date.today}.csv"
+  end
+
   def about
   end
 

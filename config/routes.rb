@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get '/:name' => 'countries#show'
   get 'site/methodologies' => 'site#methodologies', as: 'methodologies'
   get 'site/about' => 'site#about', as: 'about'
+  get 'site/download_stats' => 'site#download_stats', as: 'download_stats'
 end
