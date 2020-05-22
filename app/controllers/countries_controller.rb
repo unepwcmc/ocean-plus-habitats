@@ -11,7 +11,7 @@ class CountriesController < ApplicationController
     habitats_present_status = @country.occurrences
 
     @map_datasets = Serializers::MapDatasetsSerializer.new(habitats_protection_stats, habitats_present_status).serialize
-    @habitats_present = Serializers::HabitatsPresentSerializer.new(habitats_present_status, country_yml).serialize
+    @habitats_present = Serializers::HabitatsPresentSerializer.new(habitats_present_status, @country).serialize
 
     red_list_data = @country.count_species
     @red_list_data = habitats.each { |habitat| habitat['data'] = red_list_data[habitat[:id]] }

@@ -14,14 +14,10 @@
           class="modal__close"
           @click="closeModal"
         />
-          
-        <h3 class="modal__title">
-          {{ content.title }}
-        </h3>
-        
+
         <div>
           <p
-            v-for="(p, index) in content.text"
+            v-for="(p, index) in content"
             :key="getVForKey('modal', index)"
             v-html="p"
           />
@@ -41,7 +37,7 @@ export default {
 
   mixins: [
     mixinIds,
-    mixinFocusCapture({toggleVariable: 'isActive', closeCallback: 'closeModal'}), 
+    mixinFocusCapture({toggleVariable: 'isActive', closeCallback: 'closeModal'}),
     mixinPopupCloseListeners({closeCallback: 'closeModal', closeOnClickOutside: false})
   ],
 
