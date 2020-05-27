@@ -1,10 +1,10 @@
 <section id="<%= id %>" class="container section-padding--top">
   <div>
     <h2>
-      <%= current_page?('/') ? t('home.proportion_protected.title_html') : t('countries.shared.proportion_protected.title_html'); %>
+      <%= t('shared.proportion_protected.title_html'); %>
       <modal-trigger id="citation" :modal-content="<%= modal_content %>" class="icon--citation margin-space-left"></modal-trigger>
     </h2>
-    <p class="text-body"><%= current_page?('/') ? t('home.proportion_protected.intro_text') : t('countries.shared.proportion_protected.intro_text', country_name: t("countries.#{@yml_key}.title")) %></p>
+    <p class="text-body"><%= current_page?('/') ? t('shared.proportion_protected.intro_text_global') : t('shared.proportion_protected.intro_text', country_name: t("countries.#{@yml_key}.title")) %></p>
   </div>
 
   <div class="cards--protection-dials">
@@ -41,6 +41,6 @@
       </div>
     <% end %>
   </div>
-  <p class="text--smallprint"><%= current_page?('/') ? t('home.proportion_protected.note').html_safe : t('countries.shared.proportion_protected.note').html_safe; %></p>
-  <p class="text--smallprint right"><%= current_page?('/') ? t('home.proportion_protected.last_updated') : t('countries.shared.proportion_protected.last_updated'); %></p>
+  <p class="text--smallprint"><%= t('shared.proportion_protected.note').html_safe; %></p>
+  <p class="text--smallprint right"><%= t('shared.proportion_protected.last_updated'); %></p>
 </section>
