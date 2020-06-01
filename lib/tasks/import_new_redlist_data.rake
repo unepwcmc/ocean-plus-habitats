@@ -124,7 +124,7 @@ namespace :import do
 
   def import_geo_entity_stat_sources(row, habitat)
     iso3 = row['iso3']
-    citation = row['source_id'].split(';')
+    citation = row['occ_source_id'].split(';')
 
     geo_entity = GeoEntity.find_by(iso3: iso3)
     if geo_entity.blank? && !iso3.downcase == 'global'
