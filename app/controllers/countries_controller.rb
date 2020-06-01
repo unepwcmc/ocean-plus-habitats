@@ -34,5 +34,6 @@ class CountriesController < ApplicationController
     @habitat_change = Serializers::HabitatCountryChangeSerializer.new(@country, habitats_present_status).serialize
 
     @stacked_row_chart = Serializers::RepresentationHabitatsSerializer.new(@country).serialize
+    @country_citations = @country.country_citations.order(:citation).pluck(:citation)
   end
 end

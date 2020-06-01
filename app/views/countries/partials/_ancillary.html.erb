@@ -1,6 +1,6 @@
 <section class="container section-padding--top">
   <h2><%= t('countries.shared.ancillary.sources_title'); %></h2>
-  <% t('countries.shared.ancillary.sources').each do |s| %>
+  <% citations.each do |s| %>
     <p><%= s.html_safe %></p>
   <% end %>
   <p class="center"><%= t('countries.shared.ancillary.sources_note').html_safe %></p>
