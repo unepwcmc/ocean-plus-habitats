@@ -17,7 +17,8 @@
 <%= render partial: '/countries/partials/habitat-extent',
   locals: {
     iso3: @country.iso3,
-    datasets: @map_datasets
+    datasets: @map_datasets,
+    modal_content: habitats_protected_modal
   }
 %>
 
@@ -26,14 +27,14 @@
     id: "section-#{t('countries.nav_sticky')[1][:id]}",
     map_datasets: @map_datasets,
     habitats_present: @habitats_present,
-    modal_content: habitats_present_modal
+    modal_content: habitats_protected_modal
   }
 %>
 
 <% unless @stacked_row_chart.empty? %>
   <%= render partial: '/countries/partials/habitat-representation',
     locals: {
-      modal_content: country_red_list_modal
+      modal_content: habitats_representation_modal
     }
   %>
 <% end %>

@@ -2,31 +2,28 @@ en:
   home:
     habitat_cover:
       title: Change in habitat cover
-      citation:
-        - citation here
-      habitats: 
+      citations:
+        - "IPBES (2019) Summary for policymakers of the global assessment report of biodiversity and ecosystem services of the Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services. URL: https://www.ipbes.net/system/tdf/ipbes_7_10_add.1_en_1.pdf?file=1&type=node&id=35329"
+        - "Crooks S, Herr D, Tamelander J, Laffoley D, Vandever J. (2011). Mitigating climate change through restoration and management of coastal wetlands and near-shore marine ecosystems: challenges and opportunities. Environment department papers 121. Marine Ecosystem Series. Washington, DC: World Bank."
+        - "World Atlas of Mangroves Spalding, M., Kainuma, M., Collins, L. (2010). World atlas of mangroves. ITTO, ISME, FAO"
+      habitats:
         coralreefs:
           title: Warm-water coral reefs
           text: ! '<strong>%{change_km}</strong> km<sup>2</sup> change in warm-water coral cover <strong>(%{change_percentage}%)</strong><br><strong>Baseline year: %{baseline_year}<br>Original total: %{original_total}km<sup>2</sup></strong>'
-          citation: 
-            - 'Warm water coral tooltip text'
+          citation: "IPBES (2019) Summary for policymakers of the global assessment report of biodiversity and ecosystem services of the Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services. URL: https://www.ipbes.net/system/tdf/ipbes_7_10_add.1_en_1.pdf?file=1&type=node&id=35329"
         saltmarshes:
           title: Saltmarshes
           text: ! '<strong>%{change_km}</strong> km<sup>2</sup> change in saltmarsh cover <strong>(%{change_percentage}%)</strong><br><strong>Baseline year: %{baseline_year}<br>Original total: %{original_total}km<sup>2</sup></strong>'
-          citation: 
-            - 'Saltmarshes tooltip text'
+          citation: "Crooks S, Herr D, Tamelander J, Laffoley D, Vandever J. (2011). Mitigating climate change through restoration and management of coastal wetlands and near-shore marine ecosystems: challenges and opportunities. Environment department papers 121. Marine Ecosystem Series. Washington, DC: World Bank."
         mangroves:
           title: Mangroves
           text: ! '<strong>%{change_km}</strong> km<sup>2</sup> change in mangrove cover <strong>(%{change_percentage}%)</strong><br><strong>Baseline year: %{baseline_year}<br>Original total: %{original_total}km<sup>2</sup></strong>'
-          citation: 
-            - 'Mangroves tooltip text'
+          citation:  "World Atlas of Mangroves Spalding, M., Kainuma, M., Collins, L. (2010). World atlas of mangroves. ITTO, ISME, FAO,"
         seagrasses:
           title: Seagrasses
           text: ! '<strong>%{change_km}</strong> km<sup>2</sup> change in seagrass cover <strong>(%{change_percentage}%)</strong><br><strong>Baseline year: %{baseline_year}<br>Original total: %{original_total}km<sup>2</sup></strong>'
-          citation: 
-            - 'Seagrasses tooltip text'
+          citation: "IPBES (2019) Summary for policymakers of the global assessment report of biodiversity and ecosystem services of the Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services. URL: https://www.ipbes.net/system/tdf/ipbes_7_10_add.1_en_1.pdf?file=1&type=node&id=35329"
         coldcorals:
           title: Cold-water corals
           text: ! '<strong>%{change_km}</strong> km<sup>2</sup> change in cold-water coral cover <strong>(%{change_percentage}%)</strong><br><strong>Baseline year: %{baseline_year}<br>Original total: %{original_total}km<sup>2</sup></strong>'
-          citation: 
-            - 'Cold-water corals tooltip text'
+          citation:

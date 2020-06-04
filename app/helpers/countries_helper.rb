@@ -10,13 +10,6 @@ module CountriesHelper
     I18n.t('countries.nav_sticky').to_json
   end
 
-  def country_red_list_modal
-    {
-      title: 'Title hardcoded in controller',
-      text: I18n.t('countries.shared.red_list.citation')
-    }.to_json
-  end
-
   def dataset_status(dataset)
     dataset_status = @country.occurrences[dataset[:id]]
   end
@@ -55,10 +48,35 @@ module CountriesHelper
   end
 
   def habitats_present_modal
-    {
-      title: 'Hardcoded title in controller',
-      text: I18n.t('countries.shared.habitats_present.citation')
-    }.to_json
+    I18n.t('countries.shared.habitats_present.citations').each do |cit|
+      {
+        text: cit
+      }.to_json
+    end
+  end
+
+  def habitats_protected_modal
+    I18n.t('countries.shared.proportion_protected.citations').each do |cit|
+      {
+        text: cit
+      }.to_json
+    end
+  end
+
+  def habitats_representation_modal
+    I18n.t('countries.shared.habitat_representation.citations').each do |cit|
+      {
+        text: cit
+      }.to_json
+    end
+  end
+
+  def country_red_list_modal
+    I18n.t('countries.shared.red_list.citations', year: Date.today.year).each do |cit|
+      {
+        text: cit
+      }.to_json
+    end
   end
 
   def habitat_condition_modal
@@ -69,10 +87,11 @@ module CountriesHelper
   end
 
   def country_habitat_change_modal
-    {
-      title: 'Title hardcoded in controller',
-      text: I18n.t('countries.shared.habitat_change.citation')
-    }.to_json
+    I18n.t('countries.shared.habitat_change.citations').each do |cit|
+      {
+        text: cit
+      }.to_json
+    end
   end
 
   def target_tabs

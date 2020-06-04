@@ -1,5 +1,8 @@
 <section id="<%= id %>" class="container section-padding">
-  <h2><%= t('home.locations_map.title') %></h2>
+  <h2>
+    <%= t('home.locations_map.title') %>
+    <modal-trigger id="citation" :modal-content="<%= modal_content %>" class="icon--citation margin-space-left"></modal-trigger>
+  </h2>
   <% t('home.locations_map.text').each do |p| %>
     <p><%= p.html_safe %></p>
   <% end %>

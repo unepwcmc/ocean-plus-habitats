@@ -9,14 +9,16 @@
 <%= render partial: '/site/partials/map',
   locals: {
     id: "section-#{t('home.nav_sticky')[0][:id]}",
-    datasets: @map_datasets
+    datasets: @map_datasets,
+    modal_content: habitats_protected_modal
   }
 %>
 
 <%= render partial: '/site/partials/eez_map',
   locals: {
-    id: 'eez_map',#"section-#{t('home.nav_sticky')[0][:id]}",
-    datasets: @eez_map_datasets
+    id: 'eez_map',
+    datasets: @eez_map_datasets,
+    modal_content: habitats_protected_modal
   }
 %>
 

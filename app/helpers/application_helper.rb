@@ -84,11 +84,15 @@ module ApplicationHelper
   end
 
   def habitat_cover_modal
-    { title: 'Title hardcoded in controller', text: I18n.t('home.habitat_cover.citation') }.to_json
+    I18n.t('home.habitat_cover.citations').each do |cit|
+      { text: cit }.to_json
+    end
   end
 
   def red_list_modal
-    { title: 'Title hardcoded in controller', text: I18n.t('home.red_list.citation') }.to_json
+    I18n.t('home.red_list.citations', year: Date.today.year).each do |cit|
+      { text: cit }.to_json
+    end
   end
 
   def habitat_change_modal

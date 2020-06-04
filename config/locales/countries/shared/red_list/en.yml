@@ -4,9 +4,8 @@ en:
       red_list:
         title: Species composition and status by habitat
         intro_text: The table below outlines the number of species for each habitat by their global IUCN Red List status, illustrating the number of assessed at risk species known to occur in %{country_name}.
-        citation:
-          - citation
-          - citation
+        citations:
+          - "IUCN %{year}. The IUCN Red List of Threatened Species. Version[Latest]. https://www.iucnredlist.org. Accessed on [Date of Update]."
         total: Total
         smalltext_1: '<strong>Warning:</strong> These statuses derive from global assessments, and do not necessarily reflect each species’ status by country. We will endeavour to strengthen alignment with national Red List assessments, where possible. Please contact us at oceanplus@unep-wcmc.org if you would like to provide further information.'
         smalltext_2: '<strong>Source:</strong> Adapted from data available through the IUCN Red List of Threatened Species'
