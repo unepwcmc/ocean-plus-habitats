@@ -1,9 +1,9 @@
 //--------------------------------------------------
 // settings
 //--------------------------------------------------
-$modal-button-mobile: 30px;
-$modal-button-tablet: 50px;
-$modal-button-laptop: 70px;
+$modal-button-mobile: 20px;
+$modal-button-tablet: 40px;
+$modal-button-laptop: 60px;
 
 @mixin modal-button-sizing($mobile, $tablet, $laptop) {
   @include responsive-styles(width, $mobile, $tablet, $laptop);
@@ -23,7 +23,7 @@ $modal-padding-laptop: $modal-button-laptop;
 .modal {
   @include flex-center;
   background-color: rgba($black, .1);
-  
+
   display: none;
   position: fixed;
   top: 0;
@@ -47,13 +47,14 @@ $modal-padding-laptop: $modal-button-laptop;
   }
 
     &__content {
-      padding: 0 $item-spacing-large $item-spacing-large;
+      @include text-6;
+      padding: 0 $item-spacing-xlarge $item-spacing-large;
     }
 
       &__close {
         @include button--close;
         @include modal-button-sizing($modal-button-mobile, $modal-button-tablet, $modal-button-laptop);
-        
+
         position: absolute;
       }
 
