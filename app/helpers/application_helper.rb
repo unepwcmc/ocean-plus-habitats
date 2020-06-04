@@ -110,6 +110,10 @@ module ApplicationHelper
     habitats.select{ |h| h[:id] == id }[0]
   end
 
+  def habitat_protection(name)
+    Habitat.find_by(name: name).calculate_global_protection
+  end
+
   def get_countries_search_config
     {
       id: 'country',

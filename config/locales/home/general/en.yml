@@ -8,6 +8,9 @@ en:
         id: where-are-they
         title: Habitat location
       -
+        id: proportion-protected
+        title: Proportion protected
+      -
         id: protection-level
         title: Level of protection
       -

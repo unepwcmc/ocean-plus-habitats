@@ -39,6 +39,16 @@ class Habitat < ApplicationRecord
     })
   end
 
+  def calculate_global_protection
+    total_habitat_cover = GeoEntityStat.includes(:geo_entity).where.not(geo_entities: { iso3: nil }).where(habitat_id: id).pluck(:total_value).reduce { |sum, value| sum + value }
+    protected_habitat_cover = GeoEntityStat.includes(:geo_entity).where.not(geo_entities: { iso3: nil }).where(habitat_id: id).pluck(:protected_value).reduce { |sum, value| sum + value }
+    percentage_globally_protected = (protected_habitat_cover / total_habitat_cover) * 100
+
+    global_protection = {
+      percentage_protection: percentage_globally_protected.round(2), total_habitat_cover: total_habitat_cover.round(2)
+    }
+  end
+
   def occurrence(geo_entity_id)
     geo_entity_stats.find_by(geo_entity_id: geo_entity_id)&.occurrence
   end
