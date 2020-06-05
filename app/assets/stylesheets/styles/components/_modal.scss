@@ -1,9 +1,9 @@
 //--------------------------------------------------
 // settings
 //--------------------------------------------------
-$modal-button-mobile: 20px;
-$modal-button-tablet: 40px;
-$modal-button-laptop: 60px;
+$modal-button-mobile: 15px;
+$modal-button-tablet: 25px;
+$modal-button-laptop: 45px;
 
 @mixin modal-button-sizing($mobile, $tablet, $laptop) {
   @include responsive-styles(width, $mobile, $tablet, $laptop);
@@ -16,6 +16,15 @@ $modal-button-laptop: 60px;
 $modal-padding-mobile: $modal-button-mobile * 2;
 $modal-padding-tablet: $modal-button-tablet * 2;
 $modal-padding-laptop: $modal-button-laptop;
+
+//--------------------------------------------------
+// link
+//--------------------------------------------------
+
+@mixin link {
+  // To stop very long links from overflowing inner div of modal
+  word-break: break-word;
+}
 
 //--------------------------------------------------
 // classes
@@ -49,6 +58,10 @@ $modal-padding-laptop: $modal-button-laptop;
     &__content {
       @include text-6;
       padding: 0 $item-spacing-xlarge $item-spacing-large;
+    }
+
+    &__link {
+      @include link;
     }
 
       &__close {

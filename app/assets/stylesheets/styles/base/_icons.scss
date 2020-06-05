@@ -4,7 +4,7 @@
 @mixin icon-basic() {
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: auto;
 }
 
 @mixin icon-button-reset() {

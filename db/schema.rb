@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200109132010) do
+ActiveRecord::Schema.define(version: 20200601085807) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,9 +34,22 @@ ActiveRecord::Schema.define(version: 20200109132010) do
     t.index ["habitat_id"], name: "index_change_stats_on_habitat_id"
   end
 
+  create_table "coastal_stats", force: :cascade do |t|
+    t.bigint "geo_entity_id"
+    t.decimal "total_coast_length", default: "0.0"
+    t.decimal "multiple_habitat_length", default: "0.0"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["geo_entity_id"], name: "index_coastal_stats_on_geo_entity_id"
+  end
+
+  create_table "country_citations", force: :cascade do |t|
+    t.text "citation", null: false
+    t.integer "country_id", null: false
+  end
+
   create_table "geo_entities", force: :cascade do |t|
     t.string "name", null: false
-    t.string "iso2"
     t.string "iso3"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -61,8 +74,17 @@ ActiveRecord::Schema.define(version: 20200109132010) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "occurrence", limit: 2, default: 1
+    t.decimal "coastal_coverage"
     t.index ["geo_entity_id"], name: "index_geo_entity_stats_on_geo_entity_id"
     t.index ["habitat_id"], name: "index_geo_entity_stats_on_habitat_id"
+  end
+
+  create_table "geo_entity_stats_sources", force: :cascade do |t|
+    t.integer "geo_entity_stat_id"
+    t.integer "citation_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["geo_entity_stat_id", "citation_id"], name: "index_geo_entity_stat_source", unique: true
   end
 
   create_table "geo_relationships", force: :cascade do |t|
@@ -85,8 +107,13 @@ ActiveRecord::Schema.define(version: 20200109132010) do
     t.text "wms_url"
   end
 
+  create_table "sources", force: :cascade do |t|
+    t.integer "citation_id", null: false
+    t.text "citation", null: false
+    t.text "source_url"
+  end
+
   create_table "species", force: :cascade do |t|
-    t.integer "species_id", null: false
     t.string "scientific_name", null: false
     t.string "common_name"
     t.string "redlist_status", null: false
