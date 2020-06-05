@@ -3,7 +3,7 @@ namespace :import do
   task :refresh => [:environment] do
     models =  %w(
       GeoEntityStat ChangeStat GeoRelationship CoastalStat GeoEntity
-      GeoEntitiesSpecies Species
+      GeoEntitiesSpecies Species GeoEntityStatsSources Source CountryCitation
     )
 
     models.each do |m|
@@ -11,7 +11,7 @@ namespace :import do
       m.constantize.send(:delete_all)
     end
 
-    tasks = %w(countries regions prebakedstats coastalstats new_redlist_data)
+    tasks = %w(countries regions sources country_citations prebakedstats coastalstats new_redlist_data)
     tasks.each do |t|
       task_name = "import:#{t}"
 

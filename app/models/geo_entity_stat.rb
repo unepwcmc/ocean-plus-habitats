@@ -1,6 +1,8 @@
 class GeoEntityStat < ApplicationRecord
   belongs_to :habitat
   belongs_to :geo_entity
+  has_many :sources, through: :geo_entity_stats_sources
+  has_many :geo_entity_stats_sources, class_name: 'GeoEntityStatsSources', dependent: :destroy
 
   scope :country_stats, -> { joins(:geo_entity).where('geo_entities.iso3 IS NOT NULL') }
 

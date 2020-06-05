@@ -13,6 +13,8 @@ class GeoEntity < ApplicationRecord
   has_many :country_relationship, foreign_key: :region_id, class_name: 'GeoRelationship'
   has_many :countries, through: :country_relationship, class_name: 'GeoEntity'
 
+  has_many :country_citations, foreign_key: 'country_id'
+
   scope :countries, -> { where.not(iso3: nil) }
   scope :regions, -> { where(iso3: nil) }
 

@@ -1,5 +1,8 @@
 <section class="container section-padding--top">
-  <h2><%= t('countries.shared.habitat_extent.title') %></h2>
+  <div class="flex">
+    <h2> <%= t('countries.shared.habitat_extent.title') %></h2>
+    <modal-trigger id="citation" :modal-content="<%= modal_content %>" class="icon--citation margin-space-left"></modal-trigger>
+  </div>
   <p><%= t('countries.shared.habitat_extent.intro_text', country_name: t("countries.#{@yml_key}.title")) %></p>
   <v-map-interactive
     id="'map-target'"
