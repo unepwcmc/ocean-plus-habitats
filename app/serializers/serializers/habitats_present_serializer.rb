@@ -16,7 +16,7 @@ class Serializers::HabitatsPresentSerializer < Serializers::Base
       habitats_present[:status_title] = get_status_text(habitats_present[:status])
 
       # Transforming plain text URLs into live links
-      source = []
+      source = ['<h3>Sources</h3>']
       if !sources(habitat)[:citation].empty?
         sources(habitat)[:citation].each do |citation|
           source << citation.split.map { |string| string[/^(http)/] ?
