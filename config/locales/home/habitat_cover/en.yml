@@ -27,3 +27,4 @@ en:
           title: Cold-water corals
           text: ! '<strong>%{change_km}</strong> km<sup>2</sup> change in cold-water coral cover <strong>(%{change_percentage}%)</strong><br><strong>Baseline year: %{baseline_year}<br>Original total: %{original_total}km<sup>2</sup></strong>'
           citation:
+      data_deficient: Data deficient

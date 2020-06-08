@@ -14,19 +14,20 @@
   }
 %>
 
-<%= render partial: '/site/partials/eez_map',
-  locals: {
-    id: 'eez_map',
-    datasets: @eez_map_datasets,
-    modal_content: habitats_protected_modal
-  }
-%>
 
 <%= render partial: '/shared/proportion-protected',
   locals: {
     id: "section-#{t('home.nav_sticky')[1][:id]}",
     map_datasets: @map_datasets,
     modal_content: habitats_present_modal
+  }
+%>
+
+<%= render partial: '/site/partials/eez_map',
+  locals: {
+    id: 'eez_map',
+    datasets: @eez_map_datasets,
+    modal_content: habitats_protected_modal
   }
 %>
 
