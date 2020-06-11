@@ -11,7 +11,7 @@
           <div class="flex">
             <i class="card__icon <%= get_habitat_icon_class(habitat[:id]) %>" alt="<%= habitat[:title] %> icon"></i>
             <span class="card__stat">
-              <%= habitat[:change_percentage].exist? ? habitat[:change_percentage] + '%' : t('home.habitat_cover.data_deficient') %>
+              <%= habitat[:change_percentage] ? habitat[:change_percentage].to_s + '%' : t('home.habitat_cover.data_deficient') %>
             </span>
           </div>
 

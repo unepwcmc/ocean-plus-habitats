@@ -1,5 +1,6 @@
 class Habitat < ApplicationRecord
   has_many :geo_entity_stats
+  has_one :global_change_stat
   has_many :change_stats
   has_many :species
 

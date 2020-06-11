@@ -10,7 +10,7 @@ class Serializers::HabitatCoverSerializer < Serializers::Base
     @habitat_cover.each do |habitat, translations|
       habitat_cover_item = translations
 
-      # habitat_global_change = Habitat.find_by(name: habitat.to_s).calculate_global_cover_change
+      habitat_global_change = Habitat.find_by(name: habitat.to_s).calculate_global_cover_change
 
 
       habitat_cover_item[:text] =
