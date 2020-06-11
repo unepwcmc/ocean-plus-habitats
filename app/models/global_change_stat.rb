@@ -1,3 +1,4 @@
 class GlobalChangeStat < ApplicationRecord
-  belongs_to :habitat, -> { where(name: 'mangroves') }
+  belongs_to :habitat
+  has_many :global_change_citations, dependent: :destroy
 end
