@@ -9,22 +9,23 @@ en:
       habitats:
         coralreefs:
           title: Warm-water coral reefs
-          text: ! '<strong>%{change_km}</strong> km<sup>2</sup> change in warm-water coral cover <strong>(%{change_percentage}%)</strong><br><strong>Baseline year: %{baseline_year}<br>Original total: %{original_total}km<sup>2</sup></strong>'
-          citation: "IPBES (2019) Summary for policymakers of the global assessment report of biodiversity and ecosystem services of the Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services. URL: https://www.ipbes.net/system/tdf/ipbes_7_10_add.1_en_1.pdf?file=1&type=node&id=35329"
+          text: ! '<strong>%{change_percentage}</strong> loss in warm-water coral cover<br>between <strong>%{baseline_year}</strong> and <strong>%{recent_year}</strong>'
+          citation: '%{citation} <a href="%{citation_url}">%{citation_url}</a>'
         saltmarshes:
           title: Saltmarshes
-          text: ! '<strong>%{change_km}</strong> km<sup>2</sup> change in saltmarsh cover <strong>(%{change_percentage}%)</strong><br><strong>Baseline year: %{baseline_year}<br>Original total: %{original_total}km<sup>2</sup></strong>'
-          citation: "Crooks S, Herr D, Tamelander J, Laffoley D, Vandever J. (2011). Mitigating climate change through restoration and management of coastal wetlands and near-shore marine ecosystems: challenges and opportunities. Environment department papers 121. Marine Ecosystem Series. Washington, DC: World Bank."
+          text: ! '<strong>%{change_percentage}</strong> loss in saltmarsh cover<br> between <strong>%{baseline_year}</strong> and <strong>%{recent_year}</strong>'
+          citation: '%{citation} <a href="%{citation_url}">%{citation_url}</a>'
         mangroves:
           title: Mangroves
-          text: ! '<strong>%{change_km}</strong> km<sup>2</sup> change in mangrove cover <strong>(%{change_percentage}%)</strong><br><strong>Baseline year: %{baseline_year}<br>Original total: %{original_total}km<sup>2</sup></strong>'
-          citation:  "World Atlas of Mangroves Spalding, M., Kainuma, M., Collins, L. (2010). World atlas of mangroves. ITTO, ISME, FAO,"
+          text: ! '<strong>%{change_percentage}</strong> loss in mangrove cover<br> between <strong>%{baseline_year}</strong> and <strong>%{recent_year}</strong>'
+          citation:  '%{citation} <a href="%{citation_url}">%{citation_url}</a>'
         seagrasses:
           title: Seagrasses
-          text: ! '<strong>%{change_km}</strong> km<sup>2</sup> change in seagrass cover <strong>(%{change_percentage}%)</strong><br><strong>Baseline year: %{baseline_year}<br>Original total: %{original_total}km<sup>2</sup></strong>'
-          citation: "IPBES (2019) Summary for policymakers of the global assessment report of biodiversity and ecosystem services of the Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services. URL: https://www.ipbes.net/system/tdf/ipbes_7_10_add.1_en_1.pdf?file=1&type=node&id=35329"
+          text: ! '<strong>%{change_percentage}</strong> loss in seagrass cover<br> between <strong>%{baseline_year}</strong> and <strong>%{recent_year}</strong>'
+          citation: '%{citation} <a href="%{citation_url}">%{citation_url}</a>'
         coldcorals:
           title: Cold-water corals
-          text: ! '<strong>%{change_km}</strong> km<sup>2</sup> change in cold-water coral cover <strong>(%{change_percentage}%)</strong><br><strong>Baseline year: %{baseline_year}<br>Original total: %{original_total}km<sup>2</sup></strong>'
-          citation:
-      data_deficient: Data deficient
+          text: ! '<strong>%{change_percentage}</strong> loss in cold-water coral cover<br> between <strong>%{baseline_year}</strong> and <strong>%{recent_year}</strong>'
+          citation: '%{citation} <a href="%{citation_url}">%{citation_url}</a>'
+      data_deficient: Unfortunately, there is currently no data for this particular habitat.
+      no_citation: No citation(s) found.

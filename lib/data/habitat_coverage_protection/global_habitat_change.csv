@@ -1,10 +1,6 @@
-habitat,percentage_lost,baseline_year,recent_year,reference
-coralreefs,50,1870,2019,IPBES (2019) Summary for policymakers of the global assessment report of biodiversity and ecosystem services of the Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services. URL: https://www.ipbes.net/system/tdf/ipbes_7_10_add.1_en_1.pdf?file=1&type=node&id=35329
-saltmarshes,20 - 50%,1850,2019,"Crooks S, Herr D, Tamelander J, Laffoley D, Vandever J. (2011). Mitigating climate change through restoration and management of coastal wetlands and near-shore marine ecosystems: challenges and opportunities. Environment department papers 121. Marine Ecosystem Series. Washington, DC: World Bank.
-
-Duarte CM, Dennison WC, Orth RJW, Carruthers TJB. (2008). The Charisma of Coastal Ecosystems: Addressing the Imbalance. Estuaries and Coasts 31(2): 233-238. doi: http://dx.doi.org/10.1007/s12237-008-9038-7."
-mangroves,20 - 35%,1980,2010,"Global Mangrove Watch Spalding, M., Kainuma, M., Collins, L. (2010). World atlas of mangroves. ITTO, ISME, FAO,
-UNEP-WCMC, UNESCO-MAB and UNU-INWEH. Earthscan UK, USA.
-
-Polidoro BA, Carpenter KE, Collins L, Duke NC, Ellison AM, Ellison JC, et al. (2010) The Loss of Species: Mangrove Extinction Risk and Geographic Areas of Global Concern. PLoS ONE 5(4): e10095. https://doi.org/10.1371/journal.pone.0010095"
-seagrasses,30,1970,2000,IPBES (2019) Summary for policymakers of the global assessment report of biodiversity and ecosystem services of the Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services. URL: https://www.ipbes.net/system/tdf/ipbes_7_10_add.1_en_1.pdf?file=1&type=node&id=35329
+habitat,percentage_lost,baseline_year,recent_year,reference1,reference2
+Coral reefs,50,1870,2019,IPBES (2019) Summary for policymakers of the global assessment report of biodiversity and ecosystem services of the Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services. URL: https://www.ipbes.net/system/tdf/ipbes_7_10_add.1_en_1.pdf?file=1&type=node&id=35329,
+Saltmarshes,20 - 50%,1850,2019,"Crooks S, Herr D, Tamelander J, Laffoley D, Vandever J. (2011). Mitigating climate change through restoration and management of coastal wetlands and near-shore marine ecosystems: challenges and opportunities. Environment department papers 121. Marine Ecosystem Series. Washington, DC: World Bank.","Duarte CM, Dennison WC, Orth RJW, Carruthers TJB. (2008). The Charisma of Coastal Ecosystems: Addressing the Imbalance. Estuaries and Coasts 31(2): 233-238. doi: http://dx.doi.org/10.1007/s12237-008-9038-7."
+Mangroves,20 - 35%,1980,2010,"Global Mangrove Watch Spalding, M., Kainuma, M., Collins, L. (2010). World atlas of mangroves. ITTO, ISME, FAO,
+UNEP-WCMC, UNESCO-MAB and UNU-INWEH. Earthscan UK, USA.","Polidoro BA, Carpenter KE, Collins L, Duke NC, Ellison AM, Ellison JC, et al. (2010) The Loss of Species: Mangrove Extinction Risk and Geographic Areas of Global Concern. PLoS ONE 5(4): e10095. https://doi.org/10.1371/journal.pone.0010095"
+Seagrasses,30,1970,2000,IPBES (2019) Summary for policymakers of the global assessment report of biodiversity and ecosystem services of the Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services. URL: https://www.ipbes.net/system/tdf/ipbes_7_10_add.1_en_1.pdf?file=1&type=node&id=35329,

@@ -95,6 +95,10 @@ module ApplicationHelper
     end
   end
 
+  def habitat_text(habitat)
+    habitat[:change_percentage] == '-' ? I18n.t('home.habitat_cover.data_deficient') : habitat[:text].html_safe
+  end
+
   def habitat_change_modal
     {
       title: 'Title hardcoded in controller',
