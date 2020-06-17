@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200611155949) do
+ActiveRecord::Schema.define(version: 20200617154739) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -96,7 +96,7 @@ ActiveRecord::Schema.define(version: 20200611155949) do
 
   create_table "global_change_citations", force: :cascade do |t|
     t.text "citation", null: false
-    t.text "citation_url", null: false
+    t.text "citation_url"
     t.bigint "global_change_stat_id"
     t.index ["global_change_stat_id"], name: "index_global_change_citations_on_global_change_stat_id"
   end

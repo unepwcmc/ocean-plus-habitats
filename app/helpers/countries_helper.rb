@@ -47,6 +47,16 @@ module CountriesHelper
     @habitats_present.find { |hab_present| hab_present[:id] == habitat[:id] }[:status]
   end
 
+  def preferential_selection(species)
+    if @example_species_select.find { |habitat| habitat[:id] == 'mangroves'}
+      @example_species_selected = @example_species_select.find { |habitat| habitat[:id] == 'mangroves'}.to_json
+    elsif @example_species_select.find { |habitat| habitat[:id] == 'seagrasses'}
+      @example_species_selected = @example_species_select.find { |habitat| habitat[:id] == 'seagrasses'}.to_json
+    else
+      @example_species_selected = @example_species_select[0].to_json
+    end
+  end
+
   def habitats_present_modal
     I18n.t('countries.shared.habitats_present.citations').each do |cit|
       {
