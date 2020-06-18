@@ -36,7 +36,6 @@ class Species < ApplicationRecord
 
   def self.find_habitats_without_data(hash)
     habitats_without_data = Habitat.pluck(:name) - hash.keys
-
   end
 
   def self.count_by_category_and_habitat(species)
