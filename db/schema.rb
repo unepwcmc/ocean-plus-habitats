@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200601085807) do
+ActiveRecord::Schema.define(version: 20200617154739) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -94,6 +94,25 @@ ActiveRecord::Schema.define(version: 20200601085807) do
     t.index ["region_id"], name: "index_geo_relationships_on_region_id"
   end
 
+  create_table "global_change_citations", force: :cascade do |t|
+    t.text "citation", null: false
+    t.text "citation_url"
+    t.bigint "global_change_stat_id"
+    t.index ["global_change_stat_id"], name: "index_global_change_citations_on_global_change_stat_id"
+  end
+
+  create_table "global_change_stats", force: :cascade do |t|
+    t.bigint "habitat_id"
+    t.decimal "percentage_lost", default: "0.0"
+    t.decimal "lower_bound_percentage", default: "0.0"
+    t.decimal "upper_bound_percentage", default: "0.0"
+    t.integer "baseline_year", null: false
+    t.integer "recent_year", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["habitat_id"], name: "index_global_change_stats_on_habitat_id"
+  end
+
   create_table "habitats", force: :cascade do |t|
     t.string "name", default: "", null: false
     t.string "title", default: "", null: false
@@ -130,4 +149,5 @@ ActiveRecord::Schema.define(version: 20200601085807) do
   add_foreign_key "geo_entity_stats", "habitats"
   add_foreign_key "geo_relationships", "geo_entities", column: "country_id"
   add_foreign_key "geo_relationships", "geo_entities", column: "region_id"
+  add_foreign_key "global_change_stats", "habitats"
 end
