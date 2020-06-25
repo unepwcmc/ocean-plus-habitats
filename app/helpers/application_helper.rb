@@ -84,26 +84,35 @@ module ApplicationHelper
   end
 
   def habitat_cover_modal
-    I18n.t('home.habitat_cover.citations').each do |cit|
-      { text: cit }.to_json
-    end
+    map_to_citations_string(I18n.t('home.habitat_cover.citations'))
+  end
+
+  def habitats_protected_modal
+    map_to_citations_string(I18n.t('countries.shared.proportion_protected.citations'))
   end
 
   def red_list_modal
-    I18n.t('home.red_list.citations', year: Date.today.year).each do |cit|
-      { text: cit }.to_json
+   citations = I18n.t('home.red_list.citations', year: Date.today.year).map do |cit|
+      "<p>#{cit}</p>"
     end
+
+    citations.join
+  end
+
+  def habitats_present_modal
+    map_to_citations_string(I18n.t('countries.shared.habitats_present.citations'))
+  end
+
+  def map_to_citations_string translations
+    citations = translations.map do |cit|
+      "<p>#{cit}</p>"
+    end
+
+    citations.join
   end
 
   def habitat_text(habitat)
     habitat[:change_percentage] == '-' ? I18n.t('home.habitat_cover.data_deficient') : habitat[:text].html_safe
-  end
-
-  def habitat_change_modal
-    {
-      title: 'Title hardcoded in controller',
-      text: I18n.t('home.habitat_change.citation')
-    }.to_json
   end
 
   def habitats

@@ -8,7 +8,12 @@
 
 <section class="container section-padding--top">
   <h2><%= t('countries.shared.ancillary.citation_title'); %></h2>
-  <p><%= t('countries.shared.ancillary.citation_text', country_name: t("countries.#{@yml_key}.title").downcase.parameterize).html_safe %></p>
+  <p><%= 
+    t('countries.shared.ancillary.citation_text', 
+      country_name_lower: t("countries.#{@yml_key}.title").downcase.parameterize,
+      country_name: t("countries.#{@yml_key}.title")
+    ).html_safe 
+  %></p>
 </section>
 
 <section class="container section-padding">

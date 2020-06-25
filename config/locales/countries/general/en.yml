@@ -6,13 +6,13 @@ en:
         title: Habitat location
       -
         id: protection-level
-        title: Level of protection
+        title: Proportion protected
       -
         id: species-composition
         title: Species composition
       -
         id: habitat-condition
-        title: Habitat condition
+        title: Change in habitats
       -
         id: contributions-and-targets
         title: Contributions and targets

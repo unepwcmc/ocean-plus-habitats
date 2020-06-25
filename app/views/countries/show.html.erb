@@ -21,7 +21,15 @@
   }
 %>
 
-<%= render partial: '/shared/proportion-protected',
+<% unless @stacked_row_chart.empty? %>
+  <%= render partial: '/countries/partials/habitat-representation',
+    locals: {
+    modal_content: habitats_representation_modal
+    }
+  %>
+<% end %>
+
+<%= render partial: '/countries/partials/proportion-protected',
   locals: {
     id: "section-#{t('countries.nav_sticky')[1][:id]}",
     map_datasets: @map_datasets,
@@ -29,14 +37,6 @@
     modal_content: habitats_protected_modal
   }
 %>
-
-<% unless @stacked_row_chart.empty? %>
-  <%= render partial: '/countries/partials/habitat-representation',
-    locals: {
-      modal_content: habitats_representation_modal
-    }
-  %>
-<% end %>
 
 <%= render partial: '/countries/partials/red-list',
   locals: {

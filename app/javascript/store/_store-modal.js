@@ -4,7 +4,7 @@ export const storeModal = {
   state: {
     id: '',
     isActive: false,
-    content: {}
+    content: ''
   },
 
   actions: {

@@ -15,13 +15,7 @@
           @click="closeModal"
         />
 
-        <div>
-          <p
-            v-for="(p, index) in content"
-            :key="getVForKey('modal', index)"
-            v-html="p"
-          />
-        </div>
+        <div v-html="content" />
       </div>
     </div>
   </div>

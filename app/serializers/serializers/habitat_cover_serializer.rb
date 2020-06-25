@@ -38,7 +38,7 @@ class Serializers::HabitatCoverSerializer < Serializers::Base
 
       habitat_cover_item[:change_percentage] = stats[:change_percentage]
       habitat_cover_item[:id] = habitat
-      habitat_cover_item[:modal_content] = { text: citation, url: citation_url }.to_json
+      habitat_cover_item[:modal_content] = citation + "<p>#{citation_url}</p>"
 
       habitat_cover_array.push(habitat_cover_item)
     end

@@ -1,7 +1,8 @@
 en:
   home:
     red_list:
-      title: IUCN Red List status of species occurring in habitats
+      title: Global species composition and status by habitat
+      intro_text: The table below outlines the number of species for each habitat by their global IUCN Red List status, illustrating the number of species assessed globally.
       citations:
         - IUCN %{year}. The IUCN Red List of Threatened Species. Version[Latest]. https://www.iucnredlist.org. Accessed on [Date of Update].
       smallprint_1: '<strong>Source:</strong> Data adapted from the <a href="https://www.iucnredlist.org/" title="Visit the IUCN Red List of Threatened Species site" target="_blank" rel="noopener">IUCN Red List of Threatened Species</a>.'
