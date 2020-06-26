@@ -47,28 +47,18 @@ module CountriesHelper
     @habitats_present.find { |hab_present| hab_present[:id] == habitat[:id] }[:status]
   end
 
-  def habitats_present_modal
-    I18n.t('countries.shared.habitats_present.citations').each do |cit|
-      {
-        text: cit
-      }.to_json
-    end
-  end
-
-  def habitats_protected_modal
-    I18n.t('countries.shared.proportion_protected.citations').each do |cit|
-      {
-        text: cit
-      }.to_json
+  def preferential_selection(species)
+    if @example_species_select.find { |habitat| habitat[:id] == 'mangroves'}
+      @example_species_selected = @example_species_select.find { |habitat| habitat[:id] == 'mangroves'}.to_json
+    elsif @example_species_select.find { |habitat| habitat[:id] == 'seagrasses'}
+      @example_species_selected = @example_species_select.find { |habitat| habitat[:id] == 'seagrasses'}.to_json
+    else
+      @example_species_selected = @example_species_select[0].to_json
     end
   end
 
   def habitats_representation_modal
-    I18n.t('countries.shared.habitat_representation.citations').each do |cit|
-      {
-        text: cit
-      }.to_json
-    end
+    map_to_citations_string(I18n.t('countries.shared.habitat_representation.citations'))
   end
 
   def country_red_list_modal
@@ -80,18 +70,11 @@ module CountriesHelper
   end
 
   def habitat_condition_modal
-    {
-      title: 'Title hardcoded in controller',
-      text: I18n.t('countries.shared.habitat_condition.citation')
-    }.to_json
+    map_to_citations_string(I18n.t('countries.shared.habitat_condition.citation'))
   end
 
   def country_habitat_change_modal
-    I18n.t('countries.shared.habitat_change.citations').each do |cit|
-      {
-        text: cit
-      }.to_json
-    end
+    map_to_citations_string(I18n.t('countries.shared.habitat_change.citations'))
   end
 
   def target_tabs

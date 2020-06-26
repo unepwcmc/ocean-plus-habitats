@@ -1,0 +1,45 @@
+<section 
+  id="<%= id %>" 
+  class="section-padding bg--grey-xlight"
+>
+  <div class="container">
+    <div class="flex">
+      <h2><%= t('home.habitat_protection.title') %></h2>
+    </div>
+    <p class="text-body">
+      <%= t('home.habitat_protection.text_1').html_safe %>
+    </p>
+    <p class="text-body">
+      <%= t('home.habitat_protection.text_2').html_safe %>
+    </p>
+  </div>
+</section>
+
+<section id="<%= id %>" class="section-padding">
+  <div class="container">
+    <div class="flex">
+      <h3><%= t('shared.proportion_protected.title_html') %></h3>
+      <modal-trigger id="citation" modal-content="<%= modal_content %>" class="icon--citation margin-space-left"></modal-trigger>
+    </div>
+
+    <%= render partial: '/shared/proportion-protected-chart',
+      locals: {
+        id: 'habitats_present_map',
+        map_datasets: map_datasets,
+      }
+    %>
+
+    <p class="text--smallprint right">
+      <%= t('shared.proportion_protected.last_updated').html_safe %>
+    </p>
+  </div>
+</section>
+
+<%= render partial: '/site/partials/eez_map',
+  locals: {
+    id: 'eez_map',
+    datasets: eez_map_datasets,
+    modal_content: modal_content
+  },
+  class: 'bg--grey-xlight'
+%>

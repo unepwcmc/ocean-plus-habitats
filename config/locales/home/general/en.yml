@@ -11,9 +11,6 @@ en:
         id: proportion-protected
         title: Proportion protected
       -
-        id: protection-level
-        title: Level of protection
-      -
         id: change-in-habitats
         title: Change in habitats
       -

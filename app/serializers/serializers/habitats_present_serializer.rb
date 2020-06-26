@@ -15,24 +15,29 @@ class Serializers::HabitatsPresentSerializer < Serializers::Base
       habitats_present[:status] = occurrences[id]
       habitats_present[:status_title] = get_status_text(habitats_present[:status])
 
-      # Transforming plain text URLs into live links
-      source = ['<h3>Sources</h3>']
-      if !sources(habitat)[:citation].empty?
-        sources(habitat)[:citation].each do |citation|
-          source << citation.split.map { |string| string[/^(http)/] ?
-             "<a target='_' class='modal__link' href=\"#{sources(habitat)[:url].first}\"> " + string + " </a>" : string
-           }.join(' ')
-        end
-      else
-        source << "No citations found."
-      end
+      habitats_present[:citation] = habitat_citations(habitat)
 
       # habitats_present[:citation] = sources(habitat)[:citation]
       # @country_yml[:habitats_present_citations][id.to_sym]
-      habitats_present[:citation] = source
 
       habitats_present
     end
+  end
+
+  def habitat_citations habitat
+    habitat_sources = sources(habitat)
+
+    unless habitat_sources[:citation].empty?
+      habitat_sources[:citation].map{|c| "<p>#{insert_hyperlinks(c)}</p>"}.join
+    else
+      "<p>No citations found.</p>"
+    end
+  end
+
+  def insert_hyperlinks (citation)
+    citation.split.map { |string| string[/^(http)/] ? 
+      "<a target='_' class='modal__link' href='#{string}'>#{string}</a>" : string 
+    }.join(' ')
   end
 
   def get_status_text status

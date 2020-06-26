@@ -1,21 +1,23 @@
-<section id="<%= id %>" class="container section-padding bg--grey-xlight">
-  <div class="flex">
-    <h2>
-      <%= t('home.locations_map.title') %>
-    </h2>
-    <modal-trigger id="citation" :modal-content="<%= modal_content %>" class="icon--citation margin-space-left"></modal-trigger>
+<section id="<%= id %>" class="section-padding bg--grey-xlight">
+  <div class="container">
+    <div class="flex">
+      <h3>
+        <%= t('home.eez_map.title') %>
+      </h3>
+      <modal-trigger id="citation" modal-content="<%= modal_content %>" class="icon--citation margin-space-left"></modal-trigger>
+    </div>
+    <% t('home.eez_map.text').each do |p| %>
+      <p><%= p.html_safe %></p>
+    <% end %>
+    <v-map-interactive
+      :id="'eez-map'"
+      :has-download-button="true"
+      :datasets="<%= datasets.to_json %>"
+      text="<%= t('home.eez_map.eez_extent') %>"
+      message="<%= t('home.eez_map.eez_message') %>"
+    ></v-map-interactive>
+    <p class="text--smallprint">
+      <%= t('global.map_disclaimer').html_safe %>
+    </p>
   </div>
-  <% t('home.locations_map.text').each do |p| %>
-    <p><%= p.html_safe %></p>
-  <% end %>
-  <v-map-interactive
-    :id="'eez-map'"
-    :has-download-button="true"
-    :datasets="<%= datasets.to_json %>"
-    text="<%= t('home.eez_map.eez_extent') %>"
-    message="<%= t('home.eez_map.eez_message') %>"
-  ></v-map-interactive>
-  <p class="text--smallprint">
-    <%= t('global.map_disclaimer').html_safe %>
-  </p>
 </section>

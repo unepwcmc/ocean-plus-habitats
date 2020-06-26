@@ -23,6 +23,7 @@
 
 @mixin icon-habitat() {
   @include icon-basic;
+  background-size: contain;
   width: rem-calc(75); height: rem-calc(75);
 
   display: block;

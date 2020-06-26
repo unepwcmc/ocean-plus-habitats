@@ -15,6 +15,7 @@
   - `bundle exec rake import:regions`
   - `bundle exec rake import:prebakedstats`
   - `bundle exec rake import:redlist_data`
+  - `rake import:global_change`
 
 ## Data
 

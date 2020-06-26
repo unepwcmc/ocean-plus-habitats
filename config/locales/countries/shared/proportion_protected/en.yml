@@ -3,7 +3,7 @@ en:
     shared:
       proportion_protected:
         title_html: Proportion of habitat protected
-        intro_text: 'According to the World Database on Protected Areas, the following reflects the proportion of habitats found within marine and coastal protected areas in %{country_name}.'
+        intro_text: 'According to the <a href="http://www.protectedplanet.net" title="Protected Planet" target="_blank">World Database on Protected Areas</a>, the following reflects the proportion of habitats found within marine and coastal protected areas in %{country_name}.'
         title_present: Confirmed Presence
         title_absent: Confirmed Absence
         title_unknown: Not Known

@@ -20,7 +20,7 @@
 
           <p class="card__habitat">
             <span class="card__habitat-title"><%= habitat[:title] %></span>
-            <modal-trigger id="citation" :modal-content="<%= habitat[:citation].to_json %>" class="icon--citation"></modal-trigger>
+            <modal-trigger id="citation" modal-content="<%= habitat[:citation].html_safe %>" class="icon--citation"></modal-trigger>
           </p>
         </div>
       </div>

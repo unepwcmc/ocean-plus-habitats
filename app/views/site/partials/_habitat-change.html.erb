@@ -1,11 +1,23 @@
-<section id="<%= id %>" class="container section-padding">
-  <h2><%= t('home.habitat_change.title'); %></h2>
+<h3><%= t('home.habitat_cover.title'); %></h3>
 
-  <% t('home.habitat_change.text_1').each do |p| %>
-    <p><%= p %></p>
-  <% end %>
+<div class="cards--habitat-change">
+  <% habitat_cover.each do |habitat| %>
+  <div class="card__card">
+    <div class="flex">
+      <i class="card__icon <%= get_habitat_icon_class(habitat[:id]) %>" alt="<%= habitat[:title] %> icon"></i>
+      <span class="card__stat">
+        <%= habitat[:change_percentage] %>
+      </span>
+    </div>
 
-  <% t('home.habitat_change.text_2').each do |p| %>
-    <p class="italic"><%= p %></p>
+    <div class="card__title-wrapper flex flex-v-center">
+      <h4 class="card__title"><%= habitat[:title] %></h4>
+      <modal-trigger id="citation" modal-content="<%= habitat[:modal_content] %>" class="icon--citation margin-space-left"></modal-trigger>
+    </div>
+
+    <div class="card__content">
+      <%= habitat_text(habitat) %>
+    </div>
+  </div>
   <% end %>
-</section>
+</div>
