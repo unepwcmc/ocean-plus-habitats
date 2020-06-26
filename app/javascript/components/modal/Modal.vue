@@ -14,7 +14,6 @@
           class="modal__close"
           @click="closeModal"
         />
-        <h3>Sources</h3>
         <div v-html="content" />
       </div>
     </div>

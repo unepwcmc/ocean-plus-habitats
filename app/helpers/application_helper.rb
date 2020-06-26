@@ -108,7 +108,7 @@ module ApplicationHelper
       "<p>#{cit}</p>"
     end
 
-    citations.join
+    "<h3>Sources</h3>" + citations.join
   end
 
   def habitat_text(habitat)
