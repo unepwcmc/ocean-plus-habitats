@@ -57,13 +57,14 @@
 
 <%= render partial: '/countries/partials/habitat-change-country',
   locals: {
+    id: "section-#{t('countries.nav_sticky')[3][:id]}",
     habitat_change: @habitat_change, modal_content: country_habitat_change_modal
   }
 %>
 
 <%= render partial: '/countries/partials/habitat-condition',
   locals: {
-    id: "section-#{t('countries.nav_sticky')[3][:id]}",
+    id: 'section-habitat-condition',
     modal_content: habitat_condition_modal
   }
 %>
