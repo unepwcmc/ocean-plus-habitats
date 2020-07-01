@@ -12,24 +12,24 @@ class Serializers::HabitatCoverSerializer < Serializers::Base
 
       habitat_global_change = Habitat.find_by(name: habitat.to_s).global_change_stat
 
-      stats = reformat(habitat_global_change)
+      sanitised_stats = reformat(habitat_global_change)
 
       habitat_cover_item[:text] =
       I18n.t(
         "home.habitat_cover.habitats.#{habitat}.text",
-        change_percentage: stats[:change_percentage],
-        baseline_year: stats[:baseline_year],
-        recent_year: stats[:recent_year],
+        change_percentage: sanitised_stats[:change_percentage],
+        baseline_year: sanitised_stats[:baseline_year],
+        recent_year: sanitised_stats[:recent_year],
         )
 
-      citation = stats[:citations].nil? ? stats[:citation] : interactive_citations(habitat_cover_item, stats[:citations])
-      
-      if stats[:citations].nil?
-        citation_url = '' 
-        habitat_cover_item[:modal_content] = citation + citation_url
+      citation = sanitised_stats[:citations]
+  
+      unless habitat_global_change.nil? 
+        citation = add_links(habitat_cover_item, sanitised_stats[:citations])
       end
 
-      habitat_cover_item[:change_percentage] = stats[:change_percentage]
+      habitat_cover_item[:modal_content] = citation 
+      habitat_cover_item[:change_percentage] = sanitised_stats[:change_percentage]
       habitat_cover_item[:id] = habitat
 
       habitat_cover_array.push(habitat_cover_item)
@@ -38,7 +38,7 @@ class Serializers::HabitatCoverSerializer < Serializers::Base
     habitat_cover_array
   end
 
-  def interactive_citations(item, citations)
+  def add_links(item, citations)
     arr = []
 
     citations.each do |citation|
@@ -54,26 +54,31 @@ class Serializers::HabitatCoverSerializer < Serializers::Base
       arr << citation_text + ' ' + citation_url
     end
 
+    # Newline characters not properly recognised when converted to JSON
     item[:modal_content] = "<h3>Sources</h3>" + arr.join("<br><br>")
   end
 
   def reformat(habitat_global_change)
     if habitat_global_change.nil?
-      change_percentage = '-'
-      citation = I18n.t('home.habitat_cover.no_citation')
+      change_percentage = I18n.t('home.habitat_cover.no_change_percentage')
+      citations = I18n.t('home.habitat_cover.no_citation')
     else
       citations = habitat_global_change.global_change_citations.to_a
+      lower_bound = habitat_global_change[:lower_bound_percentage].round().to_s
+      upper_bound = habitat_global_change[:upper_bound_percentage].round().to_s
+      percentage_loss = habitat_global_change[:percentage_lost].round().to_s
 
+      # Whether to show a range or a single discrete figure
       if habitat_global_change[:percentage_lost].nil?
-        change_percentage = habitat_global_change[:lower_bound_percentage].round().to_s + ' - ' + habitat_global_change[:upper_bound_percentage].round().to_s + '%'
+        change_percentage = lower_bound + ' - ' + upper_bound + '%'
       else
-        change_percentage = habitat_global_change[:percentage_lost].round().to_s + '%'
+        change_percentage = percentage_loss + '%'
       end
       baseline_year = habitat_global_change[:baseline_year]
       recent_year = habitat_global_change[:recent_year]
     end
 
     { change_percentage: change_percentage, baseline_year: baseline_year, recent_year: recent_year,
-      citations: citations, citation: citation }
-    end
+      citations: citations }
   end
+end
