@@ -57,7 +57,7 @@ class Serializers::HabitatCoverSerializer < Serializers::Base
     end
 
     # Newline characters not properly recognised when converted to JSON
-    item[:modal_content] = "<h3>Sources</h3>" + arr.join("<br><br>")
+    item[:modal_content] = arr.join("<br><br>")
   end
 
   def reformat(habitat_global_change)

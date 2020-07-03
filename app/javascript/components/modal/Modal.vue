@@ -14,6 +14,7 @@
           class="modal__close"
           @click="closeModal"
         />
+        <h3>{{ title }}</h3>
         <div v-html="content" />
       </div>
     </div>
@@ -52,6 +53,14 @@ export default {
 
     content () {
       return this.$store.state.modal.content
+    },
+
+    translations () {
+      return this.$store.state.translations.translations
+    },
+
+    title () {
+      return this.translations ? this.translations.global.sources_modal_title : ''
     }
   },
 
