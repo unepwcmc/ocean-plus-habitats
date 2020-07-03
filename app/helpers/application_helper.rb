@@ -112,7 +112,7 @@ module ApplicationHelper
   end
 
   def habitat_text(habitat)
-    habitat[:change_percentage].blank? ? I18n.t('home.habitat_cover.data_deficient') : habitat[:text].html_safe
+    habitat[:change_percentage] == '-' ? I18n.t('home.habitat_cover.data_deficient') : habitat[:text].html_safe
   end
 
   def habitats

@@ -66,14 +66,14 @@ class Serializers::HabitatCoverSerializer < Serializers::Base
       citations = I18n.t('home.habitat_cover.no_citation')
     else
       citations = habitat_global_change.global_change_citations.to_a
-      lower_bound = habitat_global_change[:lower_bound_percentage].round().to_s
-      upper_bound = habitat_global_change[:upper_bound_percentage].round().to_s
-      percentage_loss = habitat_global_change[:percentage_lost].round().to_s
 
       # Whether to show a range or a single discrete figure
       if habitat_global_change[:percentage_lost].nil?
+        lower_bound = habitat_global_change[:lower_bound_percentage].round().to_s
+        upper_bound = habitat_global_change[:upper_bound_percentage].round().to_s
         change_percentage = lower_bound + ' - ' + upper_bound + '%'
       else
+        percentage_loss = habitat_global_change[:percentage_lost].round().to_s
         change_percentage = percentage_loss + '%'
       end
 
