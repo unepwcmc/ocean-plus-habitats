@@ -1,6 +1,8 @@
 en:
   home:
     eez_map:
+      title: Global overview of proportion of habitats protected
       eez_message: Select an Ocean Habitat
       eez_extent: "Extent of marine protected area coverage (%):"
+      text: []
 

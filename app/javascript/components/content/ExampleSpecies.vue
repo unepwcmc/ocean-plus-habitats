@@ -1,8 +1,8 @@
 <template>
   <div class="cards--example-species">
-    <h3 class="cards__title">
+    <h4 class="cards__title">
       {{ content.title }}
-    </h3>
+    </h4>
     <p v-show="!examples">No species could be found for this particular habitat and category.</p>
     <div class="cards__cards">
       <div

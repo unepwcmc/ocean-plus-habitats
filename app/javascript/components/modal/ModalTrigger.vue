@@ -19,7 +19,7 @@ export default {
       required: true
     },
     modalContent: {
-      type: Object,
+      type: String,
       required: true
     }
   },

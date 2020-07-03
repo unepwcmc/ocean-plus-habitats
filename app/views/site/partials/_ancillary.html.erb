@@ -1,0 +1,11 @@
+<section class="container section-padding--top">
+  <h2><%= t('home.ancillary.citation_title'); %></h2>
+  <p><%= t('home.ancillary.citation_text').html_safe %></p>
+</section>
+
+<section class="container section-padding">
+  <h2><%= t('home.ancillary.downloads_title'); %></h2>
+  <% t('home.ancillary.downloads').each do |d| %>
+    <p><%= d.html_safe %></p>
+  <% end %>
+</section>

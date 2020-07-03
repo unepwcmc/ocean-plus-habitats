@@ -106,7 +106,7 @@
 }
 
 @mixin text-example-species-total-count {
-  @include text-7;
+  @include h4;
 }
 
 @mixin text-hero-home {
@@ -114,8 +114,14 @@
   color: $white;
 }
 
-@mixin text-large {
+@mixin text-habitat-change-stat-text {
+  @include responsive-styles(font-size, 20px, 20px, 20px);
+  font-weight: $semi-bold;
+}
+
+@mixin text-habitat-change-stat {
   @include text-5;
+  line-height: 1.1;
 }
 
 @mixin text-modal-title {
