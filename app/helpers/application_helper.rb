@@ -108,11 +108,11 @@ module ApplicationHelper
       "<p>#{cit}</p>"
     end
 
-    "<h3>Sources</h3>" + citations.join
+    "<h3>#{I18n.t('global.sources_modal_title')}</h3>" + citations.join
   end
 
   def habitat_text(habitat)
-    habitat[:change_percentage] == '-' ? I18n.t('home.habitat_cover.data_deficient') : habitat[:text].html_safe
+    habitat[:change_percentage].nil? ? '' : habitat[:text].html_safe
   end
 
   def habitats

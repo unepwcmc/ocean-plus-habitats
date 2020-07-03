@@ -62,7 +62,7 @@ class Serializers::HabitatCoverSerializer < Serializers::Base
 
   def reformat(habitat_global_change)
     if habitat_global_change.nil?
-      change_percentage = I18n.t('home.habitat_cover.no_change_percentage')
+      change_percentage = nil
       citations = I18n.t('home.habitat_cover.no_citation')
     else
       citations = habitat_global_change.global_change_citations.to_a
