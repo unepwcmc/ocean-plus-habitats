@@ -15,9 +15,17 @@
       }
 
       &__stat {
-        @include text-large;
+        @include text-habitat-change-stat;
         margin-left: rem-calc(12);
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
+
+        &__stat-text {
+          @include text-habitat-change-stat-text;
+        }
 
       &__title-wrapper {
         margin-top: rem-calc(4);
