@@ -87,6 +87,10 @@ module ApplicationHelper
     map_to_citations_string(I18n.t('home.habitat_cover.citations'))
   end
 
+  def habitat_change_modal(habitat_citations)
+    map_to_citations_string(habitat_citations)
+  end
+
   def habitats_protected_modal
     map_to_citations_string(I18n.t('countries.shared.proportion_protected.citations'))
   end
@@ -102,6 +106,7 @@ module ApplicationHelper
   def habitats_present_modal
     map_to_citations_string(I18n.t('countries.shared.habitats_present.citations'))
   end
+
 
   def map_to_citations_string translations
     citations = translations.map do |cit|

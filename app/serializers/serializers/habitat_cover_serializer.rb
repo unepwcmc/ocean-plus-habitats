@@ -56,14 +56,14 @@ class Serializers::HabitatCoverSerializer < Serializers::Base
       arr << citation_text + ' ' + citation_url
     end
 
-    # Newline characters not properly recognised when converted to JSON
-    item[:modal_content] = arr.join("<br><br>")
+    item[:modal_content] = arr
   end
 
   def reformat(habitat_global_change)
     if habitat_global_change.nil?
+      citations = []
       change_percentage = nil
-      citations = I18n.t('home.habitat_cover.no_citation')
+      citations << I18n.t('home.habitat_cover.no_citation')
     else
       citations = habitat_global_change.global_change_citations.to_a
 
