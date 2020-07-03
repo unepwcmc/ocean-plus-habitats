@@ -30,6 +30,8 @@ class Serializers::HabitatCoverSerializer < Serializers::Base
 
       habitat_cover_item[:modal_content] = citation 
       habitat_cover_item[:change_percentage] = sanitised_stats[:change_percentage]
+      habitat_cover_item[:change_direction] = I18n.t("global.loss_of")
+
       habitat_cover_item[:id] = habitat
 
       habitat_cover_array.push(habitat_cover_item)
@@ -74,6 +76,7 @@ class Serializers::HabitatCoverSerializer < Serializers::Base
       else
         change_percentage = percentage_loss + '%'
       end
+
       baseline_year = habitat_global_change[:baseline_year]
       recent_year = habitat_global_change[:recent_year]
     end

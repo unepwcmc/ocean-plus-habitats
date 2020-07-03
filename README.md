@@ -11,12 +11,6 @@
   - `bundle exec rake db:drop db:create db:migrate`
   - `bundle exec rake db:seed`
 
-* Import the static CSV data
-  - `bundle exec rake import:regions`
-  - `bundle exec rake import:prebakedstats`
-  - `bundle exec rake import:redlist_data`
-  - `rake import:global_change`
-
 ## Data
 
 We are still trying to see if it is feasible to generate map tiles and data dynamically using Carto and in the meantime we are using static data.

@@ -1,4 +1,4 @@
-<section class="section-padding bg--grey-xlight">
+<section id="<%= id %>" class="section-padding bg--grey-xlight">
   <div class="container">
     <div class="flex">
       <h2><%= t('countries.shared.habitat_change.title') %></h2>
@@ -12,7 +12,12 @@
         <div class="card__card">
           <div class="flex">
             <i class="card__icon <%= get_habitat_icon_class(habitat[:id], habitat[:status]) %>" alt="<%= habitat[:title] %> icon"></i>
-            <span class="card__stat"><%= habitat[:change] == 0 ? '' : habitat[:change].to_s.concat('%') %></span>
+            <% unless habitat[:change] == 0 %>
+             <span class="card__stat">
+              <div class="card__stat-text"><%= habitat[:change_direction] %></div>
+              <div><%= habitat[:change_abs].to_s.concat('%') %></div>
+            </span>
+            <% end %>
           </div>
 
           <div class="card__title-wrapper flex flex-v-center">

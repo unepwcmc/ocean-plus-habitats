@@ -29,6 +29,8 @@ class Serializers::HabitatCountryChangeSerializer < Serializers::Base
         title: habitat.title,
         status: status,
         change: cover_change,
+        change_abs: cover_change.abs,
+        change_direction: I18n.t("global.#{cover_change > 0 ? 'gain_of' : 'loss_of'}"),
         text: text
       }
 

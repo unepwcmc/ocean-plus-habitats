@@ -8,13 +8,14 @@
 
 <%= render partial: '/countries/partials/habitats-present',
   locals: {
-    id: "section-#{t('countries.nav_sticky')[0][:id]}",
+    id: 'section-habitat-occurrence',
     habitats_present: @habitats_present
   }
 %>
 
 <%= render partial: '/countries/partials/habitat-extent',
   locals: {
+    id: "section-#{t('countries.nav_sticky')[0][:id]}",
     iso3: @country.iso3,
     datasets: @map_datasets,
     modal_content: habitats_protected_modal
@@ -57,13 +58,14 @@
 
 <%= render partial: '/countries/partials/habitat-change-country',
   locals: {
+    id: "section-#{t('countries.nav_sticky')[3][:id]}",
     habitat_change: @habitat_change, modal_content: country_habitat_change_modal
   }
 %>
 
 <%= render partial: '/countries/partials/habitat-condition',
   locals: {
-    id: "section-#{t('countries.nav_sticky')[3][:id]}",
+    id: 'section-habitat-condition',
     modal_content: habitat_condition_modal
   }
 %>
