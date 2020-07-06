@@ -22,5 +22,6 @@ en:
         coldcorals:
           title: Cold-water corals
           text: ! '<strong>%{change_percentage}</strong> loss in cold-water coral cover<br> between <strong>%{baseline_year}</strong> and <strong>%{recent_year}</strong>'
+      data_deficient: Unfortunately, there is currently no data for this particular habitat.
       no_citation: No citation(s) found.
       no_url: No URL found.
