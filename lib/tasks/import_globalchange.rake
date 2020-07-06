@@ -34,10 +34,10 @@ namespace :import do
         citation = reference
         url = nil
 
-        if reference =~ /(http)/
-          if reference =~ /(URL:|doi:)/
-            citation = reference.split('URL:' || 'doi:').first.strip
-            url = reference.split('URL:' || 'doi:').last.gsub(/\s+/, "")
+        if reference.match?(/(http)/)
+          if reference.match?(/(URL:|doi:)/)
+            citation = reference.split(/(URL:|doi:)/).first.strip
+            url = reference.split(/(URL:|doi:)/).last.gsub(/\s+/, "")
           else
             citation = reference.split(' ')[0..-2].join(' ')
             url = reference.split(' ').last.gsub(/\s+/, "")
