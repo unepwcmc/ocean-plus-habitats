@@ -7,7 +7,7 @@ namespace :import do
     Rails.logger.info("There are #{current_count} countries")
 
     CSV.foreach('lib/data/countries.csv', headers: true) do |row|
-      name, iso3, bounding_box = [row['country_name'], row['iso3'], row['bounding-box']]
+      name, iso3, bounding_box = [row['country_name'], row['iso3'], row['bounding_box']]
       attributes = {
         name: name,
         iso3: iso3
