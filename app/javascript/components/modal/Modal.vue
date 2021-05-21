@@ -14,7 +14,6 @@
           class="modal__close"
           @click="closeModal"
         />
-
         <div v-html="content" />
       </div>
     </div>

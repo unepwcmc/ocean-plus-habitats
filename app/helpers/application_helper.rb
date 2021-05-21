@@ -87,6 +87,10 @@ module ApplicationHelper
     map_to_citations_string(I18n.t('home.habitat_cover.citations'))
   end
 
+  def habitat_change_modal(habitat_citations)
+    map_to_citations_string(habitat_citations)
+  end
+
   def habitats_protected_modal
     map_to_citations_string(I18n.t('countries.shared.proportion_protected.citations'))
   end
@@ -103,16 +107,17 @@ module ApplicationHelper
     map_to_citations_string(I18n.t('countries.shared.habitats_present.citations'))
   end
 
+
   def map_to_citations_string translations
     citations = translations.map do |cit|
       "<p>#{cit}</p>"
     end
 
-    citations.join
+    "<h3>#{I18n.t('global.sources_modal_title')}</h3>" + citations.join
   end
 
   def habitat_text(habitat)
-    habitat[:change_percentage].blank? ? I18n.t('home.habitat_cover.data_deficient') : habitat[:text].html_safe
+    habitat[:change_percentage].nil? ? I18n.t('home.habitat_cover.data_deficient') : habitat[:text].html_safe
   end
 
   def habitats
