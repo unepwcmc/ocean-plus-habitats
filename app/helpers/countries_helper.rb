@@ -1,9 +1,9 @@
 module CountriesHelper
-  def if_country_get_flag yml_key
-    country = I18n.exists?("countries.#{yml_key}.image_flag")
-    flag = FileTest.exist?("app/assets/images/#{t("countries.#{yml_key}.image_flag")}")
+  def if_country_get_flag(country_name)
+    name = country_name.downcase.gsub(' ', '-')
+    flag = FileTest.exist?("app/assets/images/flags/#{name}.svg")
 
-    country && flag ? image_tag(I18n.t("countries.#{yml_key}.image_flag"), alt: '', class: 'header__icon') : nil
+    flag ? image_tag("flags/#{name}.svg", alt: '', class: 'header__icon') : nil
   end
 
   def nav_tertiary_countries
@@ -11,7 +11,7 @@ module CountriesHelper
   end
 
   def dataset_status(dataset)
-    dataset_status = @country.occurrences[dataset[:id]]
+    @country.occurrences[dataset[:id]]
   end
 
   def dataset_status_title(dataset)
