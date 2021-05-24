@@ -35,7 +35,12 @@ module ApplicationHelper
   end
 
   def list_of_countries
-    GeoEntity.countries.sort_by(&:name).map do |country| 
+    # TODO - Hide country pages without any data - maybe we want more finely-tuned error handling for lack of data
+    all_countries = GeoEntity.countries.includes(:geo_entity_stats)
+
+    valid_countries = all_countries.where.not(geo_entity_stats: { id: nil })
+
+    valid_countries.sort_by(&:name).map do |country| 
       nav_item(country.actual_name) 
     end
   end
