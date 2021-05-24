@@ -1,14 +1,13 @@
 require 'csv'
 
 namespace :import do
-  # Thanks to various non-ASCII characters in the CSV file, it messes with the show page
-  # for each country as the URL cannot be properly generated
-  def sanitise(string)
-    I18n.transliterate(string)
-  end
-
   desc 'import countries data into database'
   task countries: [:environment] do
+    # Strip out accents, commas, apostrophes, brackets as they mess with the URL
+    def sanitize(name) 
+      I18n.transliterate(name).gsub(/[,'()]/, '')
+    end
+
     current_count = GeoEntity.countries.count
     Rails.logger.info("There are #{current_count} countries")
 
@@ -17,7 +16,8 @@ namespace :import do
       iso3 = row['ISO3']
 
       attributes = {
-        name: sanitise(name),
+        name: sanitize(name), # this name used for URLs
+        actual_name: name, # leave original name in there for purposes of displaying to users
         iso3: iso3
       }
 

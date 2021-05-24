@@ -29,14 +29,20 @@ module ApplicationHelper
 
   def get_nav_items
     {
-      countries: GeoEntity.countries.map { |country| nav_item(country.name) },
+      countries: list_of_countries,
       regions: GeoEntity.regions.map { |region| nav_item(region.name) }
     }
   end
 
+  def list_of_countries
+    GeoEntity.countries.sort_by(&:name).map do |country| 
+      nav_item(country.actual_name) 
+    end
+  end
+
   def nav_item(name)
-    path_name = name.downcase.gsub(' ', '-')
-    geo_entity = GeoEntity.find_by_name(name)
+    path_name = name
+    geo_entity = GeoEntity.find_by_actual_name(name)
     geo_entity_id = geo_entity&.id
     
     return {} unless geo_entity_id 
@@ -54,8 +60,10 @@ module ApplicationHelper
     "icon--#{habitat}#{status}"
   end
 
-  def country_path(country)
-    '/' + country.gsub(/ /, '-').gsub("'", '%27').downcase
+  def country_path(country_name)
+    country = GeoEntity.find_by(actual_name: country_name) || GeoEntity.find_by(name: country_name)
+
+    '/' + country.name.gsub(/ /, '-').gsub("'", '%27').downcase
   end
 
   def country_name_from_param(param_name)

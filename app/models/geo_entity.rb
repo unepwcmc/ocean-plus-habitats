@@ -15,7 +15,7 @@ class GeoEntity < ApplicationRecord
 
   has_many :country_citations, foreign_key: 'country_id'
 
-  scope :countries, -> { where.not(iso3: nil) }
+  scope :countries, -> { where.not(iso3: nil || 'GBL') }
   scope :regions, -> { where(iso3: nil) }
 
   # Returns species data if directly attached to the GeoEntity, so a country.
