@@ -135,7 +135,16 @@ module ApplicationHelper
   def get_countries_search_config
     {
       id: 'country',
-      label: I18n.t('global.main_menu.search_by_country')
+      placeholder: 'Country or Territory'
     }.to_json
+  end
+
+  def get_nav_primary
+    [
+      { 
+        title: 'About',
+        url: about_path,
+      }
+    ].to_json
   end
 end

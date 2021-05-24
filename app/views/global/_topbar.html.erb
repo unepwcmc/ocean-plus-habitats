@@ -3,23 +3,18 @@
     <%= link_to root_path, class: "topbar__link", title: 'Visit the Ocean+ Habitats home page' do %>
       <%= image_tag 'logos/logo-ocean-plus-habitats.svg', class: 'logo--site', alt: 'The logo for Ocean+ Habitats' %>
     <% end %>
-    <%#= link_to 'About', about_path, style: 'padding: 10rem' %>
-    <%#= link_to 'Methodologies', methodologies_path %>
 
-    <nav-trigger id="nav-primary" class="topbar__nav-trigger nav--primary">
-      <span class="margin-space-right font-alignment-padding-fix">
-        <%= t('global.nav.burger_text') %>
-      </span>
-      <i class="icon--burger"></i>
-    </nav-trigger>
+    <nav-burger 
+      :links="<%= get_nav_primary %>" 
+      class="topbar__nav nav--primary"
+      :is-always-burger="true"
+    ></nav-burger>
 
-    <nav-mega-menu
-      id="nav-primary"
-      class="nav--primary container"
-      :countries="<%= get_nav_items[:countries].to_json %>"
-
+    <v-select-searchable
+      class="nav__dropdown"
       :config="<%= get_countries_search_config %>"
-      regions-title="<%= t('global.main_menu.regions_title') %>"
-    />
+      :options="<%= get_nav_items[:countries].to_json %>"
+    >
+    </v-searchable>
   </div>
 </div>

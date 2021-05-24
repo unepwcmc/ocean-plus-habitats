@@ -53,32 +53,8 @@ sup {
 th { font-weight: inherit; }
 
 //--------------------------------------------------
-// site structure - reusable styles
-//--------------------------------------------------
-%container {
-  margin: 0 auto;
-  padding-right: rem-calc($gutter-small);
-  padding-left: rem-calc($gutter-small);
-  width: 100%;
-
-  @include breakpoint($medium){
-    padding-right: rem-calc($gutter-medium);
-    padding-left: rem-calc($gutter-medium);
-  }
-
-  @include breakpoint($large){
-    padding-right: rem-calc($gutter-large);
-    padding-left: rem-calc($gutter-large);
-  }
-}
-
-//--------------------------------------------------
 // site structure
 //--------------------------------------------------
-.site-width {
-  @include breakpoint($large){ width: $site-width; }
-}
-
 .gutter--left {
   padding-left: $gutter-small;
   @include breakpoint($medium) { padding-left: $gutter-medium; }
@@ -97,8 +73,8 @@ th { font-weight: inherit; }
 }
 
 .container {
-  @extend .site-width;
-  @extend %container;
+  @include container;
+  @include site-width;
 }
 
 //--------------------------------------------------

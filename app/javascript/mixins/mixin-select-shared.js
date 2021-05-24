@@ -9,13 +9,6 @@ export default {
     mixinPopupCloseListeners({closeCallback: 'closeSelect', clickAreaSelector: '.v-select__click-area'}),
   ],
 
-  props: {
-    placeholder: {
-      default: '',
-      type: String
-    }
-  },
-
   data () {
     return {
       isActive: false,
@@ -47,7 +40,7 @@ export default {
     },
 
     getPlaceholderText () {
-      return this.placeholder || ''
+      return this.config.placeholder || ''
     },
 
     showOptions () {

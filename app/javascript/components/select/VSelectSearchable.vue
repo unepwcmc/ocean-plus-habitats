@@ -8,7 +8,7 @@
       :value="selectedInternal"
       type="hidden"
       :name="config.id"
-    >
+    />
 
     <div
       v-if="config.label"
@@ -71,7 +71,7 @@
             :class="['v-select__option flex', conditionalOptionClasses(option, index)]"
             role="option"
             :aria-selected="isHighlighted(index).toString()"
-            @click="selectOption(option)"
+            @click="redirectToCountryPage(option)"
           >
             <span>{{ option.name }}</span>
           </li>
@@ -156,7 +156,12 @@ export default {
       this.selectedInternal = option.id
       this.closeSelect()
       document.activeElement.blur()
-      this.emitSelection()
+    },
+
+    redirectToCountryPage (option) {
+      const country = this.options.filter( country => country.id === option.id )[0]
+
+      window.location.href = country.url
     },
 
     resetSearchTerm () {

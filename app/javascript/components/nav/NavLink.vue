@@ -1,11 +1,11 @@
 <template>
-  <p
-    class="nav__a no-margin"
-    :class="[{ 'active': isActive }, theme]"
-    @click="triggerNavItem"
+  <a 
+    :href="link.url"
+    :class="['nav__a', { 'active': isActive }]"
+    :title='`Go to page: ${link.title}`'
   >
-    {{ title }}  
-  </p>  
+    {{ link.title }}  
+  </a>  
 </template>
 
 <script>
@@ -13,16 +13,8 @@ export default {
   name: 'NavLink',
 
   props: {
-    title: {
-      type: String,
-      required: true
-    },
-    name: {
-      type: String,
-      required: true
-    },
-    theme: {
-      type: String,
+    link: {
+      type: Object,
       required: true
     }
   },
