@@ -110,8 +110,7 @@
 }
 
 @mixin text-hero-home {
-  @include text-2;
-  color: $white;
+  @include responsive-styles(font-size, rem-calc(18), rem-calc(18), rem-calc(18));
 }
 
 @mixin text-habitat-change-stat-text {
@@ -135,7 +134,6 @@
 @mixin text-nav-tertiary {
   @include text-3;
   cursor: pointer;
-  font-weight: $semi-bold;
 
   &:hover { text-decoration: underline; }
 }

@@ -6,8 +6,13 @@
     @include flex;
     @include flex-v-center;
     @include flex-h-between;
-    height: rem-calc(80);
+    // height: rem-calc(80);
   }
+
+    &__link {
+      background-color: $navy-dark;
+      padding: rem-calc(12 26);
+    }
 
     &__nav-trigger {
       @include button--grey;

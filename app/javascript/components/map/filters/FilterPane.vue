@@ -8,8 +8,8 @@
     </p>
     <ul class="map-filters__list">
       <li
-        v-for="dataset in datasets"
-        :key="dataset.id"
+        v-for="(dataset, index) in datasets"
+        :key="`${dataset.id}-${Math.random(100*index)}`"
         class="map-filters__list-li"
         :class="{ 'map-filters__list-li--eez': isEez }"
       >

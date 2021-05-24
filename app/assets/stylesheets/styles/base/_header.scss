@@ -8,7 +8,6 @@
     background-size: cover;
     background-position: center;
     color: $white;
-    padding: rem-calc(85 0 95 0);
 
     .header {
       &__h1 {
@@ -17,12 +16,13 @@
       }
 
       &__content {
-        
+        padding-top: rem-calc(85);
+        padding-bottom: rem-calc(95);
       }
 
         &__intro {
           @include text-hero-home;
-          width: 72%;
+          width: 54%;
         }
     }
   }
