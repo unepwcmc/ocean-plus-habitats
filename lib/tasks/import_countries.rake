@@ -5,7 +5,7 @@ namespace :import do
   task countries: [:environment] do
     # Strip out accents, commas, apostrophes, brackets as they mess with the URL
     def sanitize(name) 
-      I18n.transliterate(name).gsub(/[,'()]/, '')
+      I18n.transliterate(name).downcase.gsub(/[,'()]/, '').titleize
     end
 
     current_count = GeoEntity.countries.count
