@@ -7,7 +7,7 @@ class CountriesController < ApplicationController
     # TODO - work out how to integrate i18n with this for country names - we may want to
     # have a list of country names in each language which is then dynamically fetched from
     # a CSV/yml depending on the language selected
-    @name = @country.name.downcase.gsub(/ /, '_').gsub('%27', "").capitalize
+    @name = @country.name.downcase.gsub(/ /, ' ').gsub('%27', "").split(' ').map(&:capitalize).join(' ')
 
     habitats_protection_stats = @country.protection_stats
     habitats_present_status = @country.occurrences

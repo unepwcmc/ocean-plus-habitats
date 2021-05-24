@@ -27,24 +27,24 @@ module ApplicationHelper
     'Guanaco Torres del Paine Chile Gregoire Dubois'
   end
 
-  COUNTRIES = %w(indonesia united_arab_emirates argentina australia kenya norway ireland).freeze
-  REGIONS = %w(mediterranean wider_caribbean).freeze
   def get_nav_items
-    #FERDI - get all countries and then fill out object as follows
     {
-      countries: COUNTRIES.map { |c| nav_item(c) },
-      regions: REGIONS.map { |r| nav_item(r) }
+      countries: GeoEntity.countries.map { |country| nav_item(country.name) },
+      regions: GeoEntity.regions.map { |region| nav_item(region.name) }
     }
   end
 
-  def nav_item(item)
-    geo_entity_name = item.humanize.split(' ').map(&:capitalize).join(' ')
-    geo_entity_id = GeoEntity.find_by_name(geo_entity_name)&.id
-    return {} unless geo_entity_id
+  def nav_item(name)
+    path_name = name.downcase.gsub(' ', '-')
+    geo_entity = GeoEntity.find_by_name(name)
+    geo_entity_id = geo_entity&.id
+    
+    return {} unless geo_entity_id 
+    
     {
       id: geo_entity_id,
-      name: I18n.t("countries.#{item}.title"),
-      url: country_path(geo_entity_name)
+      name: name,
+      url: country_path(path_name)
     }
   end
 
