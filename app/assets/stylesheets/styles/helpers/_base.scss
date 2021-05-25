@@ -74,7 +74,14 @@ th { font-weight: inherit; }
 
 .container {
   @include container;
-  @include site-width;
+  
+  &--small {
+    @include container--small;
+  }
+
+  &--large {
+    @include container--large;
+  }
 }
 
 //--------------------------------------------------

@@ -12,17 +12,18 @@
     .header {
       &__h1 {
         @include h1-home;
-        width: 94%;
+        width: 86%;
       }
 
       &__content {
+        @include container--large;
         padding-top: rem-calc(85);
-        padding-bottom: rem-calc(95);
+        padding-bottom: rem-calc(134);
       }
 
         &__intro {
           @include text-hero-home;
-          width: 54%;
+          width: 50%;
         }
     }
   }

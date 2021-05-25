@@ -3,6 +3,7 @@
 //--------------------------------------------------
 .topbar {
   &__content {
+    @include container--large;
     @include flex;
     @include flex-v-center;
     // height: rem-calc(80);

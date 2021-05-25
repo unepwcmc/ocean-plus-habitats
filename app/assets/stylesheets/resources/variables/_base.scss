@@ -72,8 +72,16 @@ $button-font-size-medium: rem-calc(18);
 $small: 720px;
 $medium: 960px;
 $large: 1200px;
+$x-large: 1300px;
 
-$site-width: rem-calc($large);
+$site-width: rem-calc($x-large);
+
+//--------------------------------------------------
+// container
+//--------------------------------------------------
+$container-width-small: rem-calc(674);
+$container-width: rem-calc(1136);
+$container-width-large: $site-width;
 
 //--------------------------------------------------
 // padding
