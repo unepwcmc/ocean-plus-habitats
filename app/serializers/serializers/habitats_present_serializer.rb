@@ -8,6 +8,7 @@ class Serializers::HabitatsPresentSerializer < Serializers::Base
 
   def serialize
     occurrences = base_occurrences.merge(@habitat_presence_statuses)
+
     habitats.map do |habitat|
       id = habitat[:id]
 
@@ -48,8 +49,6 @@ class Serializers::HabitatsPresentSerializer < Serializers::Base
   def base_occurrences
     GeoEntityStat::BASE_OCCURRENCES
   end
-
-
 
   def sources(habitat)
     habitat_id = Habitat.find_by_name(habitat[:id]).try(:id)

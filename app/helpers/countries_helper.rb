@@ -11,19 +11,29 @@ module CountriesHelper
   end
 
   def dataset_status(dataset)
-    @country.occurrences[dataset[:id]]
+    status = @country.occurrences[dataset[:id]]
+    
+    status == 'present-but-unknown' ? 'unknown' : status
   end
 
   def dataset_status_title(dataset)
-    dataset_status_title = I18n.t("shared.proportion_protected.title_#{dataset_status(dataset)}")
+    I18n.t("shared.proportion_protected.title_#{dataset_status(dataset)}")
   end
 
   def icon_class(dataset)
-    icon_class = get_habitat_icon_class(dataset[:id], dataset_status(dataset))
+    get_habitat_icon_class(dataset[:id], dataset_status(dataset))
   end
 
   def protected_percentage(dataset)
-    protected_percentage = @country.protection_stats[dataset[:id]] ? @country.protection_stats[dataset[:id]]['protected_percentage'].round(2) : 0
+    if @country.protection_stats[dataset[:id]] 
+      protected_percentage = @country.protection_stats[dataset[:id]]['protected_percentage']
+
+      return 0 if protected_percentage.nil?
+
+      protected_percentage.round(2)
+    else
+      0
+    end
   end
 
   def total_value(dataset)

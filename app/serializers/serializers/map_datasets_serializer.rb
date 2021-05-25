@@ -113,7 +113,7 @@ class Serializers::MapDatasetsSerializer < Serializers::Base
     DATASETS.map do |ds|
       dataset = ds.dup
       dataset[:name] = get_habitat_from_id(ds[:id])[:title]
-      dataset[:disabled] = habitat_presence_status(ds) == 'unknown' || habitat_presence_status(ds) == 'absent'  ? true : false
+      dataset[:disabled] = GeoEntity::NEGATIVE_OCCURRENCE_STATUSES.include?(habitat_presence_status(ds)) ? true : false
 
       dataset
     end
