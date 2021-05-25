@@ -74,7 +74,7 @@ namespace :import do
       stat.total_value_2007     = coerce_to_value(csv_row["total_area_2007"])
       stat.total_value_2008     = coerce_to_value(csv_row["total_area_2008"])
       stat.total_value_2009     = coerce_to_value(csv_row["total_area_2009"])
-      stat.total_value_2010     = coerce_to_value(csv_row["total_area_2010_baseline"])
+      stat.total_value_2010     = coerce_to_value(csv_row["total_area_2010baseline"])
       stat.total_value_2015     = coerce_to_value(csv_row["total_area_2015"])
       stat.total_value_2016     = coerce_to_value(csv_row["total_area_2016"])
       stat.protected_value      = coerce_to_value(csv_row["protected_area"])

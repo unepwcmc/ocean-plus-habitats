@@ -14,6 +14,7 @@ class Habitat < ApplicationRecord
 
   def calculate_country_cover_change(country_name)
     country_cover_change = { change_km: 0, change_percentage: 0 }
+
     # We only got mangroves data at the moment
     return country_cover_change unless name == "mangroves"
     geo_entity_id = GeoEntity.find_by(name: country_name).id
