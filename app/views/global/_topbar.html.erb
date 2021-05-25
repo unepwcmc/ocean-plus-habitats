@@ -4,17 +4,17 @@
       <%= image_tag 'logos/logo-ocean-plus-habitats.svg', class: 'logo--site', alt: 'The logo for Ocean+ Habitats' %>
     <% end %>
 
-    <nav-burger 
-      :links="<%= get_nav_primary %>" 
-      class="topbar__nav nav--primary"
-      :is-always-burger="true"
-    ></nav-burger>
-
     <v-select-searchable
       class="nav__dropdown"
       :config="<%= get_countries_search_config %>"
       :options="<%= get_nav_items[:countries].to_json %>"
     >
-    </v-searchable>
+    </v-select-searchable>
+
+    <nav-burger 
+      :links="<%= get_nav_primary %>" 
+      class="nav--primary"
+      :is-always-burger="true"
+    ></nav-burger>
   </div>
 </div>
