@@ -19,7 +19,7 @@ namespace :import do
     CSV.read(species_filename, headers: true)
        .uniq { |r| r.values_at('iso3', 'habitat') }.each do |row|
 
-      habitat = Habitat.where('LOWER(title) = ?', row['habitat'].downcase).first
+      habitat = Habitat.find_by(title: row['habitat'].downcase)
       next unless log_habitat(row, habitat)
 
       import_occurrences(row, habitat)
@@ -32,7 +32,7 @@ namespace :import do
     @failed_report = []
 
     CSV.foreach(species_filename, headers: true) do |row|
-      habitat = Habitat.find_by(title: row['habitat'].downcase)
+      habitat = Habitat.find_by(title: row['habitat'])
       next unless log_habitat(row, habitat)
 
       import_species(row, habitat)
@@ -53,7 +53,7 @@ namespace :import do
     @failed_report = []
 
     CSV.foreach(species_filename, headers: true) do |row|
-      habitat = Habitat.where('LOWER(title) = ?', row['habitat'].downcase).first
+      habitat = Habitat.find_by(title: row['habitat'])
       next unless log_habitat(row, habitat)
 
       import_species(row, habitat)
@@ -70,7 +70,10 @@ namespace :import do
     return if scientific_name == 'NA'
     return if Species.find_by(scientific_name: scientific_name, habitat_id: habitat.id).present?
 
-    row['url'] = 'https://'.concat(row['url']) if (row['url'] != 'NA' && !row['url'].match(/^https/))
+    if (row['url'] != 'NA' && !row['url'].match(/^https/))
+      row['url'] = 'https://'.concat(row['url']) 
+    end
+
     row_hash = row.to_hash.slice(*species_header)
     species = Species.new(row_hash.merge(habitat_id: habitat.id))
     report_failed(row, species.errors.messages) unless species.save
@@ -157,7 +160,7 @@ namespace :import do
   def import_occurrences(row, habitat)
     geo_entity = GeoEntity.find_by(iso3: row['iso3'])
     return unless geo_entity.present?
-    occurrence = row['occurence'].to_i
+    occurrence = row['occurrence'].to_i
     ges = GeoEntityStat.find_or_initialize_by(geo_entity_id: geo_entity.id, habitat_id: habitat.id)
     ges.update_attributes!(occurrence: occurrence) unless ges.present?
   end
