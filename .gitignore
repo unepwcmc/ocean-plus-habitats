@@ -27,3 +27,5 @@ yarn-debug.log*
 .DS_Store
 
 .env
+
+previous_failed_specs.txt
