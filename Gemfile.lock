@@ -78,6 +78,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.5)
+    cookieconsent (0.1.0)
     crass (1.0.5)
     dotenv (2.7.5)
     dotenv-rails (2.7.5)
@@ -218,6 +219,7 @@ DEPENDENCIES
   capistrano-rvm (~> 0.1)
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
+  cookieconsent
   dotenv-rails (~> 2.2, >= 2.2.1)
   httparty (~> 0.16.2)
   jbuilder (~> 2.5)

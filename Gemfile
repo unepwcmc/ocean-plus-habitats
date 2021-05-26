@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# The most popular solution to the EU cookie law for Rails applications. 
+gem 'cookieconsent'
 # prefix rails c commands with ap for pretty results
 gem 'awesome_print'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
