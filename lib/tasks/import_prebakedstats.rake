@@ -20,23 +20,19 @@ namespace :import do
   def import_new_csv_file(habitat, csv_file)
     filename = "#{Rails.root}/lib/data/#{csv_file}"
     CSV.foreach(filename, headers: true, encoding: "utf-8") do |row|
+      # First we check whether it is a country (using ISO3) or a region depending on the CSV file
+      # Then we fetch the geo entity. If it can't be found, fetch_geo_entity will return nil
+      # Hence we can then skip any geo_entity that is nil
+      name = row['ISO3'] || row['region']
+      geo_entity = fetch_geo_entity(name)
+      next unless geo_entity
+
       if row.select {|k,v| /baseline/i =~ k}.any?
-        parse_change_stat(row, habitat)
+        insert_change_stat(habitat, geo_entity, row)
       end
-      parse_geo_entity_stat(row, habitat)
+
+      insert_geo_entity_stat(habitat, geo_entity, row)
     end
-  end
-
-  def parse_change_stat(csv_row, habitat)
-    name = csv_row['iso3'] || csv_row['region']
-    geo_entity = fetch_geo_entity(name)
-    insert_change_stat(habitat, geo_entity, csv_row)
-  end
-
-  def parse_geo_entity_stat(csv_row, habitat)
-    name = csv_row['iso3'] || csv_row['region']
-    geo_entity = fetch_geo_entity(name)
-    insert_geo_entity_stat(habitat, geo_entity, csv_row)
   end
 
   def insert_geo_entity_stat(habitat, geo_entity, csv_row)
@@ -44,37 +40,48 @@ namespace :import do
 
     latest_year = get_latest_year(csv_row.headers)
     total_value_column = latest_year ? "total_area_#{latest_year}" : 'total_area'
-    protected_value = csv_row["protected_area"]&.strip || 0
-    total_value = csv_row[total_value_column]&.strip || 0
-    protected_percentage = csv_row["percent_protected"]&.strip || 0
+    protected_value = coerce_to_value(csv_row["protected_area"])
+    total_value = coerce_to_value(csv_row[total_value_column])
+    protected_percentage = coerce_to_value(csv_row["percent_protected"])
+    occurrence = csv_row["occurrence"]
 
     GeoEntityStat.find_or_create_by(habitat: habitat, geo_entity: geo_entity) do |stat|
       stat.protected_value      = protected_value
       stat.total_value          = total_value
       stat.protected_percentage = protected_percentage
-      stat.occurrence           = 2
+      stat.occurrence           = occurrence
     end
   end
 
-  def get_latest_year(columns)
-    columns.map { |c| c.split('_').last }.
-      select { |c| c.match(/\A\d+\z/) }.
-      max
+  def coerce_to_value(value)
+    # Set value to nil for deficient data
+    return if value == '-'
+    
+    value&.strip || 0
   end
 
+  def get_latest_year(columns)
+    columns.map { |c| c.split('_').last }.select do |c| 
+      next if c.nil?
+
+      c.match(/\A\d+\z/)
+    end.max
+  end
+
+  # At present this just applies to mangroves as only they have temporal data
   def insert_change_stat(habitat, geo_entity, csv_row)
     habitat = Habitat.find_by(name: habitat)
 
     ChangeStat.find_or_create_by(habitat: habitat, geo_entity: geo_entity) do |stat|
-      stat.total_value_1996     = csv_row["total_area_1996"]&.strip || 0,
-      stat.total_value_2007     = csv_row["total_area_2007"]&.strip || 0,
-      stat.total_value_2008     = csv_row["total_area_2008"]&.strip || 0,
-      stat.total_value_2009     = csv_row["total_area_2009"]&.strip || 0,
-      stat.total_value_2010     = csv_row["total_area_2010_baseline"]&.strip || 0,
-      stat.total_value_2015     = csv_row["total_area_2015"]&.strip || 0,
-      stat.total_value_2016     = csv_row["total_area_2016"]&.strip || 0,
-      stat.protected_value      = csv_row["protected_area"]&.strip || 0,
-      stat.protected_percentage = csv_row["percent_protected"]&.strip || 0
+      stat.total_value_1996     = coerce_to_value(csv_row["total_area_1996"])
+      stat.total_value_2007     = coerce_to_value(csv_row["total_area_2007"])
+      stat.total_value_2008     = coerce_to_value(csv_row["total_area_2008"])
+      stat.total_value_2009     = coerce_to_value(csv_row["total_area_2009"])
+      stat.total_value_2010     = coerce_to_value(csv_row["total_area_2010baseline"])
+      stat.total_value_2015     = coerce_to_value(csv_row["total_area_2015"])
+      stat.total_value_2016     = coerce_to_value(csv_row["total_area_2016"])
+      stat.protected_value      = coerce_to_value(csv_row["protected_area"])
+      stat.protected_percentage = coerce_to_value(csv_row["percent_protected"])    
     end
   end
 
@@ -84,6 +91,7 @@ namespace :import do
     else
       geo_entity = GeoEntity.find_by(iso3: name) || GeoEntity.find_by(name: name)
     end
+
     geo_entity
   end
 end

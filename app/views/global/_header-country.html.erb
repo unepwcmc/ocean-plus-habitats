@@ -2,8 +2,8 @@
 
 <header class="header--country">
   <div class="header__content">
-    <%= if_country_get_flag @yml_key %>
+    <%= if_country_get_flag(@iso3) %>
 
-    <h1><%= t("countries.#{@yml_key}.title") %></h1>
+    <h1><%= @name %></h1>
   </div>
 </header>

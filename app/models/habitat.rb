@@ -14,6 +14,7 @@ class Habitat < ApplicationRecord
 
   def calculate_country_cover_change(country_name)
     country_cover_change = { change_km: 0, change_percentage: 0 }
+
     # We only got mangroves data at the moment
     return country_cover_change unless name == "mangroves"
     geo_entity_id = GeoEntity.find_by(name: country_name).id
@@ -40,14 +41,17 @@ class Habitat < ApplicationRecord
     })
   end
 
-  def calculate_global_protection
-    total_habitat_cover = GeoEntityStat.includes(:geo_entity).where.not(geo_entities: { iso3: nil }).where(habitat_id: id).pluck(:total_value).reduce { |sum, value| sum + value }
-    protected_habitat_cover = GeoEntityStat.includes(:geo_entity).where.not(geo_entities: { iso3: nil }).where(habitat_id: id).pluck(:protected_value).reduce { |sum, value| sum + value }
-    percentage_globally_protected = (protected_habitat_cover / total_habitat_cover) * 100
-
-    global_protection = {
-      percentage_protection: percentage_globally_protected.round(2), total_habitat_cover: total_habitat_cover.round(2)
+  def global_stats 
+    {
+      total_habitat_cover: geo_entity_stats.country_stats.pluck(:total_value).compact.reduce(&:+),
+      protected_habitat_cover: geo_entity_stats.country_stats.pluck(:protected_value).compact.reduce(&:+)
     }
+  end
+
+  def calculate_global_protection
+    global_protection.except('name', 'protected_value').transform_values do |value|
+      value.round(2)
+    end
   end
 
   def occurrence(geo_entity_id)
@@ -82,10 +86,10 @@ class Habitat < ApplicationRecord
 
   def global_protection
     stats = { 'name' => name, 'total_value' => 0, 'protected_value' => 0 }
-    geo_entity_stats.country_stats.map do |stat|
-      stats['total_value'] = stats['total_value'] + stat.total_value
-      stats['protected_value'] = stats['protected_value'] + stat.protected_value
-    end
+
+    stats['total_value'] = global_stats[:total_habitat_cover]
+    stats['protected_value'] = global_stats[:protected_habitat_cover]
+
     protected_value = stats['protected_value'] > 0 ? stats['protected_value'] : 1
     stats.merge({'protected_percentage' => protected_value / stats['total_value'] * 100})
   end

@@ -11,6 +11,8 @@
   - `bundle exec rake db:drop db:create db:migrate`
   - `bundle exec rake db:seed`
 
+* If you simply want to regenerate your statistics, you don't have to drop your database. Just run `rake import:refresh` instead.
+
 ## Data
 
 We are still trying to see if it is feasible to generate map tiles and data dynamically using Carto and in the meantime we are using static data.
@@ -25,3 +27,6 @@ which is updated every month.
 Habitats data changes less often, so the coverage calculations are stored in the `Habitat` object.
 When the data changes, a new calculation process should be performed using the `calculate_global_coverage` method in
 the `Habitat` model.
+
+Old coverage data is stored within `lib/data/countries` for the various habitats. The new coverage data can be found within
+`lib/data/habitat_coverage_protection/<habitat>_country_output.csv` 

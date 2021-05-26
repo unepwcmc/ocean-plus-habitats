@@ -5,7 +5,7 @@
     </h3>
     <modal-trigger id="citation" modal-content="<%= modal_content %>" class="icon--citation margin-space-left"></modal-trigger>
   </div>
-  <p class="text-body"><%= t('countries.shared.habitat_representation.intro_text', country_name: t("countries.#{@yml_key}.title")) %></p>
+  <p class="text-body"><%= t('countries.shared.habitat_representation.intro_text', country_name: @name) %></p>
 
   <h4><%= t('countries.shared.habitat_representation.chart_heading', coastline_length: @stacked_row_chart[:chart][:coastline_length]).html_safe %></h4>
   <chart-row-stacked

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200617154739) do
+ActiveRecord::Schema.define(version: 20210525133211) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,16 +18,16 @@ ActiveRecord::Schema.define(version: 20200617154739) do
   create_table "change_stats", force: :cascade do |t|
     t.bigint "habitat_id"
     t.bigint "geo_entity_id"
-    t.decimal "total_value_1996", default: "0.0", null: false
-    t.decimal "total_value_2007", default: "0.0", null: false
-    t.decimal "total_value_2008", default: "0.0", null: false
-    t.decimal "total_value_2009", default: "0.0", null: false
-    t.decimal "total_value_2010", default: "0.0", null: false
-    t.decimal "total_value_2015", default: "0.0", null: false
-    t.decimal "total_value_2016", default: "0.0", null: false
+    t.decimal "total_value_1996", default: "0.0"
+    t.decimal "total_value_2007", default: "0.0"
+    t.decimal "total_value_2008", default: "0.0"
+    t.decimal "total_value_2009", default: "0.0"
+    t.decimal "total_value_2010", default: "0.0"
+    t.decimal "total_value_2015", default: "0.0"
+    t.decimal "total_value_2016", default: "0.0"
     t.integer "baseline_year", default: 2010, null: false
-    t.decimal "protected_value", default: "0.0", null: false
-    t.decimal "protected_percentage", default: "0.0", null: false
+    t.decimal "protected_value", default: "0.0"
+    t.decimal "protected_percentage", default: "0.0"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["geo_entity_id"], name: "index_change_stats_on_geo_entity_id"
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 20200617154739) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.float "bounding_box", default: [], array: true
+    t.string "actual_name"
     t.index ["bounding_box"], name: "index_geo_entities_on_bounding_box", using: :gin
   end
 
@@ -68,9 +69,9 @@ ActiveRecord::Schema.define(version: 20200617154739) do
   create_table "geo_entity_stats", force: :cascade do |t|
     t.bigint "habitat_id"
     t.bigint "geo_entity_id"
-    t.decimal "protected_value", default: "0.0", null: false
-    t.decimal "total_value", default: "0.0", null: false
-    t.decimal "protected_percentage", default: "0.0", null: false
+    t.decimal "protected_value", default: "0.0"
+    t.decimal "total_value", default: "0.0"
+    t.decimal "protected_percentage", default: "0.0"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "occurrence", limit: 2, default: 1

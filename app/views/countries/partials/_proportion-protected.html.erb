@@ -6,7 +6,7 @@
     </div>
 
     <p class="text-body">
-      <%= t('shared.proportion_protected.intro_text', country_name: t("countries.#{@yml_key}.title")) %>
+      <%= t('shared.proportion_protected.intro_text', country_name: @name) %>
     </p>
 
     <%= render partial: '/shared/proportion-protected-chart',
