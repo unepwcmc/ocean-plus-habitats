@@ -50,6 +50,10 @@ module CountriesHelper
     @red_list_data.find { |habitat| habitat['data'].present? }
   end
 
+  def absent_or_unknown(status)
+    GeoEntity::NEGATIVE_OCCURRENCE_STATUSES.include?(status)
+  end
+
   def habitats_present_redlist
     if @habitats_present.nil?
       @red_list_data
