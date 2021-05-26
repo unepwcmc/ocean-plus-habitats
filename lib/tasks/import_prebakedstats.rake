@@ -20,6 +20,9 @@ namespace :import do
   def import_new_csv_file(habitat, csv_file)
     filename = "#{Rails.root}/lib/data/#{csv_file}"
     CSV.foreach(filename, headers: true, encoding: "utf-8") do |row|
+      # First we check whether it is a country (using ISO3) or a region depending on the CSV file
+      # Then we fetch the geo entity. If it can't be found, fetch_geo_entity will return nil
+      # Hence we can then skip any geo_entity that is nil
       name = row['ISO3'] || row['region']
       geo_entity = fetch_geo_entity(name)
       next unless geo_entity
@@ -87,7 +90,6 @@ namespace :import do
       geo_entity = GeoEntity.find_by(name: "Disputed")
     else
       geo_entity = GeoEntity.find_by(iso3: name) || GeoEntity.find_by(name: name)
-      return unless geo_entity
     end
 
     geo_entity
