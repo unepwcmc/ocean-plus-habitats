@@ -49,6 +49,7 @@ strong, .bold { font-weight: $bold; }
 //--------------------------------------------------
 .display-block { display: block; }
 .display-inline { display: inline-block; }
+.tablet-up { @include tablet-up }
 
 //--------------------------------------------------
 // positioning

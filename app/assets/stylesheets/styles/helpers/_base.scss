@@ -12,7 +12,6 @@ body {
   font-family: $body-font;
   font-size: $body-font-size;
   margin: 0;
-  min-width: $site-width;
 }
 
 h1 { @include h1; }
@@ -35,15 +34,8 @@ p {
 
 a { @include text-a; }
 
-ul {
-
-}
-
 li {
   margin-bottom: rem-calc(14);
-}
-
-blockquote {
 }
 
 sup {
@@ -57,14 +49,14 @@ th { font-weight: inherit; }
 //--------------------------------------------------
 .gutter--left {
   padding-left: $gutter-small;
-  @include breakpoint($medium) { padding-left: $gutter-medium; }
-  @include breakpoint($large) { padding-left: $gutter-large; }
+  @include breakpoint($small) { padding-left: $gutter-medium; }
+  @include breakpoint($medium) { padding-left: $gutter-large; }
 }
 
 .gutter--right {
   padding-right: $gutter-small;
-  @include breakpoint($medium) { padding-right: $gutter-medium; }
-  @include breakpoint($large) { padding-right: $gutter-large; }
+  @include breakpoint($small) { padding-right: $gutter-medium; }
+  @include breakpoint($medium) { padding-right: $gutter-large; }
 }
 
 .gutters {
@@ -84,19 +76,23 @@ th { font-weight: inherit; }
   }
 }
 
+.max-width-container-small {
+  max-width: $container-width-small;
+}
+
 //--------------------------------------------------
 // page padding
 //--------------------------------------------------
 .page-padding--top {
   padding-top: $page-padding-top-small;
-  @include breakpoint($medium) { padding-top: $page-padding-top-medium; }
-  @include breakpoint($large) { padding-top: $page-padding-top-large; }
+  @include breakpoint($small) { padding-top: $page-padding-top-medium; }
+  @include breakpoint($medium) { padding-top: $page-padding-top-large; }
 }
 
 .page-padding--bottom {
   padding-bottom: $page-padding-bottom-small;
-  @include breakpoint($medium) { padding-bottom: $page-padding-bottom-medium; }
-  @include breakpoint($large) { padding-bottom: $page-padding-bottom-large; }
+  @include breakpoint($small) { padding-bottom: $page-padding-bottom-medium; }
+  @include breakpoint($medium) { padding-bottom: $page-padding-bottom-large; }
 }
 
 .page-padding {
@@ -109,14 +105,14 @@ th { font-weight: inherit; }
 //--------------------------------------------------
 .section-padding--top {
   padding-top: $section-padding-top-small;
-  @include breakpoint($medium) { padding-top: $section-padding-top-medium; }
-  @include breakpoint($large) { padding-top: $section-padding-top-large; }
+  @include breakpoint($small) { padding-top: $section-padding-top-medium; }
+  @include breakpoint($medium) { padding-top: $section-padding-top-large; }
 }
 
 .section-padding--bottom {
   padding-bottom: $section-padding-bottom-small;
-  @include breakpoint($medium) { padding-bottom: $section-padding-bottom-medium; }
-  @include breakpoint($large) { padding-bottom: $section-padding-bottom-large; }
+  @include breakpoint($small) { padding-bottom: $section-padding-bottom-medium; }
+  @include breakpoint($medium) { padding-bottom: $section-padding-bottom-large; }
 }
 
 .section-padding {
@@ -126,14 +122,14 @@ th { font-weight: inherit; }
 
 .section-padding-small--top {
   padding-top: $section-padding-small-top-small;
-  @include breakpoint($medium) { padding-top: $section-padding-small-top-medium; }
-  @include breakpoint($large) { padding-top: $section-padding-small-top-large; }
+  @include breakpoint($small) { padding-top: $section-padding-small-top-medium; }
+  @include breakpoint($medium) { padding-top: $section-padding-small-top-large; }
 }
 
 .section-padding-small--bottom {
   padding-bottom: $section-padding-small-bottom-small;
-  @include breakpoint($medium) { padding-bottom: $section-padding-small-bottom-medium; }
-  @include breakpoint($large) { padding-bottom: $section-padding-small-bottom-large; }
+  @include breakpoint($small) { padding-bottom: $section-padding-small-bottom-medium; }
+  @include breakpoint($medium) { padding-bottom: $section-padding-small-bottom-large; }
 }
 
 .section-padding-small {

@@ -66,6 +66,11 @@ $button-font-size-small: rem-calc(18);
 $button-font-size-medium: rem-calc(18);
 
 //--------------------------------------------------
+// numbers
+//--------------------------------------------------
+$sqrt-2: 1.41;
+
+//--------------------------------------------------
 // breakpoints
 //--------------------------------------------------
 //! must be px
@@ -79,7 +84,7 @@ $site-width: rem-calc($x-large);
 //--------------------------------------------------
 // container
 //--------------------------------------------------
-$container-width-small: rem-calc(674);
+$container-width-small: rem-calc(656);
 $container-width: rem-calc(1136);
 $container-width-large: $site-width;
 
@@ -98,11 +103,11 @@ $page-padding-bottom-small: rem-calc(32);
 $page-padding-bottom-medium: rem-calc(60);
 $page-padding-bottom-large: rem-calc(100);
 
-$section-padding-top-small: rem-calc(20);
+$section-padding-top-small: rem-calc(40);
 $section-padding-top-medium: rem-calc(50);
-$section-padding-top-large: rem-calc(80);
+$section-padding-top-large: rem-calc(50);
 
-$section-padding-bottom-small: rem-calc(30);
+$section-padding-bottom-small: rem-calc(40);
 $section-padding-bottom-medium: rem-calc(60);
 $section-padding-bottom-large: rem-calc(80);
 

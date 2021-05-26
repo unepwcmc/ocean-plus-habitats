@@ -29,3 +29,9 @@
     @include breakpoint($large) { #{$property}: $laptop; }
   }
 }
+
+@mixin tablet-up ($display: block) {
+  @include breakpoint-down($small) {
+    display: none;
+  }
+}
