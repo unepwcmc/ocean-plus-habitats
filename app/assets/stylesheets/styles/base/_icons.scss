@@ -58,9 +58,15 @@
   width: rem-calc(17); height: rem-calc(17);
 }
 
+@mixin icon-burger {
+  @include icon-basic;
+  background-image: image_url('icons/burger.svg');
+  width: rem-calc(28); height: rem-calc(22);
+}
+
 @mixin icon-close {
   @include icon-cross;
-  width: rem-calc(30); height: rem-calc(30);
+  width: rem-calc(25); height: rem-calc(25);
 }
 
 @mixin icon-chevron-down {
@@ -91,6 +97,12 @@
   @include icon-ribbon($grey-dark);
 }
 
+@mixin icon-search {
+  @include icon-basic;
+  background-image: image_url('icons/search.svg');
+  width: rem-calc(23); height: rem-calc(23);
+}
+
 @mixin icon-scroll-to-top {
   @include icon-basic;
   background-image: image_url('icons/scroll-to-top.svg');
@@ -118,10 +130,6 @@
 //--------------------------------------------------
 .icon {
   &--burger {
-    @include icon-basic;
-    background-image: image_url('icons/burger.svg');
-    width: rem-calc(24); height: rem-calc(13);
-
     .nav--active & {
       background-image: image_url('icons/cross-grey-xdark.svg');
       height: rem-calc(16);

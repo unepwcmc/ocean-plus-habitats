@@ -2,30 +2,25 @@
 // topbar
 //--------------------------------------------------
 .topbar {
-  &__content {
-    @include flex;
-    @include flex-v-center;
-    @include flex-h-between;
-    height: rem-calc(80);
+  &--dark {
+    background-color: $navy-dark;
+    color: $white;
   }
 
-    &__nav-trigger {
-      @include button--grey;
-      @include flex;
-      @include flex-v-center;
+  &__content {
+    @include container--large;
+    @include flex;
+    @include flex-v-center;
+    // height: rem-calc(80);
+  }
 
-      margin-left: auto; //for ie11
+  &__link {
+    background-color: $navy-dark;
+    margin-right: auto;
+    padding: rem-calc(12 26);
+  }
 
-      &.nav--active {
-        &::after {
-          background-color: $grey-light;
-          content: '';
-          width: 100%; height: 8px;
-
-          position: absolute;
-          left: 0;
-          top: 100%;
-        }
-      }
-    }
+  &__nav {
+    margin-left: auto;
+  }
 }

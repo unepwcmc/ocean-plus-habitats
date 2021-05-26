@@ -8,8 +8,8 @@
     </p>
     <ul class="map-filters__list">
       <li
-        v-for="dataset in datasets"
-        :key="dataset.id"
+        v-for="(dataset, index) in datasets"
+        :key="getVForKey('dataset', index)"
         class="map-filters__list-li"
         :class="{ 'map-filters__list-li--eez': isEez }"
       >
@@ -26,11 +26,14 @@
 
 <script>
 import Dataset from './Dataset'
+import mixinIds from '../../../mixins/mixin-ids'
 
 export default {
   name: 'FilterPane',
 
   components: { Dataset },
+
+  mixins: [mixinIds],
 
   props: {
     id: {

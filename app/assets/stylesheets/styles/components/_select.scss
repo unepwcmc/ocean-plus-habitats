@@ -43,7 +43,7 @@ $list-item-margin-medium: rem-calc(16);
   &__dropdown {
     @include ul-unstyled;
     @include box-shadow-grey;
-    background-color: $white;
+    background-color: $navy-dark;
     padding: $select-padding-top 0;
     width: 100%;
 
@@ -107,15 +107,19 @@ $list-item-margin-medium: rem-calc(16);
 
     .v-select {
       &__search-input {
-        border: $border-thin $grey-xxdark;
-        border-radius: rem-calc(3);
-        font-size: rem-calc(20);
-        font-weight: $light;
+        background-color: $navy-dark;
+        border: $border-thin #fff;
+        border-radius: rem-calc(25);
+        color: #fff;
+        font-size: rem-calc(16);
+        font-weight: $semi-bold;
         padding: rem-calc(10 20);
         width: 100%;
+        
+        &:focus { outline: none; }
 
         &::placeholder {
-          color: $body-font-color;
+          color: #fff;
         }
       }
 
@@ -131,26 +135,24 @@ $list-item-margin-medium: rem-calc(16);
       }
 
       &__search-icon {
-        border: none;
+        @include icon-search;
         background-size: 85%;
+        border: none;
         font: inherit;
         margin: 0 rem-calc(12);
         padding: 0;
-        width: rem-calc(20); height: rem-calc(20);
 
         display: inline-block;
         position: relative;
 
         &--reset {
-          background-image: image-url('icons/Close.svg');
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: 75%;
+          @include button-close-basic;
         }
       }
 
       &__dropdown {
         @include ul-unstyled;
+        border: $border-thin #fff;
         overflow-y: auto;
         padding: 0;
         max-height: rem-calc(300);
@@ -167,7 +169,7 @@ $list-item-margin-medium: rem-calc(16);
         transition: background-color .3s ease;
 
         &:hover {
-          background-color: $grey-xlight;
+          background-color: $navy-light;
         }
 
         &:last-child {

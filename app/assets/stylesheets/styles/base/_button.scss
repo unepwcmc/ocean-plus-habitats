@@ -58,19 +58,31 @@ $button-padding-wide-laptop: 14px 45px;
 //--------------------------------------------------
 // specific mixins
 //--------------------------------------------------
+@mixin button--burger {
+  @include button-basic;
+  @include icon-burger;
+}
+
 @mixin button--close {
   @include button-basic;
   @include flex;
   @include flex-center;
-  background-color: $navy;
-  border-radius: 100%;
   
   &:hover { opacity: .9; }
 
   &:before { 
     @include icon-close; 
+    background-size: 100%;
     content: '';
   }
+}
+
+@mixin button-close-basic {
+  @include button-basic;
+  background-image: image-url('icons/cross.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 75%;
 }
 
 @mixin button--grey {

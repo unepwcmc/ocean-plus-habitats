@@ -27,10 +27,6 @@ en:
     nav:
       burger_text: Explore a country/region
 
-    footer_citation_title: Citation
-    footer_citation:
-      region: 'UNEP-WCMC (%{year}). Ocean Habitat Profile for %{region} from the Ocean+, %{month} %{year}. Available at: <a href="habitats.oceanplus.org" target="_blank" title="">habitats.oceanplus.org</a>'
-      global: 'Global Ocean Habitat Profile from the Ocean+'
     footer_copyright: copyright
     footer_downloads_title: Download datasets
 

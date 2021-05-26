@@ -62,19 +62,6 @@ module ApplicationHelper
     param_name.gsub('-', ' ').gsub('%27', "'").titleize
   end
 
-  def footer_citation
-    if params[:name]
-      return t(
-        'global.footer_citation.region',
-        region: country_name_from_param(params[:name]),
-        year: Date.today.year,
-        month: Date.today.strftime('%B')
-      ).html_safe
-    end
-
-    t('global.footer_citation.global').html_safe
-  end
-
   def nav_tertiary
     I18n.t('home.nav_sticky').to_json
   end
@@ -135,7 +122,16 @@ module ApplicationHelper
   def get_countries_search_config
     {
       id: 'country',
-      label: I18n.t('global.main_menu.search_by_country')
+      placeholder: 'Country or Territory'
     }.to_json
+  end
+
+  def get_nav_primary
+    [
+      { 
+        title: 'About',
+        url: about_path,
+      }
+    ].to_json
   end
 end
