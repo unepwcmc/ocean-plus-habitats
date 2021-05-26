@@ -67,13 +67,12 @@ $button-padding-wide-laptop: 14px 45px;
   @include button-basic;
   @include flex;
   @include flex-center;
-  background-color: $navy;
-  border-radius: 100%;
   
   &:hover { opacity: .9; }
 
   &:before { 
     @include icon-close; 
+    background-size: 100%;
     content: '';
   }
 }

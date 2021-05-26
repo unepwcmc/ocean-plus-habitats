@@ -66,7 +66,7 @@
 
 @mixin icon-close {
   @include icon-cross;
-  width: rem-calc(30); height: rem-calc(30);
+  width: rem-calc(25); height: rem-calc(25);
 }
 
 @mixin icon-chevron-down {
