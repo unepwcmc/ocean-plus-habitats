@@ -15,24 +15,28 @@ module CountriesHelper
   end
 
   def dataset_status_title(dataset)
-    status = dataset_status(dataset) == 'present-but-unknown' ? 'data_deficient' : dataset_status(dataset)
+    # Here, we want the status to read 'Data Deficient'
+    status = dataset_status(dataset) 
+    status = status == 'present-but-unknown' ? 'data_deficient' : status
 
     I18n.t("shared.proportion_protected.title_#{status}")
   end
 
   def icon_class(dataset)
-    status = dataset_status(dataset) == 'present-but-unknown' ? 'present' : dataset_status(dataset)
+    # Here, we want to show the icon for the individual habitat as present, in the data class
+    status = dataset_status(dataset)
+    status = status == 'present-but-unknown' ? 'present' : status
 
     get_habitat_icon_class(dataset[:id], status)
   end
 
   def protected_percentage(dataset)
-    if @country.protection_stats[dataset[:id]] 
-      protected_percentage = @country.protection_stats[dataset[:id]]['protected_percentage']
+    protection_stats = @country.protection_stats[dataset[:id]] 
 
-      return 0 if protected_percentage.nil?
+    if protection_stats.present?
+      protected_percentage = protection_stats['protected_percentage']
 
-      protected_percentage.round(2)
+      protected_percentage.nil? ? 0 : protected_percentage.round(2)
     else
       0
     end
