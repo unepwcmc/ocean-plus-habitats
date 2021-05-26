@@ -1,4 +1,10 @@
 //--------------------------------------------------
+// variables
+//--------------------------------------------------
+$nav-pane-min-width: rem-calc(360);
+$nav-pane-min-width-large: rem-calc(460);
+
+//--------------------------------------------------
 // classes
 //--------------------------------------------------
 .nav {
@@ -21,42 +27,41 @@
 
         display: block;
         position: absolute;
-        top: rem-calc(20);
-        right: rem-calc(20);
+        top: rem-calc(25);
+        right: rem-calc(25);
         z-index: 1;
-
-        @include breakpoint($small) {
-          right: 80%;
-        }
       }
 
       &__pane {
-        background-color: #fff;
-        padding: rem-calc(20 0);
+        @include gutters;
+        background-color: $navy-dark;
+        color: $white;
+        padding-top: rem-calc(80);
+        padding-bottom: rem-calc(16);
         width: 100%; height: 100%;
             
         position: fixed;
         top: 0;
         right: 0;
         bottom: 0;
+        z-index: $z-300;
 
         transform: translateX(100%);
 
         transition: transform 0.4s ease-in-out;
 
-        &.active {
-          z-index: 3;
-          
-          transform: translateX(0);
+        @include breakpoint($small) { width: $nav-pane-min-width; }
+        @include breakpoint($medium) { width: $nav-pane-min-width-large; }
 
-          @include breakpoint($small) { 
-            transform: translateX(70%);
-          }
+        &.active {
+          transform: translateX(0);
         }
       }
-    }
 
-    .nav {
+      &__ul {
+        @include ul-unstyled;
+      }
+
       &__heading {
         font-weight: $bold;
         margin-bottom: .7em;

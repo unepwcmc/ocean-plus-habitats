@@ -18,7 +18,7 @@ $sticky-bar-height: rem-calc(80);
         &.sticky {
           position: fixed;
           top: 0;
-          z-index: $z-300;
+          z-index: $z-200;
         }
       }
 
