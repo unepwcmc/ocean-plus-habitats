@@ -1,1 +1,11 @@
-<h1>About page</h1>
+<%= render partial: 'global/topbar', locals: { dark: true } %>
+
+<main class="container--small page-padding">
+  <h1 class="about__title">
+    <%= t('about.title') %>
+  </h1>
+
+  <% t('about.paragraphs').each do |p| %>
+    <p><%= p.html_safe %></p>
+  <% end %>
+</main>
