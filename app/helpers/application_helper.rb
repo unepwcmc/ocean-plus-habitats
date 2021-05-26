@@ -68,7 +68,7 @@ module ApplicationHelper
   def country_path(country_name)
     country = GeoEntity.find_by(actual_name: country_name) || GeoEntity.find_by(name: country_name)
 
-    '/' + country.name.gsub(/ /, '-').gsub("'", '%27').downcase
+    '/' + country.name.gsub(/ /, '-').downcase
   end
 
   def country_name_from_param(param_name)
