@@ -64,6 +64,11 @@
   width: rem-calc(28); height: rem-calc(22);
 }
 
+@mixin icon-burger-white {
+  @include icon-burger;
+  background-image: image_url('icons/burger-white.svg');
+}
+
 @mixin icon-close {
   @include icon-cross;
   width: rem-calc(25); height: rem-calc(25);

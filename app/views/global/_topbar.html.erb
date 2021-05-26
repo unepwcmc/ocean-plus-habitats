@@ -1,4 +1,4 @@
-<div class="topbar relative">
+<div class="topbar<%= '--dark' if local_assigns[:dark] %> relative">
   <div class="topbar__content">
     <%= link_to root_path, class: "topbar__link", title: 'Visit the Ocean+ Habitats home page' do %>
       <%= image_tag 'logos/logo-ocean-plus-habitats.svg', class: 'logo--site', alt: 'The logo for Ocean+ Habitats' %>

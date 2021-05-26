@@ -62,19 +62,6 @@ module ApplicationHelper
     param_name.gsub('-', ' ').gsub('%27', "'").titleize
   end
 
-  def footer_citation
-    if params[:name]
-      return t(
-        'global.footer_citation.region',
-        region: country_name_from_param(params[:name]),
-        year: Date.today.year,
-        month: Date.today.strftime('%B')
-      ).html_safe
-    end
-
-    t('global.footer_citation.global').html_safe
-  end
-
   def nav_tertiary
     I18n.t('home.nav_sticky').to_json
   end

@@ -2,6 +2,11 @@
 // topbar
 //--------------------------------------------------
 .topbar {
+  &--dark {
+    background-color: $navy-dark;
+    color: $white;
+  }
+
   &__content {
     @include container--large;
     @include flex;
@@ -9,13 +14,13 @@
     // height: rem-calc(80);
   }
 
-    &__link {
-      background-color: $navy-dark;
-      margin-right: auto;
-      padding: rem-calc(12 26);
-    }
+  &__link {
+    background-color: $navy-dark;
+    margin-right: auto;
+    padding: rem-calc(12 26);
+  }
 
-    &__nav {
-      margin-left: auto;
-    }
+  &__nav {
+    margin-left: auto;
+  }
 }
