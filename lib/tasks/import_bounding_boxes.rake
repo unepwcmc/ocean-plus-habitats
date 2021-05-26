@@ -25,9 +25,9 @@ namespace :import do
     filename = "lib/data/habitat_presence/habitat_presence_country.csv"
 
     CSV.foreach(filename, headers: true) do |row|
-      actual_name = row['COUNTRY']
       iso3 = row['ISO3']
-      geo_entity = GeoEntity.find_by(actual_name: actual_name, iso3: iso3)
+
+      geo_entity = GeoEntity.find_by(iso3: iso3)
 
       bounding_box = Esri.new.fetch_bounding_box(iso3)
       # ESRI's parsed response still looks like 
