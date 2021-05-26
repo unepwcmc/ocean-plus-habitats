@@ -32,7 +32,7 @@ namespace :import do
     @failed_report = []
 
     CSV.foreach(species_filename, headers: true) do |row|
-      habitat = Habitat.where('LOWER(title) = ?', row['habitat'].downcase).first
+      habitat = Habitat.where(title: row['habitat'].downcase).first
       next unless log_habitat(row, habitat)
 
       import_species(row, habitat)

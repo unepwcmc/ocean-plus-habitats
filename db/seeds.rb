@@ -13,6 +13,6 @@ end
 #  Rails.logger.info("Global coverage calculate for #{habitat.name}!")
 #end
 
-%w(countries regions prebakedstats new_redlist_data coastalstats global_change sources country_citations bounding_boxes).each do |import_type|
+%w(countries regions prebakedstats new_redlist_data coastalstats global_change sources country_citations bounding_boxes occurrences).each do |import_type|
   Rake::Task["import:#{import_type}"].invoke
 end
