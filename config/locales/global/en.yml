@@ -26,9 +26,12 @@ en:
         icon: icons/cold-coral.svg
     nav:
       burger_text: Explore a country/region
-
-    footer_copyright: copyright
-    footer_downloads_title: Download datasets
+    
+    footer:
+      about: About Ocean+ Habitats
+      copyright: Global Ocean Habitat Profile from the Ocean+ &copy; copyright
+      download_data: Download dataset
+      download_stats: Download statistics
 
     homepage: "%{name} home page"
     visit: Visit %{name}

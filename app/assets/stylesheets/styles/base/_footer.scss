@@ -4,6 +4,19 @@
 $footer-hero-height-laptop: rem-calc(590);
 
 //--------------------------------------------------
+// mixins
+//--------------------------------------------------
+@mixin footer-partner-logo {
+  opacity: .6;
+  width: rem-calc(80); height: rem-calc(24);
+
+  @include breakpoint($medium) {
+    margin-right: rem-calc(32);
+    width: rem-calc(100); height: rem-calc(46);
+  }
+}
+
+//--------------------------------------------------
 // classes
 //--------------------------------------------------
 .footer {
@@ -18,10 +31,12 @@ $footer-hero-height-laptop: rem-calc(590);
   &__row {
     &--top {
       @include container--large;
-      @include flex;
-      @include flex-h-between;
-
-      margin-bottom: rem-calc(80);
+    
+      @include breakpoint($medium) {
+        @include flex;
+        @include flex-h-between;
+        margin-bottom: rem-calc(80);
+      }
     }
 
     &--bottom {
@@ -35,41 +50,60 @@ $footer-hero-height-laptop: rem-calc(590);
     @include flex; 
     @include flex-wrap;
     @include flex-v-center;
+    @include flex-h-between;
+
+    @include breakpoint($small) {
+
+    }
   }
 
     &__partner-logo {
-      @include flex;
-      margin-right: rem-calc(32);
-      opacity: .6;
-      height: rem-calc(46); 
+      @include footer-partner-logo;
 
       &.logo--site {
         margin-right: 0;
         opacity: 1;
-        width: rem-calc(133); height: rem-calc(46);
-      }
+        width: rem-calc(133); height: rem-calc(24);
 
-      &--unepwcmc {
-        @extend .footer__partner-logo;
-        width: rem-calc(170);
-      }
-      &--geobon {
-        @extend .footer__partner-logo;
-        width: rem-calc(162);
-      }
-      &--proteus {
-        @extend .footer__partner-logo;
-        width: rem-calc(153);
+        @include breakpoint($medium) {
+          width: rem-calc(139); height: rem-calc(54);
+        }
       }
     }
 
+    //   &--unepwcmc {
+    //     @include footer-partner-logo;
+    //     width: rem-calc(170);
+    //   }
+    //   &--geobon {
+    //     @include footer-partner-logo;
+    //     width: rem-calc(162);
+    //   }
+    //   &--proteus {
+    //     @include footer-partner-logo;
+    //     width: rem-calc(153);
+    //   }
+    // }
+  
+  &__site-link {
+    margin-bottom: rem-calc(40);
+
+    display: block;
+  }
+
   &__downloads {
-    @include flex-no-shrink;
-    width: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__download {
+    @include button--download;
+    margin-bottom: rem-calc(16);
   }
 
   &__copyright {
     @include container--large;
+    font-style: italic;
     text-align: center;
   }
 }

@@ -12,7 +12,6 @@ body {
   font-family: $body-font;
   font-size: $body-font-size;
   margin: 0;
-  min-width: $site-width;
 }
 
 h1 { @include h1; }
