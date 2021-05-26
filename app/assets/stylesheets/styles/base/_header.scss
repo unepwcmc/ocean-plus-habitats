@@ -8,6 +8,7 @@
     background-size: cover;
     background-position: center;
     color: $white;
+    z-index: $z-300;
 
     .header {
       &__h1 {
