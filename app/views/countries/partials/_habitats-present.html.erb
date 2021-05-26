@@ -6,12 +6,6 @@
 
   <div class="cards--habitats-present">
     <% habitats_present.each do |habitat| %>
-      <!-- Present but data deficient habitats are essentially considered as 'Present' -->
-      <% if habitat[:status] = 'present-but-unknown'  %>
-        <% habitat[:status] = 'present' %>
-        <% habitat[:status_title] = 'Confirmed Presence' %>
-      <% end %>
-
       <div class="card card--<%= habitat[:status] %>">
 
         <div class="card__status">

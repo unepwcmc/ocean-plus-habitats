@@ -13,7 +13,9 @@ class Serializers::HabitatsPresentSerializer < Serializers::Base
       id = habitat[:id]
 
       habitats_present = habitat.dup
-      habitats_present[:status] = occurrences[id]
+
+      # Present, but data deficient habitats are essentially considered as 'Present'
+      habitats_present[:status] = occurrences[id] === 'present-but-unknown' ? 'present' : occurrences[id]
       habitats_present[:status_title] = get_status_text(habitats_present[:status])
 
       # Transforming plain text URLs into live links
@@ -26,7 +28,7 @@ class Serializers::HabitatsPresentSerializer < Serializers::Base
     end
   end
 
-  def habitat_citations habitat
+  def habitat_citations(habitat)
     habitat_sources = sources(habitat)
 
     unless habitat_sources[:citation].empty?
@@ -36,13 +38,13 @@ class Serializers::HabitatsPresentSerializer < Serializers::Base
     end
   end
 
-  def insert_hyperlinks (citation)
+  def insert_hyperlinks(citation)
     citation.split.map { |string| string[/^(http)/] ? 
       "<a target='_' class='modal__link' href='#{string}'>#{string}</a>" : string 
     }.join(' ')
   end
 
-  def get_status_text status
+  def get_status_text(status)
     I18n.t("countries.shared.habitats_present.title_#{status}")
   end
 
