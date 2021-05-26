@@ -2,9 +2,9 @@ module CountriesHelper
   def if_country_get_flag(country_iso3)
     return unless country_iso3
 
-    flag = FileTest.exist?("app/assets/images/flags/#{country_iso3}.svg")
+    flag = FileTest.exist?("app/assets/images/flags/#{country_iso3.downcase}.svg")
 
-    flag ? image_tag("flags/#{country_iso3}.svg", alt: '', class: 'header__icon') : nil
+    flag ? image_tag("flags/#{country_iso3.downcase}.svg", alt: '', class: 'header__icon') : nil
   end
 
   def nav_tertiary_countries
@@ -44,7 +44,7 @@ module CountriesHelper
   end
 
   def total_value(dataset)
-    @country.protection_stats[dataset[:id]] ? @country.protection_stats[dataset[:id]]['total_value'].round : 0
+    @country.protection_stats[dataset[:id]] ? @country.protection_stats[dataset[:id]]['total_value'].round(1) : 0
   end
 
   def habitat_with_data
