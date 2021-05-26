@@ -18,7 +18,7 @@ module CountriesHelper
   def dataset_status_title(dataset)
     # Here, we want the status to read 'Data Deficient'
     status = dataset_status(dataset) 
-    status = status == 'present-but-unknown' ? 'data_deficient' : status
+    status = status == 'present-but-unknown' ? 'unknown' : status
 
     I18n.t("shared.proportion_protected.title_#{status}")
   end
