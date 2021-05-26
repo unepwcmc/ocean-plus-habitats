@@ -8,7 +8,7 @@
           id="<%= dataset[:id] %>"
           name="<%= dataset[:name] %>"
           icon-class="<%= current_page?('/') ? "icon--#{dataset[:id]}" : icon_class(dataset) %>"
-          :percentage="<%= current_page?('/') ? habitat_protection(dataset[:id])[:percentage_protection] : protected_percentage(dataset) %>"
+          :percentage="<%= current_page?('/') ? habitat_protection(dataset[:id])['protected_percentage'] : protected_percentage(dataset) %>"
           :width="180"
           >
         </div>
@@ -23,8 +23,8 @@
                 of <%= number_with_delimiter(total_value(dataset), :delimiter => ',') %> km<sup>2</sup>
               <% end %>
             <% else %>
-              <span class="card__habitat-percentage"><%= habitat_protection(dataset[:id])[:percentage_protection] %>%</span> of
-              <%= number_with_delimiter(habitat_protection(dataset[:id])[:total_habitat_cover], :delimiter => ',') %> km<sup>2</sup>
+              <span class="card__habitat-percentage"><%= habitat_protection(dataset[:id])['protected_percentage'] %>%</span> of
+              <%= number_with_delimiter(habitat_protection(dataset[:id])['total_value'], :delimiter => ',') %> km<sup>2</sup>
             <% end %>
           </p>
         </div>
