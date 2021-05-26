@@ -6,6 +6,7 @@ class GeoEntityStat < ApplicationRecord
 
   scope :country_stats, -> { joins(:geo_entity).where('geo_entities.iso3 IS NOT NULL') }
 
+  # TODO - consider adding :present-but-unknown to this list which will require some thinking
   enum occurrence: [:absent, :unknown, :present]
 
   BASE_OCCURRENCES = {

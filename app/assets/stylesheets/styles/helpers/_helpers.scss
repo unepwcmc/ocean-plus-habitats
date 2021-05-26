@@ -6,8 +6,8 @@
 .bg--navy { background-color: $navy; }
 .bg--navy-dark { background-color: $navy-dark; }
 
-.bg-image-overlay--white {
-  @include overlay(rgba($white, 0.16));
+.bg-image-overlay--dark {
+  @include overlay(rgba($navy-dark, 0.6));
 }
 
 //--------------------------------------------------

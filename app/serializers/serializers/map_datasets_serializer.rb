@@ -102,6 +102,7 @@ HABITATS_PRESENCE_STATUSES_DEFAULT = {
 
 class Serializers::MapDatasetsSerializer < Serializers::Base
   include ApplicationHelper
+  include CountriesHelper
   include ActionView::Helpers::NumberHelper
 
   def initialize(habitat_protection_stats, habitat_presence_statuses=HABITATS_PRESENCE_STATUSES_DEFAULT)
@@ -113,7 +114,7 @@ class Serializers::MapDatasetsSerializer < Serializers::Base
     DATASETS.map do |ds|
       dataset = ds.dup
       dataset[:name] = get_habitat_from_id(ds[:id])[:title]
-      dataset[:disabled] = habitat_presence_status(ds) == 'unknown' || habitat_presence_status(ds) == 'absent'  ? true : false
+      dataset[:disabled] = absent_or_unknown(habitat_presence_status(ds)) 
 
       dataset
     end

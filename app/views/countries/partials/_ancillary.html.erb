@@ -10,8 +10,8 @@
   <h2><%= t('countries.shared.ancillary.citation_title'); %></h2>
   <p><%= 
     t('countries.shared.ancillary.citation_text', 
-      country_name_lower: t("countries.#{@yml_key}.title").downcase.parameterize,
-      country_name: t("countries.#{@yml_key}.title")
+      country_name_lower: @name.downcase.parameterize,
+      country_name: @name
     ).html_safe 
   %></p>
 </section>

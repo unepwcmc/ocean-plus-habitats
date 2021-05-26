@@ -1,26 +1,29 @@
 require 'csv'
 
 namespace :import do
-  desc "import countries data into database"
-  task :countries => [:environment] do
+  desc 'import countries data into database'
+  task countries: [:environment] do
+    # Strip out accents, commas, apostrophes, brackets as they mess with the URL
+    def sanitize(name) 
+      I18n.transliterate(name).downcase.gsub(/[,'()]/, '').titleize
+    end
+
     current_count = GeoEntity.countries.count
     Rails.logger.info("There are #{current_count} countries")
 
-    CSV.foreach('lib/data/countries.csv', headers: true) do |row|
-      name, iso3, bounding_box = [row['country_name'], row['iso3'], row['bounding_box']]
+    CSV.foreach('lib/data/habitat_presence/habitat_presence_country.csv', headers: true) do |row|
+      name = row['COUNTRY']
+      iso3 = row['ISO3']
+
       attributes = {
-        name: name,
+        name: sanitize(name), # this name used for URLs
+        actual_name: name, # leave original name in there for purposes of displaying to users
         iso3: iso3
       }
-      # convert from string into array of arrays
-      if bounding_box.present? && bounding_box.include?(';')
-        bounding_box = bounding_box.split(';').map { |bb| bb.split(' ').map(&:to_f) }
-        GeoEntity.find_or_initialize_by(attributes).
-          update_attributes!(bounding_box: bounding_box)
-      else
-        GeoEntity.find_or_create_by(attributes)
-      end
+
+      GeoEntity.find_or_create_by(attributes)
     end
+
     Rails.logger.info("#{GeoEntity.countries.count - current_count} countries were created successfully!")
   end
 end

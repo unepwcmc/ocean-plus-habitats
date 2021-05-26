@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import VSelectSearchable from '../v-select/VSelectSearchable'
+import VSelectSearchable from '../select/VSelectSearchable'
 
 export default {
   name: 'NavMegaMenu',
