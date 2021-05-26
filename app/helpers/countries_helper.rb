@@ -1,9 +1,10 @@
 module CountriesHelper
-  def if_country_get_flag(country_name)
-    name = country_name.downcase.gsub(' ', '-')
-    flag = FileTest.exist?("app/assets/images/flags/#{name}.svg")
+  def if_country_get_flag(country_iso3)
+    return unless country_iso3
 
-    flag ? image_tag("flags/#{name}.svg", alt: '', class: 'header__icon') : nil
+    flag = FileTest.exist?("app/assets/images/flags/#{country_iso3}.svg")
+
+    flag ? image_tag("flags/#{country_iso3}.svg", alt: '', class: 'header__icon') : nil
   end
 
   def nav_tertiary_countries

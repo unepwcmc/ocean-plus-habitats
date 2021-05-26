@@ -7,6 +7,7 @@ class CountriesController < ApplicationController
     # TODO - work out how to integrate i18n with this for country names - we may want to
     # have a list of country names in each language which is then dynamically fetched from
     # a CSV/yml depending on the language selected
+    @iso3 = @country&.iso3
     @name = @country.actual_name
 
     habitats_protection_stats = @country.protection_stats
