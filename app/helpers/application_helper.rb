@@ -27,24 +27,35 @@ module ApplicationHelper
     'Guanaco Torres del Paine Chile Gregoire Dubois'
   end
 
-  COUNTRIES = %w(indonesia united_arab_emirates argentina australia kenya norway ireland).freeze
-  REGIONS = %w(mediterranean wider_caribbean).freeze
   def get_nav_items
-    #FERDI - get all countries and then fill out object as follows
     {
-      countries: COUNTRIES.map { |c| nav_item(c) },
-      regions: REGIONS.map { |r| nav_item(r) }
+      countries: list_of_countries,
+      regions: GeoEntity.regions.map { |region| nav_item(region.name) }
     }
   end
 
-  def nav_item(item)
-    geo_entity_name = item.humanize.split(' ').map(&:capitalize).join(' ')
-    geo_entity_id = GeoEntity.find_by_name(geo_entity_name)&.id
-    return {} unless geo_entity_id
+  def list_of_countries
+    # TODO - Hide country pages without any data - maybe we want more finely-tuned error handling for lack of data
+    all_countries = GeoEntity.countries.includes(:geo_entity_stats)
+
+    valid_countries = all_countries.where.not(geo_entity_stats: { id: nil })
+
+    valid_countries.sort_by(&:name).map do |country| 
+      nav_item(country.actual_name) 
+    end
+  end
+
+  def nav_item(name)
+    path_name = name
+    geo_entity = GeoEntity.find_by_actual_name(name)
+    geo_entity_id = geo_entity&.id
+    
+    return {} unless geo_entity_id 
+    
     {
       id: geo_entity_id,
-      name: I18n.t("countries.#{item}.title"),
-      url: country_path(geo_entity_name)
+      name: name,
+      url: country_path(path_name)
     }
   end
 
@@ -54,8 +65,10 @@ module ApplicationHelper
     "icon--#{habitat}#{status}"
   end
 
-  def country_path(country)
-    '/' + country.gsub(/ /, '-').gsub("'", '%27').downcase
+  def country_path(country_name)
+    country = GeoEntity.find_by(actual_name: country_name) || GeoEntity.find_by(name: country_name)
+
+    '/' + country.name.gsub(/ /, '-').downcase
   end
 
   def country_name_from_param(param_name)

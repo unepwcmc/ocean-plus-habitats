@@ -2,7 +2,7 @@
   <div class="flex">
     <h2><%= t('countries.shared.habitats_present.title'); %></h2>
   </div>
-  <p><%= t('countries.shared.habitats_present.intro_text', country_name: t("countries.#{@yml_key}.title")); %></p>
+  <p><%= t('countries.shared.habitats_present.intro_text', country_name: @name); %></p>
 
   <div class="cards--habitats-present">
     <% habitats_present.each do |habitat| %>
@@ -12,7 +12,9 @@
           <span class="card__status-ribbon">
             <i class="card__status-icon"></i>
           </span>
-          <span class="card__status-title"><%= habitat[:status_title] %></span>
+          <span class="card__status-title">
+            <%= habitat[:status_title] %>
+          </span>
         </div>
 
         <div class="card__content">

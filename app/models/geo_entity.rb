@@ -15,8 +15,10 @@ class GeoEntity < ApplicationRecord
 
   has_many :country_citations, foreign_key: 'country_id'
 
-  scope :countries, -> { where.not(iso3: nil) }
+  scope :countries, -> { where.not(iso3: nil || 'GBL') }
   scope :regions, -> { where(iso3: nil) }
+
+  NEGATIVE_OCCURRENCE_STATUSES = %w[unknown absent present-but-unknown].freeze
 
   # Returns species data if directly attached to the GeoEntity, so a country.
   # Returns species data for all associated countries if it is a region.
@@ -33,16 +35,40 @@ class GeoEntity < ApplicationRecord
   end
 
   def occurrences
-    _occurrences = countries_geo_entity_stats.joins(:habitat).select('habitats.name, occurrence')
-    _occurrences = _occurrences.map(&:attributes).map { |attrs| attrs.slice('name', 'occurrence') }
+    # Because of possible nil values for geo entity stat attributes, we can't just go by the occurrence
+    # value; nil values for a particular habitat will translate to data deficient even if confirmed present
+    # as there are two definitions:
+    #
+    # 1) We don't know if the habitat is present at all - this is the 'standard'
+    # data deficient definition
+    # 2) We know the habitat is present, we just don't know how much of it there is
+    occurrences = determine_correct_occurrences
+
     hash = {}
 
-    _occurrences.map do |occurrence|
-      _occurrence = occurrence['occurrence']
+    occurrences.map do |occurrence|
       next if hash[occurrence['name']] == 'present'
-      hash[occurrence['name']] = _occurrence unless _occurrence == 'unknown'
+
+      hash[occurrence['name']] = occurrence['occurrence'] 
     end
+
     GeoEntityStat::BASE_OCCURRENCES.merge(hash)
+  end
+
+  STATS = %w[protected_value total_value protected_percentage].freeze
+
+  def determine_correct_occurrences
+    occurrences = fetch_needed_occurrence_attrs
+
+    occurrences.map(&:attributes).map do |attrs| 
+      if STATS.all? { |attr| attrs[attr].nil? }
+        modified_attrs = attrs.slice('name').merge({ 'occurrence': 'present-but-unknown' })
+      else
+        modified_attrs = attrs.slice('name', 'occurrence') 
+      end
+
+      modified_attrs.stringify_keys
+    end
   end
 
   def protection_stats
@@ -85,6 +111,16 @@ class GeoEntity < ApplicationRecord
   end
 
   private
+
+  def fetch_needed_occurrence_attrs
+    countries_geo_entity_stats.joins(:habitat).select(
+      'habitats.name, 
+      occurrence, 
+      protected_value, 
+      total_value, 
+      geo_entity_stats.protected_percentage'
+    )
+  end
 
   # TODO Consider removing this and using directly associated stats for regions too
   def countries_geo_entity_stats

@@ -11,7 +11,7 @@
       <% habitat_change.each do |habitat| %>
         <div class="card__card">
           <div class="flex">
-            <i class="card__icon <%= get_habitat_icon_class(habitat[:id], habitat[:status]) %>" alt="<%= habitat[:title] %> icon"></i>
+            <i class="card__icon <%= icon_class(habitat) %>" alt="<%= habitat[:title] %> icon"></i>
             <% unless habitat[:change] == 0 %>
              <span class="card__stat">
               <div class="card__stat-text"><%= habitat[:change_direction] %></div>
