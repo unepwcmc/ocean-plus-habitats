@@ -20,10 +20,6 @@ $nav-pane-min-width-large: rem-calc(460);
         @include button--burger;
         @include flex-vs-center;
         margin: rem-calc(10 0 10 14);
-
-        .topbar--dark & {
-          @include icon-burger-white;
-        }
       }
 
       &__close {
