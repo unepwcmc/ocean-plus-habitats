@@ -22,6 +22,10 @@
     background-color: $navy-dark;
     margin-right: auto;
     padding: rem-calc(12 26);
+
+    .topbar--dark & {
+      padding: rem-calc(12 0);
+    }
   }
 
   &__nav {
