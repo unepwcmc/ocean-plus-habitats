@@ -1,7 +1,5 @@
 &--protection-dials {
-  @include flex;
-  @include flex-h-between;
-  @include flex-wrap;
+  @include wrapped-cards;
   margin-top: rem-calc(20);
 
   @include breakpoint($small) {
@@ -9,31 +7,9 @@
   }
 
   .card {
-    margin-bottom: rem-calc(45);
-    width: 48%; //-2% for inner padding
-
-    flex-shrink: 0;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    @include breakpoint($small) { 
-      padding: rem-calc(0 10);
-      width: 33%; 
-
-      &:nth-child(n+4) {
-        margin-bottom: 0;
-      }
-    }
-
-    @include breakpoint($medium) { 
-      margin-bottom: 0;
-      width: 20%; 
-    }
-
-    &:last-child {
-      margin-right: auto;
+    @include wrapped-card(2,3,5);
+    @include breakpoint-down($small) {
+      margin-bottom: rem-calc(40);
     }
 
     &--unknown {
