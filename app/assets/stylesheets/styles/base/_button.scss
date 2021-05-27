@@ -93,6 +93,17 @@ $button-padding-wide-laptop: 14px 45px;
   background-color: $navy;
   border: $border-thin $blue-light;
   font-weight: $semi-bold;
+
+  align-items: center;
+  display: flex;
+
+  &::before {
+    @include icon-download;
+    content: '';
+    margin-right: rem-calc(5);
+
+    display: block;
+  }
 }
 
 @mixin button--grey {

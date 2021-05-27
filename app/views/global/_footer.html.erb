@@ -1,7 +1,7 @@
 <footer class="footer">
   <div class="footer__row--top">
     <%= link_to root_url, title: t('global.homepage', name: 'Ocean+ Habitats'), class:"footer__site-link" do %>
-      <%= image_tag 'logos/logo-ocean-plus-habitats.svg', alt: 'Ocean+ Habitats logo', class: 'footer__partner-logo logo--site' %>
+      <%= image_tag 'logos/logo-ocean-plus-habitats.svg', alt: 'Ocean+ Habitats logo', class: 'footer__site-logo' %>
     <% end %>
 
     <div class="footer__group">
@@ -20,9 +20,9 @@
       </div>
 
       <div class="footer__downloads">
-        <a href="<%= about_path %>" title="<%= t('global.footer.download_data') %>" class="footer__download"><%= t('global.footer.download_data') %></a>
-        <a href="<%= about_path %>" title="<%= t('global.footer.download_stats') %>" class="footer__download"><%= t('global.footer.download_stats') %></a>
-        <a href="<%= about_path %>" title="<%= t('global.footer.about') %>"><%= t('global.footer.about') %></a>
+        <%= link_to t('global.footer.download_data'), '', title: t('global.footer.download_data'), class: 'footer__download' %>
+        <%= link_to t('global.footer.download_stats'), '', title: t('global.footer.download_stats'), class: 'footer__download' %>
+        <%= link_to t('global.footer.about'), about_path, title: t('global.footer.about'), class: 'footer__link' %>
       </div>
     </div>
   </div>

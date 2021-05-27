@@ -4,19 +4,6 @@
 $footer-hero-height-laptop: rem-calc(590);
 
 //--------------------------------------------------
-// mixins
-//--------------------------------------------------
-@mixin footer-partner-logo {
-  opacity: .6;
-  width: rem-calc(80); height: rem-calc(24);
-
-  @include breakpoint($medium) {
-    margin-right: rem-calc(32);
-    width: rem-calc(100); height: rem-calc(46);
-  }
-}
-
-//--------------------------------------------------
 // classes
 //--------------------------------------------------
 .footer {
@@ -31,11 +18,12 @@ $footer-hero-height-laptop: rem-calc(590);
   &__row {
     &--top {
       @include container--large;
+      margin-bottom: rem-calc(30);
     
-      @include breakpoint($medium) {
+      @include breakpoint($small) {
         @include flex;
         @include flex-h-between;
-        margin-bottom: rem-calc(80);
+        margin-bottom: rem-calc(40);
       }
     }
 
@@ -51,44 +39,32 @@ $footer-hero-height-laptop: rem-calc(590);
     @include flex-wrap;
     @include flex-v-center;
     @include flex-h-between;
+    margin-bottom: rem-calc(60);
+  }
 
+  &__partner-logo {
+    opacity: .6;
+    width: rem-calc(80); height: rem-calc(24);
+  
     @include breakpoint($small) {
-
+      margin-right: rem-calc(32);
+      width: rem-calc(112); height: rem-calc(33);
     }
   }
 
-    &__partner-logo {
-      @include footer-partner-logo;
-
-      &.logo--site {
-        margin-right: 0;
-        opacity: 1;
-        width: rem-calc(133); height: rem-calc(24);
-
-        @include breakpoint($medium) {
-          width: rem-calc(139); height: rem-calc(54);
-        }
-      }
-    }
-
-    //   &--unepwcmc {
-    //     @include footer-partner-logo;
-    //     width: rem-calc(170);
-    //   }
-    //   &--geobon {
-    //     @include footer-partner-logo;
-    //     width: rem-calc(162);
-    //   }
-    //   &--proteus {
-    //     @include footer-partner-logo;
-    //     width: rem-calc(153);
-    //   }
-    // }
-  
   &__site-link {
     margin-bottom: rem-calc(40);
 
     display: block;
+  }
+
+  &__site-logo { 
+    width: rem-calc(139); height: rem-calc(54);
+  }
+
+  &__link {
+    margin-top: rem-calc(10);
+    text-decoration: underline;
   }
 
   &__downloads {
@@ -99,11 +75,15 @@ $footer-hero-height-laptop: rem-calc(590);
   &__download {
     @include button--download;
     margin-bottom: rem-calc(16);
+    width: rem-calc(264);
   }
 
   &__copyright {
     @include container--large;
     font-style: italic;
-    text-align: center;
+    
+    @include breakpoint($small) {
+      text-align: center;
+    }
   }
 }
