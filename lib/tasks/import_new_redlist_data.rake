@@ -19,7 +19,7 @@ namespace :import do
     CSV.read(species_filename, headers: true)
        .uniq { |r| r.values_at('iso3', 'habitat') }.each do |row|
 
-      habitat = Habitat.find_by(title: row['habitat'].downcase)
+      habitat = Habitat.find_by(title: row['habitat'])
       next unless log_habitat(row, habitat)
 
       import_occurrences(row, habitat)
