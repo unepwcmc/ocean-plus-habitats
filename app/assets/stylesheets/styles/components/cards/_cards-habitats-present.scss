@@ -1,11 +1,12 @@
 &--habitats-present {
-  @include flex;
-  @include flex-h-between;
+  @include wrapped-cards;
   margin-bottom: rem-calc(20);
 
   .card {
-    padding: rem-calc(0 20);
-    width: calc(20% - 18px); height: rem-calc(272);
+    @include wrapped-card(2,3,5);
+    background: $white;
+    padding: rem-calc(0 16);
+    height: rem-calc(272);
 
     &--present {
       border: solid 1px $green;
