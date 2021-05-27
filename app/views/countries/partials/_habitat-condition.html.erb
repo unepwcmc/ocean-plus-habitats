@@ -1,10 +1,12 @@
 <section id="<%= id %>" class="section-padding">
-  <div class="container">
+  <div class="container--small">
     <div class="h2-wrapper flex flex-v-center">
       <h2><%= t('countries.shared.habitat_condition.title') %></h2>
       <modal-trigger id="citation" modal-content="<%= modal_content %>" class="icon--citation margin-space-left"></modal-trigger>
     </div>
 
-    <p class="max-width-container-small"><%= t('countries.shared.habitat_condition.text', country_name: @name).html_safe %></p>
+    <p>
+      <%= t('countries.shared.habitat_condition.text', country_name: @name).html_safe %>
+    </p>
   </div>
 </section>

@@ -30,3 +30,6 @@ the `Habitat` model.
 
 Old coverage data is stored within `lib/data/countries` for the various habitats. The new coverage data can be found within
 `lib/data/habitat_coverage_protection/<habitat>_country_output.csv` 
+
+Redlist data for the various species is store in `lib/data/iucn_redlist`. If you need to update just the occurrences of each
+species run `rake import:occurrences`.

@@ -1,16 +1,28 @@
-<section class="container section-padding--top">
-  <div class="flex">
-    <h3>
-      <%= t('countries.shared.habitat_representation.title'); %>
-    </h3>
-    <modal-trigger id="citation" modal-content="<%= modal_content %>" class="icon--citation margin-space-left"></modal-trigger>
-  </div>
-  <p class="max-width-container-small"><%= t('countries.shared.habitat_representation.intro_text', country_name: @name) %></p>
+<section class="section-padding bg--grey-xlight">
+  <div class="container">
+    <div class="flex">
+      <h3>
+        <%= t('countries.shared.habitat_representation.title'); %>
+      </h3>
 
-  <h4><%= t('countries.shared.habitat_representation.chart_heading', coastline_length: @stacked_row_chart[:chart][:coastline_length]).html_safe %></h4>
-  <chart-row-stacked
-    theme="<%= @stacked_row_chart[:chart][:theme] %>"
-    :legend="<%= @stacked_row_chart[:legend].to_json %>">
-  </chart-row-stacked>
-  <p class="text--smallprint"><%= t('countries.shared.habitat_representation.chart_note').html_safe %></p>
+      <modal-trigger id="citation" modal-content="<%= modal_content %>" class="icon--citation margin-space-left"></modal-trigger>
+    </div>
+
+    <p class="max-width-container-small"><%= t('countries.shared.habitat_representation.intro_text', country_name: @name) %></p>
+
+    <h4>
+      <%= t('countries.shared.habitat_representation.chart_heading', 
+        coastline_length: @stacked_row_chart[:chart][:coastline_length]
+      ).html_safe %>
+    </h4>
+
+    <chart-row-stacked
+      theme="<%= @stacked_row_chart[:chart][:theme] %>"
+      :legend="<%= @stacked_row_chart[:legend].to_json %>">
+    </chart-row-stacked>
+
+    <p class="text--smallprint max-width-container-small">
+      <%= t('countries.shared.habitat_representation.chart_note').html_safe %>
+    </p>
+  </div>
 </section>

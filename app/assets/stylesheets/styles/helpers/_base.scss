@@ -77,7 +77,7 @@ th { font-weight: inherit; }
 }
 
 .max-width-container-small {
-  max-width: $container-width-small;
+  max-width: $container-width-small - 2 * $gutter-large;
 }
 
 //--------------------------------------------------
