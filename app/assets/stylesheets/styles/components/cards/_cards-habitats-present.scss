@@ -1,7 +1,7 @@
 &--habitats-present {
   @include flex;
   @include flex-h-between;
-  margin-bottom: $page-padding-bottom-small;
+  margin-bottom: rem-calc(20);
 
   .card {
     padding: rem-calc(0 20);

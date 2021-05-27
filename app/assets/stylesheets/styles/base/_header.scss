@@ -34,7 +34,11 @@
 //--------------------------------------------------
   &--country {
     color: $body-font-color;
-    height: rem-calc(250);
+    height: rem-calc(120);
+
+    @include breakpoint($small) {
+      height: rem-calc(170);
+    }
 
     .header {
       &__content {
