@@ -1,10 +1,7 @@
 &--protection-dials {
   @include wrapped-cards;
   margin-top: rem-calc(20);
-
-  @include breakpoint($small) {
-    margin-bottom: rem-calc(25);
-  }
+  margin-bottom: rem-calc(25);
 
   .card {
     @include wrapped-card(2,3,5);
