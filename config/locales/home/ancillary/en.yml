@@ -1,9 +1,0 @@
-en:
-  home:
-    ancillary:
-      citation_title: Citation
-      citation_text: 'UNEP-WCMC (year). Ocean+ Habitats: Global overview [On-line], [insert month/year of the version downloaded]. Available at: <a href="/" title="Ocean+ Habitats">habitats.oceanplus.org</a>'
-      downloads_title: Downloads
-      downloads:
-        - '<a href="#" title="Download these datasets">Download these datasets</a>'
-        - '<a href="#" title="Download statistics">Download statistics</a>'
