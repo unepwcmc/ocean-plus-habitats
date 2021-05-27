@@ -5,7 +5,9 @@
       <modal-trigger id="citation" modal-content="<%= modal_content %>" class="icon--citation margin-space-left"></modal-trigger>
     </div>
 
-    <p><%= t('countries.shared.habitat_change.intro_text') %></p>
+    <p class="max-width-container-small">
+      <%= t('countries.shared.habitat_change.intro_text') %>
+    </p>
 
     <div class="cards--habitat-change">
       <% habitat_change.each do |habitat| %>
@@ -31,7 +33,7 @@
       <% end %>
     </div>
 
-    <p class="text--smallprint">
+    <p class="text--smallprint max-width-container-small">
       <%= t('countries.shared.habitat_change.smallprint').html_safe %>
     </p>
   </div>

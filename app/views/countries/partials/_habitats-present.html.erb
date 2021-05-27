@@ -1,34 +1,46 @@
-<section id="<%= id %>" class="container section-padding--top">
-  <div class="flex">
-    <h2><%= t('countries.shared.habitats_present.title'); %></h2>
-  </div>
-  <p><%= t('countries.shared.habitats_present.intro_text', country_name: @name); %></p>
+<section id="<%= id %>" class="section-padding--bottom bg--grey-xlight">
+  <div class="container">
+    <div class="flex">
+      <h2><%= t('countries.shared.habitats_present.title'); %></h2>
+    </div>
 
-  <div class="cards--habitats-present">
-    <% habitats_present.each do |habitat| %>
-      <div class="card card--<%= habitat[:status] %>">
+    <p class="max-width-container-small">
+      <%= t('countries.shared.habitats_present.intro_text', country_name: @name); %>
+    </p>
 
-        <div class="card__status">
-          <span class="card__status-ribbon">
-            <i class="card__status-icon"></i>
-          </span>
-          <span class="card__status-title">
-            <%= habitat[:status_title] %>
-          </span>
+    <div class="cards--habitats-present">
+      <% habitats_present.each do |habitat| %>
+        <div class="card card--<%= habitat[:status] %>">
+
+          <div class="card__status">
+            <span class="card__status-ribbon">
+              <i class="card__status-icon"></i>
+            </span>
+
+            <span class="card__status-title">
+              <%= habitat[:status_title] %>
+            </span>
+          </div>
+
+          <div class="card__content">
+            <i class="card__habitat-icon <%= get_habitat_icon_class(habitat[:id], habitat[:status]) %>" alt="<%= habitat[:title] %> icon"></i>
+
+            <p class="card__habitat">
+              <span class="card__habitat-title"><%= habitat[:title] %></span>
+
+              <modal-trigger
+                id="citation" 
+                modal-content="<%= habitat[:citation].html_safe %>"
+                class="icon--citation"
+              ></modal-trigger>
+            </p>
+          </div>
         </div>
+      <% end %>
+    </div>
 
-        <div class="card__content">
-          <i class="card__habitat-icon <%= get_habitat_icon_class(habitat[:id], habitat[:status]) %>" alt="<%= habitat[:title] %> icon"></i>
-
-          <p class="card__habitat">
-            <span class="card__habitat-title"><%= habitat[:title] %></span>
-            <modal-trigger id="citation" modal-content="<%= habitat[:citation].html_safe %>" class="icon--citation"></modal-trigger>
-          </p>
-        </div>
-      </div>
-    <% end %>
+    <p class="text--smallprint max-width-container-small">
+      <%= t('countries.shared.habitats_present.disclaimer').html_safe %>
+    </p>
   </div>
-
-  <p class="text--smallprint"><%= t('countries.shared.habitats_present.disclaimer').html_safe %></p>
-
 </section>
