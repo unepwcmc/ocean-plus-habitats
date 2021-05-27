@@ -4,25 +4,6 @@
       :class="['v-dial__meter', svgClass]"
       :viewBox="`0 0 ${width} ${width}`"
     >
-      <defs>
-        <marker 
-          :id="markerId" 
-          class="v-dial__marker"
-          viewBox="0 0 10 10" 
-          refX="5" 
-          refY="5"
-          :markerWidth="2 * markerRadius" 
-          :markerHeight="2 * markerRadius"
-          orient="auto"
-        >
-          <circle          
-            r="5"
-            cx="5"
-            cy="5"
-          />
-        </marker>
-      </defs>
-
       <circle
         class="v-dial__circle--background"
         :r="radius"
@@ -39,12 +20,11 @@
         :style="{ strokeDasharray: circumference, strokeDashoffset: strokeOffset }"
       />
 
-      <polyline 
-        class="dial__line"
-        :points="markerPoints" 
-        fill="none"
-        stroke="transparent"
-        :marker-end="`url(#${markerId})`"
+      <circle 
+        class="v-dial__marker"         
+        :r="markerRadius"
+        :cx="markerPoints.x"
+        :cy="markerPoints.y"
       />
     </svg>
 
@@ -67,6 +47,7 @@ export default {
       type: String,
       default: ''
     },
+
     percentage: {
       type: Number,
       default: null
@@ -88,18 +69,24 @@ export default {
     radius() {
       return this.width / 2 - this.markerRadius
     },
+
     circumference() {
       return 2 * this.radius * Math.PI
     },
+
     strokeOffset() {
       return (this.inversePercentage / 100) * this.circumference
     },
+
     markerPoints() {
       const
-        outerEndX = this.getCoordFromPercentage(this.percentage, 'x'),
-        outerEndY = this.getCoordFromPercentage(this.percentage, 'y')
+        xFromCenter = this.getCoordFromPercentage(this.percentage, 'x'),
+        yFromCenter = this.getCoordFromPercentage(this.percentage, 'y')
 
-      return `0,0 ${outerEndX + this.width / 2},${outerEndY + this.width / 2}`
+      return {
+        x: xFromCenter + this.width / 2,
+        y: yFromCenter + this.width / 2
+      }
     }
   },
 
