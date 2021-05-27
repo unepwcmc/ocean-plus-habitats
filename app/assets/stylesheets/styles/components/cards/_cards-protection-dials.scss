@@ -73,14 +73,14 @@
           width: 100%;
 
           display: block;
-        }
 
-        &-percentage {
-          color: $grey-dark;
-          font-size: rem-calc(25);
-          font-weight: $bold;
-
-          display: block;
+          strong {
+            color: $grey-dark;
+            font-size: rem-calc(25);
+            font-weight: $bold;
+  
+            display: block;
+          }
         }
       }
   }
