@@ -137,11 +137,23 @@
   @include text-3;
 }
 
+@mixin text-nav-item {
+  @include text-3;
+  color: $white;
+  font-weight: $normal;
+}
+
 @mixin text-nav-tertiary {
   @include text-3;
   cursor: pointer;
 
   &:hover { text-decoration: underline; }
+}
+
+@mixin text-nav-search-label {
+  font-size: rem-calc(22);
+  font-weight: $semi-bold;
+  margin-bottom: rem-calc(22)
 }
 
 @mixin text-select {

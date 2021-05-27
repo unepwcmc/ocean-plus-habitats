@@ -8,7 +8,31 @@ $nav-pane-min-width-large: rem-calc(460);
 // classes
 //--------------------------------------------------
 .nav {
+  &__search-wrapper {
+    margin-bottom: rem-calc(24);
+    padding-bottom: rem-calc(30);
 
+    position: relative;
+
+    @include breakpoint($small) {
+      display: none;
+    }
+
+    &::after {
+      background-color: rgba($white, 0.35);
+      content: '';
+      width: 100%; height: rem-calc(1);
+
+      position: absolute;
+      top: 100%;
+      z-index: -1;
+    }
+  }
+
+  &__search-label {
+    @include text-nav-search-label;
+    display: block;
+  }
 //--------------------------------------------------
 // primary
 //--------------------------------------------------
@@ -30,10 +54,6 @@ $nav-pane-min-width-large: rem-calc(460);
         top: rem-calc(25);
         right: rem-calc(25);
         z-index: 1;
-      }
-
-      &__dropdown {
-        color: $white;
       }
 
       &__pane {
@@ -66,38 +86,9 @@ $nav-pane-min-width-large: rem-calc(460);
         @include ul-unstyled;
       }
 
-      &__heading {
-        font-weight: $bold;
-        margin-bottom: .7em;
+      &__a {
+        @include text-nav-item;
       }
-
-      &__columns {
-        @include flex;
-        padding-top: rem-calc(40);
-        padding-bottom: rem-calc(50);
-      }
-
-        &__column {
-          width: calc(50% - #{$gutter-medium / 2});
-
-          &:first-child {
-            margin-right: $gutter-medium;
-          }
-        }
-
-          &__links-items {
-            @include ul-unstyled;
-
-            display: flex;
-            flex-wrap: wrap;
-          }
-
-            &__links-item {
-              margin-right: rem-calc(20);
-              width: calc(((1 / 3) * 100%) - #{rem-calc(20)});
-
-              flex: 0 1 calc(((1 / 3) * 100%) - #{rem-calc(20)});
-            }
     }
   }
 

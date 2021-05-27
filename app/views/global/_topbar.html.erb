@@ -5,16 +5,19 @@
     <% end %>
 
     <v-select-searchable
-      class="nav__dropdown"
+      class="topbar__dropdown"
       :config="<%= get_countries_search_config %>"
       :options="<%= get_nav_items[:countries].to_json %>"
     >
     </v-select-searchable>
 
     <nav-burger 
-      :links="<%= get_nav_primary %>" 
       class="nav--primary"
+      :links="<%= get_nav_primary %>" 
       :is-always-burger="true"
+      :search-config="<%= get_countries_search_config %>"
+      :countries="<%= get_nav_items[:countries].to_json %>"
+      search-label="Search by country"
     ></nav-burger>
   </div>
 </div>
