@@ -3,7 +3,6 @@ Rails.application.routes.draw do
 
   root to: 'site#index'
 
-  resources :countries, only: [:index]
   get '/:name' => 'countries#show'
   get 'site/methodologies' => 'site#methodologies', as: 'methodologies'
   get 'site/about' => 'site#about', as: 'about'
