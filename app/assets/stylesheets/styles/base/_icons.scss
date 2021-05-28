@@ -80,7 +80,7 @@
 @mixin icon-next {
   @include icon-basic;
   background-image: image_url('icons/next.svg');
-  width: rem-calc(74); height: rem-calc(74);
+  width: rem-calc(56); height: rem-calc(56);
 
   display: block;
 }

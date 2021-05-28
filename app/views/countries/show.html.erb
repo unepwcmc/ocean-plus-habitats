@@ -70,6 +70,18 @@
   }
 %>
 
+<%= render partial: '/countries/partials/downloads',
+  locals: {
+    downloads: t('countries.shared.ancillary.downloads'),
+  }
+%>
+
+<%= render partial: '/countries/partials/citation',
+  locals: {
+    country_name: @name,
+  }
+%>
+
 <%= render partial: '/countries/partials/next-country',
   locals: {
     flag: @next_country_flag,

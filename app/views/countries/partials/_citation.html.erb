@@ -1,0 +1,12 @@
+<section class="bg--navy-dark section-padding--bottom white">
+  <div class="container--small citation">
+    <p class="citation__title"><%= t('countries.shared.ancillary.citation_title'); %></p>
+    <p class="citation__text"><%= 
+      t('countries.shared.ancillary.citation_text', 
+        country_name_lower: country_name.downcase.parameterize,
+        country_name: country_name,
+        year: Date.today.year
+      ).html_safe 
+    %></p>
+  </div>
+</section>
