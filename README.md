@@ -33,3 +33,9 @@ Old coverage data is stored within `lib/data/countries` for the various habitats
 
 Redlist data for the various species is store in `lib/data/iucn_redlist`. If you need to update just the occurrences of each
 species run `rake import:occurrences`.
+
+## Testing
+
+Testing is done with RSpec and FactoryBot. To run all tests, run `bundle exec rspec` 
+
+To lint your factories, run `rake factory_bot:lint`

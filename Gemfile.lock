@@ -83,6 +83,12 @@ GEM
     concurrent-ruby (1.1.5)
     cookieconsent (0.1.0)
     crass (1.0.5)
+    database_cleaner (2.0.1)
+      database_cleaner-active_record (~> 2.0.0)
+    database_cleaner-active_record (2.0.1)
+      activerecord (>= 5.a)
+      database_cleaner-core (~> 2.0.0)
+    database_cleaner-core (2.0.1)
     diff-lcs (1.4.4)
     dotenv (2.7.5)
     dotenv-rails (2.7.5)
@@ -251,6 +257,7 @@ DEPENDENCIES
   capybara-selenium
   coffee-rails (~> 4.2)
   cookieconsent
+  database_cleaner
   dotenv-rails (~> 2.2, >= 2.2.1)
   factory_bot_rails
   httparty (~> 0.16.2)
