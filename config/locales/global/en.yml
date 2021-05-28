@@ -1,5 +1,7 @@
 en:
   global:
+    site_title: Ocean+ Habitats
+    about_title: About
     main_menu:
       regions_title: Regions
       search_by_country: Search by Country
