@@ -46,15 +46,6 @@
         @include flex-center;
         height: 100%;
       }
-
-        &__icon {
-          @include box-shadow-grey;
-          
-          border-radius: 100%;
-          margin-right: rem-calc(20);
-          width: rem-calc(80); height: rem-calc(80);
-        }
-
     }
   }
 }

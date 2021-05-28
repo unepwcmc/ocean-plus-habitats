@@ -70,4 +70,10 @@
   }
 %>
 
-<%#= render partial: '/countries/partials/ancillary', locals: { citations: @country_citations } %>
+<%= render partial: '/countries/partials/next-country',
+  locals: {
+    flag: @next_country_flag,
+    country_name: @next_country_name,
+    page_url: @next_country_url
+  }
+%>

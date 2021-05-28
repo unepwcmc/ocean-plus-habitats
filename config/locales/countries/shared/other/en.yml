@@ -1,7 +1,8 @@
 en:
   countries:
     shared:
-      ancillary:
+      other:
+        next: Next country page
         sources_title: "Main national data sources"
         sources:
           - '<a href="#" title="Source #1">Source #1</a>'

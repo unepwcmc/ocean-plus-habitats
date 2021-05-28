@@ -125,6 +125,19 @@ $button-padding-wide-laptop: 14px 45px;
   font-weight: $semi-bold;
 }
 
+@mixin button--next {
+  &::after {
+    @include button-basic;
+    @include icon-next;
+    content: '';
+    margin-left: rem-calc(10);
+    width: rem-calc(74); height: rem-calc(74);
+  }
+
+  display: flex;
+  align-items: center;
+}
+
 @mixin button--select {
   @include button-basic;
   @include text-select;
@@ -168,5 +181,9 @@ $button-padding-wide-laptop: 14px 45px;
       display: inline-block;
       margin-right: rem-calc(8);
     }
+  }
+
+  &--next {
+    @include button--next;
   }
 }

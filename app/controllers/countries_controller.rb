@@ -30,5 +30,10 @@ class CountriesController < ApplicationController
 
     @stacked_row_chart = Serializers::RepresentationHabitatsSerializer.new(@country).serialize
     @country_citations = @country.country_citations.order(:citation).pluck(:citation)
+    
+    next_country = GeoEntity.find(GeoEntity.pluck(:id).sample)
+    @next_country_url = country_path(next_country.actual_name)
+    @next_country_name = next_country.actual_name
+    @next_country_flag = helpers.if_country_get_flag(next_country.iso3)
   end
 end
