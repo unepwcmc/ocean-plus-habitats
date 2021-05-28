@@ -1,6 +1,9 @@
 shared_context 'home_page_setup' do  
   let(:configure_app) do 
-    # FactoryBot.create(:habitat) 
-    FactoryBot.create(:geo_entity_stat)
+    FactoryBot.create(:coralreefs) 
+    FactoryBot.create(:coldcorals) 
+    FactoryBot.create(:saltmarshes) 
+    FactoryBot.create(:seagrasses) 
+    FactoryBot.create(:mangroves) 
   end
 end

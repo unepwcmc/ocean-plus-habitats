@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Country pages", type: :system do
+RSpec.fdescribe "Country pages", type: :system do
   before do
     driven_by(:rack_test)
   end
@@ -12,6 +12,6 @@ RSpec.describe "Country pages", type: :system do
 
     visit '/'
 
-    find("#v-select__search").click
+    expect(page).to have_css('.header__content', text: 'Country')
   end
 end
