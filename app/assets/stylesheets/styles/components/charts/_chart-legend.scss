@@ -1,44 +1,26 @@
 //--------------------------------------------------
 // variables
 //--------------------------------------------------
-$chart-legend-key-icon-size: rem-calc(22);
+$chart-legend-key-icon-size: rem-calc(30);
 
 //--------------------------------------------------
 // classes
 //--------------------------------------------------
 &__legend {
-
-  .chart--row-stacked & {
-    @include flex;
-  }
+  @include wrapped-cards;
 
   &-item {
+    @include wrapped-card(1, 2, 4);
     @include flex;
-    @include flex-v-start;
-    margin: rem-calc(0 0 7 0);
-    width: 100%; height: $bar-height / 2;
+    @include flex-v-center;
 
-    .chart--row-stacked & {
-      margin-right: rem-calc(30);
-
-      flex: 0 0 calc(((1 / 5) * 100%) + 20px);
+    @include breakpoint($small) {
+      @include flex-v-start;
     }
   }
 
     &-key-title {
       @include text-chart;
-      @include flex-no-shrink;
-      width: 34%;
-
-      .chart--row-stacked & {
-        width: 100%;
-      }
-    }
-
-    &-key-index {
-      .chart--row-stacked & {
-        display: none;
-      }
     }
 
     &-key-icon {
@@ -51,8 +33,7 @@ $chart-legend-key-icon-size: rem-calc(22);
       display: inline-block;
 
       .chart--row-stacked & {
-        border-radius: 3px;
-        border: $border-thin $grey;
+        border-radius: 0;
 
         &.theme--multiple { background-color: $green-light; }
         &.theme--notcovered { background-color: $grey; }

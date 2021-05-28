@@ -108,7 +108,7 @@
 
 @mixin text-chart {
   @include text-4;
-  font-weight: $normal;
+  font-weight: $semi-bold;
 }
 
 @mixin text-example-species-total-count {
