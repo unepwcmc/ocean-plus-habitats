@@ -9,19 +9,19 @@ en:
       habitats:
         coralreefs:
           title: Warm-water coral reefs
-          text: ! '<strong>%{change_percentage}</strong> loss in warm-water coral cover<br>between <strong>%{baseline_year}</strong> and <strong>%{recent_year}</strong>'
+          text: ! '<strong>%{change_percentage}</strong> loss in warm-water coral cover between <strong>%{baseline_year}</strong> and <strong>%{recent_year}</strong>'
         saltmarshes:
           title: Saltmarshes
-          text: ! '<strong>%{change_percentage}</strong> loss in saltmarsh cover<br> between <strong>%{baseline_year}</strong> and <strong>%{recent_year}</strong>'
+          text: ! '<strong>%{change_percentage}</strong> loss in saltmarsh cover between <strong>%{baseline_year}</strong> and <strong>%{recent_year}</strong>'
         mangroves:
           title: Mangroves
-          text: ! '<strong>%{change_percentage}</strong> loss in mangrove cover<br> between <strong>%{baseline_year}</strong> and <strong>%{recent_year}</strong>'
+          text: ! '<strong>%{change_percentage}</strong> loss in mangrove cover between <strong>%{baseline_year}</strong> and <strong>%{recent_year}</strong>'
         seagrasses:
           title: Seagrasses
-          text: ! '<strong>%{change_percentage}</strong> loss in seagrass cover<br> between <strong>%{baseline_year}</strong> and <strong>%{recent_year}</strong>'
+          text: ! '<strong>%{change_percentage}</strong> loss in seagrass cover between <strong>%{baseline_year}</strong> and <strong>%{recent_year}</strong>'
         coldcorals:
           title: Cold-water corals
-          text: ! '<strong>%{change_percentage}</strong> loss in cold-water coral cover<br> between <strong>%{baseline_year}</strong> and <strong>%{recent_year}</strong>'
+          text: ! '<strong>%{change_percentage}</strong> loss in cold-water coral cover between <strong>%{baseline_year}</strong> and <strong>%{recent_year}</strong>'
       data_deficient: Unfortunately, there is currently no data for this particular habitat.
       no_citation: No citation(s) found.
       no_url: No URL found.
