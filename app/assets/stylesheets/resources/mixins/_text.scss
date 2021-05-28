@@ -71,7 +71,7 @@
   text-align: left;
 }
 
-@mixin h1-about {
+@mixin h1-content-page {
   @include text-2;
   margin-bottom: rem-calc(12);
   text-align: left;
@@ -79,6 +79,10 @@
 
 @mixin h2 {
   @include text-2;
+}
+
+@mixin h2-content-page {
+  @include responsive-styles(font-size, rem-calc(20), rem-calc(20), rem-calc(20));
 }
 
 @mixin h3 {

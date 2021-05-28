@@ -1,11 +1,52 @@
 <%= render partial: 'global/topbar', locals: { dark: true } %>
 
-<main class="container--small page-padding">
-  <h1 class="content-page__title">
+<main class="content-page container--small page-padding">
+  <h1>
     <%= t('about.title') %>
   </h1>
 
-  <% t('about.paragraphs').each do |p| %>
+  <% t('about.paragraphs.before_video').each do |p| %>
     <p><%= p.html_safe %></p>
   <% end %>
+
+  VIDEO
+
+  <% t('about.paragraphs.after_video').each do |p| %>
+    <p><%= p.html_safe %></p>
+  <% end %>
+
+  <h2><%= t('about.contributors.title') %></h2>
+
+  <div class="content-page__logos">
+    <% contributors.each do |logo| %>
+      <%= link_to logo[:url], title: logo[:name], target: "_blank" do %>
+        <%= image_tag "logos/logo-#{logo[:image]}",
+          alt: logo[:name],
+          class: "content-page__logo--#{logo[:id]}"
+        %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <h2><%= t('about.attribution.title') %></h2>
+
+  <p><%= t('about.attribution.before') %></p>
+
+  <p><strong>TODO - pull through citation from elsewhere</strong></p>
+
+  <p><%= t('about.attribution.after').html_safe %></p>
+
+  <h2><%= t('about.methodology.title') %></h2>
+  
+  <p><%= t('about.methodology.paragraph') %></p>
+
+  <p>
+    <a 
+      href="/OceanPlus Habitats - Methodology.pdf"
+      title="<%= t('about.methodology.download_title') %>" 
+      download
+    >
+      <%= t('about.methodology.download_text') %>
+    </a>
+  </p>
 </main>
