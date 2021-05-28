@@ -25,18 +25,18 @@ $navy-xdark: #00141C;
 
 $theme-blue: #88CCEE;
 $theme-pink: #F35F8D;
-$theme-magenta: #CB47B5;
+$theme-green: #0F5F49;
 $theme-purple: #332288;
 $theme-red: #E61354;
 $theme-yellow: #D6A520;
 
-$color-coralreefs: $theme-magenta;
+$color-coralreefs: $theme-green;
 $color-saltmarshes: $theme-purple;
 $color-mangroves: $theme-yellow;
 $color-seagrasses: $theme-blue;
 $color-coldcorals: $theme-red;
 
-$theme-gradient-habitats: $green-light $theme-magenta $theme-purple $theme-yellow $theme-blue $theme-red $grey;
+$theme-gradient-habitats: $green-light $theme-green $theme-purple $theme-yellow $theme-blue $theme-red $grey;
 
 
 //--------------------------------------------------
@@ -160,7 +160,7 @@ $habitats: (coralreefs saltmarshes mangroves seagrasses coldcorals);
 $habitat_statuses: (present absent unknown);
 
 $habitat_colours: (
-  'coralreefs': $theme-magenta,
+  'coralreefs': $theme-green,
   'saltmarshes': $theme-purple,
   'mangroves': $theme-yellow,
   'seagrasses': $theme-blue,
@@ -169,7 +169,7 @@ $habitat_colours: (
 
 
 $theme_gradient_habitat_colours: (
-  'coralreefs': $theme-magenta,
+  'coralreefs': $theme-green,
   'saltmarshes': $theme-purple,
   'mangroves': $theme-yellow,
   'seagrasses': $theme-blue,

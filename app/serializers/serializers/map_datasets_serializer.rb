@@ -16,7 +16,7 @@ DATASETS = [
       }
     ],
     tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Global_Distribution_of_Coral_Reefs/VectorTileServer/tile/{z}/{y}/{x}.pbf',
-    color: '#CB47B5'
+    color: '#0F5F49'
   },
   {
     id: 'saltmarshes',

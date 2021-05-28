@@ -1,21 +1,19 @@
+//Also defined in VDial.vue - these must match
+$v-dial-marker-radius: 13;
+$v-dial-stroke-width: 8;
+$v-dial-center-width: calc((100% - #{$v-dial-marker-radius}px) / #{$sqrt-2});
+
 .v-dial {
-  &__wrapper {
-    margin-right: auto;
-    margin-left: auto;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%; height: 100%;
 
-    position: relative;
-  }
+  position: absolute;
+  top: 0;
 
-  &__icon {
-    width: rem-calc(75);
-    height: rem-calc(75);
-    z-index: 1;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
+  &__center {
+    @include item-center;
+    width: $v-dial-center-width; height: $v-dial-center-width;
   }
 
   &__meter {
@@ -42,23 +40,21 @@
     }
   }
 
-  &__circle {
-    &--outline-curves {
-      stroke: $grey-xlight;
-      stroke-width: 16;
-      fill: none;
-    }
+  &__marker {
+    fill: currentColor;
+  }
 
+  &__circle {
     &--background {
-       stroke: $white;
-       stroke-width: 13;
+       stroke: $grey-xlight;
+       stroke-width: $v-dial-stroke-width;
        stroke-dasharray: 475;
        fill: none;
     }
 
     &--colour {
        stroke: currentColor;
-       stroke-width: 6;
+       stroke-width: $v-dial-stroke-width;
        fill: none;
 
        .card--unknown & {
