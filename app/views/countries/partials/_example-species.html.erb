@@ -1,5 +1,7 @@
 <section class="section-padding">
   <div class="container">
+
+  <% if example_species_select.present? %>
     <div class="h2-wrapper flex flex-v-center">
       <h3 class="margin-space-right"><%= t('countries.shared.example_species.title') %></h3>
       <v-select
@@ -24,10 +26,15 @@
     <p class="text--smallprint max-width-container-small">
       <%= t('countries.shared.example_species.smallprint').html_safe %>
     </p>
+  <% else %>
+    <div class="h2-wrapper flex flex-v-center">
+      <h3>No species data is present for this particular country/territory.</h3>
+    </div>
+  <% end %>
 
-    <p class="text--smallprint max-width-container-small">
-      <%= t('countries.shared.example_species.last_updated').html_safe %>
-    </p>
+  <p class="text--smallprint max-width-container-small">
+    <%= t('countries.shared.example_species.last_updated').html_safe %>
+  </p>
 
   </div>
 </section>
