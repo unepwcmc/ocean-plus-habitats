@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 
   get '/:name' => 'countries#show'
   get 'site/about' => 'site#about', as: 'about'
+  get 'site/legal' => 'site#legal', as: 'legal'
 end

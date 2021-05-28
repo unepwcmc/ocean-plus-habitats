@@ -32,6 +32,6 @@ class SiteController < ApplicationController
   def about
   end
 
-  def methodologies
+  def legal
   end
 end

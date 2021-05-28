@@ -8,15 +8,25 @@ module ApplicationHelper
   end
 
   def title_meta_tag
-    page_title = t('global.site_title')
-
     if @country && @name
-      "#{page_title} | #{@name}"
-    elsif current_page?(about_path)
-      "#{page_title} | #{t('global.about_title')}"
+      "#{root_title} | #{@name}"
+    elsif current_page?(root_path)
+      root_title
+    elsif controller.controller_name == 'site'
+      site_page_title
     else
-      page_title
+      root_title
     end
+  end
+
+  def site_page_title
+    page_title = t("global.page_title.#{controller.action_name}", default: nil)
+
+    page_title ? "#{root_title} | #{page_title}" : root_title
+  end
+
+  def root_title
+    t('global.page_title.index')
   end
 
   def url_encode text
