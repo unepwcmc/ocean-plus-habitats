@@ -1,32 +1,30 @@
 <div class="cards--protection-dials">
   <% map_datasets.each do |dataset| %>
-    <div class="card card--<%= current_page?('/') ? 'present' : dataset_status(dataset) %>">
+    <div class="card card--<%= proportion_protected_card_modifier(dataset) %>">
 
       <div class="card__content">
         <div class="card__dial">
           <v-dial
           id="<%= dataset[:id] %>"
-          name="<%= dataset[:name] %>"
-          icon-class="<%= current_page?('/') ? "icon--#{dataset[:id]}" : icon_class(dataset) %>"
-          :percentage="<%= current_page?('/') ? habitat_protection(dataset[:id])['protected_percentage'] : protected_percentage(dataset) %>"
+          :percentage="<%= proportion_protected_percentage(dataset) %>"
           :width="180"
           >
-        </div>
-        <div class="card__habitat">
-          <p class="card__habitat-title"><%= dataset[:name] %></p>
-          <p class="card__habitat-status">
-            <% if @habitats_present %>
-              <% if absent_or_unknown(dataset_status(dataset)) %>
-                <%= dataset_status_title(dataset) %>
+            <p class="card__habitat-status">
+              <% if @habitats_present %>
+                <%= country_proportion_protected_status_html(dataset) %>
               <% else %>
-                <span class="card__habitat-percentage"><%= protected_percentage(dataset) %>%</span>
-                of <%= number_with_delimiter(total_value(dataset), :delimiter => ',') %> km<sup>2</sup>
+                <%= global_proportion_protected_html(dataset) %>
               <% end %>
-            <% else %>
-              <span class="card__habitat-percentage"><%= habitat_protection(dataset[:id])['protected_percentage'] %>%</span> of
-              <%= number_with_delimiter(habitat_protection(dataset[:id])['total_value'], :delimiter => ',') %> km<sup>2</sup>
-            <% end %>
-          </p>
+            </p>
+          </v-dial>
+        </div>
+
+        <div class="card__habitat">
+          <i
+            class="card__habitat-icon <%= proportion_protected_icon_class(dataset) %>"
+            alt="<%= dataset[:name] + ' icon' %>"
+          ></i>
+          <p class="card__habitat-title"><%= dataset[:name] %></p>
         </div>
       </div>
     </div>
