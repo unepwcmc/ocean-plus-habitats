@@ -1,14 +1,13 @@
 &--protection-dials {
-  @include flex;
-  @include flex-h-between;
-  margin-top: rem-calc(80);
-  margin-bottom: rem-calc(50);
+  @include wrapped-cards;
+  margin-top: rem-calc(20);
+  margin-bottom: rem-calc(25);
 
   .card {
-    padding: rem-calc(0 10);
-    width: 20%;
-
-    flex: 1 1 20%;
+    @include wrapped-card(2,3,5);
+    @include breakpoint-down($small) {
+      margin-bottom: rem-calc(40);
+    }
 
     &--unknown {
       .card__habitat-status {
@@ -18,27 +17,43 @@
 
       &__dial {
         margin-bottom: rem-calc(10);
+        width: 100%; padding-top: 100%;
+
+        position: relative;
       }
 
       &__habitat {
+        @include flex;
         text-align: center;
+
+        &-icon {
+          background-size: 100%;
+          margin-right: rem-calc(8);
+          width: rem-calc(42);
+          height: rem-calc(42);
+          
+          flex-shrink: 0;
+        }
 
         &-title {
           @include text-protection-dials-title;
-          margin-bottom: rem-calc(22);
+          margin-bottom: 0;
         }
 
         &-status {
           @include text-protection-dials-status;
+          @include item-center;
+          width: 100%;
 
           display: block;
-        }
 
-        &-percentage {
-          color: $grey;
-          font-size: rem-calc(22);
-
-          display: block;
+          strong {
+            color: $grey-dark;
+            font-size: rem-calc(25);
+            font-weight: $bold;
+  
+            display: block;
+          }
         }
       }
   }

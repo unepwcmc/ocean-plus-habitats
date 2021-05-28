@@ -129,3 +129,45 @@
 
   transform: translate(-50%, -50%);
 }
+
+//--------------------------------------------------
+// cards
+//--------------------------------------------------
+
+@mixin wrapped-cards {
+  @include flex;
+  @include flex-h-between;
+  @include flex-wrap;
+}
+
+@mixin wrapped-card($n-mobile, $n-tablet, $n-laptop) {  
+  flex-shrink: 0;
+
+  &:last-child { margin-right: auto; }
+
+  @include breakpoint-down($small) {
+    @include wrapped-card-breakpoint($n-mobile, rem-calc(16));
+  }
+
+  @include between($small, $medium) {
+    @include wrapped-card-breakpoint($n-tablet, rem-calc(20));
+  }
+  
+  @include breakpoint($medium) {
+    @include wrapped-card-breakpoint($n-laptop, rem-calc(24)); 
+  }
+}
+
+@mixin wrapped-card-breakpoint($n, $spacing: rem-calc(20)) {
+  margin-right: $spacing;
+  margin-bottom: $spacing;
+  width: calc((100% - (#{$n} - 1) * #{$spacing}) / #{$n});
+  
+  &:nth-child(#{$n}n) {
+    margin-right: 0;
+  }
+
+  &:nth-last-child(-n+#{$n}) {
+    margin-bottom: 0;
+  }
+}

@@ -205,10 +205,18 @@
 
 @mixin text-protection-dials-title {
   @include text-4;
-  font-weight: $bold;
+  font-weight: $semi-bold;
+  text-align: left;
 }
 
 @mixin text-protection-dials-status {
-  @include text-4;
+  @include responsive-styles(font-size, rem-calc(12), rem-calc(16), rem-calc(16));
   font-weight: $normal;
+  text-align: center;
+}
+
+@mixin text-protection-dials-percentage {
+  @include text-2;
+  color: $grey-dark;
+  font-weight: $bold;
 }
