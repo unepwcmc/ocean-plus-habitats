@@ -51,8 +51,8 @@ $body-line-height: 1.4;
 
 $header-font: $font-open-sans;
 $header-font-color: $black;
-$header-font-size-mobile: rem-calc(50);
-$header-font-size-tablet: rem-calc(50);
+$header-font-size-mobile: rem-calc(34);
+$header-font-size-tablet: rem-calc(40);
 $header-font-size-laptop: rem-calc(50);
 $header-line-height: 1.2;
 $header-margin-bottom: 1.2em;
@@ -115,9 +115,9 @@ $section-padding-small-top-small: rem-calc(14);
 $section-padding-small-top-medium: rem-calc(20);
 $section-padding-small-top-large: rem-calc(24);
 
-$section-padding-small-bottom-small: rem-calc(10);
-$section-padding-small-bottom-medium: rem-calc(16);
-$section-padding-small-bottom-large: rem-calc(20);
+$section-padding-small-bottom-small: rem-calc(14);
+$section-padding-small-bottom-medium: rem-calc(20);
+$section-padding-small-bottom-large: rem-calc(24);
 
 $item-spacing-small: rem-calc(14);
 $item-spacing-medium: rem-calc(26);
