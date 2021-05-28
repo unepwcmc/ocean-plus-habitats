@@ -14,10 +14,18 @@
     // height: rem-calc(80);
   }
 
+  &__dropdown {
+    @include tablet-up;
+  }
+
   &__link {
     background-color: $navy-dark;
     margin-right: auto;
     padding: rem-calc(12 26);
+
+    .topbar--dark & {
+      padding: rem-calc(12 0);
+    }
   }
 
   &__nav {
