@@ -1,7 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Habitat, type: :model do
-  let(:habitat) { FactoryBot.create(:habitat) }
+  include_context 'habitats_setup'
+
+  let(:habitat) { coralreefs }
 
   describe '#global_coverage_title' do
     let(:habitat_type) { 'points' }
@@ -20,7 +22,7 @@ RSpec.describe Habitat, type: :model do
   end
 
   context 'calculating statistics' do
-    let(:habitat) { FactoryBot.create(:mangroves) }
+    let(:habitat) { mangroves }
     let(:country) { FactoryBot.create(:country_with_mangroves) }
     
     before { FactoryBot.create(:geo_entity_stat, habitat: habitat, geo_entity: country) }

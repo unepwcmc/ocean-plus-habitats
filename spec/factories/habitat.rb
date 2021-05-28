@@ -51,18 +51,5 @@ FactoryBot.define do
         mangroves.reload
       end
     end
-
-    transient do
-      species_count { 5 }
-    end
-
-    after(:create) do |habitat, evaluator|
-      country = create(:geo_entity)
-      create(:geo_entity_stat, habitat: habitat, geo_entity: country)
-      create(:global_change_stat, habitat: habitat)
-      create_list(:species, evaluator.species_count, habitat: habitat)
-
-      habitat.reload
-    end
   end
 end
