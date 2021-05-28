@@ -11,10 +11,23 @@
         @click="closeNavPane"
       />
 
-      <ul 
+      <div class="nav__search-wrapper">
+        <label class="nav__search-label">
+          {{ searchLabel }}
+        </label>
+
+        <v-select-searchable
+          class="nav__search"
+          :config="searchConfig"
+          :options="countries"
+        />
+      </div>
+
+      <ul
+        id="v-nav-pane-target"
         aria-label="nav" 
         role="menubar" 
-        class="nav__ul v-nav-pane-target"
+        class="nav__ul"
       >
         <li 
           v-for="link in links" 
@@ -37,7 +50,7 @@
 </template>
 
 <script>
-// import NavDropdown from "./NavDropdown"
+import VSelectSearchable from '../select/VSelectSearchable'
 import NavLink from './NavLink'
 // import mixinResponsive from "../../mixins/mixin-responsive"
 // import mixinPopupCloseListeners from "../../mixins/mixin-popup-close-listeners"
@@ -48,7 +61,8 @@ export default {
   name: 'navBurger',
 
   components: {
-    NavLink
+    NavLink,
+    VSelectSearchable
   },
 
   mixins: [
@@ -65,6 +79,18 @@ export default {
     isAlwaysBurger: {
       default: false,
       type: Boolean
+    },
+    countries: {
+      type: Array,
+      required: true
+    },
+    searchConfig: {
+      type: Object,
+      required: true
+    },
+    searchLabel: {
+      type: String,
+      default: ''
     }
   },
 
@@ -89,7 +115,7 @@ export default {
     },
 
     navPaneItemContainer () {
-      return this.$el.querySelector('.v-nav-pane-target')
+      return this.$el.querySelector('#v-nav-pane-target')
     },
 
     isNavPaneActive () {
