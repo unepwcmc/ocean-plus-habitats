@@ -18,6 +18,11 @@ $list-item-margin-medium: rem-calc(16);
 .v-select {
   width: $select-width;
 
+  &.example-species__select {
+    width: 100%;
+    max-width: $select-width;
+  }
+
   .nav--primary & {
     width: auto;
   }
@@ -50,7 +55,8 @@ $list-item-margin-medium: rem-calc(16);
 
     position: absolute;
 
-    .nav__search & {
+    .nav__search &,
+    .topbar__dropdown & {
       background-color: $navy-dark;
     }
   }
