@@ -241,3 +241,19 @@
   color: $grey-dark;
   font-weight: $bold;
 }
+
+@mixin text-example-species-title {
+  @include text-4;
+}
+
+@mixin text-example-species-title-scientific {
+  @include text-4;
+  font-style: italic;
+  font-weight: $normal;
+}
+
+@mixin text-example-species-link {
+  @include text-4;
+  font-weight: $bold;
+  text-decoration: underline;
+}
