@@ -10,7 +10,7 @@ en:
             - "Bunting P., Rosenqvist A., Lucas R., Rebelo L-M., Hilarides L., Thomas N., Hardy A., Itoh T., Shimada M. and Finlayson C.M. (2018). The Global Mangrove Watch – a New 2010 Global Baseline of Mangrove Extent. Remote Sensing 10(10): 1669. doi: 10.3390/rs1010669."
             - "UNEP-WCMC, Short FT (2018). Global distribution of seagrasses (version 6.0). Sixth update to the data layer used in Green and Short (2003). Cambridge (UK): UN Environment World Conservation Monitoring Centre. URL: http://data.unep-wcmc.org/datasets/8"
             - "Freiwald A, Rogers A, Hall-Spencer J, Guinotte JM, Davies AJ, Yesson C, Martin CS, Weatherdon LV (2017). Global distribution of cold-water corals (version 5.0). Fifth update to the dataset in Freiwald et al. (2004) by UNEP-WCMC, in collaboration with Andre Freiwald and John Guinotte. Cambridge (UK): UN Environment World Conservation Monitoring Centre. URL: http://data.unep-wcmc.org/datasets/4"
-            - "Global Administrative Areas ( 2020). GADM database of Global Administrative Areas, version 3.6 [online] URL: www.gadm.org."
+            - "Global Administrative Areas ( 2020). GADM database of Global Administrative Areas, version 3.6 [online] URL: https://gadm.org."
             - "Flanders Marine Institute (2019). Maritime Boundaries Geodatabase, version 11. Available online at http://www.marineregions.org/. https://doi.org/10.14284/382."
         chart_text: "<strong>%{km}km<sup>2</sup></strong> change in %{habitat} cover in <strong>%{years}</strong>"
         chart_text_not_available: Data not available

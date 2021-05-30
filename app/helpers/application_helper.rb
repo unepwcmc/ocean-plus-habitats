@@ -96,11 +96,7 @@ module ApplicationHelper
   end
 
   def red_list_modal
-   citations = I18n.t('home.red_list.citations', year: Date.today.year).map do |cit|
-      "<p>#{cit}</p>"
-    end
-
-    citations.join
+    map_to_citations_string(I18n.t('home.red_list.citations', year: Date.today.year))
   end
 
   def habitats_present_modal
@@ -108,12 +104,22 @@ module ApplicationHelper
   end
 
 
-  def map_to_citations_string translations
-    citations = translations.map do |cit|
-      "<p>#{cit}</p>"
+  def map_to_citations_string(translations)
+    citations = ['<p>No citations found.</p>']
+
+    if translations && translations.count.positive?
+      citations = translations.map do |cit|
+        "<p>#{insert_hyperlinks(cit)}</p>"
+      end
     end
 
-    "<h3>#{I18n.t('global.sources_modal_title')}</h3>" + citations.join
+    "<h3 class='modal__title'>#{I18n.t('global.sources_modal_title')}</h3>" + citations.join
+  end
+
+  def insert_hyperlinks(citation)
+    citation.split.map { |string| string[/^(http)/] ? 
+      "<a target='_' class='modal__link' href='#{string}'>#{string}</a>" : string
+    }.join(' ')
   end
 
   def habitat_text(habitat)

@@ -83,13 +83,10 @@ module CountriesHelper
   end
 
   def country_red_list_modal
-    I18n.t('countries.shared.red_list.citations', year: Date.today.year).each do |cit|
-      {
-        text: cit
-      }.to_json
-    end
+    map_to_citations_string(I18n.t('countries.shared.red_list.citations', year: Date.today.year))
   end
 
+  #TODO: Check if this can go - currently just placeholder text
   def habitat_condition_modal
     map_to_citations_string(I18n.t('countries.shared.habitat_condition.citation'))
   end
