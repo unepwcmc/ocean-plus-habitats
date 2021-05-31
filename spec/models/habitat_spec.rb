@@ -25,7 +25,7 @@ RSpec.describe Habitat, type: :model do
     let(:habitat) { mangroves }
     let(:country) { FactoryBot.create(:country_with_mangroves) }
     
-    before { FactoryBot.create(:geo_entity_stat, habitat: habitat, geo_entity: country) }
+    before { FactoryBot.create(:present_stat, habitat: habitat, geo_entity: country) }
 
     it 'calculates the correct country cover change' do
       expect(habitat.calculate_country_cover_change(country.name)).to eq(

@@ -2,20 +2,16 @@ require 'rails_helper'
 
 RSpec.describe "Site", type: :request do
   describe 'GET #index' do
-    include_context 'countries_setup'
+    include_context 'geo_entity_stat_setup'
 
     before do
-      habitats = [coralreefs, coldcorals, mangroves, saltmarshes, seagrasses]
-
       habitats.each do |habitat|
         FactoryBot.create(:global_change_stat, habitat: habitat)
       end
       
-      countries = FactoryBot.create_list(:country, 3)
-
       habitats.each do |habitat|
         countries.each do |country|
-          FactoryBot.create_list(:geo_entity_stat, rand(5), habitat: habitat, geo_entity: country)
+          FactoryBot.create(:geo_entity_stat, habitat: habitat, geo_entity: country)
         end
       end
     end

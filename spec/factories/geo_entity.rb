@@ -17,5 +17,30 @@ FactoryBot.define do
         end
       end
     end
+
+    factory :data_deficient_country do
+      transient do
+        data_deficient_habitat { FactoryBot.create(:coralreefs) }
+
+        habitats { 
+          [
+            FactoryBot.create(:coldcorals), 
+            FactoryBot.create(:mangroves), 
+            FactoryBot.create(:saltmarshes), 
+            FactoryBot.create(:seagrasses)
+          ] 
+        }
+      end
+
+      after(:create) do |geo_entity, evaluator|
+        create(:stat_without_data, habitat: evaluator.data_deficient_habitat, geo_entity: geo_entity)
+        
+        evaluator.habitats.each do |habitat|
+          create(:geo_entity_stat, habitat: habitat, geo_entity: geo_entity)
+        end
+
+        geo_entity.reload
+      end
+    end
   end
 end

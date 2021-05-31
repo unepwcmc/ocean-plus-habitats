@@ -13,7 +13,9 @@ RSpec.describe 'Countries', type: :request do
   describe 'GET /:country' do
     it 'gets the index page' do
       # Possibly flaky spec - test setup always creates multiple Countries
-      get '/country-3'
+      kebabcase_name = GeoEntity.last.name.downcase.gsub(' ', '-')
+
+      get "/#{kebabcase_name}"
 
       expect(response).to be_successful
       expect(response.content_type).to eq('text/html')
