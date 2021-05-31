@@ -3,8 +3,6 @@ require 'rails_helper'
 RSpec.describe 'Countries', type: :request do
   include_context 'countries_setup'
 
-  let(:headers) { { "Accept": 'application/json' } }
-
   before do
     country
     many_species
@@ -13,6 +11,8 @@ RSpec.describe 'Countries', type: :request do
   describe 'GET /:country' do
     it 'gets the index page' do
       # Possibly flaky spec - test setup always creates multiple Countries
+      # and the only country which has any stats associated with it is the last to 
+      # be created
       kebabcase_name = GeoEntity.last.name.downcase.gsub(' ', '-')
 
       get "/#{kebabcase_name}"
