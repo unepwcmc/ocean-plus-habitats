@@ -4,6 +4,6 @@ FactoryBot.define do
     scientific_name { ('a'..'z').to_a.shuffle.join }
     redlist_status { 'LC' }
     url { 'dummy URL' }
-    habitat
+    association :habitat
   end 
 end

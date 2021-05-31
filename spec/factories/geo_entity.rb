@@ -1,6 +1,6 @@
 FactoryBot.define do
-  factory :geo_entity do
-    name { 'Country' }
+  factory :geo_entity, aliases: [:country, :region] do
+    sequence(:name) { |n| "Country #{n}" }
     actual_name { 'Coüntry' }
     iso3 { 'ABC' }
     bounding_box { [[-70.41666666583112, 12.150501231616646], [-68.87016907252374, 15.300000001018887]] }

@@ -7,6 +7,18 @@ FactoryBot.define do
       global_coverage { 0 }
       protected_percentage { 0 }
       wms_url { 'dummy URL' }
+
+      factory :habitat_with_species do
+        transient do 
+          species_count { 20 }
+        end
+  
+        after(:create) do |coralreefs, evaluator|
+          create_list(:species, evaluator.species_count, habitat: coralreefs)
+  
+          coralreefs.reload
+        end
+      end
     end
 
     factory :coldcorals do

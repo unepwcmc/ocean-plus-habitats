@@ -1,6 +1,7 @@
 require 'rails_helper'
 
-RSpec.fdescribe "Country pages", type: :system do
+# TODO - need to set up Selenium properly so it can actually interact with JS
+RSpec.xdescribe "Country pages", type: :system do
   before do
     driven_by(:rack_test)
   end

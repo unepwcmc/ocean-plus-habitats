@@ -1,7 +1,7 @@
 shared_context 'countries_setup' do
   include_context 'habitats_setup'
 
-  let(:coastal_stat) { FactoryBot.create(:coastal_stat) }
-  let(:country) { FactoryBot.create(:geo_entity, coastal_stat: coastal_stat) }
-  let(:geo_entity_stat) { FactoryBot.create(:geo_entity_stat, geo_entity: country, habitat: coralreefs) }
+  let(:geo_stat) { FactoryBot.create(:geo_entity_stat, habitat: coralreefs) }
+  let(:country) { FactoryBot.create(:country, coastal_stat: create(:coastal_stat), geo_entity_stats: [geo_stat]) }
+  let(:many_species) { FactoryBot.create_list(:species, 20, habitat: coralreefs, geo_entities: [country]) }
 end

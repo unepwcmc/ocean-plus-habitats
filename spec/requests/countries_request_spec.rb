@@ -1,20 +1,22 @@
 require 'rails_helper'
 
-RSpec.fdescribe "Countries", type: :request do
+RSpec.describe 'Countries', type: :request do
   include_context 'countries_setup'
 
-  let(:headers) { { "Accept": "application/json" } }
+  let(:headers) { { "Accept": 'application/json' } }
 
   before do
     country
+    many_species
   end
 
-  describe "GET /:country" do
+  describe 'GET /:country' do
     it 'gets the index page' do
-      get '/country'
+      # Possibly flaky spec - test setup always creates multiple Countries
+      get '/country-3'
 
       expect(response).to be_successful
-      expect(response.content_type).to eq("text/html; charset=utf-8")
+      expect(response.content_type).to eq('text/html')
     end
   end
 end
