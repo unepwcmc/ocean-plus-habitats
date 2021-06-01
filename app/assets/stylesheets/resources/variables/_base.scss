@@ -25,18 +25,18 @@ $navy-xdark: #00141C;
 
 $theme-blue: #88CCEE;
 $theme-pink: #F35F8D;
-$theme-magenta: #CB47B5;
+$theme-green: #0F5F49;
 $theme-purple: #332288;
 $theme-red: #E61354;
 $theme-yellow: #D6A520;
 
-$color-coralreefs: $theme-magenta;
+$color-coralreefs: $theme-green;
 $color-saltmarshes: $theme-purple;
 $color-mangroves: $theme-yellow;
 $color-seagrasses: $theme-blue;
 $color-coldcorals: $theme-red;
 
-$theme-gradient-habitats: $green-light $theme-magenta $theme-purple $theme-yellow $theme-blue $theme-red $grey;
+$theme-gradient-habitats: $green-light $theme-green $theme-purple $theme-yellow $theme-blue $theme-red $grey;
 
 
 //--------------------------------------------------
@@ -51,8 +51,8 @@ $body-line-height: 1.4;
 
 $header-font: $font-open-sans;
 $header-font-color: $black;
-$header-font-size-mobile: rem-calc(50);
-$header-font-size-tablet: rem-calc(50);
+$header-font-size-mobile: rem-calc(34);
+$header-font-size-tablet: rem-calc(40);
 $header-font-size-laptop: rem-calc(50);
 $header-line-height: 1.2;
 $header-margin-bottom: 1.2em;
@@ -115,9 +115,9 @@ $section-padding-small-top-small: rem-calc(14);
 $section-padding-small-top-medium: rem-calc(20);
 $section-padding-small-top-large: rem-calc(24);
 
-$section-padding-small-bottom-small: rem-calc(10);
-$section-padding-small-bottom-medium: rem-calc(16);
-$section-padding-small-bottom-large: rem-calc(20);
+$section-padding-small-bottom-small: rem-calc(14);
+$section-padding-small-bottom-medium: rem-calc(20);
+$section-padding-small-bottom-large: rem-calc(24);
 
 $item-spacing-small: rem-calc(14);
 $item-spacing-medium: rem-calc(26);
@@ -160,7 +160,7 @@ $habitats: (coralreefs saltmarshes mangroves seagrasses coldcorals);
 $habitat_statuses: (present absent unknown);
 
 $habitat_colours: (
-  'coralreefs': $theme-magenta,
+  'coralreefs': $theme-green,
   'saltmarshes': $theme-purple,
   'mangroves': $theme-yellow,
   'seagrasses': $theme-blue,
@@ -169,7 +169,7 @@ $habitat_colours: (
 
 
 $theme_gradient_habitat_colours: (
-  'coralreefs': $theme-magenta,
+  'coralreefs': $theme-green,
   'saltmarshes': $theme-purple,
   'mangroves': $theme-yellow,
   'seagrasses': $theme-blue,

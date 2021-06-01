@@ -13,18 +13,22 @@
     .header {
       &__h1 {
         @include h1-home;
-        width: 86%;
+        max-width: $container-width;
       }
 
       &__content {
         @include container--large;
-        padding-top: rem-calc(85);
-        padding-bottom: rem-calc(134);
+        padding-top: rem-calc(65);
+        padding-bottom: rem-calc(140);
+        
+        @include breakpoint($small) {
+          padding-top: rem-calc(85);
+        }
       }
 
         &__intro {
           @include text-hero-home;
-          width: 50%;
+          max-width: $container-width-small;
         }
     }
   }
@@ -34,17 +38,24 @@
 //--------------------------------------------------
   &--country {
     color: $body-font-color;
-    height: rem-calc(120);
-
-    @include breakpoint($small) {
-      height: rem-calc(170);
-    }
 
     .header {
       &__content {
+        @include gutters;
         @include flex;
         @include flex-center;
-        height: 100%;
+      }
+
+      &__icon {
+        @include box-shadow-grey;
+        
+        border-radius: 100%;
+        margin-right: rem-calc(20);
+        width: rem-calc(54); height: rem-calc(54);
+
+        @include breakpoint($small) {
+          width: rem-calc(80); height: rem-calc(80);
+        }
       }
     }
   }

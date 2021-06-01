@@ -120,13 +120,22 @@
 }
 
 @mixin text-habitat-change-stat-text {
-  @include responsive-styles(font-size, 20px, 20px, 20px);
+  @include responsive-styles(font-size, 22px, 16px, 16px);
   font-weight: $semi-bold;
+
+  @include breakpoint($small) {
+    font-weight: $normal;
+  }
+}
+
+@mixin text-habitat-change-card-title {
+  @include text-4;
 }
 
 @mixin text-habitat-change-stat {
-  @include text-5;
-  line-height: 1.1;
+  @include responsive-styles(font-size, 55px, 38px, 26px);
+  font-weight: $bold;
+  line-height: 1;
 }
 
 @mixin text-modal-title {
@@ -137,11 +146,23 @@
   @include text-3;
 }
 
+@mixin text-nav-item {
+  @include text-3;
+  color: $white;
+  font-weight: $normal;
+}
+
 @mixin text-nav-tertiary {
   @include text-3;
   cursor: pointer;
 
   &:hover { text-decoration: underline; }
+}
+
+@mixin text-nav-search-label {
+  font-size: rem-calc(22);
+  font-weight: $semi-bold;
+  margin-bottom: rem-calc(22)
 }
 
 @mixin text-select {
@@ -205,10 +226,18 @@
 
 @mixin text-protection-dials-title {
   @include text-4;
-  font-weight: $bold;
+  font-weight: $semi-bold;
+  text-align: left;
 }
 
 @mixin text-protection-dials-status {
-  @include text-4;
+  @include responsive-styles(font-size, rem-calc(12), rem-calc(16), rem-calc(16));
   font-weight: $normal;
+  text-align: center;
+}
+
+@mixin text-protection-dials-percentage {
+  @include text-2;
+  color: $grey-dark;
+  font-weight: $bold;
 }

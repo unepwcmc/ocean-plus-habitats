@@ -5,9 +5,11 @@
   <div class="card__card">
     <div class="flex">
       <i class="card__icon <%= get_habitat_icon_class(habitat[:id]) %>" alt="<%= habitat[:title] %> icon"></i>
+
       <% unless habitat[:change_percentage].nil? %>
         <span class="card__stat">
           <div class="card__stat-text"><%= habitat[:change_direction] %></div>
+
           <div><%= habitat[:change_percentage] %></div>
         </span>
       <% end %>
@@ -15,6 +17,7 @@
 
     <div class="card__title-wrapper flex flex-v-center">
       <h4 class="card__title"><%= habitat[:title] %></h4>
+
       <modal-trigger id="citation" modal-content="<%= habitat_change_modal(habitat[:modal_content]) %>" class="icon--citation margin-space-left"></modal-trigger>
     </div>
 
