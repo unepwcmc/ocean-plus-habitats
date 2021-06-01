@@ -33,3 +33,8 @@ Old coverage data is stored within `lib/data/countries` for the various habitats
 
 Redlist data for the various species is store in `lib/data/iucn_redlist`. If you need to update just the occurrences of each
 species run `rake import:occurrences`.
+
+## CSV downloads
+
+- Generating CSV downloads for habitat statistics in each country can be done simply via `rake generate:national_csvs`, which are
+dumped into `public/downloads/national` and are labelled according to their ISO3 code.
