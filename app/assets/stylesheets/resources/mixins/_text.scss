@@ -241,3 +241,9 @@
   color: $grey-dark;
   font-weight: $bold;
 }
+
+
+@mixin text-habitat-representation-chart-title {
+  @include h4;
+  font-size: rem-calc(16);
+}
