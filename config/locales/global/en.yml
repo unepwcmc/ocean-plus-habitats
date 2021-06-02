@@ -7,22 +7,27 @@ en:
       -
         id: coralreefs
         title: Warm-water coral reefs
+        acronym: 'WWC'
         icon: icons/warm-coral.svg
       -
         id: saltmarshes
         title: Saltmarshes
+        acronym: 'SM'
         icon: icons/saltmarshes.svg
       -
         id: mangroves
         title: Mangroves
+        acronym: 'M'
         icon: icons/mangroves.svg
       -
         id: seagrasses
         title: Seagrasses
+        acronym: 'SG'
         icon: icons/seagrasses.svg
       -
         id: coldcorals
         title: Cold-water corals
+        acronym: 'CWC'
         icon: icons/cold-coral.svg
     nav:
       burger_text: Explore a country/region
