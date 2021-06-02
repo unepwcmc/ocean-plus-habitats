@@ -39,7 +39,7 @@ $footer-hero-height-laptop: rem-calc(590);
     @include flex-wrap;
     @include flex-v-center;
     @include flex-h-between;
-    margin-bottom: rem-calc(60);
+    margin-bottom: rem-calc(20);
   }
 
   &__partner-logo-item {
@@ -72,7 +72,7 @@ $footer-hero-height-laptop: rem-calc(590);
     text-decoration: underline;
   }
 
-  &__downloads {
+  &__links {
     display: flex;
     flex-direction: column;
   }
