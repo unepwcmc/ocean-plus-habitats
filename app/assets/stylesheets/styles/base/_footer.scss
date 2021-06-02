@@ -19,7 +19,7 @@ $footer-hero-height-laptop: rem-calc(590);
     &--top {
       @include container--large;
       margin-bottom: rem-calc(30);
-    
+
       @include breakpoint($small) {
         @include flex;
         @include flex-h-between;
@@ -29,25 +29,30 @@ $footer-hero-height-laptop: rem-calc(590);
 
     &--bottom {
       background-color: $navy-dark;
-      padding-top: rem-calc(10); 
-      padding-bottom: rem-calc(10); 
+      padding-top: rem-calc(10);
+      padding-bottom: rem-calc(10);
     }
   }
 
-  &__partner-logos {
-    @include flex; 
+  &__partner-logo-items {
+    @include flex;
     @include flex-wrap;
     @include flex-v-center;
     @include flex-h-between;
     margin-bottom: rem-calc(60);
   }
 
+  &__partner-logo-item {
+    @include breakpoint($small) {
+      @include list-margins('right', rem-calc(32));
+    }
+  }
+
   &__partner-logo {
     opacity: .6;
     width: rem-calc(80); height: rem-calc(24);
-  
+
     @include breakpoint($small) {
-      margin-right: rem-calc(32);
       width: rem-calc(112); height: rem-calc(33);
     }
   }
@@ -58,7 +63,7 @@ $footer-hero-height-laptop: rem-calc(590);
     display: block;
   }
 
-  &__site-logo { 
+  &__site-logo {
     width: rem-calc(139); height: rem-calc(54);
   }
 
@@ -81,7 +86,7 @@ $footer-hero-height-laptop: rem-calc(590);
   &__copyright {
     @include container--large;
     font-style: italic;
-    
+
     @include breakpoint($small) {
       text-align: center;
     }
