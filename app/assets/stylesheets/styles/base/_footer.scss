@@ -18,58 +18,77 @@ $footer-hero-height-laptop: rem-calc(590);
   &__row {
     &--top {
       @include container--large;
-      @include flex;
-      @include flex-h-between;
+      margin-bottom: rem-calc(30);
 
-      margin-bottom: rem-calc(80);
+      @include breakpoint($small) {
+        @include flex;
+        @include flex-h-between;
+        margin-bottom: rem-calc(40);
+      }
     }
 
     &--bottom {
       background-color: $navy-dark;
-      padding-top: rem-calc(10); 
-      padding-bottom: rem-calc(10); 
+      padding-top: rem-calc(10);
+      padding-bottom: rem-calc(10);
     }
   }
 
-  &__partner-logos {
-    @include flex; 
+  &__partner-logo-items {
+    @include flex;
     @include flex-wrap;
     @include flex-v-center;
+    @include flex-h-between;
+    margin-bottom: rem-calc(60);
   }
 
-    &__partner-logo {
-      @include flex;
-      margin-right: rem-calc(32);
-      opacity: .6;
-      height: rem-calc(46); 
-
-      &.logo--site {
-        margin-right: 0;
-        opacity: 1;
-        width: rem-calc(133); height: rem-calc(46);
-      }
-
-      &--unepwcmc {
-        @extend .footer__partner-logo;
-        width: rem-calc(170);
-      }
-      &--geobon {
-        @extend .footer__partner-logo;
-        width: rem-calc(162);
-      }
-      &--proteus {
-        @extend .footer__partner-logo;
-        width: rem-calc(153);
-      }
+  &__partner-logo-item {
+    @include breakpoint($small) {
+      @include list-margins('right', rem-calc(32));
     }
+  }
+
+  &__partner-logo {
+    opacity: .6;
+    width: rem-calc(80); height: rem-calc(24);
+
+    @include breakpoint($small) {
+      width: rem-calc(112); height: rem-calc(33);
+    }
+  }
+
+  &__site-link {
+    margin-bottom: rem-calc(40);
+
+    display: block;
+  }
+
+  &__site-logo {
+    width: rem-calc(139); height: rem-calc(54);
+  }
+
+  &__link {
+    margin-top: rem-calc(10);
+    text-decoration: underline;
+  }
 
   &__downloads {
-    @include flex-no-shrink;
-    width: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__download {
+    @include button--download;
+    margin-bottom: rem-calc(16);
+    width: rem-calc(264);
   }
 
   &__copyright {
     @include container--large;
-    text-align: center;
+    font-style: italic;
+
+    @include breakpoint($small) {
+      text-align: center;
+    }
   }
 }

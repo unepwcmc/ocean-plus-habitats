@@ -4,7 +4,7 @@ module CountriesHelper
 
     flag = FileTest.exist?("app/assets/images/flags/#{country_iso3.downcase}.svg")
 
-    flag ? image_tag("flags/#{country_iso3.downcase}.svg", alt: '', class: 'header__icon') : nil
+    flag ? image_tag("flags/#{country_iso3.downcase}.svg", alt: '', class: 'icon--flag') : nil
   end
 
   def nav_tertiary_countries
