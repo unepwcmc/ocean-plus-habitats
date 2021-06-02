@@ -19,7 +19,7 @@
 
   <div class="content-page__logos">
     <% contributors.each do |logo| %>
-      <%= link_to logo[:url], title: logo[:name], target: "_blank" do %>
+      <%= link_to logo[:url], title: logo[:name], target: "_blank", class: "content-page__logo-wrapper" do %>
         <%= image_tag "logos/logo-#{logo[:image]}",
           alt: logo[:name],
           class: "content-page__logo--#{logo[:id]}"

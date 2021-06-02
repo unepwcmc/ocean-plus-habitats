@@ -1,13 +1,13 @@
 $content-page-pp-logo-height: rem-calc(50);
 $content-page-redlist-logo-height: rem-calc(80);
 
-@mixin content-page-logo {
-  margin-bottom: rem-calc(20);
-
+@mixin content-page-logo-wrapper {
   &:first-child {
+    margin-bottom: rem-calc(20);
+
     @include breakpoint($small) {
-      margin-right: rem-calc(30);
       margin-bottom: 0;
+      margin-right: rem-calc(30);
     }
   }
 }
@@ -33,15 +33,17 @@ $content-page-redlist-logo-height: rem-calc(80);
     }
   }
 
+  &__logo-wrapper {
+    @include content-page-logo-wrapper;
+  }
+
   &__logo {
     &--redlist {
-      @include content-page-logo;
       width: $content-page-redlist-logo-height;
       height: $content-page-redlist-logo-height;
     }
 
     &--protected-planet {
-      @include content-page-logo;
       width: 410 / 60 * $content-page-pp-logo-height; 
       height: $content-page-pp-logo-height;
     }
