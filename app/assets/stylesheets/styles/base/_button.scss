@@ -68,6 +68,23 @@ $button-padding-wide-laptop: 14px 45px;
   border-radius: $radius-button;
 }
 
+@mixin modal-button-sizing($mobile, $tablet, $laptop) {
+  @include responsive-styles(width, $mobile, $tablet, $laptop);
+  @include responsive-styles(height, $mobile, $tablet, $laptop);
+
+  @include responsive-styles(top,
+    calc(#{$mobile} * .5),
+    calc(#{$tablet} * .5),
+    calc(#{$laptop} * .4)
+  );
+
+  @include responsive-styles(right,
+    calc(#{$mobile} * .5),
+    calc(#{$tablet} * .5),
+    calc(#{$laptop} * .4)
+  );
+}
+
 //--------------------------------------------------
 // specific mixins
 //--------------------------------------------------
@@ -80,14 +97,24 @@ $button-padding-wide-laptop: 14px 45px;
   @include button-basic;
   @include flex;
   @include flex-center;
+  background-color: $navy-dark;
+  border-radius: 100%;
+  width: rem-calc(40); height: rem-calc(40);
   
   &:hover { opacity: .9; }
 
   &:before { 
     @include icon-close; 
-    background-size: 100%;
+    background-size: 50%;
     content: '';
+    width: 100%; height: 100%;
   }
+}
+
+@mixin button--close--on-navy {
+  @include button--close;
+  background-color: $navy-xdark;
+  border: $border-thin $grey;
 }
 
 @mixin button-close-basic {
