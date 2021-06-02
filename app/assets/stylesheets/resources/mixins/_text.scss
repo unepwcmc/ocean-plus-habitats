@@ -183,7 +183,11 @@
 }
 
 @mixin text-tab-title {
-  @include text-4;
+  @include responsive-styles(font-size, rem-calc(14), rem-calc(16), rem-calc(16));
+
+  &.active {
+    font-weight: $semi-bold;
+  }
 }
 
 @mixin text-tooltip {

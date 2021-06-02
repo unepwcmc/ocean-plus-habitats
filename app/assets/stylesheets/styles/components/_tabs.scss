@@ -25,19 +25,24 @@ $icon-margin-medium: 20;
     border-bottom: solid 1px $white;
     margin-bottom: rem-calc(20);
 
-    @include breakpoint($medium) { margin-bottom: rem-calc(24); }
+    @include breakpoint($medium) { margin-bottom: $section-padding-top-large; }
   }
 
     &__trigger {
       @include text-tab-title;
       cursor: pointer;
       margin-bottom: 0;
+      padding: rem-calc(0 10);
       text-align: center;
-      width: rem-calc(216); line-height: 3.4em;
+      line-height: 3.4em;
 
       position: relative;
 
-      &.tab-active { 
+      @include breakpoint($small) {
+        width: rem-calc(216);
+      }
+
+      &.active { 
         border-top: solid 1px $white;
         border-right: solid 1px $white;
         border-left: solid 1px $white;
@@ -64,20 +69,18 @@ $icon-margin-medium: 20;
   }
 
     &__list {
-      padding-left: 0;
+      @include wrapped-cards;
       
       &--icons {
+        @include wrapped-cards;
         padding-left: 0;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
       }
     }
 
       &__list-item {
+        @include wrapped-card(1, 2, 2);
+
         font-size: rem-calc(14);
-        margin-bottom: rem-calc(14);
-        width: 48%; 
 
         @include breakpoint($medium) { 
           font-size: rem-calc(16);
