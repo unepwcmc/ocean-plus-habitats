@@ -10,7 +10,7 @@
 
     <p class="max-width-container-small"><%= t('countries.shared.habitat_representation.intro_text', country_name: @name) %></p>
 
-    <h4>
+    <h4 class=habitat-representation__chart-title>
       <%= t('countries.shared.habitat_representation.chart_heading', 
         coastline_length: @stacked_row_chart[:chart][:coastline_length]
       ).html_safe %>
