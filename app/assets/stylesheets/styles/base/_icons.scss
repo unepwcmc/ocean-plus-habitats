@@ -77,6 +77,14 @@
   display: block;
 }
 
+@mixin icon-next {
+  @include icon-basic;
+  background-image: image_url('icons/next.svg');
+  width: rem-calc(56); height: rem-calc(56);
+
+  display: block;
+}
+
 @mixin icon-present {
   @include icon-basic;
   background-image: image_url('icons/tick.svg');
@@ -123,6 +131,14 @@
   @include icon-basic;
   background-image: image_url('icons/download.svg');
   width: rem-calc(16); height: rem-calc(16);
+}
+
+@mixin icon-flag {
+  @include box-shadow-grey;
+  
+  border-radius: 100%;
+  margin-right: rem-calc(20);
+  width: rem-calc(80); height: rem-calc(80);
 }
 
 //--------------------------------------------------
@@ -172,6 +188,10 @@
     width: rem-calc(36); height: rem-calc(34);
 
     &-grey { background-color: $grey; }
+  }
+
+  &--flag {
+    @include icon-flag;
   }
 
   &--scroll {

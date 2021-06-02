@@ -26,8 +26,3 @@
     @include breakpoint($large) { #{$type}-#{$s}: $gutter-large; }
   }
 }
-
-@mixin site-width {
-  width: 100%;
-  @include breakpoint($x-large){ width: $site-width; }
-}

@@ -1,0 +1,22 @@
+.pagination {
+  background-color: $navy;
+  border-radius: rem-calc(40);
+  font-size: rem-calc(25);
+  height: rem-calc(79);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__next {
+    &::after {
+      @include breakpoint_down($small) {
+        display: none;
+      }
+    }
+  }
+
+  .icon--flag {
+    width: rem-calc(35); height: rem-calc(35);
+  }
+}
