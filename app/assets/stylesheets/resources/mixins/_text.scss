@@ -242,8 +242,13 @@
   font-weight: $bold;
 }
 
-
 @mixin text-habitat-representation-chart-title {
   @include h4;
   font-size: rem-calc(16);
+}
+
+@mixin text-map-filters-title {
+  @include responsive-styles(font-size, rem-calc(16), rem-calc(22), rem-calc(22));
+  color: $white;
+  font-weight: $semi-bold;
 }

@@ -1,13 +1,5 @@
 <template>
-  <div class="map__container flex">
-    <filter-pane
-      :id="filterId"
-      class="flex-no-shrink"
-      :allow-no-selected-dataset="allowNoSelectedDataset"
-      :datasets="datasetsInternal"
-      :has-download-button="hasDownloadButton"
-      :message="message"
-    />
+  <div class="map__container">
     <div :class="[isEez ? 'maptype--eez' : 'maptype--habitat' ]">
       <v-map
         :id="id"
@@ -16,12 +8,21 @@
         :mapbox-token="mapboxToken"
         :bounding-box="initBoundingBox"
       />
+
       <eez-legend
         v-if="isEez"
         :datasets="datasetsInternal"
         :text="text"
       />
     </div>
+
+    <filter-pane
+      :id="filterId"
+      class="flex-no-shrink"
+      :allow-no-selected-dataset="allowNoSelectedDataset"
+      :datasets="datasetsInternal"
+      :title="filtersTitle"
+    />
   </div>
 </template>
 
@@ -63,10 +64,6 @@ export default {
       type: Boolean,
       default: true
     },
-    hasDownloadButton: {
-      type: Boolean,
-      default: false
-    },
     datasets: {
       type: Array,
       default: () => {}
@@ -79,7 +76,7 @@ export default {
       type: String,
       default: ''
     },
-    message: {
+    filtersTitle: {
       type: String,
       default: ''
     }

@@ -11,13 +11,13 @@
     <% end %>
     <v-map-interactive
       :id="'eez-map'"
-      :has-download-button="true"
+      :nload-button="true"
       :datasets="<%= datasets.to_json %>"
       text="<%= t('home.eez_map.eez_extent') %>"
-      message="<%= t('home.eez_map.eez_message') %>"
+      filters-title="<%= t('home.eez_map.eez_message') %>"
     ></v-map-interactive>
     <p class="text--smallprint max-width-container-small">
-      <%= t('global.map_disclaimer') %>
+      <%= t('global.map.map_disclaimer') %>
     </p>
   </div>
 </section>
