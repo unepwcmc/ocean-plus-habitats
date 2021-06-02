@@ -1,76 +1,174 @@
 //--------------------------------------------------
 // mixins
 //--------------------------------------------------
+$table-border: solid 2px $grey-light;
+
 @mixin table-cell-basic {
   @include flex;
   @include flex-v-center;
   padding: rem-calc(0 12);
-  width: 15%; height: rem-calc(66);
+  width: 100%;
+}
+
+@mixin table-column {
+  flex: 1 1 100%;
+
+  &:first-child {
+    flex: 0 0 rem-calc(70);
+
+    @include breakpoint($medium) {
+      flex-basis: rem-calc(250);
+    }
+  }
 }
 
 @mixin table-title {
   margin-left: rem-calc(12);
 }
 
+@mixin table-icon {
+  @include flex-no-shrink;
+  width: rem-calc(40); height: rem-calc(40);
+}
+
+//--------------------------------------------------
+// table wrapper
+//--------------------------------------------------
+.table-wrapper {
+  overflow-x: auto;
+
+  @include breakpoint($small) {
+    overflow-x: visible;
+  }
+
+  &__inner {
+    min-width: rem-calc(370);
+  }
+}
+
+//--------------------------------------------------
+// table header
+//--------------------------------------------------
+
+.table-header {
+  @include flex;
+  font-weight: $semi-bold;
+
+  &__column {
+    @include table-column;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__cell {
+    @include table-cell-basic;
+    @include flex-column;
+    padding: rem-calc(16) 0;
+    text-align: left;
+
+    @include breakpoint($large) {
+      @include flex-row;
+      @include flex-v-start;
+    }
+  }
+
+  &__icon {
+    @include table-icon;
+
+    &--redlist {
+      @include table-icon;
+
+      @include breakpoint($large) {
+        width: rem-calc(70); height: rem-calc(70);
+      }
+    }
+  }
+
+  &__title {
+    @include table-title;
+
+    &--full {
+      line-height: 1.15;
+      margin-left: rem-calc(10);
+
+      @include breakpoint-down($large) {
+        display: none;
+      }
+    }
+
+    &--short {
+      font-weight: $normal;
+      margin-bottom: rem-calc(6);
+
+      @include breakpoint($large) {
+        display: none
+      }
+    }
+  }
+}
+
 //--------------------------------------------------
 // table
 //--------------------------------------------------
+
 .table {
   @include flex;
+  border-bottom: $table-border;
   border-collapse: collapse;
   font-weight: $semi-bold;
   margin-bottom: rem-calc(28);
 
-  &__column {
-    @include flex-grow;
+  @include breakpoint($small) {
+    @include box-shadow-grey-light;
+    border: none;
+  }
 
-    &:first-child {
-      @include flex-no-shrink;
-      width: 24%;
-    }
+  &--redlist {
+    margin-top: $section-padding-small-top-large;
+  }
+
+  &__column {
+    @include table-column;
 
     &:not(:first-child) {
-      max-width: 20%;
-      min-width: 15%;
-
-      .table__cell { 
-        &:not(:first-child) { 
-          @include flex-h-center;
-          border-left: solid 2px $grey-light;
-        }
+      .table__cell {
+        @include flex-h-center;
+        border-left: $table-border;
       }
     }
-
-    
   }
-    
-    &__cell { 
-      @include table-cell-basic; 
-      width: 100%;
-      
-      &:nth-child(n+2):nth-child(-n+8) {
-        border-top: solid 2px $grey-light;
-        text-align: center;
-      }
 
-      &:last-child {
-        background-color: $grey-light;
-        height: rem-calc(37);
-      }
+  &__cell {
+    @include table-cell-basic;
+    background-color: $white;
+    border-top: $table-border;
+    text-align: center;
+    height: rem-calc(66);
+
+    &:first-child {
+      border-top: none;
     }
 
-    &__icon {
-      @include flex-no-shrink;
-      width: rem-calc(40); height: rem-calc(40);
+    &:last-child {
+      background-color: transparent;
+      height: rem-calc(37);
     }
+  }
 
-    &__title {
+  &__icon {
+    @include table-icon;
+  }
+
+  &__title {
+    @include table-title;
+
+    &--redlist-status {
       @include table-title;
-
-      &--capitalized {
-        @include table-title;
-        
-        text-transform: capitalize;
+      @include breakpoint-down($medium) {
+        display: none;
       }
+
+      text-transform: capitalize;
     }
+  }
 }

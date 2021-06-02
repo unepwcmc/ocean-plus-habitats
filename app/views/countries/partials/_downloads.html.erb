@@ -1,0 +1,12 @@
+<section class="bg--navy-dark section-padding--bottom white">
+  <div class="container--small">
+    <ul class="ul-unstyled downloads">
+      <% downloads.each do |download| %>
+        <li class="downloads__li">
+          <p class="downloads__title"><%= download[:title] %></p>
+          <%= link_to download[:button], '', class: 'downloads__button button--download' %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</section>

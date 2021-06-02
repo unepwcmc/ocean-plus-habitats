@@ -1,44 +1,58 @@
-<div class="table box-shadow--grey-light">
-  <div class="table__column">
-    <div class="table__cell"></div>
-
-    <% red_list_categories.each do |column| %>
-      <div class="table__cell">
-        <%= image_tag column[:icon], class: 'table__icon', alt: "#{column[:title]} icon" %>
-        <span class="table__title--capitalized"><%= column[:title] %></span>
+<div class="table-wrapper">
+  <div class="table-wrapper__inner">
+    <div class="table-header">
+      <div class="table-header__column">
+        <div class="table-header__cell">
+          <%= image_tag 'logos/logo-redlist.png',
+            class: 'table-header__icon--redlist',
+            alt: "IUCN Red List logo" 
+          %>
+        </div>
       </div>
-    <% end %>
 
-    <div class="table__cell bold"><%= t('countries.shared.red_list.total') %>:</div>
-  </div>
+      <% @red_list_data.each do |habitat| %>
+        <div class="table-header__column">
+          <div class="table-header__cell">
+            <span class="table-header__title--short"><%= habitat[:acronym] %></span>
 
-  <% @red_list_data.each do |habitat| %>
-    <div class="table__column">
-      <div class="table__cell">
-        <i class="table__icon <%= get_habitat_icon_class(habitat[:id], habitat_status(habitat)) %>" alt="<%= habitat[:title] %> icon"></i>
-        <span class="table__title"><%= habitat[:title] %></span>
-      </div>
-      <% if habitat['data'].present? %>
-        <% habitat['data'].each do |name, integer| %>
-          <div class="table__cell"><%= integer %></div>
-        <% end %>
-      <% else %>
-        <% habitat_with_data['data'].length.times do %>
-          <%= habitats_present_redlist.include?(habitat) ? "<div class=\"table__cell\">0</div>".html_safe : "<div class=\"table__cell\">-</div>".html_safe %>
-        <% end %>
+            <i 
+              class="table-header__icon <%= get_habitat_icon_class(habitat[:id], habitat_status(habitat)) %>"
+              alt="<%= habitat[:title] %> icon"
+            ></i>
+
+            <span class="table-header__title--full"><%= habitat[:title] %></span>
+          </div>
+        </div>
       <% end %>
     </div>
-  <% end %>
+
+
+    <div class="table">
+      <div class="table__column">
+        <% red_list_categories.each do |column| %>
+          <div class="table__cell">
+            <%= image_tag column[:icon], class: 'table__icon', alt: "#{column[:title]} icon" %>
+            <span class="table__title--redlist-status"><%= column[:title] %></span>
+          </div>
+        <% end %>
+
+        <div class="table__cell bold"><%= t('countries.shared.red_list.total') %>:</div>
+      </div>
+
+      <% @red_list_data.each do |habitat| %>
+        <div class="table__column">
+
+          <% if habitat['data'].present? %>
+            <% habitat['data'].each do |name, integer| %>
+              <div class="table__cell"><%= integer %></div>
+            <% end %>
+          <% else %>
+            <% habitat_with_data['data'].length.times do %>
+              <%= habitats_present_redlist.include?(habitat) ? "<div class=\"table__cell\">0</div>".html_safe : "<div class=\"table__cell\">-</div>".html_safe %>
+            <% end %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
