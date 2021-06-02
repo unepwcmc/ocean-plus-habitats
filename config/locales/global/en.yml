@@ -10,7 +10,7 @@ en:
     habitats:
       -
         id: coralreefs
-        title: Warm-water coral reefs
+        title: Warm-water corals
         acronym: 'WWC'
         icon: icons/warm-coral.svg
       -

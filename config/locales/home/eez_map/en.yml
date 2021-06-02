@@ -1,8 +1,9 @@
 en:
   home:
     eez_map:
-      title: Global overview of proportion of habitats protected
+      title: Global overview of proportion of habitats in protected and conserved areas
       eez_message: Select an Ocean Habitat
-      eez_extent: "Extent of marine protected area coverage (%):"
-      text: []
+      eez_extent: "Extent of marine protected area and OECM coverage (%):"
+      text:
+        - The following map visualizes the percentage of each habitat that falls within a protected or conserved area, within each Exclusive Economic Zone (EEZ). This can give insights into regions where habitats need more protection, and how country efforts compare to one another internationally.
 

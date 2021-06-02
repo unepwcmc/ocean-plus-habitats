@@ -8,7 +8,7 @@ en:
         - "World Atlas of Mangroves Spalding, M., Kainuma, M., Collins, L. (2010). World atlas of mangroves. ITTO, ISME, FAO"
       habitats:
         coralreefs:
-          title: Warm-water coral reefs
+          title: Warm-water corals
           text: ! '<strong>%{change_percentage}</strong> loss in warm-water coral cover between <strong>%{baseline_year}</strong> and <strong>%{recent_year}</strong>'
         saltmarshes:
           title: Saltmarshes
