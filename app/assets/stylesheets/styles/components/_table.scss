@@ -15,7 +15,7 @@ $table-border: solid 2px $grey-light;
 
   &:first-child {
     flex: 0 0 rem-calc(70);
-    
+
     @include breakpoint($medium) {
       flex-basis: rem-calc(250);
     }
@@ -36,7 +36,7 @@ $table-border: solid 2px $grey-light;
 //--------------------------------------------------
 .table-wrapper {
   overflow-x: auto;
-  
+
   @include breakpoint($small) {
     overflow-x: visible;
   }
@@ -66,7 +66,7 @@ $table-border: solid 2px $grey-light;
     padding: rem-calc(16) 0;
     text-align: left;
 
-    @include breakpoint($medium) {
+    @include breakpoint($large) {
       @include flex-row;
       @include flex-v-start;
     }
@@ -78,7 +78,7 @@ $table-border: solid 2px $grey-light;
     &--redlist {
       @include table-icon;
 
-      @include breakpoint($medium) {
+      @include breakpoint($large) {
         width: rem-calc(70); height: rem-calc(70);
       }
     }
@@ -91,7 +91,7 @@ $table-border: solid 2px $grey-light;
       line-height: 1.15;
       margin-left: rem-calc(10);
 
-      @include breakpoint-down($medium) {
+      @include breakpoint-down($large) {
         display: none;
       }
     }
@@ -99,8 +99,8 @@ $table-border: solid 2px $grey-light;
     &--short {
       font-weight: $normal;
       margin-bottom: rem-calc(6);
-      
-      @include breakpoint($medium) {
+
+      @include breakpoint($large) {
         display: none
       }
     }
@@ -131,15 +131,15 @@ $table-border: solid 2px $grey-light;
     @include table-column;
 
     &:not(:first-child) {
-      .table__cell { 
+      .table__cell {
         @include flex-h-center;
         border-left: $table-border;
       }
     }
   }
-    
-  &__cell { 
-    @include table-cell-basic; 
+
+  &__cell {
+    @include table-cell-basic;
     background-color: $white;
     border-top: $table-border;
     text-align: center;
@@ -167,7 +167,7 @@ $table-border: solid 2px $grey-light;
       @include breakpoint-down($medium) {
         display: none;
       }
-      
+
       text-transform: capitalize;
     }
   }
