@@ -190,13 +190,6 @@
     &-grey { background-color: $grey; }
   }
 
-  &--externaltab {
-    background-image: url('icons/external_tab.svg');
-    height: 20px;
-    width: 20px;
-    display: block;
-  }
-
   &--flag {
     @include icon-flag;
   }
