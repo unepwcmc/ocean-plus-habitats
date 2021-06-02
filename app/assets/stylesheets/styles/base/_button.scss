@@ -43,6 +43,19 @@ $button-text-laptop: 18px;
 $button-padding-laptop: 11px 24px;
 $button-padding-wide-laptop: 14px 45px;
 
+@mixin button-outline {
+  @include button-basic;
+  @include button-font-size-small;
+  @include button-padding-wide;
+  @include button-rounded;
+  background-color: $navy;
+  border: $border-thin $blue-light;
+  font-weight: $semi-bold;
+
+  align-items: center;
+  display: flex;
+}
+
 @mixin button-padding { 
   padding: $button-padding-laptop;
 }
@@ -112,6 +125,18 @@ $button-padding-wide-laptop: 14px 45px;
   background-size: 75%;
 }
 
+@mixin button--download {
+  @include button-outline;
+
+  &::before {
+    @include icon-download;
+    content: '';
+    margin-right: rem-calc(5);
+
+    display: block;
+  }
+}
+
 @mixin button--grey {
   @include button-basic;
   @include button-font-size;
@@ -131,6 +156,19 @@ $button-padding-wide-laptop: 14px 45px;
   font-weight: $semi-bold;
 }
 
+@mixin button--next {
+  &::after {
+    @include button-basic;
+    @include icon-next;
+    content: '';
+    margin-left: rem-calc(20);
+    width: rem-calc(56); height: rem-calc(56);
+  }
+
+  display: flex;
+  align-items: center;
+}
+
 @mixin button--select {
   @include button-basic;
   @include text-select;
@@ -139,7 +177,7 @@ $button-padding-wide-laptop: 14px 45px;
   @include flex-h-between;
   background-color: $grey-light;
   margin: 0;
-  width: $select-width; height: $select-height;
+  width: 100%; height: $select-height;
 
   &::after {
     @include icon-chevron-down;
@@ -158,8 +196,12 @@ $button-padding-wide-laptop: 14px 45px;
 // classes
 //--------------------------------------------------
 .button {
+  &--download {
+    @include button--download;
+  }
+
   &--map-download {
-    @include button--map-download;
+    @include button--download;
     @include flex;
     @include flex-v-center;
 
@@ -170,5 +212,13 @@ $button-padding-wide-laptop: 14px 45px;
       display: inline-block;
       margin-right: rem-calc(8);
     }
+  }
+
+  &--next {
+    @include button--next;
+  }
+
+  &--outline {
+    @include button-outline;
   }
 }

@@ -34,8 +34,6 @@
             target="_blank"
           >
             IUCN Species page
-          <i class="card__icon icon--externaltab"></i>
-
           </a>
         </div>
       </div>

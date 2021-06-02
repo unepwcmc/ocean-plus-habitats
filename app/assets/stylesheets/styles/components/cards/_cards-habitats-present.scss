@@ -3,13 +3,13 @@
   margin-bottom: rem-calc(20);
 
   .card {
-    @include wrapped-card(2,3,5);
+    @include wrapped-card(1,3,5);
     background: $white;
     padding: rem-calc(0 13);
-    height: rem-calc(272);
-
+    
     @include breakpoint($small) {
       padding: rem-calc(0 16);
+      height: rem-calc(272);
     }
 
     &--present {

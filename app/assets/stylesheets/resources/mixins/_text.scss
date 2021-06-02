@@ -71,7 +71,7 @@
   text-align: left;
 }
 
-@mixin h1-about {
+@mixin h1-content-page {
   @include text-2;
   margin-bottom: rem-calc(12);
   text-align: left;
@@ -79,6 +79,10 @@
 
 @mixin h2 {
   @include text-2;
+}
+
+@mixin h2-content-page {
+  @include responsive-styles(font-size, rem-calc(20), rem-calc(20), rem-calc(20));
 }
 
 @mixin h3 {
@@ -108,7 +112,7 @@
 
 @mixin text-chart {
   @include text-4;
-  font-weight: $normal;
+  font-weight: $semi-bold;
 }
 
 @mixin text-example-species-total-count {
@@ -240,4 +244,25 @@
   @include text-2;
   color: $grey-dark;
   font-weight: $bold;
+}
+
+@mixin text-example-species-title {
+  @include text-4;
+}
+
+@mixin text-example-species-title-scientific {
+  @include text-4;
+  font-style: italic;
+  font-weight: $normal;
+}
+
+@mixin text-example-species-link {
+  @include text-4;
+  font-weight: $bold;
+  text-decoration: underline;
+}
+
+@mixin text-habitat-representation-chart-title {
+  @include h4;
+  font-size: rem-calc(16);
 }

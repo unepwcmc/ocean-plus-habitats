@@ -18,18 +18,12 @@
 // stacked row chart
 //--------------------------------------------------
   &--row-stacked {
-    margin-bottom: rem-calc(60);
-
-    @include breakpoint($small) { margin-bottom: rem-calc(70); }
+    margin-bottom: $section-padding-small-bottom-large;
 
     .chart {
       &__chart {
-        margin-top: rem-calc(80);
-        width: 100%; height: rem-calc(32);
-
-        @include breakpoint($small) {
-          height: rem-calc(86);
-        }
+        margin: rem-calc(60) 0;
+        width: 100%; height: rem-calc(86);
       }
 
       &__title {
@@ -66,24 +60,26 @@
 
           &:nth-child(even) {
             .chart__percent {
-              top: calc(100% + 14px);
+              top: calc(100% + 12px);
               bottom: unset;
             }
           }
         }
 
           &__percent {
+            font-weight: $bold;
+
             position: absolute;
-            bottom: calc(100% + 14px);
+            bottom: calc(100% + 12px);
             left: 50%;
 
             transform: translateX(-50%);
           }
 
       &__legend {
-        margin-top: rem-calc(70);
+        margin-top: rem-calc(30);
 
-        @include breakpoint($small) { margin-top: rem-calc(90); }
+        @include breakpoint($small) { margin-top: rem-calc(60); }
       }
     }
   }

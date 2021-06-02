@@ -46,18 +46,17 @@
         @include flex-center;
       }
 
-        &__icon {
-          @include box-shadow-grey;
-          
-          border-radius: 100%;
-          margin-right: rem-calc(20);
-          width: rem-calc(54); height: rem-calc(54);
+      &__icon {
+        @include box-shadow-grey;
+        
+        border-radius: 100%;
+        margin-right: rem-calc(20);
+        width: rem-calc(54); height: rem-calc(54);
 
-          @include breakpoint($small) {
-            width: rem-calc(80); height: rem-calc(80);
-          }
+        @include breakpoint($small) {
+          width: rem-calc(80); height: rem-calc(80);
         }
-
+      }
     }
   }
 }

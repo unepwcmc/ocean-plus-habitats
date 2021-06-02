@@ -73,7 +73,7 @@ export default {
 
     const map = new mapboxgl.Map({
       container: this.id,
-      style: 'mapbox://styles/mapbox/light-v9',
+      style: 'mapbox://styles/unepwcmc/cknip0poi0p9g17o1m3nzs0h7',
       pitchWithRotate: false,
       center: [0, 30],
       zoom: 1

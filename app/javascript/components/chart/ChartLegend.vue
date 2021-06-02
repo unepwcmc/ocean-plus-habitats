@@ -7,7 +7,15 @@
     >
       <span :class="[themeClass(row.id), 'chart__legend-key-icon']" />
 
-      <span class="chart__legend-key-title"><span class="chart__legend-key-index">{{ index+1 }}. </span>{{ row.title }} - {{ row.percent }}%</span>
+      <span class="chart__legend-key-title">
+        <span 
+          v-if="showIndex"
+          class="chart__legend-key-index"
+        >
+          {{ index+1 }}. 
+        </span>
+        {{ row.title }} {{ row.percent }}%
+      </span>
 
       <span
         class="chart__legend-key-text"
@@ -33,6 +41,10 @@ export default {
     theme: {
       type: String,
       default: null
+    },
+    showIndex: {
+      type: Boolean,
+      default: false
     }
   },
 

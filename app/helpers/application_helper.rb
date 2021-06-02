@@ -8,7 +8,25 @@ module ApplicationHelper
   end
 
   def title_meta_tag
-    "Ocean+ Habitats"
+    if @country && @name
+      "#{root_title} | #{@name}"
+    elsif current_page?(root_path)
+      root_title
+    elsif controller.controller_name == 'site'
+      site_page_title
+    else
+      root_title
+    end
+  end
+
+  def site_page_title
+    page_title = t("global.page_title.#{controller.action_name}", default: nil)
+
+    page_title ? "#{root_title} | #{page_title}" : root_title
+  end
+
+  def root_title
+    t('global.page_title.index')
   end
 
   def url_encode text
@@ -49,9 +67,9 @@ module ApplicationHelper
     path_name = name
     geo_entity = GeoEntity.find_by_actual_name(name)
     geo_entity_id = geo_entity&.id
-    
-    return {} unless geo_entity_id 
-    
+
+    return {} unless geo_entity_id
+
     {
       id: geo_entity_id,
       name: name,
