@@ -140,7 +140,14 @@
   @include flex-wrap;
 }
 
-@mixin wrapped-card($n-mobile, $n-tablet, $n-laptop) {  
+@mixin wrapped-card(
+  $n-mobile,
+  $n-tablet,
+  $n-laptop,
+  $spacing-mobile: rem-calc(16),
+  $spacing-tablet: rem-calc(20),
+  $spacing-laptop: rem-calc(24),
+) {  
   flex-shrink: 0;
 
   &:last-child { margin-right: auto; }
