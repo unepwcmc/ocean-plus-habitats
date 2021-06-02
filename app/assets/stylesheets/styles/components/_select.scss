@@ -18,6 +18,11 @@ $list-item-margin-medium: rem-calc(16);
 .v-select {
   width: $select-width;
 
+  &.example-species__select {
+    width: 100%;
+    max-width: $select-width;
+  }
+
   .nav--primary & {
     width: auto;
   }
@@ -35,6 +40,7 @@ $list-item-margin-medium: rem-calc(16);
 
     &__dropdown-text {
       overflow: hidden;
+      text-align: left;
       text-overflow: ellipsis;
       white-space: nowrap;
       width: 100%;
@@ -43,11 +49,16 @@ $list-item-margin-medium: rem-calc(16);
   &__dropdown {
     @include ul-unstyled;
     @include box-shadow-grey;
-    background-color: $navy-dark;
+    background-color: $grey-light;
     padding: $select-padding-top 0;
     width: 100%;
 
     position: absolute;
+
+    .nav__search &,
+    .topbar__dropdown & {
+      background-color: $navy-dark;
+    }
   }
 
     &__option {

@@ -1,0 +1,11 @@
+<%= render partial: 'global/topbar', locals: { dark: true } %>
+
+<main class="content-page container--small page-padding">
+  <h1>
+    <%= t('legal.title') %>
+  </h1>
+
+  <% t('legal.paragraphs').each do |p| %>
+    <p><%= p.html_safe %></p>
+  <% end %>
+</main>

@@ -150,7 +150,7 @@ $button-padding-wide-laptop: 14px 45px;
   @include flex-h-between;
   background-color: $grey-light;
   margin: 0;
-  width: $select-width; height: $select-height;
+  width: 100%; height: $select-height;
 
   &::after {
     @include icon-chevron-down;
