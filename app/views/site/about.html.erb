@@ -32,7 +32,9 @@
 
   <p><%= t('about.attribution.before') %></p>
 
-  <p><strong>TODO - pull through citation from elsewhere</strong></p>
+  <p><strong>
+    <%= t('home.ancillary.citation_text', year: Date.today.year).html_safe %>
+  </strong></p>
 
   <p><%= t('about.attribution.after').html_safe %></p>
 
