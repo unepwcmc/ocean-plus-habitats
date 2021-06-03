@@ -86,11 +86,6 @@ module CountriesHelper
     map_to_citations_string(I18n.t('countries.shared.red_list.citations', year: Date.today.year))
   end
 
-  #TODO: Check if this can go - currently just placeholder text
-  def habitat_condition_modal
-    map_to_citations_string(I18n.t('countries.shared.habitat_condition.citation'))
-  end
-
   def country_habitat_change_modal
     map_to_citations_string(I18n.t('countries.shared.habitat_change.citations'))
   end
