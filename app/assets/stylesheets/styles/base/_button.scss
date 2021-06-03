@@ -50,10 +50,16 @@ $button-padding-wide-laptop: 14px 45px;
   @include button-rounded;
   background-color: $navy;
   border: $border-thin $blue-light;
+  color: $white;
   font-weight: $semi-bold;
 
-  align-items: center;
   display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: $white;
+  }
 }
 
 @mixin button-padding { 
@@ -131,9 +137,23 @@ $button-padding-wide-laptop: 14px 45px;
   &::before {
     @include icon-download;
     content: '';
-    margin-right: rem-calc(5);
+    margin-right: rem-calc(7);
 
     display: block;
+    flex-shrink: 0;
+  }
+}
+
+@mixin button--citation {
+  @include button-outline;
+
+  &::before {
+    @include icon-citation-white;
+    content: '';
+    margin-right: rem-calc(7);
+
+    display: block;
+    flex-shrink: 0;
   }
 }
 
@@ -196,8 +216,21 @@ $button-padding-wide-laptop: 14px 45px;
 // classes
 //--------------------------------------------------
 .button {
+  &--citation {
+    @include button--citation;
+  }
+
   &--download {
     @include button--download;
+  }
+
+  &--radio-group-download {
+    @include button--download;
+    max-width: rem-calc(350);
+
+    @include breakpoint($small) {
+      width: rem-calc(350);
+    }
   }
 
   &--map-download {

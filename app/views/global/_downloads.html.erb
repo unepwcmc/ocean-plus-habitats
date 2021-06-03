@@ -1,12 +1,42 @@
 <section class="bg--navy-dark section-padding white">
   <div class="container--small">
     <ul class="ul-unstyled downloads">
-      <% downloads.each do |download| %>
+      <% if downloads.key?(:national_data) %>
         <li class="downloads__li">
-          <p class="downloads__title"><%= download[:title] %></p>
-          <%= link_to download[:button], '', class: 'downloads__button button--download' %>
+          <p class="downloads__title"><%= downloads[:national_data][:title] %></p>
+
+          <modal-trigger
+            id="citation"
+            class="modal__trigger--unstyled"
+            modal-content="'TODO'"
+          >
+            <div class="downloads__button button--citation">
+              <%= downloads[:national_data][:button] %>
+            </div>
+          </modal-trigger>
         </li>
       <% end %>
+
+      <li class="downloads__li">
+        <p class="downloads__title"><%= downloads[:spatial_data][:title] %></p>
+
+        <modal-trigger
+          id="spatial-downloads"
+          class="modal__trigger--unstyled"
+        >
+          <div class="downloads__button button--download">
+            <%= downloads[:spatial_data][:button] %>
+          </div>
+        </modal-trigger>
+      </li>
+
+      <li class="downloads__li">
+        <p class="downloads__title"><%= downloads[:statistics][:title] %></p>
+
+        <%= link_to downloads[:statistics][:button], '', class: 'downloads__button button--download', download: true %>
+      </li>
     </ul>
   </div>
 </section>
+
+<%= render 'global/spatial_downloads_modal' %>

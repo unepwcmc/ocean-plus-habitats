@@ -141,6 +141,23 @@
   width: rem-calc(80); height: rem-calc(80);
 }
 
+@mixin icon-citation {
+  @include icon-basic;
+  @include icon-button-reset;
+  @include flex-no-shrink;
+  background-image: image_url('icons/citation.svg');
+  width: rem-calc(36); height: rem-calc(36);
+}
+
+@mixin icon-citation-white {
+  @include icon-basic;
+  @include icon-button-reset;
+  @include flex-no-shrink;
+  background-image: image_url('icons/citation-white.svg');
+  background-size: 100%;
+  width: rem-calc(20); height: rem-calc(20);
+}
+
 //--------------------------------------------------
 // classes
 //--------------------------------------------------
@@ -153,11 +170,7 @@
   }
 
   &--citation {
-    @include icon-basic;
-    @include icon-button-reset;
-    @include flex-no-shrink;
-    background-image: image_url('icons/citation.svg');
-    width: rem-calc(36); height: rem-calc(36);
+    @include icon-citation;
   }
 
   @each $habitat in $habitats {

@@ -266,3 +266,8 @@
   @include h4;
   font-size: rem-calc(16);
 }
+
+@mixin text-spatial-downloads-modal {
+  @include text-3;
+  margin-bottom: rem-calc(20);
+}

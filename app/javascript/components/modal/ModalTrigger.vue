@@ -20,7 +20,7 @@ export default {
     },
     modalContent: {
       type: String,
-      required: true
+      default: null
     }
   },
 

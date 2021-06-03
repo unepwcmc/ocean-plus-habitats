@@ -1,0 +1,5 @@
+.spatial-downloads-modal {
+  &__text {
+    @include text-spatial-downloads-modal;
+  }
+}

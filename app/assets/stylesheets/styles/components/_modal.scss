@@ -35,6 +35,15 @@ $modal-padding-laptop: $modal-button-laptop - rem-calc(20);
 
   &--active { display: flex; }
 
+  &__trigger {
+    &--unstyled {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
   &__dialog {
     @include responsive-styles('font-size', 16px, 18px, 18px);
     @include responsive-styles(padding-top,

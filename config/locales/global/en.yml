@@ -42,6 +42,11 @@ en:
       copyright: Global Ocean Habitat Profile from the Ocean+ &copy; copyright
       download_data: Download dataset
       download_stats: Download statistics
+    
+    spatial_downloads_modal:
+      title: Select habitat shape file
+      text: Choose one habitat shape file from the list below to download.
+      download_text: Download selected shape file
 
     homepage: "%{name} home page"
     visit: Visit %{name}
