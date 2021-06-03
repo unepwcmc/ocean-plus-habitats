@@ -1,5 +1,5 @@
 require 'csv'
-require 'zip/zip'
+require 'zip'
 
 namespace :generate do
   desc 'Generate CSVs containing data for each habitat for each country'
