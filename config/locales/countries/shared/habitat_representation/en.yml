@@ -2,7 +2,7 @@ en:
   countries:
     shared:
       habitat_representation:
-        title: Habitat Representation
+        title: Habitat representation
         intro_text: "The proportion of %{country_name}'s coastline that is located within 30km of coastal and marine habitats is illustrated below."
         chart_heading: "Percentage of coastline (%{coastline_length} km) covered by habitats"
         chart_note: "<strong>Note:</strong> 'Multiple habitats' represent locations where more than one habitat occurs along the coastline."

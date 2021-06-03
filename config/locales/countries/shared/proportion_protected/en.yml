@@ -2,12 +2,12 @@ en:
   countries:
     shared:
       proportion_protected:
-        title_html: Proportion of habitat protected
-        intro_text: 'According to the <a href="http://www.protectedplanet.net" title="Protected Planet" target="_blank">World Database on Protected Areas</a>, the following reflects the proportion of habitats found within marine and coastal protected areas in %{country_name}.'
+        title_html: Proportion of habitat within protected and conserved areas
+        intro_text: 'According to the World Database on Protected Areas and Other Effective Area-Based Conservation Measures, the following reflects the proportion of habitats found within marine and coastal protected areas in %{country_name}.'
         title_present: Confirmed Presence
         title_absent: Confirmed Absence
         title_unknown: Data Deficient
-        note: '<strong>Note:</strong> This outlines the proportion of each habitat that is known to occur within protected areas. However, the level of protection and whether or not these habitats are explicitly and effectively protected is unknown.'
+        note: '<strong>Note:</strong> This outlines the proportion of each habitat that is known to occur within protected or conserved areas. However, the level of protection and whether these habitats are explicitly and effectively protected is uncertain.'
         last_updated: '<strong>Last updated:</strong> March, 2020'
         citations:
           - "UNEP-WCMC, WorldFish Centre, WRI, TNC (2018). Global distribution of warm-water coral reefs, compiled from multiple sources including the Millennium Coral Reef Mapping Project. Version 4.0. Includes contributions from IMaRS-USF and IRD (2005), IMaRS-USF (2005) and Spalding et al. (2001). Cambridge (UK): UN Environment World Conservation Monitoring Centre. URL: http://data.unep-wcmc.org/datasets/1"
