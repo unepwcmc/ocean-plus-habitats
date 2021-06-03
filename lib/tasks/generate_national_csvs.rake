@@ -42,7 +42,7 @@ namespace :generate do
       FileUtils.mkdir_p(output_dir) unless Dir.exist?(output_dir)
 
       CsvUtils.csv_from_csv_rows(output_dir, @required_headers, habitat_data.first, filename: 'all_other_habitats')
-      CsvUtils.csv_from_csv_rows(output_dir, @required_headers, habitat_data.last, filename: 'mangroves')
+      CsvUtils.csv_from_csv_rows(output_dir, @mangroves_headers, habitat_data.last, filename: 'mangroves')
     end
   end
 
