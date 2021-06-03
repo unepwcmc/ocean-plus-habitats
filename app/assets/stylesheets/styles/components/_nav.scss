@@ -47,12 +47,10 @@ $nav-pane-min-width-large: rem-calc(460);
       }
 
       &__close {
-        @include button--close;
+        @include button--close--on-navy;
+        @include modal-button-sizing(rem-calc(40), rem-calc(40), rem-calc(40));
 
-        display: block;
         position: absolute;
-        top: rem-calc(25);
-        right: rem-calc(25);
         z-index: 1;
       }
 

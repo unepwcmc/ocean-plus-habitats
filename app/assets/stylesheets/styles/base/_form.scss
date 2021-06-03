@@ -27,3 +27,28 @@ select {
 //--------------------------------------------------
 // form - custom
 //--------------------------------------------------
+
+.radio-group {
+  @include ul-unstyled;
+}
+
+.radio-button {
+  &__label {
+    @include flex;
+    @include flex-v-center;
+  }
+
+  &__input {
+    @include input-hidden;
+  }
+
+  &__radio {
+    @include input-custom-radio(rem-calc(22));
+  }
+}
+
+@include custom_input_checked('.radio-button__input', '.radio-button__radio::before') {
+  @include input-custom-radio-selected($blue-light)
+}
+
+@include custom_input_focus_default('.radio-button__input', '.radio-button__radio');

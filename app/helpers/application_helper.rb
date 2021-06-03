@@ -8,7 +8,25 @@ module ApplicationHelper
   end
 
   def title_meta_tag
-    "Ocean+ Habitats"
+    if @country && @name
+      "#{root_title} | #{@name}"
+    elsif current_page?(root_path)
+      root_title
+    elsif controller.controller_name == 'site'
+      site_page_title
+    else
+      root_title
+    end
+  end
+
+  def site_page_title
+    page_title = t("global.page_title.#{controller.action_name}", default: nil)
+
+    page_title ? "#{root_title} | #{page_title}" : root_title
+  end
+
+  def root_title
+    t('global.page_title.index')
   end
 
   def url_encode text
@@ -49,9 +67,9 @@ module ApplicationHelper
     path_name = name
     geo_entity = GeoEntity.find_by_actual_name(name)
     geo_entity_id = geo_entity&.id
-    
-    return {} unless geo_entity_id 
-    
+
+    return {} unless geo_entity_id
+
     {
       id: geo_entity_id,
       name: name,
@@ -96,11 +114,7 @@ module ApplicationHelper
   end
 
   def red_list_modal
-   citations = I18n.t('home.red_list.citations', year: Date.today.year).map do |cit|
-      "<p>#{cit}</p>"
-    end
-
-    citations.join
+    map_to_citations_string(I18n.t('home.red_list.citations', year: Date.today.year))
   end
 
   def habitats_present_modal
@@ -108,12 +122,22 @@ module ApplicationHelper
   end
 
 
-  def map_to_citations_string translations
-    citations = translations.map do |cit|
-      "<p>#{cit}</p>"
+  def map_to_citations_string(translations)
+    citations = ['<p>No citations found.</p>']
+
+    if translations && translations.count.positive?
+      citations = translations.map do |cit|
+        "<p>#{insert_hyperlinks(cit)}</p>"
+      end
     end
 
-    "<h3>#{I18n.t('global.sources_modal_title')}</h3>" + citations.join
+    "<h3 class='modal__title'>#{I18n.t('global.sources_modal_title')}</h3>" + citations.join
+  end
+
+  def insert_hyperlinks(citation)
+    citation.split.map { |string| string[/^(http)/] ? 
+      "<a target='_' class='modal__link' href='#{string}'>#{string}</a>" : string
+    }.join(' ')
   end
 
   def habitat_text(habitat)

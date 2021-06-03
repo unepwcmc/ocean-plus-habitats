@@ -77,6 +77,14 @@
   display: block;
 }
 
+@mixin icon-next {
+  @include icon-basic;
+  background-image: image_url('icons/next.svg');
+  width: rem-calc(56); height: rem-calc(56);
+
+  display: block;
+}
+
 @mixin icon-present {
   @include icon-basic;
   background-image: image_url('icons/tick.svg');
@@ -125,6 +133,31 @@
   width: rem-calc(16); height: rem-calc(16);
 }
 
+@mixin icon-flag {
+  @include box-shadow-grey;
+  
+  border-radius: 100%;
+  margin-right: rem-calc(20);
+  width: rem-calc(80); height: rem-calc(80);
+}
+
+@mixin icon-citation {
+  @include icon-basic;
+  @include icon-button-reset;
+  @include flex-no-shrink;
+  background-image: image_url('icons/citation.svg');
+  width: rem-calc(36); height: rem-calc(36);
+}
+
+@mixin icon-citation-white {
+  @include icon-basic;
+  @include icon-button-reset;
+  @include flex-no-shrink;
+  background-image: image_url('icons/citation-white.svg');
+  background-size: 100%;
+  width: rem-calc(20); height: rem-calc(20);
+}
+
 //--------------------------------------------------
 // classes
 //--------------------------------------------------
@@ -137,11 +170,7 @@
   }
 
   &--citation {
-    @include icon-basic;
-    @include icon-button-reset;
-    @include flex-no-shrink;
-    background-image: image_url('icons/citation.svg');
-    width: rem-calc(36); height: rem-calc(36);
+    @include icon-citation;
   }
 
   @each $habitat in $habitats {
@@ -174,11 +203,8 @@
     &-grey { background-color: $grey; }
   }
 
-  &--externaltab {
-    background-image: url('icons/external_tab.svg');
-    height: 20px;
-    width: 20px;
-    display: block;
+  &--flag {
+    @include icon-flag;
   }
 
   &--scroll {

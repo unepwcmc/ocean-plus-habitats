@@ -1,33 +1,40 @@
 <footer class="footer">
   <div class="footer__row--top">
-    <%= link_to root_url, title: t('global.homepage', name: 'Ocean+ Habitats') do %>
-      <%= image_tag 'logos/logo-ocean-plus-habitats.svg', alt: 'Ocean+ Habitats logo', class: 'footer__partner-logo logo--site' %>
+    <%= link_to root_url, title: t('global.homepage', name: 'Ocean+ Habitats'), class:"footer__site-link" do %>
+      <%= image_tag 'logos/logo-ocean-plus-habitats.svg', alt: 'Ocean+ Habitats logo', class: 'footer__site-logo' %>
     <% end %>
 
     <div class="footer__group">
-      <div class="footer__partner-logos">
-        <%= link_to 'http://unep-wcmc.org', title: t('global.visit', name: 'UN Environment World Conservation Monitoring Centre'), target: '_blank' do %>
-          <%= image_tag 'https://s3.amazonaws.com/wcmc.logo/UNEP_WCMC_logo_white.svg', alt: 'UN Environment World Conservation Monitoring logo', class: 'footer__partner-logo--unepwcmc logo--wcmc' %>
-        <% end %>
+      <div class="footer__partner-logo-items">
+        <div class="footer__partner-logo-item">
+          <%= link_to 'http://unep-wcmc.org', title: t('global.visit', name: 'UN Environment World Conservation Monitoring Centre'), target: '_blank' do %>
+            <%= image_tag 'https://s3.amazonaws.com/wcmc.logo/UNEP_WCMC_logo_white.svg', alt: 'UN Environment World Conservation Monitoring logo', class: 'footer__partner-logo logo--wcmc' %>
+          <% end %>
+        </div>
 
-        <%= link_to 'http://geobon.org', title: t('global.visit', name: 'GEO BON'), target: '_blank' do %>
-          <%= image_tag 'logos/logo-geobon.svg', alt: 'GEO BON logo', class: 'footer__partner-logo--geobon logo--geobon' %>
-        <% end %>
-        
-        <%= link_to 'http://proteuspartners.org', title: t('global.visit', name: 'Proteus Partners'), target: '_blank' do %>
-          <%= image_tag 'logos/logo-proteus.svg', alt: 'Proteus logo', class: 'footer__partner-logo--proteus logo--proteus' %>
-        <% end %>
+        <div class="footer__partner-logo-item">
+          <%= link_to 'http://geobon.org', title: t('global.visit', name: 'GEO BON'), target: '_blank' do %>
+            <%= image_tag 'logos/logo-geobon.svg', alt: 'GEO BON logo', class: 'footer__partner-logo logo--geobon' %>
+          <% end %>
+        </div>
+
+        <div class="footer__partner-logo-item">
+          <%= link_to 'http://proteuspartners.org', title: t('global.visit', name: 'Proteus Partners'), target: '_blank' do %>
+            <%= image_tag 'logos/logo-proteus.svg', alt: 'Proteus logo', class: 'footer__partner-logo logo--proteus' %>
+          <% end %>
+        </div>
       </div>
 
-      <div class="footer__downloads">
-        <h4><%= t('global.footer_downloads_title') %></h4>
+      <div class="footer__links">
+        <%= link_to t('global.footer.about'), about_path, title: t('global.footer.about'), class: 'footer__link' %>
+        <%= link_to t('global.footer.legal'), legal_path, title: t('global.footer.legal'), class: 'footer__link' %>
       </div>
     </div>
   </div>
 
   <div class="footer__row--bottom">
     <div class="footer__copyright">
-      &copy; <%= "#{t('global.footer_copyright')} #{Date.current.strftime('%Y')}" %>
+      <%= "#{t('global.footer.copyright')} #{Date.current.strftime('%Y')}".html_safe %>
     </div>
   </div>
 </footer>

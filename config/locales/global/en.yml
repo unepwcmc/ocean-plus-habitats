@@ -1,5 +1,9 @@
 en:
   global:
+    page_title: 
+      index: Ocean+ Habitats
+      about: About
+      legal: Legal
     main_menu:
       regions_title: Regions
       search_by_country: Search by Country
@@ -7,35 +11,49 @@ en:
       -
         id: coralreefs
         title: Warm-water coral reefs
+        acronym: 'WWC'
         icon: icons/warm-coral.svg
       -
         id: saltmarshes
         title: Saltmarshes
+        acronym: 'SM'
         icon: icons/saltmarshes.svg
       -
         id: mangroves
         title: Mangroves
+        acronym: 'M'
         icon: icons/mangroves.svg
       -
         id: seagrasses
         title: Seagrasses
+        acronym: 'SG'
         icon: icons/seagrasses.svg
       -
         id: coldcorals
         title: Cold-water corals
+        acronym: 'CWC'
         icon: icons/cold-coral.svg
     nav:
       burger_text: Explore a country/region
-
-    footer_copyright: copyright
-    footer_downloads_title: Download datasets
+    
+    footer:
+      about: About Ocean+ Habitats
+      legal: Legal
+      copyright: Global Ocean Habitat Profile from the Ocean+ &copy; copyright
+      download_data: Download dataset
+      download_stats: Download statistics
+    
+    spatial_downloads_modal:
+      title: Select habitat shape file
+      text: Choose one habitat shape file from the list below to download.
+      download_text: Download selected shape file
 
     homepage: "%{name} home page"
     visit: Visit %{name}
 
     sources_modal_title: Sources 
 
-    map_disclaimer: 'Disclaimer: The designations employed and the presentation of material on this map do not imply the expression of any opinion whatsoever on the part of the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries.'
+    map_disclaimer: 'Disclaimer: The designations employed and the presentation of material on this map do not imply the expression of any opinion whatsoever on the part of the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries. * Non-Self-Governing Territory ** Dotted line represents approximately the Line of Control in Jammu and Kashmir agreed upon by India and Pakistan. The final status of Jammu and Kashmir has not yet been agreed upon by the parties. *** A dispute exists between the Governments of Argentina and the United Kingdom of Great Britain and Northern Ireland concerning sovereignty over the Falkland Islands (Malvinas).'
     map_not_available: Not available
 
     loss_of: Loss of
