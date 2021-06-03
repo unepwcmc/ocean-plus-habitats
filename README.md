@@ -36,5 +36,5 @@ species run `rake import:occurrences`.
 
 ## CSV downloads
 
-- Generating CSV downloads for habitat statistics in each country can be done simply via `rake generate:national_csvs`, which are
-dumped into `public/downloads/national` and are labelled according to their ISO3 code.
+- Generating zip downloads of CSVS for habitat statistics in each country, can be done simply via `rake generate:national_csvs`, which are dumped into `public/downloads/national` and are labelled according to their ISO3 code. 
+- Global statistics are provided as a prefab zip in the same folder
