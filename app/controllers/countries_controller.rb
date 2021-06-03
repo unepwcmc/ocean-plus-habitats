@@ -14,6 +14,7 @@ class CountriesController < ApplicationController
     habitats_present_status = @country.occurrences
 
     @map_datasets = Serializers::MapDatasetsSerializer.new(habitats_protection_stats, habitats_present_status).serialize
+    @map_datasets_habitats = @map_datasets.reject { |d| %w[wdpa oecm].include?(d[:id]) }
     @habitats_present = Serializers::HabitatsPresentSerializer.new(habitats_present_status, @country).serialize
 
     red_list_data = @country.count_species
