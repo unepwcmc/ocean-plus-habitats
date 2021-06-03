@@ -3,7 +3,7 @@ class Esri
 
   def initialize
     esri_server_url = Rails.application.secrets.dig(:esri_server_eez_url)
-    @url = self.class.base_uri("#{esri_server_url}/FeatureServer/0/query")
+    @url = self.class.base_uri(esri_server_url)
   end
 
   def fetch_bounding_box(iso3)
