@@ -15,6 +15,10 @@ namespace :import do
         import_new_csv_file(habitat.name, csv_file)
       end
     end
+
+    # Import occurrences for any countries that are missing (disregarding regions for the moment)
+    # using habitat_country_presence.csv
+    import_habitat_occurrences
   end
 
   def import_new_csv_file(habitat, csv_file)
@@ -93,5 +97,23 @@ namespace :import do
     end
 
     geo_entity
+  end
+
+  def import_habitat_occurrences
+    missing_occurrences = GeoEntity.countries.includes(:geo_entity_stats)
+                                   .where(geo_entity_stats: { occurrence: nil })
+                                   .map(&:iso3)
+
+    filename = 'lib/data/habitat_presence/habitat_presence_country.csv'
+
+    CSV.foreach(filename, headers: true, encoding: "utf-8") do |row|
+      next unless missing_occurrences.include?(row['ISO3'])
+
+      Habitat.all.each do |habitat|
+        stats = GeoEntity.find_by(iso3: row['ISO3']).geo_entity_stats
+
+        stats.find_by(habitat: habitat).update(occurrence: row[habitat.title].to_i)
+      end
+    end
   end
 end

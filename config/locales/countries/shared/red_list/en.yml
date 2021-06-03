@@ -4,6 +4,7 @@ en:
       red_list:
         title: Species composition and status by habitat
         intro_text: The table below outlines the number of species for each habitat by their global IUCN Red List status, illustrating the number of assessed species known to occur in %{country_name}.
+        no_data: There is no data for species present in %{country_name} at this stage.
         citations:
           - "IUCN %{year}. The IUCN Red List of Threatened Species. Version[Latest]. https://www.iucnredlist.org. Accessed on [Date of Update]."
         total: Total
