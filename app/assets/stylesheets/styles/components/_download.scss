@@ -1,0 +1,37 @@
+.downloads {
+  &__downloads {
+    font-size: rem-calc(22);
+    font-weight: $semi-bold;
+
+    display: inline-block;
+  }
+
+  &__button {
+    max-width: rem-calc(270);
+
+    @include breakpoint($small) {
+      width: rem-calc(270);
+    }
+  }
+
+  &__li {
+    margin-bottom: rem-calc(30);
+
+    @include breakpoint($small) {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    font-size: rem-calc(22);
+    font-weight: $semi-bold;
+    margin-bottom: rem-calc(14);
+
+    @include breakpoint($small) {
+      font-size: rem-calc(25);
+      margin-bottom: 0;
+    }
+  }
+}

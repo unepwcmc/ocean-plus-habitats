@@ -43,3 +43,11 @@
     doughnut_chart: @doughnut_chart.to_json
   }
 %>
+
+<%= render partial: '/global/downloads',
+  locals: {
+    downloads: t('home.ancillary.downloads'),
+  }
+%>
+
+<%= render '/site/partials/citation' %>

@@ -1,0 +1,13 @@
+<section class="page-padding--bottom bg--navy-dark white">
+  <div class="container">
+    <div class="pagination">
+      <%= flag %>
+      <%=
+        link_to t('countries.shared.ancillary.next'),
+        page_url,
+        title: t('countries.shared.ancillary.next_title', country_name: country_name).html_safe,
+        class: 'pagination__next button--next'
+      %>
+    </div>
+  </div>
+</section>

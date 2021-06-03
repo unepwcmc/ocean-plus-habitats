@@ -10,13 +10,14 @@ import store from '../store/store.js'
 
 // components
 import ChartDoughnut from '../components/chart/ChartDoughnut'
-import ChartRows from '../components/chart/ChartRows.vue'
 import ChartRowStacked from '../components/chart/ChartRowStacked.vue'
+import DownloadRadioButtons from '../components/downloads/DownloadRadioButtons.vue'
 import ExampleSpecies from '../components/content/ExampleSpecies.vue'
 import ExampleSpeciesCount from '../components/content/ExampleSpeciesCount.vue'
 import NavBurger from '../components/nav/NavBurger.vue'
 import NavScrollTo from '../components/nav/NavScrollTo.vue'
 import Modal from '../components/modal/Modal.vue'
+import ModalBase from '../components/modal/ModalBase.vue'
 import ModalTrigger from '../components/modal/ModalTrigger.vue'
 import VSelect from '../components/select/VSelect.vue'
 import VSelectSearchable from '../components/select/VSelectSearchable.vue'
@@ -40,11 +41,12 @@ document.addEventListener('turbolinks:load', () => {
       store,
       components: {
         ChartDoughnut,
-        ChartRows,
         ChartRowStacked,
+        DownloadRadioButtons,
         ExampleSpecies,
         ExampleSpeciesCount,
         Modal,
+        ModalBase,
         ModalTrigger,
         NavBurger,
         NavScrollTo,

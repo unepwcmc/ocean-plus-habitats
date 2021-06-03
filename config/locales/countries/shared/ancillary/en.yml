@@ -2,6 +2,8 @@ en:
   countries:
     shared:
       ancillary:
+        next: Next country page
+        next_title: View page for %{country_name}
         sources_title: "Main national data sources"
         sources:
           - '<a href="#" title="Source #1">Source #1</a>'
@@ -9,8 +11,14 @@ en:
           - '<a href="#" title="Source #3">Source #3</a>'
         sources_note: '<strong>Are we missing data?</strong><br/>Submit/contribute by emailing <a href="mailto:oceanplus@unep-wcmc.org" title="Send an email to the Ocean+ team">oceanplus@unep-wcmc.org</a>.'
         citation_title: Citation
-        citation_text: 'UNEP-WCMC (year). Ocean+ Habitats: %{country_name} [On-line], [insert month/year of the version downloaded]. Available at: <a href="/%{country_name}" title="Visit the country page for %{country_name}">habitats.oceanplus.org/%{country_name_lower}</a>'
-        downloads_title: Downloads
+        citation_text: 'UNEP-WCMC (%{year}). Ocean+ Habitats: %{country_name} [On-line], [insert month/year of the version downloaded]. Available at: <a href="/%{country_name}" title="Visit the country page for %{country_name}">habitats.oceanplus.org/%{country_name_lower}</a>'
         downloads:
-          - '<a title="Download spatial data">Download spatial data</a>'
-          - '<a title="Download the statistics">Download the statistics</a>'
+          national_data:
+            title: Main national data sources
+            button: View full list
+          spatial_data:
+            title: Download spatial data
+            button: Download data
+          statistics:
+            title: Download the statistics
+            button: Download statistics
