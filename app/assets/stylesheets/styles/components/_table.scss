@@ -123,10 +123,6 @@ $table-border: solid 2px $grey-light;
     border: none;
   }
 
-  &--redlist {
-    margin-top: $section-padding-small-top-large;
-  }
-
   &__column {
     @include table-column;
 

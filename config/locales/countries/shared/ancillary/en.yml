@@ -13,12 +13,12 @@ en:
         citation_title: Citation
         citation_text: 'UNEP-WCMC (%{year}). Ocean+ Habitats: %{country_name} [On-line], [insert month/year of the version downloaded]. Available at: <a href="/%{country_name}" title="Visit the country page for %{country_name}">habitats.oceanplus.org/%{country_name_lower}</a>'
         downloads:
-          -
+          national_data:
             title: Main national data sources
             button: View full list
-          -
+          spatial_data:
             title: Download spatial data
-            button: View list
-          -
+            button: Download data
+          statistics:
             title: Download the statistics
             button: Download statistics
