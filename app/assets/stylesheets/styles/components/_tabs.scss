@@ -70,9 +70,11 @@ $icon-margin-medium: 20;
 
     &__list {
       @include wrapped-cards;
+      margin-bottom: 0;
       
       &--icons {
         @include wrapped-cards;
+        margin-bottom: 0;
         padding-left: 0;
       }
     }
