@@ -1,0 +1,56 @@
+$content-page-pp-logo-height: rem-calc(50);
+$content-page-redlist-logo-height: rem-calc(80);
+
+@mixin content-page-logo-wrapper {
+  &:first-child {
+    margin-bottom: rem-calc(20);
+
+    @include breakpoint($small) {
+      margin-bottom: 0;
+      margin-right: rem-calc(30);
+    }
+  }
+}
+
+.content-page {
+  h1 {
+    @include h1-content-page;
+  }
+
+  h2 {
+    @include h2-content-page;
+    margin: 1.2em 0 0.4em;
+  }
+  
+  &__logos {
+    @include flex;
+    @include flex-center;
+    @include flex-column;
+    margin-top: rem-calc(20);
+
+    @include breakpoint($small) {
+      @include flex-row;
+    }
+  }
+
+  &__logo-wrapper {
+    @include content-page-logo-wrapper;
+  }
+
+  &__logo {
+    &--redlist {
+      width: $content-page-redlist-logo-height;
+      height: $content-page-redlist-logo-height;
+    }
+
+    &--protected-planet {
+      width: 410 / 60 * $content-page-pp-logo-height; 
+      height: $content-page-pp-logo-height;
+    }
+  }
+
+  strong a {
+    font-weight: $bold;
+    text-decoration: underline;
+  }
+}

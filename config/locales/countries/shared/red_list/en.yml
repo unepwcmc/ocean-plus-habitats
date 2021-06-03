@@ -6,8 +6,8 @@ en:
         intro_text: The table below outlines the number of species for each habitat by their global IUCN Red List status, illustrating the number of assessed species known to occur in %{country_name}.
         no_data: There is no data for species present in %{country_name} at this stage.
         citations:
-          - "IUCN %{year}. The IUCN Red List of Threatened Species. Version[Latest]. https://www.iucnredlist.org. Accessed on [Date of Update]."
+          - "IUCN %{year}. The IUCN Red List of Threatened Species. Version[Latest]. https://www.iucnredlist.org. Accessed on [Date of Update]."
         total: Total
         smalltext_1: '<strong>Warning:</strong> These statuses derive from global assessments, and do not necessarily reflect each species’ status by country. We will endeavour to strengthen alignment with national Red List assessments, where possible. Please contact us at <a href="mailto:oceanplus@unep-wcmc.org" title="Email the Ocean+ team">oceanplus@unep-wcmc.org</a> if you would like to provide further information.'
         smalltext_2: '<strong>Source:</strong> Adapted from data available through the <a href="https://www.iucnredlist.org/" title="IUCN Red List of Threatened Species" target="_blank">IUCN Red List of Threatened Species</a>'
-        smalltext_3: 'Last updated: March, 2020'
+        smalltext_3: '<strong>Last updated:</strong> March, 2020'

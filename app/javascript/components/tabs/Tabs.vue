@@ -5,7 +5,7 @@
         v-for="(child, index) in children" 
         :key="getId(index)"
         class="tab__trigger" 
-        :class="{ 'tab-active': child.isActive }" 
+        :class="{ 'active': child.isActive }" 
         @click="triggerTab(child.id)"
       >
         {{ child.title }}

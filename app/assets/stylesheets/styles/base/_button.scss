@@ -43,6 +43,19 @@ $button-text-laptop: 18px;
 $button-padding-laptop: 11px 24px;
 $button-padding-wide-laptop: 14px 45px;
 
+@mixin button-outline {
+  @include button-basic;
+  @include button-font-size-small;
+  @include button-padding-wide;
+  @include button-rounded;
+  background-color: $navy;
+  border: $border-thin $blue-light;
+  font-weight: $semi-bold;
+
+  align-items: center;
+  display: flex;
+}
+
 @mixin button-padding { 
   padding: $button-padding-laptop;
 }
@@ -53,6 +66,23 @@ $button-padding-wide-laptop: 14px 45px;
 
 @mixin button-rounded {
   border-radius: $radius-button;
+}
+
+@mixin modal-button-sizing($mobile, $tablet, $laptop) {
+  @include responsive-styles(width, $mobile, $tablet, $laptop);
+  @include responsive-styles(height, $mobile, $tablet, $laptop);
+
+  @include responsive-styles(top,
+    calc(#{$mobile} * .5),
+    calc(#{$tablet} * .5),
+    calc(#{$laptop} * .4)
+  );
+
+  @include responsive-styles(right,
+    calc(#{$mobile} * .5),
+    calc(#{$tablet} * .5),
+    calc(#{$laptop} * .4)
+  );
 }
 
 //--------------------------------------------------
@@ -67,14 +97,24 @@ $button-padding-wide-laptop: 14px 45px;
   @include button-basic;
   @include flex;
   @include flex-center;
+  background-color: $navy-dark;
+  border-radius: 100%;
+  width: rem-calc(40); height: rem-calc(40);
   
   &:hover { opacity: .9; }
 
   &:before { 
     @include icon-close; 
-    background-size: 100%;
+    background-size: 50%;
     content: '';
+    width: 100%; height: 100%;
   }
+}
+
+@mixin button--close--on-navy {
+  @include button--close;
+  background-color: $navy-xdark;
+  border: $border-thin $grey;
 }
 
 @mixin button-close-basic {
@@ -83,6 +123,18 @@ $button-padding-wide-laptop: 14px 45px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 75%;
+}
+
+@mixin button--download {
+  @include button-outline;
+
+  &::before {
+    @include icon-download;
+    content: '';
+    margin-right: rem-calc(5);
+
+    display: block;
+  }
 }
 
 @mixin button--grey {
@@ -104,6 +156,19 @@ $button-padding-wide-laptop: 14px 45px;
   font-weight: $semi-bold;
 }
 
+@mixin button--next {
+  &::after {
+    @include button-basic;
+    @include icon-next;
+    content: '';
+    margin-left: rem-calc(20);
+    width: rem-calc(56); height: rem-calc(56);
+  }
+
+  display: flex;
+  align-items: center;
+}
+
 @mixin button--select {
   @include button-basic;
   @include text-select;
@@ -112,7 +177,7 @@ $button-padding-wide-laptop: 14px 45px;
   @include flex-h-between;
   background-color: $grey-light;
   margin: 0;
-  width: $select-width; height: $select-height;
+  width: 100%; height: $select-height;
 
   &::after {
     @include icon-chevron-down;
@@ -131,8 +196,12 @@ $button-padding-wide-laptop: 14px 45px;
 // classes
 //--------------------------------------------------
 .button {
+  &--download {
+    @include button--download;
+  }
+
   &--map-download {
-    @include button--map-download;
+    @include button--download;
     @include flex;
     @include flex-v-center;
 
@@ -143,5 +212,13 @@ $button-padding-wide-laptop: 14px 45px;
       display: inline-block;
       margin-right: rem-calc(8);
     }
+  }
+
+  &--next {
+    @include button--next;
+  }
+
+  &--outline {
+    @include button-outline;
   }
 }

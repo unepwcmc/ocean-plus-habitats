@@ -1,0 +1,10 @@
+.citation {
+  &__title {
+    font-size: rem-calc(22);
+    font-weight: $semi-bold;
+  }
+
+  &__text {
+    font-size: rem-calc(14);
+  }
+}
