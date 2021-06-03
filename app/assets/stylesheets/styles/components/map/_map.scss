@@ -5,8 +5,8 @@ $map-filters-button-bar-height: rem-calc(92);
 
 .map {
   &__container {
-    margin-bottom: rem-calc(35);
     border: $border-thin $navy;
+    margin-bottom: rem-calc(35);
     
     display: flex;
     flex-direction: column;
@@ -137,8 +137,8 @@ $map-filters-button-bar-height: rem-calc(92);
         margin-right: $key-margin;
         width: $key-size; height: $key-size;
 
-        position: relative;
         display: block;
+        position: relative;
 
         @for $i from 1 through length($habitats) {
           $habitat: nth($habitats, $i);
@@ -270,13 +270,13 @@ $map-filters-button-bar-height: rem-calc(92);
 .eez-map-legend {
   @include flex;
   @include flex-column;
-  padding: rem-calc(15 17);
   font-size: 0.7rem;
+  padding: rem-calc(15 17);
   width: 100%;
 
   @include breakpoint($small) {
-    padding-left: 0;
     padding-right: 0;
+    padding-left: 0;
     height: calc(100% - #{$map-height-eez-tablet});
   }
 
