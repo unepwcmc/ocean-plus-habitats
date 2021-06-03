@@ -48,4 +48,9 @@ $content-page-redlist-logo-height: rem-calc(80);
       height: $content-page-pp-logo-height;
     }
   }
+
+  strong a {
+    font-weight: $bold;
+    text-decoration: underline;
+  }
 }

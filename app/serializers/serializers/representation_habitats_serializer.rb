@@ -35,7 +35,7 @@ class Serializers::RepresentationHabitatsSerializer < Serializers::Base
 
       @legend << {
         id: habitat.name,
-        title: habitat.name == 'coralreefs' ? 'Warm-water coral reefs' : habitat.title,
+        title: habitat.name == 'coralreefs' ? 'Warm-water corals' : habitat.title,
         percent: row(value, @coastal_stat.total_coast_length),
         label: "#{idx + 2}."
       }

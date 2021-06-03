@@ -1,0 +1,12 @@
+en:
+  home:
+    ancillary:
+      citation_title: Citation
+      citation_text: 'UNEP-WCMC (%{year}). Ocean+ Habitats [On-line], [insert month/year of the version downloaded]. Available at: <a href="/" title="Visit Ocean+ Habitats">habitats.oceanplus.org</a>'
+      downloads:
+        -
+          title: Download spatial data
+          button: View list
+        -
+          title: Download the statistics
+          button: Download statistics

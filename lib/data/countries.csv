@@ -1,206 +1,291 @@
-"iso3","country_name","bounding_box"
-"ABW","Aruba","-70.4166666665525 12.1505012321482 ; -68.8701690730555 15.3000000013171"
-"AGO","Angola","8.19585662296663 -18.0420818323626 ; 24.0821170809015 -4.37259101834303"
-"AIA","Anguilla","-63.8990937855356 17.9388247118226 ; -60.7366693115092 21.9398417345604"
-"ALB","Albania","18.3214930673847 39.6403940439922 ; 21.0496654510471 42.6607131962147"
-"ARE","United Arab Emirates","51.4997363090861 22.644409180295 ; 57.1273919724929 26.4129270878896"
-"ARG","Argentina","-73.5777816773177 -58.3919172146655 ; -52.6671419486705 -21.7785472870986"
-"ASM","American Samoa","-173.7746906498 -17.5552687526003 ; -165.200833332894 -10.0244763332273"
-"ATA","Antarctica","-179.999999999678 -89.9999999992195 ; 180.000000000358 -60.5155334460803"
-"ATF","French Southern Territories","37.5445545772635 -53.178629682445 ; 81.8134415560403 -11.5137500748248"
-"ATG","Antigua & Barbuda","-62.750959826215 16.6116304388185 ; -58.3682820959996 20.9224902062048"
-"AUS","Australia","109.233480027978 -58.4494699459393 ; 164.691233334331 -8.88333333207288"
-"AZE","Azerbaijan","44.7726020810896 38.285292100985 ; 51.8173530929752 42.6055226116366"
-"BEL","Belgium","2.2383333337678 49.4972152705608 ; 6.4078702929524 51.8761144438312"
-"BEN","Benin","0.774573981847823 2.96991666827483 ; 3.85170102254386 12.4183511734713"
-"BES","Caribbean Netherlands","-68.7201921805351 11.666666666533 ; -62.7695506628129 17.947997069141"
-"BGD","Bangladesh","88.0105667123728 17.8633846017491 ; 92.6736602781121 26.6340732577506"
-"BGR","Bulgaria","22.3437480928542 41.2348098741268 ; 31.3308200138325 44.2126770004088"
-"BHR","Bahrain","50.26962500029 25.5350000005199 ; 51.1218932524724 27.1666666680109"
-"BHS","Bahamas","-81.2314780825217 20.3735444456636 ; -70.5104864191325 30.3723937045008"
-"BIH","Bosnia & Herzegovina","15.727386473827 42.5653076160108 ; 19.6147098545163 45.2746810896315"
-"BLM","St. Barthélemy","-63.106575725671 17.6417167882292 ; -62.226344407046 18.3120914225146"
-"BLZ","Belize","-89.2241745004678 15.8874561024383 ; -86.1725123030997 18.497289657726"
-"BMU","Bermuda","-68.917055800796 28.9057706000207 ; -60.7047987995945 35.8085514006493"
-"BRA","Brazil","-73.9897079468016 -35.7877868848993 ; -25.2939596904762 7.04506604204022"
-"BRB","Barbados","-60.3815780981186 10.6044444449493 ; -56.0015800283412 16.0192334992483"
-"BRN","Brunei","111.725957355058 4.02219915362861 ; 115.3759613039 7.5873773887343"
-"BVT","Bouvet Island","3.28444504805736 -54.4645843505251 ; 3.48748588572289 -54.3863906863184"
-"CAN","Canada","-141.006866454302 40.0511489986717 ; -47.6941470240691 86.4318731333194"
-"CCK","Cocos (Keeling) Islands","93.4115861811738 -15.5588400040023 ; 100.336109630107 -8.47174382721897"
-"CHL","Chile","-113.196552234635 -59.8526818394605 ; -65.7266666658291 -17.5075454709959"
-"CHN","China","73.5577011108329 6.10049174377014 ; 134.773925781077 53.5608596794439"
-"CIV","Côte dIvoire","-8.59930229117157 1.01343446497384 ; -2.49489688885296 10.7366399770481"
-"CMR","Cameroon","8.32607700013597 1.652267098896 ; 16.1910457610757 13.0773906717488"
-"COD","Congo - Kinshasa","9.00732426348998 -13.4556760790164 ; 31.3057231919715 5.38609790785972"
-"COG","Congo - Brazzaville","8.91135333347506 -6.73445447888537 ; 18.6499996187226 3.70308208472937"
-"COK","Cook Islands","-168.523591183306 -25.3059602384632 ; -154.805555555194 -5.79821947254015"
-"COL","Colombia","-84.8098021513407 -4.22842884000045 ; -66.870330811119 16.0508333323144"
-"COM","Comoros","41.8351774006699 -14.4630573985138 ; 45.7675000002982 -8.10518206420215"
-"CPT","Clipperton Islands","-112.618522883858 6.93649068817018 ; -105.815875605375 13.6708151488099"
-"CPV","Cape Verde","-28.8470930940781 11.4513066915491 ; -19.5350000010088 20.5555124869566"
-"CRI","Costa Rica","-90.4711111112102 1.98305555581942 ; -80.0000000002677 11.6017078950026"
-"CUB","Cuba","-86.9396578296485 18.8322375231793 ; -73.5823555554997 25.2245657816542"
-"CUW","Curaçao","-69.5459957213401 11.666666666533 ; -68.405222711168 15.2418545943319"
-"CXR","Christmas Island","102.149332212872 -13.9188228795032 ; 109.034972326508 -8.72607144084873"
-"CYM","Cayman Islands","-83.5972222229136 17.5841666676873 ; -78.7269430006804 20.6334377386061"
-"CYP","Cyprus","29.8464799988452 32.8888888891187 ; 35.1942981933265 36.219109996454"
-"DEU","Germany","3.35000000085654 47.2701225274139 ; 15.0418148042266 55.9192777760738"
-"DJI","Djibouti","41.7604522705089 10.9524106984909 ; 44.1426536509105 12.7148324278792"
-"DMA","Dominica","-62.8138888890413 14.4886111117274 ; -57.8749999994055 16.500833333216"
-"DNK","Denmark","3.25000000015655 54.3648333341084 ; 16.507372094271 58.2614444443428"
-"DOM","Dominican Republic","-73.4747484702004 14.674999999865 ; -65.8218513977195 24.0893102147575"
-"DZA","Algeria","-8.67386817927724 18.9600315096832 ; 11.9889106763878 38.8008745919269"
-"ECU","Ecuador","-95.3388321354409 -5.0158033371398 ; -75.1871490476339 5.03163910852379"
-"EGY","Egypt","24.698099137731 21.7253894812904 ; 37.2576429116212 33.8208534881106"
-"ERI","Eritrea","36.4387664798151 12.3569822320475 ; 43.3009920488049 18.1038430479507"
-"ESH","Western Sahara","-20.6669210301467 19.3301154072389 ; -8.67001342778161 27.8336167621858"
-"ESP","Spain","-21.9203899205301 24.5847383896304 ; 6.30000000037194 46.8740034463811"
-"EST","Estonia","20.3713333347096 57.5139465333393 ; 28.2090377808528 59.9949166661173"
-"FIN","Finland","19.0831999996177 58.8444999999152 ; 31.5827999130867 70.0914535519374"
-"FJI","Fiji","-179.999999999678 -25.0971098343393 ; 180.000000000358 -9.78332062195898"
-"FLK","Falkland Islands","-65.0151493546505 -56.2278161073742 ; -52.3203381471146 -47.6697662981792"
-"FRA","France","-9.87728333346939 41.2433333328175 ; 10.2183333335087 51.5577777769259"
-"FRO","Faroe Islands","-14.0008853974745 59.9408333331376 ; -0.486397196935513 65.6933638187604"
-"FSM","Micronesia (Federated States of)","135.312441837651 -1.17311096506489 ; 165.676528226182 13.4454329256976"
-"GAB","Gabon","6.92244599646097 -6.44726384894028 ; 14.5023460391524 2.31564450314318"
-"GBR","United Kingdom","-14.8973416252517 47.4354053748402 ; 3.39999999985753 63.8874805555491"
-"GEO","Georgia","38.9758498170543 41.0385131846851 ; 46.7213592528057 43.5845413201881"
-"GGY","Guernsey","-3.67436238559429 49.2153181805807 ; -2.0488888885817 50.1529722226858"
-"GHA","Ghana","-3.7880759719078 1.38688066955439 ; 2.16693796416683 11.1732997899504"
-"GIB","Gibraltar","-5.39735163745559 36.0104219838112 ; -4.96716553134945 36.1572920100427"
-"GIN","Guinea","-17.9346999984576 7.19355297106949 ; -7.64107084244432 12.6915168761078"
-"GLP","Guadeloupe","-62.8138888890413 15.0650000001668 ; -57.5336458142563 18.5415325504215"
-"GMB","Gambia","-20.2373083128915 13.0558333332484 ; -13.790927886543 13.8268899924897"
-"GNB","Guinea-Bissau","-19.8041683322637 8.6391832927589 ; -13.6365203859365 12.6854400635129"
-"GNQ","Equatorial Guinea","2.28586355521065 -4.82015829375479 ; 11.3374366771588 4.12340576572461"
-"GRC","Greece","18.261666667416 33.2810304234251 ; 30.1035923550967 41.7480087272739"
-"GRD","Grenada","-63.2670873458869 11.36680395044 ; -60.7811911891919 13.3515861224098"
-"GRL","Greenland","-101.882019042924 54.7696037277493 ; 7.96833243597388 86.99400535085"
-"GTM","Guatemala","-94.3088080973567 10.5841491934246 ; -88.2134439446921 17.8187141425745"
-"GUF","French Guiana","-54.5418243403591 2.12872290518885 ; -49.4061334025464 8.83175702365281"
-"GUM","Guam","141.195406767868 10.9539722228358 ; 148.077095485264 15.7266873462643"
-"GUY","Guyana","-61.3869171139067 1.17676699224899 ; -55.767343657728 10.9764999999711"
-"HMD","Heard & McDonald Islands","67.0540595628806 -56.5245531964211 ; 79.4090258050419 -49.8261905694533"
-"HND","Honduras","-89.3507919300192 12.9839884510125 ; -80.2239902895893 19.5404999990155"
-"HRV","Croatia","13.008333333523 41.6297022007483 ; 19.4351768499708 46.5505180357562"
-"HTI","Haiti","-75.8324362318933 14.8781559192762 ; -71.6181488044489 20.7225193905032"
-"IDN","Indonesia","92.0506046217155 -13.9421388890295 ; 141.400000000861 7.78333333404589"
-"IND","India","65.639149500424 3.84065778848583 ; 97.4151611339161 35.501331329998"
-"IRL","Ireland","-16.0738904299413 48.1787077803256 ; -5.27233333290383 56.6999999997295"
-"IRN","Iran","44.0472640984241 23.3466666660929 ; 63.3174591064156 39.7772216799795"
-"IRQ","Iraq","38.7968368544752 28.9869518282522 ; 48.861925585087 37.3780403142398"
-"ISL","Iceland","-30.8679247251633 59.9689407650502 ; -5.57340970658106 70.583333332967"
-"ISR","Israel","32.9722222228855 29.4499594370686 ; 35.9009361275234 33.4809925489778"
-"ITA","Italy","5.88972222237277 35.064406149643 ; 18.9952382797597 47.090961455487"
-"JAM","Jamaica","-80.8330555544425 14.0833333349773 ; -74.0094306926098 19.3578066293113"
-"JEY","Jersey","-2.55801007977436 48.8721666661481 ; -1.83333333263647 49.4322031539446"
-"JOR","Jordan","34.8853521590929 29.1858787531908 ; 39.3020858770021 33.3681716926797"
-"JPN","Japan","122.386387502745 17.0650815925686 ; 157.637894104473 47.7308118395782"
-"KAZ","Kazakhstan","46.4918556220165 40.5516738896852 ; 87.312660216781 55.4318122849318"
-"KEN","Kenya","33.9095878605044 -4.90032500038336 ; 45.9451951682968 5.06116581001999"
-"KHM","Cambodia","101.30259927979 8.78188205559724 ; 107.630264281261 14.688171386915"
-"KIR","Kiribati","-179.999999998779 -17.8521137234206 ; 180.000000000358 7.87905555475032"
-"KNA","St. Kitts & Nevis","-63.6249244188113 16.3415635868135 ; -62.3741863459012 17.6617342490665"
-"KOR","South Korea","122.896335189784 28.5999999999859 ; 133.806087820119 39.8396911163952"
-"KWT","Kuwait","46.5506172174881 28.5246143339699 ; 49.5504691282405 30.084438325262"
-"LBN","Lebanon","33.6946529887563 33.0550003062278 ; 36.6218338029145 34.8124457171138"
-"LBR","Liberia","-13.5669254213003 1.00106710241005 ; -7.33042608958965 8.55179023761309"
-"LBY","Libya","9.39173698456216 19.5081729894315 ; 26.1922643440979 35.4251452394819"
-"LCA","St. Lucia","-62.8640149343223 13.2432376270225 ; -59.9997222224685 14.2725000004875"
-"LKA","Sri Lanka","77.0233333337992 2.56648901281085 ; 85.2329186650391 11.4488248100154"
-"LTU","Lithuania","19.023483709043 53.8901062010552 ; 26.8472213744438 56.4470291141303"
-"LVA","Latvia","19.0975389908692 55.6637191767226 ; 28.2405109408114 58.0855712893199"
-"MAF","Saint Martin (French part)","-63.6340437574979 17.87369815108 ; -62.7394444453848 18.1902777783296"
-"MAR","Morocco","-13.6647513918928 27.6666666688129 ; -0.997406005747564 36.005104385183"
-"MCO","Monaco","7.40952730172148 42.9463888884955 ; 7.75694444451011 43.7508888237235"
-"MDG","Madagascar","40.3343714177525 -28.9513044967127 ; 53.3664243456193 -10.3373247335622"
-"MDV","Maldives","69.2059302959394 -3.31163877258808 ; 77.1059530645156 8.09388888944204"
-"MEX","Mexico","-122.179103878824 11.873286828425 ; -84.641850000069 32.7180404658018"
-"MHL","Marshall Islands","157.460543781513 1.77731388947353 ; 175.523472571937 17.9460614987707"
-"MLT","Malta","13.4169688676276 34.2132886339779 ; 17.497259306701 36.5123996288661"
-"MMR","Myanmar (Burma)","90.1445825258627 8.82457923942542 ; 101.176780700025 28.5432605751011"
-"MNE","Montenegro","18.0182985942367 41.4417513844703 ; 20.3176479346482 43.5626411430366"
-"MNG","Mongolia","87.7496566774013 41.5676879876626 ; 119.924301148131 52.1542968751068"
-"MNP","Northern Mariana Islands","141.33109139881 12.2278801213729 ; 149.529280110092 23.895654317055"
-"MOZ","Mozambique","30.2174148565046 -27.7160489039351 ; 43.0091046051529 -10.091388888198"
-"MRT","Mauritania","-20.2690123629935 14.7155513770095 ; -4.82767391190606 27.2980709073258"
-"MSR","Montserrat","-63.0467125245448 15.8419444453008 ; -61.8315523341482 16.8885155899487"
-"MTQ","Martinique","-62.8138888890413 14.0805555558061 ; -57.5313079942219 16.4858633524359"
-"MUS","Mauritius","53.8039809894456 -23.8095575449261 ; 75.8528667888981 -2.28833927390997"
-"MYS","Malaysia","98.02500000009 0.853719949860249 ; 119.494531568427 8.99088600726935"
-"MYT","Mayotte","43.4849639459912 -14.530650596382 ; 46.6859789891172 -11.1397222220197"
-"NAM","Namibia","8.24328769865048 -30.6581384811223 ; 25.2567005161848 -16.9598903661939"
-"NCL","New Caledonia","155.869702815867 -26.2014382664564 ; 174.275692593168 -14.7875363414643"
-"NFK","Norfolk Island","164.111166419272 -32.4775218111083 ; 171.801106645072 -25.8449999999418"
-"NGA","Nigeria","2.66843104461071 1.92166666743265 ; 14.676415444632 13.8920097354718"
-"NIC","Nicaragua","-89.4241998834339 9.72309784378012 ; -79.2397480002341 16.0087513881878"
-"NIU","Niue","-172.02701977508 -22.5036961980958 ; -166.298880198371 -16.5941666661033"
-"NLD","Netherlands","2.53933305552908 50.7234916687043 ; 7.22709512661572 55.7649999999745"
-"NOR","Norway","-0.48876388880484 56.0866666666595 ; 36.5411120536048 74.5048320000168"
-"NRU","Nauru","163.578798451961 -3.90730662198285 ; 168.560244444325 2.69385081211908"
-"NZL","New Zealand","-179.999999999678 -55.9492953610373 ; 180.000000000358 -25.8882586934759"
-"OMN","Oman","51.9999999992059 13.7641666675679 ; 63.3695373325451 26.7375000001014"
-"PAK","Pakistan","60.8994369501058 20.9803399322891 ; 77.8430786132245 37.0970115664599"
-"PAN","Panama","-84.3166666667232 5.00000000116472 ; -77.049999999853 12.5000000006034"
-"PCN","Pitcairn Islands","-133.432693484157 -28.4247039185559 ; -121.108968934446 -20.5605365362969"
-"PER","Peru","-84.6707068640223 -20.2081420884496 ; -68.6531066895322 -0.0374700026985693"
-"PHL","Philippines","113.677718693183 3.10544949635306 ; 129.943841662366 22.2535629539208"
-"PLW","Palau","129.508804817289 1.62140720642577 ; 136.954100210495 11.5587247267637"
-"PNG","Papua New Guinea","139.201374525464 -14.7484486658084 ; 162.803379087945 2.59596992622443"
-"POL","Poland","14.1228847496436 49.0020446777097 ; 24.1457824717469 55.9215499995581"
-"PRI","Puerto Rico","-68.496517238489 14.9300000006157 ; -65.0153809390706 21.8542509486739"
-"PRK","North Korea","123.562257460484 36.9668294581416 ; 133.180045099721 43.0060501090847"
-"PRT","Portugal","-35.5855811271088 29.2478472348512 ; -6.18914222762322 43.0648262025269"
-"PSE","Palestinian Territories","34.0089688524441 31.2236061094337 ; 35.5754547111875 32.5515670769651"
-"PYF","French Polynesia","-158.13106403964 -31.2444742877775 ; -131.978090803581 -4.54321936496484"
-"QAT","Qatar","50.5645263742907 24.4678821566011 ; 53.0347222215638 27.0433333341441"
-"REU","Réunion","51.7999999996046 -24.7368617347673 ; 58.2435890121603 -18.2863888894889"
-"ROU","Romania","20.2635383612498 43.4398005603092 ; 31.4097222224029 48.2655982970101"
-"RUS","Russia","-179.999999999678 39.7266865933543 ; 180.000000000358 85.1780004626257"
-"SAU","Saudi Arabia","34.4558946980977 16.0944727655279 ; 55.6665878287893 32.270782470839"
-"SDN","Sudan","21.8389492034944 8.67911911004325 ; 39.7351723992296 23.3331319250574"
-"SEN","Senegal","-20.2142278996608 9.33944444549246 ; -11.3424701684813 16.6920719162111"
-"SGP","Singapore","103.547384833412 1.13036111222141 ; 104.098566631416 1.47797207330018"
-"SGS","South Georgia & South Sandwich Islands","-43.9600899267928 -62.7883421714342 ; -19.8999081446066 -50.6386351821861"
-"SHN","St. Helena","-17.7827906777982 -43.7077415042498 ; -2.16792640834808 -4.53752854768737"
-"SJM","Svalbard & Jan Mayen","-13.6295555548744 67.611868530693 ; 38.0000000010331 84.1457766108711"
-"SLB","Solomon Islands","154.585555555773 -16.1269444429739 ; 173.593401896806 -4.13994496117209"
-"SLE","Sierra Leone","-16.5537942144758 4.1872593109299 ; -10.2657527910707 10.0004310614354"
-"SLV","El Salvador","-91.4401024041289 9.94487774790053 ; -87.5971467240487 14.4505510329176"
-"SOM","Somalia","40.9785003669475 -1.65406807784785 ; 54.4450363904348 13.5246369395522"
-"SPM","St. Pierre & Miquelon","-57.0967777777234 43.4161111117999 ; -55.9033333333117 47.3650000005313"
-"STP","São Tomé & Príncipe","3.20263912375299 -1.48152096288959 ; 8.55013888988157 3.03944444456101"
-"SUR","Suriname","-58.0865631113547 1.83114600313496 ; -52.5210180206929 9.35309199658616"
-"SVN","Slovenia","13.3821191787654 45.4282836916108 ; 16.5843124389925 46.8782196039307"
-"SWE","Sweden","10.0300277778509 54.9624444439763 ; 24.1897231715506 69.0590362542121"
-"SXM","Sint Maarten","-63.2863527720455 17.8149491928819 ; -62.9581066122114 18.0635490423866"
-"SYC","Seychelles","43.1760691479331 -12.7565010069409 ; 59.6313706815559 -0.360904070128527"
-"SYR","Syria","34.9633416735978 32.310680389793 ; 42.3850402826392 37.3191452036186"
-"TCA","Turks & Caicos Islands","-72.6805115325118 20.5936615716693 ; -68.8269198736642 25.0320178909806"
-"TGO","Togo","-0.147322995520483 2.88400611224705 ; 2.41622805593244 11.138980864772"
-"THA","Thailand","95.5300000000273 5.61604213720358 ; 105.639129638301 20.463211059787"
-"TKL","Tokelau","-175.888131333751 -11.0481316648607 ; -168.0015122597 -6.46642777761275"
-"TKM","Turkmenistan","51.3765341845071 35.1298141487232 ; 66.6843032838497 42.7955513007103"
-"TLS","Timor-Leste","124.031751601328 -11.4001694442825 ; 128.502011111219 -8.10436736656197"
-"TON","Tonga","-179.08824883369 -25.6960574554782 ; -171.305277777481 -14.1546402205019"
-"TTO","Trinidad & Tobago","-62.0830555549464 9.83194444487043 ; -57.117500000376 12.3546411115012"
-"TUN","Tunisia","7.53007602696556 30.2368106843599 ; 13.6838888892707 38.410000000036"
-"TUR","Turkey","25.4417545100325 34.2092258773869 ; 44.834987640436 43.449722222864"
-"TUV","Tuvalu","-180.000000000578 -13.2403861108578 ; 180.000000000358 -3.96556388844283"
-"TWN","Taiwan","114.237362541471 17.2638753063284 ; 125.679693382625 28.3134836916036"
-"TZA","Tanzania","29.327167510362 -11.7456951140581 ; 43.2822389025641 -0.985787509550903"
-"UKR","Ukraine","22.1404476173167 43.1880555549802 ; 40.2180709846334 52.3750343318761"
-"UMI","United States Minor Outlying Islands (the)","-179.951947914243 -3.73480883663746 ; 170.185469471247 28.4016705162662"
-"URY","Uruguay","-58.4943505829713 -37.8599110413145 ; -50.0593820321703 -30.0796890255414"
-"USA","United States","-179.999999999678 15.5631241707633 ; 180.000000000358 74.7088400036843"
-"VCT","St. Vincent & Grenadines","-63.3690793404223 12.0620330078186 ; -60.2950624989027 14.0803245406569"
-"VEN","Venezuela","-73.3869781494562 0.648760021001522 ; -58.81999999986 16.7469444438565"
-"VGB","British Virgin Islands","-65.8420654890268 17.9644775809073 ; -63.2576405271711 22.0967315987371"
-"VIR","U.S. Virgin Islands","-65.9814032623471 15.6549141354989 ; -63.887340337972 19.6214941736573"
-"VNM","Vietnam","102.144584655818 6.09666666720409 ; 112.881602483583 23.3926925663682"
-"VUT","Vanuatu","163.308596535275 -21.642881857582 ; 173.60893256621 -12.2821500288234"
-"WLF","Wallis & Futuna","-180.000000000578 -15.9193064580677 ; 180.000000000358 -9.82964082717251"
-"WSM","Samoa","-174.511394470428 -15.8783835916703 ; -170.542656929903 -10.9608253043601"
-"YEM","Yemen","41.08194444463 8.95275346018974 ; 57.9460033147368 18.9999980927747"
-"ZAF","South Africa","13.3480249959649 -50.3150634771143 ; 42.847503115435 -22.125030516318"
+﻿iso3,Country/Territory,MAP LABEL,MAP COLOR,STATUS
+AFG,Afghanistan,Afghanistan,AFG,Member State
+AGO,Angola,Angola,AGO,Member State
+ALB,Albania,Albania,ALB,Member State
+AND,Andorra,Andorra,AND,Member State
+ARE,United Arab Emirates,United Arab Emirates,ARE,Member State
+ARG,Argentina,Argentina,ARG,Member State
+ARM,Armenia,Armenia,ARM,Member State
+ATA,Antarctica,Antarctica,ATA,Antarctica
+ATG,Antigua and Barbuda,Antigua and Barbuda,ATG,Member State
+AUS,Ashmore and Cartier Islands,Ashmore & Cartier Is. (Aust.),AUS,Territory
+AUS,Australia,Australia,AUS,Member State
+CXR,Christmas Island,Christmas Is. (Aust.),AUS,Territory
+CCK,Cocos (Keeling) Islands,Cocos (Keeling) Is. (Aust.),AUS,Territory
+HMD,Heard Island and McDonald Islands,Heard Is. & McDonald Is. (Aust.),AUS,Territory
+NFK,Norfolk Island,Norfolk Island (Aust.),AUS,Territory
+AUT,Austria,Austria,AUT,Member State
+AZE,Azerbaijan,Azerbaijan,AZE,Member State
+BDI,Burundi,Burundi,BDI,Member State
+BEL,Belgium,Belgium,BEL,Member State
+BEN,Benin,Benin,BEN,Member State
+BFA,Burkina Faso,Burkina Faso,BFA,Member State
+BGD,Bangladesh,Bangladesh,BGD,Member State
+BGR,Bulgaria,Bulgaria,BGR,Member State
+BHR,Bahrain,Bahrain,BHR,Member State
+BHS,Bahamas,Bahamas,BHS,Member State
+BIH,Bosnia and Herzegovina,Bosnia and Herzegovina,BIH,Member State
+BLR,Belarus,Belarus,BLR,Member State
+BLZ,Belize,Belize,BLZ,Member State
+BOL,Bolivia (Plurinational State of),Bolivia (Plurinational State of),BOL,Member State
+BRA,Brazil,Brazil,BRA,Member State
+BRB,Barbados,Barbados,BRB,Member State
+BRN,Brunei Darussalam,Brunei Darussalam,BRN,Member State
+BTN,Bhutan,Bhutan,BTN,Member State
+BWA,Botswana,Botswana,BWA,Member State
+CAF,Central African Republic,Central African Republic,CAF,Member State
+CAN,Canada,Canada,CAN,Member State
+CHE,Switzerland,Switzerland,CHE,Member State
+CHL,Chile,Chile,CHL,Member State
+CHN,China,China,CHN,Member State
+HKG,Hong Kong,"Hong Kong, China",CHN,Special Region or Province
+MAC,Macao,"Macao, China",CHN,Special Region or Province
+TWN,Taiwan,"Taiwan, Province of China",CHN,Special Region or Province
+CIV,Côte d'Ivoire,Côte d'Ivoire,CIV,Member State
+CMR,Cameroon,Cameroon,CMR,Member State
+COD,Democratic Republic of the Congo,Democratic Republic of the Congo,COD,Member State
+COG,Congo,Congo,COG,Member State
+COL,Colombia,Colombia,COL,Member State
+COM,Comoros,Comoros,COM,Member State
+CPV,Cabo Verde,Cape Verde,CPV,Member State
+CRI,Costa Rica,Costa Rica,CRI,Member State
+CUB,Cuba,Cuba,CUB,Member State
+CYP,Cyprus,Cyprus,CYP,Member State
+CZE,Czechia,Czechia,CZE,Member State
+DEU,Germany,Germany,DEU,Member State
+DJI,Djibouti,Djibouti,DJI,Member State
+DMA,Dominica,Dominica,DMA,Member State
+DNK,Denmark,Denmark,DNK,Member State
+FRO,Faroe Islands,Faroe Islands (Denmark),DNK,Territory
+GRL,Greenland,Greenland (Denmark),DNK,Territory
+DOM,Dominican Republic,Dominican Republic,DOM,Member State
+DZA,Algeria,Algeria,DZA,Member State
+ECU,Ecuador,Ecuador,ECU,Member State
+EGY,Egypt,Egypt,EGY,Member State
+EGY,Bi'r Tawīl,,EGY,Undetermined
+ERI,Eritrea,Eritrea,ERI,Member State
+ESH,Western Sahara,Western Sahara *,ESH,Non-Self Governing Territory
+ESP,Canary Islands,Canary Islands (Sp.),ESP,Territory
+ESP,Spain,Spain,ESP,Member State
+EST,Estonia,Estonia,EST,Member State
+ETH,Ethiopia,Ethiopia,ETH,Member State
+ALA,Åland Islands,Åland Islands,FIN,Territory
+FIN,Finland,Finland,FIN,Member State
+FJI,Fiji,Fiji,FJI,Member State
+ATF,Bassas da India,Bassas da India (Fr.),FRA,Territory
+PYF,Clipperton Island,Clipperton Island,FRA,Territory
+ATF,Europa Island,Europa Island (Fr.),FRA,Territory
+FRA,France,France,FRA,Member State
+GUF,French Guiana,French Guiana (Fr.),FRA,Territory
+PYF,French Polynesia,French Polynesia *,FRA,Non-Self Governing Territory
+ATF,French Southern Territories,French Southern Territories (Fr.),FRA,Territory
+ATF,Glorioso Islands,Glorioso Islands (Fr.),FRA,Territory
+GLP,Guadeloupe,Guadeloupe (Fr.),FRA,Territory
+ATF,Juan de Nova Island,Juan de Nova Island (Fr.),FRA,Territory
+MTQ,Martinique,Martinique (Fr.),FRA,Territory
+MYT,Mayotte,Mayotte,FRA,Territory
+NCL,New Caledonia,New Caledonia *,FRA,Non-Self Governing Territory
+REU,Réunion,Réunion (Fr.),FRA,Territory
+BLM,Saint Barthélemy,Saint Barthélemy (Fr.),FRA,Territory
+MAF,Saint Martin,Saint Martin (Fr.),FRA,Territory
+SPM,Saint Pierre et Miquelon,Saint Pierre et Miquelon (Fr.),FRA,Territory
+ATF,Tromelin Island,Tromelin Island (Fr.),FRA,Territory
+WLF,Wallis and Futuna,,FRA,Territory
+FSM,Micronesia (Federated States of),Micronesia (Federated States of),FSM,Member State
+GAB,Gabon,Gabon,GAB,Member State
+xUK,Akrotiri,Akrotiri (S.B.A.),GBR,Territory
+AIA,Anguilla,Anguilla *,GBR,Non-Self Governing Territory
+SHN,Saint Helena,Ascencion *,GBR,Non-Self Governing Territory
+BMU,Bermuda,Bermuda *,GBR,Non-Self Governing Territory
+VGB,British Virgin Islands,British Virgin Islands *,GBR,Non-Self Governing Territory
+CYM,Cayman Islands,Cayman Islands *,GBR,Non-Self Governing Territory
+xUK,Dekelia,Dekelia (S.B.A.),GBR,Territory
+FLK,Falkland Islands (Malvinas),Falkland Islands (Malvinas) ***,GBR,Non-Self Governing Territory
+GIB,Gibraltar,Gibraltar *,GBR,Non-Self Governing Territory
+SHN,Saint Helena,Gough *,GBR,Non-Self Governing Territory
+GGY,Guernsey,Guernsey (UK),GBR,Territory
+IMN,Isle of Man,Isle of Man (UK),GBR,Territory
+JEY,Jersey,Jersey (UK),GBR,Territory
+MSR,Montserrat,Montserrat *,GBR,Non-Self Governing Territory
+PCN,Pitcairn,Pitcairn *,GBR,Non-Self Governing Territory
+SHN,Saint Helena,Saint Helena *,GBR,Non-Self Governing Territory
+SGS,South Georgia and the South Sandwich Islands,South Georgia and the South Sandwich Is.,GBR,Territory
+SHN,Saint Helena,Tristan da Cunha *,GBR,Non-Self Governing Territory
+TCA,Turks and Caicos Islands,Turks and Caicos Islands *,GBR,Non-Self Governing Territory
+GBR,United Kingdom of Great Britain & Northern Ireland,United Kingdom of Great Britain & Northern Ireland,GBR,Member State
+GEO,Georgia,Georgia,GEO,Member State
+GHA,Ghana,Ghana,GHA,Member State
+GIN,Guinea,Guinea,GIN,Member State
+GMB,Gambia,Gambia,GMB,Member State
+GNB,Guinea-Bissau,Guinea-Bissau,GNB,Member State
+GNQ,Equatorial Guinea,Equatorial Guinea,GNQ,Member State
+GRC,Greece,Greece,GRC,Member State
+GRD,Grenada,Grenada,GRD,Member State
+GTM,Guatemala,Guatemala,GTM,Member State
+GUY,Guyana,Guyana,GUY,Member State
+HND,Honduras,Honduras,HND,Member State
+HRV,Croatia,Croatia,HRV,Member State
+HTI,Haiti,Haiti,HTI,Member State
+HUN,Hungary,Hungary,HUN,Member State
+IDN,Indonesia,Indonesia,IDN,Member State
+IND,India,India,IND,Member State
+xAP,Arunachal Pradesh,,IND,Undetermined
+IRL,Ireland,Ireland,IRL,Member State
+IRN,Iran (Islamic Republic of),Iran (Islamic Republic of),IRN,Member State
+IRQ,Iraq,Iraq,IRQ,Member State
+ISL,Iceland,Iceland,ISL,Member State
+ISR,Israel,Israel,ISR,Member State
+ITA,Italy,Italy,ITA,Member State
+JAM,Jamaica,Jamaica,JAM,Member State
+JOR,Jordan,Jordan,JOR,Member State
+JPN,Japan,Japan,JPN,Member State
+xSK,Senkaku Islands,,JPN,Undetermined
+KAZ,Kazakhstan,Kazakhstan,KAZ,Member State
+KEN,Kenya,Kenya,KEN,Member State
+KGZ,Kyrgyzstan,Kyrgyzstan,KGZ,Member State
+KHM,Cambodia,Cambodia,KHM,Member State
+KIR,Kiribati,Kiribati,KIR,Member State
+KNA,Saint Kitts and Nevis,Saint Kitts and Nevis,KNA,Member State
+KOR,Republic of Korea,Republic of Korea,KOR,Member State
+KWT,Kuwait,Kuwait,KWT,Member State
+LAO,Lao People's Democratic Republic,Lao People's Democratic Republic,LAO,Member State
+LBN,Lebanon,Lebanon,LBN,Member State
+LBR,Liberia,Liberia,LBR,Member State
+LBY,Libya,Libya,LBY,Member State
+LCA,Saint Lucia,Saint Lucia,LCA,Member State
+LIE,Liechtenstein,Liechtenstein,LIE,Member State
+LKA,Sri Lanka,Sri Lanka,LKA,Member State
+LSO,Lesotho,Lesotho,LSO,Member State
+LTU,Lithuania,Lithuania,LTU,Member State
+LUX,Luxembourg,Luxembourg,LUX,Member State
+LVA,Latvia,Latvia,LVA,Member State
+MAR,Morocco,Morocco,MAR,Member State
+MCO,Monaco,Monaco,MCO,Member State
+MDA,Moldova,Moldova,MDA,Member State
+MDG,Madagascar,Madagascar,MDG,Member State
+MDV,Maldives,Maldives,MDV,Member State
+MEX,Mexico,Mexico,MEX,Member State
+MHL,Marshall Islands,Marshall Islands,MHL,Member State
+MKD,North Macedonia,North Macedonia,MKD,Member State
+MLI,Mali,Mali,MLI,Member State
+MLT,Malta,Malta,MLT,Member State
+MMR,Myanmar,Myanmar,MMR,Member State
+MNE,Montenegro,Montenegro,MNE,Member State
+MNG,Mongolia,Mongolia,MNG,Member State
+MOZ,Mozambique,Mozambique,MOZ,Member State
+MRT,Mauritania,Mauritania,MRT,Member State
+MUS,Chagos Archipelago,Chagos Archipelago (Mauritius),MUS,Territory
+MUS,Mauritius,Mauritius,MUS,Member State
+MWI,Malawi,Malawi,MWI,Member State
+MYS,Malaysia,Malaysia,MYS,Member State
+NAM,Namibia,Namibia,NAM,Member State
+NER,Niger,Niger,NER,Member State
+NGA,Nigeria,Nigeria,NGA,Member State
+NIC,Nicaragua,Nicaragua,NIC,Member State
+ABW,Aruba,Aruba (Neth.),NLD,Territory
+BES,Bonaire,Bonaire (Neth.),NLD,Territory
+CUW,Curaçao,Curaçao (Neth.),NLD,Territory
+NLD,Netherlands,Netherlands,NLD,Member State
+BES,Saba,Saba (Neth.),NLD,Territory
+BES,Sint Eustatius,Sint Eustatius (Neth.),NLD,Territory
+SXM,Sint Maarten,Sint Maarten (Neth.),NLD,Territory
+BVT,Bouvet Island,Bouvet Island,NOR,Territory
+NOR,Norway,Norway,NOR,Member State
+SJM,Svalbard and Jan Mayen Islands,Svalbard & Jan Mayen Is. (Norw.),NOR,Territory
+NPL,Nepal,Nepal,NPL,Member State
+NRU,Nauru,Nauru,NRU,Member State
+COK,Cook Islands,Cook Islands,NZL,Territory
+NZL,New Zealand,New Zealand,NZL,Member State
+NIU,Niue,Niue,NZL,Territory
+TKL,Tokelau,Tokelau *,NZL,Non-Self Governing Territory
+OMN,Oman,Oman,OMN,Member State
+PAK,Pakistan,Pakistan,PAK,Member State
+PAN,Panama,Panama,PAN,Member State
+PER,Peru,Peru,PER,Member State
+PHL,Philippines,Philippines,PHL,Member State
+PLW,Palau,Palau,PLW,Member State
+PNG,Papua New Guinea,Papua New Guinea,PNG,Member State
+POL,Poland,Poland,POL,Member State
+PRK,Democratic People's Republic of Korea,Democratic People's Republic of Korea,PRK,Member State
+PRT,Azores Islands,Azores Islands (Port.),PRT,Territory
+PRT,Madeira Island,Madeira Islands (Port.),PRT,Territory
+PRT,Portugal,Portugal,PRT,Member State
+PRY,Paraguay,Paraguay,PRY,Member State
+PSE,Gaza,Gaza,PSE,Occupied Palestinian Territory
+PSE,West Bank,West Bank,PSE,Occupied Palestinian Territory
+QAT,Qatar,Qatar,QAT,Member State
+ROU,Romania,Romania,ROU,Member State
+RUS,Russian Federation,Russian Federation,RUS,Member State
+xRI,Kuril Islands,,RUS,Undetermined
+RWA,Rwanda,Rwanda,RWA,Member State
+SAU,Saudi Arabia,Saudi Arabia,SAU,Member State
+SDN,Sudan,Sudan,SDN,Member State
+SDN,Hala'ib Triangle,,SDN,Undetermined
+SEN,Senegal,Senegal,SEN,Member State
+SGP,Singapore,Singapore,SGP,Member State
+SLB,Solomon Islands,Solomon Islands,SLB,Member State
+SLE,Sierra Leone,Sierra Leone,SLE,Member State
+SLV,El Salvador,El Salvador,SLV,Member State
+SMR,San Marino,San Marino,SMR,Member State
+SOM,Somalia,Somalia,SOM,Member State
+SRB,Serbia,Serbia,SRB,Member State
+SSD,South Sudan,South Sudan,SSD,Member State
+SSD,Ilemi Triangle,,SSD,Undetermined
+STP,Sao Tome and Principe,Sao Tome and Principe,STP,Member State
+SUR,Suriname,Suriname,SUR,Member State
+SVK,Slovakia,Slovakia,SVK,Member State
+SVN,Slovenia,Slovenia,SVN,Member State
+SWE,Sweden,Sweden,SWE,Member State
+SWZ,Eswatini,Eswatini,SWZ,Member State
+SYC,Seychelles,Seychelles,SYC,Member State
+SYR,Syrian Arab Republic,Syrian Arab Republic,SYR,Member State
+TCD,Chad,Chad,TCD,Member State
+TGO,Togo,Togo,TGO,Member State
+THA,Thailand,Thailand,THA,Member State
+TJK,Tajikistan,Tajikistan,TJK,Member State
+TKM,Turkmenistan,Turkmenistan,TKM,Member State
+TLS,Timor-Leste,Timor-Leste,TLS,Member State
+TON,Tonga,Tonga,TON,Member State
+TTO,Trinidad and Tobago,Trinidad and Tobago,TTO,Member State
+TUN,Tunisia,Tunisia,TUN,Member State
+TUR,Turkey,Turkey,TUR,Member State
+TUV,Tuvalu,Tuvalu,TUV,Member State
+TZA,United Republic of Tanzania,United Republic of Tanzania,TZA,Member State
+UGA,Uganda,Uganda,UGA,Member State
+UKR,Ukraine,Ukraine,UKR,Member State
+URY,Uruguay,Uruguay,URY,Member State
+ASM,American Samoa,American Samoa *,USA,Non-Self Governing Territory
+UMI,Baker Island,Baker Island (USA),USA,Territory
+GUM,Guam,Guam *,USA,Non-Self Governing Territory
+UMI,Howland Island,Howland Island (USA),USA,Territory
+UMI,Jarvis Island,Jarvis Island (USA),USA,Territory
+UMI,Johnston Atoll,Johnston Atoll (USA),USA,Territory
+UMI,Kingman Reef,Kingman Reef (USA),USA,Territory
+UMI,Midway Islands,Midway Islands (USA),USA,Territory
+UMI,Navassa Island,Navassa Island (USA),USA,Territory
+MNP,Northern Mariana Is. (USA),Northern Mariana Is. (USA),USA,Territory
+UMI,Palmyra Atoll,Palmyra Atoll (USA),USA,Territory
+PRI,Puerto Rico (USA),Puerto Rico (USA),USA,Territory
+USA,United States of America,United States of America,USA,Member State
+VIR,United States Virgin Islands,United States Virgin Islands *,USA,Non-Self Governing Territory
+UMI,Wake Island,Wake Island (USA),USA,Territory
+UZB,Uzbekistan,Uzbekistan,UZB,Member State
+VAT,Holy See,Holy See,VAT,The City of Vatican
+VCT,Saint Vincent and the Grenadines,Saint Vincent and the Grenadines,VCT,Member State
+VEN,Venezuela,Venezuela,VEN,Member State
+VEN,Bird Island,,VEN,Territory
+VNM,Viet Nam,Viet Nam,VNM,Member State
+VUT,Vanuatu,Vanuatu,VUT,Member State
+WSM,Samoa,Samoa,WSM,Member State
+xAB,Abyei,Abyei,xAB,Undetermined
+xAC,Aksai Chin,,xAC,Undetermined
+xJK,Jammu and Kashmir,Jammu and Kashmir **,xJK,Undetermined
+xJL,West Bank,,xJL,Undetermined
+xPI,Paracel Islands,,xPI,Undetermined
+xSI,Spratly Islands,,xSI,Undetermined
+xSR,Scarborough Reef,,xSR,Undetermined
+xxx,China/India,,xxx,Undetermined
+YEM,Yemen,Yemen,YEM,Member State
+ZAF,South Africa,South Africa,ZAF,Member State
+ZMB,Zambia,Zambia,ZMB,Member State
+ZWE,Zimbabwe,Zimbabwe,ZWE,Member State

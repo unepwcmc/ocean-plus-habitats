@@ -53,10 +53,17 @@ module ApplicationHelper
   end
 
   def list_of_countries
-    # TODO - Hide country pages without any data - maybe we want more finely-tuned error handling for lack of data
-    all_countries = GeoEntity.countries.includes(:geo_entity_stats)
+    all_countries = GeoEntity.countries.includes(:geo_entity_stats) 
+    
+    # Using list of allowed countries
+    allowed_countries = ALLOWED_COUNTRIES.map do |iso3|
+      country = GeoEntity.find_by(iso3: iso3)
+      next unless country
+      country
+    end
 
-    valid_countries = all_countries.where.not(geo_entity_stats: { id: nil })
+    # Intersect both arrays to find common countries
+    valid_countries = all_countries.where.not(geo_entity_stats: { id: nil }) & allowed_countries
 
     valid_countries.sort_by(&:name).map do |country| 
       nav_item(country.actual_name) 
@@ -114,11 +121,7 @@ module ApplicationHelper
   end
 
   def red_list_modal
-   citations = I18n.t('home.red_list.citations', year: Date.today.year).map do |cit|
-      "<p>#{cit}</p>"
-    end
-
-    citations.join
+    map_to_citations_string(I18n.t('home.red_list.citations', year: Date.today.year))
   end
 
   def habitats_present_modal
@@ -126,12 +129,22 @@ module ApplicationHelper
   end
 
 
-  def map_to_citations_string translations
-    citations = translations.map do |cit|
-      "<p>#{cit}</p>"
+  def map_to_citations_string(translations)
+    citations = ['<p>No citations found.</p>']
+
+    if translations && translations.count.positive?
+      citations = translations.map do |cit|
+        "<p>#{insert_hyperlinks(cit)}</p>"
+      end
     end
 
-    "<h3>#{I18n.t('global.sources_modal_title')}</h3>" + citations.join
+    "<h3 class='modal__title'>#{I18n.t('global.sources_modal_title')}</h3>" + citations.join
+  end
+
+  def insert_hyperlinks(citation)
+    citation.split.map { |string| string[/^(http)/] ? 
+      "<a target='_' class='modal__link' href='#{string}'>#{string}</a>" : string
+    }.join(' ')
   end
 
   def habitat_text(habitat)

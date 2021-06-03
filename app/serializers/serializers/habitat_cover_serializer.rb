@@ -44,15 +44,15 @@ class Serializers::HabitatCoverSerializer < Serializers::Base
     arr = []
 
     citations.each do |citation|
-      
+
       citation_text = citation[:citation]
       if citation[:citation_url].nil?
-        citation_url = I18n.t("home.habitat_cover.no_url")
+        citation_url = ''
       else
         link = citation[:citation_url]
         citation_url = "<a target='_' class='modal__link' href='#{link}'>Source</a>"
       end
-    
+
       arr << citation_text + ' ' + citation_url
     end
 

@@ -3,7 +3,8 @@ en:
     locations_map:
       title: Where are marine and coastal habitats?
       text:
-        - Over 70% of the surface of Earth is ocean, comprising highly diverse marine and coastal ecosystems. These ecosystems provide a wide range of essential ecosystem services that support human society, health and the economy.
-        - Our ability to track the location and health of these important habitats over time varies globally, making it challenging to provide an accurate and complete picture. Yet, knowledge of these habitats is essential to meet many of the biodiversity and sustainable development targets set by the international community.
-        - If we are missing any information for your location, please contact us at <a href='mailto:oceanplus@unep-wcmc.org' title='Send an email to the Ocean+ team'>oceanplus@unep-wcmc.org</a>.
+        - Over 70% of the surface of Earth is ocean, comprising highly diverse marine and coastal ecosystems. These ecosystems provide a wide range of essential ecosystem services that support human societies, including our health and economies.
+        - Our ability to track the location and health of these important habitats over time varies across the world, making it challenging to provide an accurate and complete global picture. Yet, this knowledge is essential to meet many of the biodiversity and sustainable development targets set by the international community.
+        - We need decision-grade data on efforts to conserve, restore and effectively manage important marine ecosystems if we are to halt some of the most pressing threats facing marine biodiversity, such as pollution, coastal and offshore industrial development, and unsustainable or illegal fishing practices.
+        - The information provided in the map below remains incomplete in some places of the world. The Ocean+ team is always looking to update these maps as soon as new data becomes available. If we are missing any information for your location, please contact us at <a href='mailto:oceanplus@unep-wcmc.org' title='Send an email to the Ocean+ team'>oceanplus@unep-wcmc.org</a>.
       filters_title: Where in the world are marine and coastal habitats?

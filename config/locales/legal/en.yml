@@ -1,7 +1,136 @@
 en:
   legal:
     title: Terms and Conditions of Use of Ocean+ Habitats
-    paragraphs: 
-      - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-      - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-      - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    sections:
+      -
+        paragraphs: 
+          -
+            Access to the Ocean+ Habitats Site, Services or data and other content within the Site, including Materials and Third-Party Data, are provided subject to the following Terms and Conditions.
+      -
+        paragraphs: 
+          - 
+            <strong>PLEASE READ THESE TERMS AND CONDITIONS CAREFULLY. IF YOU DO NOT AGREE TO ANY OF THE TERMS AND CONDITIONS, DO NOT DOWNLOAD. BY DOWNLOADING THE OCEAN+ HABITATS MATERIAL MADE AVAILABLE ON <a href="https://habitats.oceanplus.org" target="_blank">HABITATS.OCEANPLUS.ORG</a>, YOU AGREE TO ACCEPT AND COMPLY WITH THE TERMS AND CONDITIONS BELOW.</strong>
+      -
+        title: Copyright
+        paragraphs: 
+          - 
+            © 2021 UN Environment Programme (UNEP)   
+      -
+        title: 1. Definitions
+        paragraphs: 
+          - 
+            'For the purposes of these Terms and Conditions the following definitions are used:
+            <ol>
+              <li>“Website” or “the Site” means <a href="https://habitats.oceanplus.org" target="_blank">habitats.oceanplus.org</a>, which is operated by UN Environment Programme World Conservation Monitoring Centre (UNEP-WCMC).</li>
+              <li>“Services” means the web application and associated functions as provided through the Ocean+ Habitats website.</li>
+              <li>“User” is the organization or individual accessing the “Services”.</li>
+              <li>“Materials” are any basic data, documents, downloads or other information accessible on the Site, with the exception of Third-Party Data and tailored Value-Added Services (e.g. value-added products such as APIs or services tailored to an institution’s need).</li>
+              <li>“CC BY-SA 4.0” means the license Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0): <a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode" target="_blank">https://creativecommons.org/licenses/by-sa/4.0/legalcode</a>.</li>
+              <li>“Third-Party Data” means the datasets listed as sources on the country and global pages. </li>
+              <li>“Value-Added Services” means all tailored, value-added products and services when available (e.g. APIs).</li>
+            </ol>'
+      -
+        title: '2. Use of this Site is governed by the following terms and conditions:'
+        paragraphs: 
+          - 
+            'For the purposes of these Terms and Conditions the following definitions are used:
+            <ol>
+              <li>UNEP-WCMC maintains the Site on behalf of UNEP and as a courtesy to those who choose to access the Site (“Users”).</li>
+              <li>UNEP grants permission to Users to visit the Site and to download and copy Materials from the Site under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> license terms for the Ocean+ Habitats Website. For the avoidance of doubt, this does not include any Third-Party Data contained within the Site that will be governed by such third-party terms and conditions, as specified in each case.</li>
+              <ul>
+                <li>Images may not be reproduced in any form without the explicit prior written permission of UNEP.</li>
+                <li>Textual content and data can be reproduced for all purposes, including commercial purposes, if and only if attribution is provided, and you provide a link to the licence and indicate if any changes were made. This should be done using the citation given in these Terms and Conditions. </li>
+                <li>Videos can be shared via the YouTube link. However, videos may not be reproduced in any other form without the explicit written permission of UNEP.</li>
+                <li>If you remix, transform or build upon the Materials you must distribute your contribution under the same original license terms. Publishers must delete the UNEP-WCMC logo from their edition and create a new design. Translations must bear the following disclaimer:
+                  <br><br>The present work is an unofficial translation for which the publisher accepts full responsibility.</li>
+              </ul>
+              <li>No waiver by UNEP of any provision of these Terms and Conditions shall be binding except as set forth in writing and signed by its duly authorized representative.</li>
+              <li>No Grant of Intellectual Property Rights. No rights in the Ocean+ Habitats Materials are granted to the User by virtue of these Terms and Conditions or as a result of any use by the User of the Ocean+ Habitats Materials. Neither UNEP nor WCMC assert any intellectual property rights in the data that is made available by Third-Party Data providers for inclusion in Ocean+ Habitats. However, all intellectual property rights in the database are the property of UNEP.</li>
+            </ol>'
+      -
+        title: 3. Attribution
+        paragraphs: 
+          - 
+            'The User must ensure that the following citation is always clearly reproduced in any publication or analysis involving the Ocean+ Habitats Materials in any derived form or format:'
+          -
+            '<strong>UNEP-WCMC (year). Ocean+ Habitats [On-line], [insert month/year of the version accessed], Cambridge, UK: UNEP-WCMC. Available at: <a href="https://habitats.oceanplus.org" target="_blank">https://habitats.oceanplus.org</a>. DOI: <a href="https://doi.org/10.34892/fpe3-ar97" target="_blank">https://doi.org/10.34892/fpe3-ar97</a>.</strong>'
+          -
+            All Third-Party Data should be cited according to their respective terms and conditions.
+      -
+        title: 4. Privacy
+        paragraphs: 
+          - 
+            'The General Data Protection Regulation (GDPR) is a regulation in European Union law on data protection and privacy for all individuals within the European Union. It came into force on 25th May 2018. The GDPR aims primarily to give control to citizens and residents over their personal data and to simplify the regulatory environment for international business by unifying the regulation within the EU. It became enforceable on 25th May 2018, and is incorporated into the Data Protection Act 2008.'
+          -
+            'At UNEP-WCMC, we are committed to being transparent about the use of the User’s personal data. The User’s data will be stored securely and will not be sold to third parties. The User’s data will not be shared with third parties except as outlined below. The purpose of this information is to describe how we collect and use personal data during the User’s engagement with the Site. For more information on how UNEP-WCMC handles data, please see the UNEP-WCMC <a href="https://www.unep-wcmc.org/terms-and-conditions" target="_blank">Terms and Conditions</a>.'
+          -
+            'We take the User’s privacy very seriously and only store data where necessary to improve usability of the Site, tailor information to the User’s organisation, and to track impact for ourselves and our partners. To request that your data is deleted from our servers, please contact us on <a href="mailto:oceanplus@unep-wcmc.org">oceanplus@unep-wcmc.org</a>.'
+          -
+            '<strong>When you use our website</strong>'
+          - 
+            'We will process your personal data to:'
+          - 
+            '<ul><li><strong>Keep the site secure and problem-free.</strong></li></ul>'
+          -
+            'Our web hosting provider keeps logs of connections to this site so that we can detect and prevent malicious activity. The logs contain your IP address (which can reveal your geographical location), the date and time of your connection, the pages you’ve visited in what order and for how long, and the browser you’re using (which can reveal the device you’re using as well). We make no use of this data on an individual level unless the traffic looks like an attack, in which case we will block the connection.'
+          -
+            'It’s in our interest – and yours – that our site is secure and working properly, so this processing of personal data is done based on legitimate interests.'
+          -
+            '<ul><li><strong>Understand and report on how the Website and Materials are used.</strong></li></ul>'
+          -
+            'We track and share information on use of the website and associated materials to help us understand how we can improve our services, and to support UNEP and Third-Party Data providers with tracking and reporting on their impact. We remove all personal identifiers, and only share information at the level of organisation types.'
+      -
+        title: Cookies
+        paragraphs:
+          -
+            'We use cookies to help identify your computer so that we can optimise the user experience.'
+          -
+            'The Site uses the following cookies:' 
+          -
+            '<strong>Third-party Cookies.</strong> The Website may use several types of third-party cookies which include but are not limited to:'
+          -
+            '<ul><li><strong>Google Analytics</strong> - we use Google Analytics to collect data about the Website’s usage. This data will track the pages the User visits and record other User data such as how long you spend on each page. It does not include personal information. You can view the Google Privacy Policy here: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>.</ul></li>'
+          -
+            '<strong>Contacting us with comments or queries</strong>'
+          -
+            'We only process personal data where you have given consent for us to do so. If, however, you have a comment or query about how we have handled your data or about the contents of this Privacy Statement, please contact us. We will respond efficiently to any complaints we receive. Our contact details are as follows: <a href="mailto:dataprotectionleads@unep-wcmc.org" target="_blank">dataprotectionleads@unep-wcmc.org</a>.'
+          -
+            '<strong>Removing personal data</strong>'
+          -
+            'Users can request access to all data we have relating to them and have the right to request that this information be deleted. To submit such requests the user should contact: <a href="mailto:oceanplus@unep-wcmc.org" target="_blank">oceanplus@unep-wcmc.org</a>.'
+      -
+        title: 5. Disclaimers
+        paragraphs:
+          -
+            '<ol>
+              <li>The contents of this Website do not necessarily reflect the view or policies of UNEP or WCMC and their contributory organizations or editors or Member States.</li>
+              <li>The designations employed and the presentation of material on this Website do not imply the expression of any opinion whatsoever on the part of the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries.</li>
+              <li>The mention of a commercial entity or product in this Website does not imply any endorsement by UNEP or WCMC.</li>
+              <li>Materials provided on this Site are provided “as is” and UNEP or WCMC specifically do not make any warranties or representations as to the accuracy or completeness of any such Materials.</li>
+              <li>Under no circumstances shall UNEP or WCMC be liable for any loss, damage, liability or expense incurred or suffered that is claimed to have resulted from the use of this Site, including, without limitation, any fault, error, omission, interruption or delay with respect thereto.</li>
+              <li>The use of this Site is at the User’s sole risk. Under no circumstances, including, but not limited to negligence, shall UNEP or WCMC or their affiliates be liable for any direct, indirect, incidental, special or consequential damages, even if UNEP or WCMC have been advised of the possibility of such damages.</li>
+              <li>As a condition of use of this Site, the User agrees to indemnify UNEP or WCMC and their affiliates from and against any and all actions, claims, losses, damages, liabilities and expenses (including reasonable attorneys’ fees) arising out of the User’s use of this Site, including, without limitation, any claims alleging facts that if true would constitute a breach by the User of these Terms and Conditions. If the User is dissatisfied with any Material on this Site or with any of its Terms and Conditions of Use, the User’s sole and exclusive remedy is to discontinue using the Site.</li>
+              <li>This Site may contain links and references to third-party web sites. The linked sites are not under the control of UNEP or WCMC and UNEP or WCMC are not responsible for, nor do they endorse, any of their content.</li>
+            </ol>'
+      -
+        title: 6. Preservation of immunities
+        paragraphs:
+          -
+            'Nothing herein shall constitute or be considered a limitation upon or a waiver of the privileges and immunities of the United Nations, which are specifically reserved.'
+      -
+        title: 7. General
+        paragraphs:
+          -
+            'UNEP reserves its exclusive right in its sole discretion to alter, limit or discontinue the Site or any Materials. UNEP shall have no obligation to take the needs of any User into consideration in connection therewith. UNEP reserves the right to deny in its sole discretion any User access to this Site or any portion thereof without notice.'
+      -
+        title: 9. Changes to These Terms and Conditions
+        paragraphs:
+          -
+            'UNEP reserves the right to vary these Terms and Conditions from time to time without notice. Therefore, please ensure that you read these Terms and Conditions each time you use or download materials. By accessing and/or downloading Materials, you signify your acceptance of the most recent version of these Terms and Conditions in full.'
+      -
+        title: 10. Value-added services
+        paragraphs:
+          -
+            'The core of the Website and associated data apart from Third-Party Data are available on an open basis as detailed in <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>. Certain restricted and value-added datasets, services (e.g. APIs) and other products may be licensed on different terms and conditions if required by the User.'
+
+      

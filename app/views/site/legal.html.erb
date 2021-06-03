@@ -5,7 +5,13 @@
     <%= t('legal.title') %>
   </h1>
 
-  <% t('legal.paragraphs').each do |p| %>
-    <p><%= p.html_safe %></p>
+  <% t('legal.sections').each do |section| %>
+    <% unless section[:title].nil? %>
+      <h2><%= section[:title] %></h2>
+    <% end %>
+
+    <% section[:paragraphs].each do |p| %>
+      <p><%= p.html_safe %></p>
+    <% end %>
   <% end %>
 </main>
