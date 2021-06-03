@@ -53,9 +53,18 @@ module ApplicationHelper
   end
 
   def list_of_countries
-    all_countries = GeoEntity.countries.includes(:geo_entity_stats)
+    # TODO - Hide country pages without any data - maybe we want more finely-tuned error handling for lack of data
+    all_countries = GeoEntity.countries.includes(:geo_entity_stats) 
+    
+    # Using list of allowed countries
+    allowed_countries = ALLOWED_COUNTRIES.map do |iso3|
+      country = GeoEntity.find_by(iso3: iso3)
+      next unless country
+      country
+    end
 
-    valid_countries = all_countries.where.not(geo_entity_stats: { id: nil })
+    # Intersect both arrays to find common countries
+    valid_countries = all_countries.where.not(geo_entity_stats: { id: nil }) & allowed_countries
 
     valid_countries.sort_by(&:name).map do |country| 
       nav_item(country.actual_name) 
