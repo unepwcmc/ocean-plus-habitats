@@ -1,4 +1,5 @@
 require 'csv'
+require 'zip'
 
 namespace :generate do
   desc 'Generate CSVs containing data for each habitat for each country'
@@ -10,14 +11,14 @@ namespace :generate do
     @mangroves_headers = %w[total_area_1996 total_area_2007 total_area_2008 
       total_area_2009 total_area_2010 total_area_2015 total_area_2016 
       baseline_year protected_area protected_percentage]
-      
-    habitat_data_directory = 'lib/data/habitat_coverage_protection'
-    base_output_directory = 'public/downloads/national'
 
-    generate_csvs(habitat_data_directory, base_output_directory)
+    habitat_data_directory = 'lib/data/habitat_coverage_protection'
+    @base_output_directory = 'public/downloads/national'
+
+    generate_csvs(habitat_data_directory)
   end
 
-  def generate_csvs(dir, base_output_dir)
+  def generate_csvs(dir)
     # First we combine all of the CSVs together in one array, for easy generation of each CSV
     combined_csvs = @habitat_names.map do |habitat|
       # CSV.read creates an array of arrays
@@ -39,13 +40,29 @@ namespace :generate do
         end
       end
 
-      output_dir = base_output_dir + "/#{iso3}"
+      output_dir = @base_output_directory + "/#{iso3}"
 
       FileUtils.mkdir_p(output_dir) unless Dir.exist?(output_dir)
 
       CsvUtils.csv_from_csv_rows(output_dir, @required_headers, habitat_data.first, filename: 'all_other_habitats')
       CsvUtils.csv_from_csv_rows(output_dir, @mangroves_headers, habitat_data.last, filename: 'mangroves')
+
+      create_zip_from_files(output_dir, iso3)
     end
+  end
+
+  def create_zip_from_files(output_dir, iso3)
+    zipfile_name = output_dir + ".zip"
+
+    unless File.exist?(zipfile_name)
+      Zip::File.open(zipfile_name, Zip::File::CREATE) do |zipfile|
+        ['all_other_habitats.csv', 'mangroves.csv'].each do |filename|
+          zipfile.add(filename, File.join(@base_output_directory, iso3, filename))
+        end
+      end
+    end
+
+    FileUtils.rm_rf(output_dir)
   end
 
   def parse_required_values_and_convert_to_row(row, name_of_habitat)
