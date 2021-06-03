@@ -11,7 +11,6 @@
     <% end %>
     <v-map-interactive
       :id="'eez-map'"
-      :nload-button="true"
       :datasets="<%= datasets.to_json %>"
       text="<%= t('home.eez_map.eez_extent') %>"
       filters-title="<%= t('home.eez_map.eez_message') %>"
