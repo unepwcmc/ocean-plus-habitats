@@ -2,11 +2,13 @@ require 'csv'
 
 namespace :generate do
   desc 'Generate CSVs containing data for each habitat for each country'
-  
+
   @list_of_iso3s = GeoEntity.countries.pluck(:iso3).compact
   @habitat_names = Habitat.pluck(:name)
   @required_headers = %w[name total_area protected_area percent_protected presence]
-  @mangroves_headers = ChangeStat.first.attributes.except('id', 'habitat_id', 'geo_entity_id', 'created_at', 'updated_at').keys
+  @mangroves_headers = %w[total_area_1996 total_area_2007 total_area_2008 
+    total_area_2009 total_area_2010 total_area_2015 total_area_2016 
+    baseline_year protected_area protected_percentage]
 
   task national_csvs: [:environment] do
     habitat_data_directory = 'lib/data/habitat_coverage_protection'
@@ -28,10 +30,10 @@ namespace :generate do
     # Then we find the correct element from each array (via the ISO3), to construct a CSV for each country
     @list_of_iso3s.each do |iso3|
       habitat_data = [combined_csvs, mangroves_data].map do |array|
-          array.map do |data_hash|
+        array.map do |data_hash|
           row = data_hash[:data].find { |csv_row| csv_row['ISO3'] == iso3 }
           next unless row
-          
+
           # Get rid of unneeded values (row number and ISO3) by converting row to a hash
           parse_required_values_and_convert_to_row(row, data_hash[:habitat])
         end
@@ -47,10 +49,16 @@ namespace :generate do
   end
 
   def parse_required_values_and_convert_to_row(row, name_of_habitat)
-    row_with_name = row.to_hash.merge({ "name" => name_of_habitat })
+    row_with_name = row.to_hash.merge({ 'name' => name_of_habitat })
 
-    required_values = row_with_name.slice(*@required_headers).values
+    if name_of_habitat == 'mangroves'
+      required_values = row_with_name.slice(*@mangroves_headers).values
 
-    CSV::Row.new(@required_headers, required_values)
+      CSV::Row.new(@mangroves_headers, required_values)
+    else
+      required_values = row_with_name.slice(*@required_headers).values
+
+      CSV::Row.new(@required_headers, required_values)
+    end
   end
 end
