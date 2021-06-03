@@ -80,7 +80,7 @@ module ApplicationHelper
     {
       id: geo_entity_id,
       name: name,
-      url: country_path(path_name)
+      url: country_link_path(path_name)
     }
   end
 
@@ -90,7 +90,7 @@ module ApplicationHelper
     "icon--#{habitat}#{status}"
   end
 
-  def country_path(country_name)
+  def country_link_path(country_name)
     country = GeoEntity.find_by(actual_name: country_name) || GeoEntity.find_by(name: country_name)
 
     '/' + country.name.gsub(/ /, '-').downcase

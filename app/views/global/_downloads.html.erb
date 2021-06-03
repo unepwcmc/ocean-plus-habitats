@@ -33,7 +33,7 @@
       <li class="downloads__li">
         <p class="downloads__title"><%= downloads[:statistics][:title] %></p>
 
-        <% if current_page?(country_path(@country)) %>
+        <% if current_page?(country_link_path(@country&.name)) %>
           <%= link_to downloads[:statistics][:button], "downloads/national/#{@country.iso3}.zip", 
               class: 'downloads__button button--download', 
               download: "#{@country.name}_statistics" 
