@@ -6,19 +6,24 @@
       <modal-trigger id="citation" modal-content="<%= modal_content %>" class="icon--citation margin-space-left"></modal-trigger>
     </div>
 
-    <p class="max-width-container-small">
-      <%= t('countries.shared.red_list.intro_text', country_name: @name) %>
-    </p>
+    <% if !@red_list_data.all? { |habitat| habitat['data'].nil? } %>
+      <p class="max-width-container-small">
+        <%= t('countries.shared.red_list.intro_text', country_name: @name) %>
+      </p>
+      <%= render 'shared/red-list-table' %>
+      
+      <p class="text--smallprint max-width-container-small">
+        <%= t('countries.shared.red_list.smalltext_1').html_safe %>
+      </p>
 
-    <%= render 'shared/red-list-table' %>
-
-    <p class="text--smallprint max-width-container-small">
-      <%= t('countries.shared.red_list.smalltext_1').html_safe %>
-    </p>
-
-    <p class="text--smallprint max-width-container-small">
-      <%= t('countries.shared.red_list.smalltext_2').html_safe %>
-    </p>
+      <p class="text--smallprint max-width-container-small">
+        <%= t('countries.shared.red_list.smalltext_2').html_safe %>
+      </p>
+    <% else %>
+      <p class="max-width-container-small">
+        <%= t('countries.shared.red_list.no_data', country_name: @name) %>
+      </p>
+    <% end %>
 
     <p class="text--smallprint max-width-container-small">
       <%= t('countries.shared.red_list.smalltext_3').html_safe %>
