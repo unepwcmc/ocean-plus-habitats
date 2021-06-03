@@ -1,9 +1,12 @@
 <section class="example-species section-padding">
   <div class="container">
-    
+
   <% if example_species_select.present? %>
     <div class="example-species__header h2-wrapper">
-      <h3 class="margin-space-right"><%= t('countries.shared.example_species.title') %></h3>
+      <h3 class="example-species__title margin-space-right">
+        <%= t('countries.shared.example_species.title') %>
+      </h3>
+    
       <v-select
         id="example-species"
         class="example-species__select"
