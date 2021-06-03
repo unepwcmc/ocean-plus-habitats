@@ -3,14 +3,14 @@ require 'csv'
 namespace :generate do
   desc 'Generate CSVs containing data for each habitat for each country'
 
-  @list_of_iso3s = GeoEntity.countries.pluck(:iso3).compact
-  @habitat_names = Habitat.pluck(:name)
-  @required_headers = %w[name total_area protected_area percent_protected presence]
-  @mangroves_headers = %w[total_area_1996 total_area_2007 total_area_2008 
-    total_area_2009 total_area_2010 total_area_2015 total_area_2016 
-    baseline_year protected_area protected_percentage]
-
   task national_csvs: [:environment] do
+    @list_of_iso3s = GeoEntity.countries.pluck(:iso3).compact
+    @habitat_names = Habitat.pluck(:name)
+    @required_headers = %w[name total_area protected_area percent_protected presence]
+    @mangroves_headers = %w[total_area_1996 total_area_2007 total_area_2008 
+      total_area_2009 total_area_2010 total_area_2015 total_area_2016 
+      baseline_year protected_area protected_percentage]
+      
     habitat_data_directory = 'lib/data/habitat_coverage_protection'
     base_output_directory = 'public/downloads/national'
 
