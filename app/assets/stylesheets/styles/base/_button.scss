@@ -146,16 +146,6 @@ $button-padding-wide-laptop: 14px 45px;
   font-weight: $semi-bold;
 }
 
-@mixin button--map-download {
-  @include button-basic;
-  @include button-font-size-small;
-  @include button-padding-wide;
-  @include button-rounded;
-  background-color: $navy;
-  border: $border-thin $blue-light;
-  font-weight: $semi-bold;
-}
-
 @mixin button--next {
   &::after {
     @include button-basic;
@@ -200,20 +190,6 @@ $button-padding-wide-laptop: 14px 45px;
     @include button--download;
   }
 
-  &--map-download {
-    @include button--download;
-    @include flex;
-    @include flex-v-center;
-
-    &::before {
-      @include icon-download;
-      content: '';
-
-      display: inline-block;
-      margin-right: rem-calc(8);
-    }
-  }
-
   &--next {
     @include button--next;
   }
@@ -222,3 +198,4 @@ $button-padding-wide-laptop: 14px 45px;
     @include button-outline;
   }
 }
+

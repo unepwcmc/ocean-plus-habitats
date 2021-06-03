@@ -15,11 +15,11 @@
 <section class="container section-padding">
   <v-map-interactive
     :id="'map-target'"
-    :has-download-button="true"
     :datasets="<%= datasets.to_json %>"
+    filters-title="<%= t('home.locations_map.filters_title') %>"
   ></v-map-interactive>
 
   <p class="text--smallprint max-width-container-small">
-    <%= t('global.map_disclaimer') %>
+    <%= t('global.map.map_disclaimer') %>
   </p>
 </section>

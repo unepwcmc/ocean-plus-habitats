@@ -92,6 +92,52 @@ DATASETS = [
   }
 ].freeze
 
+WDAP_DATASETS = [
+  {
+    id: 'wdpa',
+    sourceLayers: [
+      {
+        type: 'point',
+        name: 'WCMC008_CoralReef2018_Pt_v4',
+      },
+      {
+        type: 'poly',
+        name: 'WCMC008_CoralReef2018_Py_v4',
+      },
+      {
+        type: 'line',
+        name: 'WCMC008_CoralReef2018_Py_v4'
+      }
+    ],
+    tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Global_Distribution_of_Coral_Reefs/VectorTileServer/tile/{z}/{y}/{x}.pbf',
+    color: '#38A801',
+    name: I18n.t('global.map.wdpa_title'),
+    disabled: false
+  },
+  {
+    id: 'oecm',
+    sourceLayers: [
+      {
+        type: 'point',
+        name: 'WCMC027_Saltmarshes_Pt_v6',
+      },
+      {
+        type: 'poly',
+        name: 'WCMC027_Saltmarshes_Py_v6',
+      },
+      {
+        type: 'line',
+        name: 'WCMC027_Saltmarshes_Py_v6'
+      }
+    ],
+    tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Global_Distribution_of_Saltmarshes/VectorTileServer/tile/{z}/{y}/{x}.pbf',
+    color: '#2700FC',
+    name: I18n.t('global.map.oecm_title'),
+    disabled: false
+  }
+].freeze
+
+
 HABITATS_PRESENCE_STATUSES_DEFAULT = {
   coralreefs: 'present',
   saltmarshes: 'present',
@@ -110,14 +156,16 @@ class Serializers::MapDatasetsSerializer < Serializers::Base
     super(habitat_protection_stats, 'habitat_protection_stats')
   end
 
-  def serialize
-    DATASETS.map do |ds|
+  def serialize()
+    habitat_datasets = DATASETS.map do |ds|
       dataset = ds.dup
       dataset[:name] = get_habitat_from_id(ds[:id])[:title]
       dataset[:disabled] = absent_or_unknown(habitat_presence_status(ds)) 
 
       dataset
     end
+
+    habitat_datasets + WDAP_DATASETS
   end
 
   private
@@ -128,6 +176,6 @@ class Serializers::MapDatasetsSerializer < Serializers::Base
   end
 
   def not_available_dataset_html
-    "<p>#{I18n.t('global.map_not_available')}</p>"
+    "<p>#{I18n.t('global.map.map_not_available')}</p>"
   end
 end

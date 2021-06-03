@@ -250,6 +250,7 @@
   font-weight: $bold;
 }
 
+
 @mixin text-example-species-title {
   @include text-4;
 }
@@ -270,3 +271,10 @@
   @include h4;
   font-size: rem-calc(16);
 }
+
+@mixin text-map-filters-title {
+  @include responsive-styles(font-size, rem-calc(16), rem-calc(22), rem-calc(22));
+  color: $white;
+  font-weight: $semi-bold;
+}
+
