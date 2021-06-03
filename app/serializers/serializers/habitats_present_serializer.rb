@@ -31,17 +31,7 @@ class Serializers::HabitatsPresentSerializer < Serializers::Base
   def habitat_citations(habitat)
     habitat_sources = sources(habitat)
 
-    unless habitat_sources[:citation].empty?
-      habitat_sources[:citation].map{|c| "<p>#{insert_hyperlinks(c)}</p>"}.join
-    else
-      "<p>No citations found.</p>"
-    end
-  end
-
-  def insert_hyperlinks(citation)
-    citation.split.map { |string| string[/^(http)/] ? 
-      "<a target='_' class='modal__link' href='#{string}'>#{string}</a>" : string 
-    }.join(' ')
+    map_to_citations_string(habitat_sources[:citation])
   end
 
   def get_status_text(status)
