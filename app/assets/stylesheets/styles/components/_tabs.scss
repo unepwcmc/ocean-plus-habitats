@@ -31,10 +31,10 @@ $icon-margin-medium: 20;
     &__trigger {
       @include text-tab-title;
       cursor: pointer;
+      line-height: 3.4em;
       margin-bottom: 0;
       padding: rem-calc(0 10);
       text-align: center;
-      line-height: 3.4em;
 
       position: relative;
 
