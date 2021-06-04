@@ -52,26 +52,26 @@ namespace :import do
 
       next unless geo_entity
 
-      stats = geo_entity.geo_entity_stats
-
       Habitat.all.each do |habitat|
         # Fetch the source IDs from the relevant column
         camelcased_habitat_title = habitat.title.gsub(/[\s-]/, '_')
-        source_ids = row["Sources_#{camelcased_habitat_title}"].split(';')
 
-        stats.each do |stat|
-          source_ids.each do |id|
-            source = Source.find_by(id)
+        source_ids = row["Sources_#{camelcased_habitat_title}"].split(';').map(&:to_i)
+        stat = GeoEntityStat.find_by(habitat_id: habitat.id, geo_entity_id: geo_entity.id)
 
-            unless source
-              Rails.logger.info("Source not found in the database with id #{id}")
-              next
-            end
+        source_ids.each do |id|
+          source = Source.find_by(citation_id: id)
 
-            GeoEntityStatsSources.find_or_create_by(geo_entity_stat_id: stat.id, citation_id: source.citation_id)
+          unless source
+            Rails.logger.info("Source not found in the database with id #{id}")
+            next
           end
+
+          GeoEntityStatsSources.find_or_create_by(geo_entity_stat_id: stat.id, citation_id: source.citation_id)
         end
       end
     end
+
+    puts "#{GeoEntityStatsSources.count} GeoEntityStatsSources were created"
   end
 end

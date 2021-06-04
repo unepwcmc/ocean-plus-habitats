@@ -15,14 +15,11 @@ class Serializers::HabitatsPresentSerializer < Serializers::Base
       habitats_present = habitat.dup
 
       # Present, but data deficient habitats are essentially considered as 'Present'
-      habitats_present[:status] = occurrences[id] === 'present-but-unknown' ? 'present' : occurrences[id]
+      habitats_present[:status] = occurrences[id] == 'present-but-unknown' ? 'present' : occurrences[id]
       habitats_present[:status_title] = get_status_text(habitats_present[:status])
 
       # Transforming plain text URLs into live links
       habitats_present[:citation] = habitat_citations(habitat)
-
-      # habitats_present[:citation] = sources(habitat)[:citation]
-      # @country_yml[:habitats_present_citations][id.to_sym]
 
       habitats_present
     end
