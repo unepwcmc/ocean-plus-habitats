@@ -11,7 +11,10 @@ namespace :import do
       m.constantize.send(:delete_all)
     end
 
-    tasks = %w(countries regions prebakedstats new_redlist_data coastalstats global_change sources country_citations bounding_boxes)
+    tasks = %w(countries regions prebakedstats new_redlist_data coastalstats 
+      global_change sources country_citations habitat_sources_per_country bounding_boxes
+    )
+    
     tasks.each do |t|
       task_name = "import:#{t}"
 

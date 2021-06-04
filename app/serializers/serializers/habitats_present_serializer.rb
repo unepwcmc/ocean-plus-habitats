@@ -46,6 +46,7 @@ class Serializers::HabitatsPresentSerializer < Serializers::Base
     habitat_id = Habitat.find_by_name(habitat[:id]).try(:id)
     ges_id = GeoEntityStat.where(habitat_id: habitat_id, geo_entity_id: @country.id).pluck(:id)
     citation_ids = GeoEntityStatsSources.where(geo_entity_stat_id: ges_id).pluck(:citation_id)
+
     { url: Source.where(citation_id: citation_ids).pluck(:source_url),
       citation: Source.where(citation_id: citation_ids).pluck(:citation) }
   end
