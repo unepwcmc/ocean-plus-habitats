@@ -112,6 +112,12 @@ namespace :import do
       Habitat.all.each do |habitat|
         stats = GeoEntity.find_by(iso3: row['ISO3']).geo_entity_stats
 
+        next unless stats.find { |stat| stat.habitat == habitat}
+
+        if stats.find_by(habitat: habitat).nil?
+          byebug
+        end
+
         stats.find_by(habitat: habitat).update(occurrence: row[habitat.title].to_i)
       end
     end
