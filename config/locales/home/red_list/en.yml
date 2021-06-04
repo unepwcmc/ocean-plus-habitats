@@ -7,7 +7,7 @@ en:
         - The table below shows the number of habitat-forming species within each habitat group by their global IUCN Red List status, also illustrating the total number of species assessed globally for each group. Habitat-forming species support diverse life by providing shelter or feeding grounds for other species, and thereby play an important role in the functioning of an ecosystem.
         - While most warm-water corals, mangroves and seagrasses have been assessed by the IUCN Red List team, there are still many species of saltmarshes and cold-water corals that have not yet been assessed, with a “Not Evaluated” status.
       citations:
-        - IUCN %{year}. The IUCN Red List of Threatened Species. Version[Latest]. https://www.iucnredlist.org. Accessed on [Date of Update].
+        - IUCN 2021. The IUCN Red List of Threatened Species. Version 2021-1. https://www.iucnredlist.org. 
       smallprint_1: '<strong>Disclaimer:</strong> These statuses derive from global assessments, and do not necessarily reflect each species’ status by country.'
       smallprint_2: '<strong>Source:</strong> Data adapted from the <a href="https://www.iucnredlist.org/" title="Visit the IUCN Red List of Threatened Species site" target="_blank" rel="noopener">IUCN Red List of Threatened Species</a>, version 2021-1.'
       smallprint_3: '<strong>Last updated:</strong> May 2021'
