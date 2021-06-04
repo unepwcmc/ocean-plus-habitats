@@ -16,3 +16,5 @@ end
 %w(countries regions prebakedstats new_redlist_data coastalstats global_change sources country_citations bounding_boxes).each do |import_type|
   Rake::Task["import:#{import_type}"].invoke
 end
+
+Rake::Task["generate:national_csvs"].invoke
