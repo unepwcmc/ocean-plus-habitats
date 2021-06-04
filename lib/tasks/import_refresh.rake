@@ -18,5 +18,7 @@ namespace :import do
       p "Running #{task_name}..."
       Rake::Task[task_name].invoke
     end
+
+    Rake::Task["generate:national_csvs"].invoke
   end
 end
