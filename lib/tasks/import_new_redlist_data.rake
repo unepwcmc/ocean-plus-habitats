@@ -142,15 +142,10 @@ namespace :import do
     end
 
     geo_entity_stat = GeoEntityStat.find_by(geo_entity_id: geo_entity.id, habitat_id: habitat.id)
+    
     if geo_entity_stat.blank?
       report_failed(row, 'GeoEntityStat not found!')
       return
-    end
-
-    sources.each do |source|
-      gess = GeoEntityStatsSources.find_or_initialize_by(geo_entity_stat_id: geo_entity_stat.id, citation_id: source.citation_id)
-      report_failed(row, "GeoEntityStat, Source pair already existing!") if gess.id
-      report_failed(row, gess.errors.messages) unless gess.save
     end
   end
 

@@ -43,4 +43,35 @@ namespace :import do
     end
     puts "#{CountryCitation.count - current_count} citations imported"
   end
+
+  desc 'import sources for each habitat for each country' 
+  task :habitat_sources_per_country => [:environment] do
+    # habitat_presence_country contains the source IDs for each habitat
+    CSV.foreach('lib/data/habitat_presence/habitat_presence_country.csv', headers: true) do |row|
+      geo_entity = GeoEntity.find_by(iso3: row['ISO3'])
+
+      next unless geo_entity
+
+      Habitat.all.each do |habitat|
+        # Fetch the source IDs from the relevant column
+        camelcased_habitat_title = habitat.title.gsub(/[\s-]/, '_')
+
+        source_ids = row["Sources_#{camelcased_habitat_title}"].split(';').map(&:to_i)
+        stat = GeoEntityStat.find_by(habitat_id: habitat.id, geo_entity_id: geo_entity.id)
+
+        source_ids.each do |id|
+          source = Source.find_by(citation_id: id)
+
+          unless source
+            Rails.logger.info("Source not found in the database with id #{id}")
+            next
+          end
+
+          GeoEntityStatsSources.find_or_create_by(geo_entity_stat_id: stat.id, citation_id: source.citation_id)
+        end
+      end
+    end
+
+    puts "#{GeoEntityStatsSources.count} GeoEntityStatsSources were created"
+  end
 end
