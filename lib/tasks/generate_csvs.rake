@@ -8,9 +8,9 @@ namespace :generate do
     @list_of_iso3s = GeoEntity.countries.pluck(:iso3).compact
     @habitat_names = Habitat.pluck(:name)
     @required_headers = %w[name total_area protected_area percent_protected presence]
-    @mangroves_headers = %w[total_area_1996 total_area_2007 total_area_2008 
-      total_area_2009 total_area_2010 total_area_2015 total_area_2016 
-      baseline_year protected_area protected_percentage]
+    @mangroves_headers = %w[total_area_1996 total_area_2008 total_area_2009 
+      total_area_2010baseline total_area_2015 total_area_2016 
+      protected_area percent_protected presence]
 
     habitat_data_directory = 'lib/data/habitat_coverage_protection'
     @base_output_directory = 'public/downloads/national'
@@ -66,13 +66,12 @@ namespace :generate do
   end
 
   def parse_required_values_and_convert_to_row(row, name_of_habitat)
-    row_with_name = row.to_hash.merge({ 'name' => name_of_habitat })
-
     if name_of_habitat == 'mangroves'
-      required_values = row_with_name.slice(*@mangroves_headers).values
+      required_values = row.to_hash.slice(*@mangroves_headers).values
 
       CSV::Row.new(@mangroves_headers, required_values)
     else
+      row_with_name = row.to_hash.merge({ 'name' => name_of_habitat })
       required_values = row_with_name.slice(*@required_headers).values
 
       CSV::Row.new(@required_headers, required_values)
