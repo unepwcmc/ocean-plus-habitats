@@ -27,7 +27,7 @@ namespace :import do
       # First we check whether it is a country (using ISO3) or a region depending on the CSV file
       # Then we fetch the geo entity. If it can't be found, fetch_geo_entity will return nil
       # Hence we can then skip any geo_entity that is nil
-      name = row['ISO3'] || row['region']
+      name = row['iso3'] || row['region']
       geo_entity = fetch_geo_entity(name)
       next unless geo_entity
 
@@ -111,6 +111,12 @@ namespace :import do
 
       Habitat.all.each do |habitat|
         stats = GeoEntity.find_by(iso3: row['ISO3']).geo_entity_stats
+
+        next unless stats.find { |stat| stat.habitat == habitat}
+
+        if stats.find_by(habitat: habitat).nil?
+          byebug
+        end
 
         stats.find_by(habitat: habitat).update(occurrence: row[habitat.title].to_i)
       end
