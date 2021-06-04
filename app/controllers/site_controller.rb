@@ -5,6 +5,7 @@ class SiteController < ApplicationController
     @habitats = habitats
 
     @map_datasets = Serializers::MapDatasetsSerializer.new(Habitat.global_protection_by_id).serialize
+    @map_datasets_habitats = @map_datasets.reject { |d| %w[wdpa oecm].include?(d[:id]) }
 
     @eez_map_datasets = Serializers::EezMapDatasetsSerializer.new.serialize
 

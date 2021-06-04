@@ -1,26 +1,28 @@
 <template>
-  <div class="map-filters flex flex-column">
-    <p
-      v-show="isEez"
-      class="map-filters__eezMessage"
-    >
-      {{ message }}
-    </p>
-    <ul class="map-filters__list">
-      <li
-        v-for="(dataset, index) in datasets"
-        :key="getVForKey('dataset', index)"
-        class="map-filters__list-li"
-        :class="{ 'map-filters__list-li--eez': isEez }"
-      >
-        <dataset
-          :key="dataset.id"
-          :config="dataset"
-          :allow-no-selected-dataset="allowNoSelectedDataset"
-          :disabled="dataset.disabled"
-        />
-      </li>
-    </ul>
+  <div 
+    class="map-filters"
+    :class="{ 'map-filters--eez': isEez }"
+  >
+    <div class="map-filters__content">
+      <h3 class="map-filters__title">
+        {{ title }}
+      </h3>
+
+      <ul class="map-filters__list">
+        <li
+          v-for="(dataset, index) in datasets"
+          :key="getVForKey('dataset', index)"
+          class="map-filters__list-li"
+        >
+          <dataset
+            :key="dataset.id"
+            :config="dataset"
+            :allow-no-selected-dataset="allowNoSelectedDataset"
+            :disabled="dataset.disabled"
+          />
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -48,7 +50,7 @@ export default {
       type: Array,
       default: () => []
     },
-    message: {
+    title: {
       type: String,
       default: ''
     }
