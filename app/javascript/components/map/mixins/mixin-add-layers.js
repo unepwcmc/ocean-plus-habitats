@@ -27,6 +27,7 @@ export default {
         options['type'] = 'line'
         options['paint'] = {
           'line-color': layer.color,
+          'line-opacity': layer.opacity || 1,
           'line-width': [
             'interpolate',
             ['exponential', 0.8],
@@ -39,7 +40,8 @@ export default {
         options['type'] = 'fill'
         options['paint'] = {
           'fill-color': layer.color,
-          'fill-outline-color': 'transparent'
+          'fill-outline-color': 'transparent',
+          'fill-opacity': layer.opacity || 1,
         }
       }
 
