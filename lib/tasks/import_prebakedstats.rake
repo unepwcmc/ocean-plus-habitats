@@ -27,7 +27,7 @@ namespace :import do
       # First we check whether it is a country (using ISO3) or a region depending on the CSV file
       # Then we fetch the geo entity. If it can't be found, fetch_geo_entity will return nil
       # Hence we can then skip any geo_entity that is nil
-      name = row['ISO3'] || row['region']
+      name = row['iso3'] || row['region']
       geo_entity = fetch_geo_entity(name)
       next unless geo_entity
 
