@@ -12,8 +12,12 @@ namespace :generate do
       total_area_2010baseline total_area_2015 total_area_2016 
       protected_area percent_protected presence]
 
-    habitat_data_directory = 'lib/data/habitat_coverage_protection'
+    habitat_data_directory = 'lib/data/countries'
     @base_output_directory = 'public/downloads/national'
+
+    if Dir.exist?(@base_output_directory) && !Dir.empty?(@base_output_directory)
+      FileUtils.rm_rf(@base_output_directory) 
+    end
 
     generate_csvs(habitat_data_directory)
   end
@@ -22,7 +26,10 @@ namespace :generate do
     # First we combine all of the CSVs together in one array, for easy generation of each CSV
     combined_csvs = @habitat_names.map do |habitat|
       # CSV.read creates an array of arrays
-      { data: CSV.read("#{dir}/#{habitat}_country_output.csv", headers: true), habitat: habitat }
+      { 
+        data: CSV.read("#{dir}/#{habitat}.csv", headers: true), 
+        habitat: habitat 
+      }
     end
 
     # Separate out mangroves from the rest of the data first
