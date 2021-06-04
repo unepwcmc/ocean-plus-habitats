@@ -30,10 +30,10 @@ class CountriesController < ApplicationController
     @habitat_change = Serializers::HabitatCountryChangeSerializer.new(@country, habitats_present_status).serialize
 
     @stacked_row_chart = Serializers::RepresentationHabitatsSerializer.new(@country).serialize
-    @country_citations = @country.country_citations.order(:citation).pluck(:citation)
+    @country_citations = map_to_citations_string(@country.country_citations.order(:citation).pluck(:citation))
 
     @next_country = next_country
-    @next_country_url = country_path(@next_country.actual_name)
+    @next_country_url = country_link_path(@next_country.actual_name)
     @next_country_name = @next_country.actual_name
     @next_country_flag = helpers.if_country_get_flag(@next_country.iso3)
   end

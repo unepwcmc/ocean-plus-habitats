@@ -7,10 +7,10 @@
   }
 
   &__button {
-    max-width: rem-calc(264);
+    max-width: rem-calc(270);
 
     @include breakpoint($small) {
-      width: rem-calc(264);
+      width: rem-calc(270);
     }
   }
 

@@ -272,9 +272,13 @@
   font-size: rem-calc(16);
 }
 
+@mixin text-spatial-downloads-modal {
+  @include text-3;
+  margin-bottom: rem-calc(20);
+}
+
 @mixin text-map-filters-title {
   @include responsive-styles(font-size, rem-calc(16), rem-calc(22), rem-calc(22));
   color: $white;
   font-weight: $semi-bold;
 }
-
