@@ -16,6 +16,11 @@
 
   &__dropdown {
     @include tablet-up;
+
+    &--centered {
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
 
   &__link {

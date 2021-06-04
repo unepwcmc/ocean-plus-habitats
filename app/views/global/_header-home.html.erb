@@ -1,8 +1,16 @@
 <header class="header--home bg-image-overlay--dark">
   <%= render 'global/topbar.html.erb' %>
-  
+
   <div class="header__content">
     <h1 class="header__h1"><%= t('home.general.title') %></h1>
     <p class="header__intro"><%= t('home.general.description') %></p>
+  </div>
+  <div class="header__search">
+    <v-select-searchable
+      class="topbar__dropdown--centered v-select--large"
+      :config="<%= get_countries_hero_search_config %>"
+      :options="<%= get_nav_items[:countries].to_json %>"
+      >
+    </v-select-searchable>
   </div>
 </header>

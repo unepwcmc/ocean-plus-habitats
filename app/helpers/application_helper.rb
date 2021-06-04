@@ -53,8 +53,8 @@ module ApplicationHelper
   end
 
   def list_of_countries
-    all_countries = GeoEntity.countries.includes(:geo_entity_stats) 
-    
+    all_countries = GeoEntity.countries.includes(:geo_entity_stats)
+
     # Using list of allowed countries
     allowed_countries = ALLOWED_COUNTRIES.map do |iso3|
       country = GeoEntity.find_by(iso3: iso3)
@@ -65,8 +65,8 @@ module ApplicationHelper
     # Intersect both arrays to find common countries
     valid_countries = all_countries.where.not(geo_entity_stats: { id: nil }) & allowed_countries
 
-    valid_countries.sort_by(&:name).map do |country| 
-      nav_item(country.actual_name) 
+    valid_countries.sort_by(&:name).map do |country|
+      nav_item(country.actual_name)
     end
   end
 
@@ -142,7 +142,7 @@ module ApplicationHelper
   end
 
   def insert_hyperlinks(citation)
-    citation.split.map { |string| string[/^(http)/] ? 
+    citation.split.map { |string| string[/^(http)/] ?
       "<a target='_' class='modal__link' href='#{string}'>#{string}</a>" : string
     }.join(' ')
   end
@@ -170,9 +170,16 @@ module ApplicationHelper
     }.to_json
   end
 
+  def get_countries_hero_search_config
+    {
+      id: 'country',
+      placeholder: 'Search for Country or Territory'
+    }.to_json
+  end
+
   def get_nav_primary
     [
-      { 
+      {
         title: 'About',
         url: about_path,
       }

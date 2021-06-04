@@ -19,10 +19,11 @@
       &__content {
         @include container--large;
         padding-top: rem-calc(65);
-        padding-bottom: rem-calc(140);
-        
+        padding-bottom: rem-calc(15);
+
         @include breakpoint($small) {
           padding-top: rem-calc(85);
+          padding-bottom: rem-calc(85);
         }
       }
 
@@ -30,6 +31,15 @@
           @include text-hero-home;
           max-width: $container-width-small;
         }
+
+      &__search {
+        @include container--large;
+        padding-bottom: rem-calc(85);
+
+        @include breakpoint($small) {
+          padding-bottom: rem-calc(140);
+        }
+      }
     }
   }
 
@@ -48,7 +58,7 @@
 
       &__icon {
         @include box-shadow-grey;
-        
+
         border-radius: 100%;
         margin-right: rem-calc(20);
         width: rem-calc(54); height: rem-calc(54);
