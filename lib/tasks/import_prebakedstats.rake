@@ -47,13 +47,11 @@ namespace :import do
     protected_value = coerce_to_value(csv_row["protected_area"])
     total_value = coerce_to_value(csv_row[total_value_column])
     protected_percentage = coerce_to_value(csv_row["percent_protected"])
-    occurrence = csv_row["occurrence"]
 
     GeoEntityStat.find_or_create_by(habitat: habitat, geo_entity: geo_entity) do |stat|
       stat.protected_value      = protected_value
       stat.total_value          = total_value
       stat.protected_percentage = protected_percentage
-      stat.occurrence           = occurrence
     end
   end
 
@@ -100,25 +98,21 @@ namespace :import do
   end
 
   def import_habitat_occurrences
-    missing_occurrences = GeoEntity.countries.includes(:geo_entity_stats)
-                                   .where(geo_entity_stats: { occurrence: nil })
-                                   .map(&:iso3)
+    countries = GeoEntity.countries.map(&:iso3)
 
     filename = 'lib/data/habitat_presence/habitat_presence_country.csv'
 
     CSV.foreach(filename, headers: true, encoding: "utf-8") do |row|
-      next unless missing_occurrences.include?(row['ISO3'])
+      next unless countries.include?(row['ISO3'])
 
       Habitat.all.each do |habitat|
         stats = GeoEntity.find_by(iso3: row['ISO3']).geo_entity_stats
 
         next unless stats.find { |stat| stat.habitat == habitat}
 
-        if stats.find_by(habitat: habitat).nil?
-          byebug
-        end
+        camel_cased_title = habitat.title.gsub(/[\s-]/, '_')
 
-        stats.find_by(habitat: habitat).update(occurrence: row[habitat.title].to_i)
+        stats.find_by(habitat: habitat).update(occurrence: row[camel_cased_title].to_i)
       end
     end
   end

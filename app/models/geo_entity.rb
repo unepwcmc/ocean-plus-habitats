@@ -61,7 +61,7 @@ class GeoEntity < ApplicationRecord
     occurrences = fetch_needed_occurrence_attrs
 
     occurrences.map(&:attributes).map do |attrs| 
-      if STATS.all? { |attr| attrs[attr].nil? }
+      if STATS.all? { |attr| attrs[attr].nil? } && attrs[:occurrence] == 'unknown'
         modified_attrs = attrs.slice('name').merge({ 'occurrence': 'present-but-unknown' })
       else
         modified_attrs = attrs.slice('name', 'occurrence') 
