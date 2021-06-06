@@ -13,7 +13,7 @@ namespace :generate do
       protected_area percent_protected presence]
 
     habitat_data_directory = 'lib/data/countries'
-    @base_output_directory = 'public/downloads/national'
+    @base_output_directory = "#{Rails.root}/public/downloads/national"
 
     if Dir.exist?(@base_output_directory) && !Dir.empty?(@base_output_directory)
       FileUtils.rm_rf(@base_output_directory) 
@@ -32,6 +32,8 @@ namespace :generate do
       }
     end
 
+    FileUtils.mkdir_p(@base_output_directory)
+
     # Separate out mangroves from the rest of the data first
     mangroves_data, combined_csvs = combined_csvs.partition { |data_hash| data_hash[:habitat] == 'mangroves' }
 
@@ -47,29 +49,31 @@ namespace :generate do
         end
       end
 
-      output_dir = @base_output_directory + "/#{iso3}"
-
-      FileUtils.mkdir_p(output_dir) unless Dir.exist?(output_dir)
-
-      CsvUtils.csv_from_csv_rows(output_dir, @required_headers, habitat_data.first, filename: 'all_other_habitats')
-      CsvUtils.csv_from_csv_rows(output_dir, @mangroves_headers, habitat_data.last, filename: 'mangroves')
-
-      create_zip_from_files(output_dir, iso3)
+      create_zip_from_files(iso3, habitat_data)
     end
   end
 
-  def create_zip_from_files(output_dir, iso3)
-    zipfile_name = output_dir + ".zip"
+  def create_zip_from_files(iso3, habitat_data)
+    zipfile_name = File.join(@base_output_directory, iso3 + ".zip")
 
     unless File.exist?(zipfile_name)
       Zip::File.open(zipfile_name, Zip::File::CREATE) do |zipfile|
-        ['all_other_habitats.csv', 'mangroves.csv'].each do |filename|
-          zipfile.add(filename, File.join(@base_output_directory, iso3, filename))
-        end
+        zipfile.add('all_other_habitats', create_all_other_habitats_csv(habitat_data.first))
+        zipfile.add('mangroves', create_mangroves_csv(habitat_data.last))  
       end
     end
+  end
 
-    FileUtils.rm_rf(output_dir)
+  def create_all_other_habitats_csv(data)
+    CsvUtils.create_temp_csv("all_other_habitats") do |csv|
+      CsvUtils.csv_from_csv_rows(csv, @required_headers, data)
+    end
+  end
+
+  def create_mangroves_csv(data)
+    CsvUtils.create_temp_csv("mangroves") do |csv|
+      CsvUtils.csv_from_csv_rows(csv, @mangroves_headers, data)
+    end
   end
 
   def parse_required_values_and_convert_to_row(row, name_of_habitat)
