@@ -4,13 +4,13 @@
   &--doughnut {
     flex-wrap: wrap;
 
-    @include breakpoint($small) { flex-wrap: nowrap; }
+    @include breakpoint($medium) { flex-wrap: nowrap; }
 
     .chart {
       &__wrapper-ie11 { // do not remove - this is required to set the sizing for ie11
         width: 100%;
 
-        @include breakpoint($small) {
+        @include breakpoint($medium) {
           padding-bottom: 67%;
           width: 67%;
 
@@ -21,7 +21,7 @@
         &__chart{
           width: 100%;
 
-          @include breakpoint($small) {
+          @include breakpoint($medium) {
             position: absolute;
             top: 0;
             left: 0;
@@ -57,7 +57,7 @@
       &__side {
         width: 100%;
 
-        @include breakpoint($small) { width: 40%; }
+        @include breakpoint($medium) { width: 40%; }
         @include breakpoint($medium) { width: 33%; }
       }
 
