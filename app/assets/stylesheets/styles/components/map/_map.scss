@@ -118,6 +118,7 @@ $map-filters-button-bar-height: rem-calc(92);
       &.disabled {
         color: $grey;
         cursor: default;
+        font-style: italic;
         pointer-events: none;
 
         .map-filters__filter-key {
