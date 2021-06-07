@@ -36,6 +36,7 @@ const addCirclePaintOptions = (options, layer) => {
       6, 3
     ],
     'circle-color': layer.color,
+    'circle-opacity': getOpacity(layer.opacity)
   }
 }
 const addLinePaintOptions = (options, layer) => {
