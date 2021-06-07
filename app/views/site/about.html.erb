@@ -29,7 +29,7 @@
   <div class="content-page__logos">
     <% contributors.each do |logo| %>
       <%= link_to logo[:url], title: logo[:name], target: "_blank", class: "content-page__logo-wrapper" do %>
-        <%= image_tag "logos/logo-#{logo[:image]}.svg",
+        <%= image_tag "logos/logo-#{logo[:image]}",
           alt: logo[:name],
           class: "content-page__logo--#{logo[:id]}"
         %>
@@ -42,7 +42,7 @@
   <p><%= t('about.attribution.before') %></p>
 
   <p><strong>
-    <%= t('home.ancillary.citation_text', year: Date.today.year).html_safe %>
+    <%= t('about.attribution.citation', year: Date.today.year).html_safe %>
   </strong></p>
 
   <p><%= t('about.attribution.after').html_safe %></p>
