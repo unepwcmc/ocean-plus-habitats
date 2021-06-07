@@ -39,7 +39,7 @@ en:
     footer:
       about: About Ocean+ Habitats
       legal: Legal
-      copyright: '&copy; 2021 UN ENVIRONMENT PROGRAMME (UNEP)'
+      copyright: '&copy; %{year} UN ENVIRONMENT PROGRAMME (UNEP)'
       download_data: Download dataset
       download_stats: Download statistics
 
