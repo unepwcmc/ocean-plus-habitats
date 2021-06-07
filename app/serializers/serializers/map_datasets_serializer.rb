@@ -160,7 +160,8 @@ class Serializers::MapDatasetsSerializer < Serializers::Base
     habitat_datasets = DATASETS.map do |ds|
       dataset = ds.dup
       dataset[:name] = get_habitat_from_id(ds[:id])[:title]
-      dataset[:disabled] = absent_or_unknown(habitat_presence_status(ds)) 
+      dataset[:disabled] = absent_or_unknown(habitat_presence_status(ds))
+      dataset[:name] += " - #{I18n.t('global.map.no_data').downcase}" if dataset[:disabled]
 
       dataset
     end
@@ -173,9 +174,5 @@ class Serializers::MapDatasetsSerializer < Serializers::Base
 
   def habitat_presence_status dataset
     @habitat_presence_statuses[dataset[:id]]
-  end
-
-  def not_available_dataset_html
-    "<p>#{I18n.t('global.map.map_not_available')}</p>"
   end
 end
