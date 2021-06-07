@@ -7,8 +7,8 @@
 
           <modal-trigger
             id="citation"
-            class="modal__trigger--unstyled"
             modal-content="<%= @country_citations %>"
+            class="modal__trigger--unstyled"
           >
             <div class="downloads__button button--citation">
               <%= downloads[:national_data][:button] %>
@@ -34,12 +34,12 @@
         <p class="downloads__title"><%= downloads[:statistics][:title] %></p>
 
         <% if current_page?(country_link_path(@country&.name)) %>
-          <%= link_to downloads[:statistics][:button], "downloads/national/#{@country.iso3}.zip", 
-              class: 'downloads__button button--download', 
-              download: "#{@country.name}_statistics" 
+          <%= link_to downloads[:statistics][:button], "downloads/national/#{@country.iso3}.zip",
+              class: 'downloads__button button--download',
+              download: "#{@country.name}_statistics"
           %>
         <% else %>
-          <%= link_to downloads[:statistics][:button], "downloads/global_statistics.zip", 
+          <%= link_to downloads[:statistics][:button], "downloads/global_statistics.zip",
               class: 'downloads__button button--download'
           %>
         <% end %>

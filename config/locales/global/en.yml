@@ -52,7 +52,9 @@ en:
     homepage: "%{name} home page"
     visit: Visit %{name}
 
-    sources_modal_title: Sources
+    sources_modal:
+      title: Sources
+      tooltip: View sources
 
     map:
       wdpa_title: Protected Areas

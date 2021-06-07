@@ -1,5 +1,5 @@
-<section 
-  id="<%= id %>" 
+<section
+  id="<%= id %>"
   class="section-padding bg--grey-xlight"
 >
   <div class="container--small">
@@ -15,14 +15,14 @@
   </div>
 </section>
 
-<section 
+<section
   id="<%= id %>"
   class="section-padding"
 >
   <div class="container">
     <div class="flex">
       <h3><%= t('shared.proportion_protected.title_html') %></h3>
-      <modal-trigger id="citation" modal-content="<%= modal_content %>" class="icon--citation margin-space-left"></modal-trigger>
+      <modal-trigger id="citation" modal-content="<%= modal_content %>" tooltip-text="<%= t('global.sources_modal.tooltip').html_safe %>" class="icon--citation margin-space-left"></modal-trigger>
     </div>
 
     <%= render partial: '/shared/proportion-protected-chart',
