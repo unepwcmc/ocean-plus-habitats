@@ -10,10 +10,13 @@
       <span
         v-show="!disabled"
         :class="[ 'map-filters__filter-key', datasetFilterKeyClass ]"
+        :style="imageStyle"
       />
+
       <span class="map-filters__filter-title">
         {{ correctName }}
       </span>
+    
       <input
         :id="inputId"
         type="checkbox"
@@ -77,6 +80,11 @@ export default {
     inputId() {
       return `dataset_${this.datasetId}_${this.name}_input`
     },
+    imageStyle() {
+      return this.config.image ? 
+        `background-image: url(${this.config.image});` :
+        ''
+    }
   },
 
   watch: {

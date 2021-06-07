@@ -4,6 +4,7 @@ namespace :import do
     models =  %w(
       GeoEntityStat ChangeStat GeoRelationship CoastalStat GeoEntity
       GeoEntitiesSpecies Species GeoEntityStatsSources Source CountryCitation
+      GlobalChangeCitation
     )
 
     models.each do |m|

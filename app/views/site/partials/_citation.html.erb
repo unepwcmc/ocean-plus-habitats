@@ -1,11 +1,11 @@
 <section class="bg--navy-dark section-padding--bottom white">
   <div class="container--small citation">
     <p class="citation__title"><%= t('home.ancillary.citation_title'); %></p>
-    
-    <p class="citation__text"><%= 
-      t('home.ancillary.citation_text', 
+
+    <p class="citation__text"><%=
+      t('home.ancillary.citation_text',
         year: Date.today.year
-      ).html_safe 
+      ).html_safe
     %></p>
   </div>
 </section>

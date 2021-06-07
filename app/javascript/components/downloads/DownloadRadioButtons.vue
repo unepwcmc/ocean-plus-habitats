@@ -31,16 +31,17 @@
       :href="downloadLink"
       download
     >
-      {{ downloadText }}
+      {{ linkText }}
     </a>
   </div>
 </template>
 
 <script>
 import mixinIds from '../../mixins/mixin-ids'
+import { mixinResponsive } from '../../mixins/mixin-responsive'
 
 export default {
-  mixins: [mixinIds],
+  mixins: [mixinIds, mixinResponsive],
 
   props: {
     id: {
@@ -56,6 +57,11 @@ export default {
     downloadText: {
       type: String,
       default: ''
+    },
+
+    downloadTextMobile: {
+      type: String,
+      default: ''
     }
   },
 
@@ -67,6 +73,14 @@ export default {
 
   created () {
     this.initialise()
+  },
+
+  computed: {
+    linkText () {
+      const downloadTextMobile = this.downloadTextMobile || this.downloadText
+
+      return this.isSmall() ? downloadTextMobile : this.downloadText
+    }
   },
 
   methods: {

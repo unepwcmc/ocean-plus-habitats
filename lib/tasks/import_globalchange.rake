@@ -35,9 +35,9 @@ namespace :import do
         url = nil
 
         if reference.match?(/(http)/)
-          if reference.match?(/(URL:|doi:)/)
-            citation = reference.split(/(URL:|doi:)/).first.strip
-            url = reference.split(/(URL:|doi:)/).last.gsub(/\s+/, "")
+          if reference.match?(/(URL:|DOI:)/)
+            citation = reference.split(/(URL:|DOI:)/).first.strip
+            url = reference.split(/(URL:|DOI:)/).last.gsub(/\s+/, "")
           else
             citation = reference.split(' ')[0..-2].join(' ')
             url = reference.split(' ').last.gsub(/\s+/, "")

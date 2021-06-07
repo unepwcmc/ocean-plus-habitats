@@ -70,12 +70,6 @@ $map-filters-button-bar-height: rem-calc(92);
 
   &__content {
     padding: rem-calc(20 18);
-    overflow-y: auto;
-    max-height: rem-calc(380);
-    
-    @include breakpoint($small) {
-      max-height: none;
-    }
   }
 
   &__title {
@@ -108,7 +102,7 @@ $map-filters-button-bar-height: rem-calc(92);
     }
 
     &__filter {
-      background-color: $navy;
+      background-color: $navy-2;
       padding: rem-calc(7) rem-calc(10);
       
       @include breakpoint($small) {
@@ -118,6 +112,7 @@ $map-filters-button-bar-height: rem-calc(92);
       &.disabled {
         color: $grey;
         cursor: default;
+        font-style: italic;
         pointer-events: none;
 
         .map-filters__filter-key {
@@ -178,6 +173,7 @@ $map-filters-button-bar-height: rem-calc(92);
 
       &__filter-title {
         @include text-filter-title;
+        margin-right: rem-calc(8);
       }
 
       &__filter-description {

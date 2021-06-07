@@ -32,7 +32,8 @@ class Serializers::EezMapDatasetsSerializer < Serializers::Base
       name: habitat.camelize,
       title: Habitat.where(name: habitat).pluck(:title)[0],
       sourceLayers: source_layers(habitat),
-      tilesUrl: "https://data-gis.unep-wcmc.org/server/rest/services/Hosted/#{SERVICES[habitat]}/VectorTileServer/tile/{z}/{y}/{x}.pbf"
+      tilesUrl: "https://data-gis.unep-wcmc.org/server/rest/services/Hosted/#{SERVICES[habitat]}/VectorTileServer/tile/{z}/{y}/{x}.pbf",
+      opacity: 0.7
     }
   end
 
