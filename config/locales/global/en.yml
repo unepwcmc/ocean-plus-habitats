@@ -1,6 +1,6 @@
 en:
   global:
-    page_title: 
+    page_title:
       index: Ocean+ Habitats
       about: About
       legal: Legal
@@ -35,14 +35,14 @@ en:
         icon: icons/cold-coral.svg
     nav:
       burger_text: Explore a country/region
-    
+
     footer:
       about: About Ocean+ Habitats
       legal: Legal
-      copyright: Global Ocean Habitat Profile from the Ocean+ &copy; copyright
+      copyright: '&copy; %{year} UN ENVIRONMENT PROGRAMME (UNEP)'
       download_data: Download dataset
       download_stats: Download statistics
-    
+
     spatial_downloads_modal:
       title: Select habitat shape file
       text: Choose one habitat shape file from the list below to download.
@@ -51,7 +51,7 @@ en:
     homepage: "%{name} home page"
     visit: Visit %{name}
 
-    sources_modal_title: Sources 
+    sources_modal_title: Sources
 
     map:
       wdpa_title: Protected Areas

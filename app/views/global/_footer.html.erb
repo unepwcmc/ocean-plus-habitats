@@ -34,7 +34,7 @@
 
   <div class="footer__row--bottom">
     <div class="footer__copyright">
-      <%= "#{t('global.footer.copyright')} #{Date.current.strftime('%Y')}".html_safe %>
+      <%= "#{t('global.footer.copyright', year: Date.current.strftime('%Y'))}".html_safe %>
     </div>
   </div>
 </footer>
