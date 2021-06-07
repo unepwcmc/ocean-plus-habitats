@@ -47,6 +47,7 @@ en:
       title: Select habitat shape file
       text: Choose one habitat shape file from the list below to download.
       download_text: Download selected shape file
+      download_text_mobile: Download
 
     homepage: "%{name} home page"
     visit: Visit %{name}
