@@ -16,7 +16,7 @@
 
 @mixin text-2 {
   @include text-on-navy;
-  @include responsive-styles(font-size, rem-calc(25), rem-calc(25), rem-calc(25));
+  @include responsive-styles(font-size, rem-calc(22), rem-calc(25), rem-calc(25));
   color: $header-font-color;
   font-family: $header-font;
   font-weight: $semi-bold;
