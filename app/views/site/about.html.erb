@@ -9,7 +9,16 @@
     <p><%= p.html_safe %></p>
   <% end %>
 
-  VIDEO
+  <div class="content-page__video-container">
+    <iframe
+      class="content-page__video"
+      src="https://www.youtube.com/embed/qjd1F7gHx9s"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
 
   <% t('about.paragraphs.after_video').each do |p| %>
     <p><%= p.html_safe %></p>
