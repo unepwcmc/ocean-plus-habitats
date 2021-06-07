@@ -70,12 +70,6 @@ $map-filters-button-bar-height: rem-calc(92);
 
   &__content {
     padding: rem-calc(20 18);
-    overflow-y: auto;
-    max-height: rem-calc(380);
-    
-    @include breakpoint($small) {
-      max-height: none;
-    }
   }
 
   &__title {
