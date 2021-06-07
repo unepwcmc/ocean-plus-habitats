@@ -3,16 +3,14 @@
 <div class="cards--habitat-change">
   <% habitat_cover.each do |habitat| %>
   <div class="card__card">
-    <div class="flex">
+    <div class="card__visual flex <%= 'disabled' if habitat[:change_percentage].nil? %>">
       <i class="card__icon <%= get_habitat_icon_class(habitat[:id]) %>" alt="<%= habitat[:title] %> icon"></i>
 
-      <% unless habitat[:change_percentage].nil? %>
-        <span class="card__stat">
-          <div class="card__stat-text"><%= habitat[:change_direction] %></div>
+      <span class="card__stat">
+        <div class="card__stat-text"><%= habitat[:change_direction] %></div>
 
-          <div><%= habitat[:change_percentage] %></div>
-        </span>
-      <% end %>
+        <div><%= habitat[:change_percentage] || '--' %></div>
+      </span>
     </div>
 
     <div class="card__title-wrapper flex flex-v-center">
