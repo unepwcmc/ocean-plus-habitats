@@ -13,8 +13,6 @@
   background: image-url('icons/hide-view.svg') no-repeat center;
   background-size: 100%;
   width: $checkbox-size; height: $checkbox-size;
-
-  transition: ease-in-out 0.15s;
 }
 
 @include custom_input_checked('.default-checkbox', '.custom-checkbox') {
