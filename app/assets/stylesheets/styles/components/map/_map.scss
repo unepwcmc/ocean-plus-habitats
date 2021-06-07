@@ -178,6 +178,7 @@ $map-filters-button-bar-height: rem-calc(92);
 
       &__filter-title {
         @include text-filter-title;
+        margin-right: rem-calc(8);
       }
 
       &__filter-description {
