@@ -107,10 +107,11 @@ WDPA_DATASETS = [
     ],
     tilesUrl: 'https://data-gis.unep-wcmc.org/server/rest/services/Hosted/wdpa_oceanplus/VectorTileServer/tile/{z}/{y}/{x}.pbf',
     color: '#38A801',
-    opacity: 0.8,
+    opacity: 0.7,
     addUnderneath: true,
     name: I18n.t('global.map.wdpa_title'),
-    disabled: false
+    disabled: false,
+    image: ActionController::Base.helpers.image_url('map/stripes-wdpa.png')
   },
   {
     id: 'oecm',
@@ -126,10 +127,11 @@ WDPA_DATASETS = [
     ],
     tilesUrl: 'https://data-gis.unep-wcmc.org/server/rest/services/Hosted/oecm_oceanplus/VectorTileServer/tile/{z}/{y}/{x}.pbf',
     color: '#2700FC',
-    opacity: 0.8,
+    opacity: 0.7,
     addUnderneath: true,
     name: I18n.t('global.map.oecm_title'),
-    disabled: false
+    disabled: false,
+    image: ActionController::Base.helpers.image_url('map/stripes-oecm.png')
   }
 ].freeze
 
