@@ -124,6 +124,10 @@ module ApplicationHelper
     map_to_citations_string(I18n.t('home.red_list.citations', year: Date.today.year))
   end
 
+  def eez_map_modal
+    map_to_citations_string(I18n.t('home.eez_map.citations'))
+  end
+
   def habitats_present_modal
     map_to_citations_string(I18n.t('countries.shared.habitats_present.citations'))
   end
