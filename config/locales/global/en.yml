@@ -64,3 +64,11 @@ en:
 
     loss_of: Loss of
     gain_of: Gain of
+
+    errors:
+      404_title: The page you were looking for doesn't exist.
+      404_message: You may have mistyped the address or the page may have moved.
+      422_title: The change you wanted was rejected.
+      422_message: Maybe you tried to change something you didn't have access to.
+      500_title: We're sorry, but something went wrong.
+      check_logs: If you are the application owner check the logs for more information.
