@@ -92,48 +92,46 @@ DATASETS = [
   }
 ].freeze
 
-WDAP_DATASETS = [
+WDPA_DATASETS = [
   {
     id: 'wdpa',
     sourceLayers: [
       {
         type: 'point',
-        name: 'WCMC008_CoralReef2018_Pt_v4',
+        name: 'WDPA_point_Jun2021',
       },
       {
         type: 'poly',
-        name: 'WCMC008_CoralReef2018_Py_v4',
-      },
-      {
-        type: 'line',
-        name: 'WCMC008_CoralReef2018_Py_v4'
+        name: 'WDPA_poly_Jun2021',
       }
     ],
-    tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Global_Distribution_of_Coral_Reefs/VectorTileServer/tile/{z}/{y}/{x}.pbf',
+    tilesUrl: 'https://data-gis.unep-wcmc.org/server/rest/services/Hosted/wdpa_oceanplus/VectorTileServer/tile/{z}/{y}/{x}.pbf',
     color: '#38A801',
+    opacity: 0.5,
+    addUnderneath: true,
     name: I18n.t('global.map.wdpa_title'),
-    disabled: false
+    disabled: false,
+    image: ActionController::Base.helpers.image_url('map/stripes-wdpa.png')
   },
   {
     id: 'oecm',
     sourceLayers: [
       {
         type: 'point',
-        name: 'WCMC027_Saltmarshes_Pt_v6',
+        name: 'WDOECM_point_Jun2021',
       },
       {
         type: 'poly',
-        name: 'WCMC027_Saltmarshes_Py_v6',
-      },
-      {
-        type: 'line',
-        name: 'WCMC027_Saltmarshes_Py_v6'
+        name: 'WDOECM_poly_Jun2021',
       }
     ],
-    tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Global_Distribution_of_Saltmarshes/VectorTileServer/tile/{z}/{y}/{x}.pbf',
+    tilesUrl: 'https://data-gis.unep-wcmc.org/server/rest/services/Hosted/oecm_oceanplus/VectorTileServer/tile/{z}/{y}/{x}.pbf',
     color: '#2700FC',
+    opacity: 0.5,
+    addUnderneath: true,
     name: I18n.t('global.map.oecm_title'),
-    disabled: false
+    disabled: false,
+    image: ActionController::Base.helpers.image_url('map/stripes-oecm.png')
   }
 ].freeze
 
@@ -165,8 +163,7 @@ class Serializers::MapDatasetsSerializer < Serializers::Base
 
       dataset
     end
-
-    habitat_datasets + WDAP_DATASETS
+    habitat_datasets + WDPA_DATASETS
   end
 
   private
