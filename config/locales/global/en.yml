@@ -1,6 +1,6 @@
 en:
   global:
-    page_title: 
+    page_title:
       index: Ocean+ Habitats
       about: About
       legal: Legal
@@ -35,14 +35,14 @@ en:
         icon: icons/cold-coral.svg
     nav:
       burger_text: Explore a country/region
-    
+
     footer:
       about: About Ocean+ Habitats
       legal: Legal
       copyright: Global Ocean Habitat Profile from the Ocean+ &copy; copyright
       download_data: Download dataset
       download_stats: Download statistics
-    
+
     spatial_downloads_modal:
       title: Select habitat shape file
       text: Choose one habitat shape file from the list below to download.
@@ -51,7 +51,7 @@ en:
     homepage: "%{name} home page"
     visit: Visit %{name}
 
-    sources_modal_title: Sources 
+    sources_modal_title: Sources
 
     map:
       wdpa_title: Protected Areas
@@ -61,3 +61,11 @@ en:
 
     loss_of: Loss of
     gain_of: Gain of
+
+    errors:
+      404_title: The page you were looking for doesn't exist.
+      404_message: You may have mistyped the address or the page may have moved.
+      422_title: The change you wanted was rejected.
+      422_message: Maybe you tried to change something you didn't have access to.
+      500_title: We're sorry, but something went wrong.
+      check_logs: If you are the application owner check the logs for more information.

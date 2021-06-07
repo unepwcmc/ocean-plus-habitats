@@ -4,7 +4,7 @@ class CountriesController < ApplicationController
   def show
     @country = GeoEntity.find_by(name: country_name_from_param(params[:name]))
 
-    return redirect_to(action: 'unprocessable_entity', controller: 'errors') unless @country
+    return redirect_to(action: 'not_found', controller: 'errors') unless @country
 
     # TODO - work out how to integrate i18n with this for country names - we may want to
     # have a list of country names in each language which is then dynamically fetched from
