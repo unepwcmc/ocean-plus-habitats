@@ -170,13 +170,6 @@ module ApplicationHelper
     }.to_json
   end
 
-  def get_countries_hero_search_config
-    {
-      id: 'country',
-      placeholder: 'Search for Country or Territory'
-    }.to_json
-  end
-
   def get_nav_primary
     [
       {
