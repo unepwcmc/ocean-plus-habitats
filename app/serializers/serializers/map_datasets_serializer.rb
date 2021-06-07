@@ -92,7 +92,7 @@ DATASETS = [
   }
 ].freeze
 
-WDAP_DATASETS = [
+WDPA_DATASETS = [
   {
     id: 'wdpa',
     sourceLayers: [
@@ -107,7 +107,8 @@ WDAP_DATASETS = [
     ],
     tilesUrl: 'https://data-gis.unep-wcmc.org/server/rest/services/Hosted/wdpa_oceanplus/VectorTileServer/tile/{z}/{y}/{x}.pbf',
     color: '#38A801',
-    opacity: 0.4,
+    opacity: 0.8,
+    addUnderneath: true,
     name: I18n.t('global.map.wdpa_title'),
     disabled: false
   },
@@ -125,7 +126,8 @@ WDAP_DATASETS = [
     ],
     tilesUrl: 'https://data-gis.unep-wcmc.org/server/rest/services/Hosted/oecm_oceanplus/VectorTileServer/tile/{z}/{y}/{x}.pbf',
     color: '#2700FC',
-    opacity: 0.4,
+    opacity: 0.8,
+    addUnderneath: true,
     name: I18n.t('global.map.oecm_title'),
     disabled: false
   }
@@ -158,8 +160,7 @@ class Serializers::MapDatasetsSerializer < Serializers::Base
 
       dataset
     end
-
-    habitat_datasets + WDAP_DATASETS
+    habitat_datasets + WDPA_DATASETS
   end
 
   private

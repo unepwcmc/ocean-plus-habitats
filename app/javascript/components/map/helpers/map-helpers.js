@@ -1,4 +1,5 @@
-export const getSubLayerId = (layer, layerType) => layer.id + '-' + layerType
+// data-layer is used to distinguish these from base map layers
+export const getSubLayerId = (layer, layerType) => 'data-layer' + '-' + layer.id + '-' + layerType
 
 export const getSubLayerIds = layer =>
   ['poly', 'point', 'line', 'no-data', '0-20', '21-40', '41-60', '61-80', '81-100'].map(layerType => getSubLayerId(layer, layerType))
@@ -40,4 +41,17 @@ export const getFirstForegroundLayerId = map => {
   }
 
   return firstBoundaryId || firstSymbolId
+}
+
+export const getFirstDataLayerId = map => {
+  let id = ''
+  
+  for (const layer of map.getStyle().layers) {
+    if (layer.id.match('data-layer')) {
+      id = layer.id
+      break
+    }
+  }
+
+  return id
 }

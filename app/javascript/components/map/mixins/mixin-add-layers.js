@@ -1,3 +1,5 @@
+import { getFirstDataLayerId } from '../helpers/map-helpers'
+
 export default {
   methods: {
     addVectorTileLayer (layer) {            
@@ -45,7 +47,9 @@ export default {
         }
       }
 
-      this.map.addLayer(options, this.firstTopLayerId)
+      const nextLayer = layer.addUnderneath ? getFirstDataLayerId(this.map) : this.firstForegroundLayerId
+
+      this.map.addLayer(options, nextLayer)
     }
   }
 }
