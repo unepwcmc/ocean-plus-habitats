@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= render '/global/head' %>
+  </head>
+
+  <body>
+    <div id="v-app" v-cloak>
+      <translator
+        :translations="<%= @current_translations.to_json %>"
+        :locale="<%= @current_language.to_json %>">
+      </translator>
+
+      <%= render partial: 'global/topbar', locals: { dark: true } %>
+      <main class="content-page container--small page-padding">
+        <%= yield %>
+      </main>
+
+      <%= render '/global/footer' %>
+
+      <scroll-to-top></scroll-to-top>
+      <modal id="citation"></modal>
+    </div>
+  </body>
+</html>
