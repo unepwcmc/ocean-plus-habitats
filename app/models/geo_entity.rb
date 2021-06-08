@@ -17,15 +17,17 @@ class GeoEntity < ApplicationRecord
 
   scope :countries, -> { where.not(iso3: nil || 'GBL') }
   scope :regions, -> { where(iso3: nil) }
-  scope :allowed_countries, -> { countries.includes(:geo_entity_stats).where.not(geo_entity_stats: { id: nil }) }
+  
+  # Only allowing actual countries to be considered for the 'Next country' button
+  scope :allowed_countries, lambda {
+    countries.includes(:geo_entity_stats).where(iso3: ALLOWED_COUNTRIES).where.not(geo_entity_stats: { id: nil })
+  }
 
   NEGATIVE_OCCURRENCE_STATUSES = %w[unknown absent present-but-unknown].freeze
 
-  # Only allowing actual countries to be considered for the 'Next country' button
-  def self.permitted_countries
-    permitted = allowed_countries & ALLOWED_COUNTRIES.map { |iso3| find_by(iso3: iso3) }
 
-    permitted.sort_by(&:name)
+  def self.permitted_countries
+    allowed_countries.sort_by(&:name)
   end
 
   # Returns species data if directly attached to the GeoEntity, so a country.
