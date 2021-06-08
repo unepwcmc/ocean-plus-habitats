@@ -1,12 +1,13 @@
 FactoryBot.define do
   factory :geo_entity, aliases: [:country, :region] do
     sequence(:name) { |n| "Country #{n}" }
-    actual_name { 'Coüntry' }
+    sequence(:actual_name) { |n| "Coüntry #{n}" }
     iso3 { 'ABC' }
     bounding_box { [[-70.41666666583112, 12.150501231616646], [-68.87016907252374, 15.300000001018887]] }
 
     factory :country_with_mangroves do
       name { 'Country with mangroves' }
+      actual_name { 'Coüntry with mangroves' }
 
       factory :country_with_mangrove_change_stat do
         after(:create) do |country_with_mangroves, _evaluator|

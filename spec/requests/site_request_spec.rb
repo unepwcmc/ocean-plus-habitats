@@ -5,11 +5,11 @@ RSpec.describe "Site", type: :request do
     include_context 'geo_entity_stat_setup'
 
     before do
+      allow(GeoEntity).to receive(:permitted_countries).and_return(GeoEntity.all)
+
       habitats.each do |habitat|
         FactoryBot.create(:global_change_stat, habitat: habitat)
-      end
-      
-      habitats.each do |habitat|
+
         countries.each do |country|
           FactoryBot.create(:geo_entity_stat, habitat: habitat, geo_entity: country)
         end
@@ -33,9 +33,9 @@ RSpec.describe "Site", type: :request do
     end
   end
 
-  describe 'GET #methodologies' do
-    it 'loads the methodologies page' do
-      get '/site/methodologies'
+  describe 'GET #legal' do
+    it 'loads the legal page' do
+      get '/site/legal'
 
       expect(response).to be_successful
       expect(response.content_type).to eq('text/html')

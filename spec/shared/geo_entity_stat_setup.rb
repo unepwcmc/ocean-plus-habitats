@@ -1,5 +1,5 @@
 shared_context 'geo_entity_stat_setup' do
-  include_context 'countries_setup'
+  include_context 'habitats_setup'
 
   let(:habitats) { [coralreefs, coldcorals, mangroves, saltmarshes, seagrasses] }
 

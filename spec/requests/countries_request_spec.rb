@@ -4,6 +4,7 @@ RSpec.describe 'Countries', type: :request do
   include_context 'countries_setup'
 
   before do
+    allow(GeoEntity).to receive(:permitted_countries).and_return(GeoEntity.all)
     country
     many_species
   end
