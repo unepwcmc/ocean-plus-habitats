@@ -1,10 +1,12 @@
 // libraries
 import Vue from 'vue/dist/vue.esm'
 import TurbolinksAdapter from 'vue-turbolinks'
+import { addAnalyticsEvents, initVueAnalytics, trackPageView } from '../helpers/analytics'
 
 Vue.config.productionTip = false
-
 Vue.use(TurbolinksAdapter)
+
+initVueAnalytics(Vue)
 
 import store from '../store/store.js'
 
@@ -32,7 +34,12 @@ import VDial from '../components/dial/VDial'
 // create event hub and export so that it can be imported into .vue files
 export const eventHub = new Vue()
 
-document.addEventListener('turbolinks:load', () => {
+document.addEventListener('turbolinks:load', event => {
+  trackPageView(event)
+  // Even though we're inside turbolinks:load event it seems
+  // the dom isn't properly loaded at this point...?!
+  setTimeout(addAnalyticsEvents, 500)
+
   if(document.getElementById('v-app')) {
     Vue.prototype.$eventHub = new Vue()
 
