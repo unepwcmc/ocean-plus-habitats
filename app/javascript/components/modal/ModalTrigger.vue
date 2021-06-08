@@ -6,6 +6,12 @@
     @click="openModal"
   >
     <slot />
+    <span
+      v-if="tooltipText"
+      class="modal__tooltip"
+    >
+      {{ tooltipText }}
+    </span>
   </button>
 </template>
 
@@ -20,7 +26,11 @@ export default {
     },
     modalContent: {
       type: String,
-      required: true
+      default: null
+    },
+    tooltipText: {
+      type: String,
+      default: null
     }
   },
 

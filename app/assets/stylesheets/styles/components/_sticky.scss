@@ -7,22 +7,24 @@ $sticky-bar-height: rem-calc(80);
 // classes
 //--------------------------------------------------
 .sticky-bar {
-  &--home {
-    height: $sticky-bar-height;
+  height: $sticky-bar-height;
 
-    .sticky-bar {
-      &__target {
-        color: $white;
-        width: 100%; height: $sticky-bar-height;
+  .sticky-bar {
+    &__target {
+      color: $white;
+      width: 100%; height: $sticky-bar-height;
 
-        &.sticky {
-          position: fixed;
-          top: 0;
-          z-index: $z-200;
-        }
+      &.sticky {
+        position: fixed;
+        top: 0;
+        z-index: $z-200;
       }
-
-        &__content { height: 100%; }
     }
+
+      &__content { 
+        height: 100%; 
+
+        display: flex;
+      }
   }
 }

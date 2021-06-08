@@ -7,21 +7,19 @@ en:
         - 'These habitats are not only important for local communities, but also collectively form the foundations of national, regional and international progress toward targets related to human wellbeing, such as the <a href= "https://sustainabledevelopment.un.org/?menu=1300" title="Visit the UN Sustainable Development Goals and Targets site" target="_blank" rel="noopener">UN Sustainable Development Goals and Targets</a>. These can be explored further in the graphic below.'
       text_2:
         - For more information, please visit our country or regional pages.
-      doughnut_chart_title: "Contribution of protected areas to achieving the UN Sustainable Development Goals"
-      doughnut_chart_intro: "<p>As the Protected Planet Report 2016 showed, the benefits that protected areas provide are critical to address environmental and societal challenges.</p><p>The interactive figure below allows you to explore the contribution of protected areas to each of the Sustainable Development Goals'</p>"
       doughnut_chart_data:
         -
           title: "No poverty"
           colour: "#E5243B"
           icon: 'icons/sdg-goal-01.png'
-          description: "Globally, more than half the income of poor rural households comes from nature, and healthy ocean ecosystems provide food, fuel, and other crucial benefits that alleviate poverty directly. Coastal habitats support subsistence aquaculture, fisheries and tourism, providing livelihoods and direct income into the local economy. Many coastal habitats, such as mangroves and coral reefs, are key tourist destinations, that provide rich biodiversity that visitors can experience and benefit from."
+          description: "Globally, more than half the income of poor rural households comes from nature, and healthy ocean ecosystems provide food, fuel, and other crucial benefits that help to alleviate poverty. Coastal habitats support subsistence aquaculture, fisheries and tourism, providing livelihoods and direct income into the local economy. Many coastal habitats, such as mangroves and coral reefs, are key tourist destinations and provide rich biodiversity that visitors can experience and enjoy, promoting people’s mental and physical well-being."
           url: "https://www.un.org/sustainabledevelopment/poverty/"
           source: "Spalding et al., 2017 <a href='https://doi.org/10.1016/j.marpol.2017.05.014' title='Mapping the global value and distribution of coral reef tourism' target='_blank'>[ref]</a>; UNEP, 2014 <a href='https://www.unep-wcmc.org/system/dataset_file_fields/files/000/000/275/original/DEPI_Mangrove_ES_report_complete_Low_Res.pdf?1416237427' title='The Importance of mangroves to people: A call to action' target='_blank'>[ref]</a>, CBD Technical note <a href='https://www.cbd.int/development/doc/biodiversity-2030-agenda-technical-note-en.pdf' title='Biodiversity and the 2030 agenda for sustainable development' target='_blank'>[ref]</a>"
         -
           title: "Zero hunger"
           colour: "#DDA63A"
           icon: 'icons/sdg-goal-02.png'
-          description: "Many coastal ecosystems, such as seagrasses, mangroves and coral reefs, provide vital breeding and nursery grounds, in which nutritionally and economically important fish and invertebrate species can thrive. Sustainable management of these ecosystems can thus help to boost and protect sources of nutrition to coastal populations to reduce hunger."
+          description: "Many coastal ecosystems, such as seagrasses, mangroves and corals, provide vital breeding and nursery grounds, in which nutritionally and economically important fish and invertebrate species can thrive. Sustainable management of these ecosystems can thus help to boost and protect sources of nutrition for coastal populations, helping to reduce hunger."
           url: "https://www.un.org/sustainabledevelopment/hunger/"
           source: " IUCN, 2017 <a href='https://www.iucn.org/news/forests/201708/mangroves-nurseries-world%E2%80%99s-seafood-supply' title='Mangroves: nurseries for the world’s seafood supply' target='_blank'>[ref]</a>"
         -
@@ -35,14 +33,14 @@ en:
           title: "Quality education"
           colour: "#C5192D"
           icon: 'icons/sdg-goal-04.png'
-          description: "Understanding the ocean’s influence on people, as well as people’s influence on the ocean is known as ‘Ocean Literacy’. First-hand experiences of coastal habitats have been proven to enhance learning ocean users and non-users. ‘Hands-on’ experiences can be used to demonstrate our relationship with nature and improve understanding of healthy ecosystem functioning and drivers of change."
+          description: "Understanding the ocean’s influence on people as well as people’s influence on the ocean is known as ‘Ocean Literacy’. First-hand experiences of coastal habitats have been proven to enhance learning for those dependent on the marine environment and other stakeholders. ‘Hands-on’ experiences can be used to improve understanding of healthy ecosystem functioning and drivers of change and demonstrate our interconnected relationship with nature."
           url: "https://www.un.org/sustainabledevelopment/education/"
           source: "Ocean Literacy, 2013 <a href='http://www.coexploration.org/oceanliteracy/documents/OceanLitChart.pdf' title='Ocean Literacy' target='_blank'>[ref]</a>"
         -
           title: "Gender equality"
           colour: "#FF3A21"
           icon: 'icons/sdg-goal-05.png'
-          description: "In many coastal areas, women play a vital role in ecosystem management (including mangrove reforestation and restoration), onshore fisheries, aquaculture and resource harvesting. Gender-responsive projects focusing on integrated coastal zone management have helped to empower women in a number of areas to improve sustainable resource management, reduce poverty and inequality, and protect important habitats such as mangroves, corals and seagrasses."
+          description: "In many coastal areas, women play a vital role in ecosystem management (including mangrove reforestation and restoration), onshore fisheries, aquaculture and resource harvesting. Gender-responsive projects focusing on integrated coastal zone management have helped to empower women in several areas to improve sustainable resource management, reduce poverty and inequality, and protect important habitats such as mangroves, corals and seagrasses."
           url: "https://www.un.org/sustainabledevelopment/gender-equality/"
           source: "UN World Oceans Day Portal <a href='https://www.unworldoceansday.org/gender-and-ocean' title='Gender and the Ocean' target='_blank'>[ref]</a>; UNEP, 2019 <a href='http://wedocs.unep.org/bitstream/handle/20.500.11822/27633/Gender_MarEco.pdf?sequence=1&isAllowed=y' title='Gender mainstreaming in the Management of the Marine and Coastal Ecosystems' target='_blank'>[ref]</a>"
         -
@@ -63,21 +61,21 @@ en:
           title: "Decent work and economic growth"
           colour: "#A21942"
           icon: 'icons/sdg-goal-08.png'
-          description: "Marine and coastal habitats provide a variety of resources and ecosystem services that can support a sustainable economy. Mangrove, coral reef, saltmarsh and seagrass habitats can support and promote sustainable livelihoods.  Small businesses in aquaculture, fisheries, tourism and recreation can create job opportunities and generate income to support local economic growth and the sustainable management of coastal resources."
+          description: "Marine and coastal habitats provide a variety of resources and ecosystem services that can support a sustainable economy. Mangrove, coral reef, saltmarsh and seagrass habitats can support and promote sustainable livelihoods. Small businesses in aquaculture, fisheries, tourism and recreation can create job opportunities and generate income to support local economic growth and the sustainable management of coastal resources."
           url: "https://www.un.org/sustainabledevelopment/economic-growth/"
           source: "UNDP, 2016 <a href='https://www.cbd.int/development/doc/biodiversity-2030-agenda-technical-note-en.pdf' title='Biodiversity and the 2030 Agenda for Sustainable Development' target='_blank'>[ref]</a>"
         -
           title: "Industry, innovation and infrastructure"
           colour: "#FD6925"
           icon: 'icons/sdg-goal-09.png'
-          description: "Healthy coastal ecosystems are a form of reliable and cost-effective natural infrastructure. Mangrove forests and coral reefs protect coasts from floods and storm damage by reducing wave power. With climate change, the frequency and intensity of storms are predicted to increase, meaning coastal ecosystems are becoming increasingly valuable natural capital assets."
+          description: "Healthy coastal ecosystems are a form of reliable and cost-effective natural infrastructure. Mangrove forests and coral reefs protect coasts from floods and storm damage by reducing wave power. With climate change, the frequency and intensity of storms is predicted to increase, meaning coastal ecosystems are becoming increasingly valuable ‘natural capital assets' that bring valuable benefits and ecosystem services for businesses and society."
           url: "https://www.un.org/sustainabledevelopment/infrastructure-industrialization/"
           source: "Sutton-Grier et al. 2015 <a href='https://www.sciencedirect.com/science/article/pii/S1462901115000799' title='Future of our coasts: The potential for natural and hybrid infrastructure to enhance the resilience of our coastal communities, economies and ecosystems' target='_blank'>[ref]</a>; UNDP, 2016 <a href='https://www.cbd.int/development/doc/biodiversity-2030-agenda-technical-note-en.pdf' title='Biodiversity and the 2030 Agenda for Sustainable Development' target='_blank'>[ref]</a>"
         -
           title: "Reduced inequalities"
           colour: "#DD1367"
           icon: 'icons/sdg-goal-10.png'
-          description: "Larger income inequality within countries has been shown to be associated with greater losses of biodiversity. As hotspots of biodiversity, mangrove, goral, seagrass and saltmarsh habitats provide opportunities to reduce income and gender inequality through conservation and restoration efforts. This provides a change for greater recognition of key roles and comprehensive sustainable management to reduce biodiversity loss."
+          description: "Larger income inequality within countries has been shown to be associated with greater losses of biodiversity. Hotspots of biodiversity, mangrove, coral, seagrass and saltmarsh habitats provide opportunities to reduce income and gender inequality through conservation and restoration efforts. This provides a change for greater recognition of key roles and comprehensive sustainable management to reduce biodiversity loss."
           url: "https://www.un.org/sustainabledevelopment/inequality/"
           source: "Mikkelson et al. 2007 <a href='https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0000444' title='Economic Inequality Predicts Biodiversity Loss' target='_blank'>[ref]</a>; UNDP, 2016 <a href='https://www.cbd.int/development/doc/biodiversity-2030-agenda-technical-note-en.pdf' title='Biodiversity and the 2030 Agenda for Sustainable Development' target='_blank'>[ref]</a>"
         -
@@ -98,34 +96,34 @@ en:
           title: "Climate action"
           colour: "#3F7E44"
           icon: 'icons/sdg-goal-13.png'
-          description: "Coastal, ‘blue carbon’ habitats such as seagrasses and mangroves help to regulate our atmosphere, sequestering and storing carbon and thereby helping to offset carbon emissions. They can also help to protect coastal communities from extreme weather events, such as storm surges. Through these actions, coastal habitats contribute to national commitments by supporting coastal communities in mitigating and adapting to climate change."
+          description: "Coastal habitats such as seagrasses and mangroves help to regulate our atmosphere, sequestering and storing carbon and thereby helping to offset carbon emissions - this is known as 'blue carbon'. These habitats can also help to protect coastal communities from extreme weather events, such as storm surges. Through these actions, coastal habitats contribute to national commitments, such as the Sustainable Development Goals, by supporting coastal communities in mitigating and adapting to climate change."
           url: "https://www.un.org/sustainabledevelopment/climate-change-2/"
           source: "Fourqurean et al., 2012 <a href='https://www.nature.com/articles/ngeo1477/' title='Seagrass ecosystems as a globally significant carbon stock' target='_blank'>[ref]</a>; BCS et al., 2016 <a href='http://www.grida.no/publications/378' title='Blue Carbon – Nationally Determined Contributions Inventory' target='_blank'>[ref]</a>."
         -
           title: "Life below water"
           colour: "#0A97D9"
           icon: 'icons/sdg-goal-14.png'
-          description: "Marine and coastal habitats such as coral reefs, cold-water corals, mangrove forests, saltmarshes and seagrasses contain a disproportionately high amount of marine biodiversity. For instance, despite occupying <1% of the ocean, coral reefs host 25% of marine species. These ecosystems are therefore key to a healthy and thriving ocean that can continue to provide for human populations."
+          description: "Marine and coastal habitats such as warm- and cold-water corals, mangrove forests, saltmarshes and seagrasses contain a disproportionately high amount of marine biodiversity. For instance, despite occupying <1% of the ocean, coral reefs host 25% of marine species. These ecosystems are therefore key to maintaining a healthy and thriving ocean that will continue to provide for human populations."
           url: "https://www.un.org/sustainabledevelopment/oceans/"
           source: "Smithsonian, 2019 <a href='https://ocean.si.edu/ocean-life/invertebrates/corals-and-coral-reefs' title='Corals and Coral Reefs' target='_blank'>[ref]</a>"
         -
           title: "Life on land"
           colour: "#56C02B"
           icon: 'icons/sdg-goal-15.png'
-          description: "Mangrove forests, coral reefs, saltmarshes and seagrasses are often located where land and sea meet, playing an important role for both. In some cases, species are equally dependent on both terrestrial and marine habitats for survival. Similarly, humans live on land, yet have high dependence on marine ecosystems."
+          description: "Mangrove forests, corals, saltmarshes and seagrasses are often located where land and sea meet and play important roles across both. In some cases, species are equally dependent on both terrestrial and marine habitats for survival. Similarly, humans live on land yet have a high dependency on marine ecosystems."
           url: "https://www.un.org/sustainabledevelopment/biodiversity/"
           source: "Lee et al. 2014 <a href='https://onlinelibrary.wiley.com/doi/abs/10.1111/geb.12155' title='Ecological role and services of tropical mangrove ecosystems: a reassessment' target='_blank'>[ref]</a>; Samhouri & Levin, 2012 <a href='https://www.sciencedirect.com/science/article/pii/S0006320711003909' title='Linking land- and sea-based activities to risk in coastal ecosystems' target='_blank'>[ref]</a>"
         -
           title: "Peace, justice and strong institutions"
           colour: "#00689D"
           icon: 'icons/sdg-goal-16.png'
-          description: "Environmental crimes, such as deforestation, habitat destruction, illegal wildlife trade and illegal, unregulated or unreported (IUU) fishing, undermine sustainable development and threaten global security. Coastal habitats, and the resources and services they provide, need to be sustainably managed. This provides opportunities to establish inclusive management regimes that balance the user needs, reduce inequality and support healthy populations."
+          description: "Environmental crimes, such as illegal deforestation, habitat destruction, illegal wildlife trade and illegal, unregulated or unreported (IUU) fishing undermine sustainable development and threaten global security. Coastal and marine habitats, and the resources and services they provide, need to be sustainably managed. This provides opportunities to establish inclusive management regimes that balance the user needs, reduce inequality, and support healthy populations."
           url: "https://www.un.org/sustainabledevelopment/peace-justice/"
           source: "Okafor-Yarwood, 2019 <a href='https://www.sciencedirect.com/science/article/pii/S0308597X17303445' title='Illegal, unreported and unregulated fishing, and the complexities of the sustainable development goals (SDGs) for countries in the Gulf of Guinea' target='_blank'>[ref]</a>"
         -
           title: "Partnerships for the goals"
           colour: "#19486A"
           icon: 'icons/sdg-goal-17.png'
-          description: "Mangrove, coral reef, seagrass and saltmarsh habitats are rich in biodiversity and vital for sustainable development under the 2030 Agenda. They are also critical to the CBD Strategic Plan for Biodiversity, which provides a global framework for international cooperation related to the conservation and sustainable use of biodiversity. The SDGs and Strategic Plan for Biodiversity are therefore mutually supportive and reinforcing."
+          description: "Mangrove, warm- and cold-water corals, seagrass, and saltmarsh habitats are rich in biodiversity and vital for sustainable development under the 2030 Agenda. They are also critical to the CBD Strategic Plan for Biodiversity, which provides a global framework for international cooperation related to the conservation and sustainable use of biodiversity. The SDGs and Strategic Plan for Biodiversity are therefore mutually supportive and reinforcing of each other's goals."
           url: "https://www.un.org/sustainabledevelopment/globalpartnerships/"
           source: "Unger et al.  2017 <a href='http://publications.iass-potsdam.de/pubman/item/escidoc:2041892:3/component/escidoc:2041893/IASS_Policy_Brief_2017_1_en.pdf' title='Achieving the Sustainable Development Goal for the Oceans' target='_blank'>[ref]</a>"

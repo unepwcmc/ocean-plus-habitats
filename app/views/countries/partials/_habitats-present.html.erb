@@ -29,8 +29,9 @@
               <span class="card__habitat-title"><%= habitat[:title] %></span>
 
               <modal-trigger
-                id="citation" 
+                id="citation"
                 modal-content="<%= habitat[:citation].html_safe %>"
+                tooltip-text="<%= t('global.sources_modal.tooltip').html_safe %>"
                 class="icon--citation"
               ></modal-trigger>
             </p>

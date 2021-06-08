@@ -1,11 +1,13 @@
 en:
   shared:
     proportion_protected:
-      title_html: 'Proportion of habitat protected'
+      title_html: 'Proportion of habitat within protected and conserved areas'
       intro_text: 'According to the World Database on Protected Areas, the following reflects the proportion of habitats found within marine and coastal protected areas in %{country_name}.'
       intro_text_global: 'According to the World Database on Protected Areas, the following reflects the proportion of habitats found within marine and coastal protected areas worldwide.'
       title_present: Confirmed Presence
       title_absent: Confirmed Absence
       title_unknown: Data Deficient
       note: '<strong>Note:</strong> This outlines the proportion of each habitat that is known to occur within protected areas. However, the level of protection and whether or not these habitats are explicitly and effectively protected is unknown.'
-      last_updated: '<strong>Last updated:</strong> March, 2020'
+      last_updated: '<strong>Last updated:</strong> May 2021'
+      card:
+        percentage: '<strong>%{percentage}%</strong> of %{area} km<sup>2</sup>'

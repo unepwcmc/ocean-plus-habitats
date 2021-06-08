@@ -2,19 +2,20 @@ en:
   countries:
     shared:
       proportion_protected:
-        title_html: Proportion of habitat protected
-        intro_text: 'According to the <a href="http://www.protectedplanet.net" title="Protected Planet" target="_blank">World Database on Protected Areas</a>, the following reflects the proportion of habitats found within marine and coastal protected areas in %{country_name}.'
+        title_html: Proportion of habitat within protected and conserved areas
+        intro_text: 'According to the World Database on Protected Areas and Other Effective Area-Based Conservation Measures, the following reflects the proportion of habitats found within marine and coastal protected areas in %{country_name}.'
         title_present: Confirmed Presence
         title_absent: Confirmed Absence
         title_unknown: Data Deficient
-        note: '<strong>Note:</strong> This outlines the proportion of each habitat that is known to occur within protected areas. However, the level of protection and whether or not these habitats are explicitly and effectively protected is unknown.'
-        last_updated: 'Last updated: March, 2020'
+        note: '<strong>Note:</strong> This outlines the proportion of each habitat that is known to occur within protected or conserved areas. However, the level of protection and whether these habitats are explicitly and effectively protected is uncertain.'
+        last_updated: '<strong>Last updated:</strong> May 2021'
+         # NB - these citations come from the OceanPlus_Static_Citations.csv
         citations:
-          - "UNEP-WCMC, WorldFish Centre, WRI, TNC (2018). Global distribution of warm-water coral reefs, compiled from multiple sources including the Millennium Coral Reef Mapping Project. Version 4.0. Includes contributions from IMaRS-USF and IRD (2005), IMaRS-USF (2005) and Spalding et al. (2001). Cambridge (UK): UN Environment World Conservation Monitoring Centre. URL: http://data.unep-wcmc.org/datasets/1"
-          - "Mcowen C, Weatherdon LV, Bochove J, Sullivan E, Blyth S, Zockler C, Stanwell-Smith D, Kingston N, Martin CS, Spalding M, Fletcher S (2017). A global map of saltmarshes. Biodiversity Data Journal 5: e11764. Paper DOI: https://doi.org/10.3897/BDJ.5.e11764; Data URL: http://data.unep-wcmc.org/datasets/43"
-          - "Bunting P., Rosenqvist A., Lucas R., Rebelo L-M., Hilarides L., Thomas N., Hardy A., Itoh T., Shimada M. and Finlayson C.M. (2018). The Global Mangrove Watch – a New 2010 Global Baseline of Mangrove Extent. Remote Sensing 10(10): 1669. doi: 10.3390/rs1010669."
-          - "UNEP-WCMC, Short FT (2018). Global distribution of seagrasses (version 6.0). Sixth update to the data layer used in Green and Short (2003). Cambridge (UK): UN Environment World Conservation Monitoring Centre. URL: http://data.unep-wcmc.org/datasets/7"
-          - "Freiwald A, Rogers A, Hall-Spencer J, Guinotte JM, Davies AJ, Yesson C, Martin CS, Weatherdon LV (2017). Global distribution of cold-water corals (version 5.0). Fifth update to the dataset in Freiwald et al. (2004) by UNEP-WCMC, in collaboration with Andre Freiwald and John Guinotte. Cambridge (UK): UN Environment World Conservation Monitoring Centre. URL: http://data.unep-wcmc.org/datasets/3"
-          - "UNEP-WCMC and IUCN (2020), Protected Planet: The World Database on Protected Areas (WDPA) [On-line], [06/2020], Cambridge, UK: UNEP-WCMC and IUCN. Available at: www.protectedplanet.net."
-          - "Global Administrative Areas ( 2020). GADM database of Global Administrative Areas, version 3.6 [online] URL: www.gadm.org."
-          - "Flanders Marine Institute (2019). Maritime Boundaries Geodatabase, version 11. Available online at http://www.marineregions.org/. https://doi.org/10.14284/382."
+          - "UNEP-WCMC, WorldFish Centre, WRI, TNC (2018). Global distribution of warm-water coral reefs, compiled from multiple sources including the Millennium Coral Reef Mapping Project. Version 4.0. Includes contributions from IMaRS-USF and IRD (2005), IMaRS-USF (2005) and Spalding et al. (2001). Cambridge (UK): UN Environment World Conservation Monitoring Centre. URL: http://data.unep-wcmc.org/datasets/1"
+          - "Mcowen C, Weatherdon LV, Bochove J, Sullivan E, Blyth S, Zockler C, Stanwell-Smith D, Kingston N, Martin CS, Spalding M, Fletcher S (2017). A global map of saltmarshes. Biodiversity Data Journal 5: e11764. Paper doi: https://doi.org/10.3897/BDJ.5.e11764; Data URL: http://data.unep-wcmc.org/datasets/43"
+          - "Bunting P., Rosenqvist A., Lucas R., Rebelo L-M., Hilarides L., Thomas N., Hardy A., Itoh T., Shimada M. and Finlayson C.M. (2018). The Global Mangrove Watch – a New 2010 Global Baseline of Mangrove Extent. Remote Sensing 10(10): 1669. doi: https://doi.org/10.3390/rs10101669"
+          - "UNEP-WCMC, Short FT (2021). Global distribution of seagrasses (version 7.1). Seventh update to the data layer used in Green and Short (2003). Cambridge (UK): UN Environment World Conservation Monitoring Centre. URL: http://data.unep-wcmc.org/datasets/7"
+          - "Freiwald A, Rogers A, Hall-Spencer J, Guinotte JM, Davies AJ, Yesson C, Martin CS, Weatherdon LV (2017). Global distribution of cold-water corals (version 5.0). Fifth update to the dataset in Freiwald et al. (2004) by UNEP-WCMC, in collaboration with Andre Freiwald and John Guinotte. Cambridge (UK): UN Environment World Conservation Monitoring Centre. URL: http://data.unep-wcmc.org/datasets/3"
+          - "UNEP-WCMC and IUCN (2021), Protected Planet: The World Database on Protected Areas (WDPA) [On-line], [05/2021], Cambridge, UK: UNEP-WCMC and IUCN. Available at: https://www.protectedplanet.net"
+          - "Global Administrative Areas ( 2020). GADM database of Global Administrative Areas, version 3.6 [online] URL: https://gadm.org"
+          - "Flanders Marine Institute (2019). Maritime Boundaries Geodatabase, version 11. Available online at http://www.marineregions.org https://doi.org/10.14284/382"

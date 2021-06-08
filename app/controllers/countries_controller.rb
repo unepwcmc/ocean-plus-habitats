@@ -4,6 +4,8 @@ class CountriesController < ApplicationController
   def show
     @country = GeoEntity.find_by(name: country_name_from_param(params[:name]))
 
+    return redirect_to(action: 'not_found', controller: 'errors') unless @country
+
     # TODO - work out how to integrate i18n with this for country names - we may want to
     # have a list of country names in each language which is then dynamically fetched from
     # a CSV/yml depending on the language selected
@@ -14,6 +16,7 @@ class CountriesController < ApplicationController
     habitats_present_status = @country.occurrences
 
     @map_datasets = Serializers::MapDatasetsSerializer.new(habitats_protection_stats, habitats_present_status).serialize
+    @map_datasets_habitats = @map_datasets.reject { |d| %w[wdpa oecm].include?(d[:id]) }
     @habitats_present = Serializers::HabitatsPresentSerializer.new(habitats_present_status, @country).serialize
 
     red_list_data = @country.count_species
@@ -29,6 +32,21 @@ class CountriesController < ApplicationController
     @habitat_change = Serializers::HabitatCountryChangeSerializer.new(@country, habitats_present_status).serialize
 
     @stacked_row_chart = Serializers::RepresentationHabitatsSerializer.new(@country).serialize
-    @country_citations = @country.country_citations.order(:citation).pluck(:citation)
+    @country_citations = map_to_citations_string(@country.country_citations.order(:citation).pluck(:citation))
+
+    @next_country = next_country
+    @next_country_url = country_link_path(@next_country.actual_name)
+    @next_country_name = @next_country.actual_name
+    @next_country_flag = helpers.if_country_get_flag(@next_country.iso3)
+  end
+
+  private
+
+  def next_country
+    following_countries = GeoEntity.permitted_countries.select { |geo_entity| geo_entity.name > @country.name } 
+    
+    return GeoEntity.permitted_countries.first if following_countries.blank?
+    
+    following_countries.min_by { |geo_entity| geo_entity.name }
   end
 end

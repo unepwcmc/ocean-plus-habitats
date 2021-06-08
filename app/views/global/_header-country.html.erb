@@ -1,13 +1,13 @@
 <%= render partial: 'global/topbar.html.erb', locals: { dark: true } %>
 
-<%= render partial: '/countries/partials/nav-tertiary',
+<%= render partial: '/global/nav-tertiary',
   locals: {
     nav_tertiary: nav_tertiary_countries
   }
 %>
 
-<header class="header--country bg--grey-xlight">
-  <div class="header__content">
+<header class="header--country section-padding bg--grey-xlight">
+  <div class="header__content container--small">
     <%= if_country_get_flag(@iso3) %>
 
     <h1><%= @name %></h1>

@@ -2,12 +2,15 @@ en:
   home:
     red_list:
       title: Global species composition and status by habitat
-      intro_text: The table below outlines the number of species for each habitat by their global IUCN Red List status, illustrating the number of species assessed globally.
+      intro_text: 
+        - While knowledge of ecosystem health globally is still relatively limited, many of the species that comprise these habitats have been assessed through the <a href="https://www.iucnredlist.org/" title="Visit the IUCN Red List of Threatened Species site" target="_blank" rel="noopener">IUCN Red List of Threatened Species</a>. The Red List assesses the global extinction risk status of species, which helps to prioritize which species need conservation attention and protection more urgently. Accurately estimating how many species are endangered can further help countries to understand the resilience of their ecosystems.
+        - The table below shows the number of habitat-forming species within each habitat group, ordered by their global IUCN Red List status. It also illustrates the total number of species assessed globally for each group. Habitat-forming species are species such as seagrasses, corals and mangroves, which support diverse life by providing shelter or feeding grounds for other species and thereby play an important role in the functioning of an ecosystem.
+        - While most warm-water coral, mangrove and seagrass species have been assessed by the IUCN Red List team, there are still many species of saltmarshes and cold-water corals that have not yet been assessed, with a “Not Evaluated” status.
       citations:
-        - IUCN %{year}. The IUCN Red List of Threatened Species. Version[Latest]. https://www.iucnredlist.org. Accessed on [Date of Update].
-      smallprint_1: '<strong>Source:</strong> Data adapted from the <a href="https://www.iucnredlist.org/" title="Visit the IUCN Red List of Threatened Species site" target="_blank" rel="noopener">IUCN Red List of Threatened Species</a>.'
-      smallprint_2: '<strong>Warning:</strong> These statuses derive from global assessments, and do not necessarily reflect each species’ status by country.'
-      smallprint_3: '<strong>Last updated:</strong> March 2020'
+        - IUCN 2021. The IUCN Red List of Threatened Species. Version 2021-1. https://www.iucnredlist.org. 
+      smallprint_1: '<strong>Disclaimer:</strong> These statuses derive from global assessments, and do not necessarily reflect each species’ status by country.'
+      smallprint_2: '<strong>Source:</strong> Data adapted from the <a href="https://www.iucnredlist.org/" title="Visit the IUCN Red List of Threatened Species site" target="_blank" rel="noopener">IUCN Red List of Threatened Species</a>, version 2021-1.'
+      smallprint_3: '<strong>Last updated:</strong> May 2021'
       categories:
         -
           title: Critically endangered

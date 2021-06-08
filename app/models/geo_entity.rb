@@ -17,8 +17,18 @@ class GeoEntity < ApplicationRecord
 
   scope :countries, -> { where.not(iso3: nil || 'GBL') }
   scope :regions, -> { where(iso3: nil) }
+  
+  # Only allowing actual countries to be considered for the 'Next country' button
+  scope :valid_countries, lambda {
+    countries.includes(:geo_entity_stats).where(iso3: ALLOWED_COUNTRIES).where.not(geo_entity_stats: { id: nil })
+  }
 
   NEGATIVE_OCCURRENCE_STATUSES = %w[unknown absent present-but-unknown].freeze
+
+
+  def self.permitted_countries
+    valid_countries.sort_by(&:name)
+  end
 
   # Returns species data if directly attached to the GeoEntity, so a country.
   # Returns species data for all associated countries if it is a region.
@@ -48,7 +58,7 @@ class GeoEntity < ApplicationRecord
 
     occurrences.map do |occurrence|
       next if hash[occurrence['name']] == 'present'
-
+      
       hash[occurrence['name']] = occurrence['occurrence'] 
     end
 
@@ -61,7 +71,7 @@ class GeoEntity < ApplicationRecord
     occurrences = fetch_needed_occurrence_attrs
 
     occurrences.map(&:attributes).map do |attrs| 
-      if STATS.all? { |attr| attrs[attr].nil? }
+      if STATS.all? { |attr| attrs[attr].nil? } && attrs[:occurrence] == 'unknown'
         modified_attrs = attrs.slice('name').merge({ 'occurrence': 'present-but-unknown' })
       else
         modified_attrs = attrs.slice('name', 'occurrence') 

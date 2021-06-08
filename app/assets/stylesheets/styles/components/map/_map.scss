@@ -1,42 +1,56 @@
 @import './variables';
 @import './checkbox';
 
+$map-filters-button-bar-height: rem-calc(92);
+
 .map {
   &__container {
+    border: $border-thin $navy;
     margin-bottom: rem-calc(35);
-    height: 600px;
-
-    flex-direction: row-reverse;
+    
+    display: flex;
+    flex-direction: column;
     position: relative;
 
-    border: 1px solid $navy;
+    @include breakpoint($small) {
+      height: 600px;
+
+      flex-direction: row;
+    }
   }
 }
 
 .maptype {
-  &--eez {
-    height: 89%;
-    width: 100%;
-    padding-left: rem-calc(28);
-    padding-top: rem-calc(28);
-    padding-right: rem-calc(28);
-  }
   &--habitat {
-    height: 100%;
     width: 100%;
+  }
+
+  &--eez {
+    width: 100%;
+
+    @include breakpoint($small) {
+      padding: rem-calc(6);
+    }
   }
 }
 
 .mapboxgl {
   &-map {
-    height: 100%; width: 100%;
-    border: 1px solid $navy;
-  }
+    width: 100%; height: rem-calc(275);
+    
+    @include breakpoint($small) {
+      border: $border-thin $navy;
+      height: 100%;
+    }
 
-  &-canvas {
-    border: 2px solid $grey-light;
-    &:focus {
-      border-color: $navy;
+    .maptype--eez & {
+      @include breakpoint($small) {
+        height: $map-height-eez-tablet;
+      }
+
+      @include breakpoint($medium) {
+        height: $map-height-eez-laptop;
+      }
     }
   }
 }
@@ -45,22 +59,22 @@
 // Map filters
 //--------------------------------------------------
 .map-filters {
-  @include flex-no-shrink();
+  @include flex-no-shrink;
   background-color: $background-colour;
   color: $white;
-  padding: 40px 0px;
-  width: $pane-width-laptop; height: 100%;
+  width: 100%; height: 100%;
 
-  position: relative;
-  z-index: 100;
+  @include breakpoint($small) {
+    width: $pane-width-laptop;
+  }
 
+  &__content {
+    padding: rem-calc(20 18);
+  }
 
-  &__eezMessage {
-    @include text-7;
-    color: $white;
-    text-align: left;
-    padding-left: 20px;
-    padding-bottom: rem-calc(14);
+  &__title {
+    @include text-map-filters-title;
+    margin-bottom: rem-calc(14);
   }
 
   &__list {
@@ -68,24 +82,37 @@
   }
 
     &__list-li {
-      padding-top: rem-calc(14);
-      padding-bottom: rem-calc(14);
+      @include list-margins(bottom, rem-calc(4));
+      position: relative;
 
-      &--eez {
-        padding-top: 0;
-        padding-bottom: 0;
-        margin-bottom: 0;
+      &:nth-child(5) {
+        &::after {
+          background-color: rgba($white, 0.3);
+          content: '';
+          margin: rem-calc(9 0);
+          width: 100%; height: 1px;
+
+          display: block;
+
+          .map-filters--eez & {
+            display: none;
+          }
+        }
       }
     }
 
     &__filter {
-      margin-bottom: $item-spacing-small;
-      padding-left: 20px;
-      padding-right: 20px;
+      background-color: $navy-2;
+      padding: rem-calc(7) rem-calc(10);
+      
+      @include breakpoint($small) {
+        padding: rem-calc(7) rem-calc(14);
+      }
 
       &.disabled {
         color: $grey;
         cursor: default;
+        font-style: italic;
         pointer-events: none;
 
         .map-filters__filter-key {
@@ -96,19 +123,6 @@
           opacity: 0;
         }
       }
-
-      &--eez {
-        @include flex;
-        @include flex-v-center;
-        height: 75px;
-        margin-bottom: 0;
-
-        &--active {
-          background-color: $navy-dark;
-        }
-
-      }
-
     }
 
       &__filter-key {
@@ -119,6 +133,7 @@
         width: $key-size; height: $key-size;
 
         display: block;
+        position: relative;
 
         @for $i from 1 through length($habitats) {
           $habitat: nth($habitats, $i);
@@ -129,13 +144,36 @@
           }
         }
 
-        &--active {
-          background-color: $green;
+        &--wdpa {
+          background-color: $color-wdpa;
+        }
+
+        &--oecm {
+          background-color: $color-oecm;
+        }
+
+        .map-filters__filter--eez & {
+          width: $key-size-outer; height: $key-size-outer;
+
+          &::after {
+            @include item-center;
+            content: '';
+            border: $border;
+            border-radius: 100%;
+            width: $key-size-inner; height: $key-size-inner;
+          }
+        }
+
+        .map-filters__filter--eez.active & {
+          &::after {
+            background-color: $blue-light;
+          }
         }
       }
 
       &__filter-title {
         @include text-filter-title;
+        margin-right: rem-calc(8);
       }
 
       &__filter-description {
@@ -146,16 +184,6 @@
           margin-bottom: rem-calc(4);
         }
       }
-
-  &__button-bar {
-    background-color: $navy-xdark;
-    padding: rem-calc(8) 0;
-    width: 100%;
-
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
 }
 
 //--------------------------------------------------
@@ -237,16 +265,45 @@
 
 .eez-map-legend {
   @include flex;
-  @include flex-v-center;
-  @include flex-h-around;
+  @include flex-column;
   font-size: 0.7rem;
-  height: 11%;
+  padding: rem-calc(15 17);
   width: 100%;
 
+  @include breakpoint($small) {
+    padding-right: 0;
+    padding-left: 0;
+    height: calc(100% - #{$map-height-eez-tablet});
+  }
+
+  @include breakpoint($medium) {
+    height: calc(100% - #{$map-height-eez-laptop});
+  }
+
+  &__keys {
+    @include wrapped-cards;
+    width: 100%;
+  }
+
   &__key {
+    @include wrapped-card(2, 3, 6);
     @include flex;
-    @include flex-no-shrink;
     @include flex-v-center;
+
+    @include breakpoint-down($small) {
+      margin-right: rem-calc(10);
+      margin-bottom: rem-calc(16);
+    }
+  
+    @include between($small, $medium) {
+      margin-right: rem-calc(16);
+      margin-bottom: rem-calc(16);
+    }
+    
+    @include breakpoint($medium) {
+      margin-right: rem-calc(16);
+      margin-bottom: rem-calc(16);
+    }
   }
 
   &__color {
@@ -254,11 +311,13 @@
     border: $border-dark;
     border-radius: 100%;
     margin-right: $key-margin;
-    width: $key-size * 2; height: $key-size * 2;
+    width: $key-size-outer; height: $key-size-outer;
     display: block;
   }
+
   &__text {
     font-style: italic;
+    margin-bottom: rem-calc(10);
   }
 }
 

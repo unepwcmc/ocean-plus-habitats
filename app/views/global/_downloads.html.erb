@@ -1,0 +1,60 @@
+<section class="bg--navy-dark section-padding white">
+  <div class="container--small">
+    <ul class="ul-unstyled downloads">
+      <% if downloads.key?(:national_data) %>
+        <li class="downloads__li">
+          <p class="downloads__title"><%= downloads[:national_data][:title] %></p>
+
+          <modal-trigger
+            id="citation"
+            modal-content="<%= @country_citations %>"
+            class="modal__trigger--unstyled"
+          >
+            <div class="downloads__button button--citation">
+              <%= downloads[:national_data][:button] %>
+            </div>
+          </modal-trigger>
+        </li>
+      <% end %>
+
+      <li class="downloads__li">
+        <p class="downloads__title"><%= downloads[:spatial_data][:title] %></p>
+
+        <modal-trigger
+          id="spatial-downloads"
+          class="modal__trigger--unstyled"
+        >
+          <div class="downloads__button button--download">
+            <%= downloads[:spatial_data][:button] %>
+          </div>
+        </modal-trigger>
+      </li>
+
+      <li class="downloads__li">
+        <p class="downloads__title"><%= downloads[:statistics][:title] %></p>
+
+        <% if current_page?(country_link_path(@country&.name)) %>
+          <%= link_to downloads[:statistics][:button], "downloads/national/#{@country.iso3}.zip",
+              class: 'downloads__button button--download',
+              download: "#{@country.name}_statistics",
+              data: {
+                download_type: 'statistics',
+                download_label: @iso3.downcase
+              }
+          %>
+        <% else %>
+          <%= link_to downloads[:statistics][:button], "downloads/global_statistics.zip",
+              class: 'downloads__button button--download',
+              download: 'global_statistics',
+              data: {
+                download_type: 'statistics',
+                download_label: 'global'
+              } 
+          %>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<%= render 'global/spatial_downloads_modal' %>

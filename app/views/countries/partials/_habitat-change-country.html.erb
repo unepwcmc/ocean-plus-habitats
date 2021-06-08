@@ -2,7 +2,7 @@
   <div class="container">
     <div class="flex">
       <h2><%= t('countries.shared.habitat_change.title') %></h2>
-      <modal-trigger id="citation" modal-content="<%= modal_content %>" class="icon--citation margin-space-left"></modal-trigger>
+      <modal-trigger id="citation" modal-content="<%= modal_content %>" tooltip-text="<%= t('global.sources_modal.tooltip').html_safe %>" class="icon--citation margin-space-left"></modal-trigger>
     </div>
 
     <p class="max-width-container-small">
@@ -12,14 +12,14 @@
     <div class="cards--habitat-change">
       <% habitat_change.each do |habitat| %>
         <div class="card__card">
-          <div class="flex">
+          <div class="card__visual flex <%= 'disabled' if habitat[:change].zero? %>">
             <i class="card__icon <%= icon_class(habitat) %>" alt="<%= habitat[:title] %> icon"></i>
-            <% unless habitat[:change] == 0 %>
              <span class="card__stat">
+
               <div class="card__stat-text"><%= habitat[:change_direction] %></div>
-              <div><%= habitat[:change_abs].to_s.concat('%') %></div>
+
+              <div><%= habitat[:change_abs] %></div>
             </span>
-            <% end %>
           </div>
 
           <div class="card__title-wrapper flex flex-v-center">

@@ -1,4 +1,4 @@
-<section 
+<section
   id="<%= id %>"
   class="section-padding"
 >
@@ -6,7 +6,7 @@
     <div class="flex">
       <h2> <%= t('countries.shared.habitat_extent.title') %></h2>
 
-      <modal-trigger id="citation" modal-content="<%= modal_content %>" class="icon--citation margin-space-left"></modal-trigger>
+      <modal-trigger id="citation" modal-content="<%= modal_content %>" tooltip-text="<%= t('global.sources_modal.tooltip').html_safe %>" class="icon--citation margin-space-left"></modal-trigger>
     </div>
 
     <p class="max-width-container-small">
@@ -16,13 +16,13 @@
     <v-map-interactive
       id="'map-target'"
       iso3="<%= iso3 %>"
-      :has-download-button="true"
       :datasets="<%= datasets.to_json %>"
       :custom-bounding-box="<%= @country.bounding_box.to_json %>"
+      filters-title="<%= t('countries.shared.locations_map.filters_title') %>"
     ></v-map-interactive>
 
     <p class="text--smallprint max-width-container-small">
-      <%= t('global.map_disclaimer') %>
+      <%= t('global.map.map_disclaimer') %>
     </p>
 
     <p class="text--smallprint max-width-container-small">

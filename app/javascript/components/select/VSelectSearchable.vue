@@ -31,7 +31,7 @@
           role="combobox"
           aria-haspopup="listbox"
           aria-autocomplete="list"
-          autocomplete="off"
+          autocomplete="search-term"
           :aria-expanded="showOptions.toString()"
           :aria-owns="dropdownId"
           :aria-activedescendant="highlightedOptionId"

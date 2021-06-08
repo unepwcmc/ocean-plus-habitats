@@ -1,42 +1,74 @@
 en:
   global:
+    page_title:
+      index: Ocean+ Habitats
+      about: About
+      legal: Legal
     main_menu:
       regions_title: Regions
       search_by_country: Search by Country
     habitats:
       -
         id: coralreefs
-        title: Warm-water coral reefs
+        title: Warm-water corals
+        acronym: 'WWC'
         icon: icons/warm-coral.svg
       -
         id: saltmarshes
         title: Saltmarshes
+        acronym: 'SM'
         icon: icons/saltmarshes.svg
       -
         id: mangroves
         title: Mangroves
+        acronym: 'M'
         icon: icons/mangroves.svg
       -
         id: seagrasses
         title: Seagrasses
+        acronym: 'SG'
         icon: icons/seagrasses.svg
       -
         id: coldcorals
         title: Cold-water corals
+        acronym: 'CWC'
         icon: icons/cold-coral.svg
     nav:
       burger_text: Explore a country/region
 
-    footer_copyright: copyright
-    footer_downloads_title: Download datasets
+    footer:
+      about: About Ocean+ Habitats
+      legal: Legal
+      copyright: '&copy; %{year} UN ENVIRONMENT PROGRAMME (UNEP)'
+      download_data: Download dataset
+      download_stats: Download statistics
+
+    spatial_downloads_modal:
+      title: Select habitat shape file
+      text: Choose one habitat shape file from the list below to download.
+      download_text: Download selected shape file
+      download_text_mobile: Download
 
     homepage: "%{name} home page"
     visit: Visit %{name}
 
-    sources_modal_title: Sources 
+    sources_modal:
+      title: Sources
+      tooltip: View sources
 
-    map_disclaimer: 'Disclaimer: The designations employed and the presentation of material on this map do not imply the expression of any opinion whatsoever on the part of the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries.'
-    map_not_available: Not available
+    map:
+      wdpa_title: Protected Areas (marine and coastal)
+      oecm_title: Other effective area-based conservation measures (marine and coastal)
+      map_disclaimer: 'Disclaimer: The designations employed and the presentation of material on this map do not imply the expression of any opinion whatsoever on the part of the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries. * Non-Self-Governing Territory ** Dotted line represents approximately the Line of Control in Jammu and Kashmir agreed upon by India and Pakistan. The final status of Jammu and Kashmir has not yet been agreed upon by the parties. *** A dispute exists between the Governments of Argentina and the United Kingdom of Great Britain and Northern Ireland concerning sovereignty over the Falkland Islands (Malvinas).'
+      no_data: No data
 
     loss_of: Loss of
     gain_of: Gain of
+
+    errors:
+      404_title: The page you were looking for doesn't exist.
+      404_message: You may have mistyped the address or the page may have moved.
+      422_title: The change you wanted was rejected.
+      422_message: Maybe you tried to change something you didn't have access to.
+      500_title: We're sorry, but something went wrong.
+      check_logs: If you are the application owner check the logs for more information.

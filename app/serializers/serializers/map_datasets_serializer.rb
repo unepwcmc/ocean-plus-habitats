@@ -16,7 +16,7 @@ DATASETS = [
       }
     ],
     tilesUrl: 'https://tiles.arcgis.com/tiles/Mj0hjvkNtV7NRhA7/arcgis/rest/services/Global_Distribution_of_Coral_Reefs/VectorTileServer/tile/{z}/{y}/{x}.pbf',
-    color: '#CB47B5'
+    color: '#0F5F49'
   },
   {
     id: 'saltmarshes',
@@ -92,6 +92,50 @@ DATASETS = [
   }
 ].freeze
 
+WDPA_DATASETS = [
+  {
+    id: 'wdpa',
+    sourceLayers: [
+      {
+        type: 'point',
+        name: 'WDPA_point_Jun2021',
+      },
+      {
+        type: 'poly',
+        name: 'WDPA_poly_Jun2021',
+      }
+    ],
+    tilesUrl: 'https://data-gis.unep-wcmc.org/server/rest/services/Hosted/OceanPlus_WDPA_update_2/VectorTileServer/tile/{z}/{y}/{x}.pbf',
+    color: '#38A801',
+    opacity: 0.5,
+    addUnderneath: true,
+    name: I18n.t('global.map.wdpa_title'),
+    disabled: false,
+    image: 'map/stripes-wdpa.png'
+  },
+  {
+    id: 'oecm',
+    sourceLayers: [
+      {
+        type: 'point',
+        name: 'WDOECM_point_Jun2021',
+      },
+      {
+        type: 'poly',
+        name: 'WDOECM_poly_Jun2021',
+      }
+    ],
+    tilesUrl: 'https://data-gis.unep-wcmc.org/server/rest/services/Hosted/oecm_oceanplus/VectorTileServer/tile/{z}/{y}/{x}.pbf',
+    color: '#2700FC',
+    opacity: 0.5,
+    addUnderneath: true,
+    name: I18n.t('global.map.oecm_title'),
+    disabled: false,
+    image: 'map/stripes-oecm.png'
+  }
+].freeze
+
+
 HABITATS_PRESENCE_STATUSES_DEFAULT = {
   coralreefs: 'present',
   saltmarshes: 'present',
@@ -110,24 +154,30 @@ class Serializers::MapDatasetsSerializer < Serializers::Base
     super(habitat_protection_stats, 'habitat_protection_stats')
   end
 
-  def serialize
-    DATASETS.map do |ds|
+  def serialize()
+    habitat_datasets = DATASETS.map do |ds|
       dataset = ds.dup
       dataset[:name] = get_habitat_from_id(ds[:id])[:title]
-      dataset[:disabled] = absent_or_unknown(habitat_presence_status(ds)) 
+      dataset[:disabled] = absent_or_unknown(habitat_presence_status(ds))
+      dataset[:name] += " - #{I18n.t('global.map.no_data').downcase}" if dataset[:disabled]
+
+      dataset
+    end
+    habitat_datasets + wdpa_datasets
+  end
+
+  private
+
+  def wdpa_datasets
+    WDPA_DATASETS.map do |ds|
+      dataset = ds.dup
+      dataset[:image] = ActionController::Base.helpers.image_url(dataset[:image])
 
       dataset
     end
   end
 
-  private
-
-
   def habitat_presence_status dataset
     @habitat_presence_statuses[dataset[:id]]
-  end
-
-  def not_available_dataset_html
-    "<p>#{I18n.t('global.map_not_available')}</p>"
   end
 end

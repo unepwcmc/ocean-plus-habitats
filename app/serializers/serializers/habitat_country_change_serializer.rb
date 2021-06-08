@@ -29,7 +29,7 @@ class Serializers::HabitatCountryChangeSerializer < Serializers::Base
         title: habitat.title,
         status: status,
         change: cover_change,
-        change_abs: cover_change.abs,
+        change_abs: get_change_abs(cover_change),
         change_direction: I18n.t("global.#{cover_change > 0 ? 'gain_of' : 'loss_of'}"),
         text: text
       }
@@ -40,12 +40,16 @@ class Serializers::HabitatCountryChangeSerializer < Serializers::Base
           change[:text] = I18n.t('countries.shared.habitat_change.chart_text',
             km: country_cover_change[:change_km],
             habitat: habitat.title,
-            years: '2000-2019'
+            years: '2010-2016'
           )
       end
     end
 
     change
+  end
+
+  def get_change_abs(cover_change)
+    cover_change.zero? ? '--' : cover_change.abs.to_s.concat('%')
   end
 end
 

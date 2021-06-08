@@ -32,18 +32,26 @@
   padding: 0;
 }
 
+@mixin list-margins ($side, $value) {
+  margin-#{$side}: $value;
+
+  &:last-child {
+    margin-#{$side}: 0;
+  }
+}
+
 //--------------------------------------------------
 // overlays
 //--------------------------------------------------
 @mixin gradient($colour: $white, $side: top, $height: 100%) {
   position: relative;
-  
+
   &:after {
     background: linear-gradient(to $side, rgba($colour,0%) 60%, $colour);
     content: '';
     pointer-events: none;
     width: 100%; height: 100%;
-    
+
     display: block;
     position: absolute;
     top: 0;
@@ -58,11 +66,11 @@
 //--------------------------------------------------
 @mixin triangle ($base, $height, $color, $direction:'up') {
   content: '';
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   border-left: $base/2 solid transparent;
   border-right: $base/2 solid transparent;
-  
+
   border-bottom: $height solid $color;
 
   display: block;
@@ -88,18 +96,18 @@
 
     right: 0;
   }
-  
+
   @if ($direction == 'left') {
     border-right: $transparent;
     border-left: $coloured;
 
     left: 0;
   }
-  
+
   border-bottom: $height solid transparent;
   content: '';
-  width: 0; height: 0; 
-  
+  width: 0; height: 0;
+
   display: block;
   position: absolute;
   bottom: -$height;
@@ -119,6 +127,14 @@
   }
 }
 
+@mixin list-margins ($side, $value) {
+  margin-#{$side}: $value;
+
+  &:last-child {
+    margin-#{$side}: 0;
+  }
+}
+
 //--------------------------------------------------
 // positioning
 //--------------------------------------------------
@@ -128,4 +144,53 @@
   left: 50%;
 
   transform: translate(-50%, -50%);
+}
+
+//--------------------------------------------------
+// cards
+//--------------------------------------------------
+
+@mixin wrapped-cards {
+  @include flex;
+  @include flex-h-between;
+  @include flex-wrap;
+}
+
+@mixin wrapped-card(
+  $n-mobile,
+  $n-tablet,
+  $n-laptop,
+  $spacing-mobile: rem-calc(16),
+  $spacing-tablet: rem-calc(20),
+  $spacing-laptop: rem-calc(24),
+) {
+  flex-shrink: 0;
+
+  &:last-child { margin-right: auto; }
+
+  @include breakpoint-down($small) {
+    @include wrapped-card-breakpoint($n-mobile, rem-calc(16));
+  }
+
+  @include between($small, $medium) {
+    @include wrapped-card-breakpoint($n-tablet, rem-calc(20));
+  }
+
+  @include breakpoint($medium) {
+    @include wrapped-card-breakpoint($n-laptop, rem-calc(24));
+  }
+}
+
+@mixin wrapped-card-breakpoint($n, $spacing: rem-calc(20)) {
+  margin-right: $spacing;
+  margin-bottom: $spacing;
+  width: calc((100% - (#{$n} - 1) * #{$spacing}) / #{$n});
+
+  &:nth-child(#{$n}n) {
+    margin-right: 0;
+  }
+
+  &:nth-last-child(-n+#{$n}) {
+    margin-bottom: 0;
+  }
 }

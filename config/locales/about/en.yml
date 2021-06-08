@@ -1,7 +1,43 @@
 en:
   about:
     title: About Ocean+ Habitats
-    paragraphs: 
-      - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-      - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-      - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    paragraphs:
+      before_video:
+        - 
+          Ocean+ Habitats offers authoritative insight about the health, distribution and change of marine habitats around the world. By connecting public and private sector decision-makers with state-of-the-art biodiversity knowledge developed by collaborators, Ocean+ Habitats provides actionable data to inform conservation and restoration of marine ecosystems. 
+        - 
+          'Since 2011, global marine biodiversity datasets hosted on the <a href="https://data.unep-wcmc.org/" target="_blank">Ocean Data Viewer</a> have been used by more than 3,200 organisations in 219 countries and territories across six continents. Companies in the <a href="https://www.proteuspartners.org/" target="_blank">Proteus Partnership</a> have used Ocean+ and associated databases to conduct high-level screening for areas of biodiversity importance. Government agencies and conservation planners use the information to prioritize new conservation and restoration actions and build national data inventories. Development banks have used the data to conduct environmental risk analyses and inform financing. Universities and schools have used Ocean+ for training and research, while hosted data are frequently used in indicator development. In many cases, these users have shared the need for insight on the state of marine and coastal habitats to inform decisions.' 
+        - 
+          'Ocean+ Habitats responds to these users’ requests for access to derived statistics and information on marine and coastal habitats and their levels of protection. By partnering with authoritative biodiversity knowledge providers such as <a href="https://www.protectedplanet.net/" target="_blank">Protected Planet</a> and the <a href="https://www.iucnredlist.org/" target="_blank">IUCN Red List of Threatened Species</a>, Ocean+ Habitats provides the contextual information that can help public and private sector decision-makers understand where protection is needed, which species are facing extinction risks, and how future conservation efforts should be prioritised.'
+        -
+          'The information provided can be used for the emerging post-2020 global biodiversity framework and related indicators, as well as national, regional and global implementation during the <a href="https://www.oceandecade.org/" target="_blank">UN Decade of Ocean Science for Sustainable Development</a> and the <a href="https://www.decadeonrestoration.org/" target="_blank">UN Decade on Ecosystem Restoration.</a>'
+      after_video:
+        - 
+          'Ocean+ Habitats is made possible by the contributions of more than 800 data providers around the world, but there is much more to do! You can help us to improve the quality and accessibility of information by contributing or informing us of relevant data, corrections and information that could be suitable for inclusion. We invite feedback on the site, as well as collaboration.'
+        -
+          'We are exploring the following options for the next phase of development:'
+        -
+          '<ul>
+            <li>Connecting with other authoritative data providers and emerging state-of-the-art datasets;</li>
+            <li>Expanding coverage and accuracy, including for other marine and coastal habitats such as temperate reefs and kelp forests;</li>
+            <li>Aligning with the headline and complementary indicators of the emerging post-2020 global biodiversity framework once agreed; and</li>
+            <li>Creating an Ocean+ Habitats API to enhance interoperability between platforms.</li>
+          </ul>'
+        -
+          If you would like to know more about Ocean+ or to collaborate or contribute data, please email us at <a href="mailto:oceanplus@unep-wcmc.org">oceanplus@unep-wcmc.org</a>. 
+    contributors:
+      title: Contributors
+      logos:
+        red_list: IUCN Red List
+        protected_planet: Protected Planet
+        global_mangrove_watch: Global Mangrove Watch
+    attribution:
+      title: Attribution
+      before: 'Please use the following citation when using Ocean+ Habitats materials:'
+      citation: 'UNEP-WCMC (%{year}). Ocean+ Habitats [On-line], [insert month/year of the version downloaded]. Available at: <a href="/" title="Visit Ocean+ Habitats">habitats.oceanplus.org</a>. DOI: <a href="https://doi.org/10.34892/fpe3-ar97" title="Ocean+ Habitats DOI">https://doi.org/10.34892/fpe3-ar97</a>.' 
+      after: 'Please use and cite third-party data in accordance with their respective terms and conditions. For further information on our terms and conditions, please visit our <a href="/site/legal" title="Go to legal page">legal page</a>.'
+    methodology:
+      title: Methodology
+      paragraph: The methodology used to create the statistics on this site can be found below. Please refer to the newest version of the methodology, as this is continuously updated and refined.
+      download_text: Version 1, June 2021
+      download_title: Download methodology PDF

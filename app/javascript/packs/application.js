@@ -1,22 +1,25 @@
 // libraries
 import Vue from 'vue/dist/vue.esm'
 import TurbolinksAdapter from 'vue-turbolinks'
+import { addAnalyticsEvents, initVueAnalytics, trackPageView } from '../helpers/analytics'
 
 Vue.config.productionTip = false
-
 Vue.use(TurbolinksAdapter)
+
+initVueAnalytics(Vue)
 
 import store from '../store/store.js'
 
 // components
 import ChartDoughnut from '../components/chart/ChartDoughnut'
-import ChartRows from '../components/chart/ChartRows.vue'
 import ChartRowStacked from '../components/chart/ChartRowStacked.vue'
+import DownloadRadioButtons from '../components/downloads/DownloadRadioButtons.vue'
 import ExampleSpecies from '../components/content/ExampleSpecies.vue'
 import ExampleSpeciesCount from '../components/content/ExampleSpeciesCount.vue'
 import NavBurger from '../components/nav/NavBurger.vue'
 import NavScrollTo from '../components/nav/NavScrollTo.vue'
 import Modal from '../components/modal/Modal.vue'
+import ModalBase from '../components/modal/ModalBase.vue'
 import ModalTrigger from '../components/modal/ModalTrigger.vue'
 import VSelect from '../components/select/VSelect.vue'
 import VSelectSearchable from '../components/select/VSelectSearchable.vue'
@@ -31,7 +34,12 @@ import VDial from '../components/dial/VDial'
 // create event hub and export so that it can be imported into .vue files
 export const eventHub = new Vue()
 
-document.addEventListener('turbolinks:load', () => {
+document.addEventListener('turbolinks:load', event => {
+  trackPageView(event)
+  // Even though we're inside turbolinks:load event it seems
+  // the dom isn't properly loaded at this point...?!
+  setTimeout(addAnalyticsEvents, 500)
+
   if(document.getElementById('v-app')) {
     Vue.prototype.$eventHub = new Vue()
 
@@ -40,11 +48,12 @@ document.addEventListener('turbolinks:load', () => {
       store,
       components: {
         ChartDoughnut,
-        ChartRows,
         ChartRowStacked,
+        DownloadRadioButtons,
         ExampleSpecies,
         ExampleSpeciesCount,
         Modal,
+        ModalBase,
         ModalTrigger,
         NavBurger,
         NavScrollTo,

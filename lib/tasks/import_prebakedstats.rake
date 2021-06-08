@@ -15,6 +15,10 @@ namespace :import do
         import_new_csv_file(habitat.name, csv_file)
       end
     end
+
+    # Import occurrences for any countries that are missing (disregarding regions for the moment)
+    # using habitat_country_presence.csv
+    import_habitat_occurrences
   end
 
   def import_new_csv_file(habitat, csv_file)
@@ -23,7 +27,7 @@ namespace :import do
       # First we check whether it is a country (using ISO3) or a region depending on the CSV file
       # Then we fetch the geo entity. If it can't be found, fetch_geo_entity will return nil
       # Hence we can then skip any geo_entity that is nil
-      name = row['ISO3'] || row['region']
+      name = row['iso3'] || row['region']
       geo_entity = fetch_geo_entity(name)
       next unless geo_entity
 
@@ -43,13 +47,11 @@ namespace :import do
     protected_value = coerce_to_value(csv_row["protected_area"])
     total_value = coerce_to_value(csv_row[total_value_column])
     protected_percentage = coerce_to_value(csv_row["percent_protected"])
-    occurrence = csv_row["occurrence"]
 
     GeoEntityStat.find_or_create_by(habitat: habitat, geo_entity: geo_entity) do |stat|
       stat.protected_value      = protected_value
       stat.total_value          = total_value
       stat.protected_percentage = protected_percentage
-      stat.occurrence           = occurrence
     end
   end
 
@@ -93,5 +95,25 @@ namespace :import do
     end
 
     geo_entity
+  end
+
+  def import_habitat_occurrences
+    countries = GeoEntity.countries.map(&:iso3)
+
+    filename = 'lib/data/habitat_presence/habitat_presence_country.csv'
+
+    CSV.foreach(filename, headers: true, encoding: "utf-8") do |row|
+      next unless countries.include?(row['ISO3'])
+
+      Habitat.all.each do |habitat|
+        stats = GeoEntity.find_by(iso3: row['ISO3']).geo_entity_stats
+
+        next unless stats.find { |stat| stat.habitat == habitat}
+
+        camel_cased_title = habitat.title.gsub(/[\s-]/, '_')
+
+        stats.find_by(habitat: habitat).update(occurrence: row[camel_cased_title].to_i)
+      end
+    end
   end
 end

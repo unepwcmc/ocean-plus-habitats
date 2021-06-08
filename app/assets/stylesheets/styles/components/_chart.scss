@@ -92,8 +92,6 @@ $chart-row-margin: rem-calc(0 0 14 0);
 .chart {
   @import './charts/chart-doughnut.scss';
   @import './charts/chart-legend.scss';
-  @import './charts/chart-row.scss';
-  @import './charts/chart-rows.scss';
   @import './charts/chart-stacked-row.scss';
 }
 

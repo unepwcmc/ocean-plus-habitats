@@ -1,23 +1,22 @@
 <template>
   <div
     class="map-filters__filter"
-    :class="{ 'disabled': disabled, 'map-filters__filter--eez': isEez, 'map-filters__filter--eez--active': isEezActive }"
+    :class="{ 'disabled': disabled, 'active': isActive, 'map-filters__filter--eez': isEez }"
   >
     <label
       :for="inputId"
       class="map-filters__filter-label hover--pointer flex flex-v-center"
-      :class="{ 'map-filter--active': isActive }"
     >
       <span
         v-show="!disabled"
-        :class="[ 'map-filters__filter-key', standardClass, isActiveClass ]"
+        :class="[ 'map-filters__filter-key', datasetFilterKeyClass ]"
+        :style="imageStyle"
       />
-      <span
-        class="map-filters__filter-title"
-        :class="{ 'map-filters_filter-title_eezmap' : isActive }"
-      >
+
+      <span class="map-filters__filter-title">
         {{ correctName }}
       </span>
+    
       <input
         :id="inputId"
         type="checkbox"
@@ -72,14 +71,8 @@ export default {
     isEez() {
       return /(eez)/.test(this.datasetId)
     },
-    isEezActive() {
-      return this.isEez && this.isActive
-    },
-    standardClass() {
-      return !this.isEez ? `map-filters__filter-key--${this.datasetId}` : this.isActiveClass
-    },
-    isActiveClass() {
-      return this.isEezActive ? 'map-filters__filter-key--active' : ''
+    datasetFilterKeyClass() {
+      return `map-filters__filter-key--${this.datasetId}`
     },
     correctName() {
       return this.isEez ? this.title : this.name
@@ -87,6 +80,11 @@ export default {
     inputId() {
       return `dataset_${this.datasetId}_${this.name}_input`
     },
+    imageStyle() {
+      return this.config.image ? 
+        `background-image: url(${this.config.image});` :
+        ''
+    }
   },
 
   watch: {

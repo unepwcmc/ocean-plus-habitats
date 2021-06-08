@@ -1,5 +1,5 @@
 set :stage, :production
-set :branch, "supported-production"
+set :branch, "main"
 
 
 server "web-supported-production.linode.unep-wcmc.org", user: 'wcmc', roles: %w{app web db}

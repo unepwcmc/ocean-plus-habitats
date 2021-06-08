@@ -3,16 +3,20 @@
     class="eez-map-legend"
   >
     <span class="eez-map-legend__text">{{ text }}</span>
-    <div
-      v-for="extent in layers"
-      :key="extent.id"
-      class="eez-map-legend__key"
-    >
-      <span
+    <div class="eez-map-legend__keys">
+      <div
+        v-for="extent in layers"
         :key="extent.id"
-        class="eez-map-legend__color"
-        :style="{ 'background-color': extent.color }"
-      /><span>{{ extent.sub_name | correct }}</span>
+        class="eez-map-legend__key"
+      >
+        <span
+          :key="extent.id"
+          class="eez-map-legend__color"
+          :style="{ 'background-color': extent.color }"
+        />
+        
+        <span>{{ extent.sub_name | correct }}</span>
+      </div>
     </div>
   </div>
 </template>
