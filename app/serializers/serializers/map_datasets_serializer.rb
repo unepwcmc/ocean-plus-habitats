@@ -111,7 +111,7 @@ WDPA_DATASETS = [
     addUnderneath: true,
     name: I18n.t('global.map.wdpa_title'),
     disabled: false,
-    image: ActionController::Base.helpers.image_url('map/stripes-wdpa.png')
+    image: 'map/stripes-wdpa.png'
   },
   {
     id: 'oecm',
@@ -131,7 +131,7 @@ WDPA_DATASETS = [
     addUnderneath: true,
     name: I18n.t('global.map.oecm_title'),
     disabled: false,
-    image: ActionController::Base.helpers.image_url('map/stripes-oecm.png')
+    image: 'map/stripes-oecm.png'
   }
 ].freeze
 
@@ -163,11 +163,19 @@ class Serializers::MapDatasetsSerializer < Serializers::Base
 
       dataset
     end
-    habitat_datasets + WDPA_DATASETS
+    habitat_datasets + wdpa_datasets
   end
 
   private
 
+  def wdpa_datasets
+    WDPA_DATASETS.map do |ds|
+      dataset = ds.dup
+      dataset[:image] = ActionController::Base.helpers.image_url(dataset[:image])
+
+      dataset
+    end
+  end
 
   def habitat_presence_status dataset
     @habitat_presence_statuses[dataset[:id]]

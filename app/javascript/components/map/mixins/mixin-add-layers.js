@@ -1,19 +1,27 @@
 import { getFirstDataLayerId } from '../helpers/map-helpers'
 
-const addImagePaintOptions = (map, options, layer) => {
-  addFillPaintOptions(options, layer)
-  const patternId = 'pattern' + layer.id
-
-  options['paint']['fill-pattern'] = patternId
-
+const addImageLayer = (map, options, layer, nextLayer) => {
   map.loadImage(
     layer.image,
     (err, image) => {
-      if (err) { throw err }
-      
-      map.addImage(patternId, image)
+      if (err) { 
+        console.warn(`Image ${layer.image} not found. Falling back to solid fill.`)
+
+        delete options['paint']['fill-pattern']
+
+        map.addLayer(options, nextLayer)
+      } else {
+        map.addImage(getPatternId(layer), image)
+        map.addLayer(options, nextLayer)
+      }
     }
   )
+}
+
+const addImagePaintOptions = (options, layer) => {
+  addFillPaintOptions(options, layer)
+
+  options['paint']['fill-pattern'] = getPatternId(layer)
 }
 
 const addFillPaintOptions = (options, layer) => {
@@ -54,6 +62,8 @@ const addLinePaintOptions = (options, layer) => {
   } 
 }
 
+const getPatternId = layer => 'pattern' + layer.id
+
 const getOpacity = opacity => opacity || 1
 
 export default {
@@ -74,14 +84,19 @@ export default {
       } else if (layer.type === 'line') {
         addLinePaintOptions(options, layer)
       } else if (layer.image) {
-        addImagePaintOptions(this.map, options, layer)
+        addImagePaintOptions(options, layer)
       } else {
         addFillPaintOptions(options, layer)
       }
 
       const nextLayer = layer.addUnderneath ? getFirstDataLayerId(this.map) : this.firstForegroundLayerId
 
-      this.map.addLayer(options, nextLayer)
+      if (layer.image) {
+        // Need to wait until image is loaded in case falling back to solid fill
+        addImageLayer(this.map, options, layer, nextLayer)
+      } else {
+        this.map.addLayer(options, nextLayer)
+      }
     }
   }
 }
