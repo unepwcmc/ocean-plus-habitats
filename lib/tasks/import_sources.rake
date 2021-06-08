@@ -52,7 +52,7 @@ namespace :import do
 
       next unless geo_entity
 
-      Habitat.where(id: [1, 2, 3, 4, 5]).each do |habitat|
+      Habitat.all.each do |habitat|
         # Fetch the source IDs from the relevant column
         camelcased_habitat_title = habitat.title.gsub(/[\s-]/, '_')
 

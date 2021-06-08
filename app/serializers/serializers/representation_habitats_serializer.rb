@@ -29,7 +29,7 @@ class Serializers::RepresentationHabitatsSerializer < Serializers::Base
   private
 
   def add_habitats_stats
-    Habitat.where(id: [1, 2, 3, 4, 5]).each_with_index do |habitat, idx|
+    Habitat.all.each_with_index do |habitat, idx|
       habitat_stat = @geo_stat.find_by(habitat_id: habitat)
       value = habitat_stat.coastal_coverage || 0
 

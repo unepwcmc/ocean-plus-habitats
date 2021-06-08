@@ -6,7 +6,7 @@ class Serializers::HabitatCountryChangeSerializer < Serializers::Base
   end
 
   def serialize
-    Habitat.where(id: [1, 2, 3, 4, 5]).map{ |h| get_habitat_change(h) }.compact
+    Habitat.all.map{ |h| get_habitat_change(h) }.compact
   end
 
   def get_habitat_change habitat
