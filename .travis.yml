@@ -4,6 +4,7 @@ branches:
   - master
   - develop
   - refresh
+  - travis_fix
 sudo: false
 before_install:
 - nvm ls-remote
