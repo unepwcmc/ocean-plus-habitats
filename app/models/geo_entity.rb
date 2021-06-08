@@ -56,9 +56,9 @@ class GeoEntity < ApplicationRecord
 
     hash = {}
 
-    occurrences.map do |occurrence|
+    occurrences.uniq.map do |occurrence|
       next if hash[occurrence['name']] == 'present'
-
+      
       hash[occurrence['name']] = occurrence['occurrence'] 
     end
 
