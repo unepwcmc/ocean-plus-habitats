@@ -4,7 +4,7 @@ namespace :import do
     models =  %w(
       GeoEntityStat ChangeStat GeoRelationship CoastalStat GeoEntity
       GeoEntitiesSpecies Species GeoEntityStatsSources Source CountryCitation
-      GlobalChangeCitation
+      GlobalChangeCitation GlobalChangeStat Habitat
     )
 
     models.each do |m|
@@ -12,7 +12,7 @@ namespace :import do
       m.constantize.send(:delete_all)
     end
 
-    tasks = %w(countries regions prebakedstats new_redlist_data coastalstats 
+    tasks = %w(habitats countries regions prebakedstats new_redlist_data coastalstats 
       global_change sources country_citations habitat_sources_per_country bounding_boxes
     )
     
