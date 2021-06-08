@@ -53,7 +53,7 @@ class GeoEntity < ApplicationRecord
     # data deficient definition
     # 2) We know the habitat is present, we just don't know how much of it there is
     occurrences = determine_correct_occurrences
-
+    
     hash = {}
 
     occurrences.map do |occurrence|
@@ -71,7 +71,7 @@ class GeoEntity < ApplicationRecord
     occurrences = fetch_needed_occurrence_attrs
 
     occurrences.map(&:attributes).map do |attrs| 
-      if STATS.all? { |attr| attrs[attr].nil? } && attrs[:occurrence] == 'unknown'
+      if STATS.all? { |attr| attrs[attr].nil? } && attrs['occurrence'] == 'present'
         modified_attrs = attrs.slice('name').merge({ 'occurrence': 'present-but-unknown' })
       else
         modified_attrs = attrs.slice('name', 'occurrence') 
