@@ -19,7 +19,7 @@ class GeoEntity < ApplicationRecord
   scope :regions, -> { where(iso3: nil) }
   
   # Only allowing actual countries to be considered for the 'Next country' button
-  scope :allowed_countries, lambda {
+  scope :valid_countries, lambda {
     countries.includes(:geo_entity_stats).where(iso3: ALLOWED_COUNTRIES).where.not(geo_entity_stats: { id: nil })
   }
 
@@ -27,7 +27,7 @@ class GeoEntity < ApplicationRecord
 
 
   def self.permitted_countries
-    allowed_countries.sort_by(&:name)
+    valid_countries.sort_by(&:name)
   end
 
   # Returns species data if directly attached to the GeoEntity, so a country.
