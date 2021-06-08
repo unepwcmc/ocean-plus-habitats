@@ -177,8 +177,12 @@ module ApplicationHelper
   def get_nav_primary
     [
       {
-        title: 'About',
-        url: about_path,
+        title: t('global.page_title.about'),
+        url: about_path
+      },
+      {
+        title: t('global.page_title.legal'),
+        url: legal_path
       }
     ].to_json
   end
