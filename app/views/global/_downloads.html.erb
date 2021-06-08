@@ -36,11 +36,20 @@
         <% if current_page?(country_link_path(@country&.name)) %>
           <%= link_to downloads[:statistics][:button], "downloads/national/#{@country.iso3}.zip",
               class: 'downloads__button button--download',
-              download: "#{@country.name}_statistics"
+              download: "#{@country.name}_statistics",
+              data: {
+                download_type: 'statistics',
+                download_label: @iso3.downcase
+              }
           %>
         <% else %>
           <%= link_to downloads[:statistics][:button], "downloads/global_statistics.zip",
-              class: 'downloads__button button--download'
+              class: 'downloads__button button--download',
+              download: true,
+              data: {
+                download_type: 'statistics',
+                download_label: 'global'
+              } 
           %>
         <% end %>
       </li>
