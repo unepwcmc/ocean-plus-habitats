@@ -53,7 +53,7 @@ module ApplicationHelper
   end
 
   def list_of_countries
-    GeoEntity.permitted_countries.sort_by(&:name).map do |country|
+    GeoEntity.permitted_countries.map do |country|
       nav_item(country.actual_name)
     end
   end
