@@ -37,7 +37,7 @@ $content-page-redlist-logo-height: rem-calc(80);
   }
 
   &__video-container {
-    margin: rem-calc(20) 0;
+    margin: $section-padding-top-small 0;
     padding-top: 315 / 560 * 100%; 
     width: 100%;
 
