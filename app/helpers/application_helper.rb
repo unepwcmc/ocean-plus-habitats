@@ -1,10 +1,10 @@
 module ApplicationHelper
   def site_title
-    'The first authoritative online resource on marine habitats'
+    'Ocean+ Habitats'
   end
 
   def site_description
-    'Ocean+ Habitats is an evolving tool that provides insight into the known extent, protection and other statistics of ecologically and economically important ocean habitats, such as corals, mangroves, seagrasses and saltmarshes.'
+    "Ocean+ Habitats is a living platform providing the world's decision-makers and communities of practice with the best possible global information, knowledge and tools required to manage and conserve ocean ecosystems."
   end
 
   def title_meta_tag
@@ -42,7 +42,7 @@ module ApplicationHelper
   end
 
   def social_image_alt
-    'Guanaco Torres del Paine Chile Gregoire Dubois'
+    'Water with wave crests'
   end
 
   def get_nav_items
@@ -177,8 +177,12 @@ module ApplicationHelper
   def get_nav_primary
     [
       {
-        title: 'About',
-        url: about_path,
+        title: t('global.page_title.about'),
+        url: about_path
+      },
+      {
+        title: t('global.page_title.legal'),
+        url: legal_path
       }
     ].to_json
   end

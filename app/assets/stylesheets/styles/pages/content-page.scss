@@ -1,13 +1,19 @@
 $content-page-pp-logo-height: rem-calc(50);
+$content-page-gmw-logo-height: rem-calc(60);
 $content-page-redlist-logo-height: rem-calc(80);
 
 @mixin content-page-logo-wrapper {
-  &:first-child {
-    margin-bottom: rem-calc(20);
+  margin-bottom: rem-calc(20);
 
+  @include breakpoint($small) {
+    margin-right: rem-calc(30);
+    margin-bottom: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
     @include breakpoint($small) {
-      margin-bottom: 0;
-      margin-right: rem-calc(30);
+      margin-right: 0;
     }
   }
 }
@@ -20,6 +26,30 @@ $content-page-redlist-logo-height: rem-calc(80);
   h2 {
     @include h2-content-page;
     margin: 1.2em 0 0.4em;
+  }
+
+  li, ol {
+    line-height: $body-line-height;
+
+    @include breakpoint_down($small) {
+      font-size: rem-calc(14);
+    }
+  }
+
+  &__video-container {
+    margin: $section-padding-top-small 0;
+    padding-top: 315 / 560 * 100%; 
+    width: 100%;
+
+    position: relative;
+  }
+
+  &__video {
+    width: 100%; height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
   }
   
   &__logos {
@@ -46,6 +76,11 @@ $content-page-redlist-logo-height: rem-calc(80);
     &--protected-planet {
       width: 410 / 60 * $content-page-pp-logo-height; 
       height: $content-page-pp-logo-height;
+    }
+
+    &--global-mangrove-watch {
+      width: 484 / 196 * $content-page-gmw-logo-height; 
+      height: $content-page-gmw-logo-height;
     }
   }
 
