@@ -43,6 +43,10 @@ class CountriesController < ApplicationController
   private
 
   def next_country
-    GeoEntity.where('name > ?', @country.name).order(:name).first || GeoEntity.first
+    following_countries = GeoEntity.permitted_countries.select { |geo_entity| geo_entity.name > @country.name } 
+    
+    return GeoEntity.permitted_countries.first if following_countries.blank?
+    
+    following_countries.min_by { |geo_entity| geo_entity.name }
   end
 end
