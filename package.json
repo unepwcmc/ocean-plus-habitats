@@ -10,6 +10,7 @@
     "scrollmagic": "^2.0.6",
     "smoothscroll-polyfill": "^0.4.4",
     "vue": "^2.6.10",
+    "vue-analytics": "^5.22.1",
     "vue-loader": "^15.7.0",
     "vue-template-compiler": "^2.6.10",
     "vue-turbolinks": "^2.0.4",

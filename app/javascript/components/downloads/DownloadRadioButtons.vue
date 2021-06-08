@@ -13,10 +13,10 @@
           <input
             :id="getVForKey('option', option.id)"
             class="radio-button__input"
-            v-model="downloadLink"
+            v-model="selectedOption"
             :name="`${id}-radio-group`"
             type="radio"
-            :value="option.url"
+            :value="option"
           />
 
           <span class="radio-button__radio" />
@@ -28,7 +28,10 @@
 
     <a
       class="button--radio-group-download"
-      :href="downloadLink"
+      :href="selectedOption.url"
+      @click.right="trackDownload('right')"
+      @click.left="trackDownload('left')"
+      @click.middle="trackDownload('middle')"
       download
     >
       {{ linkText }}
@@ -67,7 +70,7 @@ export default {
 
   data () {
     return {
-      downloadLink: ''
+      selectedOption: undefined
     }
   },
 
@@ -86,7 +89,19 @@ export default {
   methods: {
     initialise () {
       if (this.options.length > 0) {
-        this.downloadLink = this.options[0].url
+        this.selectedOption = this.options[0]
+      }
+    },
+
+    trackDownload (mouseButton='left') {
+      //1 means definite download, 0 means intent to download
+      const intent = mouseButton === 'left' ? 1 : 0
+
+      if (this.$ga) {
+        this.$ga.event({
+          eventCategory: 'spatial',eventAction: 'download',
+          eventLabel: this.selectedOption.id, eventValue: intent
+        })
       }
     }
   }

@@ -56,6 +56,7 @@ $list-item-margin-medium: rem-calc(16);
     position: absolute;
 
     .nav__search &,
+    .header__search &,
     .topbar__dropdown & {
       background-color: $navy-dark;
     }
