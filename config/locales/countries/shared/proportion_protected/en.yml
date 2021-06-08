@@ -8,7 +8,7 @@ en:
         title_absent: Confirmed Absence
         title_unknown: Data Deficient
         note: '<strong>Note:</strong> This outlines the proportion of each habitat that is known to occur within protected or conserved areas. However, the level of protection and whether these habitats are explicitly and effectively protected is uncertain.'
-        last_updated: '<strong>Last updated:</strong> March, 2020'
+        last_updated: '<strong>Last updated:</strong> May 2021'
          # NB - these citations come from the OceanPlus_Static_Citations.csv
         citations:
           - "UNEP-WCMC, WorldFish Centre, WRI, TNC (2018). Global distribution of warm-water coral reefs, compiled from multiple sources including the Millennium Coral Reef Mapping Project. Version 4.0. Includes contributions from IMaRS-USF and IRD (2005), IMaRS-USF (2005) and Spalding et al. (2001). Cambridge (UK): UN Environment World Conservation Monitoring Centre. URL: http://data.unep-wcmc.org/datasets/1"
