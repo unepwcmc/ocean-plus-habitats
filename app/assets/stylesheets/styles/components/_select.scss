@@ -126,7 +126,7 @@ $list-item-margin-medium: rem-calc(16);
         font-weight: $semi-bold;
         padding: rem-calc(10 20);
         width: 100%;
-        
+
         &:focus { outline: none; }
 
         &::placeholder {
@@ -213,6 +213,22 @@ $list-item-margin-medium: rem-calc(16);
         &__search-input {
           border-bottom-right-radius: 0;
           border-bottom-left-radius: 0;
+        }
+      }
+    }
+  }
+
+  &--large {
+    width: 100%;
+    max-width: $select-width-large;
+
+    .v-select {
+      &__search-input,
+      &__option {
+        font-size: rem-calc(15);
+
+        @include breakpoint($small) {
+          font-size: rem-calc(24);
         }
       }
     }

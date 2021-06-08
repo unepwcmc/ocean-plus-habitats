@@ -10,7 +10,9 @@ $button-padding-laptop: 11px 24px;
 $button-text-laptop: 18px;
 
 $select-height: rem-calc(58);
+$select-height-large: rem-calc(97);
 $select-width: rem-calc(300);
+$select-width-large: rem-calc(500);
 
 //--------------------------------------------------
 // shared mixins
@@ -30,11 +32,11 @@ $select-width: rem-calc(300);
 $button-text-small-laptop: 16px;
 $button-text-laptop: 18px;
 
-@mixin button-font-size-small { 
+@mixin button-font-size-small {
   font-size: $button-text-small-laptop;
 }
 
-@mixin button-font-size { 
+@mixin button-font-size {
   font-size: $button-text-laptop;
 }
 
@@ -62,11 +64,11 @@ $button-padding-wide-laptop: 14px 45px;
   }
 }
 
-@mixin button-padding { 
+@mixin button-padding {
   padding: $button-padding-laptop;
 }
 
-@mixin button-padding-wide { 
+@mixin button-padding-wide {
   padding: $button-padding-wide-laptop;
 }
 
@@ -106,11 +108,11 @@ $button-padding-wide-laptop: 14px 45px;
   background-color: $navy-dark;
   border-radius: 100%;
   width: rem-calc(40); height: rem-calc(40);
-  
+
   &:hover { opacity: .9; }
 
-  &:before { 
-    @include icon-close; 
+  &:before {
+    @include icon-close;
     background-size: 50%;
     content: '';
     width: 100%; height: 100%;
@@ -225,7 +227,7 @@ $button-padding-wide-laptop: 14px 45px;
       width: rem-calc(350);
     }
   }
- 
+
   &--next {
     @include button--next;
   }
@@ -234,4 +236,3 @@ $button-padding-wide-laptop: 14px 45px;
     @include button-outline;
   }
 }
-
