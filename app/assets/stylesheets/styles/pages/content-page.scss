@@ -6,8 +6,8 @@ $content-page-redlist-logo-height: rem-calc(80);
   margin-bottom: rem-calc(20);
 
   @include breakpoint($small) {
-    margin-bottom: 0;
     margin-right: rem-calc(30);
+    margin-bottom: 0;
   }
 
   &:last-child {
