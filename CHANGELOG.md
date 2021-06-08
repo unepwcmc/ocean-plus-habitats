@@ -13,3 +13,10 @@
 
 * Site refresh including underlying data and frontend
 * Features individual country pages as well as global overview
+
+## 1.1.0
+
+* Revamp importers to delete and recreate Habitat instances, as well as during seeds
+  to avoid duplication of Habitats
+* Use correct name for global_statistics zip on the homepage for purposes of GA tracking
+* Revert emergency hotfixes
