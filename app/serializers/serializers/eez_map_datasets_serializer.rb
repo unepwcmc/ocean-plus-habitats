@@ -12,7 +12,7 @@ class Serializers::EezMapDatasetsSerializer < Serializers::Base
   end
 
   def serialize
-    Habitat.pluck(:name).map do |habitat|
+    Habitat.pluck(:name).uniq.map do |habitat|
       eez_dataset_hash(habitat)
     end
   end
