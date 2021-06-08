@@ -1,0 +1,214 @@
+//--------------------------------------------------
+// shared mixins
+//--------------------------------------------------
+@mixin icon-basic() {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+@mixin icon-button-reset() {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+@mixin icon-cross() {
+  @include icon-basic;
+  background-image: image_url('icons/cross.svg');
+
+  display: block;
+}
+
+@mixin icon-habitat() {
+  @include icon-basic;
+  background-size: contain;
+  width: rem-calc(75); height: rem-calc(75);
+
+  display: block;
+}
+
+@mixin icon-ribbon($colour, $point-height: rem-calc(8)) {
+  $width: rem-calc(40);
+  $height: rem-calc(56);
+
+  @include flex;
+  @include flex-center;
+  @include flex-no-shrink;
+  background-color: $colour;
+  width: $width; height: calc(#{$height} - #{$point-height});
+
+  position: relative;
+
+  &::before {
+    @include triangle-right-angle(calc(#{$width/2}), $point-height, $colour, 'right');
+  }
+
+  &::after {
+    @include triangle-right-angle(calc(#{$width/2}), $point-height, $colour, 'left');
+  }
+}
+
+//--------------------------------------------------
+// specific mixins
+//--------------------------------------------------
+@mixin icon-absent {
+  @include icon-cross;
+  width: rem-calc(17); height: rem-calc(17);
+}
+
+@mixin icon-burger {
+  @include icon-basic;
+  background-image: image_url('icons/burger.svg');
+  width: rem-calc(28); height: rem-calc(22);
+}
+
+@mixin icon-close {
+  @include icon-cross;
+  width: rem-calc(25); height: rem-calc(25);
+}
+
+@mixin icon-chevron-down {
+  @include icon-basic;
+  background-image: image_url('icons/chevron-down.svg');
+  width: rem-calc(13); height: rem-calc(8);
+
+  display: block;
+}
+
+@mixin icon-next {
+  @include icon-basic;
+  background-image: image_url('icons/next.svg');
+  width: rem-calc(56); height: rem-calc(56);
+
+  display: block;
+}
+
+@mixin icon-present {
+  @include icon-basic;
+  background-image: image_url('icons/tick.svg');
+  width: rem-calc(26); height: rem-calc(19);
+
+  display: block;
+}
+
+@mixin icon-ribbon-present {
+  @include icon-ribbon($green);
+}
+
+@mixin icon-ribbon-absent {
+  @include icon-ribbon($grey-dark);
+}
+
+@mixin icon-ribbon-unknown {
+  @include icon-ribbon($grey-dark);
+}
+
+@mixin icon-search {
+  @include icon-basic;
+  background-image: image_url('icons/search.svg');
+  width: rem-calc(23); height: rem-calc(23);
+}
+
+@mixin icon-scroll-to-top {
+  @include icon-basic;
+  background-image: image_url('icons/scroll-to-top.svg');
+  width: rem-calc(80); height: rem-calc(80);
+
+  display: block;;
+}
+
+@mixin icon-unknown {
+  @include icon-basic;
+  background-image: image_url('icons/question.svg');
+  width: rem-calc(13); height: rem-calc(22);
+
+  display: block;
+}
+
+@mixin icon-download {
+  @include icon-basic;
+  background-image: image_url('icons/download.svg');
+  width: rem-calc(16); height: rem-calc(16);
+}
+
+@mixin icon-flag {
+  @include box-shadow-grey;
+  
+  border-radius: 100%;
+  margin-right: rem-calc(20);
+  width: rem-calc(80); height: rem-calc(80);
+}
+
+@mixin icon-citation {
+  @include icon-basic;
+  @include icon-button-reset;
+  @include flex-no-shrink;
+  background-image: image_url('icons/citation.svg');
+  width: rem-calc(36); height: rem-calc(36);
+}
+
+@mixin icon-citation-white {
+  @include icon-basic;
+  @include icon-button-reset;
+  @include flex-no-shrink;
+  background-image: image_url('icons/citation-white.svg');
+  background-size: 100%;
+  width: rem-calc(20); height: rem-calc(20);
+}
+
+//--------------------------------------------------
+// classes
+//--------------------------------------------------
+.icon {
+  &--burger {
+    .nav--active & {
+      background-image: image_url('icons/cross-grey-xdark.svg');
+      height: rem-calc(16);
+    }
+  }
+
+  &--citation {
+    @include icon-citation;
+  }
+
+  @each $habitat in $habitats {
+    &--#{$habitat} {
+      @include icon-habitat;
+      background-image: image_url("icons/#{$habitat}.svg");
+    }
+
+    @each $status in $habitat_statuses {
+      &--#{$habitat}-#{$status} {
+        @include icon-habitat;
+        background-image: image_url("icons/#{$habitat}-#{$status}.svg");
+      }
+    }
+  }
+
+  &--redlist {
+    @include flex;
+    @include flex-center;
+    background-color: $iucn;
+    border-radius: 100%;
+    border-top-right-radius: 0;
+    color: white;
+    font-size: rem-calc(14);
+    font-style: normal;
+    font-weight: $bold;
+    line-height: 1;
+    width: rem-calc(36); height: rem-calc(34);
+
+    &-grey { background-color: $grey; }
+  }
+
+  &--flag {
+    @include icon-flag;
+  }
+
+  &--scroll {
+    background-image: image_url('icons/icon-scroll.svg');
+    width: rem-calc(27); height: rem-calc(64);
+  }
+}

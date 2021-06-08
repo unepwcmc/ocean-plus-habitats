@@ -1,0 +1,46 @@
+//--------------------------------------------------
+// variables
+//--------------------------------------------------
+$chart-legend-key-icon-size: rem-calc(30);
+
+//--------------------------------------------------
+// classes
+//--------------------------------------------------
+&__legend {
+  @include wrapped-cards;
+
+  &-item {
+    @include wrapped-card(1, 2, 4);
+    @include flex;
+    @include flex-v-center;
+
+    @include breakpoint($small) {
+      @include flex-v-start;
+    }
+  }
+
+    &-key-title {
+      @include text-chart;
+    }
+
+    &-key-icon {
+      @include legend-get-colours;
+      @include flex-no-shrink;
+      border-radius: 100%;
+      margin-right: rem-calc(14);
+      width: $chart-legend-key-icon-size; height: $chart-legend-key-icon-size;
+
+      display: inline-block;
+
+      .chart--row-stacked & {
+        border-radius: 0;
+
+        &.theme--multiple { background-color: $green-light; }
+        &.theme--notcovered { background-color: $grey; }
+      }
+    }
+
+    &-key-text {
+      margin-right: 18%;
+    }
+}

@@ -1,54 +1,38 @@
 class SiteController < ApplicationController
-  respond_to? :json, :html
-  before_action :load_habitat
-  before_action :load_charts_data
+  include ApplicationHelper
 
   def index
-    @global = YAML.load(File.open("#{Rails.root}/lib/data/content/global.yml", 'r'))
+    @habitats = habitats
 
-    @title = @habitat.title
+    @map_datasets = Serializers::MapDatasetsSerializer.new(Habitat.global_protection_by_id).serialize
+    @map_datasets_habitats = @map_datasets.reject { |d| %w[wdpa oecm].include?(d[:id]) }
 
-    @nav = @global['nav'].to_json
+    @eez_map_datasets = Serializers::EezMapDatasetsSerializer.new.serialize
 
-    @habitatData = HabitatsSerializer.new(@habitat, @chart_greatest_coverage, @chart_protected_areas, @global).serialize
+    red_list_data = Species.count_species
 
-    respond_to do |format|
-      format.html
-      format.json { render json: @habitatData }
+    @red_list_data = @habitats.each { |habitat| habitat['data'] = red_list_data[habitat[:id]] }
+
+    @habitat_cover = Serializers::HabitatCoverSerializer.new.serialize
+
+    doughnut_chart = I18n.t('home.sdg.doughnut_chart_data')
+    @doughnut_chart = []
+
+    doughnut_chart.each do |item|
+      @doughnut_chart.push({
+        'title': item[:title],
+        'colour': item[:colour],
+        'icon': ActionController::Base.helpers.image_url(item[:icon]),
+        'description': item[:description],
+        'url': item[:url],
+        'source': item[:source]
+      })
     end
   end
 
-  private
-
-  def load_habitat
-    @habitat = Habitat.where(name: params['habitat'] || 'warmwater').first
-    @habitat ||= Habitat.where(name: 'coralreef').first
-    @habitat_type = @habitat.type
+  def about
   end
 
-  def load_charts_data
-    top_five_countries = StaticStat.where(habitat_id: @habitat.id)
-                                   .order('total_value DESC')
-                                   .first(5)
-    arbitrary_value = top_five_countries.first.total_value.to_f * 1.05
-    @chart_greatest_coverage = top_five_countries.map do |stat|
-      {
-        label: stat.country.name,
-        value: stat.total_value.to_f.round(0),
-        percent: 100*stat.total_value.to_f/arbitrary_value
-      }
-    end
-
-    top_five_country_ids = top_five_countries.map(&:country_id)
-    top_five_protected_areas = StaticStat.where(habitat: @habitat, country_id: top_five_country_ids)
-                                         .order("protected_percentage DESC")
-                                         .first(5)
-
-    @chart_protected_areas = top_five_protected_areas.map do |stat|
-      {
-        label: stat.country.name,
-        percent: stat.protected_percentage.to_f.round(1),
-      }
-    end
+  def legal
   end
 end

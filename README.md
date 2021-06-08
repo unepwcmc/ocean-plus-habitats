@@ -11,8 +11,7 @@
   - `bundle exec rake db:drop db:create db:migrate`
   - `bundle exec rake db:seed`
 
-* Import the static CSV data
-  - `bundle exec rake import:staticstats`
+* If you simply want to regenerate your statistics, you don't have to drop your database. Just run `rake import:refresh` instead.
 
 ## Data
 
@@ -27,4 +26,15 @@ which is updated every month.
 
 Habitats data changes less often, so the coverage calculations are stored in the `Habitat` object.
 When the data changes, a new calculation process should be performed using the `calculate_global_coverage` method in
-the `Habiat` model.
+the `Habitat` model.
+
+Old coverage data is stored within `lib/data/countries` for the various habitats. The new coverage data can be found within
+`lib/data/habitat_coverage_protection/<habitat>_country_output.csv` 
+
+Redlist data for the various species is store in `lib/data/iucn_redlist`. If you need to update just the occurrences of each
+species run `rake import:occurrences`.
+
+## CSV downloads
+
+- Generating zip downloads of CSVS for habitat statistics in each country, can be done simply via `rake generate:national_csvs`, which are dumped into `public/downloads/national` and are labelled according to their ISO3 code. 
+- Global statistics are provided as a prefab zip in the same folder

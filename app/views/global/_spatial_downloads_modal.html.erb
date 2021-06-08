@@ -1,0 +1,17 @@
+<modal-base id="spatial-downloads">
+  <h3 class="modal__title">
+    <%= t('global.spatial_downloads_modal.title') %>
+  </h3>
+
+  <p class="spatial-downloads-modal__text">
+    <%= t('global.spatial_downloads_modal.text') %>
+  </p>
+
+  <download-radio-buttons
+    id="spatial-downloads"
+    :options="<%= spatial_downloads_habitats.to_json %>"
+    download-text="<%= t('global.spatial_downloads_modal.download_text') %>"
+    download-text-mobile="<%= t('global.spatial_downloads_modal.download_text_mobile') %>"
+  >
+  </download-radio-buttons>
+</modal-base>

@@ -1,0 +1,122 @@
+//--------------------------------------------------
+// variables
+//--------------------------------------------------
+$nav-pane-min-width: rem-calc(360);
+$nav-pane-min-width-large: rem-calc(460);
+
+//--------------------------------------------------
+// classes
+//--------------------------------------------------
+.nav {
+  &__search-wrapper {
+    margin-bottom: rem-calc(24);
+    padding-bottom: rem-calc(30);
+
+    position: relative;
+
+    @include breakpoint($small) {
+      display: none;
+    }
+
+    &::after {
+      background-color: rgba($white, 0.35);
+      content: '';
+      width: 100%; height: rem-calc(1);
+
+      position: absolute;
+      top: 100%;
+      z-index: -1;
+    }
+  }
+
+  &__search-label {
+    @include text-nav-search-label;
+    display: block;
+  }
+//--------------------------------------------------
+// primary
+//--------------------------------------------------
+  &--primary {
+    @include text-nav;
+
+    .nav {
+      &__burger {
+        @include button--burger;
+        @include flex-vs-center;
+        margin: rem-calc(10 0 10 14);
+      }
+
+      &__close {
+        @include button--close--on-navy;
+        @include modal-button-sizing(rem-calc(40), rem-calc(40), rem-calc(40));
+
+        position: absolute;
+        z-index: 1;
+      }
+
+      &__pane {
+        @include gutters;
+        background-color: $navy-dark;
+        color: $white;
+        padding-top: rem-calc(80);
+        padding-bottom: rem-calc(16);
+        width: 100%; height: 100%;
+            
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: $z-300;
+
+        transform: translateX(100%);
+
+        transition: transform 0.4s ease-in-out;
+
+        @include breakpoint($small) { width: $nav-pane-min-width; }
+        @include breakpoint($medium) { width: $nav-pane-min-width-large; }
+
+        &.active {
+          transform: translateX(0);
+        }
+      }
+
+      &__ul {
+        @include ul-unstyled;
+      }
+
+      &__a {
+        @include text-nav-item;
+      }
+    }
+  }
+
+//--------------------------------------------------
+// primary
+//--------------------------------------------------
+  &--tertiary {
+    @include flex;
+    @include flex-v-center;
+    margin: 0 auto;
+    overflow-x: auto;
+    height: 100%;
+    
+    flex-wrap: nowrap;
+
+    @include breakpoint($large) {
+      overflow-x: hidden;
+    }
+
+    .nav {
+      &__link {
+        @include text-nav-tertiary;
+        margin-right: rem-calc(30);
+
+        flex: 0 0 auto;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

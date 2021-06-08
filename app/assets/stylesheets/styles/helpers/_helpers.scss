@@ -1,0 +1,95 @@
+//--------------------------------------------------
+// backgrounds
+//--------------------------------------------------
+.bg--grey-xlight { background-color: $grey-xlight; }
+.bg--navy-light { background-color: $navy-light; }
+.bg--navy { background-color: $navy; }
+.bg--navy-dark { background-color: $navy-dark; }
+
+.bg-image-overlay--dark {
+  @include overlay(rgba($navy-dark, 0.6));
+}
+
+//--------------------------------------------------
+// fouc (flash of unstyled content)
+//--------------------------------------------------
+[v-cloak] { display: none; }
+
+//--------------------------------------------------
+// font
+//--------------------------------------------------
+.light { font-weight: $light;}
+.normal { font-weight: normal; }
+strong, .bold { font-weight: $bold; }
+.italic { font-style: italic; }
+
+.white { color: $white; }
+
+.text--smallprint { @include text-smallprint; }
+
+.font-alignment-padding-fix {
+  padding-bottom: 0.15em;
+}
+
+//--------------------------------------------------
+// dimensions
+//--------------------------------------------------
+.w-100 { width: 100%; }
+.h-100 { height: 100%; }
+
+//--------------------------------------------------
+// lists
+//--------------------------------------------------
+.ul-unstyled { @include ul-unstyled; }
+
+.ul-inline li { display: inline-block; }
+
+//--------------------------------------------------
+// display
+//--------------------------------------------------
+.display-block { display: block; }
+.display-inline { display: inline-block; }
+.tablet-up { @include tablet-up }
+
+//--------------------------------------------------
+// positioning
+//--------------------------------------------------
+.center { text-align: center; }
+.right { text-align: right; }
+.left { text-align: left; }
+
+.margin-center { 
+  margin-left: center;
+  margin-right: center;
+}
+
+.relative { position: relative; }
+
+.absolute-center {
+  position: absolute;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+//--------------------------------------------------
+// margin & padding
+//--------------------------------------------------
+.no-margin { margin: 0; }
+.margin-center { margin: 0 auto; }
+.margin-space-left { margin-left: rem-calc(14); }
+.margin-space-right { margin-right: rem-calc(14); }
+.h2-wrapper { margin-bottom: $header-margin-bottom; } 
+
+//--------------------------------------------------
+// shadow
+//--------------------------------------------------
+.box-shadow--grey { @include box-shadow-grey; }
+.box-shadow--grey-light { @include box-shadow-grey-light; }
+
+//--------------------------------------------------
+// UI
+//--------------------------------------------------
+.hover--pointer {
+  cursor: pointer;
+}

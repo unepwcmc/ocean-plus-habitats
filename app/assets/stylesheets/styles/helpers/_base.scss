@@ -1,0 +1,159 @@
+//--------------------------------------------------
+// html elements
+//--------------------------------------------------
+* {
+  box-sizing: border-box;
+  font-family: $body-font;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  color: $body-font-color;
+  font-family: $body-font;
+  font-size: $body-font-size;
+  margin: 0;
+}
+
+main {
+  display: block; //IE11
+}
+
+h1 { @include h1; }
+
+h2 {
+  @include h2;
+
+  .h2-wrapper & { margin-bottom: 0; }
+}
+
+h3 { @include h3; }
+h4 { @include h4; }
+
+p {
+  line-height: $body-line-height;
+  margin-top: 0;
+
+  @include breakpoint_down($small) { font-size: rem-calc(14); }
+}
+
+a { @include text-a; }
+
+li {
+  margin-bottom: rem-calc(14);
+}
+
+sup {
+  font-size: .7em;
+}
+
+th { font-weight: inherit; }
+
+//--------------------------------------------------
+// site structure
+//--------------------------------------------------
+.gutter--left {
+  padding-left: $gutter-small;
+  @include breakpoint($small) { padding-left: $gutter-medium; }
+  @include breakpoint($medium) { padding-left: $gutter-large; }
+}
+
+.gutter--right {
+  padding-right: $gutter-small;
+  @include breakpoint($small) { padding-right: $gutter-medium; }
+  @include breakpoint($medium) { padding-right: $gutter-large; }
+}
+
+.gutters {
+  @extend .gutter--left;
+  @extend .gutter--right;
+}
+
+.container {
+  @include container;
+  
+  &--small {
+    @include container--small;
+  }
+
+  &--large {
+    @include container--large;
+  }
+}
+
+.max-width-container-small {
+  max-width: $container-width-small - 2 * $gutter-large;
+}
+
+//--------------------------------------------------
+// page padding
+//--------------------------------------------------
+.page-padding--top {
+  padding-top: $page-padding-top-small;
+  @include breakpoint($small) { padding-top: $page-padding-top-medium; }
+  @include breakpoint($medium) { padding-top: $page-padding-top-large; }
+}
+
+.page-padding--bottom {
+  padding-bottom: $page-padding-bottom-small;
+  @include breakpoint($small) { padding-bottom: $page-padding-bottom-medium; }
+  @include breakpoint($medium) { padding-bottom: $page-padding-bottom-large; }
+}
+
+.page-padding {
+  @extend .page-padding--top;
+  @extend .page-padding--bottom;
+}
+
+//--------------------------------------------------
+// section padding
+//--------------------------------------------------
+.section-padding--top {
+  padding-top: $section-padding-top-small;
+  @include breakpoint($small) { padding-top: $section-padding-top-medium; }
+  @include breakpoint($medium) { padding-top: $section-padding-top-large; }
+}
+
+.section-padding--bottom {
+  padding-bottom: $section-padding-bottom-small;
+  @include breakpoint($small) { padding-bottom: $section-padding-bottom-medium; }
+  @include breakpoint($medium) { padding-bottom: $section-padding-bottom-large; }
+}
+
+.section-padding {
+  @extend .section-padding--top;
+  @extend .section-padding--bottom;
+}
+
+.section-padding-small--top {
+  padding-top: $section-padding-small-top-small;
+  @include breakpoint($small) { padding-top: $section-padding-small-top-medium; }
+  @include breakpoint($medium) { padding-top: $section-padding-small-top-large; }
+}
+
+.section-padding-small--bottom {
+  padding-bottom: $section-padding-small-bottom-small;
+  @include breakpoint($small) { padding-bottom: $section-padding-small-bottom-medium; }
+  @include breakpoint($medium) { padding-bottom: $section-padding-small-bottom-large; }
+}
+
+.section-padding-small {
+  @extend .section-padding-small--top;
+  @extend .section-padding-small--bottom;
+}
+
+//--------------------------------------------------
+// form
+//--------------------------------------------------
+
+%hidden-input {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: rem-calc(1);
+  margin: - rem-calc(1);
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+  width: rem-calc(1);
+  opacity: 0;
+  position: absolute;
+}

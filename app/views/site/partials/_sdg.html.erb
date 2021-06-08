@@ -1,0 +1,17 @@
+<section id="<%= id %>" class="section-padding">
+  <div class="container--small">
+    <h2><%= t('home.sdg.title') %></h2>
+
+    <% t('home.sdg.text_1').each do |p| %>
+      <p><%= p.html_safe %></p>
+    <% end %>
+  </div>
+  
+  <div class="container">
+    <chart-doughnut :datasets="<%= doughnut_chart %>"></chart-doughnut>
+
+    <% t('home.sdg.text_2').each do |p| %>
+      <p class="bold"><%= p %></p>
+    <% end %>
+  </div>
+</section>

@@ -1,0 +1,10 @@
+en:
+  home:
+    locations_map:
+      title: Where are marine and coastal habitats?
+      text:
+        - Over 70% of the surface of Earth is ocean, comprising highly diverse marine and coastal ecosystems. These ecosystems provide a wide range of essential ecosystem services that support human societies, including our health and economies.
+        - Today, marine and coastal ecosystems are being threatened by irresponsible human activities, such as pollution, coastal and offshore industrial development, and unsustainable or illegal fishing practices. If we are to halt these threats, we need decision-grade data on efforts to conserve, restore and effectively manage important marine ecosystems.
+        - Our ability to track the location and health of marine habitats over time varies across the world, making it challenging to provide an accurate and complete global picture. Yet, this knowledge is essential to meet many of the biodiversity and sustainable development targets set by the international community.
+        - The information provided in the map below remains incomplete in some places of the world. The Ocean+ team is always looking to update these maps as soon as new data becomes available. If we are missing any information for your location, please contact us at <a href='mailto:oceanplus@unep-wcmc.org' title='Send an email to the Ocean+ team'>oceanplus@unep-wcmc.org</a>.
+      filters_title: Where in the world are marine and coastal habitats?

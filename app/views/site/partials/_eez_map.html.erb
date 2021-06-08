@@ -1,0 +1,24 @@
+<section id="<%= id %>" class="section-padding bg--grey-xlight">
+  <div class="container">
+    <div class="flex">
+      <h3 class="max-width-container-small">
+        <%= t('home.eez_map.title') %>
+      </h3>
+      <modal-trigger id="citation" modal-content="<%= eez_modal_content %>" tooltip-text="<%= t('global.sources_modal.tooltip').html_safe %>" class="icon--citation margin-space-left"></modal-trigger>
+    </div>
+    <% t('home.eez_map.text').each do |p| %>
+      <p class="max-width-container-small">
+        <%= p.html_safe %>
+      </p>
+    <% end %>
+    <v-map-interactive
+      :id="'eez-map'"
+      :datasets="<%= datasets.to_json %>"
+      text="<%= t('home.eez_map.eez_extent') %>"
+      filters-title="<%= t('home.eez_map.eez_message') %>"
+    ></v-map-interactive>
+    <p class="text--smallprint max-width-container-small">
+      <%= t('global.map.map_disclaimer') %>
+    </p>
+  </div>
+</section>

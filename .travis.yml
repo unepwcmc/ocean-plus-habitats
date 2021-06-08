@@ -1,0 +1,37 @@
+language: ruby
+branches:
+  only:
+  - master
+  - develop
+  - refresh
+sudo: false
+before_install:
+- nvm ls-remote
+- nvm install 10.15.1
+- curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.6.0
+- export PATH=$HOME/.yarn/bin:$PATH
+- sudo apt-get install software-properties-common
+- sudo apt-get update
+cache:
+  yarn: true
+install:
+- bundle install
+bundler_args: "--without development production staging"
+rvm:
+- 2.6.1
+addons:
+  postgresql: 9.6
+  chrome: stable
+before_script:
+- psql -c 'create database travis_ci_test' -U postgres
+- cp config/database.yml.travis config/database.yml
+- cp config/secrets.yml.travis config/secrets.yml
+- "/usr/local/bin/yarn install"
+script:
+- RAILS_ENV=test bundle exec rails webpacker:compile
+- RAILS_ENV=test bin/rake db:migrate db:seed
+- RAILS_ENV=test bundle exec rake import:prebakedstats
+- RAILS_ENV=test rails test
+notifications:
+  slack:
+    secure: fir6j1zLw4dZbg8YQ5mo3yIfrEH/F2s+UqeY6/wuXyv7ZQVjOWrR5CpRI08mq6m0TnrVDKtlewc2VaPf//ftFckTig7tZOHBDeI8mwo5YV6PMEjmqs2LX2X9MTNHA/gwhjBycT+YQTURIedXafsMUEYCwNRMs28bunshfqW+5cUKDbOIDWPa8facnOiCpMkdK2hFF23kLV1t3ZZXZAeD2Mjeh08VmdyRMk23IoGoKd2RI0DeSzEwDVARo/cQbtZx85SLbFFZv4mk9OKivRncyZ/nLznMKOugTOkhrd4dxOK6rv1i5hdrPz7HGpwBzdlPpQ+cXYeHgzGipEpaDe/S5jGRS8jcfn1PPl5WLh66wqrBr9dtbIV9sBtL+hQk24PkydLyJPi/CJYxyyOgiItgOkXFokF41R/NgJOM+70s+X8ujUAaUuCvDdoBgLkBHUpzFLOWSmjQnWeF9rn5JVUD+z/V2xYv78Pqm6orFPErrj22N0dhzF9fEtTgOL08/DKfeYV5qa5LNu7/kGgUdHfXTaR/C+tcE2Jieb+46yYfl15Tmy2IfEneqedyuBEthcErjEX4wVF8GaVevhmUphD1UkKGC6vLXnl5daYf9t404LlMWqCb3Xer514u81PWdHNRZfDYpofwdYCf+bU/26uQ0VgBlC3PsczxMfH4l8Cb7rY=

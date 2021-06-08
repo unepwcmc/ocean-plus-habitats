@@ -1,0 +1,72 @@
+.header {
+//--------------------------------------------------
+// home
+//--------------------------------------------------
+  &--home {
+    background-color: $grey;
+    background-image: image_url('hero/hero-home.png');
+    background-size: cover;
+    background-position: center;
+    color: $white;
+    z-index: $z-300;
+
+    .header {
+      &__h1 {
+        @include h1-home;
+        max-width: $container-width;
+      }
+
+      &__content {
+        @include container--large;
+        padding-top: rem-calc(65);
+        padding-bottom: rem-calc(15);
+
+        @include breakpoint($small) {
+          padding-top: rem-calc(85);
+          padding-bottom: rem-calc(85);
+        }
+      }
+
+        &__intro {
+          @include text-hero-home;
+          max-width: $container-width-small;
+        }
+
+      &__search {
+        @include container--large;
+        padding-bottom: rem-calc(85);
+
+        @include breakpoint($small) {
+          padding-bottom: rem-calc(140);
+        }
+      }
+    }
+  }
+
+//--------------------------------------------------
+// country
+//--------------------------------------------------
+  &--country {
+    color: $body-font-color;
+
+    .header {
+      &__content {
+        @include gutters;
+        @include flex;
+        @include flex-center;
+      }
+
+      &__icon {
+        @include box-shadow-grey;
+
+        border-radius: 100%;
+        margin-right: rem-calc(20);
+        width: rem-calc(54); height: rem-calc(54);
+
+        @include breakpoint($small) {
+          width: rem-calc(80); height: rem-calc(80);
+        }
+      }
+    }
+  }
+}

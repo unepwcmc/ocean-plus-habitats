@@ -1,0 +1,44 @@
+<section class="example-species section-padding">
+  <div class="container">
+
+  <% if example_species_select.present? %>
+    <div class="example-species__header h2-wrapper">
+      <h3 class="example-species__title margin-space-right">
+        <%= t('countries.shared.example_species.title') %>
+      </h3>
+    
+      <v-select
+        id="example-species"
+        class="example-species__select"
+        :options="<%= example_species_select.to_json %>"
+        event="example-species"
+        :selected="<%= example_species_selected %>"
+      >
+      </v-select>
+    </div>
+
+    <example-species-count
+      :species-count-by-habitat="<%= species_count_by_id %>"
+      text="<%= t('countries.shared.example_species.total_species_count') %>"
+      event="example-species"
+    ></example-species-count>
+
+    <example-species :content="<%= example_species_threatened %>" event="example-species"></example-species>
+
+    <example-species :content="<%= example_species_common %>" event="example-species"></example-species>
+
+    <p class="text--smallprint max-width-container-small">
+      <%= t('countries.shared.example_species.smallprint').html_safe %>
+    </p>
+  <% else %>
+    <div class="h2-wrapper flex flex-v-center">
+      <h3><%= t('countries.shared.example_species.no_species') %></h3>
+    </div>
+  <% end %>
+
+  <p class="text--smallprint max-width-container-small">
+    <%= t('countries.shared.example_species.last_updated').html_safe %>
+  </p>
+
+  </div>
+</section>

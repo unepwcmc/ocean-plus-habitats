@@ -1,0 +1,91 @@
+<%= render '/global/header-country' %>
+
+<%= render partial: '/countries/partials/habitats-present',
+  locals: {
+    id: 'section-habitat-occurrence',
+    habitats_present: @habitats_present
+  }
+%>
+
+<%= render partial: '/countries/partials/habitat-extent',
+  locals: {
+    id: "section-#{t('countries.nav_sticky')[0][:id]}",
+    iso3: @country.iso3,
+    datasets: @map_datasets,
+    modal_content: habitats_protected_modal
+  }
+%>
+
+<% unless @stacked_row_chart.empty? %>
+  <%= render partial: '/countries/partials/habitat-representation',
+    locals: {
+    modal_content: habitats_representation_modal
+    }
+  %>
+<% end %>
+
+<%= render partial: '/countries/partials/proportion-protected',
+  locals: {
+    id: "section-#{t('countries.nav_sticky')[1][:id]}",
+    map_datasets: @map_datasets_habitats,
+    habitats_present: @habitats_present,
+    modal_content: habitats_protected_modal
+  }
+%>
+
+<%= render partial: '/countries/partials/red-list',
+  locals: {
+    id: "section-#{t('countries.nav_sticky')[2][:id]}",
+    modal_content: country_red_list_modal
+  }
+%>
+
+<%= render partial: '/countries/partials/example-species',
+  locals: {
+    species_count_by_id: @species_count_by_id,
+    example_species_select: @example_species_select,
+    example_species_selected: preferential_selection(@example_species_select),
+    example_species_common: @example_species_common,
+    example_species_threatened: @example_species_threatened
+  }
+%>
+
+<%= render partial: '/countries/partials/habitat-change-country',
+  locals: {
+    id: "section-#{t('countries.nav_sticky')[3][:id]}",
+    habitat_change: @habitat_change, modal_content: country_habitat_change_modal
+  }
+%>
+
+<%= render partial: '/countries/partials/habitat-condition',
+  locals: {
+    id: 'section-habitat-condition',
+    modal_content: nil
+  }
+%>
+
+<%= render partial: '/countries/partials/targets',
+  locals: {
+    id: "section-#{t('countries.nav_sticky')[4][:id]}"
+  }
+%>
+
+<%= render partial: '/global/downloads',
+  locals: {
+    downloads: t('countries.shared.ancillary.downloads'),
+  }
+%>
+
+<%= render partial: '/countries/partials/citation',
+  locals: {
+    country_name: @name,
+  }
+%>
+
+<%= render partial: '/countries/partials/next-country',
+  locals: {
+    flag: @next_country_flag,
+    country_name: @next_country_name,
+    page_url: @next_country_url
+  }
+%>

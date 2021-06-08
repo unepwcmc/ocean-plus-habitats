@@ -1,0 +1,20 @@
+en:
+  countries:
+    shared:
+      habitat_change:
+        title: Change in habitat extent
+        intro_text: The following describes the known change in habitat extent, based on available data. Often, datasets tracking yearly change in extent are not available at a national level for many habitats, though new data are becoming available with technological advances.
+         # NB - these citations come from the OceanPlus_Static_Citations.csv
+        citations:
+          - "UNEP-WCMC, WorldFish Centre, WRI, TNC (2018). Global distribution of warm-water coral reefs, compiled from multiple sources including the Millennium Coral Reef Mapping Project. Version 4.0. Includes contributions from IMaRS-USF and IRD (2005), IMaRS-USF (2005) and Spalding et al. (2001). Cambridge (UK): UN Environment World Conservation Monitoring Centre. URL: http://data.unep-wcmc.org/datasets/2"
+          - "Mcowen C, Weatherdon LV, Bochove J, Sullivan E, Blyth S, Zockler C, Stanwell-Smith D, Kingston N, Martin CS, Spalding M, Fletcher S (2017). A global map of saltmarshes. Biodiversity Data Journal 5: e11764. Paper doi: https://doi.org/10.3897/BDJ.5.e11764; Data URL: http://data.unep-wcmc.org/datasets/43"
+          - "Bunting P., Rosenqvist A., Lucas R., Rebelo L-M., Hilarides L., Thomas N., Hardy A., Itoh T., Shimada M. and Finlayson C.M. (2018). The Global Mangrove Watch – a New 2010 Global Baseline of Mangrove Extent. Remote Sensing 10(10): 1669. doi: https://doi.org/10.3390/rs10101669"
+          - "UNEP-WCMC, Short FT (2021). Global distribution of seagrasses (version 7.1). Seventh update to the data layer used in Green and Short (2003). Cambridge (UK): UN Environment World Conservation Monitoring Centre. URL: http://data.unep-wcmc.org/datasets/8"
+          - "Freiwald A, Rogers A, Hall-Spencer J, Guinotte JM, Davies AJ, Yesson C, Martin CS, Weatherdon LV (2017). Global distribution of cold-water corals (version 5.0). Fifth update to the dataset in Freiwald et al. (2004) by UNEP-WCMC, in collaboration with Andre Freiwald and John Guinotte. Cambridge (UK): UN Environment World Conservation Monitoring Centre. URL: http://data.unep-wcmc.org/datasets/4"
+          - "Global Administrative Areas ( 2020). GADM database of Global Administrative Areas, version 3.6 [online] URL: https://gadm.org"
+          - "Flanders Marine Institute (2019). Maritime Boundaries Geodatabase, version 11. Available online at http://www.marineregions.org https://doi.org/10.14284/382"
+        chart_text: "<strong>%{km}km<sup>2</sup></strong> change in %{habitat} cover in <strong>%{years}</strong>"
+        chart_text_not_available: Data not available
+        chart_text_confirmed_absence: Confirmed absence
+        chart_text_presence_unknown: Presence unknown
+        smallprint: '<strong>Note:</strong> In many cases, an exact estimate of spatial change in the distribution of habitats at the national level is unknown. Changes in the availability and use of remote sensing technology is beginning to generate new data that can improve our understanding of change in extent over time.'

@@ -1,0 +1,324 @@
+@import './variables';
+@import './checkbox';
+
+$map-filters-button-bar-height: rem-calc(92);
+
+.map {
+  &__container {
+    border: $border-thin $navy;
+    margin-bottom: rem-calc(35);
+    
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    @include breakpoint($small) {
+      height: 600px;
+
+      flex-direction: row;
+    }
+  }
+}
+
+.maptype {
+  &--habitat {
+    width: 100%;
+  }
+
+  &--eez {
+    width: 100%;
+
+    @include breakpoint($small) {
+      padding: rem-calc(6);
+    }
+  }
+}
+
+.mapboxgl {
+  &-map {
+    width: 100%; height: rem-calc(275);
+    
+    @include breakpoint($small) {
+      border: $border-thin $navy;
+      height: 100%;
+    }
+
+    .maptype--eez & {
+      @include breakpoint($small) {
+        height: $map-height-eez-tablet;
+      }
+
+      @include breakpoint($medium) {
+        height: $map-height-eez-laptop;
+      }
+    }
+  }
+}
+
+//--------------------------------------------------
+// Map filters
+//--------------------------------------------------
+.map-filters {
+  @include flex-no-shrink;
+  background-color: $background-colour;
+  color: $white;
+  width: 100%; height: 100%;
+
+  @include breakpoint($small) {
+    width: $pane-width-laptop;
+  }
+
+  &__content {
+    padding: rem-calc(20 18);
+  }
+
+  &__title {
+    @include text-map-filters-title;
+    margin-bottom: rem-calc(14);
+  }
+
+  &__list {
+    @include ul-unstyled;
+  }
+
+    &__list-li {
+      @include list-margins(bottom, rem-calc(4));
+      position: relative;
+
+      &:nth-child(5) {
+        &::after {
+          background-color: rgba($white, 0.3);
+          content: '';
+          margin: rem-calc(9 0);
+          width: 100%; height: 1px;
+
+          display: block;
+
+          .map-filters--eez & {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &__filter {
+      background-color: $navy-2;
+      padding: rem-calc(7) rem-calc(10);
+      
+      @include breakpoint($small) {
+        padding: rem-calc(7) rem-calc(14);
+      }
+
+      &.disabled {
+        color: $grey;
+        cursor: default;
+        font-style: italic;
+        pointer-events: none;
+
+        .map-filters__filter-key {
+          background-color: transparent;
+        }
+
+        .custom-checkbox {
+          opacity: 0;
+        }
+      }
+    }
+
+      &__filter-key {
+        @include flex-no-shrink;
+        border: $border;
+        border-radius: 100%;
+        margin-right: $key-margin;
+        width: $key-size; height: $key-size;
+
+        display: block;
+        position: relative;
+
+        @for $i from 1 through length($habitats) {
+          $habitat: nth($habitats, $i);
+          $colour: map-get($habitat_colours, $habitat);
+
+          &--#{$habitat} {
+            background-color: $colour;
+          }
+        }
+
+        &--wdpa {
+          background-color: $color-wdpa;
+        }
+
+        &--oecm {
+          background-color: $color-oecm;
+        }
+
+        .map-filters__filter--eez & {
+          width: $key-size-outer; height: $key-size-outer;
+
+          &::after {
+            @include item-center;
+            content: '';
+            border: $border;
+            border-radius: 100%;
+            width: $key-size-inner; height: $key-size-inner;
+          }
+        }
+
+        .map-filters__filter--eez.active & {
+          &::after {
+            background-color: $blue-light;
+          }
+        }
+      }
+
+      &__filter-title {
+        @include text-filter-title;
+        margin-right: rem-calc(8);
+      }
+
+      &__filter-description {
+        margin-left: calc(#{$key-margin} + #{$key-size});
+
+        p {
+          @include text-filter-description;
+          margin-bottom: rem-calc(4);
+        }
+      }
+}
+
+//--------------------------------------------------
+// Mapbox controls
+//--------------------------------------------------
+.mapbox-gl-layer-ctrl-btn {
+  background-image: linear-gradient(transparent, transparent),
+    url(https://api.mapbox.com/mapbox.js/v3.1.1/images/icons.svg);
+  background-position: center -103px;
+  background-repeat: no-repeat;
+  background-size: 26px 260px;
+
+  display: inline-block;
+  float: left;
+}
+
+.mapboxgl-ctrl-geocoder--icon-search.mapboxgl-ctrl-geocoder--icon {
+  top: 16px;
+}
+
+.mapbox-gl-layer-ctrl-layers {
+  display: none;
+}
+
+.mapbox-gl-layer-ctrl-layers.active {
+  display: inline-block;
+}
+
+.mapbox-gl-layer-ctrl-layers label {
+  display: inline-block;
+}
+
+.mapbox-gl-layer-ctrl-layers input {
+  vertical-align: middle;
+}
+
+.mapboxgl-ctrl.mapboxgl-ctrl-geocoder {
+  width: 100%;
+
+  @include breakpoint($small) {
+    width: 400px;
+  }
+}
+
+.mapboxgl-ctrl.mapboxgl-ctrl-geocoder input[type="text"] {
+  color: $black;
+  font-size: 16px;
+  padding: 15px 15px 15px 40px;
+  height: auto;
+}
+
+//--------------------------------------------------
+// Map popup
+//--------------------------------------------------
+.mapboxgl-map {
+  .mapboxgl-popup { max-width: none !important; } //max-width is being applied by mapbox in js
+
+    .mapboxgl-popup-content {
+      font-size: 18px;
+      padding: 12px 24px 16px 12px;
+      background-color: $navy;
+      color: $white;
+      line-height: 1.4;
+    }
+
+      .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+        border-top-color: $navy;
+      }
+
+      .mapboxgl-popup-close-button {
+        font-size: 18px;
+        color: $white;
+      }
+}
+
+//--------------------------------------------------
+// EEZ map legend
+//--------------------------------------------------
+
+.eez-map-legend {
+  @include flex;
+  @include flex-column;
+  font-size: 0.7rem;
+  padding: rem-calc(15 17);
+  width: 100%;
+
+  @include breakpoint($small) {
+    padding-right: 0;
+    padding-left: 0;
+    height: calc(100% - #{$map-height-eez-tablet});
+  }
+
+  @include breakpoint($medium) {
+    height: calc(100% - #{$map-height-eez-laptop});
+  }
+
+  &__keys {
+    @include wrapped-cards;
+    width: 100%;
+  }
+
+  &__key {
+    @include wrapped-card(2, 3, 6);
+    @include flex;
+    @include flex-v-center;
+
+    @include breakpoint-down($small) {
+      margin-right: rem-calc(10);
+      margin-bottom: rem-calc(16);
+    }
+  
+    @include between($small, $medium) {
+      margin-right: rem-calc(16);
+      margin-bottom: rem-calc(16);
+    }
+    
+    @include breakpoint($medium) {
+      margin-right: rem-calc(16);
+      margin-bottom: rem-calc(16);
+    }
+  }
+
+  &__color {
+    @include flex-no-shrink;
+    border: $border-dark;
+    border-radius: 100%;
+    margin-right: $key-margin;
+    width: $key-size-outer; height: $key-size-outer;
+    display: block;
+  }
+
+  &__text {
+    font-style: italic;
+    margin-bottom: rem-calc(10);
+  }
+}
+
+

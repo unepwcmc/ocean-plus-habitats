@@ -1,0 +1,85 @@
+@mixin bars ($theme) {
+  @for $i from 1 through length($theme) {
+    $colour: nth($theme, $i);
+
+    &:nth-child(#{$i}) {
+      background-color: $colour;
+
+      .chart__percent {
+        @if $i%2 != 0 { @include chart-tooltip('bottom', $colour); }
+        @if $i%2 == 0 { @include chart-tooltip('top', $colour); }
+      }
+    }
+  }
+}
+
+
+//--------------------------------------------------
+// stacked row chart
+//--------------------------------------------------
+  &--row-stacked {
+    margin-bottom: $section-padding-small-bottom-large;
+
+    .chart {
+      &__chart {
+        margin: rem-calc(60) 0;
+        width: 100%; height: rem-calc(86);
+      }
+
+      &__title {
+        font-size: rem-calc(20);
+        font-weight: $normal;
+        margin-top: rem-calc(50);
+      }
+
+        &__bar {
+          border: $border-thin $grey-xlight;
+          margin-bottom: 0;
+          height: 100%;
+
+          position: relative;
+
+          &.chart-theme--habitats { @include bars($theme-gradient-habitats); }
+
+          @each $habitat, $value in $theme_gradient_habitat_colours {
+            &.chart-theme--#{$habitat} {
+              background-color: $value;
+
+              @for $i from 1 through 7 {
+                .chart_percent {
+                  @if $i%2 != 0 { @include chart-tooltip('bottom', $value); }
+                  @if $i%2 == 0 { @include chart-tooltip('top', $value); }
+                }
+              }
+            }
+          }
+
+          &:nth-child(n+2) {
+            border-left: 0;
+          }
+
+          &:nth-child(even) {
+            .chart__percent {
+              top: calc(100% + 12px);
+              bottom: unset;
+            }
+          }
+        }
+
+          &__percent {
+            font-weight: $bold;
+
+            position: absolute;
+            bottom: calc(100% + 12px);
+            left: 50%;
+
+            transform: translateX(-50%);
+          }
+
+      &__legend {
+        margin-top: rem-calc(30);
+
+        @include breakpoint($small) { margin-top: rem-calc(60); }
+      }
+    }
+  }

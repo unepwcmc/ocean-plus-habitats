@@ -1,0 +1,65 @@
+//Also defined in VDial.vue - these must match
+$v-dial-marker-radius: 13;
+$v-dial-stroke-width: 8;
+$v-dial-center-width: calc((100% - #{$v-dial-marker-radius}px) / #{$sqrt-2});
+
+.v-dial {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%; height: 100%;
+
+  position: absolute;
+  top: 0;
+
+  &__center {
+    @include item-center;
+    width: $v-dial-center-width; height: $v-dial-center-width;
+  }
+
+  &__meter {
+    color: $grey;
+    width: 100%;
+    height: 100%;
+
+    transform: rotate(-90deg);
+
+    &--coralreefs {
+      color: $color-coralreefs;
+    }
+    &--saltmarshes {
+      color: $color-saltmarshes;
+    }
+    &--mangroves {
+      color: $color-mangroves;
+    }
+    &--seagrasses {
+      color: $color-seagrasses;
+    }
+    &--coldcorals {
+      color: $color-coldcorals;
+    }
+  }
+
+  &__marker {
+    fill: currentColor;
+  }
+
+  &__circle {
+    &--background {
+       stroke: $grey-xlight;
+       stroke-width: $v-dial-stroke-width;
+       stroke-dasharray: 475;
+       fill: none;
+    }
+
+    &--colour {
+       stroke: currentColor;
+       stroke-width: $v-dial-stroke-width;
+       fill: none;
+
+       .card--unknown & {
+         display: none;
+       }
+    }
+  }
+}

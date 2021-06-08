@@ -1,40 +1,34 @@
 <template>
-  <p class="nav__a no-margin" :class="[{ 'active': isActive }, theme]" @click="triggerNavItem">
-    {{ title }}  
-  </p>  
+  <a 
+    :href="link.url"
+    :class="['nav__a', { 'active': isActive }]"
+    :title='`Go to page: ${link.title}`'
+  >
+    {{ link.title }}  
+  </a>  
 </template>
 
 <script>
-  import { eventHub } from '../../packs/application.js'
+export default {
+  name: 'NavLink',
 
-  export default {
-    name: 'nav-link',
+  props: {
+    link: {
+      type: Object,
+      required: true
+    }
+  },
 
-    props: {
-      title: {
-        type: String,
-        required: true
-      },
-      name: {
-        type: String,
-        required: true
-      },
-      theme: {
-        type: String,
-        required: true
-      }
-    },
+  data () {
+    return {
+      isActive: false
+    }
+  },
 
-    data () {
-      return {
-        isActive: false
-      }
-    },
-
-    methods: {
-      triggerNavItem (selectedName) {
-        eventHub.$emit('changeHabitat', this.name)
-      }
+  methods: {
+    triggerNavItem () {
+      this.$eventHub.$emit('changeHabitat', this.name)
     }
   }
+}
 </script>

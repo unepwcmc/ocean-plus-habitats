@@ -1,0 +1,23 @@
+<div class="topbar<%= '--dark' if local_assigns[:dark] %> relative">
+  <div class="topbar__content">
+    <%= link_to root_path, class: "topbar__link", title: 'Visit the Ocean+ Habitats home page' do %>
+      <%= image_tag 'logos/logo-ocean-plus-habitats.svg', class: 'logo--site', alt: 'The logo for Ocean+ Habitats' %>
+    <% end %>
+
+    <v-select-searchable
+      class="topbar__dropdown"
+      :config="<%= get_countries_search_config %>"
+      :options="<%= get_nav_items[:countries].to_json %>"
+    >
+    </v-select-searchable>
+
+    <nav-burger
+      class="nav--primary"
+      :links="<%= get_nav_primary %>"
+      :is-always-burger="true"
+      :search-config="<%= get_countries_search_config %>"
+      :countries="<%= get_nav_items[:countries].to_json %>"
+      search-label="Search by country"
+    ></nav-burger>
+  </div>
+</div>

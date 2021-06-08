@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# The most popular solution to the EU cookie law for Rails applications. 
+gem 'cookieconsent'
 # prefix rails c commands with ap for pretty results
 gem 'awesome_print'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -14,7 +16,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sassc-rails', '~> 2.1.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
@@ -40,6 +42,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
 
 gem 'httparty', '~> 0.16.2'
+
+gem 'rubyzip', '>= 1.0.0' # will load new rubyzip version
+gem 'zip-zip' # will load compatibility for old rubyzip API.
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

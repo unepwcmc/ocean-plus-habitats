@@ -1,0 +1,21 @@
+.example-species {
+  &__header {
+    @include flex;
+    @include flex-column;
+
+    @include breakpoint($small) {
+      @include flex-row;
+      @include flex-v-center;
+    }
+  }
+
+  &__title {
+    @include breakpoint($small) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__total-count {
+    @include text-example-species-total-count;
+  }
+}

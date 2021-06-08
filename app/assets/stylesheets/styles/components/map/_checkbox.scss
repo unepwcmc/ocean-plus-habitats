@@ -1,0 +1,22 @@
+@import './variables';
+
+//--------------------------------------------------
+// classes
+//--------------------------------------------------
+.default-checkbox {
+  @include input-hidden;
+}
+
+.custom-checkbox {
+  @include flex-no-shrink;
+  @include flex-h-end;
+  background: image-url('icons/hide-view.svg') no-repeat center;
+  background-size: 100%;
+  width: $checkbox-size; height: $checkbox-size;
+}
+
+@include custom_input_checked('.default-checkbox', '.custom-checkbox') {
+  background-image: image-url('icons/view.svg');
+}
+
+@include custom_input_focus_default('.default-checkbox', '.custom-checkbox');

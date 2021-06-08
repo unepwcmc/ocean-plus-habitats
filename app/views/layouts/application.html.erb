@@ -6,11 +6,16 @@
 
   <body>
     <div id="v-app" v-cloak>
-      <%= render '/global/header' %>
+      <translator 
+        :translations="<%= @current_translations.to_json %>"
+        :locale="<%= @current_language.to_json %>">
+      </translator>
+      <%= yield %>
       
-      <habitat source="/" :nav="<%= @nav %>"></habitat>
-
       <%= render '/global/footer' %>
+
+      <scroll-to-top></scroll-to-top>
+      <modal id="citation"></modal>
     </div>
   </body>
 </html>

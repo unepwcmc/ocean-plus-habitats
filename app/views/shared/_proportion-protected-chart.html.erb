@@ -1,0 +1,33 @@
+<div class="cards--protection-dials">
+  <% map_datasets.each do |dataset| %>
+    <div class="card card--<%= proportion_protected_card_modifier(dataset) %>">
+
+      <div class="card__content">
+        <div class="card__dial">
+          <v-dial
+          id="<%= dataset[:id] %>"
+          :percentage="<%= proportion_protected_percentage(dataset) %>"
+          :width="180"
+          >
+            <p class="card__habitat-status">
+              <% if @habitats_present %>
+                <%= country_proportion_protected_status_html(dataset) %>
+              <% else %>
+                <%= global_proportion_protected_html(dataset) %>
+              <% end %>
+            </p>
+          </v-dial>
+        </div>
+
+        <div class="card__habitat">
+          <i
+            class="card__habitat-icon <%= proportion_protected_icon_class(dataset) %>"
+            alt="<%= dataset[:name] + ' icon' %>"
+          ></i>
+          <p class="card__habitat-title"><%= dataset[:name] %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+

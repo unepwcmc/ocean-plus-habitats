@@ -1,0 +1,196 @@
+//--------------------------------------------------
+// backgrounds
+//--------------------------------------------------
+@mixin overlay($color) {
+  position: relative;
+  z-index: 1;
+
+  &:before {
+    background-color: $color;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+//--------------------------------------------------
+// borders and shadows
+//--------------------------------------------------
+@mixin box-shadow-grey { box-shadow: 0px 3px 6px rgba($black, 0.15); }
+@mixin box-shadow-grey-light { box-shadow: 0px 0px 5px 5px rgba($black, 0.08); }
+
+//--------------------------------------------------
+// lists
+//--------------------------------------------------
+@mixin ul-unstyled {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin list-margins ($side, $value) {
+  margin-#{$side}: $value;
+
+  &:last-child {
+    margin-#{$side}: 0;
+  }
+}
+
+//--------------------------------------------------
+// overlays
+//--------------------------------------------------
+@mixin gradient($colour: $white, $side: top, $height: 100%) {
+  position: relative;
+
+  &:after {
+    background: linear-gradient(to $side, rgba($colour,0%) 60%, $colour);
+    content: '';
+    pointer-events: none;
+    width: 100%; height: 100%;
+
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+//--------------------------------------------------
+// shapes
+//--------------------------------------------------
+@mixin triangle ($base, $height, $color, $direction:'up') {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: $base/2 solid transparent;
+  border-right: $base/2 solid transparent;
+
+  border-bottom: $height solid $color;
+
+  display: block;
+
+  @if ($direction == 'right') {
+    transform: rotate(90deg);
+  }
+  @if ($direction == 'down') {
+    transform: rotate(180deg);
+  }
+  @if ($direction == 'left') {
+    transform: rotate(270deg);
+  }
+}
+
+@mixin triangle-right-angle ($width, $height, $colour, $direction:'left') {
+  $coloured: #{$width} solid #{$colour};
+  $transparent: 0 solid transparent;
+
+  @if ($direction == 'right') {
+    border-right: $coloured;
+    border-left: $transparent;
+
+    right: 0;
+  }
+
+  @if ($direction == 'left') {
+    border-right: $transparent;
+    border-left: $coloured;
+
+    left: 0;
+  }
+
+  border-bottom: $height solid transparent;
+  content: '';
+  width: 0; height: 0;
+
+  display: block;
+  position: absolute;
+  bottom: -$height;
+}
+
+//--------------------------------------------------
+// spacing
+//--------------------------------------------------
+@mixin item-spacing($sides:'all', $type:'padding') {
+  $sides: if($sides == 'all', ('top','bottom','left','right'), ($sides));
+
+  @each $s in $sides {
+    #{$type}-#{$s}: $item-spacing-small;
+
+    @include breakpoint($medium) { #{$type}-#{$s}: $item-spacing-medium; }
+    @include breakpoint($large) { #{$type}-#{$s}: $item-spacing-large; }
+  }
+}
+
+@mixin list-margins ($side, $value) {
+  margin-#{$side}: $value;
+
+  &:last-child {
+    margin-#{$side}: 0;
+  }
+}
+
+//--------------------------------------------------
+// positioning
+//--------------------------------------------------
+@mixin item-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+//--------------------------------------------------
+// cards
+//--------------------------------------------------
+
+@mixin wrapped-cards {
+  @include flex;
+  @include flex-h-between;
+  @include flex-wrap;
+}
+
+@mixin wrapped-card(
+  $n-mobile,
+  $n-tablet,
+  $n-laptop,
+  $spacing-mobile: rem-calc(16),
+  $spacing-tablet: rem-calc(20),
+  $spacing-laptop: rem-calc(24),
+) {
+  flex-shrink: 0;
+
+  &:last-child { margin-right: auto; }
+
+  @include breakpoint-down($small) {
+    @include wrapped-card-breakpoint($n-mobile, rem-calc(16));
+  }
+
+  @include between($small, $medium) {
+    @include wrapped-card-breakpoint($n-tablet, rem-calc(20));
+  }
+
+  @include breakpoint($medium) {
+    @include wrapped-card-breakpoint($n-laptop, rem-calc(24));
+  }
+}
+
+@mixin wrapped-card-breakpoint($n, $spacing: rem-calc(20)) {
+  margin-right: $spacing;
+  margin-bottom: $spacing;
+  width: calc((100% - (#{$n} - 1) * #{$spacing}) / #{$n});
+
+  &:nth-child(#{$n}n) {
+    margin-right: 0;
+  }
+
+  &:nth-last-child(-n+#{$n}) {
+    margin-bottom: 0;
+  }
+}

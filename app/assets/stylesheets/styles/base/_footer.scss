@@ -1,0 +1,94 @@
+//--------------------------------------------------
+// variables
+//--------------------------------------------------
+$footer-hero-height-laptop: rem-calc(590);
+
+//--------------------------------------------------
+// classes
+//--------------------------------------------------
+.footer {
+  @include overlay(rgba($navy-dark, 0.85));
+  background: image_url('hero/purple-tube-sponge-min.png') center no-repeat;
+  background-size: cover;
+  color: $white;
+  padding-top: rem-calc(25);
+
+  display: block;
+
+  &__row {
+    &--top {
+      @include container--large;
+      margin-bottom: rem-calc(30);
+
+      @include breakpoint($small) {
+        @include flex;
+        @include flex-h-between;
+        margin-bottom: rem-calc(40);
+      }
+    }
+
+    &--bottom {
+      background-color: $navy-dark;
+      padding-top: rem-calc(10);
+      padding-bottom: rem-calc(10);
+    }
+  }
+
+  &__partner-logo-items {
+    @include flex;
+    @include flex-wrap;
+    @include flex-v-center;
+    @include flex-h-between;
+    margin-bottom: rem-calc(20);
+  }
+
+  &__partner-logo-item {
+    @include breakpoint($small) {
+      @include list-margins('right', rem-calc(32));
+    }
+  }
+
+  &__partner-logo {
+    opacity: .6;
+    width: rem-calc(80); height: rem-calc(24);
+
+    @include breakpoint($small) {
+      width: rem-calc(112); height: rem-calc(33);
+    }
+  }
+
+  &__site-link {
+    margin-bottom: rem-calc(40);
+
+    display: block;
+  }
+
+  &__site-logo {
+    width: rem-calc(139); height: rem-calc(54);
+  }
+
+  &__link {
+    margin-top: rem-calc(10);
+    text-decoration: underline;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__download {
+    @include button--download;
+    margin-bottom: rem-calc(16);
+    width: rem-calc(264);
+  }
+
+  &__copyright {
+    @include container--large;
+    font-style: italic;
+
+    @include breakpoint($small) {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,277 @@
+country,iso3,species,species_id,source_id
+Albania,ALB,Balanophyllia (Balanophyllia) europaea,232,5
+Albania,ALB,Cladocora caespitosa,495,5
+Algeria,DZA,Balanophyllia (Balanophyllia) europaea,232,5
+Algeria,DZA,Cladopsammia rolandi,503,5
+Angola,AGO,Lophelia pertusa,985,7
+Angola,AGO,Madrepora oculata,1006,7
+Australia,AUS,Allopathes robillardi,81,12
+Australia,AUS,Stephanocyathus (Acinocyathus) spiniger,1353,12
+Australia,AUS,Solenosmilia variabilis,1339,12
+Australia,AUS,Enallopsammia rostrata,746,12
+Australia,AUS,Stephanocyathus (Stephanocyathus) platypus,1362,12
+Australia,AUS,Desmophyllum dianthus,702,12
+Bahamas,BHS,Astrangia poculata,198,5
+Bahamas,BHS,Madracis myriaster,998,11
+Bahamas,BHS,Stephanocyathus (Stephanocyathus) diadema,1356,11
+Bahamas,BHS,Madrepora carolina,1004,11
+Bahamas,BHS,Madrepora oculata,1006,11
+Bahamas,BHS,Paragorgia johnsoni,1145,11
+Bahamas,BHS,Rhizosmilia maculata,1323,16
+Benin,BEN,Astrangia poculata,198,5
+Belize,BLZ,Chrysogorgia fewkesii,447,17
+Belize,BLZ,Paracalyptrophora carinata  ,1103,17
+Belize,BLZ,Madrepora carolina,1004,17
+Belize,BLZ,Madrepora oculata,1006,17
+Belize,BLZ,Enallopsammia rostrata,746,17
+Bermuda,BMU,Astrangia poculata,198,5
+Bosnia and Herzegovina,BIH,Clavularia crassa,519,5
+Brazil,BRA,Chrysogorgia tuberculata,487,18
+Brazil,BRA,Chrysogorgia upsilonia,488,18
+Brazil,BRA,Radicipes kopelatos,1307,18
+Brazil,BRA,Chrysogorgia fewkesii,447,18
+Brazil,BRA,Chrysogorgia elegans,444,18
+Brazil,BRA,Chrysogorgia multiflora,463,18
+Brazil,BRA,Dasmosmilia lymani,638,16
+Brazil,BRA,Rhizosmilia maculata,1323,16
+Brazil,BRA,Madrepora oculata,1006,1
+British Virgin Islands,VGB,Enallopsammia profunda,744,1
+British Virgin Islands,VGB,Balanophyllia (Balanophyllia) floridana,233,16
+British Virgin Islands,VGB,Rhizosmilia maculata,1323,16
+British Virgin Islands,VGB,Madrepora oculata,1006,11
+Cabo Verde,CPV,Caryophyllia (Caryophyllia) seguenzae,404,20
+Cabo Verde,CPV,Astrangia poculata,198,5
+Cabo Verde,CPV,Madrepora oculata,1006,1
+Cameroon,CMR,Astrangia poculata,198,5
+Canada,CAN,Acanella arbuscula,2,4
+Canada,CAN,Acanthogorgia armata,16,4
+Canada,CAN,Anthomastus grandiflorus,104,4
+Canada,CAN,Anthothela grandiflora,115,4
+Canada,CAN,Clavularia borealis,512,4
+Canada,CAN,Desmophyllum dianthus,702,4
+Canada,CAN,Drifa glomerata,731,4
+Canada,CAN,Duva florida,736,4
+Canada,CAN,Flabellum (Ulocyathus) alabastrum,822,4
+Canada,CAN,Flabellum (Ulocyathus) angulare,823,4
+Canada,CAN,Flabellum (Ulocyathus) macandrewi,833,4
+Canada,CAN,Gersemia fruticosa,876,4
+Canada,CAN,Gersemia rubiformis,885,4
+Canada,CAN,Javania cailleti,916,4
+Canada,CAN,Keratoisis grayi,932,4
+Canada,CAN,Lophelia pertusa,985,4
+Canada,CAN,Paragorgia arborea,1142,4
+Canada,CAN,Paramuricea grandis,1161,4
+Canada,CAN,Paramuricea placomus,1172,4
+Canada,CAN,Primnoa resedaeformis,1289,4
+Canada,CAN,Radicipes challengeri,1305,4
+Canada,CAN,Radicipes gracilis,1306,4
+Canada,CAN,Stauropathes arctica,1347,4
+Canada,CAN,Trachythela rudis,1583,4
+Chile,CHL,Acanthogorgia laxa,45,15
+Chile,CHL,Stylaster densicaulis,1430,15
+Chile,CHL,Errina antarctica,756,15
+Chile,CHL,Bathycyathus chilensis,271,15
+Chile,CHL,Caryophyllia (Caryophyllia) huinayensis,379,15
+Chile,CHL,Tethocyathus endesa,1533,15
+Chile,CHL,Desmophyllum dianthus,702,15
+Chile,CHL,Madrepora oculata,1006,15
+Chile,CHL,Plumapathes fernandezi,1220,15
+Chile,CHL,Bathypathes patula,276,15
+Chile,CHL,Antipathes speciosa,172,15
+Chile,CHL,Cladopathes plumosa,498,15
+Chile,CHL,Chrysopathes formosa,490,15
+Chile,CHL,Primnoella chilensis,1292,15
+Chile,CHL,Thouarella koellikeri,1564,15
+Colombia,COL,Madrepora carolina,1004,11
+Colombia,COL,Madracis myriaster,998,11
+Cote d'Ivoire,CIV,Astrangia poculata,198,5
+Croatia,HRV,Balanophyllia (Balanophyllia) europaea,232,5
+Croatia,HRV,Ceratotrochus magnaghii,417,5
+Croatia,HRV,Cladocora caespitosa,495,5
+Croatia,HRV,Cladopsammia rolandi,503,5
+Croatia,HRV,Lophelia pertusa,985,5
+Cuba,CUB,Enallopsammia profunda,744,1
+Cuba,CUB,Distichopora sulcata,726,11
+Curaçao,CUW,Rhizosmilia maculata,1323,16
+Cyprus,CYP,Cladocora caespitosa,495,5
+Denmark,DNK,Lophelia pertusa,985,9
+Dominican Republic,DOM,Nicella americana,1069,11
+Dominican Republic,DOM,Madracis myriaster,998,11
+Dominican Republic,DOM,Enallopsammia profunda,744,1
+Ecuador,ECU,Concentrotheca vaughani,589,5
+Ecuador,ECU,Crispatotrochus galapagensis,607,5
+Ecuador,ECU,Dendrophyllia johnsoni,691,5
+Ecuador,ECU,Endopsammia pourtalesi,751,5
+Ecuador,ECU,Flabellum (Ulocyathus) daphnense,827,5
+Ecuador,ECU,Polycyathus isabela,1268,5
+Ecuador,ECU,Pseudocyathoceras avis,1303,5
+Ecuador,ECU,Rhizopsammia wellingtoni,1319,5
+Ecuador,ECU,Tubastraea floreana,1665,5
+Egypt,EGY,Balanophyllia (Balanophyllia) europaea,232,5
+Equatorial Guinea,GNQ,Astrangia poculata,198,5
+Faroe Islands,FRO,Lophelia pertusa,985,6
+Faroe Islands,FRO,Solenosmilia variabilis,1339,6
+France,FRA,Balanophyllia (Balanophyllia) europaea,232,5
+France,FRA,Ceratotrochus magnaghii,417,5
+France,FRA,Cladocora caespitosa,495,5
+France,FRA,Clavularia crassa,519,5
+France,FRA,Lophelia pertusa,985,5
+France,FRA,Paramuricea macrospina,1170,5
+France,FRA,Swiftia pallida,1511,5
+Gabon,GAB,Astrangia poculata,198,5
+Ghana,GHA,Astrangia poculata,198,5
+Gibraltar,GIB,Balanophyllia (Balanophyllia) europaea,232,5
+Gibraltar,GIB,Cladocora caespitosa,495,5
+Gibraltar,GIB,Clavularia crassa,519,5
+Greece,GRC,Balanophyllia (Balanophyllia) europaea,232,5
+Greece,GRC,Cladocora caespitosa,495,5
+Greece,GRC,Cladopsammia rolandi,503,5
+Greece,GRC,Clavularia crassa,519,5
+Greece,GRC,Lophelia pertusa,985,5
+Greece,GRC,Paramuricea macrospina,1170,5
+Greece,GRC,Swiftia pallida,1511,5
+Greenland,GRL,Acanella arbuscula,2,8
+Greenland,GRL,Acanthogorgia armata,16,8
+Greenland,GRL,Duva florida,736,8
+Greenland,GRL,Flabellum (Ulocyathus) alabastrum,822,8
+Greenland,GRL,Gersemia rubiformis,885,8
+Greenland,GRL,Paragorgia arborea,1142,8
+Greenland,GRL,Primnoa resedaeformis,1289,8
+Greenland,GRL,Radicipes gracilis,1306,8
+Greenland,GRL,Stauropathes arctica,1347,8
+Greenland,GRL,Swiftia borealis,1501,8
+Guam,GUM,Leptoseris troglodyta,977,21
+Guinea,GIN,Astrangia poculata,198,5
+Guinea-Bissau,GNB,Astrangia poculata,198,5
+Guyana,GUY,Dasmosmilia lymani,638,16
+Haiti,HTI,Enallopsammia profunda,744,1
+Haiti,HTI,Madrepora oculata,1006,11
+Honduras,HND,Paracalyptrophora carinata  ,1103,17
+Iceland,ISL,Lophelia pertusa,985,9
+Indonesia,IDN,Leptoseris troglodyta,977,21
+Indonesia,IDN,Goniocorella dumosa,888,1
+Ireland,IRL,Caryophyllia (Caryophyllia) seguenzae,404,20
+Ireland,IRL,Lophelia pertusa,985,1
+Israel,ISR,Balanophyllia (Balanophyllia) europaea,232,5
+Israel,ISR,Cladocora caespitosa,495,5
+Italy,ITA,Balanophyllia (Balanophyllia) europaea,232,5
+Italy,ITA,Ceratotrochus magnaghii,417,5
+Italy,ITA,Cladocora caespitosa,495,5
+Italy,ITA,Cladopsammia rolandi,503,5
+Italy,ITA,Clavularia crassa,519,5
+Italy,ITA,Lophelia pertusa,985,5
+Italy,ITA,Madrepora oculata,1006,1
+Italy,ITA,Paramuricea macrospina,1170,5
+Italy,ITA,Swiftia pallida,1511,5
+Italy,ITA,Desmophyllum dianthus,702,19
+Jamaica,JAM,Balanophyllia (Balanophyllia) floridana,233,16
+Jamaica,JAM,Rhizosmilia maculata,1323,16
+Jamaica,JAM,Deltocyathus eccentricus,648,11
+Jamaica,JAM,Enallopsammia profunda,744,1
+"Korea, Republic Of",KOR,Goniocorella dumosa,888,1
+Lebanon,LBN,Balanophyllia (Balanophyllia) europaea,232,5
+Lebanon,LBN,Cladocora caespitosa,495,5
+Liberia,LBR,Astrangia poculata,198,5
+Libya,LBY,Balanophyllia (Balanophyllia) europaea,232,5
+Libya,LBY,Cladocora caespitosa,495,5
+Malta,MLT,Cladopsammia rolandi,503,5
+Malta,MLT,Lophelia pertusa,985,5
+Malta,MLT,Paramuricea macrospina,1170,5
+Mauritania,MRT,Astrangia poculata,198,5
+Mexico,MEX,Astrangia poculata,198,5
+Monaco,MCO,Balanophyllia (Balanophyllia) europaea,232,5
+Monaco,MCO,Cladocora caespitosa,495,5
+Monaco,MCO,Lophelia pertusa,985,5
+Montenegro,MNE,Cladocora caespitosa,495,5
+Morocco,MAR,Balanophyllia (Balanophyllia) europaea,232,5
+Morocco,MAR,Cladocora caespitosa,495,5
+Morocco,MAR,Clavularia carpediem,514,5
+Morocco,MAR,Lophelia pertusa,985,1
+Morocco,MAR,Paramuricea macrospina,1170,5
+Morocco,MAR,Caryophyllia (Caryophyllia) seguenzae,404,20
+Netherlands (Antilles),NLD,Dendrophyllia alternata,674,11
+New Zealand,NZL,Goniocorella dumosa,888,1
+New Zealand,NZL,Lophelia pertusa,985,1
+New Zealand,NZL,Desmophyllum dianthus,702,12
+New Zealand,NZL,Enallopsammia rostrata,746,12
+New Zealand,NZL,Madrepora oculata,1006,12
+New Zealand,NZL,Solenosmilia variabilis,1339,12
+New Zealand,NZL,Stephanocyathus (Stephanocyathus) platypus,1362,12
+New Zealand,NZL,Stichopathes variabilis,1404,12
+New Zealand,NZL,Stichopathes filiformis,1382,12
+Nigeria,NGA,Astrangia poculata,198,5
+Norway,NOR,Lophelia pertusa,985,1
+Norway,NOR,Madrepora oculata,1006,1
+Palau,PLW,Leptoseris troglodyta,977,21
+"Palestine, State of",PSE,Balanophyllia (Balanophyllia) europaea,232,5
+Panama,PAN,Balanophyllia (Balanophyllia) floridana,233,16
+Papua New Guinea,PNG,Leptoseris troglodyta,977,21
+Philippines,PHL,Leptoseris troglodyta,977,21
+Portugal,PRT,Caryophyllia (Caryophyllia) seguenzae,404,20
+Portugal,PRT,Dasmosmilia lymani,638,16
+Portugal,PRT,Lophelia pertusa,985,1
+Puerto Rico,PRI,Madrepora oculata,1006,11
+Puerto Rico,PRI,Madrepora carolina,1004,11
+Puerto Rico,PRI,Enallopsammia profunda,744,1
+Puerto Rico,PRI,Lophelia pertusa,985,11
+Russian Federation,RUS,Gersemia rubiformis,885,10
+Saint Vincent and the Grenadines,VCT,Stephanocyathus (Stephanocyathus) laevifundus,1359,11
+Saint Vincent and the Grenadines,VCT,Stephanocyathus (Stephanocyathus) laevifundus,1359,11
+Sao Tome and Principe,STP,Astrangia poculata,198,5
+Saudi Arabia,SAU,Rhizosmilia valida,1327,13
+Saudi Arabia,SAU,Eguchipsammia fistula,738,13
+Saudi Arabia,SAU,Rhizotrochus typus,1331,13
+Senegal,SEN,Balanophyllia (Balanophyllia) floridana,233,16
+Senegal,SEN,Astrangia poculata,198,5
+Serbia,SRB,Lophelia pertusa,985,5
+Sierra Leone,SLE,Astrangia poculata,198,5
+Slovenia,SVN,Balanophyllia (Balanophyllia) europaea,232,5
+Slovenia,SVN,Cladocora caespitosa,495,5
+Slovenia,SVN,Clavularia crassa,519,5
+South Africa,ZAF,Goniocorella dumosa,888,1
+Spain,ESP,Balanophyllia (Balanophyllia) europaea,232,5
+Spain,ESP,Cladocora caespitosa,495,5
+Spain,ESP,Cladopsammia rolandi,503,5
+Spain,ESP,Clavularia carpediem,514,5
+Spain,ESP,Clavularia crassa,519,5
+Spain,ESP,Lophelia pertusa,985,5
+Spain,ESP,Paramuricea macrospina,1170,5
+Spain,ESP,Swiftia pallida,1511,5
+Spain,ESP,Caryophyllia (Caryophyllia) seguenzae,404,20
+Suriname,SUR,Caryophyllia (Caryophyllia) ambrosia,352,11
+Sweden,SWE,Lophelia pertusa,985,9
+Syrian Arab Republic,SYR,Balanophyllia (Balanophyllia) europaea,232,5
+Syrian Arab Republic,SYR,Cladocora caespitosa,495,5
+The Gambia,GMB,Astrangia poculata,198,5
+Togo,TGO,Astrangia poculata,198,5
+Tunisia,TUN,Balanophyllia (Balanophyllia) europaea,232,5
+Tunisia,TUN,Cladocora caespitosa,495,5
+Tunisia,TUN,Cladopsammia rolandi,503,5
+Tunisia,TUN,Lophelia pertusa,985,9
+Tunisia,TUN,Paramuricea macrospina,1170,5
+Turkey,TUR,Balanophyllia (Balanophyllia) europaea,232,5
+Turkey,TUR,Cladocora caespitosa,495,5
+Turkey,TUR,Clavularia crassa,519,5
+Turkey,TUR,Lophelia pertusa,985,5
+Turkey,TUR,Paramuricea macrospina,1170,5
+United Kingdom of Great Britain and Northern Ireland,GBR,Caryophyllia (Caryophyllia) seguenzae,404,20
+United Kingdom of Great Britain and Northern Ireland,GBR,Lophelia pertusa,985,1
+United States of America,USA,Astrangia poculata,198,5
+United States of America,USA,Pleurocorallium secundum,1217,1
+United States of America,USA,Enallopsammia rostrata,746,11
+United States of America,USA,Enallopsammia profunda,744,1
+United States of America,USA,Lophelia pertusa,985,1
+United States of America,USA,Oculina varicosa,1097,1
+United States of America,USA,Madracis myriaster,998,11
+United States of America,USA,Solenosmilia variabilis,1339,1
+United States of America,USA,Balanophyllia (Balanophyllia) floridana,233,16
+United States of America,USA,Bathypsammia tintinnabulum,281,11
+United States of America,USA,Paragorgia arborea,1142,14
+United States of America,USA,Rhizosmilia maculata,1323,16
+US Virgin Islands,VIR,Lophelia pertusa,985,11
+US Virgin Islands,VIR,Madrepora oculata,1006,11
+US Virgin Islands,VIR,Enallopsammia rostrata,746,11
+United States of America,USA,Caryophyllia (Caryophyllia) horologium,378,16
+Venezuela (Bolivarian Republic of),VEN,Dasmosmilia lymani,638,16
+Western Sahara,ESH,Dasmosmilia lymani,638,16
+Western Sahara,ESH,Caryophyllia (Caryophyllia) seguenzae,404,20

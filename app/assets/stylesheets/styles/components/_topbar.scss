@@ -1,0 +1,39 @@
+//--------------------------------------------------
+// topbar
+//--------------------------------------------------
+.topbar {
+  &--dark {
+    background-color: $navy-dark;
+    color: $white;
+  }
+
+  &__content {
+    @include container--large;
+    @include flex;
+    @include flex-v-center;
+    // height: rem-calc(80);
+  }
+
+  &__dropdown {
+    @include tablet-up;
+
+    &--centered {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  &__link {
+    background-color: $navy-dark;
+    margin-right: auto;
+    padding: rem-calc(12 26);
+
+    .topbar--dark & {
+      padding: rem-calc(12 0);
+    }
+  }
+
+  &__nav {
+    margin-left: auto;
+  }
+}

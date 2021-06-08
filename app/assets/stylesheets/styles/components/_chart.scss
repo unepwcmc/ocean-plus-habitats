@@ -1,0 +1,98 @@
+$bar-height: rem-calc(49);
+$chart-row-margin: rem-calc(0 0 14 0);
+
+//--------------------------------------------------
+// chart mixins
+//--------------------------------------------------
+@mixin chart-label {
+  font-size: rem-calc(14);
+
+  @include breakpoint($small) {
+    font-size: rem-calc(18);
+    width: rem-calc(134);
+  }
+}
+
+@mixin bar-label {
+  @include text-chart;
+  // opacity: 0;
+
+  &.animate { opacity: 1; }
+}
+
+@mixin chart-default {
+  background-color: $grey-light;
+}
+
+@mixin legend-get-colours {
+  @each $habitat in $habitats {
+    &.theme--#{$habitat} { background-color: map-get($habitat_colours, $habitat); }
+  }
+}
+
+//--------------------------------------------------
+// chart tooltip
+//--------------------------------------------------
+@mixin chart-tooltip($arrow, $colour) {
+  @extend .flex;
+  @extend .flex-center;
+  background-color: white;
+  border: solid rem-calc(2) $colour;
+  border-radius: $radius-global;
+  font-size: rem-calc(18);
+  padding: rem-calc(0 4 0 4);
+  width: auto; height: rem-calc(30);
+  min-width: rem-calc(40);
+
+  &::before {
+    border-right: 13px solid transparent;
+    border-left: 13px solid transparent;
+    content: '';
+    width: 0; height: 0;
+
+    position: absolute;
+
+    @if $arrow == 'bottom' {
+      border-top: 13px solid $colour;
+      top: 100%;
+    }
+
+    @if $arrow == 'top' {
+      border-bottom: 13px solid $colour;
+      bottom: 100%;
+    }
+  }
+
+  &::after {
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    content: '';
+    width: 0; height: 0;
+
+    position: absolute;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    @if $arrow == 'bottom' {
+      border-top: 10px solid $white;
+      top: 100%;
+    }
+
+    @if $arrow == 'top' {
+      border-bottom: 10px solid $white;
+      bottom: 100%;
+    }
+  }
+}
+
+//--------------------------------------------------
+// chart types
+//--------------------------------------------------
+.chart {
+  @import './charts/chart-doughnut.scss';
+  @import './charts/chart-legend.scss';
+  @import './charts/chart-stacked-row.scss';
+}
+
+
