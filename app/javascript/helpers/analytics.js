@@ -6,13 +6,13 @@ export const addAnalyticsEvents = () => {
   Array.prototype.forEach.call(
     downloadLinks,
     el => {
-      el.addEventListener('click', onDownloadClick(0))
-      el.addEventListener('contextmenu', onDownloadClick(1))
+      el.addEventListener('click', getOnDownloadClick(1))
+      el.addEventListener('contextmenu', getOnDownloadClick(0))
     }
   )
 }
 
-const onDownloadClick = intent => event => {
+const getOnDownloadClick = intent => event => {
   const el = event.target
   const downloadType = el.getAttribute('data-download-type')
   const downloadLabel = el.getAttribute('data-download-label')
