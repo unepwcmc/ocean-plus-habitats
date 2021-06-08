@@ -5,7 +5,7 @@ const addImageLayer = (map, options, layer, nextLayer) => {
     layer.image,
     (err, image) => {
       if (err) { 
-        console.log(`Image ${layer.image} not found. Falling back to solid fill.`)
+        console.warn(`Image ${layer.image} not found. Falling back to solid fill.`)
 
         delete options['paint']['fill-pattern']
 
