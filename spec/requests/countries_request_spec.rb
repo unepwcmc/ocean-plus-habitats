@@ -11,10 +11,12 @@ RSpec.describe 'Countries', type: :request do
 
   describe 'GET /:country' do
     it 'gets the show page' do
-      # Possibly flaky spec - test setup always creates three Countries
+      # Possibly flaky spec - this test setup always creates three Countries
       # and the only country which has any stats associated with it is the last to 
       # be created
-      get "/country-3"
+      kebabcase_name = GeoEntity.last.name.downcase.gsub(' ', '-')
+
+      get "/#{kebabcase_name}"
 
       expect(response).to be_successful
       expect(response.content_type).to eq('text/html')
