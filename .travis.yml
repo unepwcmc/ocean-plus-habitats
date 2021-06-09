@@ -24,7 +24,7 @@ addons:
   postgresql: 9.6
   chrome: stable
 before_script:
-- psql -c 'create database travis_ci_test' -U postgres
+- psql -c 'create database "ocean-plus-habitat_test";' -U postgres
 - cp config/database.yml.travis config/database.yml
 - cp config/secrets.yml.travis config/secrets.yml
 - "/usr/local/bin/yarn install"
