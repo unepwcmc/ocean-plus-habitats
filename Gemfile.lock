@@ -46,6 +46,9 @@ GEM
     awesome_print (1.8.0)
     bindex (0.8.1)
     builder (3.2.3)
+    bullet (6.1.4)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.11)
     byebug (11.0.1)
     capistrano (3.11.2)
       airbrussh (>= 1.0.0)
@@ -191,6 +194,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
+    uniform_notifier (1.14.2)
     web-console (3.7.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -213,6 +217,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  bullet
   byebug
   capistrano (~> 3.11.0)
   capistrano-bundler (~> 1.1)

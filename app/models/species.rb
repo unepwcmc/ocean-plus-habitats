@@ -40,7 +40,7 @@ class Species < ApplicationRecord
 
   def self.count_by_category_and_habitat(species)
     groupings = {}
-    species.group_by { |s| [s.redlist_status, s.habitat.name] }.each do |key, values|
+    species.includes(:habitat).group_by { |s| [s.redlist_status, s.habitat.name] }.each do |key, values|
       groupings[key.last] ||= {}
       groupings[key.last].merge!({ "#{key.first}" => values.count })
     end
