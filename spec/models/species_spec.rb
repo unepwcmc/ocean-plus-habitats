@@ -29,7 +29,7 @@ RSpec.describe Species, type: :model do
     end
 
     context 'when a specific set of species is requested' do
-      subject { described_class.count_species(Species.take(5)) }
+      subject { described_class.count_species(Species.limit(5)) }
 
       it 'outputs only the statistic for that group of species' do
         expect(subject.values.length).to eq(1)
