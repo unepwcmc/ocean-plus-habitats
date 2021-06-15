@@ -9,8 +9,6 @@ RSpec.xdescribe "Country pages", type: :system do
   include_context 'home_page_setup'
 
   scenario 'Access a country page' do 
-    configure_app
-
     visit '/'
 
     expect(page).to have_css('.header__content', text: 'Country')
