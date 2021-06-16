@@ -3,8 +3,6 @@ branches:
   only:
   - master
   - develop
-  - refresh
-  - updated-travis-config
 sudo: false
 before_install:
 - nvm ls-remote
