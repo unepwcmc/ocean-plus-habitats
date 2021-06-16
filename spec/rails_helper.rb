@@ -32,18 +32,20 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 
-Capybara.register_driver :chrome do |app|
-  Capybara::Selenium::Driver.new(app, browser: :chrome)
-end
-
 Capybara.register_driver :headless_chrome do |app|
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
-    chromeOptions: { args: %w(headless disable-gpu) }
+    chromeOptions: { 
+      args: %w(headless disable-gpu),
+      prefs: {
+        'download.default_directory' => "#{Rails.root}/tmp/capybara_downloads"
+      }
+    }
   )
 
   Capybara::Selenium::Driver.new app,
     browser: :chrome,
-    desired_capabilities: capabilities
+    desired_capabilities: capabilities,
+    options: options
 end
 
 Capybara.javascript_driver = :headless_chrome

@@ -17,7 +17,12 @@ require 'webdrivers/chromedriver'
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   config.before(:each, type: :system) do
-    driven_by :selenium, using: :chrome, options: { args: ["headless", "disable-gpu", "no-sandbox", "disable-dev-shm-usage"] }
+    driven_by :selenium, using: :headless_chrome, options: { 
+      args: ["headless", "disable-gpu", "no-sandbox", "disable-dev-shm-usage"],
+      prefs: {
+        'download.default_directory' => "#{Rails.root}/tmp/capybara_downloads"
+      }
+    }
   end
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
