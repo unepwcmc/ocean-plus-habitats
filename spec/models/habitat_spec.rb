@@ -24,28 +24,50 @@ RSpec.describe Habitat, type: :model do
   context 'calculating statistics' do
     let(:habitat) { mangroves }
     let(:country) { FactoryBot.create(:country_with_mangroves) }
+    let(:change_stat) { habitat.change_stats.first }
+    let(:change_km) { (change_stat.total_value_2016 - change_stat.total_value_2010).round(2) }
+    let(:change_percentage) { ( change_km / change_stat.total_value_2010 ) * 100 }
+    let(:global_protected_percentage) do
+      habitat.geo_entity_stats.country_stats.pluck(:protected_value).compact.reduce(&:+) 
+    end
+    let(:global_habitat_cover) do 
+      habitat.geo_entity_stats.country_stats.pluck(:total_value).compact.reduce(&:+) 
+    end
     
     before { FactoryBot.create(:present_stat, habitat: habitat, geo_entity: country) }
 
     it 'calculates the correct country cover change' do
       expect(habitat.calculate_country_cover_change(country.name)).to eq(
         {
-          change_km: '0.4',
-          change_percentage: 0.8e2
+          change_km: delimit(change_km),
+          change_percentage: change_percentage
         }
       )
     end
 
     it 'calculates the correct global cover change' do
-      expect(habitat.calculate_global_cover_change).to eq({ baseline_year: 2010, change_km: 0.4e0, change_percentage: 0.8e2, original_total: 0.5e0 })
+      expect(habitat.calculate_global_cover_change).to eq(
+        { 
+          baseline_year: habitat.baseline_year, 
+          change_km: change_km, 
+          change_percentage: change_percentage, 
+          original_total: change_stat.total_value_2010.round(2) 
+        }
+      )
     end
 
     it 'returns the correct statistics' do
-      expect(habitat.global_stats).to eq({ protected_habitat_cover: 0.38e2, total_habitat_cover: 0.1e3 })
+      expect(habitat.global_stats).to eq({ 
+        protected_habitat_cover: global_protected_percentage, 
+        total_habitat_cover: global_habitat_cover 
+      })
     end
 
     it 'calculates the global protection' do
-      expect(habitat.calculate_global_protection).to eq({ 'protected_percentage' => 38.0, 'total_value' => 100.0 })
+      expect(habitat.calculate_global_protection).to eq({ 
+        'protected_percentage' => global_protected_percentage, 
+        'total_value' => global_habitat_cover  
+      })
     end
 
     it 'retrieves the occurrence of the habitat' do   

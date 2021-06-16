@@ -21,7 +21,7 @@ RSpec.describe "Country page", type: :system, driver: :selenium_chrome, js: true
     chart_title = find('.habitat-representation__chart-title')
 
     unrounded_coastline = GeoEntity.last.coastal_stat.total_coast_length
-    coastline_length = ActiveSupport::NumberHelper.number_to_delimited(unrounded_coastline.round)
+    coastline_length = delimit(unrounded_coastline.round)
 
     expect(chart_title.text).to eq("Percentage of coastline (#{coastline_length} km) covered by habitats")
   end
