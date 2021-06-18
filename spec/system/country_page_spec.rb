@@ -26,14 +26,16 @@ RSpec.describe "Country page", type: :system, driver: :selenium_chrome, js: true
     expect(chart_title.text).to eq("Percentage of coastline (#{coastline_length} km) covered by habitats")
   end
 
-  scenario 'Looking at example of species section' do
-    expect(page).to have_content('Total number of species: 20')
+  scenario 'Looking at example of species section' do  
+    example_of_species_section = find('.example-species')
+
+    expect(example_of_species_section).to have_content('Total number of species: 20')
 
     species_common_names = GeoEntity.last.species.take(3).pluck(:common_name)
 
-    expect(page).to have_content(species_common_names[0])
-    expect(page).to have_content(species_common_names[1])
-    expect(page).to have_content(species_common_names[2])
+    expect(example_of_species_section).to have_content(species_common_names[0])
+    expect(example_of_species_section).to have_content(species_common_names[1])
+    expect(example_of_species_section).to have_content(species_common_names[2])
   end
 
   scenario 'Opening the main national data sources modal' do
