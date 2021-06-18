@@ -24,7 +24,7 @@ RSpec.describe "Home page", type: :system, driver: :selenium_chrome, js: true do
   end
 
   # Not actually going to try to download the shapefiles, they are massive!
-  scenario 'Opening the spatial data downloads modal' do
+  fscenario 'Opening the spatial data downloads modal' do
     expect(page).to_not have_css('.modal__dialog')
 
     find('#modal-trigger-spatial-downloads').click
@@ -37,8 +37,7 @@ RSpec.describe "Home page", type: :system, driver: :selenium_chrome, js: true do
     
     expect(page).to have_css('.radio-group.download-radio-buttons__radio-group > li.radio-group__item', count: 5)
 
-    # Can be flaky because of the dependence on the very specific `for` attribute
-    page.find('label[for="download-radio-buttons-56-option-saltmarshes"] > .radio-button__radio').click
+    page.find('label[for*="saltmarshes"] > .radio-button__radio').click
 
     download_button = find('.button--radio-group-download')
     
