@@ -8,10 +8,12 @@ RSpec.describe "Home page", type: :system, driver: :selenium_chrome, js: true do
 
     find_all('#v-select-search-country').first.click
 
+    expect(page).to have_css('#v-select-dropdown-country > li.v-select__option', count: 4)
     expect(page).to have_all_of_selectors(
       "#option-country-#{GeoEntity.first.id}", 
       "#option-country-#{GeoEntity.second.id}",
-      "#option-country-#{GeoEntity.third.id}"
+      "#option-country-#{GeoEntity.third.id}",
+      "#option-country-#{GeoEntity.fourth.id}"
     )
   end
 
