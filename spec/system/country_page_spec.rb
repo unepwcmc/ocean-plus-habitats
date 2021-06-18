@@ -39,9 +39,15 @@ RSpec.describe "Country page", type: :system, driver: :selenium_chrome, js: true
   end
 
   scenario 'Opening the main national data sources modal' do
+    expect(page).to_not have_css('.modal__dialog')
+
     find('.downloads__li > #modal-trigger-citation').click
 
     expect(page).to have_css('.modal__dialog')
+
+    dialog = find('.modal__dialog')
+
+    expect(dialog).to have_content('Sources')
   end
 
   scenario 'Downloading set of national statistics as a zip' do 
