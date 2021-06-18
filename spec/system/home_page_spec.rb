@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe "Home page", type: :system, driver: :selenium_chrome, js: true do
   include_context 'home_page_setup'
 
-  scenario 'Accessing the country dropdown' do 
-    visit '/'
+  before { visit '/' }
 
+  scenario 'Accessing the country dropdown' do 
     find_all('#v-select-search-country').first.click
 
     expect(page).to have_css('#v-select-dropdown-country > li.v-select__option', count: 4)
@@ -18,8 +18,6 @@ RSpec.describe "Home page", type: :system, driver: :selenium_chrome, js: true do
   end
 
   scenario 'Downloading set of global statistics as a zip' do 
-    visit '/'
-
     download_link = find('a', text: 'Download statistics')
 
     expect(download_link[:href]).to eq("#{page.current_url}downloads/global_statistics.zip")
@@ -27,11 +25,17 @@ RSpec.describe "Home page", type: :system, driver: :selenium_chrome, js: true do
 
   # Not actually going to try to download the shapefiles, they are massive!
   scenario 'Opening the spatial data downloads modal' do
-    visit '/'
+    expect(page).to_not have_css('.modal__dialog')
 
     find('#modal-trigger-spatial-downloads').click
 
     expect(page).to have_css('.modal__dialog')
+    
+    downloads_dialog = find('.modal__dialog')
+
+    expect(downloads_dialog).to have_content('Select habitat shape file')
+    
+    expect(page).to have_css('.radio-group.download-radio-buttons__radio-group > li.radio-group__item', count: 5)
 
     # Can be flaky because of the dependence on the very specific `for` attribute
     page.find('label[for="download-radio-buttons-56-option-saltmarshes"] > .radio-button__radio').click
@@ -42,8 +46,6 @@ RSpec.describe "Home page", type: :system, driver: :selenium_chrome, js: true do
   end
 
   scenario 'Viewing the sources modals' do
-    visit '/'
-
     find_all('#modal-trigger-citation').first.click
 
     expect(page).to have_css('.modal__content')
@@ -51,8 +53,6 @@ RSpec.describe "Home page", type: :system, driver: :selenium_chrome, js: true do
   end
 
   scenario 'Selecting layers within the EEZ map' do
-    visit '/'
-
     expect(page).to have_css('#eez_map')
 
     expect(page).to have_css('.map-filters__filter.map-filters__filter--eez')

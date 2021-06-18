@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "Country page", type: :system, driver: :selenium_chrome, js: true do
   include_context 'countries_setup'
 
-  let(:country_path) { country_path = GeoEntity.last.name.downcase.gsub(/ /, '-') }
+  let(:country_path) { GeoEntity.last.name.downcase.gsub(/ /, '-') }
 
   before do
     allow(GeoEntity).to receive(:permitted_countries).and_return(GeoEntity.all)
