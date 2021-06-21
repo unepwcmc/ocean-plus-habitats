@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.fdescribe "Home page", type: :system, driver: :selenium_chrome, js: true do
+RSpec.describe "Home page", type: :system, driver: :selenium_chrome, js: true do
   include_context 'home_page_setup'
 
   before { visit '/' }
