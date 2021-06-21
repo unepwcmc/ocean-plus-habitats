@@ -7,7 +7,7 @@
 * Install and configure dependencies
   - `bundle install`
   - `yarn install`
-  - Please ask for latest `.env` file
+  - Obtain latest `.env` file from Lastpass
 
 * Setup database
   - `bundle exec rake db:drop db:create db:migrate`
