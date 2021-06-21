@@ -1,5 +1,7 @@
 # Ocean+ Habitats
 
+[![codecov](https://codecov.io/gh/unepwcmc/ocean-plus-habitats/branch/main/graph/badge.svg?token=VE88OFJS5F)](https://codecov.io/gh/unepwcmc/ocean-plus-habitats)
+
 ## Setup
 
 * Install and configure dependencies
