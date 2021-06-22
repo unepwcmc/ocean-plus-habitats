@@ -53,7 +53,7 @@ class GeoEntity < ApplicationRecord
     # data deficient definition
     # 2) We know the habitat is present, we just don't know how much of it there is
     occurrences = determine_correct_occurrences
-
+    
     hash = {}
 
     occurrences.map do |occurrence|
@@ -71,7 +71,7 @@ class GeoEntity < ApplicationRecord
     occurrences = fetch_needed_occurrence_attrs
 
     occurrences.map(&:attributes).map do |attrs| 
-      if STATS.all? { |attr| attrs[attr].nil? } && attrs[:occurrence] == 'unknown'
+      if STATS.all? { |attr| attrs[attr].nil? } && attrs['occurrence'] == 'present'
         modified_attrs = attrs.slice('name').merge({ 'occurrence': 'present-but-unknown' })
       else
         modified_attrs = attrs.slice('name', 'occurrence') 
@@ -94,30 +94,6 @@ class GeoEntity < ApplicationRecord
       map(&:attributes).map { |ges| ges.except('id') }.
       group_by { |ges| ges['name'] }.
       transform_values(&:first)
-  end
-
-  def calculated_protection_stats
-    _protection_stats = countries_geo_entity_stats.joins(:habitat).select('
-      habitats.name,
-      geo_entity_stats.total_value,
-      geo_entity_stats.protected_value
-    ')
-    _protection_stats = _protection_stats.map(&:attributes).map do |attrs|
-      attrs.slice('name', 'total_value', 'protected_value')
-    end
-
-    _protection_stats = _protection_stats.group_by { |ps| ps['name'] }
-    hash = {}
-    _protection_stats.keys.map do |habitat|
-      hash[habitat] ||= {}
-      hash[habitat]['total_value'] = _protection_stats[habitat].inject(0) { |sum, x| sum + x['total_value'] }
-      hash[habitat]['protected_value'] = _protection_stats[habitat].inject(0) { |sum, x| sum + x['protected_value'] }
-    end
-    hash.each do |habitat, h|
-      total_value = h['total_value'] > 0 ? h['total_value'] : 1
-      h['protected_percentage'] = h['protected_value'] / total_value * 100
-    end
-    hash
   end
 
   private

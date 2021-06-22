@@ -38,7 +38,6 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
 
 gem 'httparty', '~> 0.16.2'
@@ -52,6 +51,16 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'rspec-rails', '~> 4.0.2'
+  gem 'webdrivers'
+  gem 'capybara-selenium'
+  gem 'factory_bot_rails'
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'faker'
+  gem 'codecov'
 end
 
 group :development do
