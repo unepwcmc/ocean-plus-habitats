@@ -34,13 +34,9 @@ class Species < ApplicationRecord
     end
   end
 
-  def self.find_habitats_without_data(hash)
-    habitats_without_data = Habitat.pluck(:name) - hash.keys
-  end
-
   def self.count_by_category_and_habitat(species)
     groupings = {}
-    species.group_by { |s| [s.redlist_status, s.habitat.name] }.each do |key, values|
+    species.includes(:habitat).group_by { |s| [s.redlist_status, s.habitat.name] }.each do |key, values|
       groupings[key.last] ||= {}
       groupings[key.last].merge!({ "#{key.first}" => values.count })
     end

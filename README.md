@@ -1,11 +1,13 @@
 # Ocean+ Habitats
 
+[![codecov](https://codecov.io/gh/unepwcmc/ocean-plus-habitats/branch/main/graph/badge.svg?token=VE88OFJS5F)](https://codecov.io/gh/unepwcmc/ocean-plus-habitats)
+
 ## Setup
 
 * Install and configure dependencies
   - `bundle install`
   - `yarn install`
-  - Please ask for latest `.env` file
+  - Obtain latest `.env` file from Lastpass
 
 * Setup database
   - `bundle exec rake db:drop db:create db:migrate`
@@ -33,6 +35,12 @@ Old coverage data is stored within `lib/data/countries` for the various habitats
 
 Redlist data for the various species is store in `lib/data/iucn_redlist`. If you need to update just the occurrences of each
 species run `rake import:occurrences`.
+
+## Testing
+
+Testing is done with RSpec and FactoryBot. To run all tests, run `bundle exec rspec` 
+
+To lint your factories, run `rake factory_bot:lint`
 
 ## CSV downloads
 
