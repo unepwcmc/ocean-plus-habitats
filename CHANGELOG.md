@@ -20,3 +20,11 @@
   to avoid duplication of Habitats
 * Use correct name for global_statistics zip on the homepage for purposes of GA tracking
 * Revert emergency hotfixes
+
+## 1.2.0
+
+* RSpec + Capybara test suite created, with unit tests for statistics, request specs and 
+system specs. Also included is a FactoryBot linter for linting factories. A couple of
+redundant methods have also been removed from the models.
+* Merged in a number of PRs fixing vulnerabilities on the frontend and backend that were 
+opened by Dependabot.
