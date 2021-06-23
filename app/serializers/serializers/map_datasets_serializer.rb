@@ -105,7 +105,7 @@ WDPA_DATASETS = [
         name: 'WDPA_poly_Jun2021',
       }
     ],
-    tilesUrl: 'https://data-gis.unep-wcmc.org/server/rest/services/Hosted/wdpa_oceanplus/VectorTileServer/tile/{z}/{y}/{x}.pbf',
+    tilesUrl: 'https://data-gis.unep-wcmc.org/server/rest/services/Hosted/OceanPlus_WDPA_update_2/VectorTileServer/tile/{z}/{y}/{x}.pbf',
     color: '#38A801',
     opacity: 0.5,
     addUnderneath: true,
