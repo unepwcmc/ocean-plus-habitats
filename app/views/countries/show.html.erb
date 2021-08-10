@@ -29,14 +29,16 @@
     id: "section-#{t('countries.nav_sticky')[1][:id]}",
     map_datasets: @map_datasets_habitats,
     habitats_present: @habitats_present,
-    modal_content: habitats_protected_modal
+    modal_content: habitats_protected_modal,
+    last_updated: @country.updated_at.strftime('%b, %Y')
   }
 %>
 
 <%= render partial: '/countries/partials/red-list',
   locals: {
     id: "section-#{t('countries.nav_sticky')[2][:id]}",
-    modal_content: country_red_list_modal
+    modal_content: country_red_list_modal,
+    last_updated: @red_list_last_updated
   }
 %>
 
@@ -46,7 +48,8 @@
     example_species_select: @example_species_select,
     example_species_selected: preferential_selection(@example_species_select),
     example_species_common: @example_species_common,
-    example_species_threatened: @example_species_threatened
+    example_species_threatened: @example_species_threatened,
+    last_updated: @country.updated_at.strftime('%b, %Y')
   }
 %>
 

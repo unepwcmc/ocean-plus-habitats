@@ -30,7 +30,7 @@ class SiteController < ApplicationController
     end
   end
 
-  def about
+    @red_list_last_updated = Date.parse('2021-08-01').strftime('%b, %Y') # TODO: automate based on date imported
   end
 
   def legal

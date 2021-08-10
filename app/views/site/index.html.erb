@@ -34,7 +34,8 @@
 <%= render partial: '/site/partials/red-list',
   locals: {
     id: "section-#{t('home.nav_sticky')[3][:id]}",
-    modal_content: red_list_modal
+    modal_content: red_list_modal,
+    last_updated: @red_list_last_updated
   }
 %>
 

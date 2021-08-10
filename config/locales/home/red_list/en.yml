@@ -10,7 +10,7 @@ en:
         - IUCN 2021. The IUCN Red List of Threatened Species. Version 2021-1. https://www.iucnredlist.org. 
       smallprint_1: '<strong>Disclaimer:</strong> These statuses derive from global assessments, and do not necessarily reflect each species’ status by country.'
       smallprint_2: '<strong>Source:</strong> Data adapted from the <a href="https://www.iucnredlist.org/" title="Visit the IUCN Red List of Threatened Species site" target="_blank" rel="noopener">IUCN Red List of Threatened Species</a>, version 2021-1.'
-      smallprint_3: '<strong>Last updated:</strong> May 2021'
+      smallprint_3: '<strong>Last updated:</strong> %{last_updated}'
       categories:
         -
           title: Critically endangered
