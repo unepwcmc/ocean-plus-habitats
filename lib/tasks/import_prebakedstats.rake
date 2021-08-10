@@ -10,8 +10,9 @@ namespace :import do
     # import habitat data CSVs for each entity type
     geo_entity_types.each do |geo_entity_type|
       habitats.each do |habitat|
-        filename = "#{habitat.name}_#{geo_entity_type}_output.csv"
-        csv_file = "#{dir}/#{filename}"
+        filename = "#{habitat.name}_#{geo_entity_type}_output_*.csv"
+        csv_file = "#{dir}/#{geo_entity_type}/#{filename}"
+        csv_file = ::Utilities::Files.latest_file_by_glob(csv_file)
         import_new_csv_file(habitat.name, csv_file)
       end
     end
