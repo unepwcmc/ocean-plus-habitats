@@ -4,16 +4,16 @@ namespace :import do
   desc 'import CSV data into database'
   task :prebakedstats, [:csv_file] => [:environment] do
     habitats = Habitat.all
-    dir = 'habitat_coverage_protection'
+    dir = 'lib/data/habitat_coverage_protection'
     geo_entity_types = %w[country regions].freeze
 
     # import habitat data CSVs for each entity type
     geo_entity_types.each do |geo_entity_type|
       habitats.each do |habitat|
         filename = "#{habitat.name}_#{geo_entity_type}_output_*.csv"
-        csv_file = "#{dir}/#{geo_entity_type}/#{filename}"
-        csv_file = ::Utilities::Files.latest_file_by_glob(csv_file)
-        import_new_csv_file(habitat.name, csv_file)
+        filepath = "#{dir}/#{geo_entity_type}/#{filename}"
+        latest_csv_file = ::Utilities::Files.latest_file_by_glob(filepath)
+        import_new_csv_file(habitat.name, latest_csv_file)
       end
     end
 
@@ -23,18 +23,21 @@ namespace :import do
   end
 
   def import_new_csv_file(habitat, csv_file)
-    filename = "#{Rails.root}/lib/data/#{csv_file}"
-    CSV.foreach(filename, headers: true, encoding: 'utf-8') do |row|
-      # First we check whether it is a country (using ISO3) or a region depending on the CSV file
-      # Then we fetch the geo entity. If it can't be found, fetch_geo_entity will return nil
-      # Hence we can then skip any geo_entity that is nil
-      name = row['iso3'] || row['region']
-      geo_entity = fetch_geo_entity(name)
-      next unless geo_entity
+    ActiveRecord::Base.transaction do
+      CSV.foreach(csv_file, headers: true, encoding: 'utf-8') do |row|
+        # First we check whether it is a country (using ISO3) or a region depending on the CSV file
+        # Then we fetch the geo entity. If it can't be found, fetch_geo_entity will return nil
+        # Hence we can then skip any geo_entity that is nil
+        name = row['iso3'] || row['region']
+        raise "Missing iso3 or region CSV header: #{csv_file}" unless name
 
-      insert_change_stat(habitat, geo_entity, row) if row.select { |k, _v| /baseline/i =~ k }.any?
+        geo_entity = fetch_geo_entity(name)
+        next unless geo_entity
 
-      insert_geo_entity_stat(habitat, geo_entity, row)
+        insert_change_stat(habitat, geo_entity, row) if row.select { |k, _v| /baseline/i =~ k }.any?
+
+        insert_geo_entity_stat(habitat, geo_entity, row)
+      end
     end
   end
 
