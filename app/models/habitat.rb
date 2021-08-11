@@ -41,10 +41,11 @@ class Habitat < ApplicationRecord
     })
   end
 
-  def global_stats 
+  def global_stats
+    stats = geo_entity_stats.country_stats.to_a # reduce hits to database
     {
-      total_habitat_cover: geo_entity_stats.country_stats.pluck(:total_value).compact.reduce(&:+),
-      protected_habitat_cover: geo_entity_stats.country_stats.pluck(:protected_value).compact.reduce(&:+)
+      total_habitat_cover: stats.pluck(:total_value).compact.reduce(&:+),
+      protected_habitat_cover: stats.pluck(:protected_value).compact.reduce(&:+)
     }
   end
 
@@ -87,8 +88,10 @@ class Habitat < ApplicationRecord
   def global_protection
     stats = { 'name' => name, 'total_value' => 0, 'protected_value' => 0 }
 
-    stats['total_value'] = global_stats[:total_habitat_cover]
-    stats['protected_value'] = global_stats[:protected_habitat_cover]
+    global_stats_data = global_stats # reduce hits to database
+
+    stats['total_value'] = global_stats_data[:total_habitat_cover]
+    stats['protected_value'] = global_stats_data[:protected_habitat_cover]
 
     protected_value = stats['protected_value'] > 0 ? stats['protected_value'] : 1
     stats.merge({'protected_percentage' => protected_value / stats['total_value'] * 100})
