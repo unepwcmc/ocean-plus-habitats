@@ -15,7 +15,7 @@ class GeoEntity < ApplicationRecord
 
   has_many :country_citations, foreign_key: 'country_id'
 
-  scope :countries, -> { where.not(iso3: nil || 'GBL') }
+  scope :countries, -> { where.not(iso3: nil).where.not(iso3: 'GBL') }
   scope :regions, -> { where(iso3: nil) }
   
   # Only allowing actual countries to be considered for the 'Next country' button
