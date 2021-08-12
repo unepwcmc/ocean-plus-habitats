@@ -157,6 +157,64 @@ class Habitat < ApplicationRecord
     hash
   end
 
+  # experimental alternative to self.global_protection_by_id: not currently used
+  def self.global_protection_by_id_v2
+    hash = {}
+    global_protection_v2.each do |habitat_stats|
+      hash[habitat_stats['name']] = habitat_stats.except('name')
+    end
+    hash
+  end
+
+  # experimental alternative to self.global_protection: not currently used
+  # TODO: be brave, use this method instead of the original, it's cool and its
+  # 2x faster than the original
+  # TODO: check codebase for how other related methods are used e.g.
+  # global_stats and global_protection methods. e.g. they are in habitat_spec.rb
+  def self.global_protection_v2
+    geo_entities = GeoEntity.arel_table
+    geo_entity_stats = GeoEntityStat.arel_table
+    habitats = Habitat.arel_table
+
+    # get all the data we need in a single query
+    # @see scuttle.io for sql->arel help
+    query = GeoEntityStat.select(
+      [
+        habitats[:name],
+        geo_entity_stats[:total_value].sum.as('total_value'),
+        geo_entity_stats[:protected_value].sum.as('protected_value')
+      ]
+    )
+      .where(
+        geo_entities[:iso3].not_eq(nil).and(geo_entities[:iso3].not_eq('GBL'))
+      )
+      .joins(
+        geo_entity_stats.join(geo_entities).on(
+          geo_entities[:id].eq(geo_entity_stats[:geo_entity_id])
+        ).join_sources
+      )
+      .joins(
+        geo_entity_stats.join(habitats).on(
+          habitats[:id].eq(geo_entity_stats[:habitat_id])
+        ).join_sources
+      )
+      .group(habitats[:name])
+
+    results = ActiveRecord::Base.connection.execute(query.to_sql)
+
+    results.map do |row|
+      total_value = row['total_value'].to_f
+      protected_value = row['protected_value'].to_f
+      protected_percentage = protected_value / total_value * 100
+      {
+        name: row['name'],
+        total_value: total_value.round(2),
+        protected_value: protected_value.round(2),
+        protected_percentage: protected_percentage.round(2)
+      }.stringify_keys
+    end
+  end
+
   private
 
   def sum_country_areas(total_area_by_country)
