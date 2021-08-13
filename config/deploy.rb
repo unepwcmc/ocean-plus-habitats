@@ -59,3 +59,14 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 set :keep_releases, 5
 
 set :passenger_restart_with_touch, false
+
+namespace :deploy do
+  desc 'Delete and recreate records'
+  task :import_refresh do
+    on roles(:app) do
+      invoke "import:refresh"
+    end
+  end
+end
+
+before 'deploy:publishing', 'deploy:import_refresh'
