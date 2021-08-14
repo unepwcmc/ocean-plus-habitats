@@ -10,4 +10,4 @@ en:
         total: Total
         smalltext_1: '<strong>Disclaimer:</strong> hese statuses derive from global assessments, and do not necessarily reflect each species’ status by country. We will endeavour to strengthen alignment with national Red List assessments, where possible. Please contact us at <a href="mailto:oceanplus@unep-wcmc.org" title="Email the Ocean+ team">oceanplus@unep-wcmc.org</a> if you would like to provide further information.'
         smalltext_2: '<strong>Source:</strong> Adapted from data available through the <a href="https://www.iucnredlist.org/" title="IUCN Red List of Threatened Species" target="_blank">IUCN Red List of Threatened Species</a>'
-        smalltext_3: '<strong>Last updated:</strong> May, 2021'
+        smalltext_3: '<strong>Last updated:</strong> %{last_updated}'

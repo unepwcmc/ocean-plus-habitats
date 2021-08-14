@@ -1,4 +1,4 @@
-class Esri 
+class Esri
   include HTTParty
 
   def initialize
@@ -14,12 +14,14 @@ class Esri
     # ESRI is flaky
     begin
       response = self.class.post(@url, query: options)
-    rescue Net::OpenTimeout 
+    rescue Net::OpenTimeout
       retries += 1
       retry if retries < 2
     end
 
     # Response returned includes a 'spatialReference' key for the coordinates
     JSON.parse(response.parsed_response)['extent'].except('spatialReference')
+  rescue StandardError
+    raise "Unexpected response: #{response.parsed_response}"
   end
 end

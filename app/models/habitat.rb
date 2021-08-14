@@ -13,39 +13,75 @@ class Habitat < ApplicationRecord
   end
 
   def calculate_country_cover_change(country_name)
-    country_cover_change = { change_km: 0, change_percentage: 0 }
+    country_cover_change = {
+      change_km: 0,
+      change_percentage: 0
+    }
 
-    # We only got mangroves data at the moment
-    return country_cover_change unless name == "mangroves"
+    # We only have mangroves data at the moment
+    return country_cover_change unless name == 'mangroves'
+
     geo_entity_id = GeoEntity.find_by(name: country_name).id
-    habitat_base_year = ChangeStat.find_by(habitat_id: id, geo_entity_id: geo_entity_id)&.send("total_value_#{baseline_year}".to_sym)
-    habitat_last_year = ChangeStat.find_by(habitat_id: id, geo_entity_id: geo_entity_id)&.send(latest_year)
-    return country_cover_change if (habitat_base_year.nil? || habitat_last_year.nil?)
-    change_km = habitat_last_year - habitat_base_year
-    change_percentage = (change_km/habitat_base_year) * 100
+    habitat_base_year = ChangeStat.find_by(
+      habitat_id: id,
+      geo_entity_id: geo_entity_id
+    )
+      &.send("total_value_#{baseline_year}".to_sym)
 
-    country_cover_change.merge!({change_km: ActiveSupport::NumberHelper.number_to_delimited(change_km.round(2)), change_percentage: change_percentage.round(2)})
+    habitat_last_year = ChangeStat.find_by(
+      habitat_id: id,
+      geo_entity_id: geo_entity_id
+    )
+      &.send(latest_year)
+
+    return country_cover_change if habitat_base_year.nil? || habitat_last_year.nil?
+
+    change_km = habitat_last_year - habitat_base_year
+    change_percentage = (change_km / habitat_base_year) * 100
+
+    country_cover_change.merge!(
+      {
+        change_km: ActiveSupport::NumberHelper.number_to_delimited(change_km.round(2)),
+        change_percentage: change_percentage.round(2)
+      }
+    )
   end
 
   def calculate_global_cover_change
-    global_cover_change = { change_km: 0, change_percentage: 0, baseline_year: baseline_year, original_total: 0 }
-    return global_cover_change unless name == "mangroves"
-    habitat_base_year = ChangeStat.includes(:geo_entity).where.not(geo_entities: { iso3: nil }).where(habitat_id: id).pluck("total_value_#{baseline_year}".to_sym).inject(0) { |sum, x| sum + x }
-    habitat_last_year = ChangeStat.includes(:geo_entity).where.not(geo_entities: { iso3: nil }).where(habitat_id: id).pluck(latest_year).inject(0) { |sum, x| sum + x }
+    global_cover_change = {
+      change_km: 0,
+      change_percentage: 0,
+      baseline_year: baseline_year,
+      original_total: 0
+    }
+
+    return global_cover_change unless name == 'mangroves'
+
+    habitat_base_year = ChangeStat.includes(:geo_entity)
+      .where
+      .not(geo_entities: { iso3: nil })
+      .where(habitat_id: id)
+      .pluck("total_value_#{baseline_year}".to_sym)
+      .inject(0) { |sum, x| sum + x }
+
+    habitat_last_year = ChangeStat.includes(:geo_entity)
+      .where
+      .not(geo_entities: { iso3: nil })
+      .where(habitat_id: id)
+      .pluck(latest_year)
+      .inject(0) { |sum, x| sum + x }
+
     total_value_change = habitat_last_year - habitat_base_year
     total_value_change_percentage = (total_value_change / habitat_base_year) * 100
 
-    global_cover_change.merge!({
-      change_km: total_value_change.round(2), change_percentage: total_value_change_percentage.round(2),
-      baseline_year: baseline_year, original_total: habitat_base_year.round(2)
-    })
-  end
-
-  def global_stats 
-    {
-      total_habitat_cover: geo_entity_stats.country_stats.pluck(:total_value).compact.reduce(&:+),
-      protected_habitat_cover: geo_entity_stats.country_stats.pluck(:protected_value).compact.reduce(&:+)
-    }
+    global_cover_change.merge!(
+      {
+        change_km: total_value_change.round(2),
+        change_percentage: total_value_change_percentage.round(2),
+        baseline_year: baseline_year,
+        original_total: habitat_base_year.round(2)
+      }
+    )
   end
 
   def calculate_global_protection
@@ -70,7 +106,7 @@ class Habitat < ApplicationRecord
     c = Carto.new(name)
     total_value_by_country = 0
 
-    if name == "coldcorals"
+    if name == 'coldcorals'
       total_value_by_country = c.total_points_by_country
       total_value_by_country = sort_country_count(total_value_by_country)
     else
@@ -81,17 +117,32 @@ class Habitat < ApplicationRecord
   end
 
   def type
-    name == "coldcorals" ? "points" : "area"
+    name == 'coldcorals' ? 'points' : 'area'
+  end
+
+  def global_stats
+    stats = geo_entity_stats.country_stats.to_a # reduce hits to database
+    {
+      total_habitat_cover: stats.pluck(:total_value).compact.reduce(&:+),
+      protected_habitat_cover: stats.pluck(:protected_value).compact.reduce(&:+)
+    }
   end
 
   def global_protection
-    stats = { 'name' => name, 'total_value' => 0, 'protected_value' => 0 }
+    stats = {
+      'name' => name,
+      'total_value' => 0,
+      'protected_value' => 0
+    }
 
-    stats['total_value'] = global_stats[:total_habitat_cover]
-    stats['protected_value'] = global_stats[:protected_habitat_cover]
+    global_stats_data = global_stats # reduce hits to database
 
-    protected_value = stats['protected_value'] > 0 ? stats['protected_value'] : 1
-    stats.merge({'protected_percentage' => protected_value / stats['total_value'] * 100})
+    stats['total_value'] = global_stats_data[:total_habitat_cover]
+    stats['protected_value'] = global_stats_data[:protected_habitat_cover]
+
+    protected_value = stats['protected_value'].positive? ? stats['protected_value'] : 1
+
+    stats.merge({ 'protected_percentage' => protected_value / stats['total_value'] * 100 })
   end
 
   def self.global_protection
@@ -100,10 +151,68 @@ class Habitat < ApplicationRecord
 
   def self.global_protection_by_id
     hash = {}
-    self.global_protection.each do |habitat_stats|
+    global_protection.each do |habitat_stats|
       hash[habitat_stats['name']] = habitat_stats.except('name')
     end
     hash
+  end
+
+  # experimental alternative to self.global_protection_by_id: not currently used
+  def self.global_protection_by_id_v2
+    hash = {}
+    global_protection_v2.each do |habitat_stats|
+      hash[habitat_stats['name']] = habitat_stats.except('name')
+    end
+    hash
+  end
+
+  # experimental alternative to self.global_protection: not currently used
+  # TODO: be brave, use this method instead of the original, it's cool and its
+  # 2x faster than the original
+  # TODO: check codebase for how other related methods are used e.g.
+  # global_stats and global_protection methods. e.g. they are in habitat_spec.rb
+  def self.global_protection_v2
+    geo_entities = GeoEntity.arel_table
+    geo_entity_stats = GeoEntityStat.arel_table
+    habitats = Habitat.arel_table
+
+    # get all the data we need in a single query
+    # @see scuttle.io for sql->arel help
+    query = GeoEntityStat.select(
+      [
+        habitats[:name],
+        geo_entity_stats[:total_value].sum.as('total_value'),
+        geo_entity_stats[:protected_value].sum.as('protected_value')
+      ]
+    )
+      .where(
+        geo_entities[:iso3].not_eq(nil).and(geo_entities[:iso3].not_eq('GBL'))
+      )
+      .joins(
+        geo_entity_stats.join(geo_entities).on(
+          geo_entities[:id].eq(geo_entity_stats[:geo_entity_id])
+        ).join_sources
+      )
+      .joins(
+        geo_entity_stats.join(habitats).on(
+          habitats[:id].eq(geo_entity_stats[:habitat_id])
+        ).join_sources
+      )
+      .group(habitats[:name])
+
+    results = ActiveRecord::Base.connection.execute(query.to_sql)
+
+    results.map do |row|
+      total_value = row['total_value'].to_f
+      protected_value = row['protected_value'].to_f
+      protected_percentage = protected_value / total_value * 100
+      {
+        name: row['name'],
+        total_value: total_value.round(2),
+        protected_value: protected_value.round(2),
+        protected_percentage: protected_percentage.round(2)
+      }.stringify_keys
+    end
   end
 
   private
@@ -111,10 +220,11 @@ class Habitat < ApplicationRecord
   def sum_country_areas(total_area_by_country)
     country_total_area = {}
     total_area_by_country.flatten.each do |country_data|
-      next if country_data["iso3"].include? "/" #remove areas which have multiple iso
-      next if country_data["iso3"].include? "ABNJ" #remove ABNJ
-      country_total_area[country_data["iso3"]] ||= 0
-      country_total_area[country_data["iso3"]] += country_data["sum"]
+      next if country_data['iso3'].include? '/' # remove areas which have multiple iso
+      next if country_data['iso3'].include? 'ABNJ' # remove ABNJ
+
+      country_total_area[country_data['iso3']] ||= 0
+      country_total_area[country_data['iso3']] += country_data['sum']
     end
     country_total_area
   end
@@ -122,8 +232,9 @@ class Habitat < ApplicationRecord
   def sort_country_count(total_value_by_country)
     country_total_points = {}
     total_value_by_country.each do |total_value|
-      next if total_value["iso3"].include? "ABNJ"
-      country_total_points[total_value["iso3"]] = total_value["count"]
+      next if total_value['iso3'].include? 'ABNJ'
+
+      country_total_points[total_value['iso3']] = total_value['count']
     end
     country_total_points
   end
