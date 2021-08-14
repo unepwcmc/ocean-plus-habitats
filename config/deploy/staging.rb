@@ -1,18 +1,12 @@
 set :stage, :staging
-set :branch, :develop
+set :branch, ENV['BRANCH'] || :develop
 
+server 'web-supported-staging.linode.unep-wcmc.org', user: 'wcmc', roles: %w[app web db]
 
-
-server "web-supported-staging.linode.unep-wcmc.org", user: 'wcmc', roles: %w{app web db}
-
-set :application, "ocean-plus-habitats"
-set :server_name, "ocean-plus-habitats.web-supported-staging.linode.unep-wcmc.org"
-set :sudo_user, "wcmc"
-set :app_port, "80"
-
-
-
-
+set :application, 'ocean-plus-habitats'
+set :server_name, 'ocean-plus-habitats.web-supported-staging.linode.unep-wcmc.org'
+set :sudo_user, 'wcmc'
+set :app_port, '80'
 
 # server-based syntax
 # ======================
@@ -22,8 +16,6 @@ set :app_port, "80"
 # server "example.com", user: "deploy", roles: %w{app db web}, my_property: :my_value
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
-
-
 
 # role-based syntax
 # ==================
@@ -37,8 +29,6 @@ set :app_port, "80"
 # role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
 # role :db,  %w{deploy@example.com}
 
-
-
 # Configuration
 # =============
 # You can set any configuration variable like in config/deploy.rb
@@ -46,8 +36,6 @@ set :app_port, "80"
 # For available Capistrano configuration variables see the documentation page.
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
-
-
 
 # Custom SSH Options
 # ==================
