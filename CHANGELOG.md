@@ -43,3 +43,7 @@ opened by Dependabot.
 * feat: add utilities/files.rb with `latest_file_by_glob` method to help select the latest filename-timestamped CSV that is used in the _habitat coverage protection_ imports
 * refactor: add more informative error when a CSV is missing an expected header
 * fix: wrap _import:refresh_ within a DB transaction so that it doesn't commit anything on failure
+
+## 1.3.1
+
+* correctly merge develop into release and re-release
