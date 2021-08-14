@@ -55,12 +55,16 @@ set :keep_releases, 5
 set :passenger_restart_with_touch, false
 
 namespace :deploy do
-  desc 'Delete and recreate records'
-  task :import_refresh do
+  desc 'Run any rake task if specified (e.g. cap staging deploy TASK=import:refresh)'
+  task :run_task do
     on roles(:app) do
-      invoke 'import:refresh'
+      within release_path do
+        with rails_env: fetch(:rails_env) do
+          rake ENV['TASK']
+        end
+      end
     end
   end
 end
 
-before 'deploy:publishing', 'deploy:import_refresh'
+before 'deploy:publishing', 'deploy:run_task' if ENV['TASK']
