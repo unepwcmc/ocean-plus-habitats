@@ -98,14 +98,14 @@ WDPA_DATASETS = [
     sourceLayers: [
       {
         type: 'point',
-        name: 'WDPA_point_Jun2021',
+        name: 'WDPA_point_latest',
       },
       {
         type: 'poly',
-        name: 'WDPA_poly_Jun2021',
+        name: 'WDPA_poly_latest',
       }
     ],
-    tilesUrl: 'https://data-gis.unep-wcmc.org/server/rest/services/Hosted/OceanPlus_WDPA_update_2/VectorTileServer/tile/{z}/{y}/{x}.pbf',
+    tilesUrl: 'https://data-gis.unep-wcmc.org/server/rest/services/Hosted/WDPA_Marine_Coastal/VectorTileServer/tile/{z}/{y}/{x}.pbf',
     color: '#38A801',
     opacity: 0.5,
     addUnderneath: true,
@@ -118,14 +118,14 @@ WDPA_DATASETS = [
     sourceLayers: [
       {
         type: 'point',
-        name: 'WDOECM_point_Jun2021',
+        name: 'WDOECM_point_latest',
       },
       {
         type: 'poly',
-        name: 'WDOECM_poly_Jun2021',
+        name: 'WDOECM_poly_latest',
       }
     ],
-    tilesUrl: 'https://data-gis.unep-wcmc.org/server/rest/services/Hosted/oecm_oceanplus/VectorTileServer/tile/{z}/{y}/{x}.pbf',
+    tilesUrl: 'https://data-gis.unep-wcmc.org/server/rest/services/Hosted/WDOECM_Marine_Coastal/VectorTileServer/tile/{z}/{y}/{x}.pbf',
     color: '#2700FC',
     opacity: 0.5,
     addUnderneath: true,
