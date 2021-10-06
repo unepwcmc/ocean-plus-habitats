@@ -41,7 +41,7 @@ class CountriesController < ApplicationController
     @next_country_name = @next_country.actual_name
     @next_country_flag = helpers.if_country_get_flag(@next_country.iso3)
 
-    @red_list_last_updated = Date.parse('2021-08-01').strftime('%b, %Y') # TODO: automate based on date imported
+    @red_list_last_updated = Date.parse('2021-10-01').strftime('%b, %Y') # TODO: automate based on date imported
   end
 
   private
