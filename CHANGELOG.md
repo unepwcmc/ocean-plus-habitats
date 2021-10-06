@@ -1,3 +1,7 @@
+## 1.3.3
+
+* chore: update statistics for October 2021
+
 ## 1.3.2
 
 * Update the URLs and names of the data sources for the WDPA and WD-0ECM layers that are being pulled from ArcGis. Bug of them not displaying is now fixed.
