@@ -1,3 +1,7 @@
+## 1.3.4
+
+* chore: update statistics for December 2021
+
 ## 1.3.3
 
 * chore: update statistics for October 2021
