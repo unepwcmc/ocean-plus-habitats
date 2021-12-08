@@ -46,3 +46,39 @@ To lint your factories, run `rake factory_bot:lint`
 
 - Generating zip downloads of CSVS for habitat statistics in each country, can be done simply via `rake generate:national_csvs`, which are dumped into `public/downloads/national` and are labelled according to their ISO3 code. 
 - Global statistics are provided as a prefab zip in the same folder
+
+## Statistics updates
+
+The current procedure for updating statistics is as follows:
+
+* Obtain the global and country statistics from the Ocean Plus Habitats team.
+* Rename them all (or just the country statistics ones) to conform to the format: `<habitat-type>_country_output_<YYYY>-<MM>-01.csv`.
+I.e. ensure that the match the current format within `lib/data/countries/habitat_coverage_protection/country/*.csv`.
+* In each CSV, check that the columns are correct and that the data format appears to be the same according to previous months.
+Most commonly, you will need to rename `"iso_ter"` to `"iso3"` as the ISO column in each CSV.
+
+As of writing, the global statistics needs to be copied in from each CSV provided into the corresponding habitat within `config/habitats.yml`.
+Previously, this data would have been calculated automatically based on the country statistics. But due to inaccuracies
+caused (perhaps) by borders and non-national areas not being included within the counts, we currently depend on the data
+being made available in the habitats YAML file.
+
+* Copy in the `total_area` and `protected_area` from each CSV into each habitat in `config/habitats.yml`.
+
+* Finally, update the `CHANGELOG.md` with a minor version increment e.g. `1.3.4` -> `1.3.5`. Add a suitable line within
+the file to describe changes that have been applied in this release. Be sure to check whether any commits have since
+been made that will become part of `main` that might be included in this release. If that is so, then you may need to
+figure out the most appropriate version, and add further change notes.
+
+That is everything. If you are working from main, then make sure you `git checkout -b chore/update-statistics-<YYYY>-<MM>`
+and `git push origin <name of branch>`. 
+
+* Push the changes, (hopefully from a chore branch) to origin, do a self-review and merge them into `main`.
+* [Create a new release](https://github.com/unepwcmc/ocean-plus-habitats/releases/new) via Github and copy the format of
+previous releases. The version starts with `v` and the title does not. 
+
+Once everything is complete, you are ready to deploy. We will deploy using TASK hook to trigger the `import:refresh`
+task before finishing the deployment. The reason we do this is to ensure that statistics do not change if the deployment
+fails for some reason. The deployment TASK hook has this functionality.
+
+* Ensure you have the latest `main` with `git checkout main; git pull origin main`
+* Deploy with `bundle exec cap production deploy TASK=import:refresh`
