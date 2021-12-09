@@ -52,7 +52,7 @@ To lint your factories, run `rake factory_bot:lint`
 The current procedure for updating statistics is as follows:
 
 * Obtain the global and country statistics from the Ocean Plus Habitats team.
-* Rename them all (or just the country statistics ones) to conform to the format: `<habitat-type><plural-modifier>_country_output_<YYYY>-<MM>-01.csv`.
+* Ensure the country statistics CSVs conform to the format: `<habitat-type><plural-modifier>_country_output_<YYYY>-<MM>-01.csv`.
 I.e. ensure that the match the current format within `lib/data/countries/habitat_coverage_protection/country/*.csv`.
 * In each CSV, check that the columns are correct and that the data format appears to be the same according to previous months.
 Most commonly, you will need to rename `"iso_ter"` to `"iso3"` as the ISO column in each CSV.

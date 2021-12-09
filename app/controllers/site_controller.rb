@@ -29,7 +29,7 @@ class SiteController < ApplicationController
                            })
     end
 
-    @red_list_last_updated = Date.parse('2021-10-01').strftime('%b, %Y') # TODO: automate based on date imported
+    @redlist_last_updated = Date.parse(RedlistSpeciesLastUpdated.touched_at.to_s).strftime('%b, %Y')
   end
 
   def about; end
