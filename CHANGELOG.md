@@ -1,3 +1,12 @@
+## 1.3.6
+
+* Correct filenames for the habitat country CSVs - must be plural.
+* Update documentation to specify plural in CSV more clearly.
+
+## 1.3.5
+
+* Update the documentation to detail how to do a statistics update.
+
 ## 1.3.4
 
 * chore: update statistics for December 2021
