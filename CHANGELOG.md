@@ -1,3 +1,8 @@
+## 1.4.1
+
+* Do not automatically update the Redlist species timestamp.
+* Add docs in readme on how to trigger a timestamp update.
+
 ## 1.4.0
 
 * Automate update of Redlist Species last updated timestamp by using a dotfile

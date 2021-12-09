@@ -82,3 +82,9 @@ fails for some reason. The deployment TASK hook has this functionality.
 
 * Ensure you have the latest `main` with `git checkout main; git pull origin main`
 * Deploy with `bundle exec cap production deploy TASK=import:refresh`
+
+## Update Redlist species timestamp
+
+To update the timestmap, just run `bundle exec rake import:update_redlist_timestamp`
+on the server. You can also run `bundle exec cap production deploy TASK=import:update_redlist_timestamp`
+to do this from your own machine, but it will include a new deploy.

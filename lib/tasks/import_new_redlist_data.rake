@@ -11,7 +11,6 @@ namespace :import do
       import_for_countries
       import_for_regions
     end
-    RedlistSpeciesLastUpdated.touch!
   end
 
   desc 'import habitats occurrences'
@@ -25,6 +24,11 @@ namespace :import do
 
       import_occurrences(row, habitat)
     end
+  end
+
+  desc 'update Redlist species last updated timestamp'
+  task update_redlist_timestamp: [:environment] do
+    RedlistSpeciesLastUpdated.touch!
   end
 
   def import_for_countries
