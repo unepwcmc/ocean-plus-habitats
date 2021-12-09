@@ -43,10 +43,6 @@ module CountriesHelper
     end
   end
 
-  def total_value(dataset)
-    @country.protection_stats[dataset[:id]] ? @country.protection_stats[dataset[:id]]['total_value'].round(1) : 0
-  end
-
   def habitat_with_data
     @red_list_data.find { |habitat| habitat['data'].present? }
   end

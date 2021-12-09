@@ -1,3 +1,8 @@
+## 1.3.7
+
+* Adjust value of Dial total_value so that it does not show
+zero for a value that is less than 0.1
+
 ## 1.3.6
 
 * Correct filenames for the habitat country CSVs - must be plural.
