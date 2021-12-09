@@ -1,15 +1,19 @@
 # frozen_string_literal: true
 
 module RedlistSpeciesLastUpdated
-  FILEPATH = 'tmp/.redlist_species_last_updated'
+  TIMESTAMP_FILEPATH = 'tmp/.redlist_species_last_updated'
 
   def self.touched_at
-    File.mtime(Rails.root.join(FILEPATH))
-  rescue StandardError => _e
-    '2021-10-01' # last known update date before this quick and dirty automation
+    path = Rails.root.join(TIMESTAMP_FILEPATH)
+
+    if File.exist?(path)
+      File.mtime(path)
+    else
+      '2021-10-01' # last known update date before this quick and dirty automation
+    end
   end
 
   def self.touch!
-    File.write(Rails.root.join(FILEPATH), '')
+    File.write(Rails.root.join(TIMESTAMP_FILEPATH), '')
   end
 end
