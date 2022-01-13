@@ -49,6 +49,27 @@ To lint your factories, run `rake factory_bot:lint`
 
 ## Statistics updates
 
+High level update overview:
+
+1. Pull latest from `main` and ensure `develop` up to date with `main`.
+2. Checkout your stats update branch e.g. `git checkout -b chore/update-statistics-2022-01` from `develop`.
+3. Pull in *country* stats to `lib/data/countries/habitat_coverage_protection/country/*.csv`.
+4. Check CSV formatting is correct, especially headers.
+5. Update `habitats.yml` with `total_area` and `protected_area` from *global* stats.
+6. Check whether you need to do anything else with O+ team.
+7. Check the documentation is still relevant, and update if neccessary.
+8. Commit everything and push to GitHub. Then create a PR and review it yourself for any mistakes.
+9. Merge your update into develop.
+10. Pull down your merge from develop and return to develop branch.
+11. Checkout a release branch e.g. `git checkout -b release-1.4.2`
+12. Update the `CHANGELOG.md` following previous examples of format.
+13. Commit and push to GitHub.
+14. Return to `main` and merge release into main e.g. `git merge --no-ff release-1.4.2`.
+15. Push to GitHub.
+16. Go to GitHub releases and [draft a new release ](https://github.com/unepwcmc/ocean-plus-habitats/releases/new).
+17. Come back to terminal and deploy with pre-deploy task for habitat stats refresh e.g. `bundle exec cap production deploy TASK=import:refresh`.
+18. That's it, you're done. But [go and check everything is working](http://ocean-plus-habitats.web-supported-production.linode.unep-wcmc.org/).
+
 The current procedure for updating statistics is as follows:
 
 * Obtain the global and country statistics from the Ocean Plus Habitats team.
