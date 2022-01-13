@@ -49,7 +49,7 @@ To lint your factories, run `rake factory_bot:lint`
 
 ## Statistics updates
 
-High level update overview:
+### High level update overview
 
 1. Pull latest from `main` and ensure `develop` up to date with `main`.
 2. Checkout your stats update branch e.g. `git checkout -b chore/update-statistics-2022-01` from `develop`.
@@ -69,6 +69,8 @@ High level update overview:
 16. Go to GitHub releases and [draft a new release ](https://github.com/unepwcmc/ocean-plus-habitats/releases/new).
 17. Come back to terminal and deploy with pre-deploy task for habitat stats refresh e.g. `bundle exec cap production deploy TASK=import:refresh`.
 18. That's it, you're done. But [go and check everything is working](http://ocean-plus-habitats.web-supported-production.linode.unep-wcmc.org/).
+
+### Low-level overview
 
 The current procedure for updating statistics is as follows:
 
