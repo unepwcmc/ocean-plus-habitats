@@ -55,7 +55,7 @@ The current procedure for updating statistics is as follows:
 * Ensure the country statistics CSVs conform to the format: `<habitat-type><plural-modifier>_country_output_<YYYY>-<MM>-01.csv`.
 I.e. ensure that the match the current format within `lib/data/countries/habitat_coverage_protection/country/*.csv`.
 * In each CSV, check that the columns are correct and that the data format appears to be the same according to previous months.
-Most commonly, you will need to rename `"iso_ter"` to `"iso3"` as the ISO column in each CSV.
+Most commonly, you will need to rename `"iso3"` to `"iso3"` as the ISO column in each CSV.
 
 As of writing, the global statistics needs to be copied in from each CSV provided into the corresponding habitat within `config/habitats.yml`.
 Previously, this data would have been calculated automatically based on the country statistics. But due to inaccuracies
