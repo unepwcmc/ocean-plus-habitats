@@ -54,6 +54,11 @@ The current procedure for updating statistics is as follows:
 * Obtain the global and country statistics from the Ocean Plus Habitats team.
 * Ensure the country statistics CSVs conform to the format: `<habitat-type><plural-modifier>_country_output_<YYYY>-<MM>-01.csv`.
 I.e. ensure that the match the current format within `lib/data/countries/habitat_coverage_protection/country/*.csv`.
+
+:sos:
+
+###### If received over Slack, you can quickly save to the simplest location on disk possible (as there is currently no "download all") and then move all by command line e.g. `mv ~/Desktop/*country*01-01.csv lib/data/habitat_coverage_protection/country/`.
+
 * In each CSV, check that the columns are correct and that the data format appears to be the same according to previous months.
 Most commonly, you will need to rename `"iso_ter"` to `"iso3"` as the ISO column in each CSV.
 
