@@ -1,3 +1,43 @@
+## 1.4.1
+
+* Do not automatically update the Redlist species timestamp.
+* Add docs in readme on how to trigger a timestamp update.
+
+## 1.4.0
+
+* Automate update of Redlist Species last updated timestamp by using a dotfile
+stored in the `tmp` directory. Defaults to the last known manual update Oct 2021
+if not present.
+
+The file is touched with `RedlistSpeciesLastUpdated.touch!` after the 
+`import_new_redlist_data` Rake task is completed.
+
+If a deployment fails, there is a chance that this might be touched prematurely.
+There is currently no way to automatically revert this if such an event occurs.
+But we think it's negligible.
+
+* Rename the variable used for the last updated formatted date.
+* Update the docs for the statistics instructions to convey that the country
+statistics CSVs' filename should be checked against the specified format.
+
+## 1.3.7
+
+* Adjust value of Dial total_value so that it does not show
+zero for a value that is less than 0.1
+
+## 1.3.6
+
+* Correct filenames for the habitat country CSVs - must be plural.
+* Update documentation to specify plural in CSV more clearly.
+
+## 1.3.5
+
+* Update the documentation to detail how to do a statistics update.
+
+## 1.3.4
+
+* chore: update statistics for December 2021
+
 ## 1.3.3
 
 * chore: update statistics for October 2021

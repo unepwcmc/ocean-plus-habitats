@@ -10,4 +10,4 @@ en:
       note: '<strong>Note:</strong> This outlines the proportion of each habitat that is known to occur within protected areas. However, the level of protection and whether or not these habitats are explicitly and effectively protected is unknown.'
       last_updated: '<strong>Last updated:</strong> %{last_updated}'
       card:
-        percentage: '<strong>%{percentage}%</strong> of %{area} km<sup>2</sup>'
+        percentage: '<strong>%{percentage}%</strong> of <span title="%{area_unrounded}">%{area}</span> km<sup>2</sup>'
