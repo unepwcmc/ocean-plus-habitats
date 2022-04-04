@@ -32,3 +32,5 @@ yarn-debug.log*
 previous_failed_specs.txt
 coverage
 /TAGS
+
+.directory

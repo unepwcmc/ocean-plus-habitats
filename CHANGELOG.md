@@ -1,3 +1,12 @@
+## 1.4.3
+
+* Update docs to correct path to country habitat stats (again).
+* Update global and country habitat stats for 2022-04 period.
+## 1.4.2
+
+* Update docs to correct path to country habitat stats.
+* Update global and country habitat stats for 2022-01 period.
+
 ## 1.4.1
 
 * Do not automatically update the Redlist species timestamp.
