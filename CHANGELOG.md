@@ -1,3 +1,6 @@
+## 1.4.4
+* Update global and country habitat stats for 2022-05 period.
+
 ## 1.4.3
 
 * Update docs to correct path to country habitat stats (again).
