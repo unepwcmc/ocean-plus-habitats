@@ -2,6 +2,7 @@ class GeoEntity < ApplicationRecord
   has_many :geo_entities_species, class_name: 'GeoEntitiesSpecies'
   has_many :species, through: :geo_entities_species
   has_many :geo_entity_stats
+  has_many :habitats, through: :geo_entity_stats
   # At the moment, only mangroves have got change stats,
   # which means there can only be one change_stat record per country.
   # This can change in the future
@@ -94,6 +95,18 @@ class GeoEntity < ApplicationRecord
       map(&:attributes).map { |ges| ges.except('id') }.
       group_by { |ges| ges['name'] }.
       transform_values(&:first)
+  end
+
+  # # For API JSON response
+  def protected_area_statistics
+    geo_entity_stats.map do |geo_entity_stat|
+      {
+        name: geo_entity_stat.habitat.name,
+        total_area: geo_entity_stat.protected_value,
+        protected_area: geo_entity_stat.total_value,
+        percent_protected: geo_entity_stat.protected_percentage
+      }
+    end
   end
 
   private

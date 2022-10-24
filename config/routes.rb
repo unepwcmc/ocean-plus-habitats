@@ -12,4 +12,11 @@ Rails.application.routes.draw do
   get 'site/legal' => 'site#legal', as: 'legal'
 
   get '/:name' => 'countries#show'
+
+  namespace :api do
+    namespace :v1 do
+      resources :countries, only: [:index, :show], param: :iso3
+      get '/global_statistics' => 'global_statistics#show'
+    end
+  end
 end
