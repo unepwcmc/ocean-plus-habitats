@@ -96,6 +96,18 @@ class GeoEntity < ApplicationRecord
       transform_values(&:first)
   end
 
+  # For JSON API response
+  def protected_area_statistics
+    geo_entity_stats.map do |geo_entity_stat|
+      {
+        name: geo_entity_stat.habitat.name,
+        total_area: geo_entity_stat.protected_value,
+        protected_area: geo_entity_stat.total_value,
+        percent_protected: geo_entity_stat.protected_percentage
+      }
+    end
+  end
+
   private
 
   def fetch_needed_occurrence_attrs
