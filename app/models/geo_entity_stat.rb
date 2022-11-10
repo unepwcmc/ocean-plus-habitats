@@ -19,4 +19,13 @@ class GeoEntityStat < ApplicationRecord
     'seagrasses' => 'unknown',
     'coldcorals' => 'unknown'
   }.freeze
+
+  def api_json
+    {
+      name: habitat.name,
+      total_area: protected_value,
+      protected_area: total_value,
+      percent_protected: protected_percentage
+    }
+  end
 end

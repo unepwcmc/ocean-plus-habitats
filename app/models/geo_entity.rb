@@ -2,6 +2,7 @@ class GeoEntity < ApplicationRecord
   has_many :geo_entities_species, class_name: 'GeoEntitiesSpecies'
   has_many :species, through: :geo_entities_species
   has_many :geo_entity_stats
+  has_many :habitats, through: :geo_entity_stats
   # At the moment, only mangroves have got change stats,
   # which means there can only be one change_stat record per country.
   # This can change in the future
