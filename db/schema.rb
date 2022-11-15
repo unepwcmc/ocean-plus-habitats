@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210812135252) do
+ActiveRecord::Schema.define(version: 20221115093841) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -118,8 +118,6 @@ ActiveRecord::Schema.define(version: 20210812135252) do
     t.string "name", default: "", null: false
     t.string "title", default: "", null: false
     t.string "theme", default: "", null: false
-    t.string "poly_table"
-    t.string "point_table"
     t.integer "global_coverage", default: 0, null: false
     t.integer "protected_percentage", default: 0, null: false
     t.datetime "created_at", null: false

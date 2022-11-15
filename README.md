@@ -16,12 +16,6 @@
 * If you simply want to regenerate your statistics, you don't have to drop your database. Just run `rake import:refresh` instead.
 
 ## Data
-
-We are still trying to see if it is feasible to generate map tiles and data dynamically using Carto and in the meantime we are using static data.
-
-Data is fetched from CartoDB using the `Carto` module defined in `lib/modules`.
-Some details about the layers in Carto are in `config/habitats.yml`.
-
 At the moment static data is provided related to the protected areas coverage.
 Ideally, the protected areas coverage data should always be dynamically generated, as this depends on the WDPA release
 which is updated every month.
