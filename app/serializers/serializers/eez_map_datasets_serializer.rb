@@ -41,7 +41,7 @@ class Serializers::EezMapDatasetsSerializer < Serializers::Base
   NAMES = {
     'coralreefs' => 'ProtectionCoralReef',
     'saltmarshes' => 'ProtectionSaltmarsh',
-    'mangroves' => 'ProtectionMangroves',
+    'mangroves' => 'ProtectionMangrove',
     'seagrasses' => 'ProtectionSeagrasses',
     'coldcorals' => 'ProtectionColdCoral'
   }.freeze
