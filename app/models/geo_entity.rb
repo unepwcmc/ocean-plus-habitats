@@ -110,6 +110,18 @@ class GeoEntity < ApplicationRecord
     end
   end
 
+  def habitat_change_statistics
+    {
+      mangroves: mangrove_change_statistics
+    }
+  end
+
+  def ordered_countries
+    countries.order(name: :asc).as_json(
+      only: %i[iso3 name]
+    )
+  end
+
   def mangrove_change_statistics
     return nil unless change_stat
 
