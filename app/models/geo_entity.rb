@@ -103,8 +103,8 @@ class GeoEntity < ApplicationRecord
     geo_entity_stats.map do |geo_entity_stat|
       {
         name: geo_entity_stat.habitat.name,
-        total_area: geo_entity_stat.protected_value,
-        protected_area: geo_entity_stat.total_value,
+        total_area: geo_entity_stat.total_value,
+        protected_area: geo_entity_stat.protected_value,
         percent_protected: geo_entity_stat.protected_percentage
       }
     end
