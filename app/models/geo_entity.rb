@@ -117,9 +117,10 @@ class GeoEntity < ApplicationRecord
   end
 
   def habitat_change_statistics
-    {
-      mangroves: mangrove_change_statistics
-    }
+    [
+      name: 'mangroves',
+      total_area: mangrove_change_statistics
+    ]
   end
 
   def mangrove_change_statistics
