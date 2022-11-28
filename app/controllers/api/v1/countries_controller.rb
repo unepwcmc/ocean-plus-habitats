@@ -45,7 +45,7 @@ class Api::V1::CountriesController < Api::V1::BaseController
       page: page,
       per_page: per_page,
       page_count: page_count,
-      total_count: @countries.count
+      total_count: total_count
     }
   end
 
