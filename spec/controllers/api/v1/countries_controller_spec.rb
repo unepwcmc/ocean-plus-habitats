@@ -21,7 +21,13 @@ RSpec.describe Api::V1::CountriesController, type: :controller do
       expect(response).to be_successful
       
       response_body = JSON.parse(response.body)
-      expect(response_body.pluck('iso3')).to match(GeoEntity.pluck(:iso3))
+      expect(response_body['records'].pluck('iso3')).to match(GeoEntity.pluck(:iso3))
+      expect(response_body['metadata']).to eq({
+        'page' => 1,
+        'per_page' => 25,
+        'page_count' => 1,
+        'total_count' => 2
+      })
     end
   end
 end
