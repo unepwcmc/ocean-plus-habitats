@@ -1,3 +1,5 @@
+PER_PAGE = 25.freeze
+
 class Api::V1::CountriesController < Api::V1::BaseController
   before_action :set_country, only: [:show]
   before_action :set_countries, only: [:index]
@@ -29,7 +31,7 @@ class Api::V1::CountriesController < Api::V1::BaseController
   def set_countries
     @countries = GeoEntity.countries
       .order(name: :asc)
-      .paginate(page: page, per_page: per_page)
+      .paginate(page: page, per_page: PER_PAGE)
       .eager_load(geo_entity_stats: :habitat)
   end
 
@@ -43,7 +45,7 @@ class Api::V1::CountriesController < Api::V1::BaseController
   def index_metadata
     {
       page: page,
-      per_page: per_page,
+      per_page: PER_PAGE,
       page_count: page_count,
       total_count: total_count
     }
@@ -53,15 +55,11 @@ class Api::V1::CountriesController < Api::V1::BaseController
     params[:page] || 1
   end
 
-  def per_page
-    25
-  end
-
   def total_count
     @countries.count
   end
 
   def page_count
-    (total_count.to_f / per_page).ceil
+    (total_count.to_f / PER_PAGE).ceil
   end
 end
