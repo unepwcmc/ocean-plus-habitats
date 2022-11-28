@@ -56,6 +56,6 @@ FactoryBot.define do
 
         geo_entity.reload
       end
-    end    
+    end
   end
 end
