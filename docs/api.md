@@ -206,7 +206,7 @@ Endpoints:
 
 _Note, region id can be retrieved from the Index response._
 
-#### Index
+#### Index
 Returns all regions within Ocean+ Habitats. Do not assume the IDs in this example will be correct for the latest data provided by the API.
 
 Example response:
