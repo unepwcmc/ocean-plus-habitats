@@ -4,7 +4,7 @@
 The Ocean+ Habitats API does not currently require any licensing or tokens to use.
 
 ## Endpoints
-The Ocean+ Habitats API exposes statisics regarding protected area coverage, habitat coverage change and Species Red List statuses.
+The Ocean+ Habitats API exposes statistics regarding protected area coverage, habitat coverage change and Species Red List statuses.
 
 This information can be requested either grouped by country or for a given region.
 
