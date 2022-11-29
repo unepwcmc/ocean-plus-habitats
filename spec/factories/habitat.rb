@@ -6,6 +6,8 @@ FactoryBot.define do
       theme { 'orange' }
       global_coverage { 0 }
       protected_percentage { 0 }
+      total_area { 0 }
+      protected_area { 0 }
       wms_url { 'dummy URL' }
     end
 
@@ -15,6 +17,8 @@ FactoryBot.define do
       theme { 'orange' }
       global_coverage { 0 }
       protected_percentage { 0 }
+      total_area { 0 }
+      protected_area { 0 }
       wms_url { 'dummy URL' }
     end
 
@@ -24,6 +28,8 @@ FactoryBot.define do
       theme { 'orange' }
       global_coverage { 0 }
       protected_percentage { 0 }
+      total_area { 0 }
+      protected_area { 0 }
       wms_url { 'dummy URL' }
     end
 
@@ -33,6 +39,8 @@ FactoryBot.define do
       theme { 'orange' }
       global_coverage { 0 }
       protected_percentage { 0 }
+      total_area { 0 }
+      protected_area { 0 }
       wms_url { 'dummy URL' }
     end
 
@@ -42,6 +50,8 @@ FactoryBot.define do
       theme { 'orange' }
       global_coverage { 0 }
       protected_percentage { 0 }
+      total_area { 0 }
+      protected_area { 0 }
       wms_url { 'dummy URL' }
 
       after(:create) do |mangroves, _evaluator|

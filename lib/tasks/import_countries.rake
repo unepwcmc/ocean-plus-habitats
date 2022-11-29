@@ -18,7 +18,8 @@ namespace :import do
       attributes = {
         name: sanitize(name), # this name used for URLs
         actual_name: name, # leave original name in there for purposes of displaying to users
-        iso3: iso3
+        iso3: iso3,
+        is_region: false
       }
 
       GeoEntity.find_or_create_by(attributes)

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210812135252) do
+ActiveRecord::Schema.define(version: 20221124153636) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 20210812135252) do
     t.datetime "updated_at", null: false
     t.float "bounding_box", default: [], array: true
     t.string "actual_name"
+    t.boolean "is_region", default: false
     t.index ["bounding_box"], name: "index_geo_entities_on_bounding_box", using: :gin
   end
 
