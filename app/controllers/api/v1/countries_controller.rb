@@ -56,7 +56,7 @@ class Api::V1::CountriesController < Api::V1::BaseController
   end
 
   def total_count
-    @countries.count
+    @total_count ||= @countries.count
   end
 
   def page_count
