@@ -15,8 +15,8 @@ class GeoEntity < ApplicationRecord
 
   has_many :country_citations, foreign_key: 'country_id'
 
-  scope :countries, -> { where.not(iso3: nil).where.not(iso3: 'GBL') }
-  scope :regions, -> { where(iso3: nil) }
+  scope :countries, -> { where(is_region: false).where.not(iso3: 'GBL') }
+  scope :regions, -> { where(is_region: true) }
   
   # Only allowing actual countries to be considered for the 'Next country' button
   scope :valid_countries, lambda {
@@ -108,6 +108,34 @@ class GeoEntity < ApplicationRecord
         percent_protected: geo_entity_stat.protected_percentage
       }
     end
+  end
+
+  def ordered_countries
+    countries.order(name: :asc).as_json(
+      only: %i[iso3 name]
+    )
+  end
+
+  def habitat_change_statistics
+    [
+      name: 'mangroves',
+      total_area: mangrove_change_statistics
+    ]
+  end
+
+  def mangrove_change_statistics
+    return nil unless change_stat
+
+    {
+      total_value_1996: change_stat.total_value_1996,
+      total_value_2007: change_stat.total_value_2007,
+      total_value_2008: change_stat.total_value_2008,
+      total_value_2009: change_stat.total_value_2009,
+      total_value_2010: change_stat.total_value_2010,
+      total_value_2015: change_stat.total_value_2015,
+      total_value_2016: change_stat.total_value_2016,
+      baseline_year: change_stat.baseline_year
+    }
   end
 
   private
