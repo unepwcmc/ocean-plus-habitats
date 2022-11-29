@@ -6,11 +6,16 @@ The Ocean+ Habitats API does not currently require any licensing or tokens to us
 ## Endpoints
 The Ocean+ Habitats API exposes statistics regarding protected area coverage, habitat coverage change and Species Red List statuses.
 
-This information can be requested either grouped by country or for a given region.
+This information is provided at country and region levels.
+
+### Pagination
+Endpoints with pagination will all accept the following query parameters:
+
+| Parameter   | Options             | Description                      |
+|-------------|---------------------|----------------------------------|
+| page        | Integer; Default: 1 | Defines the desired results page |
 
 ### Countries
-Country-level data can be requested grouped by country or for a specific country.
-
 Endpoints: 
 - Index: GET `api/v1/countries`
 - Show: GET `api/v1/countries/:iso3`
@@ -383,10 +388,3 @@ Example response:
     ]
 }
 ```
-
-## Pagination
-Endpoints with pagination will all accept the following query parameters:
-
-| Parameter   | Options             | Description                      |
-|-------------|---------------------|----------------------------------|
-| page        | Integer; Default: 1 | Defines the desired results page |
