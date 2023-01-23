@@ -25,7 +25,7 @@ RSpec.describe Habitat, type: :model do
     let(:habitat) { mangroves }
     let(:country) { FactoryBot.create(:country_with_mangroves) }
     let(:change_stat) { habitat.change_stats.first }
-    let(:change_km) { (change_stat.total_value_2016 - change_stat.total_value_2010).round(2) }
+    let(:change_km) { (change_stat.total_value_2020 - change_stat.total_value_2010).round(2) }
     let(:change_percentage) { ( change_km / change_stat.total_value_2010 ) * 100 }
     let(:global_protected_percentage) do
       habitat.geo_entity_stats.country_stats.pluck(:protected_value).compact.reduce(&:+) 

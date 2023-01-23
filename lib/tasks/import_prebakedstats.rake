@@ -84,6 +84,7 @@ namespace :import do
       stat.total_value_2010     = coerce_to_value(csv_row['total_area_2010baseline'])
       stat.total_value_2015     = coerce_to_value(csv_row['total_area_2015'])
       stat.total_value_2016     = coerce_to_value(csv_row['total_area_2016'])
+      stat.total_value_2020     = coerce_to_value(csv_row['total_area_2020'])
       stat.protected_value      = coerce_to_value(csv_row['protected_area'])
       stat.protected_percentage = coerce_to_value(csv_row['percent_protected'])
     end

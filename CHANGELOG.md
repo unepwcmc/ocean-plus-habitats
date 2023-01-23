@@ -1,3 +1,7 @@
+## 1.4.7
+
+* Update global and country habitat stats for 2023-01 period.
+
 ## 1.4.6
 
 * Update global and country habitat stats for 2022-08 period.
