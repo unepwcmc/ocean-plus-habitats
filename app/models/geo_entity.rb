@@ -110,34 +110,6 @@ class GeoEntity < ApplicationRecord
     end
   end
 
-  def ordered_countries
-    countries.order(name: :asc).as_json(
-      only: %i[iso3 name]
-    )
-  end
-
-  def habitat_change_statistics
-    [
-      name: 'mangroves',
-      total_area: mangrove_change_statistics
-    ]
-  end
-
-  def mangrove_change_statistics
-    return nil unless change_stat
-
-    {
-      total_value_1996: change_stat.total_value_1996,
-      total_value_2007: change_stat.total_value_2007,
-      total_value_2008: change_stat.total_value_2008,
-      total_value_2009: change_stat.total_value_2009,
-      total_value_2010: change_stat.total_value_2010,
-      total_value_2015: change_stat.total_value_2015,
-      total_value_2016: change_stat.total_value_2016,
-      baseline_year: change_stat.baseline_year
-    }
-  end
-
   private
 
   def fetch_needed_occurrence_attrs
