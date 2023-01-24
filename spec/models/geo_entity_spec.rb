@@ -78,9 +78,12 @@ RSpec.describe GeoEntity, type: :model do
   describe '#protected_area_statistics' do
     it 'outputs an array of habitat protection statistics' do
       pa_stats = geo_entity.protected_area_statistics
+      mangrove_stats = pa_stats.select { |stat| stat[:name] == 'mangroves' }.first
 
       expect(pa_stats.count).to equal(5)
       expect(pa_stats).to all( include(:name, :total_area, :protected_area, :percent_protected) )
+
+      expect(mangrove_stats).to include(:total_area_over_time)
 
       expect(pa_stats[0][:protected_area].to_s).to eq('38.0')
       expect(pa_stats[0][:percent_protected].to_s).to eq('38.0')
