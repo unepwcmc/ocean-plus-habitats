@@ -116,6 +116,11 @@ class GeoEntity < ApplicationRecord
     end
   end
 
+  # For JSON API response
+  def coastline_coverage
+    Serializers::RepresentationHabitatsSerializer.new(self).serialize_for_api
+  end
+
   private
 
   def total_mangrove_area_over_time

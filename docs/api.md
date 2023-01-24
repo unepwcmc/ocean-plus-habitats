@@ -161,6 +161,36 @@ Example response:
       "percent_protected": "36.7138847776118"
     }
   ],
+  "coastline_coverage": [
+    {
+      "name": "multiple",
+      "coverage": "64482.0487371337"
+    },
+    {
+      "name": "coralreefs",
+      "coverage": "730.074439858453"
+    },
+    {
+      "name": "saltmarshes",
+      "coverage": "1397.91323134123"
+    },
+    {
+      "name": "mangroves",
+      "coverage": "514.817291537371"
+    },
+    {
+      "name": "seagrasses",
+      "coverage": "3400.78769993753"
+    },
+    {
+      "name": "coldcorals",
+      "coverage": "96.1931847194846"
+    },
+    {
+      "name": "notcovered",
+      "coverage": "1765.8007328794314"
+    }
+  ],
   "species_status": {
     "coralreefs": [
       ["CR", 1],
