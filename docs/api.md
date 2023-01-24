@@ -45,7 +45,8 @@ Example response:
           "name": "mangroves",
           "total_area": "0.0",
           "protected_area": "0.0",
-          "percent_protected": "0.0"
+          "percent_protected": "0.0",
+          "total_area_over_time": null
         },
         {
           "name": "coralreefs",
@@ -67,42 +68,48 @@ Example response:
         }
       ]
     },
+    ...,
     {
-      "name": "Albania",
-      "iso3": "ALB",
+      "name": "American Samoa",
+      "iso3": "ASM",
       "protected_area_statistics": [
         {
-          "name": "coralreefs",
-          "total_area": "0.0",
-          "protected_area": "0.0",
-          "percent_protected": "0.0"
-        },
-        {
-          "name": "mangroves",
-          "total_area": "0.0",
-          "protected_area": "0.0",
-          "percent_protected": "0.0"
-        },
-        {
           "name": "coldcorals",
-          "total_area": "0.0",
-          "protected_area": "5.98647948252716",
+          "total_area": "0.9984762212467504",
+          "protected_area": "0.0",
           "percent_protected": "0.0"
         },
         {
           "name": "seagrasses",
-          "total_area": "2.93708153556099",
-          "protected_area": "44.0192816483413",
-          "percent_protected": "6.67226139450565"
+          "total_area": "461.078718452198",
+          "protected_area": "17.50131190126503",
+          "percent_protected": "3.7957318784990646"
         },
         {
-          "name": "saltmarshes",
-          "total_area": "46.2691076755062",
-          "protected_area": "54.5599588089528",
-          "percent_protected": "84.8041470073724"
+          "name": "mangroves",
+          "total_area": "0.318919219",
+          "protected_area": "0.0",
+          "percent_protected": "0.0",
+          "total_area_over_time": [
+            {
+                "year": "1996",
+                "total_area": "0.187447024220235"
+            },
+            ...
+          ]
+        },
+        {
+            "name": "saltmarshes",
+            "total_area": "1.9968000607677678",
+            "protected_area": "0.41696308298757595",
+            "percent_protected": "20.88156401734353"
+        },
+        {
+            "name": "coralreefs",
+            "total_area": "45.15909042041572",
+            "protected_area": "12.807788083782356",
+            "percent_protected": "28.3614837334991"
         }
-      ]
-    }
   },
   ...
 ]
@@ -132,7 +139,14 @@ Example response:
       "name": "mangroves",
       "total_area": "4802.07596294615",
       "protected_area": "9781.88028304306",
-      "percent_protected": "49.0915429753375"
+      "percent_protected": "49.0915429753375",
+      "total_area_over_time": [
+        {
+          "year": "1996",
+          "total_area": "9953.07281"
+        },
+        ...
+      ]
     },
     {
       "name": "seagrasses",

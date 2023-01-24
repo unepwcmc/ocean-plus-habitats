@@ -101,16 +101,36 @@ class GeoEntity < ApplicationRecord
   # For JSON API response
   def protected_area_statistics
     geo_entity_stats.map do |geo_entity_stat|
-      {
+      stats = {
         name: geo_entity_stat.habitat.name,
         total_area: geo_entity_stat.total_value,
         protected_area: geo_entity_stat.protected_value,
-        percent_protected: geo_entity_stat.protected_percentage
+        percent_protected: geo_entity_stat.protected_percentage,
       }
+
+      if geo_entity_stat.habitat.name == 'mangroves'
+        stats.merge!({ total_area_over_time: total_mangrove_area_over_time })
+      end
+
+      stats
     end
   end
 
   private
+
+  def total_mangrove_area_over_time
+    return unless change_stat
+
+    total_area_data = change_stat.as_json
+      .select { |key, value| key.match(/total_value_/) }
+      
+    total_area_data.map do |key, value|
+      {
+        year: key.gsub(/total_value_/, ''),
+        total_area: value
+      }
+    end
+  end
 
   def fetch_needed_occurrence_attrs
     countries_geo_entity_stats.joins(:habitat).select(
