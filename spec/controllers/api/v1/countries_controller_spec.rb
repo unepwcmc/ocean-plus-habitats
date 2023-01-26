@@ -6,14 +6,23 @@ PAGE_COUNT = 2
 
 RSpec.describe Api::V1::CountriesController, type: :controller do
   describe 'GET #show' do
-    let!(:country) { create_list(:country, 2) }
+    include_context 'geo_entity_stat_setup'
+
+    before do
+      habitats.each do |habitat|
+        countries.each do |country|
+          FactoryBot.create(:geo_entity_stat, habitat: habitat, geo_entity: country)
+          FactoryBot.create(:coastal_stat, geo_entity: country)
+        end
+      end
+    end
 
     it 'returns summary data for a country' do
-      get :show, params: { iso3: country.first.iso3 }, format: :json
+      get :show, params: { iso3: countries.last.iso3 }, format: :json
       expect(response).to be_successful
 
       response_body = JSON.parse(response.body)
-      expect(response_body['iso3']).to match(country.first.iso3)
+      expect(response_body['iso3']).to match(countries.last.iso3)
     end
   end
 

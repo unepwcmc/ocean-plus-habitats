@@ -7,6 +7,7 @@ RSpec.describe GeoEntity, type: :model do
     habitats.each do |habitat|
       countries.each do |country|
         FactoryBot.create(:geo_entity_stat, habitat: habitat, geo_entity: country)
+        FactoryBot.create(:coastal_stat, geo_entity: country)
       end
     end
   end
@@ -88,6 +89,15 @@ RSpec.describe GeoEntity, type: :model do
       expect(pa_stats[0][:protected_area].to_s).to eq('38.0')
       expect(pa_stats[0][:percent_protected].to_s).to eq('38.0')
       expect(pa_stats[0][:total_area].to_s).to eq('100.0')
+    end
+  end
+
+  describe '#coastline_coverage' do
+    it 'outputs an array of coastline coverage statistics' do
+      coastline_stats = geo_entity.coastline_coverage
+
+      expect(coastline_stats.count).to equal(7)
+      expect(coastline_stats).to all( include(:name, :coverage) )
     end
   end
 end
