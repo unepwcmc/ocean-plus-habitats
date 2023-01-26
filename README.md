@@ -54,21 +54,24 @@ To lint your factories, run `rake factory_bot:lint`
 1. Pull latest from `main` and ensure `develop` up to date with `main`.
 2. Checkout your stats update branch e.g. `git checkout -b chore/update-statistics-2022-01` from `develop`.
 3. Pull in *country* stats to `lib/data/habitat_coverage_protection/country/*.csv`.
-4. Check CSV formatting is correct, especially headers.
-5. Update `habitats.yml` with `total_area` and `protected_area` from *global* stats.
-6. Check whether you need to do anything else with O+ team.
-7. Check the documentation is still relevant, and update if neccessary.
-8. Commit everything and push to GitHub. Then create a PR and review it yourself for any mistakes.
-9. Merge your update into develop.
-10. Pull down your merge from develop and return to develop branch.
-11. Checkout a release branch e.g. `git checkout -b release-1.4.2`
-12. Update the `CHANGELOG.md` following previous examples of format.
-13. Commit and push to GitHub.
-14. Return to `main` and merge release into main e.g. `git merge --no-ff release-1.4.2`.
-15. Push to GitHub.
-16. Go to GitHub releases and [draft a new release ](https://github.com/unepwcmc/ocean-plus-habitats/releases/new).
-17. Come back to terminal and deploy with pre-deploy task for habitat stats refresh e.g. `bundle exec cap production deploy TASK=import:refresh`.
-18. That's it, you're done. But [go and check everything is working](http://ocean-plus-habitats.web-supported-production.linode.unep-wcmc.org/).
+4. Pull in *coastline coverage* stats to `lib/data/coastline_coverage/coastline_coverage.csv`
+5. Check CSV formatting is correct, especially headers.
+6. Check mangroves data contains multiple years.
+7. Update `habitats.yml` with `total_area` and `protected_area` from *global* stats.
+8. Create a new `global_statistics.zip` file and add to repo.
+9. Check whether you need to do anything else with O+ team.
+10. Check the documentation is still relevant, and update if neccessary.
+11. Commit everything and push to GitHub. Then create a PR and review it yourself for any mistakes.
+12. Merge your update into develop.
+13. Pull down your merge from develop and return to develop branch.
+14. Checkout a release branch e.g. `git checkout -b release-1.4.2`
+15. Update the `CHANGELOG.md` following previous examples of format.
+16. Commit and push to GitHub.
+17. Return to `main` and merge release into main e.g. `git merge --no-ff release-1.4.2`.
+18. Push to GitHub.
+19. Go to GitHub releases and [draft a new release ](https://github.com/unepwcmc/ocean-plus-habitats/releases/new).
+20. Come back to terminal and deploy with pre-deploy task for habitat stats refresh e.g. `bundle exec cap production deploy TASK=import:refresh`.
+21. That's it, you're done. But [go and check everything is working](http://ocean-plus-habitats.web-supported-production.linode.unep-wcmc.org/).
 
 ### Low-level overview
 
@@ -85,12 +88,18 @@ I.e. ensure that the match the current format within `lib/data/habitat_coverage_
 * In each CSV, check that the columns are correct and that the data format appears to be the same according to previous months.
 Most commonly, you will need to rename `"iso3"` to `"iso3"` as the ISO column in each CSV.
 
+Mangroves data should be present for multiple years within the country CSVs.
+
 As of writing, the global statistics needs to be copied in from each CSV provided into the corresponding habitat within `config/habitats.yml`.
 Previously, this data would have been calculated automatically based on the country statistics. But due to inaccuracies
 caused (perhaps) by borders and non-national areas not being included within the counts, we currently depend on the data
 being made available in the habitats YAML file.
 
 * Copy in the `total_area` and `protected_area` from each CSV into each habitat in `config/habitats.yml`.
+
+* Create a new `global_statistics.zip` file and add to repo.
+
+This should contain the 5 habitat CSVs with protection stats at the country level as well as coastline_coverage.csv.
 
 * Finally, update the `CHANGELOG.md` with a minor version increment e.g. `1.3.4` -> `1.3.5`. Add a suitable line within
 the file to describe changes that have been applied in this release. Be sure to check whether any commits have since
