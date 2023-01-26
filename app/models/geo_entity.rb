@@ -101,44 +101,41 @@ class GeoEntity < ApplicationRecord
   # For JSON API response
   def protected_area_statistics
     geo_entity_stats.map do |geo_entity_stat|
-      {
+      stats = {
         name: geo_entity_stat.habitat.name,
         total_area: geo_entity_stat.total_value,
         protected_area: geo_entity_stat.protected_value,
-        percent_protected: geo_entity_stat.protected_percentage
+        percent_protected: geo_entity_stat.protected_percentage,
       }
+
+      if geo_entity_stat.habitat.name == 'mangroves'
+        stats.merge!({ total_area_over_time: total_mangrove_area_over_time })
+      end
+
+      stats
     end
   end
 
-  def ordered_countries
-    countries.order(name: :asc).as_json(
-      only: %i[iso3 name]
-    )
-  end
-
-  def habitat_change_statistics
-    [
-      name: 'mangroves',
-      total_area: mangrove_change_statistics
-    ]
-  end
-
-  def mangrove_change_statistics
-    return nil unless change_stat
-
-    {
-      total_value_1996: change_stat.total_value_1996,
-      total_value_2007: change_stat.total_value_2007,
-      total_value_2008: change_stat.total_value_2008,
-      total_value_2009: change_stat.total_value_2009,
-      total_value_2010: change_stat.total_value_2010,
-      total_value_2015: change_stat.total_value_2015,
-      total_value_2016: change_stat.total_value_2016,
-      baseline_year: change_stat.baseline_year
-    }
+  # For JSON API response
+  def coastline_coverage
+    Serializers::RepresentationHabitatsSerializer.new(self).serialize_for_api
   end
 
   private
+
+  def total_mangrove_area_over_time
+    return unless change_stat
+
+    total_area_data = change_stat.as_json
+      .select { |key, value| key.match(/total_value_/) }
+      
+    total_area_data.map do |key, value|
+      {
+        year: key.gsub(/total_value_/, ''),
+        total_area: value
+      }
+    end
+  end
 
   def fetch_needed_occurrence_attrs
     countries_geo_entity_stats.joins(:habitat).select(

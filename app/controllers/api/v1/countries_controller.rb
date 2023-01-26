@@ -7,7 +7,7 @@ class Api::V1::CountriesController < Api::V1::BaseController
   def show
     render json: @country.as_json(
       only: %i[name iso3],
-      methods: %i[protected_area_statistics species_status]
+      methods: %i[protected_area_statistics coastline_coverage species_status]
     )
   end
 
@@ -30,6 +30,7 @@ class Api::V1::CountriesController < Api::V1::BaseController
 
   def set_countries
     @countries = GeoEntity.countries
+      .includes(:change_stat, geo_entity_stats: :habitat)
       .order(name: :asc)
       .paginate(page: page, per_page: PER_PAGE)
       .eager_load(geo_entity_stats: :habitat)

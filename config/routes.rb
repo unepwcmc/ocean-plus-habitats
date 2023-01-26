@@ -16,7 +16,6 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :countries, only: %i[index show], param: :iso3
-      resources :regions, only: %i[index show]
     end
   end
 end
