@@ -9,6 +9,9 @@ FactoryBot.define do
     total_value_2010 { 0.5 }
     total_value_2015 { 0.7 }
     total_value_2016 { 0.9 }
+    total_value_2017 { 0.9 }
+    total_value_2018 { 0.9 }
+    total_value_2019 { 0.9 }
     total_value_2020 { 0.95 }
     protected_percentage { 50.0 }
     association :geo_entity, factory: :country_with_mangroves

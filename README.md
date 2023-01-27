@@ -88,6 +88,8 @@ I.e. ensure that the match the current format within `lib/data/habitat_coverage_
 * In each CSV, check that the columns are correct and that the data format appears to be the same according to previous months.
 Most commonly, you will need to rename `"iso3"` to `"iso3"` as the ISO column in each CSV.
 
+Also, there must be a column with "baseline" within the header name, otherwise the data will not be imported.
+
 Mangroves data should be present for multiple years within the country CSVs.
 
 As of writing, the global statistics needs to be copied in from each CSV provided into the corresponding habitat within `config/habitats.yml`.

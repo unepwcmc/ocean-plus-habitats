@@ -77,14 +77,15 @@ namespace :import do
     habitat = Habitat.find_by(name: habitat)
 
     ChangeStat.find_or_create_by(habitat: habitat, geo_entity: geo_entity) do |stat|
-      stat.total_value_1996     = coerce_to_value(csv_row['total_area_1996'])
-      stat.total_value_2007     = coerce_to_value(csv_row['total_area_2007'])
-      stat.total_value_2008     = coerce_to_value(csv_row['total_area_2008'])
-      stat.total_value_2009     = coerce_to_value(csv_row['total_area_2009'])
-      stat.total_value_2010     = coerce_to_value(csv_row['total_area_2010baseline'])
-      stat.total_value_2015     = coerce_to_value(csv_row['total_area_2015'])
-      stat.total_value_2016     = coerce_to_value(csv_row['total_area_2016'])
-      stat.total_value_2020     = coerce_to_value(csv_row['total_area_2020'])
+      %w[1996 2007 2008 2009 2010 2015 2016 2017 2018 2019 2020].each do |year|
+        csv_header_year = year == '2010' ? '2010baseline' : year
+
+        stat.send(
+          "total_value_#{year}=",
+          coerce_to_value(csv_row["total_area_#{csv_header_year}"])
+        )
+      end
+
       stat.protected_value      = coerce_to_value(csv_row['protected_area'])
       stat.protected_percentage = coerce_to_value(csv_row['percent_protected'])
     end

@@ -9,7 +9,8 @@ namespace :generate do
     @habitat_names = Habitat.pluck(:name)
     @required_headers = %w[name total_area protected_area percent_protected presence]
     @mangroves_headers = %w[total_area_1996 total_area_2008 total_area_2009 
-      total_area_2010baseline total_area_2015 total_area_2016 total_area_2020
+      total_area_2010baseline total_area_2015 total_area_2016 total_area_2017
+      total_area_2018 total_area_2019 total_area_2020
       protected_area percent_protected presence]
 
     habitat_data_directory = 'lib/data/countries'

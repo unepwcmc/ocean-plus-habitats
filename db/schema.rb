@@ -30,7 +30,10 @@ ActiveRecord::Schema.define(version: 20230123105521) do
     t.decimal "protected_percentage", default: "0.0"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.decimal "total_value_2020", default: "0.0", null: false
+    t.decimal "total_value_2017", default: "0.0"
+    t.decimal "total_value_2018", default: "0.0"
+    t.decimal "total_value_2019", default: "0.0"
+    t.decimal "total_value_2020", default: "0.0"
     t.index ["geo_entity_id"], name: "index_change_stats_on_geo_entity_id"
     t.index ["habitat_id"], name: "index_change_stats_on_habitat_id"
   end
@@ -56,6 +59,7 @@ ActiveRecord::Schema.define(version: 20230123105521) do
     t.datetime "updated_at", null: false
     t.float "bounding_box", default: [], array: true
     t.string "actual_name"
+    t.boolean "is_region", default: false
     t.index ["bounding_box"], name: "index_geo_entities_on_bounding_box", using: :gin
   end
 
