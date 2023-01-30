@@ -40,7 +40,7 @@ class Serializers::HabitatCountryChangeSerializer < Serializers::Base
           change[:text] = I18n.t('countries.shared.habitat_change.chart_text',
             km: country_cover_change[:change_km],
             habitat: habitat.title,
-            years: '2010-2016'
+            years: '2010-2020'
           )
       end
     end

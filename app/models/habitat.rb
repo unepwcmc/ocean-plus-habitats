@@ -119,7 +119,7 @@ class Habitat < ApplicationRecord
   end
 
   def latest_year
-    :total_value_2016
+    :total_value_2020
   end
 
   def total_value_by_country
