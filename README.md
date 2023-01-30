@@ -58,7 +58,7 @@ To lint your factories, run `rake factory_bot:lint`
 5. Check CSV formatting is correct, especially headers.
 6. Check mangroves data contains multiple years.
 7. Update `habitats.yml` with `total_area` and `protected_area` from *global* stats.
-8. Create a new `global_statistics.zip` file and add to repo.
+8. Create a new `global_statistics.zip` file and add to repo and server.
 9. Check whether you need to do anything else with O+ team.
 10. Check the documentation is still relevant, and update if neccessary.
 11. Commit everything and push to GitHub. Then create a PR and review it yourself for any mistakes.
@@ -99,7 +99,7 @@ being made available in the habitats YAML file.
 
 * Copy in the `total_area` and `protected_area` from each CSV into each habitat in `config/habitats.yml`.
 
-* Create a new `global_statistics.zip` file and add to repo.
+* Create a new `global_statistics.zip` file and add to shared/public/downloads folder on the appropriate server (staging/production).
 
 This should contain the 5 habitat CSVs with protection stats at the country level as well as coastline_coverage.csv.
 
