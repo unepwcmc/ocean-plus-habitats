@@ -6,8 +6,8 @@ habitats:
     poly_table: 'wcmc008_coralreef2010_py_v4'
     point_table: 'wcmc008_coralreef2010_pt_v4'
     wms_url: 'https://gis.unep-wcmc.org/arcgis/rest/services/marine/WCMC_008_CoralReefs_WMS/MapServer/export?transparent=true&format=png32&bbox={bbox-epsg-3857}&bboxSR=EPSG:3857&imageSR=EPSG:3857&size=256,256&f=image'
-    total_area: 149886.974126351
-    protected_area: 67498.1537285504
+    total_area: 149887.006023186
+    protected_area: 59048.5254303157
   saltmarshes:
     name: 'saltmarshes'
     title: 'Saltmarshes'
@@ -15,8 +15,8 @@ habitats:
     poly_table: 'wcmc027_saltmarshes_py_v6'
     point_table: 'wcmc027_saltmarshes_pt_v6'
     wms_url: 'https://gis.unep-wcmc.org/arcgis/rest/services/marine/WCMC_027_Saltmarsh_WMS/MapServer/export?transparent=true&format=png32&bbox={bbox-epsg-3857}&bboxSR=EPSG:3857&imageSR=EPSG:3857&size=256,256&f=image'
-    total_area: 224435.075089817
-    protected_area: 111454.965592792
+    total_area: 224435.086717804
+    protected_area: 111449.561884456
   mangroves:
     name: 'mangroves'
     title: 'Mangroves'
@@ -24,8 +24,8 @@ habitats:
     poly_table: 'wcmc011_atlasmangrove2010_py_v3'
     point_table:
     wms_url: 'https://gis.unep-wcmc.org/arcgis/rest/services/marine/WCMC_011_WorldAtlasMangroves_WMS/MapServer/export?transparent=true&format=png32&bbox={bbox-epsg-3857}&bboxSR=EPSG:3857&imageSR=EPSG:3857&size=256,256&f=image'
-    total_area: 135869.552270024
-    protected_area: 58847.6773406482
+    total_area: 145690.862584735
+    protected_area: 58148.0886463444
   seagrasses:
     name: 'seagrasses'
     title: 'Seagrasses'
@@ -33,8 +33,8 @@ habitats:
     poly_table: 'wcmc_013_014_seagrassespy_v6'
     point_table: 'wcmc_013_014_seagrassespt_v6'
     wms_url: 'https://gis.unep-wcmc.org/arcgis/rest/services/marine/WCMC_013_014_Seagrass_WMS/MapServer/export?transparent=true&format=png32&bbox={bbox-epsg-3857}&bboxSR=EPSG:3857&imageSR=EPSG:3857&size=256,256&f=image'
-    total_area: 314001.940552758
-    protected_area: 83689.7720939699
+    total_area: 321681.680222078
+    protected_area: 77710.2596884993
   coldcorals:
     name: 'coldcorals'
     title: 'Cold-water corals'
@@ -42,6 +42,6 @@ habitats:
     poly_table: 'wcmc001_coldcorals2017_py_v5'
     point_table: 'wcmc001_coldcorals2017_pt_v5'
     wms_url: 'https://gis.unep-wcmc.org/arcgis/rest/services/marine/WCMC_001_ColdCorals2017_WMS/MapServer/export?transparent=true&format=png32&bbox={bbox-epsg-3857}&bboxSR=EPSG:3857&imageSR=EPSG:3857&size=256,256&f=image'
-    total_area: 15336.9752787556
-    protected_area: 4511.04992438828
+    total_area: 15335.1671541816
+    protected_area: 4183.12541707594
 
