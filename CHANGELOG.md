@@ -1,3 +1,7 @@
+## 1.4.8
+
+* Update global and country habitat stats for 2023-07 period.
+
 ## 1.4.7
 
 * Update global and country habitat stats for 2023-02 period.
@@ -35,7 +39,7 @@
 stored in the `tmp` directory. Defaults to the last known manual update Oct 2021
 if not present.
 
-The file is touched with `RedlistSpeciesLastUpdated.touch!` after the 
+The file is touched with `RedlistSpeciesLastUpdated.touch!` after the
 `import_new_redlist_data` Rake task is completed.
 
 If a deployment fails, there is a chance that this might be touched prematurely.
@@ -93,10 +97,10 @@ zero for a value that is less than 0.1
 
 ## 1.2.0
 
-* RSpec + Capybara test suite created, with unit tests for statistics, request specs and 
+* RSpec + Capybara test suite created, with unit tests for statistics, request specs and
 system specs. Also included is a FactoryBot linter for linting factories. A couple of
 redundant methods have also been removed from the models.
-* Merged in a number of PRs fixing vulnerabilities on the frontend and backend that were 
+* Merged in a number of PRs fixing vulnerabilities on the frontend and backend that were
 opened by Dependabot.
 
 ## 1.1.0
