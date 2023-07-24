@@ -7,6 +7,8 @@ FactoryBot.define do
       global_coverage { 0 }
       protected_percentage { 0 }
       wms_url { 'dummy URL' }
+      total_area { 149886.974126351 }
+      protected_area { 67498.1537285504 }
     end
 
     factory :coldcorals do
@@ -16,6 +18,8 @@ FactoryBot.define do
       global_coverage { 0 }
       protected_percentage { 0 }
       wms_url { 'dummy URL' }
+      total_area { 15336.9752787556 }
+      protected_area { 4511.04992438828 }
     end
 
     factory :saltmarshes do
@@ -25,6 +29,8 @@ FactoryBot.define do
       global_coverage { 0 }
       protected_percentage { 0 }
       wms_url { 'dummy URL' }
+      total_area { 224435.075089817 }
+      protected_area { 111454.965592792 }
     end
 
     factory :seagrasses do
@@ -34,6 +40,8 @@ FactoryBot.define do
       global_coverage { 0 }
       protected_percentage { 0 }
       wms_url { 'dummy URL' }
+      total_area { 314001.940552758 }
+      protected_area { 83689.7720939699 }
     end
 
     factory :mangroves do
@@ -43,6 +51,8 @@ FactoryBot.define do
       global_coverage { 0 }
       protected_percentage { 0 }
       wms_url { 'dummy URL' }
+      total_area { 100 }
+      protected_area { 38 }
 
       after(:create) do |mangroves, _evaluator|
         country_with_mangroves = create(:country_with_mangroves)
