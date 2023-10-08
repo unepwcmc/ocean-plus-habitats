@@ -116,3 +116,6 @@ fails for some reason. The deployment TASK hook has this functionality.
 To update the timestmap, just run `bundle exec rake import:update_redlist_timestamp`
 on the server. You can also run `bundle exec cap production deploy TASK=import:update_redlist_timestamp`
 to do this from your own machine, but it will include a new deploy.
+
+## API
+Ocean+ Habitat Data can be accessed via an API. For more information, see the [API docs](./docs/api.md)
