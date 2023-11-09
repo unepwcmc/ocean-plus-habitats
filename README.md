@@ -91,7 +91,7 @@ Previously, this data would have been calculated automatically based on the coun
 caused (perhaps) by borders and non-national areas not being included within the counts, we currently depend on the data
 being made available in the habitats YAML file.
 
-* Copy in the `total_area` and `protected_area` from each glbabl CSV (Such as Seagrass_global.csv) into each habitat in `config/habitats.yml`.
+* Copy in the `total_area` and `protected_area` from each global CSV (Such as Seagrass_global.csv) into each habitat in `config/habitats.yml`.
 
 * Finally, update the `CHANGELOG.md` with a minor version increment e.g. `1.3.4` -> `1.3.5`. Add a suitable line within
 the file to describe changes that have been applied in this release. Be sure to check whether any commits have since
