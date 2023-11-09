@@ -34,3 +34,5 @@ coverage
 /TAGS
 
 .directory
+
+/vendor/bundle

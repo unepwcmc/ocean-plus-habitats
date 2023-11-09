@@ -74,23 +74,24 @@ To lint your factories, run `rake factory_bot:lint`
 
 The current procedure for updating statistics is as follows:
 
-* Obtain the global and country statistics from the Ocean Plus Habitats team.
+* Obtain the global and country statistics from the Ocean Plus Habitats team (There will be 2 types of files for each habitat type i.e., one for country and one global such as Seagrass_country.csv).
 * Ensure the country statistics CSVs conform to the format: `<habitat-type><plural-modifier>_country_output_<YYYY>-<MM>-01.csv`.
 I.e. ensure that the match the current format within `lib/data/habitat_coverage_protection/country/*.csv`.
+For example, for the Seagrass habitat you will be given Seagrass_country.csv you would need to rename it to seagrasses_country_output_<YYYY>-<MM>-01.csv
 
 :sos:
 
 ###### If received over Slack, you can quickly save to the simplest location on disk possible (as there is currently no "download all") and then move all by command line e.g. `mv ~/Desktop/*country*01-01.csv lib/data/habitat_coverage_protection/country/`.
 
-* In each CSV, check that the columns are correct and that the data format appears to be the same according to previous months.
-Most commonly, you will need to rename `"iso3"` to `"iso3"` as the ISO column in each CSV.
+* In each new country CSV, check that the columns are correct and that the data format appears to be the same according to previous months.
+Most commonly, you will need to rename `"country"` to `"iso3"` as the ISO column in each CSV.
 
 As of writing, the global statistics needs to be copied in from each CSV provided into the corresponding habitat within `config/habitats.yml`.
 Previously, this data would have been calculated automatically based on the country statistics. But due to inaccuracies
 caused (perhaps) by borders and non-national areas not being included within the counts, we currently depend on the data
 being made available in the habitats YAML file.
 
-* Copy in the `total_area` and `protected_area` from each CSV into each habitat in `config/habitats.yml`.
+* Copy in the `total_area` and `protected_area` from each glbabl CSV (Such as Seagrass_global.csv) into each habitat in `config/habitats.yml`.
 
 * Finally, update the `CHANGELOG.md` with a minor version increment e.g. `1.3.4` -> `1.3.5`. Add a suitable line within
 the file to describe changes that have been applied in this release. Be sure to check whether any commits have since
