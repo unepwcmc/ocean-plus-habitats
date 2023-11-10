@@ -1,3 +1,8 @@
+## 1.4.10
+
+* Update the statitics download folder for Nov 2023.
+* update Readme for updating the global_statistics file.
+
 ## 1.4.9
 
 * Update global and country habitat stats for 2023-11 period.
