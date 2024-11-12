@@ -1,3 +1,9 @@
+## 1.4.11
+
+* Update the statitics download folder for Nov 2024.
+* Update global and country habitat stats for 2024-11 period.
+* Update "eez_map_datasets_serializer.rb" to fix the WMS 'seagrasses' (plural) => 'Seagrasses_Projection' rather than 'seagrass' (singular)
+
 ## 1.4.10
 
 * Update the statitics download folder for Nov 2023.
