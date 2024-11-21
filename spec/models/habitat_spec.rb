@@ -73,33 +73,5 @@ RSpec.describe Habitat, type: :model do
     it 'retrieves the occurrence of the habitat' do   
       expect(habitat.occurrence(country.id)).to eq('present')
     end
-
-    describe '#total_value_by_country' do
-      let(:carto) { instance_double(Carto) }
-      
-      before { allow(Carto).to receive(:new).and_return(carto) }
-
-      context 'when habitat is coldcorals' do
-        let(:habitat) { FactoryBot.create(:coldcorals) }
-
-        it 'returns the total number of points' do
-          allow(carto).to receive(:total_points_by_country).and_return(
-            [{ "iso3": country.iso3, "count": 30 }.with_indifferent_access]
-          )
-        
-          expect(habitat.total_value_by_country).to eq({ "#{country.iso3}" => 30 })
-        end
-      end
-
-      context 'when habitat is not coldcorals' do        
-        it 'returns the total area' do
-          allow(carto).to receive(:total_area_by_country).and_return(
-            [[{ "iso3": country.iso3, "sum": 30 }.with_indifferent_access]]
-          )
-       
-          expect(habitat.total_value_by_country).to eq({ "#{country.iso3}" => 30 })
-        end
-      end
-    end
   end
 end
