@@ -1,0 +1,27 @@
+version: '3.8'
+
+networks:
+  ocean-plus-habitats:
+    driver: bridge
+
+services:
+  deploy:
+    container_name: ocean-plus-habitats-cap-deploy
+    build:
+      context: ./
+      dockerfile: Dockerfile.cap-deploy
+    volumes:
+      - '.:/ocean-plus-habitats'
+    networks:
+      - ocean-plus-habitats
+    stdin_open: true
+    tty: true
+    secrets:
+      - host_ssh_key
+      - host_ssh_config
+
+secrets:
+  host_ssh_key:
+    file: ~/.ssh/id_ed25519
+  host_ssh_config:
+    file: ~/.ssh/config
