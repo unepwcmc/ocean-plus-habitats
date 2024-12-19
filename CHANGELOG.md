@@ -1,8 +1,3 @@
-## 1.4.12
-
-* Update the statistics download folder for Dec 2024.
-* Update global and country habitat stats for 2024-12 period.
-
 ## 1.4.11
 
 * Update the statitics download folder for Nov 2024.
