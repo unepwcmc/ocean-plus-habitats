@@ -11,6 +11,8 @@
         :locale="<%= @current_language.to_json %>">
       </translator>
 
+      <%= render 'global/banner.html.erb' %>
+
       <%= render partial: 'global/topbar', locals: { dark: true } %>
       <main class="content-page container--small page-padding">
         <%= yield %>
