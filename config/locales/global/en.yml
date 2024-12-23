@@ -72,3 +72,9 @@ en:
       422_message: Maybe you tried to change something you didn't have access to.
       500_title: We're sorry, but something went wrong.
       check_logs: If you are the application owner check the logs for more information.
+
+    banner:
+      title: Ocean+ in 2025
+      text: 
+        - "<a href=\"https://habitats.oceanplus.org/\">Ocean+ Habitats</a> is a trusted source of authoritative information on the status and conservation of the world's coastal habitats."
+        - "Ocean+ Data Viewer and Ocean+ Library have now been retired. To access the ocean data previously hosted on Ocean+ Data Viewer and Ocean+ Library, please read our <modal-trigger id=\"faqs\"class=\"banner__modal-trigger\">Frequently Asked Questions</modal-trigger>."

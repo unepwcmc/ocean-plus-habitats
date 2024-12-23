@@ -1,0 +1,20 @@
+<div class="banner">
+  <div class="banner__content">
+    <h2 class="banner__title">
+      <%= image_tag 'icons/warning.svg', class: 'banner__icon', alt: 'Warning' %>
+      <%= t('global.banner.title') %>
+    </h2>
+    <% t('global.banner.text').each do |p| %>
+      <p class="banner__text">
+        <%= p.html_safe %>
+      </p>
+    <% end %>
+
+    <modal-base
+      id="faqs"
+      class="banner__modal"
+    >
+      <%= render 'global/banner_faq.html.erb' %>
+    </modal-base>
+  </div>
+</div>

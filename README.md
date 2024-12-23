@@ -75,7 +75,7 @@ To lint your factories, run `rake factory_bot:lint`
 The current procedure for updating statistics is as follows:
 
 * Obtain the global and country statistics from the Ocean Plus Habitats team (There will be 2 types of files for each habitat type i.e., one for country and one global such as Seagrass_country.csv).
-* Create a copy of this zip filder which you have been provided, and rename it to 'global_statistics.zip' and replace that file with the already existing file in the project at public/downloads. (This will update the statistics which you can download from the Ocean+ habitat)
+* Create a copy of this zip folder which you have been provided, and rename it to 'global_statistics.zip' and replace that file with the already existing file in the project at public/downloads. (This will update the statistics which you can download from the Ocean+ habitat)
 * Ensure the country statistics CSVs conform to the format: `<habitat-type><plural-modifier>_country_output_<YYYY>-<MM>-01.csv`.
 I.e. ensure that the match the current format within `lib/data/habitat_coverage_protection/country/*.csv`.
 For example, for the Seagrass habitat you will be given Seagrass_country.csv you would need to rename it to seagrasses_country_output_<YYYY>-<MM>-01.csv

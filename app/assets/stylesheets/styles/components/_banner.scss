@@ -1,0 +1,58 @@
+//--------------------------------------------------
+// banner
+//--------------------------------------------------
+.banner {
+  background: linear-gradient(to bottom, rgba($black, 0.85), rgba($black, 0.85)), image_url('banner.png');
+  background-size: cover;
+  background-position: center;
+  padding-top: rem-calc(48);
+  padding-bottom: rem-calc(48);
+
+  a,
+  button {
+    color: $blue;
+    text-decoration: underline;
+  }
+
+  &__content {
+    @include container;
+    color: white;
+  }
+
+  &__icon {
+    width: rem-calc(22);
+
+    position: absolute;
+    left: rem-calc(0);
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include breakpoint($medium) {
+      width: rem-calc(28);
+    }
+  }
+
+  &__title {
+    @include responsive-styles(font-size, rem-calc(24), rem-calc(28), rem-calc(32));
+    color: $white;
+    font-weight: $semi-bold;
+    padding-left: rem-calc(36);
+
+    position: relative;
+
+    @include breakpoint($medium) {
+      padding-left: rem-calc(46);
+    }
+  }
+
+  &__text {
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__modal-trigger {
+    @include button-basic;
+    font-size: inherit;
+  }
+}
