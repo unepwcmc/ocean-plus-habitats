@@ -33,6 +33,11 @@
       list-style-type: disc;
     }
   }
+
+  &__text {
+    @include responsive-styles(font-size, rem-calc(14), rem-calc(16), rem-calc(16));   
+    margin-top: rem-calc(48);
+  }
 }
 
 .faq-table {
