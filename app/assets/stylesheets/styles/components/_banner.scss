@@ -36,11 +36,13 @@
     @include responsive-styles(font-size, rem-calc(24), rem-calc(28), rem-calc(32));
     color: $white;
     font-weight: $semi-bold;
+    margin-bottom: rem-calc(12);
     padding-left: rem-calc(36);
-
+    
     position: relative;
-
+    
     @include breakpoint($medium) {
+      margin-bottom: rem-calc(24);
       padding-left: rem-calc(46);
     }
   }
