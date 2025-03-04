@@ -194,7 +194,7 @@ The current procedure for updating statistics is as follows:
   ```bash
     cp "O:\f03_centre_initiatives\Ocean+\outputs\Habitat_coverage_protection\2025\Mar\Mar.zip" .
   ```
-* Create a copy of this zip folder which you have been provided, and rename it to 'global_statistics.zip' and replace that file with the already existing file in the project at public/downloads. (This will update the statistics which you can download from the Ocean+ habitat)
+* Create a copy of this zip folder which you have been provided, and rename it to 'global_statistics.zip' then replace that file with the already existing file in the project at `public\downloads\global_statistics.zip`. (This will update the statistics which you can download from the Ocean+ habitat)
 * Ensure the country statistics CSVs conform to the format: `<habitat-type><plural-modifier>_country_output_<YYYY>-<MM>-01.csv`.
 I.e. ensure that the match the current format within `lib/data/habitat_coverage_protection/country/*.csv`.
 For example, for the Seagrass habitat you will be given Seagrass_country.csv you would need to rename it to seagrasses_country_output_<YYYY>-<MM>-01.csv
