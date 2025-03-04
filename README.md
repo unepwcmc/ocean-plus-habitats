@@ -102,7 +102,7 @@ This guide outlines the **steps to update and release statistics**, ensuring a s
 #### **Data Update**
 
 4. **Pull updated country stats:**
-   - Update the country statistics files located in:  
+   - Copy the country statistics files into:  
      `lib/data/habitat_coverage_protection/country/*.csv`
 
 5. **Validate CSV formatting:**
