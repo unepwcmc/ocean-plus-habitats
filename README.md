@@ -70,6 +70,137 @@ To lint your factories, run `rake factory_bot:lint`
 17. Come back to terminal and deploy with pre-deploy task for habitat stats refresh e.g. `bundle exec cap production deploy TASK=import:refresh`.
 18. That's it, you're done. But [go and check everything is working](http://ocean-plus-habitats.web-supported-production.linode.unep-wcmc.org/).
 
+### High level update O+H website process
+(VincentB in March 2025) trying to explain better with better instructions
+---
+
+# Statistics Update and Release Process
+
+This guide outlines the steps to update and release statistics, ensuring a smooth and consistent workflow.
+
+---
+
+## **Preparation and Branch Setup**
+
+1. **Sync with the `main` branch:**
+   ```bash
+   git checkout main
+   git pull origin main
+   ```
+2. **Ensure `develop` is up to date with `main`:**
+   ```bash
+   git checkout develop
+   git pull origin main
+   ```
+3. **Create a new feature branch for the stats update:**
+   ```bash
+   git checkout -b chore/_UP_ST_-YYYY-MM
+   ```
+
+---
+
+## **Data Update**
+
+4. **Pull updated country stats:**
+   - Update the country statistics files located in:  
+     `lib/data/_HCP_/_CTRY_/*.csv`
+
+5. **Validate CSV formatting:**
+   - Double-check the CSV files for correct formatting, with a focus on headers.
+
+6. **Update configuration file:**
+   - Add the latest `total_area` and `protected_area` values from the global stats to the `_HBT_.yml` file.
+
+7. **Coordinate with O+ team (if necessary):**
+   - Confirm if any additional steps or actions are required with the O+ team.
+
+8. **Review documentation:**
+   - Verify that the documentation is still relevant and up to date. Update it if required.
+
+---
+
+## **Commit and Review**
+
+9. **Save and push your changes:**
+   ```bash
+   git add .
+   git commit -m "chore: update stats for YYYY-MM"
+   git push origin chore/_UP_ST_-YYYY-MM
+   ```
+
+10. **Create a Pull Request (PR):**
+    - Open a PR for your branch on GitHub.
+    - Thoroughly review your PR and fix any errors before merging.
+
+11. **Merge updates to `develop`:**
+    - After approval, merge your PR into the `develop` branch.
+
+---
+
+## **Post-Merge Steps**
+
+12. **Sync and prepare a release branch:**
+    ```bash
+    git checkout develop
+    git pull origin develop
+    git checkout -b release-1.4.2
+    ```
+
+13. **Update release notes:**
+    - Edit `CHANGELOG.md` to include details of the changes, following the existing format.
+
+14. **Commit and push the release branch:**
+    ```bash
+    git add CHANGELOG.md
+    git commit -m "chore: prepare release 1.4.2"
+    git push origin release-1.4.2
+    ```
+
+---
+
+## **Deploy the Release**
+
+15. **Merge the release branch into `main`:**
+    ```bash
+    git checkout main
+    git merge --no-ff release-1.4.2
+    git push origin main
+    ```
+
+16. **Draft a GitHub release:**
+    - Navigate to the **Releases** section on GitHub to draft a new release.
+    - Use the release version (e.g., `1.4.2`) and include details from the `CHANGELOG.md`.
+
+17. **Deploy the update:**
+    - Run the pre-deploy task for `_HBT_` stats refresh:  
+      ```bash
+      bundle exec cap production deploy TASK=import:refresh
+      ```
+
+---
+
+## **Validation**
+
+18. **Verify the deployment:**
+    - Confirm that everything is working as expected post-deployment.
+
+---
+
+This process ensures the accurate and smooth update of statistics, from initial data input to production deployment. For any questions or issues, refer to the team for guidance.
+
+---
+
+### Example Branch Names
+- Feature Branch: `chore/_UP_ST_-YYYY-MM`
+- Release Branch: `release-1.4.2`
+
+---
+
+Feel free to copy and paste this into your GitHub repository README file! It's properly structured with Markdown syntax and clear for team members to follow.
+
+
+
+
 ### Low-level overview
 
 The current procedure for updating statistics is as follows:
