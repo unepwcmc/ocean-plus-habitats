@@ -71,16 +71,16 @@ To lint your factories, run `rake factory_bot:lint`
 18. That's it, you're done. But [go and check everything is working](http://ocean-plus-habitats.web-supported-production.linode.unep-wcmc.org/).
 
 ### High level update O+H website process
-(VincentB in March 2025) trying to explain better with better instructions
+
+_(VincentB in March 2025) trying to explain better with better instructions_
+
+This process ensures the **accurate and smooth update of statistics**, from initial data input to production deployment.
+
+This guide outlines the **steps to update and release statistics**, ensuring a smooth and consistent workflow.
+
 ---
 
-This process ensures the accurate and smooth update of statistics, from initial data input to production deployment. For any questions or issues, refer to the team for guidance.
-
-This guide outlines the steps to update and release statistics, ensuring a smooth and consistent workflow.
-
----
-
-##### **Preparation and Branch Setup**
+#### **Preparation and Branch Setup**
 
 1. **Sync with the `main` branch:**
    ```bash
@@ -99,7 +99,7 @@ This guide outlines the steps to update and release statistics, ensuring a smoot
 
 ---
 
-##### **Data Update**
+#### **Data Update**
 
 4. **Pull updated country stats:**
    - Update the country statistics files located in:  
@@ -119,7 +119,7 @@ This guide outlines the steps to update and release statistics, ensuring a smoot
 
 ---
 
-##### **Commit and Review**
+#### **Commit and Review**
 
 9. **Save and push your changes:**
    ```bash
@@ -137,7 +137,7 @@ This guide outlines the steps to update and release statistics, ensuring a smoot
 
 ---
 
-##### **Post-Merge Steps**
+#### **Post-Merge Steps**
 
 12. **Sync and prepare a release branch:**
     ```bash
@@ -158,7 +158,7 @@ This guide outlines the steps to update and release statistics, ensuring a smoot
 
 ---
 
-##### **Deploy the Release**
+#### **Deploy the Release**
 
 15. **Merge the release branch into `main`:**
     ```bash
@@ -179,7 +179,7 @@ This guide outlines the steps to update and release statistics, ensuring a smoot
 
 ---
 
-##### **Validation**
+#### **Validation**
 
 18. **Verify the deployment:**
     - Confirm that everything is working as expected post-deployment.
