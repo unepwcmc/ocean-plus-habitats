@@ -94,7 +94,7 @@ This guide outlines the **steps to update and release statistics**, ensuring a s
    ```
 3. **Create a new feature branch for the stats update:**
    ```bash
-   git checkout -b chore/_UP_ST_-YYYY-MM
+   git checkout -b chore/update-statistics-YYYY-MM   #  /update-statistics-2025-03
    ```
 
 ---
@@ -103,13 +103,13 @@ This guide outlines the **steps to update and release statistics**, ensuring a s
 
 4. **Pull updated country stats:**
    - Update the country statistics files located in:  
-     `lib/data/_HCP_/_CTRY_/*.csv`
+     `lib/data/habitat_coverage_protection/country/*.csv`
 
 5. **Validate CSV formatting:**
    - Double-check the CSV files for correct formatting, with a focus on headers.
 
 6. **Update configuration file:**
-   - Add the latest `total_area` and `protected_area` values from the global stats to the `_HBT_.yml` file.
+   - Add the latest `total_area` and `protected_area` values from the global stats to the `config\habitats.yml` file.
 
 7. **Coordinate with O+ team (if necessary):**
    - Confirm if any additional steps or actions are required with the O+ team.
@@ -125,7 +125,7 @@ This guide outlines the **steps to update and release statistics**, ensuring a s
    ```bash
    git add .
    git commit -m "chore: update stats for YYYY-MM"
-   git push origin chore/_UP_ST_-YYYY-MM
+   git push origin chore/update-statistics-YYYY-MM   # update-statistics-2025-03
    ```
 
 10. **Create a Pull Request (PR):**
