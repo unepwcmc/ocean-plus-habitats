@@ -70,12 +70,131 @@ To lint your factories, run `rake factory_bot:lint`
 17. Come back to terminal and deploy with pre-deploy task for habitat stats refresh e.g. `bundle exec cap production deploy TASK=import:refresh`.
 18. That's it, you're done. But [go and check everything is working](http://ocean-plus-habitats.web-supported-production.linode.unep-wcmc.org/).
 
+### High level update O+H website process
+
+_(VincentB in March 2025) trying to explain better with better instructions_
+
+This process ensures the **accurate and smooth update of statistics**, from initial data input to production deployment.
+
+This guide outlines the **steps to update and release statistics**, ensuring a smooth and consistent workflow.
+
+---
+
+#### **Preparation and Branch Setup**
+
+1. **Sync with the `main` branch:**
+   ```bash
+   git checkout main
+   git pull origin main
+   ```
+2. **Ensure `develop` is up to date with `main`:**
+   ```bash
+   git checkout develop
+   git pull origin main
+   ```
+3. **Create a new feature branch for the stats update:**
+   ```bash
+   git checkout -b chore/update-statistics-YYYY-MM   #  /update-statistics-2025-03
+   ```
+
+---
+
+#### **Data Update**
+
+4. **Pull updated country stats:**
+   - Copy the country statistics files into:  
+     `lib/data/habitat_coverage_protection/country/*.csv`
+
+5. **Validate CSV formatting:**
+   - Double-check the CSV files for correct formatting, with a focus on headers.
+
+6. **Update configuration file:**
+   - Add the latest `total_area` and `protected_area` values from the global stats to the `config\habitats.yml` file.
+
+7. **Coordinate with O+ team (if necessary):**
+   - Confirm if any additional steps or actions are required with the O+ team.
+
+8. **Review documentation:**
+   - Verify that the documentation is still relevant and up to date. Update it if required.
+
+---
+
+#### **Commit and Review**
+
+9. **Save and push your changes:**
+   ```bash
+   git add .
+   git commit -m "chore: update stats for YYYY-MM"
+   git push origin chore/update-statistics-YYYY-MM   # update-statistics-2025-03
+   ```
+
+10. **Create a Pull Request (PR):**
+    - Open a PR for your branch on GitHub.
+    - Thoroughly review your PR and fix any errors before merging.
+
+11. **Merge updates to `develop`:**
+    - After approval, merge your PR into the `develop` branch.
+
+---
+
+#### **Post-Merge Steps**
+
+12. **Sync and prepare a release branch:**
+    ```bash
+    git checkout develop
+    git pull origin develop
+    git checkout -b release-1.4.2
+    ```
+
+13. **Update release notes:**
+    - Edit `CHANGELOG.md` to include details of the changes, following the existing format.
+
+14. **Commit and push the release branch:**
+    ```bash
+    git add CHANGELOG.md
+    git commit -m "chore: prepare release 1.4.2"
+    git push origin release-1.4.2
+    ```
+
+---
+
+#### **Deploy the Release**
+
+15. **Merge the release branch into `main`:**
+    ```bash
+    git checkout main
+    git merge --no-ff release-1.4.2
+    git push origin main
+    ```
+
+16. **Draft a GitHub release:**
+    - Navigate to the **Releases** section on GitHub to draft a new release.
+    - Use the release version (e.g., `1.4.2`) and include details from the `CHANGELOG.md`.
+
+17. **Deploy the update:**
+    - Run the pre-deploy task for `_HBT_` stats refresh:  
+      ```bash
+      bundle exec cap production deploy TASK=import:refresh
+      ```
+
+---
+
+#### **Validation**
+
+18. **Verify the deployment:**
+    - Confirm that everything is working as expected post-deployment.
+
+
+
 ### Low-level overview
 
 The current procedure for updating statistics is as follows:
 
 * Obtain the global and country statistics from the Ocean Plus Habitats team (There will be 2 types of files for each habitat type i.e., one for country and one global such as Seagrass_country.csv).
-* Create a copy of this zip folder which you have been provided, and rename it to 'global_statistics.zip' and replace that file with the already existing file in the project at public/downloads. (This will update the statistics which you can download from the Ocean+ habitat)
+  ```bash
+    cp "O:\f03_centre_initiatives\Ocean+\outputs\Habitat_coverage_protection\2025\Mar\Mar.zip" .
+  ```
+* Create a copy of this zip folder which you have been provided, and rename it to 'global_statistics.zip' then replace that file with the already existing file in the project at `public\downloads\global_statistics.zip`. (This will update the statistics which you can download from the Ocean+ habitat)
 * Ensure the country statistics CSVs conform to the format: `<habitat-type><plural-modifier>_country_output_<YYYY>-<MM>-01.csv`.
 I.e. ensure that the match the current format within `lib/data/habitat_coverage_protection/country/*.csv`.
 For example, for the Seagrass habitat you will be given Seagrass_country.csv you would need to rename it to seagrasses_country_output_<YYYY>-<MM>-01.csv
