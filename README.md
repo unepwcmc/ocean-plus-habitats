@@ -172,7 +172,7 @@ This guide outlines the **steps to update and release statistics**, ensuring a s
     - Use the release version (e.g., `1.4.2`) and include details from the `CHANGELOG.md`.
 
 17. **Deploy the update:**
-    - Run the pre-deploy task for `_HBT_` stats refresh:  
+    - Run the pre-deploy task for `Habitats` stats refresh:  
       ```bash
       bundle exec cap production deploy TASK=import:refresh
       ```
