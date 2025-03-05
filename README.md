@@ -192,7 +192,7 @@ The current procedure for updating statistics is as follows:
 
 * Obtain the global and country statistics from the Ocean Plus Habitats team (There will be 2 types of files for each habitat type i.e., one for country and one global such as Seagrass_country.csv).
   ```bash
-    cp "O:\f03_centre_initiatives\Ocean+\outputs\Habitat_coverage_protection\2025\Mar\Mar.zip" .
+    cp "O:\f03_centre_initiatives\Ocean+\outputs\Habitat_coverage_protection\YYYY\Mmm\Mmm.zip" .   #2025\Mar\Mar.zip
   ```
 * Create a copy of this zip folder which you have been provided, and rename it to 'global_statistics.zip' then replace that file with the already existing file in the project at `public\downloads\global_statistics.zip`. (This will update the statistics which you can download from the Ocean+ habitat)
 * Ensure the country statistics CSVs conform to the format: `<habitat-type><plural-modifier>_country_output_<YYYY>-<MM>-01.csv`.
