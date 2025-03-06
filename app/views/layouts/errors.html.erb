@@ -10,8 +10,15 @@
         :translations="<%= @current_translations.to_json %>"
         :locale="<%= @current_language.to_json %>">
       </translator>
-
-      <%= render 'global/banner.html.erb' %>
+      
+        <%
+=begin
+%>
+  <%# Hide banner until permission approval %>
+  <%= render 'global/banner.html.erb' %>
+<%
+=end
+%>
 
       <%= render partial: 'global/topbar', locals: { dark: true } %>
       <main class="content-page container--small page-padding">

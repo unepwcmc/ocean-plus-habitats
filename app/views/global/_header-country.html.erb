@@ -1,4 +1,11 @@
-<%= render 'global/banner.html.erb' %>
+  <%
+=begin
+%>
+  <%# Hide banner until permission approval %>
+  <%= render 'global/banner.html.erb' %>
+<%
+=end
+%>
 <%= render partial: 'global/topbar.html.erb', locals: { dark: true } %>
 
 <%= render partial: '/global/nav-tertiary',
