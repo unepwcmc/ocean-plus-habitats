@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-# The most popular solution to the EU cookie law for Rails applications. 
+# The most popular solution to the EU cookie law for Rails applications.
 gem 'cookieconsent'
 # prefix rails c commands with ap for pretty results
 gem 'awesome_print'
@@ -76,6 +76,13 @@ group :development do
   gem 'capistrano-bundler', '~> 1.1', require: false
   gem 'capistrano-passenger', '~> 0.1.1', require: false
   gem 'bullet'
+
+  ##
+  # For capistrano ssh in docker
+  gem 'rbnacl', '4.0.2'
+  gem 'rbnacl-libsodium', '1.0.16'
+  gem 'bcrypt_pbkdf', '1.1.0'
+  gem 'ed25519', '1.2.4'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
