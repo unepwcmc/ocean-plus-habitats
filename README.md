@@ -237,10 +237,11 @@ Some warning / error "failed" messages can appear and be logged in the files `fa
 `scp wcmc@web-supported-staging.linode.unep-wcmc.org:/home/wcmc/ocean-plus-habitats/current/tmp/*.csv ~/ocean-plus-habitats/Mar2025`
 
 <img src="https://github.com/user-attachments/assets/b5ec8974-d63b-4987-bd91-ba251700e1bb" alt="Error 1" width="400">  
-  
+   
+<img src="https://github.com/user-attachments/assets/0489366d-2713-48db-ae85-65ff3ddd20d6" alt="Error 3" width="400">  
+   
 <img src="https://github.com/user-attachments/assets/0c2f9ee3-6b13-4792-aa03-7a6a5be5a899" alt="Error 2" width="400">  
   
-<img src="https://github.com/user-attachments/assets/0489366d-2713-48db-ae85-65ff3ddd20d6" alt="Error 3" width="400">  
 
 ## Update Redlist species timestamp
 
