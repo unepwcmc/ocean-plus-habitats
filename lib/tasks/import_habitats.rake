@@ -9,8 +9,6 @@ namespace :import do
       attributes = {
         title: data['title'],
         theme: data['theme'],
-        poly_table: data['poly_table'],
-        point_table: data['point_table'],
         wms_url: data['wms_url'],
         total_area: data['total_area'].to_f, # see NOTE(1)
         protected_area: data['protected_area'].to_f # see NOTE(1)
