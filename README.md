@@ -71,7 +71,9 @@ To lint your factories, run `rake factory_bot:lint`
 18. Ask O+H Project Leader to check everything is correct on staging, in particular Stats are updated.
 19. If everything is correct, come back to terminal and deploy with pre-deploy task for habitat stats refresh e.g. `bundle exec cap production deploy TASK=import:refresh`.
 20. That's it, you're done. But [go and check everything is working](http://ocean-plus-habitats.web-supported-production.linode.unep-wcmc.org/).
-
+  
+  
+  
 ### High level update O+H website process
 
 _(VincentB in March 2025) trying to explain better with better instructions_
@@ -185,9 +187,9 @@ This guide outlines the **steps to update and release statistics**, ensuring a s
 
 18. **Verify the deployment:**
     - Confirm that everything is working as expected post-deployment.
-
-
-
+  
+  
+  
 ### Low-level overview
 
 The current procedure for updating statistics is as follows:
