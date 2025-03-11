@@ -67,8 +67,10 @@ To lint your factories, run `rake factory_bot:lint`
 14. Return to `main` and merge release into main e.g. `git merge --no-ff release-1.4.2`.
 15. Push to GitHub.
 16. Go to GitHub releases and [draft a new release ](https://github.com/unepwcmc/ocean-plus-habitats/releases/new).
-17. Come back to terminal and deploy with pre-deploy task for habitat stats refresh e.g. `bundle exec cap production deploy TASK=import:refresh`.
-18. That's it, you're done. But [go and check everything is working](http://ocean-plus-habitats.web-supported-production.linode.unep-wcmc.org/).
+17. Log in the staging thru `ssh wcmwc@_staging_`, go to `cd ocean-plus-habitats/current` folder and run `RAILS_ENV=staging bundle exec rake import:refresh`.
+18. Ask O+H Project Leader to check everything is correct on staging, in particular Stats are updated.
+19. If everything is correct, come back to terminal and deploy with pre-deploy task for habitat stats refresh e.g. `bundle exec cap production deploy TASK=import:refresh`.
+20. That's it, you're done. But [go and check everything is working](http://ocean-plus-habitats.web-supported-production.linode.unep-wcmc.org/).
 
 ### High level update O+H website process
 
