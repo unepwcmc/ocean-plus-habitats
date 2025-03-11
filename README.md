@@ -243,12 +243,12 @@ fails for some reason. The deployment TASK hook has this functionality.
 <img src="https://github.com/user-attachments/assets/b5ec8974-d63b-4987-bd91-ba251700e1bb" alt="Error 1" width="600">  <img src="https://github.com/user-attachments/assets/0489366d-2713-48db-ae85-65ff3ddd20d6" alt="Error 3" width="600">  <img src="https://github.com/user-attachments/assets/0c2f9ee3-6b13-4792-aa03-7a6a5be5a899" alt="Error 2" width="600">  
 
 2. RAKE  rake aborted!  It might be due to flaky ESRI (comment in the code). Let's try it again. In March 2025, it happens... and when we (re)run the process. All good it works! 
-```bash
-"Running import:bounding_boxes..."
-rake aborted!
-NoMethodError: undefined method `parsed_response' for nil:NilClass
+   ```bash
+   "Running import:bounding_boxes..."
+   rake aborted!
+   NoMethodError: undefined method `parsed_response' for nil:NilClass
+   ```
 ![image](https://github.com/user-attachments/assets/bc886e55-580f-470d-860d-d8218c6d257c)
-```
 
 ## Update Redlist species timestamp
 
