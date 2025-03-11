@@ -67,8 +67,10 @@ To lint your factories, run `rake factory_bot:lint`
 14. Return to `main` and merge release into main e.g. `git merge --no-ff release-1.4.2`.
 15. Push to GitHub.
 16. Go to GitHub releases and [draft a new release ](https://github.com/unepwcmc/ocean-plus-habitats/releases/new).
-17. Come back to terminal and deploy with pre-deploy task for habitat stats refresh e.g. `bundle exec cap production deploy TASK=import:refresh`.
-18. That's it, you're done. But [go and check everything is working](http://ocean-plus-habitats.web-supported-production.linode.unep-wcmc.org/).
+17. Log in the staging thru `ssh wcmwc@_staging_`, go to `cd ocean-plus-habitats/current` folder and run `RAILS_ENV=staging bundle exec rake import:refresh`.
+18. Ask O+H Project Leader to check everything is correct on staging, in particular Stats are updated.
+19. If everything is correct, come back to terminal and deploy with pre-deploy task for habitat stats refresh e.g. `bundle exec cap production deploy TASK=import:refresh`.
+20. That's it, you're done. But [go and check everything is working](http://ocean-plus-habitats.web-supported-production.linode.unep-wcmc.org/).
 
 ### High level update O+H website process
 
@@ -172,7 +174,7 @@ This guide outlines the **steps to update and release statistics**, ensuring a s
     - Use the release version (e.g., `1.4.2`) and include details from the `CHANGELOG.md`.
 
 17. **Deploy the update:**
-    - Run the pre-deploy task for `_HBT_` stats refresh:  
+    - Run the pre-deploy task for `Habitats` stats refresh:  
       ```bash
       bundle exec cap production deploy TASK=import:refresh
       ```
@@ -192,7 +194,7 @@ The current procedure for updating statistics is as follows:
 
 * Obtain the global and country statistics from the Ocean Plus Habitats team (There will be 2 types of files for each habitat type i.e., one for country and one global such as Seagrass_country.csv).
   ```bash
-    cp "O:\f03_centre_initiatives\Ocean+\outputs\Habitat_coverage_protection\2025\Mar\Mar.zip" .
+    cp "O:\f03_centre_initiatives\Ocean+\outputs\Habitat_coverage_protection\YYYY\Mmm\Mmm.zip" .   #2025\Mar\Mar.zip
   ```
 * Create a copy of this zip folder which you have been provided, and rename it to 'global_statistics.zip' then replace that file with the already existing file in the project at `public\downloads\global_statistics.zip`. (This will update the statistics which you can download from the Ocean+ habitat)
 * Ensure the country statistics CSVs conform to the format: `<habitat-type><plural-modifier>_country_output_<YYYY>-<MM>-01.csv`.
@@ -231,6 +233,17 @@ fails for some reason. The deployment TASK hook has this functionality.
 
 * Ensure you have the latest `main` with `git checkout main; git pull origin main`
 * Deploy with `bundle exec cap production deploy TASK=import:refresh`
+
+## Troubleshootings
+Some warning / error "failed" messages can appear and be logged in the files `failed_report_countries.csv` and `failed_report_regions.csv` stored in `~/ocean-plus-habitats/current/tmp`, we can copy these files from the server to our local machine thanks to this command:  
+`scp wcmc@web-supported-staging.linode.unep-wcmc.org:/home/wcmc/ocean-plus-habitats/current/tmp/*.csv ~/ocean-plus-habitats/Mar2025`
+
+<img src="https://github.com/user-attachments/assets/b5ec8974-d63b-4987-bd91-ba251700e1bb" alt="Error 1" width="400">  
+   
+<img src="https://github.com/user-attachments/assets/0489366d-2713-48db-ae85-65ff3ddd20d6" alt="Error 3" width="400">  
+   
+<img src="https://github.com/user-attachments/assets/0c2f9ee3-6b13-4792-aa03-7a6a5be5a899" alt="Error 2" width="400">  
+  
 
 ## Update Redlist species timestamp
 
