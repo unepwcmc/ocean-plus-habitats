@@ -1,3 +1,7 @@
+## 1.4.14
+
+* Hide the banner
+
 ## 1.4.13
 
 * Update the statistics download folder for March 2025.
