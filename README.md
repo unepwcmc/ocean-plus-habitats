@@ -172,7 +172,7 @@ This guide outlines the **steps to update and release statistics**, ensuring a s
     ```
 
 16. **Draft a GitHub release:**
-    - Navigate to the **Releases** section on GitHub to draft a new release.
+    - Navigate to the **Releases** section (https://github.com/unepwcmc/ocean-plus-habitats/releases) on GitHub to draft a new release.
     - Use the release version (e.g., `1.4.2`) and include details from the `CHANGELOG.md`.
 
 17. **Deploy the update:**
