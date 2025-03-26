@@ -1,3 +1,7 @@
+## 1.4.15
+
+* Display banner to explain divestment of other related products
+
 ## 1.4.14
 
 * Hide the banner
