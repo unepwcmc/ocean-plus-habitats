@@ -1,0 +1,57 @@
+FROM --platform=linux/amd64 ruby:2.5.0-slim-stretch
+
+ENV BUNDLE_PATH="/usr/local/bundle"
+
+# Install dependencies
+RUN echo "deb http://archive.debian.org/debian stretch main contrib non-free" > /etc/apt/sources.list && \
+  echo "deb http://archive.debian.org/debian-security stretch/updates main contrib non-free" >> /etc/apt/sources.list && \
+  echo 'Acquire::Check-Valid-Until "false";' > /etc/apt/apt.conf.d/99no-check-valid-until && \
+  apt-get update -qq && \
+  apt-get install --no-install-recommends -y \
+  curl build-essential zlib1g-dev git libpq-dev \
+  # Editor
+  vim nano \
+  # For RVM
+  gnupg procps curl libssl-dev dirmngr \
+  # ssh/capistrano
+  openssh-client \
+  # # For webpack-dev-server
+  # libsodium-dev \
+  # # For mimemagic gem
+  # shared-mime-info \
+  # Clean up
+  && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /ocean-plus-habitats
+
+# https://stackoverflow.com/questions/43612927/how-to-correctly-install-rvm-in-docker
+RUN gpg --keyserver keyserver.ubuntu.com --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+RUN curl -sSL https://get.rvm.io | bash -s
+RUN /bin/bash -l -c ". /etc/profile.d/rvm.sh && rvm install 2.5.0"
+# RVM installed in multi-user mode. However cap assume rvm is installed in single user mode.
+# Create a soft link to fake it.
+RUN mkdir -p ~/.rvm/bin && ln -s /usr/local/rvm/bin/rvm ~/.rvm/bin/rvm
+
+COPY Gemfile /ocean-plus-habitats/Gemfile
+COPY Gemfile.lock /ocean-plus-habitats/Gemfile.lock
+
+ENV BUNDLE_SILENCE_ROOT_WARNING=1
+RUN /bin/bash -c "source /etc/profile.d/rvm.sh \
+  && gem install bundler:1.17.3 \
+  && bundle"
+
+ENTRYPOINT ["/bin/bash", "-l"]
+
+##########################################
+## Run the following in container
+##########################################
+# /bin/bash --rcfile cap-deploy-shell.sh
+# [Enter your passphrase]
+# root@commit:/ocean-plus-habitats$ CAP_BRANCH=<branch> cap staging deploy
+#
+##########################################
+# Alternatively, from outside docker
+##########################################
+# docker exec -it sapi-cap-deploy /bin/bash --rcfile cap-deploy-shell.sh
+# [Enter your passphrase]
+# root@commit:/ocean-plus-habitats# CAP_BRANCH=<branch> cap staging deploy

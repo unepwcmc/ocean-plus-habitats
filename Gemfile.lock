@@ -44,6 +44,7 @@ GEM
       sshkit (>= 1.6.1, != 1.7.0)
     arel (8.0.0)
     awesome_print (1.8.0)
+    bcrypt_pbkdf (1.1.0)
     bindex (0.8.1)
     builder (3.2.3)
     bullet (6.1.4)
@@ -100,6 +101,7 @@ GEM
     dotenv-rails (2.7.5)
       dotenv (= 2.7.5)
       railties (>= 3.2, < 6.1)
+    ed25519 (1.2.4)
     erubi (1.9.0)
     execjs (2.7.0)
     factory_bot (6.2.0)
@@ -180,6 +182,10 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
+    rbnacl (4.0.2)
+      ffi
+    rbnacl-libsodium (1.0.16)
+      rbnacl (>= 3.0.1)
     rspec-core (3.10.1)
       rspec-support (~> 3.10.0)
     rspec-expectations (3.10.1)
@@ -267,6 +273,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  bcrypt_pbkdf (= 1.1.0)
   bullet
   byebug
   capistrano (~> 3.11.0)
@@ -281,6 +288,7 @@ DEPENDENCIES
   cookieconsent
   database_cleaner
   dotenv-rails (~> 2.2, >= 2.2.1)
+  ed25519 (= 1.2.4)
   factory_bot_rails
   faker
   httparty (~> 0.16.2)
@@ -289,6 +297,8 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   puma (~> 4.3)
   rails (~> 5.1.5)
+  rbnacl (= 4.0.2)
+  rbnacl-libsodium (= 1.0.16)
   rspec-rails (~> 4.0.2)
   rubyzip (>= 1.0.0)
   sassc-rails (~> 2.1.0)
