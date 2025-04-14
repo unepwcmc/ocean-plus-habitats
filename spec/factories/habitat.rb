@@ -6,6 +6,8 @@ FactoryBot.define do
       theme { 'orange' }
       global_coverage { 0 }
       protected_percentage { 0 }
+      total_area { 0 }
+      protected_area { 0 }
       wms_url { 'dummy URL' }
       total_area { 149886.974126351 }
       protected_area { 67498.1537285504 }
@@ -17,6 +19,8 @@ FactoryBot.define do
       theme { 'orange' }
       global_coverage { 0 }
       protected_percentage { 0 }
+      total_area { 0 }
+      protected_area { 0 }
       wms_url { 'dummy URL' }
       total_area { 15336.9752787556 }
       protected_area { 4511.04992438828 }
@@ -28,6 +32,8 @@ FactoryBot.define do
       theme { 'orange' }
       global_coverage { 0 }
       protected_percentage { 0 }
+      total_area { 0 }
+      protected_area { 0 }
       wms_url { 'dummy URL' }
       total_area { 224435.075089817 }
       protected_area { 111454.965592792 }
@@ -39,6 +45,8 @@ FactoryBot.define do
       theme { 'orange' }
       global_coverage { 0 }
       protected_percentage { 0 }
+      total_area { 0 }
+      protected_area { 0 }
       wms_url { 'dummy URL' }
       total_area { 314001.940552758 }
       protected_area { 83689.7720939699 }
@@ -50,6 +58,8 @@ FactoryBot.define do
       theme { 'orange' }
       global_coverage { 0 }
       protected_percentage { 0 }
+      total_area { 0 }
+      protected_area { 0 }
       wms_url { 'dummy URL' }
       total_area { 100 }
       protected_area { 38 }
