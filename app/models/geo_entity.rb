@@ -15,8 +15,8 @@ class GeoEntity < ApplicationRecord
 
   has_many :country_citations, foreign_key: 'country_id'
 
-  scope :countries, -> { where.not(iso3: nil).where.not(iso3: 'GBL') }
-  scope :regions, -> { where(iso3: nil) }
+  scope :countries, -> { where(is_region: false).where.not(iso3: 'GBL') }
+  scope :regions, -> { where(is_region: true) }
   
   # Only allowing actual countries to be considered for the 'Next country' button
   scope :valid_countries, lambda {
@@ -43,6 +43,8 @@ class GeoEntity < ApplicationRecord
   def count_species
     Species.count_species(all_species)
   end
+
+  alias species_status count_species
 
   def occurrences
     # Because of possible nil values for geo entity stat attributes, we can't just go by the occurrence
@@ -96,7 +98,44 @@ class GeoEntity < ApplicationRecord
       transform_values(&:first)
   end
 
+  # For JSON API response
+  def protected_area_statistics
+    geo_entity_stats.map do |geo_entity_stat|
+      stats = {
+        name: geo_entity_stat.habitat.name,
+        total_area: geo_entity_stat.total_value,
+        protected_area: geo_entity_stat.protected_value,
+        percent_protected: geo_entity_stat.protected_percentage,
+      }
+
+      if geo_entity_stat.habitat.name == 'mangroves'
+        stats.merge!({ total_area_over_time: total_mangrove_area_over_time })
+      end
+
+      stats
+    end
+  end
+
+  # For JSON API response
+  def coastline_coverage
+    Serializers::RepresentationHabitatsSerializer.new(self).serialize_for_api
+  end
+
   private
+
+  def total_mangrove_area_over_time
+    return unless change_stat
+
+    total_area_data = change_stat.as_json
+      .select { |key, value| key.match(/total_value_/) }
+      
+    total_area_data.map do |key, value|
+      {
+        year: key.gsub(/total_value_/, ''),
+        total_area: value
+      }
+    end
+  end
 
   def fetch_needed_occurrence_attrs
     countries_geo_entity_stats.joins(:habitat).select(
