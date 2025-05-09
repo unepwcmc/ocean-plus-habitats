@@ -1,3 +1,9 @@
+## 1.4.16
+
+* Update the statistics download folder for May 2025.
+* Update global and country habitat stats for 2025-05 period.
+* Update the README about Carto decommissioned
+
 ## 1.4.15
 
 * Display banner to explain divestment of other related products
