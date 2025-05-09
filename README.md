@@ -51,6 +51,7 @@ To lint your factories, run `rake factory_bot:lint`
 ## Statistics updates
 
 ### High level update overview
+⚠️ These instructions has been reworded and new details added so that it become easier and more straightforward for normal user to run this process. If you need detailed instructions, I suggest you jump to the section below "High level update O+H website process (more detailed)"
 
 1. Pull latest from `main` and ensure `develop` up to date with `main`.
 2. Checkout your stats update branch e.g. `git checkout -b chore/update-statistics-2022-01` from `develop`.
@@ -75,7 +76,7 @@ To lint your factories, run `rake factory_bot:lint`
   
   
   
-### High level update O+H website process
+### High level update O+H website process (more detailed)
 
 _(VincentB in March 2025) trying to explain better with better instructions_
 
