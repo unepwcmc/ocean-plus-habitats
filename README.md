@@ -17,10 +17,11 @@
 
 ## Data
 
-We are still trying to see if it is feasible to generate map tiles and data dynamically using Carto and in the meantime we are using static data.
+We are still trying to see if it is feasible to generate map tiles and data dynamically using Carto and in the meantime we are using static data. Update: Carto has been decommissioned in April 2025 from many of our products to be a too expensive service, so it would be better to generate MapTiles using free and open source solutions like pg_tileserv, martin or PMTiles.
 
 Data is fetched from CartoDB using the `Carto` module defined in `lib/modules`.
 Some details about the layers in Carto are in `config/habitats.yml`.
+Update: I am not sure about this bit but Carto has been decommissioned in April 2025. It would be good to double check that all the code that mention Carto has been modified or been removed.
 
 At the moment static data is provided related to the protected areas coverage.
 Ideally, the protected areas coverage data should always be dynamically generated, as this depends on the WDPA release
