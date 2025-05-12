@@ -63,10 +63,10 @@ To lint your factories, run `rake factory_bot:lint`
 8. Commit everything and push to GitHub. Then create a PR and review it yourself for any mistakes.
 9. Merge your update into develop.
 10. Pull down your merge from develop and return to develop branch.
-11. Checkout a release branch e.g. `git checkout -b release-1.4.2`
+11. Checkout a release branch e.g. `git checkout -b release-x.y.z`
 12. Update the `CHANGELOG.md` following previous examples of format.
 13. Commit and push to GitHub.
-14. Return to `main` and merge release into main e.g. `git merge --no-ff release-1.4.2`.
+14. Return to `main` and merge release into main e.g. `git merge --no-ff release-x.y.z`.
 15. Push to GitHub.
 16. Go to GitHub releases and [draft a new release ](https://github.com/unepwcmc/ocean-plus-habitats/releases/new).
 17. Log in the staging thru `ssh wcmwc@_staging_`, go to `cd ocean-plus-habitats/current` folder and run `RAILS_ENV=staging bundle exec rake import:refresh`.
@@ -149,7 +149,7 @@ This guide outlines the **steps to update and release statistics**, ensuring a s
     ```bash
     git checkout develop
     git pull origin develop
-    git checkout -b release-1.4.2
+    git checkout -b release-x.y.z
     ```
 
 13. **Update release notes:**
@@ -158,8 +158,8 @@ This guide outlines the **steps to update and release statistics**, ensuring a s
 14. **Commit and push the release branch:**
     ```bash
     git add CHANGELOG.md
-    git commit -m "chore: prepare release 1.4.2"
-    git push origin release-1.4.2
+    git commit -m "chore: prepare release x.y.z"
+    git push origin release-x.y.z
     ```
 
 ---
@@ -169,7 +169,7 @@ This guide outlines the **steps to update and release statistics**, ensuring a s
 15. **Merge the release branch into `main`:**
     ```bash
     git checkout main
-    git merge --no-ff release-1.4.2
+    git merge --no-ff release-x.y.z
     git push origin main
     ```
 
