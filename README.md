@@ -17,10 +17,11 @@
 
 ## Data
 
-We are still trying to see if it is feasible to generate map tiles and data dynamically using Carto and in the meantime we are using static data.
+⚠️ We are still trying to see if it is feasible to generate map tiles and data dynamically using Carto and in the meantime we are using static data. Update: Carto has been decommissioned in **April 2025** from many of our products to be a too expensive service, so it would be better to generate MapTiles using free and open source solutions like pg_tileserv, martin or PMTiles.
 
-Data is fetched from CartoDB using the `Carto` module defined in `lib/modules`.
+⚠️ Data is fetched from CartoDB using the `Carto` module defined in `lib/modules`.
 Some details about the layers in Carto are in `config/habitats.yml`.
+Update: I am not sure about this bit but Carto has been decommissioned in **April 2025**. It would be good to double check that all the code that mention Carto has been modified or been removed.
 
 At the moment static data is provided related to the protected areas coverage.
 Ideally, the protected areas coverage data should always be dynamically generated, as this depends on the WDPA release
@@ -50,6 +51,7 @@ To lint your factories, run `rake factory_bot:lint`
 ## Statistics updates
 
 ### High level update overview
+⚠️ These instructions has been reworded and new details added so that it become easier and more straightforward for normal user to run this process. If you need detailed instructions, I suggest you jump to the section below "High level update O+H website process (more detailed)"
 
 1. Pull latest from `main` and ensure `develop` up to date with `main`.
 2. Checkout your stats update branch e.g. `git checkout -b chore/update-statistics-2022-01` from `develop`.
@@ -71,8 +73,10 @@ To lint your factories, run `rake factory_bot:lint`
 18. Ask O+H Project Leader to check everything is correct on staging, in particular Stats are updated.
 19. If everything is correct, come back to terminal and deploy with pre-deploy task for habitat stats refresh e.g. `bundle exec cap production deploy TASK=import:refresh`.
 20. That's it, you're done. But [go and check everything is working](http://ocean-plus-habitats.web-supported-production.linode.unep-wcmc.org/).
-
-### High level update O+H website process
+  
+  
+  
+### High level update O+H website process (more detailed)
 
 _(VincentB in March 2025) trying to explain better with better instructions_
 
@@ -170,7 +174,7 @@ This guide outlines the **steps to update and release statistics**, ensuring a s
     ```
 
 16. **Draft a GitHub release:**
-    - Navigate to the **Releases** section on GitHub to draft a new release.
+    - Navigate to the **Releases** section (https://github.com/unepwcmc/ocean-plus-habitats/releases) on GitHub to draft a new release.
     - Use the release version (e.g., `1.4.2`) and include details from the `CHANGELOG.md`.
 
 17. **Deploy the update:**
@@ -185,9 +189,9 @@ This guide outlines the **steps to update and release statistics**, ensuring a s
 
 18. **Verify the deployment:**
     - Confirm that everything is working as expected post-deployment.
-
-
-
+  
+  
+  
 ### Low-level overview
 
 The current procedure for updating statistics is as follows:
@@ -234,16 +238,19 @@ fails for some reason. The deployment TASK hook has this functionality.
 * Ensure you have the latest `main` with `git checkout main; git pull origin main`
 * Deploy with `bundle exec cap production deploy TASK=import:refresh`
 
-## Troubleshootings
-Some warning / error "failed" messages can appear and be logged in the files `failed_report_countries.csv` and `failed_report_regions.csv` stored in `~/ocean-plus-habitats/current/tmp`, we can copy these files from the server to our local machine thanks to this command:  
+## ⚠️ Troubleshootings
+1. FAILED MESSAGES:  Some warning / error "failed" messages can appear and be logged in the files `failed_report_countries.csv` and `failed_report_regions.csv` stored in `~/ocean-plus-habitats/current/tmp`, we can copy these files from the server to our local machine thanks to this command:  
 `scp wcmc@web-supported-staging.linode.unep-wcmc.org:/home/wcmc/ocean-plus-habitats/current/tmp/*.csv ~/ocean-plus-habitats/Mar2025`
-
-<img src="https://github.com/user-attachments/assets/b5ec8974-d63b-4987-bd91-ba251700e1bb" alt="Error 1" width="400">  
-   
-<img src="https://github.com/user-attachments/assets/0489366d-2713-48db-ae85-65ff3ddd20d6" alt="Error 3" width="400">  
-   
-<img src="https://github.com/user-attachments/assets/0c2f9ee3-6b13-4792-aa03-7a6a5be5a899" alt="Error 2" width="400">  
   
+<img src="https://github.com/user-attachments/assets/b5ec8974-d63b-4987-bd91-ba251700e1bb" alt="Error 1" width="600">  <img src="https://github.com/user-attachments/assets/0489366d-2713-48db-ae85-65ff3ddd20d6" alt="Error 3" width="600">  <img src="https://github.com/user-attachments/assets/0c2f9ee3-6b13-4792-aa03-7a6a5be5a899" alt="Error 2" width="600">  
+
+2. RAKE  rake aborted!  It might be due to flaky ESRI (comment in the code). Let's try it again. In March 2025, it happens... and when we (re)run the process. All good it works! 
+   ```bash
+   "Running import:bounding_boxes..."
+   rake aborted!
+   NoMethodError: undefined method `parsed_response' for nil:NilClass
+   ```
+![image](https://github.com/user-attachments/assets/bc886e55-580f-470d-860d-d8218c6d257c)
 
 ## Update Redlist species timestamp
 
