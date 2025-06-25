@@ -41,8 +41,8 @@ class Serializers::EezMapDatasetsSerializer < Serializers::Base
   NAMES = {
     'coralreefs' => 'ProtectionCoralReef',
     'saltmarshes' => 'ProtectionSaltmarsh',
-    'mangroves' => 'ProtectionMangroves',
-    'seagrasses' => 'ProtectionSeagrasses',
+    'mangroves' => 'Mangrove_Protection',
+    'seagrasses' => 'eez_v12',
     'coldcorals' => 'ProtectionColdCoral'
   }.freeze
   def source_layers(habitat)
