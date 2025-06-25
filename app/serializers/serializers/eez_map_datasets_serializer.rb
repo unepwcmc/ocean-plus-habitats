@@ -22,7 +22,7 @@ class Serializers::EezMapDatasetsSerializer < Serializers::Base
   SERVICES = {
     'coralreefs' => 'Coral_Reef_Projection',
     'saltmarshes' => 'Saltmarsh_Projection',
-    'mangroves' => 'Mangrove_Projection',
+    'mangroves' => 'Mangrove_Protection',
     'seagrasses' => 'Seagrass_Projection',
     'coldcorals' => 'Cold_Coral_Projection'
   }.freeze

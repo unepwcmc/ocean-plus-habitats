@@ -1,3 +1,7 @@
+## 1.4.17
+
+* Update "eez_map_datasets_serializer.rb" to fix the WMS 'mangrove' => 'Mangrove_Protection' rather than 'Mangrove_Projection'
+
 ## 1.4.16
 
 * Update the statistics download folder for May 2025.
