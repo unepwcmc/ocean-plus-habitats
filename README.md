@@ -17,6 +17,11 @@
 
 ## Data
 
+The Vector Tiles layers are generated and hosted by our ESRI Arcgis solution listed here:  [https://data-gis.unep-wcmc.org/server/rest/services/Hosted](https://data-gis.unep-wcmc.org/server/rest/services/Hosted)
+
+<img width="515" height="105" alt="image" src="https://github.com/user-attachments/assets/168f49ea-48df-43fc-8149-08008be8a0ee" />
+
+
 ⚠️ We are still trying to see if it is feasible to generate map tiles and data dynamically using Carto and in the meantime we are using static data. Update: Carto has been decommissioned in **April 2025** from many of our products to be a too expensive service, so it would be better to generate MapTiles using free and open source solutions like pg_tileserv, martin or PMTiles.
 
 ⚠️ Data is fetched from CartoDB using the `Carto` module defined in `lib/modules`.
