@@ -141,8 +141,10 @@ This guide outlines the **steps to update and release statistics**, ensuring a s
    ```
 
 10. **Create a Pull Request (PR):**
-    - Open a PR for your branch on GitHub.
+    - Open a PR [https://github.com/unepwcmc/ocean-plus-habitats/pulls](https://github.com/unepwcmc/ocean-plus-habitats/pulls) for your branch on GitHub ⚠️ comparing with `develope` not `main`
     - Thoroughly review your PR and fix any errors before merging.
+      <img width="400"  alt="image" src="https://github.com/user-attachments/assets/46efe853-065e-4819-b0bf-19a0ecc9b6f6" />  
+
 
 11. **Merge updates to `develop`:**
     - After approval, merge your PR into the `develop` branch.
