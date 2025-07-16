@@ -1,3 +1,9 @@
+## 1.4.18
+
+* This release (1.4.18) also includes the previous version 1.4.17 (as suggested by Luca).
+* Update the statistics download folder for July 2025.
+* The Marine & Coastal Vector Tile Service has been updated (by Osgur) so that French Polynesia new MAP (5.5M km2) is finally displayed. There is no modification done in the code because it is pointing to the same URL but the tiles pulled in from this URL has to be updated / refreshed on UNEP-WCMC ArcGIS Server.
+
 ## 1.4.17
 
 * Update "eez_map_datasets_serializer.rb" to fix the WMS 'mangrove' => 'Mangrove_Protection' rather than 'Mangrove_Projection'
