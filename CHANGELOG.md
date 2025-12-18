@@ -1,3 +1,8 @@
+## 1.4.19
+
+* Update the statistics download folder for Dec 2025.
+* Update global and country habitat statistics for Dec 2025
+
 ## 1.4.18
 
 * This release (1.4.18) also includes the previous version 1.4.17 (as suggested by Luca).
