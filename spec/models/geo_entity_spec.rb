@@ -72,4 +72,19 @@ RSpec.describe GeoEntity, type: :model do
       expect(geo_entity.protection_stats.values).to all( include('protected_percentage', 'protected_value', 'total_value') )
     end
   end
+
+  # TODO: I don't feel great with this being dependent on the values in factories/geo_entity_stat.rb
+  # Would be nice to configure these values in this model spec an instantiate test data from here.
+  describe '#protected_area_statistics' do
+    it 'outputs an array of habitat protection statistics' do
+      pa_stats = geo_entity.protected_area_statistics
+
+      expect(pa_stats.count).to equal(5)
+      expect(pa_stats).to all( include(:name, :total_area, :protected_area, :percent_protected) )
+
+      expect(pa_stats[0][:protected_area].to_s).to eq('38.0')
+      expect(pa_stats[0][:percent_protected].to_s).to eq('38.0')
+      expect(pa_stats[0][:total_area].to_s).to eq('100.0')
+    end
+  end
 end
