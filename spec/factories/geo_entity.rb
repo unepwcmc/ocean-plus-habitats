@@ -1,9 +1,23 @@
+module FactoryBotHelpers
+  def self.geo_entity_name(n, is_region)
+    is_region ? "Region #{n}" : "Country #{n}"
+  end
+
+  def self.geo_entity_iso(is_region)
+    is_region ? nil : 'ABC'
+  end
+end
+
 FactoryBot.define do
   factory :geo_entity, aliases: [:country, :region] do
-    sequence(:name) { |n| "Country #{n}" }
-    sequence(:actual_name) { |n| "Coüntry #{n}" }
-    iso3 { 'ABC' }
+    sequence(:name) { |n| FactoryBotHelpers.geo_entity_name(n, is_region) }
+    sequence(:actual_name) { |n| FactoryBotHelpers.geo_entity_name(n, is_region) }
+    iso3 { FactoryBotHelpers.geo_entity_iso(is_region) }
     bounding_box { [[-70.41666666583112, 12.150501231616646], [-68.87016907252374, 15.300000001018887]] }
+
+    after(:create) do |geo_entity|
+      geo_entity.countries << create_list(:country, 2) if geo_entity.is_region
+    end
 
     factory :country_with_mangroves do
       name { 'Country with mangroves' }
