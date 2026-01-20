@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210812135252) do
+ActiveRecord::Schema.define(version: 20230310154459) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,14 @@ ActiveRecord::Schema.define(version: 20210812135252) do
     t.datetime "updated_at", null: false
     t.index ["geo_entity_id"], name: "index_change_stats_on_geo_entity_id"
     t.index ["habitat_id"], name: "index_change_stats_on_habitat_id"
+  end
+
+  create_table "change_stats_total_values", force: :cascade do |t|
+    t.integer "change_stat_id"
+    t.decimal "total_value", default: "0.0"
+    t.integer "year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "coastal_stats", force: :cascade do |t|
