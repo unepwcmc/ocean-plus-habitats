@@ -40,7 +40,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
 
-gem 'httparty', '~> 0.16.2'
+gem 'httparty', '~> 0.21.0'
 
 gem 'rubyzip', '>= 1.0.0' # will load new rubyzip version
 gem 'zip-zip' # will load compatibility for old rubyzip API.
